@@ -1,0 +1,21 @@
+🧠 Pregunta 1
+¿Cuál es uno de los principales objetivos de la metodología DevOps?
+
+A. Eliminar el uso de herramientas automatizadas
+B. Prolongar los ciclos de entrega
+C. Unir equipos de desarrollo, QA y operaciones
+D. Centralizar todas las decisiones en el equipo de operaciones
+
+✅ Correcta: C
+🧾 Explicación: DevOps busca integrar a los equipos de desarrollo, calidad y operaciones para lograr colaboración continua, reducir tiempos de entrega y mejorar la calidad del software.
+
+🧠 Pregunta 2
+¿Qué práctica permite detectar errores de forma temprana mediante cambios frecuentes en el código?
+
+A. Entrega continua
+B. Pruebas de integración
+C. Integración continua
+D. Despliegue azul/verde
+
+✅ Correcta: C
+🧾 Explicación: La integración continua (CI) consiste en realizar pequeños cambios frecuentes para detectar errores de forma inmediata y evitar acumulación de fallos.
