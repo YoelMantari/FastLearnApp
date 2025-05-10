@@ -1,0 +1,1289 @@
+🧠 Pregunta 1
+
+¿Cuál es el principal desafío que surge al utilizar múltiples ramas de código fuente y que los patrones presentados buscan mitigar?
+
+A. La dificultad de realizar un seguimiento de los cambios individuales.
+
+B. La necesidad de elegir un sistema de control de versiones adecuado.
+
+C. La complejidad de fusionar las ramas de nuevo en un todo coherente.
+
+D. La ineficiencia en la creación de nuevas ramas para cada tarea.
+
+✅ Correcta: C
+
+🧾 Explicación: El artículo destaca que, si bien la creación de ramas es sencilla, la fusión posterior puede generar complicaciones y consumir mucho tiempo de los equipos.
+
+🧠 Pregunta 2
+
+Según el artículo, ¿cuál es el objetivo central de los patrones para la gestión de ramas de código fuente?
+
+A. Optimizar el rendimiento de los sistemas de control de versiones.
+
+B. Facilitar la colaboración entre diseñadores y desarrolladores.
+
+C. Integrar el trabajo de múltiples desarrolladores y organizar la ruta hacia las versiones de producción.
+
+D. Reducir la cantidad de código fuente necesario para un proyecto.
+
+✅ Correcta: C
+
+🧾 Explicación: El autor enfatiza que los patrones buscan ayudar a los equipos a trabajar juntos de manera efectiva y a tener un camino claro para llevar el software a producción.
+
+🧠 Pregunta 3
+
+¿Cómo define Martin Fowler el término "rama" en el contexto de este artículo?
+
+A. Una copia aislada del código base utilizada por un desarrollador individual.
+
+B. Una etiqueta utilizada para marcar un punto específico en la historia del código.
+
+C. Una secuencia particular de commits en el código base.
+
+D. Una bifurcación del repositorio principal para experimentar con nuevas funcionalidades.
+
+✅ Correcta: C
+
+🧾 Explicación: Fowler define una rama como una línea de tiempo específica de cambios registrados (commits) en el código.
+
+🧠 Pregunta 4
+
+¿Qué problema principal busca resolver la práctica de la "ramificación del código fuente"?
+
+A. Evitar la pérdida de cambios realizados por los desarrolladores.
+
+B. Permitir que múltiples desarrolladores trabajen en el mismo código base simultáneamente sin interferir entre sí.
+
+C. Facilitar la auditoría de los cambios realizados en el código a lo largo del tiempo.
+
+D. Optimizar el espacio de almacenamiento requerido por el sistema de control de versiones.
+
+✅ Correcta: B
+
+🧾 Explicación: La ramificación permite el trabajo en paralelo al proporcionar copias aisladas del código para cada desarrollador.
+
+🧠 Pregunta 5
+
+¿Qué se entiende por un "conflicto semántico" en el contexto de la fusión de ramas?
+
+A. Un conflicto donde el sistema de control de versiones no puede combinar automáticamente cambios en el mismo archivo.
+
+B. Un conflicto donde el código se fusiona sin problemas textuales, pero el sistema resultante no funciona correctamente.
+
+C. Un conflicto causado por diferentes estilos de codificación entre los desarrolladores.
+
+D. Un conflicto que surge al intentar fusionar ramas con un historial de commits muy diferente.
+
+✅ Correcta: B
+
+🧾 Explicación: Los conflictos semánticos son problemas lógicos que no son detectados por las herramientas de fusión textual.
+
+🧠 Pregunta 6
+
+¿Cuál es la función principal de la "mainline" (línea principal) en un flujo de trabajo de gestión de ramas?
+
+A. Servir como una rama aislada para el desarrollo de nuevas funcionalidades importantes.
+
+B. Actuar como el estado actual y compartido del código del producto.
+
+C. Almacenar las versiones históricas del código base para futuras referencias.
+
+D. Facilitar la creación de ramas de lanzamiento para diferentes versiones del producto.
+
+✅ Correcta: B
+
+🧾 Explicación: La mainline representa la versión actual del proyecto en la que se basa el trabajo del equipo.
+
+🧠 Pregunta 7
+
+¿Qué significa mantener una "healthy branch" (rama saludable)?
+
+A. Asegurar que la rama tenga la menor cantidad de commits posible.
+
+B. Garantizar que la rama se compile con éxito y el software se ejecute con pocos o ningún error en cada commit.
+
+C. Limitar el número de desarrolladores que pueden realizar commits en la rama.
+
+D. Realizar revisiones de código exhaustivas antes de permitir cualquier commit en la rama.
+
+✅ Correcta: B
+
+🧾 Explicación: Una rama saludable se caracteriza por pasar las pruebas automatizadas en cada commit, asegurando su estabilidad.
+
+🧠 Pregunta 8
+
+¿Qué se entiende por "self testing code" (código con autoevaluación) y por qué es crucial para mantener una "healthy branch"?
+
+A. Código que incluye documentación detallada para facilitar su comprensión.
+
+B. Código que contiene mecanismos para detectar y reportar errores en tiempo de ejecución.
+
+C. Código acompañado de una suite completa de pruebas automatizadas para verificar su correcto funcionamiento.
+
+D. Código que se adhiere estrictamente a los estándares de codificación del equipo.
+
+✅ Correcta: C
+
+🧾 Explicación: El código con autoevaluación permite verificar automáticamente la ausencia de errores mediante pruebas.
+
+🧠 Pregunta 9
+
+¿Qué es una "commit suite" y cuál es su objetivo principal en el contexto de una "healthy branch"?
+
+A. Un conjunto de herramientas utilizadas para gestionar los commits en un sistema de control de versiones.
+
+B. Una secuencia de commits relacionados que implementan una funcionalidad específica.
+
+C. Una suite de pruebas automatizadas que se ejecuta con cada commit para asegurar la salud de la rama.
+
+D. Un registro detallado de todos los commits realizados en una rama, incluyendo el autor y la fecha.
+
+✅ Correcta: C
+🧠 Pregunta 21
+
+¿Cuál es la tensión que se menciona en el artículo con respecto a las ramas de desarrollo personal y la práctica de mantenerlas saludables?
+A. La necesidad de elegir entre usar Git o Mercurial como sistema de control de versiones.
+
+B. El equilibrio entre realizar commits frecuentes para guardar el progreso y asegurarse de que cada commit sea funcional.
+
+C. La dificultad de coordinar el trabajo entre desarrolladores que prefieren diferentes estilos de codificación.
+
+D. El conflicto entre la necesidad de realizar pruebas unitarias rápidas y pruebas de integración más exhaustivas.
+✅ Correcta: B
+
+🧾 Explicación: Existe una tensión entre la conveniencia de hacer commits frecuentes como puntos de control y el deseo de mantener la rama en un estado siempre funcional.
+
+🧠 Pregunta 22
+
+¿Qué se implica cuando el artículo menciona que una "mainline saludable" allana el camino hacia la producción?
+A. Que el código en la mainline siempre está listo para ser desplegado directamente a los usuarios finales.
+
+B. Que se requiere un esfuerzo mínimo para estabilizar una versión de lanzamiento a partir de la mainline.
+
+C. Que el proceso de despliegue a producción puede automatizarse completamente.
+
+D. Que los errores críticos se detectan y corrigen automáticamente en la mainline.
+✅ Correcta: B
+
+🧾 Explicación: Una mainline estable significa que la base de código para un lanzamiento es sólida y requiere poca preparación adicional.
+
+🧠 Pregunta 23
+
+¿Qué se considera una inversión significativa pero crucial para lograr y mantener una "mainline saludable"?
+A. La implementación de un sistema de gestión de proyectos ágil.
+
+B. La adopción de revisiones de código obligatorias para todos los commits.
+
+C. La construcción de "self testing code" con una "commit suite" rápida.
+
+D. La capacitación exhaustiva de todos los desarrolladores en el uso del sistema de control de versiones.
+✅ Correcta: C
+
+🧾 Explicación: La capacidad de verificar rápidamente la integridad del código con pruebas automatizadas es fundamental para una mainline saludable.
+
+🧠 Pregunta 24
+
+¿Qué se sugiere como una forma de resolver la tensión entre los commits frecuentes y la salud de una rama de desarrollo personal?
+A. Realizar pruebas exhaustivas solo antes de fusionar con la mainline.
+
+B. Utilizar ramas separadas para diferentes tipos de cambios (funcionales vs. correcciones).
+
+C. Eliminar (squash) los commits no saludables al finalizar el trabajo inmediato.
+
+D. Limitar el tamaño de los commits individuales para reducir el riesgo de introducir errores.
+✅ Correcta: C
+
+🧾 Explicación: El "squashing" permite tener puntos de control frecuentes sin comprometer la limpieza y salud del historial de la rama a largo plazo.
+
+🧠 Pregunta 25
+
+¿Cuál es el beneficio principal de saber que cualquier error surgido al integrar una rama personal saludable a la mainline probablemente se deba a problemas de integración?
+A. Permite delegar la responsabilidad de la depuración a otros miembros del equipo.
+
+B. Simplifica significativamente el proceso de diagnóstico y corrección de errores.
+
+C. Reduce la necesidad de realizar pruebas de regresión después de la integración.
+
+D. Acelera el proceso de lanzamiento al evitar la introducción de nuevos errores.
+✅ Correcta: B
+
+🧾 Explicación: Aislar la fuente potencial de los errores facilita la identificación y solución de los problemas durante la integración.
+
+🧠 Pregunta 26
+
+Según el artículo, ¿qué factor contextual influye significativamente en el flujo de trabajo de desarrollo de software y en la elección de patrones de branching?
+A. El tamaño del código base del proyecto.
+
+B. La experiencia técnica de los miembros del equipo.
+
+C. La estructura social del equipo y las demás prácticas que éste sigue.
+
+D. El tipo de licencia de software utilizado para el proyecto.
+✅ Correcta: C
+
+🧾 Explicación: El contexto del equipo, incluyendo su organización y prácticas, es un factor clave en la aplicación de los patrones.
+
+🧠 Pregunta 27
+
+¿Por qué el autor menciona la historia del ingeniero de compilaciones a principios de los 2000?
+A. Para ilustrar la eficiencia de las prácticas de construcción de software en el pasado.
+
+B. Para destacar los desafíos de la integración de código antes de la adopción generalizada de la mainline.
+
+C. Para comparar diferentes sistemas de control de versiones utilizados en esa época.
+
+D. Para enfatizar la importancia de la comunicación interpersonal en los equipos de desarrollo.
+✅ Correcta: B
+
+🧾 Explicación: La anécdota sirve como un contraste con los beneficios de tener una mainline bien establecida.
+
+🧠 Pregunta 28
+
+¿Qué se entiende por "diff debugging" y cómo se relaciona con mantener saludables las ramas de desarrollo personal?
+A. Una técnica para comparar diferentes versiones de código y encontrar la causa de los errores, facilitada por un código base limpio y funcional.
+
+B. El proceso de depurar el código directamente en el entorno de producción comparando el comportamiento con el entorno de desarrollo.
+
+C. Una metodología para identificar y corregir errores comparando los registros de diferentes ramas del repositorio.
+
+D. La práctica de solicitar a otro desarrollador que revise las diferencias en el código para encontrar posibles errores.
+✅ Correcta: A
+
+🧾 Explicación: Mantener una rama personal saludable facilita la identificación de la causa de los errores al comparar versiones, ya que se reduce la posibilidad de que los errores provengan del propio trabajo reciente.
+
+🧠 Pregunta 29
+
+¿Cuál es la implicación de que los sistemas de control de versiones registren cada cambio como un commit?
+A. Asegura que todos los desarrolladores sigan los mismos estándares de codificación.
+
+B. Simplifica el proceso de reversión a versiones anteriores del código base.
+
+C. Facilita la fusión de cambios al proporcionar un historial detallado de las modificaciones.
+
+D. Reduce la posibilidad de conflictos al limitar la edición simultánea del mismo archivo.
+✅ Correcta: C
+
+🧾 Explicación: El registro de cada cambio como un commit proporciona la información necesaria para que el sistema de control de versiones intente fusionar las ramas de manera inteligente.
+
+🧠 Pregunta 30
+
+¿Qué se menciona como un problema común que puede surgir incluso cuando el sistema de control de versiones puede fusionar el texto del código sin conflictos?
+A. Problemas de rendimiento debido a la gran cantidad de commits fusionados.
+
+B. Incompatibilidad de licencias entre el código de diferentes ramas.
+
+C. Conflictos semánticos donde el sistema integrado no funciona correctamente a pesar de la fusión exitosa.
+
+D. Dificultad para rastrear la autoría de los cambios después de la fusión.
+✅ Correcta: C
+
+🧾 Explicación: Los conflictos semánticos son aquellos donde la lógica del código se rompe aunque la fusión textual sea exitosa.
+
+🧾 Explicación: La commit suite es un conjunto de pruebas rápidas que validan la integridad del código en cada commit.
+
+🧠 Pregunta 10
+
+Según el artículo, ¿cuál es uno de los beneficios clave de mantener una "mainline" saludable?
+
+A. Reduce la necesidad de realizar pruebas exhaustivas en las ramas de desarrollo personal.
+
+B. Permite a los desarrolladores trabajar en paralelo sin necesidad de fusionar su código.
+
+C. Facilita la creación rápida de candidatos para producción con poco trabajo de estabilización.
+
+D. Elimina la posibilidad de conflictos semánticos durante la integración de ramas.
+
+✅ Correcta: C
+
+🧾 Explicación: Una mainline estable permite generar versiones de lanzamiento de manera más eficiente.
+
+🧠 Pregunta 1
+¿Cuál es la recomendación principal de Martin Fowler respecto al uso de ramas en proyectos de desarrollo?
+
+A. Crear muchas ramas largas para cada funcionalidad
+B. Usar ramas solo en producción
+C. Integrar ramas con frecuencia para mantener una línea principal saludable
+D. Evitar las ramas y trabajar directamente en el código compartido
+
+✅ Correcta: C
+🧾 Explicación: Fowler enfatiza que las ramas deben integrarse con frecuencia, enfocándose en mantener una línea principal estable y fácil de desplegar.
+
+🧠 Pregunta 2
+¿Qué define Martin Fowler como una rama (branch)?
+
+A. Un archivo de configuración para la versión
+B. Una copia del código con cambios temporales
+C. Una secuencia particular de commits en el código base
+D. Una carpeta local aislada
+
+✅ Correcta: C
+🧾 Explicación: Según Fowler, una rama es una secuencia específica de commits, con su head siendo el commit más reciente.
+
+🧠 Pregunta 3
+¿Qué tipo de conflicto puede ocurrir aunque no haya errores de fusión textual?
+
+A. Conflicto de versiones
+B. Conflicto semántico
+C. Conflicto de etiquetas
+D. Conflicto de tags
+
+✅ Correcta: B
+🧾 Explicación: Los conflictos semánticos ocurren cuando el código se fusiona correctamente a nivel textual, pero falla al compilar o ejecutar debido a cambios incompatibles en lógica.
+
+🧠 Pregunta 4
+¿Qué nombre se le da a la rama central compartida que representa el estado actual del producto?
+
+A. Feature
+B. Develop
+C. Mainline
+D. Tag
+
+✅ Correcta: C
+🧾 Explicación: La mainline (línea principal) es la rama especial compartida que refleja el estado actual y base del producto.
+
+🧠 Pregunta 5
+¿Qué práctica permite mantener una “rama saludable”?
+
+A. Desactivar pruebas automáticas
+B. Fusionar cambios sin revisión
+C. Ejecutar pruebas automatizadas con cada commit
+D. Hacer commits directamente en producción
+
+✅ Correcta: C
+🧾 Explicación: Mantener una rama saludable implica que cada commit dispare pruebas automatizadas para asegurar que el código sigue funcionando correctamente.
+
+🧠 Pregunta 6
+¿Qué es una commit suite según el artículo?
+
+A. Un conjunto de ramas de trabajo
+B. Un conjunto rápido de pruebas ejecutadas en cada commit
+C. Un historial de merges exitosos
+D. Una colección de archivos de configuración
+
+✅ Correcta: B
+🧾 Explicación: La commit suite es un conjunto de pruebas automatizadas que se ejecuta rápidamente tras cada commit para validar el estado del código.
+
+🧠 Pregunta 7
+¿Qué recomendación hace Fowler respecto a commits no saludables en ramas personales?
+
+A. Mantenerlos como historial de errores
+B. Borrarlos si fallan
+C. Hacer squash de commits no saludables antes de fusionar
+D. Dejarlos visibles para revisión futura
+
+✅ Correcta: C
+🧾 Explicación: Para mantener limpias las ramas personales, Fowler recomienda hacer squash de commits no saludables una vez terminado el trabajo.
+
+🧠 Pregunta 8
+¿Cuál es el beneficio principal de tener una mainline saludable?
+
+A. Mayor complejidad en integración
+B. Mayor número de ramas
+C. Iniciar nuevas tareas sin lidiar con errores anteriores
+D. Reducción en el número de commits
+
+✅ Correcta: C
+🧾 Explicación: Si la mainline está en buen estado, los desarrolladores pueden comenzar nuevas tareas sin ser bloqueados por defectos existentes.
+
+🧠 Pregunta 9
+¿Qué concepto se propone como alternativa más neutral al término "rama"?
+
+A. Codeline
+B. Fork
+C. Snapshot
+D. Version stream
+
+✅ Correcta: A
+🧾 Explicación: Fowler sugiere el término codeline como una forma más general y menos ambigua para referirse a secuencias de versiones del código.
+
+🧠 Pregunta 10
+¿Por qué es problemático que cada desarrollador tenga su propia versión local de "master" en Git?
+
+A. No permite crear tags
+B. Confunde el control de versiones
+C. Genera múltiples ramas con el mismo nombre pero diferentes contenidos
+D. Impide el uso de merge
+
+✅ Correcta: C
+🧾 Explicación: Aunque todos usen la rama "master", cada clon de Git mantiene su propia versión, lo que genera ramas separadas con el mismo nombre.
+
+🧠 Pregunta 11
+¿Cuál es el mayor riesgo de tener muchas ramas activas sin una integración frecuente?
+
+A. Aumenta el consumo de memoria del sistema
+B. Se pierde la trazabilidad de los commits
+C. Se incrementa la posibilidad de conflictos complejos al fusionar
+D. Las pruebas automatizadas dejan de funcionar
+
+✅ Correcta: C
+🧾 Explicación: Cuando varias ramas permanecen mucho tiempo sin integrarse, es más probable que los cambios diverjan tanto que la fusión requiera una intervención humana compleja, especialmente por conflictos semánticos difíciles de detectar automáticamente.
+
+🧠 Pregunta 12
+¿Qué representa el head o tip de una rama en el control de versiones?
+
+A. El commit inicial donde se creó la rama
+B. La rama base desde donde se originó
+C. El commit más reciente de la secuencia
+D. El nombre simbólico de la rama
+
+✅ Correcta: C
+🧾 Explicación: En Git y en otros sistemas de control de versiones, el head o tip representa el último commit en una rama, es decir, el punto más avanzado en esa línea de desarrollo.
+
+🧠 Pregunta 13
+¿Cuál es el objetivo principal de tener una mainline (línea principal) saludable?
+
+A. Permitir que cada desarrollador tenga su rama privada sin supervisión
+B. Garantizar que siempre haya una base estable desde la cual trabajar o desplegar
+C. Eliminar la necesidad de hacer pruebas
+D. Impedir que se creen ramas secundarias
+
+✅ Correcta: B
+🧾 Explicación: Una mainline saludable actúa como una base sólida y confiable del código. Permite que cualquier desarrollador extraiga una versión funcional y también facilita lanzar nuevas versiones a producción sin necesidad de estabilización adicional.
+
+🧠 Pregunta 14
+¿Qué tipo de conflicto ocurre cuando dos desarrolladores modifican la misma función, pero el sistema no detecta errores al fusionar el texto?
+
+A. Conflicto de etiquetas
+B. Conflicto semántico
+C. Conflicto sintáctico
+D. Conflicto de compilación
+
+✅ Correcta: B
+🧾 Explicación: El conflicto semántico ocurre cuando las modificaciones no generan errores de sintaxis ni de fusión textual, pero el comportamiento del sistema cambia o se rompe porque las intenciones de los desarrolladores eran distintas.
+
+🧠 Pregunta 15
+¿Por qué Martin Fowler recomienda tener una commit suite rápida y efectiva?
+
+A. Para reducir el número de ramas necesarias
+B. Para verificar que cada commit mantiene la estabilidad del sistema
+C. Para evitar usar sistemas de integración continua
+D. Para controlar las versiones en paralelo
+
+✅ Correcta: B
+🧾 Explicación: La commit suite es un conjunto de pruebas automatizadas que se ejecuta con cada commit. Su función es proporcionar una validación rápida de que el código sigue funcionando y no introduce regresiones.
+
+🧠 Pregunta 16
+¿Qué estrategia sugiere Fowler para gestionar commits intermedios que podrían no compilar en ramas personales?
+
+A. Eliminar todos los commits antiguos
+B. Dejar los commits con errores como referencia
+C. Usar squash para consolidarlos una vez finalizada la funcionalidad
+D. Subirlos directamente a mainline
+
+✅ Correcta: C
+🧾 Explicación: Para evitar que errores transitorios queden registrados, Fowler recomienda hacer squash de los commits no saludables antes de compartir la rama. Esto mantiene el historial limpio y evita confusiones al integrarse con la mainline.
+
+🧠 Pregunta 17
+¿Cuál es el principal desafío al fusionar ramas en sistemas distribuidos como Git?
+
+A. Sincronizar los archivos .gitignore
+B. Resolver correctamente los conflictos semánticos
+C. Subir las ramas al servidor central
+D. Mantener el historial visual limpio
+
+✅ Correcta: B
+🧾 Explicación: Aunque los conflictos textuales se pueden resolver automáticamente en muchos casos, los conflictos semánticos (que afectan el comportamiento) no pueden detectarse automáticamente y requieren análisis y resolución manual.
+
+🧠 Pregunta 18
+¿Por qué Martin Fowler considera útil el término codeline?
+
+A. Porque se usa únicamente en Git
+B. Porque reemplaza completamente al concepto de rama
+C. Porque evita confusiones entre diferentes sistemas de control de versiones
+D. Porque describe ramas con commits inválidos
+
+✅ Correcta: C
+🧾 Explicación: El término codeline es más genérico y evita malentendidos entre herramientas como Git, Mercurial o Subversion, que manejan el concepto de "rama" de formas distintas.
+
+🧠 Pregunta 19
+¿Qué característica hace que la rama mainline sea diferente de otras ramas?
+
+A. No se permite hacer commits en ella
+B. Es una copia temporal de otra rama
+C. Es el punto de referencia común y compartido por todo el equipo
+D. Tiene un nombre fijo en todos los repositorios
+
+✅ Correcta: C
+🧾 Explicación: La mainline es la rama compartida donde se concentra el trabajo consolidado del equipo. Representa el estado actual del producto y debe mantenerse estable.
+
+🧠 Pregunta 20
+¿Cuál es el impacto de una línea principal no saludable según Fowler?
+
+A. Permite más experimentación
+B. Mejora la visibilidad de errores
+C. Ralentiza el inicio de nuevas tareas y entorpece la integración
+D. Aumenta la velocidad de integración
+
+✅ Correcta: C
+🧾 Explicación: Una mainline con errores obliga a los desarrolladores a perder tiempo solucionando problemas antes de poder trabajar, lo que entorpece el desarrollo ágil y la entrega continua.
+
+🧠 Pregunta 21
+Según Martin Fowler, ¿cuál es la principal dificultad asociada al uso de ramas en el desarrollo de software?
+
+A. Crear ramas con nombres descriptivos
+B. Eliminar ramas obsoletas del repositorio
+C. La complejidad de fusionarlas correctamente
+D. La imposibilidad de trabajar sin conexión
+
+✅ Correcta: C
+🧾 Explicación: Fowler señala que ramificar es fácil, pero fusionar es la parte difícil, especialmente cuando aparecen conflictos semánticos que no son detectados automáticamente.
+
+🧠 Pregunta 22
+¿Qué ocurre cuando dos desarrolladores cambian el nombre de una misma variable a valores distintos en sus ramas?
+
+A. El sistema de control de versiones elige un nombre automáticamente
+B. Se genera un conflicto semántico
+C. Se genera un conflicto textual que debe resolverse manualmente
+D. Las ramas se sincronizan sin problemas
+
+✅ Correcta: C
+🧾 Explicación: En este caso, se produce un conflicto textual, ya que el mismo fragmento de código ha sido modificado de forma distinta en ambas ramas. El sistema de control de versiones detecta esta colisión y solicita intervención humana.
+
+🧠 Pregunta 23
+¿Qué es un conflicto semántico según Fowler?
+
+A. Cuando un archivo tiene múltiples versiones
+B. Cuando el código compila, pero falla en ejecución debido a cambios lógicos incompatibles
+C. Cuando una rama no tiene permisos de escritura
+D. Cuando los commits no se muestran en el historial
+
+✅ Correcta: B
+🧾 Explicación: Un conflicto semántico ocurre cuando las fusiones no fallan sintácticamente, pero el sistema no funciona correctamente debido a diferencias lógicas en los cambios combinados.
+
+🧠 Pregunta 24
+¿Cuál es el rol de un repositorio central en una estrategia basada en mainline?
+
+A. Actuar como backup
+B. Gestionar los permisos de los usuarios
+C. Servir como fuente única de verdad para la línea principal
+D. Aislar los cambios individuales de cada desarrollador
+
+✅ Correcta: C
+🧾 Explicación: El repositorio central actúa como el punto de referencia para la mainline, donde se consolidan los cambios y se garantiza que el equipo trabaje con una versión estable y actualizada del proyecto.
+
+🧠 Pregunta 25
+¿Qué práctica se recomienda para mantener la mainline saludable?
+
+A. Permitir commits sin validación
+B. Usar herramientas de integración continua con pruebas automatizadas
+C. Fusionar cambios directamente desde cualquier rama
+D. Aceptar commits con errores temporales
+
+✅ Correcta: B
+🧾 Explicación: Mantener la mainline saludable implica ejecutar pruebas automatizadas en cada commit. Esto ayuda a detectar errores rápidamente y asegurar que el código base se mantenga funcional.
+
+🧠 Pregunta 26
+¿Qué ventaja brinda el uso de self-testing code en un equipo de desarrollo?
+
+A. Acelera la escritura de nuevas funcionalidades
+B. Elimina la necesidad de code reviews
+C. Garantiza que los errores se detecten inmediatamente después del commit
+D. Permite evitar el uso de ramas
+
+✅ Correcta: C
+🧾 Explicación: El self-testing code permite que el código se valide automáticamente con pruebas. Esto da confianza de que los cambios no han roto funcionalidades existentes, lo cual es esencial para mantener la rama saludable.
+
+🧠 Pregunta 27
+¿Qué significa "congelar" una rama?
+
+A. Hacer que solo se puedan leer los archivos
+B. Crear una etiqueta en el último commit
+C. Suspender temporalmente los commits hasta resolver un problema crítico
+D. Eliminar la posibilidad de hacer squash
+
+✅ Correcta: C
+🧾 Explicación: Congelar una rama es una práctica temporal en la que no se permiten nuevos commits, salvo aquellos que corrigen fallos críticos, con el objetivo de restaurar su salud.
+
+🧠 Pregunta 28
+¿Qué describe mejor el objetivo de la commit suite?
+
+A. Recolectar estadísticas sobre el repositorio
+B. Ejecutar pruebas unitarias básicas de forma rápida en cada commit
+C. Generar informes de documentación técnica
+D. Automatizar la creación de ramas
+
+✅ Correcta: B
+🧾 Explicación: La commit suite es un conjunto de pruebas diseñadas para ejecutarse rápidamente tras cada commit y proporcionar una validación inmediata del estado funcional del código.
+
+🧠 Pregunta 29
+¿Qué ventaja ofrece mantener saludable una rama de desarrollo personal antes de integrarla a la mainline?
+
+A. Evita usar comandos como merge o rebase
+B. Acelera el proceso de integración al descartar errores propios
+C. Elimina la necesidad de squash
+D. Permite subir directamente a producción
+
+✅ Correcta: B
+🧾 Explicación: Si la rama personal ya es saludable, cualquier error tras fusionarla con la mainline proviene de la integración, no del código propio, lo que facilita identificar y resolver problemas rápidamente.
+
+🧠 Pregunta 30
+¿Cuál es una consecuencia de permitir commits fallidos en la mainline?
+
+A. Mayor innovación en el equipo
+B. Menor dependencia de las herramientas de CI
+C. Dificulta que otros desarrolladores comiencen nuevas tareas
+D. Se evita la necesidad de revertir cambios
+
+✅ Correcta: C
+🧾 Explicación: Si la mainline contiene errores, otros desarrolladores tendrán problemas al intentar basarse en ella para nuevas tareas, ya que heredarían un entorno defectuoso.
+
+🧠 Pregunta 31
+Según Fowler, ¿qué problema se busca evitar al dar a cada desarrollador su propia copia del código base?
+
+A. Tener múltiples copias del mismo archivo
+B. Que los cambios a medio hacer de un desarrollador interfieran con otros
+C. Que se pierdan los commits antiguos
+D. La duplicación de variables en el repositorio
+
+✅ Correcta: B
+🧾 Explicación: Dar a cada desarrollador su propia copia evita que cambios incompletos de uno afecten el trabajo del otro, como una compilación fallida debido a código en progreso.
+
+🧠 Pregunta 32
+¿Qué ventaja clave ofrecen los sistemas de control de versiones modernos según Fowler?
+
+A. Permiten eliminar ramas antiguas automáticamente
+B. Registran cada cambio y facilitan la fusión
+C. Resuelven todos los conflictos semánticos sin intervención humana
+D. Eliminen la necesidad de branches locales
+
+✅ Correcta: B
+🧾 Explicación: Los sistemas modernos como Git registran los cambios como commits, lo que hace posible rastrear versiones y facilita la fusión del trabajo de varios desarrolladores.
+
+🧠 Pregunta 33
+¿Cuál es la definición más útil de branch en el contexto del artículo?
+
+A. Una copia local del repositorio
+B. Una etiqueta que identifica un cambio importante
+C. Una secuencia de commits que representa una línea de trabajo
+D. Un fork del repositorio original
+
+✅ Correcta: C
+🧾 Explicación: Fowler define una rama como una secuencia específica de commits. Esta definición es más general y útil que la que varía según el sistema de control de versiones.
+
+🧠 Pregunta 34
+¿Por qué el término codeline puede ser preferido sobre branch?
+
+A. Porque es exclusivo de Git
+B. Porque representa cualquier conjunto de versiones, sin importar su origen
+C. Porque es más técnico y especializado
+D. Porque es compatible solo con Subversion
+
+✅ Correcta: B
+🧾 Explicación: El término codeline evita confusiones entre herramientas y se refiere a cualquier secuencia de versiones del código base, incluso si no existe una rama explícita.
+
+🧠 Pregunta 35
+¿Qué significa que cada desarrollador tenga su propia codeline?
+
+A. Que puede modificar el sistema sin pruebas
+B. Que tiene un entorno controlado y separado mientras desarrolla
+C. Que no necesita hacer commits
+D. Que todos trabajan en la misma copia de master
+
+✅ Correcta: B
+🧾 Explicación: Cada desarrollador, al modificar su copia local del código, crea una codeline independiente que puede integrar más adelante, lo que permite desarrollar sin interferencias.
+
+🧠 Pregunta 36
+¿Cuál es una situación donde un sistema de control de versiones no puede detectar un conflicto?
+
+A. Cuando hay cambios en el mismo archivo
+B. Cuando dos ramas cambian el mismo nombre de variable
+C. Cuando los cambios afectan la lógica del programa, pero no el texto
+D. Cuando se cambian comentarios
+
+✅ Correcta: C
+🧾 Explicación: Este es un conflicto semántico, donde el texto puede fusionarse correctamente, pero la lógica o funcionalidad del sistema se ve comprometida.
+
+🧠 Pregunta 37
+¿Qué representa el gráfico de “split-and-merge” en el artículo?
+
+A. Cómo se reinician los commits de una rama
+B. Cómo se etiquetan versiones
+C. El proceso de ramificar una codeline y luego fusionarla
+D. El historial de errores de compilación
+
+✅ Correcta: C
+🧾 Explicación: La figura muestra cómo una rama puede dividirse y luego sus commits combinarse nuevamente a la rama original mediante una fusión.
+
+🧠 Pregunta 38
+¿Qué sucede si Scarlett clona su repositorio local a su laptop?
+
+A. Se sobrescribe el master
+B. Se pierde el historial
+C. Se crea una nueva codeline del master local
+D. Se borra el master del repositorio remoto
+
+✅ Correcta: C
+🧾 Explicación: Al clonar localmente, incluso desde su propio repositorio, se genera una nueva codeline basada en la copia existente, con su propio estado y commits.
+
+🧠 Pregunta 39
+¿Por qué la fusión puede fallar incluso si no hay conflictos visibles?
+
+A. Porque el sistema tiene un bug
+B. Porque los archivos están corruptos
+C. Porque existen conflictos semánticos no detectados por el sistema
+D. Porque no hay suficiente memoria
+
+✅ Correcta: C
+🧾 Explicación: La ausencia de errores en la fusión textual no garantiza que el sistema funcione correctamente, ya que pueden persistir conflictos en la lógica del código.
+
+🧠 Pregunta 40
+¿Cuál es una estrategia para mitigar los problemas de integración compleja?
+
+A. Esperar hasta tener muchas funcionalidades listas antes de integrar
+B. Trabajar siempre directamente sobre la mainline
+C. Integrar cambios con frecuencia
+D. Desactivar los tests para evitar errores
+
+✅ Correcta: C
+🧾 Explicación: Integrar frecuentemente reduce la complejidad de las fusiones y minimiza la posibilidad de conflictos complejos o semánticos acumulados.
+
+🧠 Pregunta 41
+¿Qué problema señala Fowler respecto a las compilaciones diarias?
+
+A. Que eran demasiado rápidas
+B. Que requerían herramientas costosas
+C. Que no siempre eran exitosas ni útiles
+D. Que solo podían realizarse en servidores Linux
+
+✅ Correcta: C
+🧾 Explicación: Fowler critica la visión romántica de las compilaciones diarias y aclara que en muchos equipos estas compilaciones fallaban durante semanas, lo que impedía una integración real.
+
+🧠 Pregunta 42
+¿Cuál es la diferencia entre pruebas unitarias y la commit suite?
+
+A. No hay diferencia, son exactamente lo mismo
+B. La commit suite solo incluye pruebas manuales
+C. La commit suite puede incluir más pruebas rápidas además de las unitarias
+D. La commit suite se ejecuta solo al final del sprint
+
+✅ Correcta: C
+🧾 Explicación: Aunque comúnmente contiene pruebas unitarias, la commit suite puede incluir otras pruebas automatizadas rápidas para validar el código en cada commit.
+
+🧠 Pregunta 43
+¿Qué acción se considera prioritaria cuando una rama pierde su salud?
+
+A. Crear una nueva rama y dejar la defectuosa
+B. Congelar los commits y solucionar los errores antes de continuar
+C. Desplegarla de todas maneras
+D. Eliminar el historial de cambios
+
+✅ Correcta: B
+🧾 Explicación: Cuando una rama falla en las pruebas o no compila, se recomienda congelarla y enfocar todos los esfuerzos en restaurar su estabilidad antes de seguir desarrollando.
+
+🧠 Pregunta 44
+¿Por qué mantener una mainline saludable acelera el desarrollo?
+
+A. Reduce el número de commits
+B. Permite evitar las pruebas manuales
+C. Facilita comenzar nuevas tareas sin lidiar con errores del pasado
+D. Aumenta la cantidad de ramas en el proyecto
+
+✅ Correcta: C
+🧾 Explicación: Si la mainline está limpia y estable, los desarrolladores pueden trabajar de forma continua sin tener que perder tiempo corrigiendo errores heredados.
+
+🧠 Pregunta 45
+¿Qué permite hacer una buena commit suite en pocos minutos?
+
+A. Eliminar la necesidad de revisión de código
+B. Validar rápidamente si el código introducido rompió algo
+C. Detectar errores de diseño arquitectónico
+D. Aumentar la cobertura de comentarios
+
+✅ Correcta: B
+🧾 Explicación: Al validar automáticamente el código con una suite rápida, el equipo recibe feedback inmediato y puede actuar rápidamente ante errores.
+
+🧠 Pregunta 46
+¿Qué problema común enfrentan los desarrolladores al clonar repositorios en Git según Fowler?
+
+A. Tienen acceso directo a producción
+B. El repositorio local sobrescribe el remoto
+C. Terminan trabajando en ramas "master" diferentes
+D. Se pierden los archivos locales
+
+✅ Correcta: C
+🧾 Explicación: Aunque trabajen en la misma rama master, cada clon tiene su propia copia y commits independientes, lo que significa que están en ramas distintas bajo la definición de Fowler.
+
+🧠 Pregunta 47
+¿Cuál es una forma de evitar dejar commits defectuosos en el historial de una rama personal?
+
+A. Usar git cherry-pick
+B. Evitar hacer commits hasta terminar
+C. Hacer squash antes de fusionar
+D. Borrar el repositorio y empezar de nuevo
+
+✅ Correcta: C
+🧾 Explicación: Hacer squash permite combinar múltiples commits en uno solo, dejando solo los estados funcionales y eliminando los pasos intermedios defectuosos.
+
+🧠 Pregunta 48
+¿Qué recomienda Fowler para mitigar la lentitud en pruebas exhaustivas?
+
+A. Ejecutarlas solo al final del proyecto
+B. Dividirlas en etapas en una pipeline de despliegue
+C. Ejecutarlas en paralelo con otras tareas manuales
+D. Ignorarlas si el código parece funcionar
+
+✅ Correcta: B
+🧾 Explicación: Fowler sugiere dividir las pruebas en etapas progresivas (pipeline), con una primera etapa rápida (commit suite) y otras más lentas ejecutadas con menor frecuencia.
+
+🧠 Pregunta 49
+¿Qué permite que los equipos puedan lanzar desde mainline directamente a producción?
+
+A. Que la mainline se mantenga siempre saludable y con código confiable
+B. Que las ramas de desarrollo se eliminen
+C. Que se reduzca el uso de pruebas
+D. Que se desactive el control de versiones
+
+✅ Correcta: A
+🧾 Explicación: Si la mainline se mantiene limpia y verificada en todo momento, el equipo puede lanzar directamente sin una fase larga de estabilización.
+
+🧠 Pregunta 50
+¿Por qué los commits frecuentes en ramas personales pueden entrar en conflicto con la salud de la rama?
+
+A. Porque ocupan mucho espacio
+B. Porque podrían incluir cambios que aún no compilan
+C. Porque dificultan la visualización de los tags
+D. Porque incrementan el número de forks
+
+✅ Correcta: B
+🧾 Explicación: Aunque los commits frecuentes son útiles como puntos de control, podrían dejar en el historial estados defectuosos. Por eso Fowler recomienda hacer squash al finalizar.
+
+
+🧠 Pregunta 61
+¿Qué problema puede surgir incluso cuando una fusión de ramas no genera conflictos visibles?
+
+A. La historia de Git se corrompe
+B. El proyecto no puede ser desplegado en la nube
+C. El sistema presenta errores de ejecución debido a cambios lógicos incompatibles
+D. Los tags se sobrescriben
+
+✅ Correcta: C
+🧾 Explicación: Los conflictos semánticos no siempre son detectados por el sistema de control de versiones. Aunque el código fusione y compile, puede fallar en su comportamiento lógico en tiempo de ejecución.
+
+🧠 Pregunta 62
+¿Por qué los conflictos de integración en el código no se pueden resolver siempre de forma automática?
+
+A. Porque los archivos son demasiado grandes
+B. Porque el control de versiones solo puede detectar conflictos de texto, no de significado
+C. Porque Git necesita permisos especiales
+D. Porque Mercurial no soporta conflictos
+
+✅ Correcta: B
+🧾 Explicación: El sistema puede detectar conflictos de texto, pero no puede entender si el código sigue teniendo sentido funcionalmente. Resolver conflictos semánticos requiere análisis humano.
+
+🧠 Pregunta 63
+¿Qué señala Kent Beck con su frase "dar a cada individuo la ilusión de tiempo congelado"?
+
+A. Que cada desarrollador trabaja de forma aislada creyendo que sus cambios no afectarán a otros
+B. Que se congela el repositorio en cada commit
+C. Que el sistema borra cambios antiguos automáticamente
+D. Que los desarrolladores deben sincronizar en vivo todos los cambios
+
+✅ Correcta: A
+🧾 Explicación: Cada desarrollador trabaja como si fuera el único modificando el sistema, pero eventualmente los cambios deben ser reconciliados, pagando el costo de integrar.
+
+🧠 Pregunta 64
+¿Qué debe hacer un equipo ante un conflicto semántico después de fusionar ramas?
+
+A. Revertir siempre la fusión
+B. Ejecutar solo pruebas de compilación
+C. Resolver manualmente el conflicto con intervención humana y posible modificación de código
+D. Ignorar los errores hasta un próximo sprint
+
+✅ Correcta: C
+🧾 Explicación: Un conflicto semántico necesita ser revisado manualmente. Puede requerir modificaciones que combinen los cambios de distintas ramas respetando la lógica funcional.
+
+🧠 Pregunta 65
+¿Qué representa el "deployment pipeline" que menciona Martin Fowler?
+
+A. Un proceso de despliegue manual
+B. Una serie de etapas de prueba automatizada tras cada commit
+C. Un mecanismo para crear ramas nuevas
+D. Un sistema para realizar merge de branches
+
+✅ Correcta: B
+🧾 Explicación: Un deployment pipeline automatiza el proceso de validación de código en distintas fases, desde la commit suite rápida hasta pruebas más largas como integración, performance o seguridad.
+
+🧠 Pregunta 66
+¿Cuál es el propósito de ejecutar la primera etapa de pruebas (commit suite) en menos de 10 minutos?
+
+A. Validar cambios rápidamente para permitir una integración continua efectiva
+B. Aumentar la cobertura de documentación
+C. Reducir el número de ramas en el proyecto
+D. Evitar la necesidad de hacer squash
+
+✅ Correcta: A
+🧾 Explicación: Ejecutar la commit suite en pocos minutos permite obtener feedback inmediato sobre la calidad del código, facilitando integraciones rápidas y frecuentes.
+
+🧠 Pregunta 67
+¿Qué deben hacer los equipos si sus pruebas de performance tardan varias horas en ejecutarse?
+
+A. Eliminar esas pruebas
+B. Ejecutarlas sólo una vez al mes
+C. Mantenerlas en una etapa posterior del pipeline, después de la commit suite
+D. Integrarlas directamente en el commit inicial
+
+✅ Correcta: C
+🧾 Explicación: Pruebas costosas como las de performance deben ejecutarse en etapas posteriores del pipeline para no bloquear el flujo de commits rápidos.
+
+🧠 Pregunta 68
+¿Cuál es una señal de que un equipo ha logrado una mainline saludable y confiable?
+
+A. Necesitan múltiples ramas para estabilizar el código antes de lanzar
+B. Pueden lanzar a producción directamente desde la línea principal
+C. Crean un backup antes de cada commit
+D. Solo lanzan versiones mayores cada año
+
+✅ Correcta: B
+🧾 Explicación: Cuando la mainline se mantiene siempre estable, el equipo puede lanzar directamente a producción, minimizando la necesidad de grandes fases de estabilización.
+
+🧠 Pregunta 69
+¿Qué se busca al aplicar pruebas automáticas en cada commit?
+
+A. Detectar errores de despliegue
+B. Asegurar que los cambios no rompan funcionalidades existentes
+C. Evitar la creación de nuevas ramas
+D. Reducir la cantidad de pull requests
+
+✅ Correcta: B
+🧾 Explicación: Las pruebas automáticas verifican que cada cambio nuevo no introduzca errores que afecten el funcionamiento ya establecido del sistema.
+
+🧠 Pregunta 70
+¿Cuál es la mayor ventaja de eliminar los commits no saludables antes de fusionar a la mainline?
+
+A. Mejora la estética del historial de Git
+B. Disminuye el tamaño del repositorio
+C. Asegura que solo código funcional llegue a la línea principal, reduciendo errores de integración
+D. Facilita crear forks desde cualquier commit
+
+✅ Correcta: C
+🧾 Explicación: Consolidar commits defectuosos antes de integrar mantiene la mainline estable y funcional, haciendo más fácil y segura la integración continua del equipo.
+
+🧠 Pregunta 71
+Según Fowler, ¿qué facilita que los equipos puedan ver cómo evoluciona el proyecto a lo largo del tiempo?
+
+A. El sistema de permisos de GitHub
+B. El rastreo de cambios en los sistemas de control de versiones
+C. La creación de ramas por cada funcionalidad
+D. El uso de pipelines manuales de validación
+
+✅ Correcta: B
+🧾 Explicación: Los sistemas modernos de control de versiones no solo permiten gestionar versiones, sino también seguir la evolución del proyecto gracias al historial de cambios registrados.
+
+🧠 Pregunta 72
+¿Qué aspecto del control de versiones es clave para permitir la fusión de cambios entre ramas?
+
+A. La existencia de múltiples forks
+B. El registro detallado de cada commit
+C. El uso de sistemas de archivos distribuidos
+D. La creación de etiquetas semanales
+
+✅ Correcta: B
+🧾 Explicación: Registrar cada cambio como un commit facilita el proceso de fusión, ya que se puede reconstruir cómo se llegó a cada versión y reconciliar diferencias más fácilmente.
+
+🧠 Pregunta 73
+Cuando Scarlett resetea su master local a origin/master, ¿qué sucede con su trabajo anterior según la lectura?
+
+A. Se pierde para siempre
+B. Se convierte en una nueva codeline etiquetada
+C. Se fusiona automáticamente
+D. Se borra del historial global
+
+✅ Correcta: B
+🧾 Explicación: Al etiquetar antes de resetear, Scarlett preserva su trabajo como una codeline aparte, que puede ser revisitada o fusionada más adelante si es necesario.
+
+🧠 Pregunta 74
+¿Por qué Martin Fowler considera que el branching crea una "ilusión" en el desarrollo de software?
+
+A. Porque hace que los conflictos no existan
+B. Porque oculta la necesidad de hacer pruebas
+C. Porque da la apariencia de que cada desarrollador trabaja solo en el sistema
+D. Porque elimina los conflictos semánticos
+
+✅ Correcta: C
+🧾 Explicación: El branching da a cada desarrollador la ilusión de trabajar aislado sin interferir en el sistema general, pero eventualmente todos deben reconciliar sus cambios.
+
+🧠 Pregunta 75
+¿Qué describe mejor un "semantic conflict" (conflicto semántico) en el artículo?
+
+A. Un error de permisos en el repositorio
+B. Un conflicto detectado en la estructura del árbol Git
+C. Un fallo lógico que no se detecta durante la fusión textual
+D. Un problema en el etiquetado de versiones
+
+✅ Correcta: C
+🧾 Explicación: Los conflictos semánticos ocurren cuando, aunque la fusión textual no falle, el sistema no compila o no funciona como debería debido a diferencias en la lógica.
+
+🧠 Pregunta 76
+¿Qué aspecto del control de versiones ayuda a determinar en qué momento deben fusionarse los cambios?
+
+A. El sistema de etiquetas y releases
+B. El historial de forks
+C. La visualización de ramas en un árbol
+D. El rastreo de cambios individuales en cada commit
+
+✅ Correcta: D
+🧾 Explicación: El registro detallado de cambios en los commits permite identificar puntos comunes y divergentes para decidir cuándo y cómo hacer una fusión.
+
+🧠 Pregunta 77
+En la analogía de la caída desde un edificio que menciona Fowler, ¿qué representa la “caída” en el desarrollo con ramas?
+
+A. El trabajo de codificación sin integración
+B. El testing de unidades
+C. El commit inicial de la rama
+D. El despliegue de una nueva versión
+
+✅ Correcta: A
+🧾 Explicación: La caída representa el tiempo en que los desarrolladores trabajan de manera aislada en sus ramas; el "aterrizaje" representa la dificultad y el costo de fusionarlo todo correctamente.
+
+🧠 Pregunta 78
+¿Qué efecto tiene clonar un repositorio respecto a las codelines?
+
+A. No afecta las codelines existentes
+B. Crea una nueva codeline independiente basada en el estado clonado
+C. Fusiona automáticamente ramas remotas
+D. Elimina las ramas locales
+
+✅ Correcta: B
+🧾 Explicación: Cada clon crea efectivamente una nueva codeline, aunque trabaje sobre la misma rama "master", porque los commits son independientes hasta que se fusionan explícitamente.
+
+🧠 Pregunta 79
+¿Qué factor complica aún más los conflictos de fusión en sistemas distribuidos como Git?
+
+A. Que cada clon tiene su propio conjunto de ramas y commits
+B. Que no se puede trabajar sin conexión
+C. Que Git no soporta múltiples usuarios
+D. Que los forks son inmutables
+
+✅ Correcta: A
+🧾 Explicación: En sistemas como Git, cada desarrollador tiene un clon con su propio historial, por lo que las fusiones implican unir múltiples codelines independientes.
+
+🧠 Pregunta 80
+¿Cuál es una desventaja de ejecutar todas las pruebas exhaustivas en cada commit según la lectura?
+
+A. Aumenta la probabilidad de conflictos
+B. Hace que la integración continua sea lenta y reduce la agilidad
+C. Obliga a fusionar inmediatamente
+D. Elimina la necesidad de ramas personales
+
+✅ Correcta: B
+🧾 Explicación: Si las pruebas son demasiado lentas, cada commit tarda mucho en validarse, lo cual frena el flujo de trabajo y dificulta una integración rápida y continua.
+
+🧠 Pregunta 81
+En Git, ¿qué sucede técnicamente cuando haces un git clone de un repositorio remoto?
+
+A. Se crea una nueva rama remota sincronizada automáticamente
+B. Se crea una copia local del repositorio incluyendo todo su historial y ramas
+C. Solo se clona el último commit de la rama principal
+D. Se genera un branch separado para cada commit
+
+✅ Correcta: B
+🧾 Explicación: git clone crea una copia local completa, incluyendo todos los commits, ramas, y referencias remotas, permitiendo desarrollar de forma independiente al repositorio original.
+
+🧠 Pregunta 82
+¿Qué problema genera principalmente un conflicto semántico tras una fusión en Git?
+
+A. La incapacidad de hacer pull requests
+B. El código compila exitosamente, pero falla en tiempo de ejecución debido a cambios incompatibles en la lógica
+C. Un error automático de Git que impide push
+D. Un merge automático fallido que detiene el CI
+
+✅ Correcta: B
+🧾 Explicación: Un conflicto semántico ocurre cuando el sistema no puede detectar que los cambios lógicos realizados rompen funcionalidades, porque la fusión textual no produce errores visibles.
+
+🧠 Pregunta 83
+¿Cuál es el rol técnico de la commit suite dentro de un deployment pipeline?
+
+A. Generar ramas automáticas para cada cambio
+B. Ejecutar pruebas rápidas que validan la integridad básica del sistema tras cada commit
+C. Sincronizar automáticamente los repositorios remotos
+D. Eliminar ramas obsoletas
+
+✅ Correcta: B
+🧾 Explicación: La commit suite es la primera capa de defensa, una colección de pruebas unitarias y de integración rápida que aseguran que el sistema no se rompe tras cada commit individual.
+
+🧠 Pregunta 84
+¿Qué diferencia técnica principal existe entre un conflicto textual y un conflicto semántico en control de versiones?
+
+A. El conflicto textual ocurre durante la fusión; el semántico puede no aparecer hasta ejecución
+B. El conflicto semántico es siempre solucionable automáticamente
+C. El conflicto textual solo afecta archivos binarios
+D. El conflicto textual nunca requiere intervención manual
+
+✅ Correcta: A
+🧾 Explicación: El conflicto textual impide completar un merge sin intervención; el semántico puede pasar desapercibido hasta que el código se ejecuta y revela errores lógicos.
+
+🧠 Pregunta 85
+En un modelo basado en mainline, ¿cuál es la acción correcta antes de integrar una nueva funcionalidad?
+
+A. Crear una nueva release branch para cada pequeño cambio
+B. Rebasear o fusionar frecuentemente la mainline en la rama personal de desarrollo
+C. Eliminar los commits intermedios mediante un git reset
+D. Hacer squash de la mainline antes de hacer pull
+
+✅ Correcta: B
+🧾 Explicación: Mantener la rama personal actualizada frecuentemente con la mainline evita grandes conflictos al integrar, reduciendo la divergencia.
+
+🧠 Pregunta 86
+¿Qué ventaja técnica proporciona el uso de self-testing code en ramas personales?
+
+A. Permite hacer cherry-pick automático entre commits
+B. Garantiza que el código se valida a través de pruebas automatizadas antes de integrarlo a mainline
+C. Evita la necesidad de crear feature branches
+D. Sincroniza automáticamente cambios entre branches
+
+✅ Correcta: B
+🧾 Explicación: Self-testing code implica escribir pruebas junto al código de producción, asegurando que cualquier fallo se detecte de inmediato antes de afectar la mainline.
+
+🧠 Pregunta 87
+¿Por qué mantener una mainline saludable técnicamente permite lanzar a producción en cualquier momento?
+
+A. Porque todos los cambios están aprobados automáticamente por pull requests
+B. Porque el tip de mainline siempre contiene una versión estable, probada y lista para despliegue
+C. Porque se eliminan las pruebas manuales
+D. Porque Git sincroniza automáticamente los cambios cada hora
+
+✅ Correcta: B
+🧾 Explicación: Una mainline saludable implica que cada commit mantiene el sistema funcional, lo que permite generar builds de producción confiables sin estabilizaciones extensas.
+
+🧠 Pregunta 88
+¿Qué mecanismo utiliza Git para registrar cambios individuales y facilitar la reconstrucción de la historia del proyecto?
+
+A. Tags y versiones
+B. Commits inmutables encadenados por referencias SHA-1/SHA-256
+C. Branches volátiles
+D. Clones parciales
+
+✅ Correcta: B
+🧾 Explicación: Git registra cada cambio como un commit referenciado por un hash único (SHA-1 en versiones tradicionales, SHA-256 en nuevas), lo que garantiza la integridad del historial.
+
+🧠 Pregunta 89
+¿Cuál es un patrón técnico para mantener un historial limpio y entendible en ramas personales antes de integrarse a mainline?
+
+A. Aplicar git merge --no-ff a cada commit
+B. Usar git squash para consolidar commits no saludables antes de hacer merge
+C. Realizar forks independientes de mainline
+D. Cambiar el nombre de los commits antiguos manualmente
+
+✅ Correcta: B
+🧾 Explicación: Hacer squash permite combinar múltiples commits de trabajo en uno solo funcional y saludable, limpiando el historial antes de integrarlo a la mainline.
+
+🧠 Pregunta 90
+En el contexto de la lectura, ¿cuál es el propósito técnico de usar pipelines separados en la integración continua?
+
+A. Reducir el número de forks activos
+B. Aislar rápidamente los errores según el tipo de prueba y evitar detener todo el flujo de integración
+C. Consolidar ramas automáticamente al pasar pruebas
+D. Obligar a los desarrolladores a trabajar en master
+
+✅ Correcta: B
+🧾 Explicación: Separar las etapas de pruebas en el pipeline (por ejemplo, commit suite primero, luego integración, luego performance) permite detectar errores temprano y optimizar el tiempo de feedback.
+
+🧠 Pregunta 91
+¿Cuál es el rol técnico del origin/master en un flujo de trabajo con Git?
+
+A. Es la copia local más reciente de la rama master remota
+B. Es una etiqueta creada al momento del primer commit
+C. Es la rama protegida contra push forzado
+D. Es una rama secundaria creada automáticamente al hacer merge
+
+✅ Correcta: A
+🧾 Explicación: origin/master es la referencia local que apunta al último estado conocido de la rama master en el repositorio remoto; se actualiza cuando haces git fetch o git pull.
+
+🧠 Pregunta 92
+¿Qué ventaja técnica proporciona realizar integraciones frecuentes de la mainline en las ramas personales?
+
+A. Minimiza el riesgo de conflictos complejos al momento de hacer merge final
+B. Permite borrar ramas antiguas automáticamente
+C. Acelera el proceso de rebase
+D. Elimina la necesidad de testing
+
+✅ Correcta: A
+🧾 Explicación: Integrar frecuentemente evita que los cambios divergentes acumulen conflictos, haciendo que el proceso de fusión final sea mucho más sencillo y predecible.
+
+🧠 Pregunta 93
+¿Qué diferencia técnica existe entre un merge conflict textual y un conflict semántico?
+
+A. El textual ocurre en archivos binarios; el semántico, en texto plano
+B. El textual es detectado por Git; el semántico requiere pruebas o ejecución para ser descubierto
+C. El textual es ignorado por Git; el semántico bloquea la fusión
+D. No existe diferencia; ambos son sinónimos
+
+✅ Correcta: B
+🧾 Explicación: Un conflicto textual ocurre cuando Git no puede combinar automáticamente los cambios. Un conflicto semántico pasa desapercibido hasta la ejecución del código.
+
+🧠 Pregunta 94
+¿Cuál sería una práctica técnica adecuada después de detectar un conflicto semántico tras un merge?
+
+A. Forzar el push ignorando el error
+B. Analizar, corregir manualmente y agregar pruebas específicas que validen el nuevo comportamiento
+C. Eliminar el commit anterior y rehacer el merge
+D. Crear una nueva rama desde master
+
+✅ Correcta: B
+🧾 Explicación: Los conflictos semánticos requieren que los desarrolladores analicen el problema, resuelvan las inconsistencias lógicas y añadan pruebas para garantizar que el nuevo comportamiento sea válido.
+
+🧠 Pregunta 95
+En una práctica DevOps moderna, ¿qué características debe tener una commit suite ideal?
+
+A. Ejecutarse en menos de 10 minutos y cubrir los componentes críticos de negocio
+B. Ejecutar todas las pruebas de integración y performance completas
+C. Solo validar los cambios de frontend
+D. Ignorar pruebas lentas y enfocarse en métricas de infraestructura
+
+✅ Correcta: A
+🧾 Explicación: Una buena commit suite debe ser rápida (menos de 10 minutos) y validar de manera eficaz los componentes más críticos para permitir una integración continua fluida.
+
+🧠 Pregunta 96
+¿Por qué realizar squash de commits antes de integrar una rama personal a la mainline?
+
+A. Para reducir el número de forks creados en GitHub
+B. Para consolidar cambios intermedios en un solo commit funcional y limpiar el historial
+C. Para aumentar el número de merges en el repositorio
+D. Para evitar conflictos de sincronización de pull requests
+
+✅ Correcta: B
+🧾 Explicación: Squashear une varios commits pequeños e inestables en uno solo bien probado, asegurando que el historial de la mainline sea claro, funcional y fácil de entender.
+
+🧠 Pregunta 97
+¿Qué significa mantener una línea principal saludable en términos de control de calidad?
+
+A. Que no haya ramas en conflicto
+B. Que cada commit pase todas las pruebas de validación automática antes de ser aceptado
+C. Que se tenga siempre la última versión de las dependencias
+D. Que los cambios se apliquen de manera masiva cada semana
+
+✅ Correcta: B
+🧾 Explicación: Una línea principal saludable significa que cada cambio integrado ha sido validado automáticamente, garantizando la estabilidad funcional continua del producto.
+
+🧠 Pregunta 98
+¿Qué estrategia técnica puede reducir el impacto del tiempo de ejecución de pruebas de performance muy largas?
+
+A. Dividir las pruebas de performance en pipelines separados y ejecutarlas fuera de la commit suite
+B. Ejecutarlas todas en la commit suite inicial
+C. Ejecutarlas únicamente en ramas de hotfix
+D. Ignorar las pruebas de performance si las pruebas unitarias pasan
+
+✅ Correcta: A
+🧾 Explicación: Las pruebas costosas deben ejecutarse en etapas separadas de la pipeline para no bloquear el ciclo de feedback rápido necesario en integración continua.
+
+🧠 Pregunta 99
+¿Por qué es importante construir software que pase automáticamente su commit suite antes de fusionarlo en mainline?
+
+A. Para evitar la proliferación de ramas
+B. Para garantizar que cada commit añadido a la línea principal mantiene el sistema estable y desplegable
+C. Para disminuir el tamaño de los artefactos
+D. Para permitir crear forks públicos
+
+✅ Correcta: B
+🧾 Explicación: Si cada commit que llega a mainline es seguro y funcional, el equipo puede garantizar entregas rápidas y confiables sin necesitar largos ciclos de estabilización posteriores.
+
+🧠 Pregunta 100
+¿Cuál sería un síntoma técnico de un equipo que no mantiene su mainline saludable?
+
+A. Necesidad constante de “freezar” (congelar) branches antes de releases
+B. Aumento de la velocidad de despliegue
+C. Disminución del número de pull requests
+D. Reducción de conflictos semánticos
+
+✅ Correcta: A
+🧾 Explicación: Si el equipo necesita constantemente congelar ramas o hacer "code freezes" largos antes de lanzar, es un claro indicio de que su mainline no se mantiene estable de forma continua.
