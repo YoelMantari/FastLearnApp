@@ -238,3 +238,123 @@ D. Fusionar múltiples ramas en un solo commit
 ✅ Correcta: C
 🧾 Explicación: git reflog mantiene un registro de todas las referencias movidas localmente, incluyendo operaciones destructivas como reset --hard, lo que permite restaurar estados perdidos.
 
+🧠 Pregunta 21
+
+¿Qué comando en Git permite eliminar completamente un commit durante un rebase interactivo?
+
+A. squash
+B. fixup
+C. drop
+D. reword
+
+✅ Correcta: C
+🧾 Explicación: Al usar drop en un rebase interactivo, Git eliminará ese commit del historial como si nunca hubiese existido.
+
+🧠 Pregunta 22
+
+¿Cuál de los siguientes comandos muestra gráficamente las ramas, etiquetas y commits en forma compacta?
+
+A. git log --pretty
+B. git log --graph --decorate --oneline
+C. git status
+D. git show
+
+✅ Correcta: B
+🧾 Explicación: Este comando combina visualización del árbol (--graph), etiquetas (--decorate) y un formato reducido por línea (--oneline), ideal para revisión rápida.
+
+🧠 Pregunta 23
+
+¿Qué debe hacerse antes de ejecutar un Octopus Merge?
+
+A. Borrar los submódulos
+B. Confirmar que no haya conflictos entre las ramas
+C. Ejecutar git blame
+D. Eliminar los commits triviales
+
+✅ Correcta: B
+🧾 Explicación: El Octopus Merge no permite resolución de conflictos, por lo que es crucial asegurarse de que todas las ramas puedan integrarse sin colisiones.
+
+🧠 Pregunta 24
+
+¿Qué opción permite ver el reflog de una rama específica en lugar del HEAD?
+
+A. git reflog -b <rama>
+B. git reflog show <rama>
+C. git reflog --branch <rama>
+D. git reflog only <rama>
+
+✅ Correcta: B
+🧾 Explicación: git reflog show <rama> muestra los movimientos de una rama específica, útil para analizar cambios locales incluso si no están en el historial visible.
+
+🧠 Pregunta 25
+
+¿Cuál es el comando correcto para recuperar una rama eliminada usando reflog?
+
+A. git clone reflog
+B. git reset branch
+C. git checkout -b <nombre> <hash_encontrado>
+D. git pull origin <hash_encontrado>
+
+✅ Correcta: C
+🧾 Explicación: Al encontrar el commit perdido en git reflog, puedes restaurar la rama eliminada creando una nueva rama apuntando a ese commit con git checkout -b.
+
+🧠 Pregunta 26
+
+¿Cuál es una diferencia clave entre reword y edit en un rebase interactivo?
+
+A. edit elimina el commit, reword lo mantiene
+B. reword cambia el contenido del commit, edit cambia el mensaje
+C. edit permite modificar el contenido del commit, reword solo el mensaje
+D. No hay diferencia, ambos hacen lo mismo
+
+✅ Correcta: C
+🧾 Explicación: reword permite cambiar únicamente el mensaje del commit, mientras que edit detiene el rebase para que puedas modificar el contenido del commit (archivos, código, etc.).
+
+🧠 Pregunta 27
+
+¿Qué sucede si intentas hacer un rebase -i sobre una rama que ya fue enviada a remoto y compartida?
+
+A. El rebase se cancela automáticamente
+B. El historial se reescribe y puede causar conflictos para otros
+C. La rama se borra del remoto
+D. Git actualiza los commits sin afectar a los demás
+
+✅ Correcta: B
+🧾 Explicación: Reescribir el historial de una rama compartida puede generar conflictos para otros colaboradores, ya que los commits originales dejan de existir en su forma previa.
+
+🧠 Pregunta 28
+
+¿Cuál es el objetivo principal del comando git log -L?
+
+A. Eliminar líneas de código de un archivo
+B. Ver la historia de modificaciones de una función o rango de líneas
+C. Recuperar ramas eliminadas
+D. Fusionar ramas desde múltiples orígenes
+
+✅ Correcta: B
+🧾 Explicación: git log -L permite rastrear los cambios realizados a una función o sección específica del código, mostrando cómo ha evolucionado a lo largo del tiempo.
+
+🧠 Pregunta 29
+
+¿Qué acción realiza git submodule update --init --recursive?
+
+A. Sincroniza los cambios de todos los subtrees
+B. Borra los submódulos
+C. Clona y actualiza todos los submódulos y sus submódulos anidados
+D. Comprime el historial de los submódulos
+
+✅ Correcta: C
+🧾 Explicación: Este comando descarga e inicializa todos los submódulos del proyecto, incluyendo los submódulos dentro de submódulos si los hay (anidados).
+
+🧠 Pregunta 30
+
+¿Qué ventaja ofrece el uso de git bisect frente a una revisión manual del historial?
+
+A. Permite editar directamente los commits defectuosos
+B. Restaura commits eliminados automáticamente
+C. Encuentra el commit que introdujo un error usando búsqueda binaria
+D. Integra pruebas automatizadas automáticamente
+
+✅ Correcta: C
+🧾 Explicación: git bisect reduce significativamente el número de pasos necesarios para encontrar el commit problemático aplicando el principio de búsqueda binaria sobre el historial.
+

@@ -1,0 +1,109 @@
+🧠 Pregunta 61
+¿Qué ventaja ofrece Git al calcular el hash de cada objeto usando su contenido?
+
+A. Permite ocultar los archivos modificados
+B. Acelera las operaciones de clonación
+C. Permite identificar cambios exactos y evitar duplicación de datos
+D. Elimina la necesidad de branches
+
+✅ Correcta: C
+🧾 Explicación: Al usar el contenido para generar el hash, Git evita duplicar archivos idénticos y puede detectar exactamente qué ha cambiado en cada versión.
+
+🧠 Pregunta 62
+¿Qué comando se usa para traer cambios desde un repositorio remoto y fusionarlos con la rama actual?
+
+A. git push
+B. git merge
+C. git fetch
+D. git pull
+
+✅ Correcta: D
+🧾 Explicación: git pull trae los cambios del repositorio remoto y los fusiona automáticamente con tu rama actual.
+
+🧠 Pregunta 63
+¿Qué significa que Git es “resiliente”?
+
+A. Que se adapta al sistema operativo del servidor
+B. Que requiere poco mantenimiento manual
+C. Que puede recuperarse desde cualquier clon si se pierde el servidor principal
+D. Que tiene una interfaz gráfica predeterminada
+
+✅ Correcta: C
+🧾 Explicación: Al ser distribuido, cualquier clon completo de un repositorio Git puede ser usado para restaurar todo el proyecto si el servidor falla.
+
+🧠 Pregunta 64
+¿Cuál es el propósito del comando git status?
+
+A. Mostrar las ramas remotas existentes
+B. Indicar el estado del repositorio y los archivos modificados
+C. Revertir los últimos commits
+D. Generar el archivo de configuración del proyecto
+
+✅ Correcta: B
+🧾 Explicación: git status informa sobre los archivos modificados, añadidos o pendientes de commit, y muestra en qué rama estás.
+
+🧠 Pregunta 65
+¿Cuál es la diferencia entre git fetch y git pull?
+
+A. git fetch descarga y fusiona, mientras que git pull solo descarga
+B. git fetch descarga sin fusionar, git pull descarga y fusiona
+C. No existe diferencia, ambos hacen lo mismo
+D. git pull solo sirve en la rama main
+
+✅ Correcta: B
+🧾 Explicación: git fetch descarga cambios remotos sin aplicarlos, mientras que git pull también los fusiona con la rama actual.
+
+🧠 Pregunta 66
+¿Qué opción describe mejor el uso de git reset?
+
+A. Fusiona cambios remotos
+B. Reescribe el historial y mueve la rama a un commit anterior
+C. Borra el contenido del repositorio
+D. Crea ramas temporales para pruebas
+
+✅ Correcta: B
+🧾 Explicación: git reset mueve el puntero de la rama actual a un commit anterior y, dependiendo del modo usado, puede modificar el árbol de trabajo y el staging area.
+
+🧠 Pregunta 67
+¿Qué ocurre cuando se resuelve un conflicto de merge manualmente?
+
+A. Se borra el historial de la rama
+B. Git crea automáticamente una nueva rama
+C. Se deben quitar los delimitadores <<<<<<<, =======, >>>>>>> y hacer commit
+D. El conflicto se soluciona al hacer git fetch
+
+✅ Correcta: C
+🧾 Explicación: Cuando hay un conflicto, Git marca el código en conflicto con delimitadores, y el desarrollador debe resolverlo manualmente y luego hacer commit.
+
+🧠 Pregunta 68
+¿Por qué los comandos como git log, git diff y git blame son rápidos en Git?
+
+A. Porque se ejecutan en la nube
+B. Porque se basan en archivos temporales
+C. Porque acceden directamente al servidor remoto
+D. Porque operan localmente sin depender del servidor
+
+✅ Correcta: D
+🧾 Explicación: Git ejecuta estas operaciones completamente en local gracias a que cada clon contiene todo el historial, lo que las hace muy rápidas.
+
+🧠 Pregunta 69
+¿Qué ventaja clave ofrece la compresión en los packfiles?
+
+A. Disminuye la cantidad de ramas activas
+B. Oculta los cambios más recientes
+C. Reduce el tamaño del repositorio y mejora las transferencias
+D. Elimina commits duplicados automáticamente
+
+✅ Correcta: C
+🧾 Explicación: Los packfiles comprimen los objetos del repositorio, reduciendo el tamaño del disco y acelerando operaciones como clone o fetch.
+
+🧠 Pregunta 70
+¿Cuál es la principal razón de Git para usar estructuras como DAGs y árboles de Merkle?
+
+A. Soportar múltiples sistemas de archivos
+B. Permitir personalizar los comandos
+C. Garantizar integridad, trazabilidad y eficiencia en las operaciones
+D. Poder ejecutar Git sin instalación
+
+✅ Correcta: C
+🧾 Explicación: Git combina DAGs y árboles de Merkle para asegurar relaciones claras entre commits, integridad criptográfica y operaciones eficientes sobre el historial.
