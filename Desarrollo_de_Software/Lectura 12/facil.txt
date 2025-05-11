@@ -1,0 +1,240 @@
+🧠 Pregunta 1
+
+¿Cuál es el propósito principal del comando git rebase -i?
+
+A. Fusionar ramas de manera automática
+B. Reescribir la historia reciente de commits de forma controlada
+C. Eliminar ramas remotas
+D. Hacer un merge sin conflictos
+
+✅ Correcta: B
+🧾 Explicación: git rebase -i (interactivo) permite modificar, combinar o eliminar commits recientes para dejar un historial más claro y limpio, especialmente antes de hacer merge o push.
+
+🧠 Pregunta 2
+
+¿Qué acción realiza el comando squash durante un rebase interactivo?
+
+A. Elimina el commit completamente
+B. Fusiona el commit con el anterior, manteniendo ambos mensajes
+C. Pausa el proceso para editar el código
+D. Renombra el commit
+
+✅ Correcta: B
+🧾 Explicación: squash combina el commit con el anterior y te permite editar el mensaje combinado. Es útil para unir varios commits triviales en uno más significativo.
+
+🧠 Pregunta 3
+
+¿Por qué se recomienda no usar rebase -i en ramas compartidas que ya fueron enviadas a remoto?
+
+A. Porque elimina los commits anteriores
+B. Porque puede hacer el rebase más lento
+C. Porque reescribe el historial, causando conflictos en otros colaboradores
+D. Porque impide hacer push después
+
+✅ Correcta: C
+🧾 Explicación: Al reescribir el historial de una rama compartida, los colaboradores pueden tener conflictos al sincronizar sus versiones locales, lo que puede desorganizar el proyecto.
+
+🧠 Pregunta 4
+
+¿Cuál es la principal ventaja de usar git merge --no-ff?
+
+A. Elimina conflictos automáticamente
+B. Crea múltiples commits de fusión
+C. Obliga a Git a crear un commit de merge incluso si no es necesario
+D. Borra el historial de la rama
+
+✅ Correcta: C
+🧾 Explicación: --no-ff asegura que siempre se genere un commit de merge, lo cual permite preservar el historial de la rama fusionada y mejora la trazabilidad del proyecto.
+
+🧠 Pregunta 5
+
+¿Cuál es una limitación clave del Octopus Merge?
+
+A. Solo funciona en sistemas Linux
+B. Requiere internet para funcionar
+C. No permite resolver conflictos manualmente
+D. Solo puede fusionar dos ramas a la vez
+
+✅ Correcta: C
+🧾 Explicación: El Octopus Merge está diseñado para ramas que no presentan conflictos. Si hay algún conflicto, Git aborta el merge, ya que no permite resolución manual en este caso.
+
+🧠 Pregunta 6
+
+¿Qué hace la opción --graph del comando git log?
+
+A. Muestra el árbol de directorios
+B. Imprime los archivos modificados
+C. Representa gráficamente la estructura del historial de commits
+D. Muestra solo el último commit
+
+✅ Correcta: C
+🧾 Explicación: --graph dibuja una representación visual de las ramas y fusiones en el historial, útil para entender la evolución del proyecto.
+
+🧠 Pregunta 7
+
+¿Cuál es el propósito de git bisect?
+
+A. Fusionar ramas automáticamente
+B. Encontrar el commit que introdujo un error usando búsqueda binaria
+C. Reescribir el historial de commits
+D. Ver los cambios línea por línea en un archivo
+
+✅ Correcta: B
+🧾 Explicación: git bisect utiliza búsqueda binaria para encontrar el commit exacto que introdujo un fallo, siendo muy útil para depuración en proyectos grandes.
+
+🧠 Pregunta 8
+
+¿Qué comando permite rastrear todos los movimientos de HEAD y otras referencias, incluso después de un reset?
+
+A. git bisect
+B. git log
+C. git reflog
+D. git blame
+
+✅ Correcta: C
+🧾 Explicación: git reflog registra todos los movimientos de HEAD, incluidos los que no aparecen en git log, permitiendo recuperar estados anteriores o ramas eliminadas.
+
+🧠 Pregunta 9
+
+¿Cuál es la diferencia principal entre submódulo y subtree?
+
+A. Los subtrees requieren conexión a internet, los submódulos no
+B. Los subtrees integran el código completo, los submódulos solo una referencia
+C. Los subtrees no permiten trabajar en ramas
+D. No hay diferencia funcional entre ambos
+
+✅ Correcta: B
+🧾 Explicación: Un submódulo mantiene solo una referencia al otro repo, mientras que un subtree incorpora todo el contenido (y opcionalmente su historial) al repositorio principal.
+
+🧠 Pregunta 10
+
+¿Cuál de las siguientes afirmaciones sobre git blame es correcta?
+
+A. Sirve para borrar líneas obsoletas de código
+B. Solo muestra el autor del último commit del archivo completo
+C. Asocia cada línea de un archivo con el commit que la modificó por última vez
+D. Reescribe el contenido del archivo línea por línea
+
+✅ Correcta: C
+🧾 Explicación: git blame muestra quién modificó cada línea de un archivo, cuándo lo hizo y qué commit fue responsable, lo que lo convierte en una herramienta clave para depuración y auditoría.
+
+🧠 Pregunta 11
+
+¿Cuál es la acción del comando fixup en un rebase interactivo?
+
+A. Elimina el commit afectado
+B. Fusiona con el commit anterior y conserva ambos mensajes
+C. Fusiona con el commit anterior y descarta el mensaje del actual
+D. Pausa el rebase para editar el mensaje
+
+✅ Correcta: C
+🧾 Explicación: fixup combina el commit con el anterior, pero descarta su mensaje, dejándolo solo como parte técnica sin añadir información adicional al historial.
+
+🧠 Pregunta 12
+
+¿Cuándo es recomendable usar git log --graph --decorate --oneline?
+
+A. Solo después de hacer pull
+B. Cuando se desea analizar rápidamente la estructura del historial
+C. Para eliminar ramas obsoletas
+D. Para listar archivos modificados
+
+✅ Correcta: B
+🧾 Explicación: Esta combinación de opciones permite visualizar de forma compacta y gráfica el historial de commits, ideal para auditoría, revisiones o análisis antes de un merge.
+
+🧠 Pregunta 13
+
+¿Qué comando permite conocer todos los commits que han modificado una función específica?
+
+A. git blame
+B. git reset
+C. git log -L :nombre_funcion:archivo
+D. git bisect good
+
+✅ Correcta: C
+🧾 Explicación: git log -L :función:archivo muestra la evolución de una función, commit por commit, siendo clave para entender su historia y propósito.
+
+🧠 Pregunta 14
+
+¿Qué característica distingue al comando git blame frente a git log?
+
+A. Muestra los commits en forma compacta
+B. Identifica el autor por cada línea de código
+C. Elimina líneas redundantes del código
+D. Fusiona ramas sin conflictos
+
+✅ Correcta: B
+🧾 Explicación: git blame permite rastrear línea por línea quién hizo cada cambio y cuándo, mientras que git log muestra commits completos sin ese nivel de detalle.
+
+🧠 Pregunta 15
+
+¿Qué beneficio aporta el uso de --squash al agregar un subtree?
+
+A. Se fusionan ramas automáticamente
+B. El código externo se elimina al final del merge
+C. Se evita traer todo el historial del repositorio externo
+D. Se eliminan los archivos duplicados del subtree
+
+✅ Correcta: C
+🧾 Explicación: La opción --squash reduce el historial del repositorio externo a un único commit, lo que hace más liviano y limpio el historial del repositorio principal.
+
+🧠 Pregunta 16
+
+¿Cuál es una ventaja clave de usar submódulos en Git?
+
+A. Se puede editar el código externo desde el repositorio principal
+B. Evitan tener que clonar múltiples proyectos
+C. Permiten mantener dependencias externas separadas y versionadas
+D. Fusionan todos los repositorios automáticamente
+
+✅ Correcta: C
+🧾 Explicación: Los submódulos enlazan otros repositorios sin mezclar su código, lo que facilita mantener dependencias externas bien separadas y actualizadas.
+
+🧠 Pregunta 17
+
+¿Cuál es el propósito de git bisect good?
+
+A. Señalar que un commit funciona correctamente
+B. Eliminar commits defectuosos
+C. Confirmar el merge entre ramas
+D. Borrar el historial intermedio
+
+✅ Correcta: A
+🧾 Explicación: Durante el proceso de git bisect, marcar un commit como "good" ayuda a Git a reducir el rango de búsqueda hasta encontrar el que introdujo un error.
+
+🧠 Pregunta 18
+
+¿Para qué sirve el archivo .gitmodules en un proyecto con submódulos?
+
+A. Para definir ramas protegidas
+B. Para almacenar los cambios locales
+C. Para registrar la configuración de los submódulos usados
+D. Para hacer backup del repositorio
+
+✅ Correcta: C
+🧾 Explicación: .gitmodules contiene las rutas y URLs de los submódulos incluidos en el proyecto, lo que permite a otros desarrolladores clonarlos y actualizarlos correctamente.
+
+🧠 Pregunta 19
+
+¿Qué diferencia clave tienen los subtrees frente a los submódulos?
+
+A. No requieren conexión a internet
+B. Permiten commits locales sobre el código externo integrado
+C. No pueden incluir código externo
+D. No se pueden actualizar después de integrarlos
+
+✅ Correcta: B
+🧾 Explicación: A diferencia de los submódulos, los subtrees permiten trabajar directamente sobre el código integrado, hacer commits, y sincronizarlo después sin cambiar de contexto.
+
+🧠 Pregunta 20
+
+¿Cuál es una de las funciones del comando git reflog?
+
+A. Ver quién escribió cada línea de código
+B. Identificar conflictos entre ramas
+C. Recuperar estados anteriores que no aparecen en git log
+D. Fusionar múltiples ramas en un solo commit
+
+✅ Correcta: C
+🧾 Explicación: git reflog mantiene un registro de todas las referencias movidas localmente, incluyendo operaciones destructivas como reset --hard, lo que permite restaurar estados perdidos.
+

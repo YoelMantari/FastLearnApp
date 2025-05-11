@@ -1,13 +1,363 @@
 🧠 Pregunta 1
 
-¿Cuál es una característica clave de Git como sistema de control de versiones distribuido?
+¿Cuál es una de las principales ventajas de que Git sea un sistema distribuido?
 
-A. Depende de un único servidor central
+A. Permite trabajar solo cuando se está conectado al servidor central
+B. Cada desarrollador necesita acceso constante a internet
+C. Cada clon contiene una copia completa del historial del repositorio
+D. Obliga a sincronizar en tiempo real con todos los colaboradores
 
-B. Solo permite trabajar conectado a internet
+✅ Correcta: C
+🧾 Explicación: En Git, cada clon es un repositorio autónomo que guarda todo el historial de cambios, ramas y etiquetas, permitiendo trabajar sin conexión.
 
-C. Cada clon del repositorio tiene todo el historial completo
+🧠 Pregunta 2
 
-D. Los cambios solo se guardan en el servidor principal
+¿Qué estructura utiliza Git para organizar internamente los commits y mantener relaciones temporales entre ellos?
 
-✅ Respuesta correcta: C. Cada clon del repositorio tiene todo el historial completo
+A. Árbol de Merkle
+B. Lista doblemente enlazada
+C. Grafo acíclico dirigido (DAG)
+D. Pila LIFO
+
+✅ Correcta: C
+🧾 Explicación: Git organiza los commits como nodos en un grafo acíclico dirigido (DAG), lo que permite representar relaciones de dependencia sin ciclos y seguir el flujo del tiempo.
+
+🧠 Pregunta 3
+
+¿Para qué sirve principalmente el uso de árboles de Merkle en Git?
+
+A. Guardar los logs de cada commit
+B. Detectar errores de sintaxis automáticamente
+C. Verificar la integridad del contenido a través de hashes
+D. Mejorar la compatibilidad con sistemas centralizados
+
+✅ Correcta: C
+🧾 Explicación: Git utiliza árboles de Merkle para garantizar la integridad del repositorio mediante hashes que se propagan jerárquicamente al cambiar el contenido.
+
+🧠 Pregunta 4
+
+¿Cuál de las siguientes afirmaciones sobre los algoritmos de hash usados en Git es correcta?
+
+A. SHA-1 permite revertir el hash para recuperar el contenido original
+B. SHA-256 es menos seguro pero más rápido que SHA-1
+C. Git usa hashes para identificar de forma única los objetos
+D. Git asigna hashes aleatorios para mayor variabilidad
+
+✅ Correcta: C
+🧾 Explicación: Git usa algoritmos de hash (como SHA-1 o SHA-256) para identificar de manera única cada objeto en el repositorio según su contenido.
+
+🧠 Pregunta 5
+
+¿Cuál es una ventaja principal de los packfiles en Git?
+
+A. Requieren más espacio en disco pero aceleran las fusiones
+B. Permiten enviar múltiples objetos de forma comprimida y eficiente
+C. Eliminar versiones antiguas automáticamente
+D. Guardar los cambios en un formato legible por humanos
+
+✅ Correcta: B
+🧾 Explicación: Los packfiles agrupan objetos del repositorio en un solo archivo comprimido, lo que acelera las transferencias y optimiza el almacenamiento.
+
+🧠 Pregunta 6
+
+¿Qué técnica utiliza Git para reducir el tamaño de almacenamiento de versiones similares?
+
+A. Rebase interactivo
+B. Hashing paralelo
+C. Delta encoding
+D. Commit splitting
+
+✅ Correcta: C
+🧾 Explicación: Delta encoding almacena solo las diferencias entre versiones, lo que permite a Git ahorrar espacio y optimizar la transferencia de datos.
+
+🧠 Pregunta 7
+
+¿Cuál es una desventaja identificada en el uso de SHA-1 como algoritmo en Git?
+
+A. No se puede usar en sistemas distribuidos
+B. Tiene problemas con archivos grandes
+C. Se han encontrado colisiones que afectan la seguridad
+D. No permite revertir cambios
+
+✅ Correcta: C
+🧾 Explicación: SHA-1 ha sido vulnerado mediante colisiones, lo que puede comprometer la seguridad del contenido si no se actualiza a algoritmos más robustos como SHA-256.
+
+🧠 Pregunta 8
+
+¿Qué comando en Git se utiliza para fusionar múltiples ramas al mismo tiempo?
+
+A. git squash
+B. git octopus
+C. git merge con estrategia octopus
+D. git multi-merge
+
+✅ Correcta: C
+🧾 Explicación: Git permite usar la estrategia de fusión "octopus" con el comando git merge para combinar más de dos ramas simultáneamente, siempre que no haya conflictos complejos.
+
+🧠 Pregunta 9
+
+¿Qué herramienta de Git permite modificar el historial de una rama antes de fusionarla?
+
+A. git cherry-pick
+B. git log
+C. git gc
+D. git rebase -i
+
+✅ Correcta: D
+🧾 Explicación: git rebase -i (interactivo) permite reorganizar, combinar o eliminar commits, lo que facilita mantener un historial limpio y comprensible.
+
+🧠 Pregunta 10
+
+¿Cuál es uno de los principales beneficios del modelo peer-to-peer en Git?
+
+A. Requiere menos memoria RAM
+B. Aumenta la dependencia del servidor
+C. Permite recuperar el repositorio desde cualquier clon
+D. Asegura que solo una persona pueda hacer commits
+
+✅ Correcta: C
+🧾 Explicación: Gracias a su naturaleza distribuida, cualquier clon completo del repositorio puede restaurarlo completamente si el servidor principal falla.
+
+
+🧠 Pregunta 11
+
+¿Qué ventaja ofrece Git al permitir trabajar sin conexión a internet?
+
+A. Permite que varios desarrolladores trabajen en la misma rama al mismo tiempo
+B. Mejora la seguridad de la red del repositorio
+C. Permite realizar commits, ver historial y comparar cambios localmente
+D. Aumenta la velocidad de los servidores centrales
+
+✅ Correcta: C
+🧾 Explicación: Gracias a su arquitectura distribuida, Git permite trabajar de forma completamente local: hacer commits, navegar el historial, y hacer diffs sin conexión.
+
+🧠 Pregunta 12
+
+¿Qué sucede si se cambia una sola línea de un archivo en Git?
+
+A. Solo cambia el commit más reciente
+B. Cambia el blob, el árbol que lo contiene y el commit correspondiente
+C. No hay impacto en la estructura interna del repositorio
+D. Solo cambia el árbol raíz del proyecto
+
+✅ Correcta: B
+🧾 Explicación: Git detecta el cambio en el blob (archivo), lo que cambia el tree (directorio) que lo contiene, y finalmente el commit, propagando el nuevo hash.
+
+🧠 Pregunta 13
+
+¿Qué tipo de estructura permite a Git verificar que el historial no ha sido modificado?
+
+A. Árbol AVL
+B. Grafo cíclico
+C. Árbol de Merkle
+D. Punteros dobles
+
+✅ Correcta: C
+🧾 Explicación: Los árboles de Merkle en Git permiten verificar la integridad del historial, ya que cualquier modificación en un objeto afecta los hashes ascendentes.
+
+🧠 Pregunta 14
+
+¿Qué función cumple el archivo .idx asociado a un packfile?
+
+A. Guarda las instrucciones para deshacer cambios
+B. Sirve como índice para acceder rápidamente a objetos dentro del packfile
+C. Contiene logs de actividad
+D. Define las ramas existentes en el repositorio
+
+✅ Correcta: B
+🧾 Explicación: El archivo .idx acompaña a un packfile para indexar y permitir el acceso rápido a cada objeto comprimido que contiene.
+
+🧠 Pregunta 15
+
+¿Cuál es una característica clave del algoritmo de hashing que usa Git?
+
+A. Su salida varía aunque la entrada sea la misma
+B. Su salida puede revertirse para obtener el contenido original
+C. Cambios mínimos en la entrada generan un hash totalmente distinto
+D. Se usa para cifrar contraseñas de acceso a Git
+
+✅ Correcta: C
+🧾 Explicación: Los algoritmos de hash como SHA-1 y SHA-256 tienen la propiedad de avalancha: un pequeño cambio en la entrada produce un hash completamente diferente.
+
+🧠 Pregunta 16
+
+¿Por qué Git es considerado resiliente ante fallos del servidor?
+
+A. Porque sincroniza cambios cada segundo
+B. Porque solo permite commits desde el servidor
+C. Porque cada clon contiene el historial completo y puede restaurar el repositorio
+D. Porque bloquea commits ante errores
+
+✅ Correcta: C
+🧾 Explicación: Como Git es distribuido, cualquier clon contiene el historial completo, lo que permite restaurar el repositorio incluso si el servidor original se pierde.
+
+🧠 Pregunta 17
+
+¿Qué comando se recomienda para combinar múltiples commits antes de fusionar una rama al main?
+
+A. git cherry-pick
+B. git revert
+C. git rebase -i
+D. git gc
+
+✅ Correcta: C
+🧾 Explicación: git rebase -i permite editar, reordenar o combinar commits (squash), lo que ayuda a mantener un historial limpio antes de fusionar una rama.
+
+🧠 Pregunta 18
+
+¿Qué operación realiza git fetch?
+
+A. Fusiona automáticamente cambios desde el repositorio remoto
+B. Descarga cambios desde el repositorio remoto sin integrarlos
+C. Elimina ramas remotas obsoletas
+D. Aplica cambios de commits seleccionados manualmente
+
+✅ Correcta: B
+🧾 Explicación: git fetch descarga los cambios del repositorio remoto, pero no los fusiona con la rama actual. Es útil para revisar los cambios antes de integrarlos.
+
+🧠 Pregunta 19
+
+¿Cuándo usa Git la estrategia de fusión “octopus”?
+
+A. Cuando desea revertir commits
+B. Cuando se fusionan exactamente dos ramas
+C. Cuando se fusionan tres o más ramas sin conflictos
+D. Cuando se realiza una rebase interactiva
+
+✅ Correcta: C
+🧾 Explicación: La estrategia "octopus" permite fusionar tres o más ramas al mismo tiempo, siempre que no haya conflictos complejos entre ellas.
+
+🧠 Pregunta 20
+
+¿Cuál es una ventaja del uso de delta encoding en Git?
+
+A. Permite crear ramas más rápidamente
+B. Disminuye el número de commits
+C. Reduce el uso de disco y acelera la transferencia de datos
+D. Evita conflictos en fusiones
+
+✅ Correcta: C
+🧾 Explicación: Delta encoding permite que Git almacene y transfiera solo las diferencias entre versiones, reduciendo el espacio en disco y el uso de red.
+
+🧠 Pregunta 21
+
+¿Qué ventaja clave ofrece Git al usar un modelo peer-to-peer?
+
+A. Todos los cambios deben pasar por un moderador central
+B. Se requiere una red privada para colaborar
+C. Todos los desarrolladores tienen la misma jerarquía y control sobre el repositorio
+D. Solo un nodo puede tener acceso al historial completo
+
+✅ Correcta: C
+🧾 Explicación: El modelo peer-to-peer de Git elimina jerarquías fijas, permitiendo que todos los clones tengan el mismo nivel de acceso y control.
+
+🧠 Pregunta 22
+
+¿Por qué Git puede detectar corrupción o alteraciones en cualquier parte del repositorio?
+
+A. Usa fechas como identificadores únicos
+B. Utiliza claves públicas para validar ramas
+C. Su estructura de Merkle encadena hashes que cambian ante cualquier modificación
+D. Mantiene una copia cifrada de cada versión
+
+✅ Correcta: C
+🧾 Explicación: Cualquier cambio en un archivo afecta su hash, lo que altera todos los hashes ascendentes en el árbol de Merkle, permitiendo detectar cambios no autorizados.
+
+🧠 Pregunta 23
+
+¿Cuál de los siguientes comandos modifica directamente el historial de commits?
+
+A. git fetch
+B. git push
+C. git rebase
+D. git log
+
+✅ Correcta: C
+🧾 Explicación: git rebase reescribe el historial de commits, especialmente útil para mantener una línea de tiempo limpia antes de una fusión.
+
+🧠 Pregunta 24
+
+¿Qué identifica de forma única a cada commit en Git?
+
+A. Su fecha de creación
+B. La rama en la que fue creado
+C. El mensaje de commit
+D. Su hash criptográfico
+
+✅ Correcta: D
+🧾 Explicación: Cada commit en Git está identificado por un hash generado a partir de su contenido y metadatos, asegurando unicidad e integridad.
+
+🧠 Pregunta 25
+
+¿Qué es git cherry-pick?
+
+A. Un comando para crear ramas nuevas
+B. Un método para deshacer varios commits
+C. Un comando que aplica commits específicos de otra rama
+D. Una estrategia de fusión automática
+
+✅ Correcta: C
+🧾 Explicación: git cherry-pick toma uno o varios commits de una rama y los aplica directamente en la rama actual, sin fusionar ramas completas.
+
+🧠 Pregunta 26
+
+¿Cuándo es preferible usar git revert en lugar de git reset?
+
+A. Cuando deseas cambiar el nombre de una rama
+B. Cuando trabajas en una rama pública y necesitas deshacer un cambio
+C. Cuando quieres eliminar el historial completo
+D. Cuando no tienes conexión a internet
+
+✅ Correcta: B
+🧾 Explicación: git revert es seguro para ramas compartidas porque crea un nuevo commit que deshace los efectos de otro sin alterar el historial anterior.
+
+🧠 Pregunta 27
+
+¿Qué permite Git gracias a la propagación de hashes?
+
+A. Eliminar ramas huérfanas automáticamente
+B. Identificar cambios en el contenido con precisión
+C. Determinar qué ramas están obsoletas
+D. Restaurar automáticamente el repositorio desde la nube
+
+✅ Correcta: B
+🧾 Explicación: La propagación de hashes asegura que cualquier cambio en un archivo modifique toda la cadena de objetos hacia el commit, lo que permite rastrear con exactitud los cambios.
+
+🧠 Pregunta 28
+
+¿Qué sucede cuando ejecutas git commit?
+
+A. Se actualizan las ramas remotas automáticamente
+B. Git conecta el proyecto con un servidor externo
+C. Se crea un nuevo objeto commit con su hash único
+D. Se borra el historial anterior de cambios
+
+✅ Correcta: C
+🧾 Explicación: Al hacer git commit, Git crea un nuevo objeto que referencia el árbol del proyecto y su historial, y le asigna un hash único que lo identifica.
+
+🧠 Pregunta 29
+
+¿Cuál es el propósito de git mergetool?
+
+A. Crear múltiples ramas simultáneamente
+B. Visualizar diferencias entre commits
+C. Ayudar a resolver conflictos de fusión de manera visual
+D. Automatizar los commits de integración
+
+✅ Correcta: C
+🧾 Explicación: git mergetool permite resolver conflictos de fusión usando herramientas visuales, como meld, kdiff3 o editores modernos como VS Code.
+
+🧠 Pregunta 30
+
+¿Qué componente de Git representa archivos individuales y su contenido?
+
+A. Commit
+B. Tree
+C. Tag
+D. Blob
+
+✅ Correcta: D
+🧾 Explicación: En Git, los blobs (Binary Large OBjects) almacenan el contenido de los archivos como parte de la estructura del árbol de Merkle.
+
+
+
