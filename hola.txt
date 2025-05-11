@@ -4,8 +4,8 @@ Rebase interactivo y eficiencia del historial
 
 Un equipo de desarrollo ha estado trabajando en una rama de característica durante varias semanas, generando numerosos commits que documentan los pasos incrementales de su trabajo. Antes de fusionar esta rama a la principal, consideran utilizar el rebase interactivo.
 
-a) Describe dos comandos específicos de git rebase -i que podrían utilizar para simplificar y aclarar el historial de su rama de característica antes de la fusión. Explica el propósito de cada comando. (1 punto)
-b) Discute una ventaja y una posible desventaja de aplicar extensivamente el rebase interactivo en ramas de características de larga duración en un entorno colaborativo. (1 punto)
+A. Describe dos comandos específicos de git rebase -i que podrían utilizar para simplificar y aclarar el historial de su rama de característica antes de la fusión. Explica el propósito de cada comando. (1 punto)
+B. Discute una ventaja y una posible desventaja de aplicar extensivamente el rebase interactivo en ramas de características de larga duración en un entorno colaborativo. (1 punto)
 
 ✅ Correcta: (La respuesta debe mencionar squash o fixup para combinar commits y reword para modificar mensajes, y discutir la ventaja de un historial limpio frente al riesgo de reescritura de historia compartida).
 
