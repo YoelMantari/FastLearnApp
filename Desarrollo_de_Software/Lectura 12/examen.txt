@@ -1,129 +1,194 @@
-🧠 Pregunta 91 (2 puntos)
+🧠 Pregunta 101
 
-Rebase interactivo y colaboración
+Un equipo está utilizando ramas de características de corta duración y desea mantener un historial limpio en la rama principal ¿Qué estrategia de fusión recomendarías para lograr este objetivo sin reescribir la historia de la rama principal
 
-Un equipo de desarrollo está utilizando intensivamente ramas de características de larga duración. Antes de integrar estas ramas en la principal, cada desarrollador realiza un rebase interactivo para limpiar su historial local.
+A Usar siempre merge con Fast-Forward
+B Usar siempre merge sin Fast-Forward
+C Usar squash merge al fusionar las ramas de características
+D Rebasar la rama principal con la rama de característica
 
-a) Describe un escenario específico donde esta práctica, aunque bienintencionada, podría generar complicaciones significativas para la colaboración dentro del equipo. (1 punto)
-b) Propón una estrategia de comunicación o un conjunto de directrices que el equipo podría implementar para mitigar los riesgos asociados con el rebase interactivo en este contexto. (1 punto)
+✅ Correcta: C
 
-✅ Correcta: (La respuesta debe abordar los riesgos de reescritura de historia compartida y proponer soluciones como comunicación clara y evitar rebasar commits ya publicados).
+🧾 Explicación: Squash merge combina todos los commits de la rama de característica en un único commit al fusionarla a la principal, resultando en un historial lineal y limpio en la rama principal sin alterar su historia directamente.
 
-🧾 Explicación: El rebase interactivo en ramas compartidas puede causar problemas de sincronización y pérdida de trabajo para otros colaboradores. Una buena estrategia implica comunicar las intenciones de rebase, evitar rebasar commits ya publicados y, en algunos casos, optar por merges sin Fast-Forward para mantener la trazabilidad.
+🧠 Pregunta 102
 
-🧠 Pregunta 92 (2 puntos)
+¿Cuál es la principal ventaja de utilizar git reflog en comparación con git log cuando se intenta recuperar un trabajo perdido debido a una acción accidental como un reset --hard
 
-Merge avanzado y flujo de trabajo
+A git log muestra un historial más detallado de todos los cambios
+B git reflog rastrea los cambios en los punteros de las ramas y el HEAD, incluyendo acciones que no son commits
+C git log permite viajar en el tiempo a cualquier estado del repositorio
+D git reflog muestra el contenido exacto de los archivos en cada commit
 
-Un proyecto tiene dos ramas principales activas: main para la versión estable y next para el desarrollo de la próxima versión. Se han completado varias características en ramas separadas y ahora deben integrarse primero en next y luego, selectivamente, en main.
+✅ Correcta: B
 
-a) Describe cómo se podría utilizar un merge sin Fast-Forward para integrar una rama de característica en next, destacando los beneficios de este enfoque en este flujo de trabajo. (1 punto)
-b) Explica cómo se podría luego integrar solo un commit específico de la rama de característica (ya fusionada en next) a la rama main, y qué herramienta de Git permitiría realizar esta acción. (1 punto)
+🧾 Explicación: git reflog registra los movimientos del HEAD y las ramas, permitiendo rastrear cambios que no se reflejan en el historial de commits tradicional, como resets o cambios de checkout, lo que facilita la recuperación de estados anteriores.
 
-✅ Correcta: (La respuesta debe explicar el uso de --no-ff para trazabilidad en next y el uso de cherry-pick para integrar commits específicos en main).
+🧠 Pregunta 103
 
-🧾 Explicación: El merge sin Fast-Forward en next mantiene la historia de la característica. Para integrar un commit específico en main, se puede usar git cherry-pick para aplicar ese commit sin traer toda la rama.
+En un proyecto que utiliza submódulos para gestionar dependencias externas ¿Qué comando se utiliza para inicializar los submódulos después de clonar el repositorio principal pero antes de poder trabajar con el código de los submódulos
 
-🧠 Pregunta 93 (2 puntos)
+A git submodule update
+B git submodule add
+C git submodule init
+D git submodule clone
 
-Herramientas de diagnóstico y resolución de problemas
+✅ Correcta: C
 
-Un desarrollador introduce un error en el código, pero no se da cuenta hasta varios commits después. El equipo decide utilizar git bisect para encontrar el commit culpable.
+🧾 Explicación: git submodule init inicializa el archivo .gitmodules y configura los submódulos para ser actualizados, preparando el entorno para traer el código de los repositorios externos.
 
-a) Describe brevemente el proceso de git bisect, incluyendo los comandos clave y cómo el equipo colaboraría para identificar el commit problemático. (1 punto)
-b) Una vez identificado el commit, ¿cómo podría el desarrollador utilizar git blame y git log -L para comprender mejor el cambio que introdujo el error y su contexto? (1 punto)
+🧠 Pregunta 104
 
-✅ Correcta: (La respuesta debe describir los pasos de git bisect y cómo git blame muestra la autoría de las líneas y git log -L la evolución de la función).
+Si un equipo experimenta problemas para identificar cuándo se introdujo un error específico en una función de un archivo ¿Qué combinación de comandos de Git sería más efectiva para acotar la búsqueda al commit exacto y luego examinar los cambios en esa función
 
-🧾 Explicación: git bisect usa búsqueda binaria para encontrar el commit. git blame ayuda a ver quién modificó las líneas del error, y git log -L muestra la historia de la función afectada.
+A git log <archivo> seguido de git diff <commit_anterior> <commit_culpable> <archivo>
+B git blame <archivo> seguido de revisión manual del historial
+C git bisect seguido de git log -L :<función>:<archivo>
+D git log --follow <archivo> seguido de git show <commit_culpable>
 
-🧠 Pregunta 94 (2 puntos)
+✅ Correcta: C
 
-Reflog y recuperación de errores
+🧾 Explicación: git bisect permite encontrar el commit que introdujo el error mediante pruebas iterativas git log -L luego permite examinar específicamente los cambios realizados en la función dentro de ese commit.
 
-Un desarrollador ejecuta accidentalmente un git reset --hard HEAD~3 en su rama local, eliminando varios commits importantes que aún no habían sido compartidos.
+🧠 Pregunta 105
 
-a) Explica cómo el desarrollador podría utilizar el reflog para identificar los commits perdidos y recuperar su trabajo. Incluye el comando clave para ver el reflog y la estrategia para restaurar la rama al estado deseado. (1 punto)
-b) ¿Qué advertencia importante se debe tener en cuenta si estos commits eliminados ya hubieran sido enviados a un repositorio remoto compartido? (1 punto)
+¿Cuál es una diferencia fundamental entre la forma en que Git gestiona la integración de un repositorio externo utilizando un subtree en comparación con un submódulo en términos del historial del proyecto principal
 
-✅ Correcta: (La respuesta debe explicar cómo listar el reflog y usar git reset --hard HEAD@{n} para recuperar, y advertir sobre los riesgos de reescribir historia remota).
+A Un subtree mantiene un enlace directo al historial del repositorio externo mientras que un submódulo no
+B Un submódulo integra el historial completo del repositorio externo en el proyecto principal mientras que un subtree no
+C Un subtree copia el contenido del repositorio externo directamente en el proyecto principal integrando su historial mientras que un submódulo mantiene una referencia separada a un commit específico
+D No hay una diferencia fundamental en cómo se gestiona el historial
 
-🧾 Explicación: El reflog rastrea los cambios en HEAD. Se puede usar para encontrar el punto antes del reset y volver a él. Si los commits ya estaban en remoto, forzar un push puede causar problemas a otros.
+✅ Correcta: C
 
-🧠 Pregunta 95 (2 puntos)
+🧾 Explicación: Un subtree integra el contenido y el historial del repositorio externo directamente en el proyecto principal como si fuera una subcarpeta Un submódulo mantiene una referencia a un commit específico del repositorio externo sin integrar su historial completo.
 
-Submódulos y gestión de dependencias
+🧠 Pregunta 106
 
-Un proyecto utiliza un submódulo para incluir una biblioteca externa. El equipo necesita actualizar la biblioteca a una nueva versión.
+Un desarrollador quiere combinar varios commits locales recientes en uno solo antes de hacer push a la rama remota ¿Qué comando de Git con qué opción le permitiría lograr esto de forma interactiva
 
-a) Describe los pasos necesarios para actualizar el submódulo a la última versión de su rama remota y cómo se registraría este cambio en el repositorio principal del proyecto. (1 punto)
-b) ¿Cuál es una posible desventaja de utilizar submódulos en comparación con subtrees en términos de la experiencia del desarrollador al clonar el proyecto por primera vez? (1 punto)
+A git merge --squash HEAD~3
+B git rebase -i HEAD~3
+C git checkout --ours HEAD~3
+D git reset --soft HEAD~3
 
-✅ Correcta: (La respuesta debe detallar los comandos git submodule update --remote y el commit en el principal, y mencionar la necesidad de inicializar y actualizar submódulos al clonar).
+✅ Correcta: B
 
-🧾 Explicación: Para actualizar un submódulo, se usa git submodule update --remote y luego se commite el cambio en el repositorio principal. Clonar un proyecto con submódulos requiere un paso adicional para inicializar y actualizar los submódulos.
+🧾 Explicación: git rebase -i con la referencia al número de commits anteriores abre un editor donde el desarrollador puede elegir la acción squash o fixup para combinar los commits.
 
-🧠 Pregunta 96 (2 puntos)
+🧠 Pregunta 107
 
-Subtrees e integración de proyectos
+¿Cuál es la principal razón por la que un equipo podría optar por utilizar merges sin Fast-Forward en su flujo de trabajo de Git
 
-Un proyecto principal necesita integrar el código de otro repositorio interno como un subtree. Este repositorio interno se actualiza con frecuencia y el equipo desea incorporar estos cambios de manera regular.
+A Para simplificar el historial del proyecto
+B Para evitar la creación de commits de merge
+C Para preservar la información de cuándo y cómo se integró una rama de característica
+D Para resolver conflictos de merge de forma automática
 
-a) Describe el comando y el proceso para agregar el repositorio interno como un subtree al proyecto principal, especificando la importancia del prefijo. (1 punto)
-b) Explica cómo se realizarían las actualizaciones posteriores del subtree con los cambios del repositorio interno y qué opción se podría utilizar para mantener un historial más limpio en el proyecto principal durante estas actualizaciones. (1 punto)
+✅ Correcta: C
 
-✅ Correcta: (La respuesta debe detallar git subtree add con el prefijo y git subtree pull con la opción --squash para un historial limpio).
+🧾 Explicación: Los merges sin Fast-Forward crean un commit de merge explícito que registra la integración de una rama, manteniendo la trazabilidad de la característica en el historial.
 
-🧾 Explicación: git subtree add integra el repositorio externo en un subdirectorio (prefijo). Las actualizaciones se realizan con git subtree pull. La opción --squash combina los commits del subtree en uno solo en el proyecto principal.
+🧠 Pregunta 108
 
-🧠 Pregunta 97 (2 puntos)
+Después de ejecutar git bisect start y marcar un commit como malo y otro como bueno ¿Qué comando se utiliza para avanzar al siguiente commit a probar en el proceso de búsqueda binaria
 
-Automatización con scripts
+A git bisect next
+B git bisect continue
+C git bisect step
+D git bisect proceed
 
-Un equipo desea automatizar la tarea de verificar que todos los mensajes de commit sigan un formato específico antes de ser aceptados.
+✅ Correcta: B
 
-a) Describe en pseudocódigo cómo se podría implementar un hook pre-commit en Git para verificar el formato del mensaje del commit. (1 punto)
-b) Explica cómo este tipo de automatización podría contribuir a la calidad del historial del repositorio a largo plazo y facilitar la comprensión de los cambios. (1 punto)
+🧾 Explicación: git bisect continue le dice a Git que continúe con la búsqueda binaria, moviéndose al siguiente commit que necesita ser probado.
 
-✅ Correcta: (La respuesta debe incluir la lectura del mensaje, la verificación con una expresión regular y la salida de error si no coincide, explicando cómo esto mejora la consistencia y claridad del historial).
+🧠 Pregunta 109
 
-🧾 Explicación: Un hook pre-commit puede leer el mensaje del commit y verificar su formato. Esto asegura la consistencia de los mensajes, lo que facilita la búsqueda y comprensión del historial.
+Si accidentalmente eliminas una rama local ¿Qué comando podrías utilizar para intentar recuperarla si recuerdas aproximadamente cuándo la eliminaste y el último commit en ella utilizando el reflog
 
-🧠 Pregunta 98 (2 puntos)
+A git checkout -b <nombre_rama> HEAD
+B git branch <nombre_rama> <hash_del_commit>
+C git checkout <hash_del_commit>
+D git reset --hard ORIG_HEAD
 
-Comparación de flujos de trabajo
+✅ Correcta: B
 
-Compara brevemente las implicaciones en el historial del repositorio y la complejidad de la colaboración entre un flujo de trabajo que utiliza principalmente merges directos (Fast-Forward cuando sea posible) y uno que utiliza exclusivamente merges sin Fast-Forward.
+🧾 Explicación: El reflog registra los cambios en los punteros de las ramas Puedes encontrar el hash del último commit de la rama eliminada en el reflog y luego crear una nueva rama apuntando a ese hash.
 
-a) ¿Cómo se vería el historial en cada caso y qué información se destacaría o se perdería? (1 punto)
-b) ¿Qué consideraciones importantes deberían tenerse en cuenta al elegir uno de estos flujos de trabajo para un equipo colaborativo? (1 punto)
+🧠 Pregunta 110
 
-✅ Correcta: (La respuesta debe describir un historial lineal con Fast-Forward y uno con commits de merge con --no-ff, discutiendo la trazabilidad vs. simplicidad y la importancia de la política del equipo).
+¿Cuál es la principal diferencia en cómo se gestionan las actualizaciones de una dependencia externa cuando se utiliza un submódulo en comparación con un subtree
 
-🧾 Explicación: Fast-Forward crea un historial lineal pero pierde la trazabilidad de las características como ramas. --no-ff mantiene la trazabilidad pero crea un historial más ramificado. La elección depende de las necesidades del equipo.
+A Las actualizaciones de submódulos se integran automáticamente en el historial del proyecto principal
+B Las actualizaciones de subtrees requieren la ejecución de comandos específicos para traer los cambios del repositorio externo
+C Los submódulos no se pueden actualizar una vez agregados
+D Los subtrees mantienen un enlace directo a la última versión del repositorio externo
 
-🧠 Pregunta 99 (2 puntos)
+✅ Correcta: B
 
-Anatomía del Object Database y Reflog
+🧾 Explicación: Las actualizaciones de subtrees requieren comandos explícitos como git subtree pull para traer los cambios del repositorio externo e integrarlos en el proyecto principal Los submódulos requieren actualizar la referencia al commit deseado.
 
-Un desarrollador elimina accidentalmente un archivo importante que no estaba versionado en Git.
+🧠 Pregunta 111
 
-a) Explica por qué este archivo no se puede recuperar directamente utilizando comandos de Git de manipulación del historial de commits (como git checkout de un commit anterior). (1 punto)
-b) Describe si el reflog podría ofrecer alguna ayuda en este escenario y, de ser así, cómo. (1 punto)
+Un equipo quiere asegurarse de que todos los mensajes de commit sigan un formato específico ¿Qué mecanismo de Git se puede utilizar para verificar automáticamente el formato de los mensajes de commit antes de que se acepten
 
-✅ Correcta: (La respuesta debe explicar que Git rastrea commits, no archivos sin versionar, y que el reflog rastrea cambios en las referencias, no el contenido del working directory no versionado).
+A git config commit.template
+B Un hook pre-commit
+C Un hook commit-msg
+D git check-ignore
 
-🧾 Explicación: Git solo rastrea archivos versionados en commits. El reflog rastrea cambios en las referencias (HEAD, ramas), no archivos sin commit en el working directory. Por lo tanto, el reflog no ayudaría a recuperar un archivo no versionado eliminado.
+✅ Correcta: C
 
-🧠 Pregunta 100 (2 puntos)
+🧾 Explicación: El hook commit-msg se ejecuta después de que el usuario ingresa el mensaje de commit pero antes de que se cree el commit Permite validar el formato del mensaje y rechazar el commit si no cumple con los criterios.
 
-Patrones de Branching y Desarrollo
+🧠 Pregunta 112
 
-Considerando los patrones de "Feature Branching" y "Continuous Integration" mencionados en la lectura de Martin Fowler, describe un escenario de proyecto donde la adopción estricta de "Continuous Integration" podría presentar desafíos significativos para el equipo de desarrollo.
+¿Cuál es el propósito principal de utilizar la opción --graph con el comando git log
 
-a) Describe un tipo de proyecto o situación donde las integraciones frecuentes y pequeñas podrían ser difíciles de implementar o contraproducentes. (1 punto)
-b) ¿Qué patrón de branching podría ser una alternativa más adecuada en ese escenario y por qué? (1 punto)
+A Mostrar solo los commits que han modificado el contenido de los archivos
+B Visualizar la historia de commits como un árbol mostrando las ramas y merges
+C Mostrar estadísticas sobre los cambios realizados en cada commit
+D Limitar el número de commits mostrados en la salida
 
-✅ Correcta: (La respuesta debe describir proyectos con características grandes y complejas que requieren un desarrollo aislado prolongado, sugiriendo "Feature Branching" como una alternativa para un desarrollo más aislado antes de la integración).
+✅ Correcta: B
 
-🧾 Explicación: En proyectos con características grandes y complejas, la integración continua podría ser disruptiva. El "Feature Branching" permite un desarrollo más aislado antes de la integración, lo que puede ser más adecuado en estos casos.
+🧾 Explicación: La opción --graph de git log dibuja una representación visual de la estructura de ramas y merges en el historial del repositorio, facilitando la comprensión de cómo se han integrado las diferentes líneas de desarrollo.
+
+🧠 Pregunta 113
+
+En un flujo de trabajo donde se realizan muchas fusiones ¿Qué estrategia de merge podría dificultar el seguimiento de la historia de una característica específica a través del tiempo en la rama principal
+
+A Merges sin Fast-Forward
+B Merges con Fast-Forward
+C Squash merges
+D Octopus merges
+
+✅ Correcta: B
+
+🧾 Explicación: Los merges con Fast-Forward simplemente mueven el puntero de la rama principal sin crear un commit de merge explícito Esto puede hacer que la historia de una característica se disperse entre los commits de la rama principal dificultando su seguimiento como una unidad lógica.
+
+🧠 Pregunta 114
+
+Si necesitas identificar qué commit introdujo una línea de código específica en un archivo ¿Qué comando de Git utilizarías
+
+A git log -p <archivo>
+B git diff <archivo>
+C git blame <archivo>
+D git show <archivo>
+
+✅ Correcta: C
+
+🧾 Explicación: git blame anota cada línea de un archivo mostrando información sobre el commit y el autor de la última modificación de esa línea lo que permite identificar cuándo se introdujo una línea específica.
+
+🧠 Pregunta 115
+
+¿Cuál es la principal ventaja de utilizar subtrees en lugar de submódulos en ciertos escenarios de gestión de dependencias
+
+A Los subtrees mantienen enlaces directos a commits específicos de los repositorios externos
+B Los subtrees facilitan la contribución al repositorio externo desde el proyecto principal
+C Los subtrees integran el contenido del repositorio externo directamente en el árbol del proyecto principal simplificando algunas operaciones
+D Los subtrees requieren menos comandos para su gestión que los submódulos
+
+✅ Correcta: C
+
+🧾 Explicación: Los subtrees integran el código del repositorio externo directamente en el proyecto principal como una subcarpeta lo que puede simplificar flujos de trabajo donde se necesita modificar o interactuar con el código de la dependencia de manera más directa sin la necesidad de inicializar o actualizar submódulos por separado.
