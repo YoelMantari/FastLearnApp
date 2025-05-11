@@ -1,15 +1,64 @@
-🧠 Pregunta 1
+🧠 Pregunta 106
 
-¿Cuál es el principal desafío que surge al utilizar múltiples ramas de código fuente y que los patrones presentados buscan mitigar?
+Un desarrollador quiere combinar varios commits locales recientes en uno solo antes de hacer push a la rama remota ¿Qué comando de Git con qué opción le permitiría lograr esto de forma interactiva
 
-A. La dificultad de realizar un seguimiento de los cambios individuales.
+A. git merge --squash HEAD~3
+B. git rebase -i HEAD~3
+C. git checkout --ours HEAD~3
+D. git reset --soft HEAD~3
 
-B. La necesidad de elegir un sistema de control de versiones adecuado.
+✅ Correcta: B
 
-C. La complejidad de fusionar las ramas de nuevo en un todo coherente.
+🧾 Explicación: El comando git rebase -i (interactive) seguido del punto de anclaje (HEAD~3 en este caso, para los últimos tres commits) abre un editor donde el desarrollador puede elegir la acción squash o fixup para combinar commits.
 
-D. La ineficiencia en la creación de nuevas ramas para cada tarea.
+🧠 Pregunta 107
+
+¿Cuál de las siguientes afirmaciones describe mejor la función del reflog en Git
+
+A. Muestra un historial permanente de todos los commits en el repositorio, incluyendo aquellos en ramas eliminadas
+B. Registra cada cambio realizado en los punteros de las ramas y el HEAD, permitiendo rastrear la historia de las acciones locales
+C. Actúa como una caché para acelerar las búsquedas en el historial de commits remotos
+D. Permite a los desarrolladores anotar commits con comentarios adicionales que no se incluyen en el mensaje del commit
+
+✅ Correcta: B
+
+🧾 Explicación: El reflog es un mecanismo de seguridad que registra los cambios en las referencias locales, como los movimientos de las ramas y el HEAD, lo que es invaluable para recuperar trabajo después de acciones como resets o rebases accidentales.
+
+🧠 Pregunta 108
+
+En un proyecto que utiliza submódulos, después de que el repositorio del submódulo ha sido actualizado con nuevos commits ¿Qué comando debe ejecutarse desde el repositorio principal para actualizar la referencia al nuevo commit del submódulo
+
+A. git pull <ruta_del_submódulo>
+B. git submodule update --init --recursive
+C. git submodule update --remote <ruta_del_submódulo>
+D. git submodule sync
 
 ✅ Correcta: C
 
-🧾 Explicación: El artículo destaca que, si bien la creación de ramas es sencilla, la fusión posterior puede generar complicaciones y consumir mucho tiempo de los equipos.
+🧾 Explicación: El comando git submodule update --remote <ruta_del_submódulo> consulta el repositorio remoto del submódulo y actualiza la referencia en el repositorio principal al último commit de la rama rastreada.
+
+🧠 Pregunta 109
+
+Si un equipo desea integrar los cambios de una rama de característica en la rama principal, manteniendo un registro explícito de cuándo ocurrió esta integración en el historial ¿Qué estrategia de merge deberían utilizar
+
+A. Merge con Fast-Forward
+B. Merge sin Fast-Forward (--no-ff)
+C. Squash merge
+D. Rebase
+
+✅ Correcta: B
+
+🧾 Explicación: El merge sin Fast-Forward (--no-ff) siempre crea un nuevo commit de merge, incluso si la fusión podría realizarse con un Fast-Forward Esto registra explícitamente en el historial cuándo se integró la rama de característica.
+
+🧠 Pregunta 110
+
+¿Qué herramienta de Git permite realizar una búsqueda binaria a través del historial de commits para encontrar el commit que introdujo un error
+
+A. git log --grep
+B. git blame
+C. git bisect
+D. git diff
+
+✅ Correcta: C
+
+🧾 Explicación: git bisect ayuda a encontrar el commit que introdujo un error al permitir marcar commits como "buenos" o "malos" y reduciendo el rango de búsqueda a la mitad en cada paso.
