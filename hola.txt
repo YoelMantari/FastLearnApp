@@ -9,3 +9,7 @@ B. La necesidad de elegir un sistema de control de versiones adecuado.
 C. La complejidad de fusionar las ramas de nuevo en un todo coherente.
 
 D. La ineficiencia en la creación de nuevas ramas para cada tarea.
+
+✅ Correcta: C
+
+🧾 Explicación: El artículo destaca que, si bien la creación de ramas es sencilla, la fusión posterior puede generar complicaciones y consumir mucho tiempo de los equipos.
