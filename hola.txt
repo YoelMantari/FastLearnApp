@@ -1,1 +1,11 @@
-ss
+🧠 Pregunta 1
+
+¿Cuál es el principal desafío que surge al utilizar múltiples ramas de código fuente y que los patrones presentados buscan mitigar?
+
+A. La dificultad de realizar un seguimiento de los cambios individuales.
+
+B. La necesidad de elegir un sistema de control de versiones adecuado.
+
+C. La complejidad de fusionar las ramas de nuevo en un todo coherente.
+
+D. La ineficiencia en la creación de nuevas ramas para cada tarea.
