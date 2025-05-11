@@ -1,0 +1,800 @@
+🧠 Pregunta 1
+
+¿Cuál es la principal ventaja de que Git sea un sistema de control de versiones "distribuido"?
+
+A. Requiere de una conexión constante a un servidor central para realizar la mayoría de las operaciones.
+
+B. Permite que solo el servidor central tenga una copia completa del historial del proyecto.
+
+C. Cada desarrollador tiene una copia completa del repositorio, incluyendo el historial, lo que permite trabajar offline y tener redundancia de datos.
+
+D. Simplifica la gestión de un único flujo de trabajo lineal para todo el equipo.
+
+✅ Correcta: C
+
+🧾 Explicación: El texto destaca que la naturaleza distribuida de Git implica que cada clon contiene el historial completo, permitiendo operaciones locales sin conexión y ofreciendo múltiples puntos de respaldo.
+
+🧠 Pregunta 2
+
+¿Qué distingue al modelo de funcionamiento de Git en comparación con sistemas de control de versiones centralizados como Subversion (SVN)?
+
+A. Git depende de un servidor central para todas las operaciones, mientras que SVN permite operaciones locales.
+
+B. En Git, cada desarrollador tiene una copia completa del repositorio, mientras que en SVN los desarrolladores trabajan directamente sobre el repositorio central.
+
+C. SVN utiliza un modelo peer-to-peer, similar a una red de iguales, donde cada copia es autónoma.
+
+D. Git requiere una conexión a internet activa para realizar commits y navegar por el historial, a diferencia de SVN.
+
+✅ Correcta: B
+
+🧾 Explicación: El texto explica claramente que Git sigue un modelo distribuido donde cada clon es una réplica completa, a diferencia del modelo centralizado de SVN donde se interactúa directamente con un servidor.
+
+🧠 Pregunta 3
+
+¿Cuál es la función principal de un Grafo Acíclico Dirigido (DAG) en la arquitectura interna de Git?
+
+A. Almacenar el contenido de los archivos del proyecto en diferentes versiones.
+
+B. Garantizar la integridad de los datos mediante la verificación de hashes.
+
+C. Organizar el historial de commits, mostrando las relaciones de dependencia y la dirección temporal de los cambios.
+
+D. Comprimir los objetos del repositorio para ahorrar espacio en disco.
+
+✅ Correcta: C
+
+🧾 Explicación: La lectura describe el DAG como la estructura que representa el historial de commits, con nodos para cada commit y flechas indicando las relaciones entre ellos, siempre en una dirección temporal.
+
+🧠 Pregunta 4
+
+¿De qué manera los árboles de Merkle contribuyen a la funcionalidad de Git?
+
+A. Permiten la creación de ramas y la fusión de cambios de manera eficiente.
+
+B. Facilitan la comparación del contenido de diferentes versiones de los archivos.
+
+C. Aseguran la integridad de los datos al calcular un hash único para cada objeto (blob, tree, commit) y sus relaciones.
+
+D. Optimizan el almacenamiento de datos al guardar solo las diferencias entre archivos.
+
+✅ Correcta: C
+
+🧾 Explicación: El texto explica que los árboles de Merkle, con su sistema de hashes encadenados, permiten a Git verificar la integridad del contenido del repositorio en cada punto del historial.
+
+🧠 Pregunta 5
+
+¿Qué propósito fundamental cumplen los algoritmos de hashing criptográfico, como SHA-1 (históricamente) y SHA-256 (actualmente en transición), dentro de Git?
+
+A. Facilitar la compresión de los archivos del repositorio para reducir el espacio de almacenamiento.
+
+B. Permitir la comunicación segura entre diferentes repositorios remotos.
+
+C. Identificar de manera única cada objeto (commit, archivo, directorio) basándose en su contenido y verificar su integridad.
+
+D. Organizar la estructura de directorios y archivos dentro del repositorio.
+
+✅ Correcta: C
+
+🧾 Explicación: La lectura detalla cómo los algoritmos de hash generan identificadores únicos para cada objeto, asegurando que cualquier cambio en el contenido se refleje en un hash diferente, lo que permite la verificación de la integridad.
+
+🧠 Pregunta 6
+
+¿Cuál es el principal beneficio de utilizar "delta encoding" en Git?
+
+A. Permite identificar y fusionar automáticamente ramas con cambios conflictivos.
+
+B. Reduce la necesidad de almacenar copias completas de archivos en cada versión, guardando solo las diferencias entre ellas, lo que ahorra espacio.
+
+C. Facilita la navegación a través del historial de commits al mostrar solo los cambios significativos.
+
+D. Mejora la seguridad del repositorio al cifrar el contenido de los archivos.
+
+✅ Correcta: B
+
+🧾 Explicación: El texto explica que el delta encoding optimiza el almacenamiento al guardar únicamente las modificaciones entre versiones de los archivos.
+
+🧠 Pregunta 7
+
+¿Qué es un "packfile" en Git y cuál es su principal ventaja?
+
+A. Es un archivo de texto que contiene los metadatos del repositorio, como las ramas y las etiquetas.
+
+B. Es un archivo binario que agrupa múltiples objetos del repositorio en un solo contenedor comprimido, facilitando la transferencia y el almacenamiento eficiente.
+
+C. Es un registro de todos los comandos de Git ejecutados por los usuarios.
+
+D. Es una copia de seguridad completa del repositorio que se crea periódicamente.
+
+✅ Correcta: B
+
+🧾 Explicación: La lectura describe los packfiles como archivos comprimidos que contienen múltiples objetos, lo que optimiza el almacenamiento y la velocidad de las operaciones.
+
+🧠 Pregunta 8
+
+¿Cuál es el objetivo principal de la estrategia de fusión "recursiva" (recursive merge) en Git?
+
+A. Fusionar tres o más ramas simultáneamente en un solo commit.
+
+B. Identificar el ancestro común entre dos ramas y combinar los cambios realizados en cada una desde ese punto.
+
+C. Aplicar commits específicos de una rama a otra sin fusionar la rama completa.
+
+D. Reescribir el historial de una rama para que parezca que se desarrolló directamente desde otra.
+
+✅ Correcta: B
+
+🧾 Explicación: El texto explica que la fusión recursiva compara los cambios en dos ramas desde su ancestro común para integrarlos.
+
+🧠 Pregunta 9
+
+¿En qué situación sería más apropiado utilizar la estrategia de fusión "octopus" en Git?
+
+A. Cuando se necesita integrar una rama de características pequeña en la rama principal.
+
+B. Cuando se deben fusionar dos ramas que tienen cambios conflictivos en las mismas líneas de código.
+
+C. Cuando se quieren integrar múltiples ramas de características listas para ser unidas a una rama de desarrollo o en un release.
+
+D. Cuando se desea limpiar el historial de commits de una rama antes de fusionarla.
+
+✅ Correcta: C
+
+🧾 Explicación: La lectura indica que la fusión octopus está diseñada para la integración simultánea de varias ramas, especialmente en escenarios como la preparación de un release.
+
+🧠 Pregunta 10
+
+¿Qué utilidad ofrece el "rebase interactivo" (git rebase -i) en Git antes de fusionar una rama?
+
+A. Permite deshacer commits ya realizados en la rama principal.
+
+B. Facilita la resolución automática de conflictos de fusión complejos.
+
+C. Permite reordenar, editar mensajes, combinar o eliminar commits en una rama para mantener un historial más limpio y lógico.
+
+D. Permite seleccionar commits específicos de otra rama para integrarlos en la rama actual.
+
+✅ Correcta: C
+
+🧾 Explicación: El texto describe el rebase interactivo como una herramienta para manipular el historial de una rama antes de la fusión, con el objetivo de obtener un historial más claro.
+
+
+🧠 Pregunta 11
+
+¿Cuál es una de las ventajas clave de que cada clon de Git sea un repositorio autónomo con el historial completo?
+
+A. Requiere menos espacio de almacenamiento en las máquinas individuales de los desarrolladores.
+
+B. Permite que solo los usuarios con permisos especiales puedan ver el historial completo del proyecto.
+
+C. Posibilita realizar operaciones como commits y visualización del historial sin necesidad de conexión a internet.
+
+D. Asegura que todos los desarrolladores trabajen siempre sobre la misma copia del repositorio en tiempo real.
+
+✅ Correcta: C
+
+🧾 Explicación: La naturaleza distribuida permite la independencia de la conexión para muchas operaciones locales.
+
+🧠 Pregunta 12
+
+En un modelo de control de versiones centralizado, ¿qué ocurre si el servidor central falla?
+
+A. Los desarrolladores pueden seguir trabajando localmente sin ninguna interrupción.
+
+B. Se pierde el acceso al historial del proyecto y la capacidad de realizar nuevas operaciones hasta que se restaure el servidor.
+
+C. Cada desarrollador puede designar su copia local como el nuevo servidor central.
+
+D. El sistema automáticamente replica el repositorio en las máquinas de todos los desarrolladores.
+
+✅ Correcta: B
+
+🧾 Explicación: La dependencia del servidor central es una vulnerabilidad de los sistemas centralizados.
+
+🧠 Pregunta 13
+
+¿Qué significa que el DAG en Git no tiene ciclos ("acíclico")?
+
+A. Que los commits siempre se organizan en una única línea temporal sin ramificaciones.
+
+B. Que no es posible volver a un commit anterior siguiendo las relaciones de dependencia.
+
+C. Que el historial de commits siempre avanza hacia adelante, sin bucles ni referencias circulares.
+
+D. Que las fusiones de ramas siempre crean un nuevo commit sin alterar el historial de las ramas originales.
+
+✅ Correcta: C
+
+🧾 Explicación: La propiedad acíclica del DAG asegura una dirección temporal clara y evita confusiones en el historial.
+
+🧠 Pregunta 14
+
+¿Cómo se relaciona el hash SHA-1 (o SHA-256) de un commit con el contenido del proyecto en ese momento?
+
+A. El hash es independiente del contenido y se genera secuencialmente.
+
+B. El hash se calcula basándose en el contenido de los archivos, los árboles de directorios y el commit mismo, actuando como una huella digital.
+
+C. El hash se utiliza únicamente para identificar al autor del commit.
+
+D. El hash indica la fecha y hora exacta en que se realizó el commit.
+
+✅ Correcta: B
+
+🧾 Explicación: El hash se deriva del contenido, garantizando la integridad y la identificación única del estado del proyecto.
+
+🧠 Pregunta 15
+
+¿Por qué la resistencia a colisiones es una propiedad importante de los algoritmos de hashing criptográfico utilizados por Git?
+
+A. Asegura que la compresión de los archivos sea más eficiente.
+
+B. Permite que diferentes objetos en el repositorio tengan el mismo identificador sin causar problemas.
+
+C. Hace extremadamente difícil encontrar dos entradas distintas (por ejemplo, dos versiones diferentes de un archivo) que produzcan el mismo hash, lo que podría comprometer la integridad del sistema.
+
+D. Facilita la búsqueda rápida de objetos dentro del repositorio.
+
+✅ Correcta: C
+
+🧾 Explicación: La resistencia a colisiones es crucial para la seguridad y la integridad de la identificación única de los objetos.
+
+🧠 Pregunta 16
+
+¿Cuál es la principal razón por la que Git está migrando gradualmente de SHA-1 a SHA-256?
+
+A. SHA-256 produce hashes más cortos y fáciles de recordar.
+
+B. SHA-256 es más rápido en el cálculo de hashes, mejorando el rendimiento de Git.
+
+C. Se han descubierto vulnerabilidades teóricas y prácticas en SHA-1 que podrían comprometer la seguridad.
+
+D. SHA-256 es un estándar más antiguo y probado que SHA-1.
+
+✅ Correcta: C
+
+🧾 Explicación: La migración se debe a las preocupaciones de seguridad relacionadas con las vulnerabilidades encontradas en SHA-1.
+
+🧠 Pregunta 17
+
+¿Cómo contribuye el uso de hashes a la capacidad de Git para detectar modificaciones no autorizadas o errores accidentales en los archivos?
+
+A. Al cifrar el contenido de los archivos, impidiendo que sean alterados sin la clave correcta.
+
+B. Al registrar la fecha y hora de la última modificación de cada archivo.
+
+C. Al calcular un hash único basado en el contenido de cada archivo; cualquier cambio en el contenido alterará el hash, lo que Git puede detectar.
+
+D. Al comparar el tamaño de los archivos entre diferentes versiones del repositorio.
+
+✅ Correcta: C
+
+🧾 Explicación: La alteración del contenido siempre resulta en un hash diferente, lo que permite la detección de cambios.
+
+🧠 Pregunta 18
+
+¿Qué tipo de objetos se almacenan en un packfile de Git?
+
+A. Solo las diferencias (deltas) entre las versiones de los archivos.
+
+B. Solo las versiones completas de los archivos más recientes.
+
+C. Una combinación de objetos completos (commits, blobs, trees, tags) y sus diferencias (deltas) para optimizar el almacenamiento.
+
+D. Solo los metadatos del repositorio, como el historial de commits y las ramas.
+
+✅ Correcta: C
+
+🧾 Explicación: Los packfiles contienen tanto objetos completos como deltas para maximizar la eficiencia del almacenamiento.
+
+🧠 Pregunta 19
+
+¿Qué función cumple el archivo índice (.idx) asociado a un packfile en Git?
+
+A. Contiene la lista de todos los autores de los commits incluidos en el packfile.
+
+B. Almacena la información sobre la estructura de directorios del repositorio en el momento en que se creó el packfile.
+
+C. Sirve como un índice para localizar rápidamente objetos dentro del packfile, mejorando el rendimiento de las operaciones de Git.
+
+D. Contiene las instrucciones para descomprimir los objetos almacenados en el packfile.
+
+✅ Correcta: C
+
+🧾 Explicación: El archivo .idx permite un acceso rápido a los objetos dentro del packfile.
+
+🧠 Pregunta 20
+
+¿En qué situaciones Git podría optar por almacenar un objeto completo en un packfile en lugar de un delta?
+
+A. Cuando el objeto es muy pequeño.
+
+B. Cuando el objeto es la primera versión de un archivo y no tiene una versión anterior para comparar.
+
+C. Cuando el objeto ha sido modificado muchas veces y calcular el delta sería más costoso que almacenar el objeto completo.
+
+D. Todas las anteriores.
+
+✅ Correcta: D
+
+🧾 Explicación: Git evalúa la eficiencia y puede almacenar objetos completos en diversas situaciones.
+
+🧠 Pregunta 21
+
+¿Cuál es el primer paso que realiza Git al intentar fusionar dos ramas utilizando la estrategia de fusión recursiva?
+
+A. Aplicar todos los commits de una rama sobre la otra de forma secuencial.
+
+B. Identificar los commits que son únicos en cada una de las ramas.
+
+C. Localizar el último commit que ambas ramas tienen en común, conocido como el ancestro común o merge base.
+
+D. Comparar el número total de commits en cada rama para determinar la estrategia de fusión más adecuada.
+
+✅ Correcta: C
+
+🧾 Explicación: Encontrar el ancestro común es fundamental para determinar los cambios a fusionar.
+
+🧠 Pregunta 22
+
+¿Qué indica la presencia de marcadores como <<<<<<<, =======, y >>>>>>> en un archivo después de un intento de fusión en Git?
+
+A. Que la fusión se ha completado exitosamente sin ningún conflicto.
+
+B. Que Git ha detectado cambios conflictivos en esa sección del archivo que requieren resolución manual por parte del desarrollador.
+
+C. Que el archivo ha sido marcado para su eliminación después de la fusión.
+
+D. Que Git está esperando la confirmación del usuario para aplicar los cambios fusionados.
+
+✅ Correcta: B
+
+🧾 Explicación: Estos marcadores delimitan las secciones conflictivas que necesitan intervención manual.
+
+🧠 Pregunta 23
+
+¿Cuál es una limitación importante del algoritmo de fusión "octopus" al fusionar múltiples ramas?
+
+A. Solo puede fusionar un máximo de tres ramas a la vez.
+
+B. No es capaz de manejar conflictos entre más de dos ramas de forma automática.
+
+C. Requiere que todas las ramas a fusionar tengan un ancestro común directo.
+
+D. Solo se puede utilizar en repositorios con un historial lineal sin ramificaciones previas.
+
+✅ Correcta: B
+
+🧾 Explicación: La fusión octopus no resuelve conflictos complejos entre múltiples ramas automáticamente.
+
+🧠 Pregunta 24
+
+¿Cuál es el principal propósito de utilizar git rebase -i antes de fusionar una rama de características a la rama principal?
+
+A. Asegurarse de que la rama principal esté actualizada con los últimos cambios de la rama de características.
+
+B. Integrar todos los commits de la rama principal en la rama de características.
+
+C. Manipular el historial de la rama de características para que sea más limpio y lineal antes de integrarlo en la rama principal.
+
+D. Eliminar permanentemente la rama de características después de la fusión.
+
+✅ Correcta: C
+
+🧾 Explicación: El rebase interactivo se usa para limpiar y reorganizar el historial de la rama de características.
+
+🧠 Pregunta 25
+
+¿En qué escenario sería más útil la herramienta git cherry-pick?
+
+A. Para fusionar todas las ramas de un repositorio en una sola.
+
+B. Para revertir un commit específico en la rama actual.
+
+C. Para aplicar un commit particular de otra rama a la rama actual sin necesidad de fusionar toda la rama.
+
+D. Para comparar los cambios entre dos commits consecutivos en la misma rama.
+
+✅ Correcta: C
+
+🧾 Explicación: Cherry-pick permite seleccionar e integrar commits individuales.
+
+🧠 Pregunta 26
+
+¿Cuál es la diferencia fundamental entre git revert y git reset?
+
+A. git revert se utiliza para deshacer cambios en archivos individuales, mientras que git reset afecta a commits completos.
+
+B. git revert crea un nuevo commit que anula los cambios de un commit anterior, preservando el historial, mientras que git reset mueve el HEAD a un commit anterior, potencialmente alterando el historial.
+
+C. git revert solo se puede usar en ramas locales, mientras que git reset se utiliza para deshacer cambios en ramas remotas.
+
+D. git revert requiere una conexión a internet, mientras que git reset es una operación local.
+
+✅ Correcta: B
+
+🧾 Explicación: Revert crea un nuevo commit para deshacer, mientras que reset modifica el historial.
+
+🧠 Pregunta 27
+
+¿Qué tipo de información se puede visualizar y manipular utilizando herramientas de interfaz gráfica (GUIs) para Git al resolver conflictos de fusión?
+
+A. Solo el contenido textual de los archivos conflictivos.
+
+B. Las diferencias entre las ramas en conflicto de forma visual, permitiendo elegir qué cambios conservar de cada rama de manera más intuitiva.
+
+C. El número de líneas modificadas en cada rama y el autor de los cambios.
+
+D. La fecha y hora exacta de cada modificación en las ramas conflictivas.
+
+✅ Correcta: B
+
+🧾 Explicación: Las GUIs facilitan la comparación visual y la selección de los cambios deseados.
+
+🧠 Pregunta 28
+
+¿Cómo contribuye la estructura del DAG a la eficiencia de las operaciones de fusión en Git?
+
+A. Permite comprimir el historial de commits para acelerar la comparación de ramas.
+
+B. Facilita la identificación rápida del ancestro común entre las ramas que se van a fusionar.
+
+C. Asegura que las fusiones siempre se realicen de forma automática sin necesidad de intervención manual.
+
+D. Permite reordenar los commits de diferentes ramas antes de la fusión para evitar conflictos.
+
+✅ Correcta: B
+
+🧾 Explicación: El DAG estructura el historial de manera que el ancestro común puede encontrarse eficientemente.
+
+🧠 Pregunta 29
+
+¿De qué manera el uso de packfiles puede mejorar el rendimiento de un git clone de un repositorio grande?
+
+A. Al descargar los objetos de forma individual, permitiendo una descarga más granular.
+
+B. Al comprimir y empaquetar todos los objetos en un solo archivo para su transferencia, reduciendo el número de conexiones y el tamaño total de la descarga.
+
+C. Al descargar solo las ramas más recientes del repositorio.
+
+D. Al verificar la integridad de cada objeto individualmente antes de descargarlo.
+
+✅ Correcta: B
+
+🧾 Explicación: Los packfiles optimizan la transferencia al consolidar y comprimir los objetos.
+
+🧠 Pregunta 30
+
+¿Cuál es la implicación de que Git trate a cada commit como una instantánea del proyecto en un momento dado?
+
+A. Que cada commit contiene una copia completa de todos los archivos del proyecto en ese estado.
+
+B. Que Git solo guarda las diferencias entre commits para ahorrar espacio de almacenamiento.
+
+C. Que es imposible volver a un estado anterior del proyecto representado por un commit.
+
+D. Que los commits no están relacionados entre sí y se pueden manipular de forma independiente sin afectar al resto del historial.
+
+✅ Correcta: A
+
+🧾 Explicación: Cada commit representa un estado completo del proyecto en el momento de su creación.
+
+🧠 Pregunta 31
+
+¿Qué ventaja ofrece el modelo peer-to-peer de Git en términos de resiliencia y seguridad de los datos?
+
+A. Depender de un único servidor central asegura la consistencia de los datos.
+
+B. La replicación completa del historial en múltiples máquinas permite la recuperación del proyecto si el servidor original falla.
+
+C. La necesidad de una conexión constante a internet protege el repositorio de accesos no autorizados.
+
+D. La estructura jerárquica del sistema facilita la gestión de permisos y el control de acceso.
+
+✅ Correcta: B
+
+🧾 Explicación: La distribución del repositorio en múltiples clones proporciona redundancia y facilita la recuperación en caso de fallos.
+
+🧠 Pregunta 32
+
+¿Cómo influye la estructura del DAG en la capacidad de Git para realizar fusiones eficientes?
+
+A. Permite comparar el contenido de los archivos línea por línea de forma más rápida.
+
+B. Facilita la identificación del ancestro común más reciente entre las ramas que se van a fusionar.
+
+C. Asegura que los commits se fusionen en el orden cronológico exacto en que fueron creados.
+
+D. Permite comprimir los commits antes de la fusión para reducir el tamaño del historial.
+
+✅ Correcta: B
+
+🧾 Explicación: La estructura del DAG facilita la búsqueda del punto de divergencia entre las ramas.
+
+🧠 Pregunta 33
+
+¿Qué implicación tiene el hecho de que los hashes en Git dependan del contenido de los objetos?
+
+A. Que los hashes son predecibles y fáciles de memorizar.
+
+B. Que cualquier modificación en el contenido de un objeto resultará en un hash diferente, lo que permite la detección de cambios.
+
+C. Que objetos diferentes siempre tendrán el mismo hash si fueron creados por el mismo autor.
+
+D. Que los hashes solo se utilizan internamente y no son relevantes para el usuario.
+
+✅ Correcta: B
+
+🧾 Explicación: La dependencia del contenido asegura la integridad y la trazabilidad a través de los hashes únicos.
+
+🧠 Pregunta 34
+
+¿Cuál es el principal desafío que la transición de SHA-1 a SHA-256 presenta para el ecosistema de Git?
+
+A. La necesidad de cambiar todos los hashes existentes en los repositorios antiguos.
+
+B. Asegurar la compatibilidad y la interoperabilidad entre repositorios y herramientas que aún utilizan SHA-1 y aquellos que han migrado a SHA-256.
+
+C. El aumento significativo en el tamaño de los hashes, lo que requiere más espacio de almacenamiento.
+
+D. La pérdida de la capacidad de identificar objetos duplicados en el repositorio.
+
+✅ Correcta: B
+
+🧾 Explicación: La coexistencia de ambos algoritmos requiere una gestión cuidadosa de la compatibilidad.
+
+🧠 Pregunta 35
+
+¿Cómo optimiza el delta encoding las transferencias de datos en operaciones como git fetch o git pull?
+
+A. Al comprimir todos los objetos del repositorio en un único archivo antes de la transferencia.
+
+B. Al enviar solo las diferencias entre los objetos que el receptor ya tiene y las nuevas versiones, en lugar de enviar los objetos completos.
+
+C. Al priorizar la descarga de los commits más recientes.
+
+D. Al verificar la integridad de los datos antes de iniciar la transferencia.
+
+✅ Correcta: B
+
+🧾 Explicación: Enviar solo las diferencias reduce la cantidad de datos que necesitan ser transferidos.
+
+🧠 Pregunta 36
+
+¿Qué sucede durante el proceso de creación de un packfile en Git?
+
+A. Se eliminan los objetos redundantes del repositorio para liberar espacio.
+
+B. Se organiza el historial de commits en un formato lineal y secuencial.
+
+C. Se identifican los objetos necesarios, se calculan las diferencias (deltas) entre ellos y se comprimen en un único archivo.
+
+D. Se envían todos los objetos del repositorio a un servidor remoto para su almacenamiento seguro.
+
+✅ Correcta: C
+
+🧾 Explicación: La creación de packfiles implica la identificación, el cálculo de deltas y la compresión de los objetos.
+
+🧠 Pregunta 37
+
+¿Por qué es importante identificar el ancestro común al realizar una fusión con la estrategia recursiva?
+
+A. Para determinar qué rama tiene los cambios más recientes.
+
+B. Para asegurar que los commits se fusionen en el orden correcto de creación.
+
+C. Para comparar los cambios realizados en cada rama desde ese punto y combinarlos de manera inteligente.
+
+D. Para evitar la creación de un nuevo commit de fusión.
+
+✅ Correcta: C
+
+🧾 Explicación: El ancestro común es el punto de referencia para entender los cambios introducidos en cada rama.
+
+🧠 Pregunta 38
+
+¿Cuál es una de las principales ventajas de utilizar un rebase interactivo antes de fusionar una rama en un entorno colaborativo?
+
+A. Permite ocultar commits que contienen errores o información sensible.
+
+B. Facilita la creación de un historial de commits más limpio y lineal en la rama de características, lo que simplifica el seguimiento y la comprensión de los cambios al fusionarla con la rama principal.
+
+C. Acelera el proceso de fusión al evitar la creación de commits de fusión adicionales.
+
+D. Permite fusionar ramas que no tienen un ancestro común directo.
+
+✅ Correcta: B
+
+🧾 Explicación: Un historial limpio facilita la colaboración y la comprensión del desarrollo.
+
+🧠 Pregunta 39
+
+¿En qué se diferencia git cherry-pick de un git merge normal?
+
+A. git cherry-pick integra todos los commits de una rama, mientras que git merge solo aplica commits específicos.
+
+B. git cherry-pick aplica commits específicos de una rama a la rama actual, mientras que git merge integra toda una rama en la rama actual.
+
+C. git cherry-pick modifica el historial de la rama de destino, mientras que git merge siempre crea un nuevo commit de fusión.
+
+D. git cherry-pick solo se puede utilizar para deshacer commits, mientras que git merge se utiliza para integrar cambios.
+
+✅ Correcta: B
+
+🧾 Explicación: Cherry-pick se enfoca en commits individuales, mientras que merge integra ramas completas.
+
+🧠 Pregunta 40
+
+¿Cuál es una buena práctica al usar git reset y por qué?
+
+A. Usarlo frecuentemente en ramas compartidas para mantener el historial limpio para todos.
+
+B. Limitar su uso a ramas locales y privadas, ya que puede reescribir el historial que otros ya han sincronizado, causando problemas.
+
+C. Utilizarlo siempre con la opción --hard para asegurar una limpieza completa del historial.
+
+D. Ejecutarlo automáticamente después de cada git push para sincronizar el historial local y remoto.
+
+✅ Correcta: B
+
+🧾 Explicación: Reescribir el historial en ramas compartidas puede generar inconsistencias y problemas para otros colaboradores.
+
+🧠 Pregunta 41
+
+¿Cómo ayuda la verificación de integridad basada en árboles de Merkle a la seguridad de un repositorio Git distribuido?
+
+A. Al cifrar el contenido de los archivos, haciéndolos ilegibles para usuarios no autorizados.
+
+B. Al asegurar que cualquier alteración en cualquier parte del historial (archivos, directorios, commits) se detecte mediante la verificación de los hashes.
+
+C. Al registrar la dirección IP de cada usuario que realiza cambios en el repositorio.
+
+D. Al requerir autenticación de dos factores para cada operación de escritura en el repositorio.
+
+✅ Correcta: B
+
+🧾 Explicación: La estructura de hashes encadenados permite detectar cualquier manipulación del historial.
+
+🧠 Pregunta 42
+
+¿Qué papel juegan los blobs, los árboles y los commits en la estructura de datos de Git basada en árboles de Merkle?
+
+A. Los blobs representan los metadatos del repositorio, los árboles representan los archivos y los commits representan los directorios.
+
+B. Los blobs representan los archivos individuales, los árboles representan los directorios que contienen blobs y otros árboles, y los commits apuntan a un árbol raíz que representa el estado del proyecto en ese momento.
+
+C. Los árboles representan las diferentes ramas del repositorio, los blobs representan los commits en cada rama y los commits representan la fusión de las ramas.
+
+D. Los blobs, los árboles y los commits son simplemente diferentes formas de comprimir los datos del repositorio para ahorrar espacio.
+
+✅ Correcta: B
+
+🧾 Explicación: Esta es la jerarquía fundamental de los objetos en Git.
+
+🧠 Pregunta 43
+
+¿Cómo maneja Git los archivos binarios en términos de delta encoding y almacenamiento en packfiles?
+
+A. Los archivos binarios siempre se almacenan como objetos completos en los packfiles, ya que el delta encoding no es efectivo para ellos.
+
+B. Git intenta aplicar delta encoding incluso a archivos binarios, comparando bloques de datos para encontrar similitudes.
+
+C. Los archivos binarios se excluyen automáticamente de los packfiles y se almacenan por separado.
+
+D. Git convierte los archivos binarios a formato de texto antes de aplicar el delta encoding y almacenarlos en packfiles.
+
+✅ Correcta: B
+
+🧾 Explicación: Git intenta optimizar el almacenamiento incluso de binarios buscando similitudes a nivel de bloques.
+
+🧠 Pregunta 44
+
+¿Cuál es una posible desventaja de utilizar git rebase en ramas compartidas con otros colaboradores?
+
+A. Puede hacer que la rama local se desincronice con la rama remota.
+
+B. Puede reescribir el historial que otros ya han basado su trabajo, generando conflictos y confusión.
+
+C. Puede eliminar permanentemente commits importantes del historial.
+
+D. Puede ralentizar significativamente las operaciones de Git.
+
+✅ Correcta: B
+
+🧾 Explicación: La reescritura del historial en ramas compartidas es una práctica peligrosa.
+
+🧠 Pregunta 45
+
+¿Qué información esencial contiene un objeto commit en Git?
+
+A. El contenido de todos los archivos del proyecto en ese momento exacto.
+
+B. El nombre del autor, la dirección de correo electrónico, la fecha y hora, un mensaje descriptivo y una referencia al árbol (tree) que representa la instantánea del proyecto.
+
+C. Una lista de todos los commits realizados posteriormente en la misma rama.
+
+D. Las diferencias (deltas) entre este commit y el commit anterior.
+
+✅ Correcta: B
+
+🧾 Explicación: Un commit contiene metadatos importantes sobre el cambio y su contexto.
+
+🧠 Pregunta 46
+
+¿Cómo asegura Git la integridad del historial completo del repositorio utilizando los hashes criptográficos?
+
+A. Al requerir una firma digital para cada commit realizado.
+
+B. Al encadenar los hashes de los commits, donde cada commit apunta al hash de su padre (o padres), de manera que cualquier alteración en un commit cambiará su hash y, por ende, los hashes de todos sus descendientes.
+
+C. Al comparar periódicamente los hashes de todos los objetos con una copia de seguridad almacenada en un servidor central.
+
+D. Al cifrar el historial completo del repositorio utilizando una clave privada conocida solo por los colaboradores autorizados.
+
+✅ Correcta: B
+
+🧾 Explicación: El encadenamiento de hashes es fundamental para la integridad del historial.
+
+🧠 Pregunta 47
+
+¿Qué implicaciones tiene la inmutabilidad de los objetos en Git (una vez creados, su contenido no cambia)?
+
+A. Que es imposible deshacer los cambios realizados en un commit.
+
+B. Que cada cambio siempre resulta en la creación de un nuevo objeto con un hash diferente, lo que facilita el seguimiento y la integridad del historial.
+
+C. Que los objetos deben ser copiados completamente cada vez que se realiza un commit, lo que puede aumentar el uso de espacio en disco.
+
+D. Que los objetos no pueden ser compartidos entre diferentes commits o ramas.
+
+✅ Correcta: B
+
+🧾 Explicación: La inmutabilidad asegura la trazabilidad y la consistencia del historial.
+
+🧠 Pregunta 48
+
+¿Cómo maneja Git la concurrencia y evita la corrupción del repositorio cuando múltiples usuarios realizan operaciones simultáneamente?
+
+A. Mediante el uso de bloqueos (locks) en los archivos del repositorio.
+
+B. Principalmente a través de la naturaleza distribuida, donde los usuarios trabajan en sus copias locales y luego sincronizan los cambios, y mediante mecanismos para la gestión de fusiones y conflictos.
+
+C. Al requerir que todas las operaciones pasen por un servidor central que gestiona las transacciones de forma secuencial.
+
+D. Al crear copias temporales del repositorio para cada usuario durante sus operaciones.
+
+✅ Correcta: B
+
+🧾 Explicación: La naturaleza distribuida y las herramientas de gestión de fusiones son clave para la concurrencia.
+
+🧠 Pregunta 49
+
+¿Cuál es el beneficio de que Git realice la mayoría de las operaciones de forma local?
+
+A. Reduce la carga en el servidor central del repositorio.
+
+B. Permite realizar operaciones como commits, visualización del historial y creación de ramas de forma rápida, sin la latencia de la red.
+
+C. Asegura que todos los desarrolladores trabajen siempre con la última versión del repositorio.
+
+D. Simplifica la gestión de permisos y el control de acceso al repositorio.
+
+✅ Correcta: B
+
+🧾 Explicación: La localidad de las operaciones mejora significativamente la velocidad y la eficiencia.
+
+🧠 Pregunta 50
+
+En un flujo de trabajo de Git típico, ¿cuál es el propósito de una rama de "características" (feature branch)?
+
+A. Almacenar la versión estable y principal del código.
+
+B. Aislar el desarrollo de una nueva funcionalidad o corrección de errores del código principal, permitiendo trabajar en paralelo sin afectar la estabilidad de la rama principal.
+
+C. Mantener un registro de todos los cambios realizados en el repositorio por un desarrollador específico.
+
+D. Facilitar la implementación continua y la entrega continua (CI/CD).
+
+✅ Correcta: B
+
+🧾 Explicación: Las ramas de características son fundamentales para el desarrollo aislado y paralelo.

@@ -107,3 +107,335 @@ D. Poder ejecutar Git sin instalación
 
 ✅ Correcta: C
 🧾 Explicación: Git combina DAGs y árboles de Merkle para asegurar relaciones claras entre commits, integridad criptográfica y operaciones eficientes sobre el historial.
+
+🧠 Pregunta 71
+¿Qué ocurre si dos ramas modifican la misma línea de un archivo y luego se hace un merge?
+
+A. Git elige automáticamente una versión y descarta la otra
+B. Git ignora los cambios y deja el archivo original
+C. Git genera un conflicto que debe resolverse manualmente
+D. Git crea un nuevo archivo para cada versión
+
+✅ Correcta: C
+🧾 Explicación: Cuando dos ramas modifican la misma línea, Git no puede decidir qué versión conservar y marca el conflicto para que lo resuelva el desarrollador.
+
+🧠 Pregunta 72
+¿En qué casos Git utiliza la estrategia de fusión recursiva?
+
+A. Solo cuando se hace un cherry-pick
+B. Cuando se fusionan dos ramas con un ancestro común
+C. Para borrar ramas obsoletas
+D. Cuando se hace git clone
+
+✅ Correcta: B
+🧾 Explicación: La fusión recursiva se usa al combinar dos ramas, buscando su ancestro común y fusionando los cambios desde ese punto.
+
+🧠 Pregunta 73
+¿Qué es el "merge base" en Git?
+
+A. El primer commit del repositorio
+B. La rama de origen en una fusión
+C. El commit más reciente antes de una divergencia entre ramas
+D. El último archivo modificado antes de una fusión
+
+✅ Correcta: C
+🧾 Explicación: El merge base es el ancestro común más reciente entre dos ramas, utilizado como punto de partida para fusionar los cambios.
+
+🧠 Pregunta 74
+¿Cuál es una razón para evitar usar git reset en ramas compartidas?
+
+A. Porque crea demasiados commits
+B. Porque elimina ramas
+C. Porque puede reescribir el historial y causar conflictos con otros usuarios
+D. Porque borra archivos del repositorio
+
+✅ Correcta: C
+🧾 Explicación: git reset modifica el historial de la rama, lo que puede causar problemas si otros ya han basado su trabajo en los commits eliminados.
+
+🧠 Pregunta 75
+¿Qué comando permite listar todas las ramas locales existentes?
+
+A. git log
+B. git branch
+C. git status
+D. git remote
+
+✅ Correcta: B
+🧾 Explicación: git branch muestra todas las ramas locales del repositorio, y permite crear o eliminar ramas si se le agregan opciones.
+
+🧠 Pregunta 76
+¿Qué comando permite deshacer un commit ya enviado sin borrar el historial?
+
+A. git revert
+B. git remove
+C. git stash
+D. git pop
+
+✅ Correcta: A
+🧾 Explicación: git revert crea un nuevo commit que invierte los cambios de un commit anterior, manteniendo intacto el historial del repositorio.
+
+🧠 Pregunta 77
+¿Qué acción se recomienda antes de fusionar una rama feature a main?
+
+A. Hacer un reset de la rama feature
+B. Crear un tag
+C. Aplicar un rebase interactivo para limpiar el historial
+D. Borrar la rama feature
+
+✅ Correcta: C
+🧾 Explicación: Un git rebase -i permite reorganizar y limpiar los commits de la rama feature para que su integración en main sea más clara y ordenada.
+
+🧠 Pregunta 78
+¿Cuál es la diferencia principal entre git revert y git reset?
+
+A. revert cambia el historial y reset no
+B. revert elimina archivos y reset los restaura
+C. revert crea un nuevo commit, mientras que reset mueve la referencia del historial
+D. No existe diferencia funcional
+
+✅ Correcta: C
+🧾 Explicación: revert añade un nuevo commit que deshace cambios, útil en ramas públicas; reset mueve el puntero de la rama, reescribiendo el historial.
+
+🧠 Pregunta 79
+¿Qué comando permite ver todos los commits realizados, en orden cronológico inverso?
+
+A. git show
+B. git diff
+C. git log
+D. git fetch
+
+✅ Correcta: C
+🧾 Explicación: git log muestra una lista cronológica de los commits realizados, con detalles como autor, fecha, hash y mensaje.
+
+🧠 Pregunta 80
+¿Cuál es una ventaja directa del uso de ramas en Git?
+
+A. Permiten eliminar cambios sin guardar
+B. Obligan a usar un servidor remoto
+C. Facilitan el desarrollo paralelo de funcionalidades sin afectar la rama principal
+D. Requieren menos espacio de almacenamiento
+
+✅ Correcta: C
+🧾 Explicación: Las ramas permiten a los desarrolladores trabajar en nuevas funcionalidades o correcciones de forma aislada, sin alterar la versión estable del proyecto.
+
+🧠 Pregunta 81
+¿Qué comando se utiliza para subir commits locales al repositorio remoto?
+
+A. git merge
+B. git pull
+C. git commit
+D. git push
+
+✅ Correcta: D
+🧾 Explicación: git push envía los commits realizados localmente al repositorio remoto, permitiendo que otros desarrolladores accedan a los cambios.
+
+🧠 Pregunta 82
+¿Cuál es una consecuencia de realizar git rebase sobre una rama pública?
+
+A. Se crean ramas nuevas automáticamente
+B. Se elimina el historial del repositorio
+C. Se reescribe el historial, lo que puede causar conflictos con otros colaboradores
+D. Se hace un merge automático sin conflictos
+
+✅ Correcta: C
+🧾 Explicación: Reescribir el historial con git rebase en ramas públicas puede desincronizar a los colaboradores, ya que los hashes de los commits cambian.
+
+🧠 Pregunta 83
+¿Qué hace git stash?
+
+A. Elimina archivos del área de staging
+B. Almacena temporalmente cambios no confirmados
+C. Mueve commits entre ramas
+D. Borra los archivos ignorados por Git
+
+✅ Correcta: B
+🧾 Explicación: git stash guarda temporalmente los cambios del área de trabajo para poder hacer otras tareas, sin perder el progreso.
+
+🧠 Pregunta 84
+¿Qué comando permite recuperar los cambios guardados con git stash?
+
+A. git recover
+B. git apply
+C. git reset
+D. git cherry-pick
+
+✅ Correcta: B
+🧾 Explicación: git apply recupera los cambios almacenados con git stash sin eliminar el stash, permitiendo aplicarlos de nuevo si es necesario.
+
+🧠 Pregunta 85
+¿Qué significa que Git maneje “flujos de trabajo asincrónicos”?
+
+A. Solo una persona puede hacer commits a la vez
+B. Se deben coordinar los commits con cada colaborador
+C. Cada desarrollador puede trabajar por separado y sincronizar cuando esté listo
+D. Todos deben trabajar en la misma rama
+
+✅ Correcta: C
+🧾 Explicación: Git permite que cada desarrollador trabaje localmente en su propio flujo y luego sincronice con el resto del equipo al momento deseado.
+
+🧠 Pregunta 86
+¿Qué ventaja ofrece el comando git tag?
+
+A. Elimina commits antiguos automáticamente
+B. Marca puntos importantes del historial, como versiones o lanzamientos
+C. Fusiona ramas remotas
+D. Verifica el estado de los archivos
+
+✅ Correcta: B
+🧾 Explicación: git tag se usa para señalar momentos clave del proyecto, como versiones estables o puntos de liberación importantes.
+
+🧠 Pregunta 87
+¿Qué ocurre si ejecutas git init en una carpeta?
+
+A. Se elimina todo el contenido
+B. Se descarga un repositorio desde GitHub
+C. Se convierte la carpeta en un repositorio Git local
+D. Se genera automáticamente un archivo README
+
+✅ Correcta: C
+🧾 Explicación: git init inicializa un nuevo repositorio Git local en la carpeta actual, creando una estructura interna en .git.
+
+🧠 Pregunta 88
+¿Qué comando se utiliza para comparar dos ramas?
+
+A. git graph
+B. git show
+C. git branch
+D. git diff
+
+✅ Correcta: D
+🧾 Explicación: git diff rama1..rama2 permite ver las diferencias entre dos ramas, mostrando los cambios que no han sido compartidos.
+
+🧠 Pregunta 89
+¿Cuál es el comportamiento de git clone?
+
+A. Reescribe el historial remoto
+B. Crea una copia exacta del repositorio remoto en local
+C. Solo descarga la rama principal
+D. Aplica todos los stashes pendientes
+
+✅ Correcta: B
+🧾 Explicación: git clone copia todo el contenido del repositorio remoto (incluyendo historial, ramas, y configuración) en una nueva carpeta local.
+
+🧠 Pregunta 90
+¿Qué significa que Git puede detectar colisiones en los hashes?
+
+A. Puede corregir errores automáticamente
+B. Puede detectar si dos objetos distintos tienen el mismo hash
+C. Puede borrar duplicados automáticamente
+D. Puede fusionar ramas sin conflictos
+
+✅ Correcta: B
+🧾 Explicación: Git se basa en que los hashes sean únicos, por lo que si detecta dos objetos con el mismo hash (una colisión), alerta de una posible vulnerabilidad.
+
+🧠 Pregunta 91
+¿Cuál es el efecto inmediato de ejecutar git checkout nombre-rama?
+
+A. Elimina la rama especificada
+B. Cambia la rama activa a nombre-rama
+C. Fusiona la rama con main
+D. Reescribe el historial de la rama actual
+
+✅ Correcta: B
+🧾 Explicación: git checkout nombre-rama cambia el contexto de trabajo a esa rama, actualizando los archivos del proyecto y el puntero HEAD.
+
+🧠 Pregunta 92
+¿Cuál de las siguientes estructuras contiene una referencia a un tree y a sus commits padres?
+
+A. Blob
+B. Packfile
+C. Commit
+D. HEAD
+
+✅ Correcta: C
+🧾 Explicación: Un commit en Git contiene una referencia al árbol (tree) que representa el estado del proyecto y también apunta a su commit padre (o padres, en caso de merge).
+
+🧠 Pregunta 93
+¿Qué comando se utiliza para crear una nueva rama y moverse a ella al instante?
+
+A. git switch
+B. git checkout -b nombre-rama
+C. git clone --branch
+D. git branch && git merge
+
+✅ Correcta: B
+🧾 Explicación: git checkout -b nombre-rama crea una nueva rama y cambia directamente a ella en una sola instrucción.
+
+🧠 Pregunta 94
+¿Cuál es la utilidad principal del comando git show?
+
+A. Ver ramas disponibles
+B. Visualizar detalles de un commit específico
+C. Comparar ramas remotas
+D. Borrar cambios no guardados
+
+✅ Correcta: B
+🧾 Explicación: git show permite ver detalles completos de un commit, como su hash, autor, fecha y cambios realizados.
+
+🧠 Pregunta 95
+¿Qué sucede si ejecutas git commit sin usar git add previamente?
+
+A. Se hace commit de todos los cambios, incluidos los no guardados
+B. No se realiza ningún commit
+C. Solo se confirma el último archivo modificado
+D. Solo se confirman los cambios previamente añadidos al área de staging
+
+✅ Correcta: D
+🧾 Explicación: git commit solo registra los archivos que han sido añadidos al área de staging mediante git add.
+
+🧠 Pregunta 96
+¿Qué es origin en el contexto de Git?
+
+A. El archivo de configuración principal
+B. Un tipo especial de commit
+C. El nombre por defecto del repositorio remoto cuando se clona
+D. Una rama temporal creada al hacer merge
+
+✅ Correcta: C
+🧾 Explicación: Cuando se clona un repositorio, Git asigna el nombre origin por defecto al repositorio remoto desde donde se clonó.
+
+🧠 Pregunta 97
+¿Qué comando permite ver los cambios realizados pero aún no añadidos al área de staging?
+
+A. git reset
+B. git diff
+C. git status
+D. git stash show
+
+✅ Correcta: B
+🧾 Explicación: git diff muestra los cambios realizados en los archivos del área de trabajo que todavía no se han agregado al staging con git add.
+
+🧠 Pregunta 98
+¿Para qué sirve el archivo .gitignore?
+
+A. Para ignorar ramas remotas en el log
+B. Para excluir archivos o carpetas del control de versiones
+C. Para bloquear commits no deseados
+D. Para revertir los cambios de una rama
+
+✅ Correcta: B
+🧾 Explicación: El archivo .gitignore le indica a Git qué archivos o directorios debe ignorar (no rastrear ni incluir en commits).
+
+🧠 Pregunta 99
+¿Qué comando se puede usar para eliminar una rama local?
+
+A. git remove-branch
+B. git branch -delete
+C. git branch -d nombre-rama
+D. git delete nombre-rama
+
+✅ Correcta: C
+🧾 Explicación: git branch -d nombre-rama elimina una rama local de forma segura, siempre que haya sido fusionada. Para forzar, se puede usar -D.
+
+🧠 Pregunta 100
+¿Cuál es el propósito de git config?
+
+A. Instalar plugins externos
+B. Establecer configuraciones como nombre de usuario y correo
+C. Visualizar conflictos pendientes
+D. Comprimir objetos automáticamente
+
+✅ Correcta: B
+🧾 Explicación: git config permite definir configuraciones del entorno de Git, como nombre, correo, editor por defecto, alias, entre otros.
+
+

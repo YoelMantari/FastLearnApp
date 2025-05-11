@@ -1,0 +1,360 @@
+🧠 Pregunta 31
+
+¿Qué beneficio principal aporta el uso de git rebase -i antes de hacer un pull request?
+
+A. Crea automáticamente una nueva rama
+B. Elimina archivos sin seguimiento
+C. Limpia y organiza el historial de commits
+D. Permite sincronizar múltiples repositorios
+
+✅ Correcta: C
+🧾 Explicación: git rebase -i permite reescribir el historial de commits, haciendo que el pull request sea más limpio, profesional y fácil de revisar.
+
+🧠 Pregunta 32
+
+¿Cuál es una desventaja del uso de submódulos?
+
+A. No se pueden versionar
+B. Obligan a mantener el código externo en el mismo historial
+C. Requieren comandos adicionales para inicializar y actualizar
+D. No pueden ser usados con múltiples ramas
+
+✅ Correcta: C
+🧾 Explicación: Los submódulos deben ser actualizados manualmente con comandos como git submodule update --init --recursive, lo cual agrega complejidad al flujo de trabajo.
+
+🧠 Pregunta 33
+
+¿En qué situación se recomienda utilizar un subtree en lugar de un submódulo?
+
+A. Cuando no se desea incluir el historial del repositorio externo
+B. Cuando se necesita mantener los proyectos completamente separados
+C. Cuando se desea trabajar directamente con el código externo desde el repositorio principal
+D. Cuando no se tiene acceso a internet
+
+✅ Correcta: C
+🧾 Explicación: El subtree integra el código externo dentro del repositorio principal, permitiendo trabajar directamente sobre él sin salir del contexto actual.
+
+🧠 Pregunta 34
+
+¿Qué indica HEAD@{0} en el comando git reflog?
+
+A. El primer commit del proyecto
+B. El commit más reciente donde se movió HEAD
+C. El último commit fusionado
+D. Un commit que fue eliminado
+
+✅ Correcta: B
+🧾 Explicación: HEAD@{0} representa la posición actual de HEAD; cada movimiento previo se indexa como HEAD@{1}, HEAD@{2}, etc.
+
+🧠 Pregunta 35
+
+¿Qué comando permite automatizar varias operaciones avanzadas de Git dentro de un flujo de trabajo?
+
+A. git run
+B. git task
+C. Script Bash personalizado
+D. git flow
+
+✅ Correcta: C
+🧾 Explicación: Crear un script en Bash permite ejecutar en secuencia comandos como clone, checkout, rebase -i, merge, log, y bisect, mejorando la eficiencia y reduciendo errores.
+
+🧠 Pregunta 36
+
+¿Qué técnica utiliza git bisect para encontrar el commit que introdujo un bug?
+
+A. Algoritmo de ordenamiento
+B. Búsqueda binaria
+C. Recorrido en profundidad
+D. Comparación entre ramas
+
+✅ Correcta: B
+🧾 Explicación: git bisect aplica búsqueda binaria entre un commit bueno y uno malo, reduciendo drásticamente el número de pasos necesarios para encontrar el commit defectuoso.
+
+🧠 Pregunta 37
+
+¿Para qué sirve la opción --oneline en git log?
+
+A. Ver solo los archivos modificados
+B. Mostrar los commits en una línea cada uno
+C. Ordenar los commits por autor
+D. Eliminar el historial de merge
+
+✅ Correcta: B
+🧾 Explicación: --oneline muestra cada commit con su hash corto y mensaje en una sola línea, facilitando una vista rápida del historial.
+
+🧠 Pregunta 38
+
+¿Qué comando se utiliza para ver los commits que modificaron una sección específica de un archivo por número de línea?
+
+A. git show -L
+B. git log -L línea1,línea2:archivo
+C. git blame -r
+D. git diff línea1 línea2
+
+✅ Correcta: B
+🧾 Explicación: git log -L inicio,fin:archivo rastrea los commits que afectaron una sección concreta del archivo, útil para auditorías detalladas.
+
+🧠 Pregunta 39
+
+¿Cuál es una buena práctica al usar git blame en entornos colaborativos?
+
+A. Usarlo para identificar errores y culpar a los autores
+B. Ignorar las fechas de los cambios
+C. Utilizarlo para entender la intención detrás del código y mejorar la comunicación
+D. Reescribir el historial para ocultar al autor original
+
+✅ Correcta: C
+🧾 Explicación: Aunque su nombre implica lo contrario, git blame debe usarse como herramienta de análisis técnico y colaboración, no para culpar.
+
+🧠 Pregunta 40
+
+¿Cuál es una diferencia entre git reset y git reflog?
+
+A. reset muestra el historial de cambios y reflog deshace commits
+B. reflog elimina archivos, reset no
+C. reset mueve HEAD, reflog muestra los movimientos previos de HEAD
+D. Ambos sirven para fusionar ramas
+
+✅ Correcta: C
+🧾 Explicación: git reset cambia la posición actual del HEAD, mientras que git reflog permite ver el historial de esos movimientos y recuperar estados previos.
+
+🧠 Pregunta 41
+
+¿Qué comando permite modificar solo el mensaje de un commit en un rebase interactivo?
+
+A. drop
+B. edit
+C. reword
+D. squash
+
+✅ Correcta: C
+🧾 Explicación: reword te permite editar únicamente el mensaje del commit seleccionado sin cambiar su contenido.
+
+🧠 Pregunta 42
+
+¿Qué sucede cuando se utiliza edit en un git rebase -i?
+
+A. Git elimina el commit seleccionado
+B. Git pausa el proceso para permitir editar el contenido del commit
+C. Git reescribe todo el historial de la rama
+D. Git combina automáticamente los commits seleccionados
+
+✅ Correcta: B
+🧾 Explicación: edit detiene el rebase para que puedas modificar los archivos del commit seleccionado y luego continuar el proceso.
+
+🧠 Pregunta 43
+
+¿Qué permite hacer la opción --decorate en el comando git log?
+
+A. Mostrar los archivos de cada commit
+B. Eliminar etiquetas no utilizadas
+C. Añadir nombres de ramas, HEAD y etiquetas a los commits mostrados
+D. Aplicar estilos de colores al historial
+
+✅ Correcta: C
+🧾 Explicación: --decorate anota cada commit con referencias como ramas, etiquetas o HEAD, para facilitar su identificación.
+
+🧠 Pregunta 44
+
+¿Qué ocurre si usas git subtree add --prefix=libs/libX ...?
+
+A. Crea un submódulo
+B. Añade un proyecto externo como código completamente integrado en la carpeta libs/libX
+C. Borrar el código actual de libs/libX
+D. Fusiona automáticamente ramas locales
+
+✅ Correcta: B
+🧾 Explicación: Este comando copia todo el contenido del repositorio externo dentro del proyecto principal en la ruta libs/libX.
+
+🧠 Pregunta 45
+
+¿Qué significa que git reflog es un registro local?
+
+A. Se puede sincronizar con GitHub
+B. Solo existe en tu copia del repositorio y no se comparte con otros usuarios
+C. Está en la nube de forma permanente
+D. Solo se guarda si haces commit
+
+✅ Correcta: B
+🧾 Explicación: El reflog no se sincroniza entre máquinas. Cada desarrollador tiene su propio registro local de los movimientos de HEAD y ramas.
+
+🧠 Pregunta 46
+
+¿Cuál es el riesgo de usar rebase -i sobre ramas ya compartidas?
+
+A. Puede duplicar commits
+B. Puede romper el código fuente
+C. Puede causar conflictos para otros al reescribirse el historial compartido
+D. No hay ningún riesgo
+
+✅ Correcta: C
+🧾 Explicación: Reescribir el historial compartido puede causar divergencias entre copias locales y el repositorio remoto, generando conflictos difíciles de resolver.
+
+🧠 Pregunta 47
+
+¿Qué sucede si usas git subtree pull?
+
+A. Elimina el historial del repositorio principal
+B. Borra la carpeta del subtree
+C. Sincroniza el contenido del subtree con su repositorio de origen
+D. Convierte un subtree en submódulo
+
+✅ Correcta: C
+🧾 Explicación: git subtree pull permite traer los últimos cambios del repositorio externo al subtree ya integrado en el proyecto principal.
+
+🧠 Pregunta 48
+
+¿Cuál es una razón para usar git bisect?
+
+A. Borrar ramas antiguas
+B. Fusionar múltiples ramas a la vez
+C. Encontrar el commit exacto que introdujo un bug
+D. Eliminar archivos obsoletos del repositorio
+
+✅ Correcta: C
+🧾 Explicación: git bisect implementa búsqueda binaria para aislar el commit responsable de un fallo en el código.
+
+🧠 Pregunta 49
+
+¿Qué archivo se crea automáticamente al añadir un submódulo a un proyecto Git?
+
+A. .gitsubmoduleconfig
+B. submodule.lock
+C. .gitmodules
+D. .gitconfig
+
+✅ Correcta: C
+🧾 Explicación: El archivo .gitmodules guarda la configuración de los submódulos, como su URL y la ruta en la que fueron añadidos.
+
+🧠 Pregunta 50
+
+¿Cuál es una ventaja de usar git log -L sobre git log?
+
+A. Permite modificar commits directamente
+B. Elimina líneas del archivo automáticamente
+C. Muestra la evolución de una función o línea específica a lo largo del tiempo
+D. Es más rápido en repositorios grandes
+
+✅ Correcta: C
+🧾 Explicación: git log -L es ideal para rastrear cómo ha cambiado una función o sección específica del código en el historial, commit por commit.
+
+🧠 Pregunta 51
+
+¿Qué opción del comando git log es especialmente útil para ver visualmente las fusiones y ramas?
+
+A. --show
+B. --format
+C. --graph
+D. --merge
+
+✅ Correcta: C
+🧾 Explicación: --graph agrega una representación visual del historial con líneas y ramas, mostrando claramente fusiones y bifurcaciones.
+
+🧠 Pregunta 52
+
+¿Qué operación realiza el comando git reset --hard HEAD@{1}?
+
+A. Crea una nueva rama desde un commit anterior
+B. Fusiona HEAD con HEAD@{1}
+C. Restaura el árbol de trabajo al estado anterior del HEAD
+D. Elimina el historial de commits antiguos
+
+✅ Correcta: C
+🧾 Explicación: Este comando restaura todo el repositorio al estado anterior del HEAD, útil si quieres deshacer un cambio reciente.
+
+🧠 Pregunta 53
+
+¿Cuándo es más adecuado usar un Octopus Merge?
+
+A. Cuando existen conflictos importantes entre ramas
+B. Cuando se desea combinar dos ramas grandes con historial complejo
+C. Cuando se integran tres o más ramas pequeñas sin conflictos
+D. Cuando se quiere reescribir la historia del repositorio
+
+✅ Correcta: C
+🧾 Explicación: El Octopus Merge permite combinar varias ramas a la vez, pero solo si no hay conflictos entre ellas.
+
+🧠 Pregunta 54
+
+¿Qué herramienta de Git es útil para saber quién, cuándo y por qué se modificó una línea específica de código?
+
+A. git show
+B. git log
+C. git blame
+D. git fetch
+
+✅ Correcta: C
+🧾 Explicación: git blame permite identificar al autor y el commit que modificó cada línea de un archivo, junto con la fecha y contenido.
+
+🧠 Pregunta 55
+
+¿Cuál es una característica clave de los subtrees frente a los submódulos?
+
+A. Requieren conexión constante con el repositorio externo
+B. No permiten tener acceso al código del repositorio externo
+C. Integran completamente el código y permiten trabajar sin comandos adicionales
+D. No se pueden sincronizar
+
+✅ Correcta: C
+🧾 Explicación: A diferencia de los submódulos, los subtrees traen el código y lo integran directamente al repositorio principal, sin comandos adicionales al clonar.
+
+🧠 Pregunta 56
+
+¿Qué comando se usa para actualizar un submódulo ya agregado?
+
+A. git submodule push
+B. git submodule clone
+C. git submodule update --init --recursive
+D. git update-submodule
+
+✅ Correcta: C
+🧾 Explicación: Este comando inicializa y actualiza todos los submódulos del repositorio, incluyendo los que están anidados.
+
+🧠 Pregunta 57
+
+¿Qué significa el mensaje de Git “You are in the middle of a rebase”?
+
+A. Se ha eliminado una rama por error
+B. El rebase se completó con éxito
+C. El proceso de rebase fue interrumpido y debe reanudarse o abortarse
+D. Hay un conflicto sin resolver en un subtree
+
+✅ Correcta: C
+🧾 Explicación: Ese mensaje indica que un rebase fue pausado (por un conflicto o edit) y es necesario usar git rebase --continue o --abort.
+
+🧠 Pregunta 58
+
+¿Cuál es el objetivo principal de un script Bash que automatiza Git?
+
+A. Borrar ramas obsoletas automáticamente
+B. Aplicar rebase y merge sin intervención manual
+C. Ejecutar pasos repetitivos de forma controlada y reproducible
+D. Crear commits triviales automáticamente
+
+✅ Correcta: C
+🧾 Explicación: Un script Bash permite integrar comandos de Git en secuencia para reducir errores humanos y estandarizar tareas repetitivas.
+
+🧠 Pregunta 59
+
+¿Cuál es el propósito de usar la opción --squash en git subtree add?
+
+A. Evitar la creación de ramas remotas
+B. Agregar solo archivos ignorados del repo externo
+C. Importar el código sin incluir su historial completo
+D. Evitar conflictos al fusionar
+
+✅ Correcta: C
+🧾 Explicación: La opción --squash copia el código del repositorio externo en un solo commit, lo que ayuda a mantener un historial limpio y compacto.
+
+🧠 Pregunta 60
+
+¿Qué hace el siguiente comando?
+git log --graph --decorate --oneline --grep="validación"
+
+A. Muestra todos los archivos donde aparece la palabra "validación"
+B. Muestra commits que modificaron funciones relacionadas a "validación"
+C. Filtra y muestra los commits con la palabra "validación" en su mensaje
+D. Elimina los commits que contienen la palabra "validación"
+
+✅ Correcta: C
+🧾 Explicación: El parámetro --grep busca dentro de los mensajes de los commits, y combinado con las otras opciones, muestra solo aquellos que mencionan "validación" en un formato visual y compacto.
