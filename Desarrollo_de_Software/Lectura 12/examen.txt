@@ -62,3 +62,134 @@ D. git diff
 ✅ Correcta: C
 
 🧾 Explicación: git bisect ayuda a encontrar el commit que introdujo un error al permitir marcar commits como "buenos" o "malos" y reduciendo el rango de búsqueda a la mitad en cada paso.
+
+
+🧠 Pregunta 111
+
+Un desarrollador quiere aplicar los cambios de un commit específico de otra rama a su rama actual, sin fusionar toda la otra rama ¿Qué comando de Git debería utilizar
+
+A. git merge &lt;otra_rama>
+B. git checkout &lt;otra_rama> -- &lt;archivo>
+C. git cherry-pick &lt;hash_del_commit>
+D. git rebase &lt;otra_rama>
+
+✅ Correcta: C
+
+🧾 Explicación: El comando git cherry-pick <hash_del_commit> permite aplicar los cambios introducidos por un commit específico a la rama actual.
+
+🧠 Pregunta 112
+
+¿Cuál es la principal diferencia entre un "submódulo" y un "subtree" en Git para la gestión de proyectos dependientes
+
+A. Un submódulo copia el código del proyecto dependiente al proyecto principal, mientras que un subtree mantiene una referencia externa
+B. Un subtree integra el historial del proyecto dependiente en el historial del proyecto principal, mientras que un submódulo mantiene una referencia a un commit específico
+C. Un submódulo es más fácil de actualizar que un subtree
+D. Un subtree siempre requiere una conexión de red para acceder al código dependiente
+
+✅ Correcta: B
+
+🧾 Explicación: Un subtree integra el contenido del repositorio externo directamente en el árbol del proyecto principal, incluyendo su historial Un submódulo, en cambio, mantiene una referencia a un commit específico del repositorio externo, sin integrar su historial completo.
+
+🧠 Pregunta 113
+
+Después de realizar varios commits locales, un desarrollador se da cuenta de que el mensaje del último commit es incorrecto ¿Qué comando de Git le permitiría modificar el mensaje del último commit sin alterar su contenido
+
+A. git commit --amend -m "&lt;nuevo_mensaje>"
+B. git reword HEAD
+C. git reset HEAD~1
+D. git update-ref HEAD^ &lt;nuevo_mensaje>
+
+✅ Correcta: A
+
+🧾 Explicación: El comando git commit --amend -m "<nuevo_mensaje>" permite modificar el mensaje del último commit realizado. Si no se especifica -m, se abrirá el editor de texto para modificar el mensaje.
+
+🧠 Pregunta 114
+
+En un flujo de trabajo de git bisect, después de probar un commit y determinar que el error aún está presente ¿Qué comando se debe ejecutar para informar a Git y continuar la búsqueda
+
+A. git bisect good
+B. git bisect skip
+C. git bisect bad
+D. git bisect reset
+
+✅ Correcta: C
+
+🧾 Explicación: El comando git bisect bad se utiliza para marcar el commit actual como uno que contiene el error, permitiendo a Git reducir el rango de commits a examinar en la búsqueda binaria.
+
+🧠 Pregunta 115
+
+¿Cuál de las siguientes opciones describe mejor el propósito de un "hook" en Git
+
+A. Una forma de crear alias para comandos de Git complejos
+B. Un mecanismo para personalizar el comportamiento de Git durante puntos clave de su ejecución
+C. Una herramienta para visualizar el historial de commits de forma gráfica
+D. Un método para cifrar el contenido de los repositorios Git
+
+✅ Correcta: B
+
+🧾 Explicación: Los hooks de Git son scripts que Git puede ejecutar automáticamente antes o después de ciertos eventos, como antes de un commit (pre-commit) o después de recibir un push (post-receive), permitiendo personalizar el flujo de trabajo.
+
+🧠 Pregunta 116
+
+Un equipo quiere asegurarse de que todos los mensajes de commit sigan un formato específico ¿Qué tipo de hook de Git sería el más apropiado para implementar esta validación
+
+A. pre-receive
+B. post-commit
+C. pre-push
+D. commit-msg
+
+✅ Correcta: D
+
+🧾 Explicación: El hook commit-msg se ejecuta justo antes de que se acepte un mensaje de commit. Permite leer el mensaje, validarlo según un patrón y rechazar el commit si no cumple con los requisitos.
+
+🧠 Pregunta 117
+
+¿Cuál es el resultado de ejecutar el comando git reset --soft HEAD~2
+
+A. Elimina los últimos dos commits del historial y del área de staging
+B. Mueve la punta de la rama actual dos commits hacia atrás, pero mantiene los cambios de esos commits en el área de staging
+C. Revierte los cambios introducidos por los últimos dos commits y crea un nuevo commit de reversión
+D. Elimina los últimos dos commits del historial local y remoto
+
+✅ Correcta: B
+
+🧾 Explicación: git reset --soft HEAD~2 mueve el puntero de la rama actual dos commits hacia atrás, pero los cambios realizados en esos commits permanecen en el área de staging y en el directorio de trabajo, listos para ser commiteados nuevamente.
+
+🧠 Pregunta 118
+
+En un proyecto que utiliza subtrees, ¿cómo se actualiza el contenido del subtree a la última versión de la rama principal del repositorio original del subtree
+
+A. Navegando al directorio del subtree y ejecutando git pull
+B. Utilizando el comando git submodule update --remote <prefijo_del_subtree>
+C. Utilizando el comando git subtree pull --prefix=<prefijo_del_subtree> <url_del_repositorio> <rama>
+D. Ejecutando git fetch <url_del_repositorio> y luego fusionando manualmente
+
+✅ Correcta: C
+
+🧾 Explicación: El comando git subtree pull es la forma recomendada de integrar cambios desde el repositorio original de un subtree al proyecto principal, especificando el prefijo, la URL del repositorio y la rama a integrar.
+
+🧠 Pregunta 119
+
+¿Cuál es la principal diferencia entre git merge y git rebase cuando se integran los cambios de una rama de característica a la rama principal en términos del historial resultante
+
+A. git merge crea un nuevo commit de merge, mientras que git rebase no modifica el historial
+B. git rebase crea un nuevo commit de merge, mientras que git merge añade los commits directamente
+C. git merge añade un commit de merge al historial, mientras que git rebase mueve la base de la rama de característica y crea un historial lineal
+D. No hay una diferencia significativa en el historial resultante
+
+✅ Correcta: C
+
+🧾 Explicación: git merge une las historias de las ramas creando un nuevo commit de merge git rebase mueve la base de la rama de característica al HEAD de la rama principal y reproduce los commits de la característica, creando un historial lineal.
+
+🧠 Pregunta 120
+
+Si un desarrollador desea ver una lista de todos los commits que han modificado una línea específica de un archivo ¿Qué comando de Git podría utilizar
+
+A. git log -S "&lt;patrón_de_la_línea>" &lt;archivo>
+B. git blame &lt;archivo>
+C. git log -L &lt;número_de_línea>,&lt;número_de_línea>:&lt;archivo>
+D. git diff &lt;archivo>
+
+✅ Correcta: C
+
+🧾 Explicación: El comando git log -L <número_de_línea>,<número_de_línea>:<archivo> permite rastrear los cambios realizados en una línea específica (o rango de líneas) de un archivo a lo largo del historial de commits.
