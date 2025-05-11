@@ -1,0 +1,384 @@
+🧠 Pregunta 131
+
+¿Qué garantiza que una modificación mínima en el contenido de un archivo se propague hasta el hash del commit?
+
+A. El uso de blobs compresos en packfiles
+B. La propiedad determinista del algoritmo SHA
+C. La estructura en árbol de Merkle que conecta blobs, trees y commits
+D. La ejecución de git gc después de cada commit
+
+✅ Correcta: C
+🧾 Explicación: El árbol de Merkle propaga los cambios: un cambio en un blob modifica el tree que lo contiene, y eso cambia el commit asociado.
+
+🧠 Pregunta 132
+
+En un entorno colaborativo con Git distribuido, ¿cuál de los siguientes escenarios refleja mejor una ventaja del modelo peer-to-peer?
+
+A. Se requiere un servidor central para crear ramas locales
+B. Es posible hacer push directo sin configurar remotos
+C. Cada desarrollador puede trabajar y hacer commits sin conexión a la red
+D. Los commits deben validarse con un hook centralizado
+
+✅ Correcta: C
+🧾 Explicación: En Git distribuido, cada clon contiene todo el historial; se puede trabajar localmente sin conexión, y sincronizar después.
+
+🧠 Pregunta 133
+
+
+HEAD → C6
+         |
+        C5
+       /
+C1─C2─C3─C4
+Si src/utils.py en C2 cambia y se vuelve a ejecutar git commit, ¿qué nodos del árbol de Merkle tendrán nuevo hash?
+
+A. Solo el commit C2
+B. C2, C3 y C6
+C. C2 y el blob modificado
+D. C2, su tree, y los commits descendientes (C3, C4, C5, C6)
+
+✅ Correcta: D
+🧾 Explicación: El cambio en un blob altera el tree de C2, lo que cambia el hash de C2; como los commits siguientes dependen de él, todos deben cambiar.
+
+🧠 Pregunta 134
+
+¿Cuál es el propósito de almacenar objetos Git como objects/aa/bb... en el sistema de archivos?
+
+A. Aplicar SHA-1 solo a los blobs
+B. Organizar el almacenamiento por tipo de archivo
+C. Dividir los objetos en subdirectorios para evitar colisiones de nombres en un solo directorio
+D. Agrupar commits y trees en directorios separados por fecha
+
+✅ Correcta: C
+🧾 Explicación: Git usa los primeros dos caracteres del hash como subdirectorio para evitar miles de archivos en una sola carpeta (objects/aa/bb...).
+
+🧠 Pregunta 135
+
+¿Qué operación interna ejecuta Git cuando haces un commit con git commit -m "mensaje"?
+
+A. Aplica un fast-forward
+B. Crea un nuevo objeto commit que apunta a un árbol (tree), guarda su hash y actualiza HEAD
+C. Crea una nueva rama y borra la anterior
+D. Duplica el snapshot anterior si no hay cambios
+
+✅ Correcta: B
+🧾 Explicación: Git toma un snapshot del estado actual (tree), crea un nuevo commit que lo referencia, y actualiza HEAD a este nuevo commit.
+
+🧠 Pregunta 136
+
+¿Por qué Git puede detectar alteraciones incluso en commits antiguos, aunque los datos estén comprimidos en un packfile?
+
+A. Porque los commits antiguos se eliminan automáticamente
+B. Porque cada objeto es cifrado con SHA-256
+C. Porque la estructura de Merkle propaga cambios hacia arriba y cada objeto está indexado por su hash
+D. Porque Git guarda una copia del objeto original en .git/tmp
+
+✅ Correcta: C
+🧾 Explicación: En un árbol de Merkle, si se altera un blob antiguo, el cambio propaga hashes hacia arriba; al verificar el commit, se detecta la inconsistencia.
+
+🧠 Pregunta 137
+
+¿Cuál es la diferencia clave entre git fetch y git pull en un sistema distribuido?
+
+A. fetch borra ramas remotas antiguas, pull no
+B. fetch requiere internet, pull es local
+C. fetch solo descarga los cambios, pull los descarga y fusiona
+D. pull solo se puede ejecutar desde main
+
+✅ Correcta: C
+🧾 Explicación: git fetch solo actualiza las referencias remotas en local; git pull incluye un fetch y un merge o rebase según configuración.
+
+🧠 Pregunta 138
+
+
+C1──C2──C3
+      \
+       C4──C5 (HEAD)
+¿Qué tipo de estructura representa este historial de Git?
+
+A. Un árbol AVL
+B. Un DAG (grafo acíclico dirigido)
+C. Una lista enlazada circular
+D. Una estructura hash lineal
+
+✅ Correcta: B
+🧾 Explicación: En Git, el historial se representa como un DAG: cada commit apunta a sus padres, sin ciclos, permitiendo fusiones y ramificaciones.
+
+🧠 Pregunta 139
+
+¿Qué tipo de objeto Git contiene la siguiente cabecera comprimida: "tree 1234\0..."?
+
+A. Commit
+B. Blob
+C. Tag
+D. Tree
+
+✅ Correcta: D
+🧾 Explicación: La cabecera "tree <size>\0" es la firma de un objeto tree, que representa la estructura de directorios de un commit.
+
+🧠 Pregunta 140
+
+Si dos commits apuntan al mismo tree, pero tienen distinto author y mensaje, ¿qué afirmación es verdadera?
+
+A. Ambos commits tienen el mismo hash
+B. Ambos commits apuntan al mismo blob
+C. Ambos commits tendrán distinto hash, aunque el snapshot sea idéntico
+D. Ambos deben estar en ramas diferentes
+
+✅ Correcta: C
+🧾 Explicación: El contenido del commit incluye autor, fecha y mensaje. Aunque el tree sea el mismo, el hash del commit cambiará si cambia algún metadato.
+
+
+🧠 Pregunta 121
+
+En un repositorio Git distribuido, ¿qué operación es totalmente local y por tanto no requiere conexión a la red?
+
+A. git push origin main
+B. git fetch --all
+C. git log --graph --oneline
+D. git pull --rebase
+
+✅ Correcta: C
+🧾 Explicación: El historial completo está en el clon local; git log sólo lee objetos del directorio .git, sin conectarse al servidor.
+
+🧠 Pregunta 122
+
+function verify_subgraph(root):
+    if root in trusted_cache:
+        return True
+    for child in root.parents:
+        if not verify_subgraph(child):
+            return False
+    return check_hash(root)
+¿Cuál es la complejidad temporal en el peor caso, si el DAG tiene N commits y no hay entradas en trusted_cache?
+
+A. O(1)
+B. O(log N)
+C. O(N)
+D. O(N²)
+
+✅ Correcta: C
+🧾 Explicación: La función visita cada nodo exactamente una vez (profundidad primero) y realiza una comprobación de hash constante por nodo ⇒ O(N).
+
+🧠 Pregunta 123
+
+Supón que un blob cambia dentro de un subdirectorio profundo.
+¿Cuál es la cadena correcta de propagación de hashes en el árbol de Merkle de Git?
+
+A. Commit → Tree → Blob
+B. Blob → Tree padre(s) → Commit
+C. Tree → Blob → Commit
+D. Commit → Blob → Tree
+
+✅ Correcta: B
+🧾 Explicación: El cambio altera primero el blob, luego el tree que lo contiene, y finalmente el commit que referencia ese tree.
+
+🧠 Pregunta 124
+
+¿Por qué los packfiles mejoran la velocidad de clonación de repositorios grandes?
+
+A. Evitan la propagación de hashes entre objetos
+B. Agrupan y comprimen objetos, reduciendo el número de transferencias y bytes enviados
+C. Convierten SHA-1 a SHA-256 para acelerar el cálculo
+D. Eluden la creación de deltas entre versiones
+
+✅ Correcta: B
+🧾 Explicación: Un único archivo comprimido con miles de objetos minimiza rondas de E/S y datos transmitidos, acelerando clone y fetch.
+
+🧠 Pregunta 125
+
+Si dos entradas diferentes produjeran el mismo hash SHA-1 en Git, se hablaría de:
+
+A. Propiedad de avalancha
+B. Ciclo en el DAG
+C. Colisión criptográfica
+D. Fast-forward automático
+
+✅ Correcta: C
+🧾 Explicación: Una colisión ocurre cuando dos contenidos distintos generan el mismo hash; este riesgo motivó la migración hacia SHA-256.
+
+🧠 Pregunta 126
+
+C1──C2──C3──C4 (main)
+      │
+      ▼
+     C5──C6 (topic)
+Si estando en topic se ejecuta git merge main y no existen conflictos, ¿cuántos padres tendrá el commit de merge resultante?
+
+A. 0
+B. 1
+C. 2
+D. 3
+
+✅ Correcta: C
+🧾 Explicación: Un merge normal crea un nuevo commit con dos referencias de padre: la punta de topic (C6) y la de main (C4).
+
+🧠 Pregunta 127
+
+¿Cuál es la ventaja de almacenar objetos sueltos frente a usar sólo packfiles?
+
+A. Verificación de integridad más robusta
+B. Mayor velocidad para escribir commits recientes antes de la próxima compactación
+C. Menor número de inodos en disco
+D. Transferencias de red más rápidas
+
+✅ Correcta: B
+🧾 Explicación: Git escribe objetos nuevos como archivos sueltos para evitar descomprimir y reempacar constantemente; luego git gc los agrupa.
+
+🧠 Pregunta 128
+
+Al ejecutar git fsck --full, Git recorre el historial y:
+
+A. Calcula nuevamente cada hash para detectar corrupción
+B. Elimina ramas remotas sin tracking
+C. Reescribe los blobs aplicando delta encoding
+D. Convierten SHA-1 a SHA-256 automáticamente
+
+✅ Correcta: A
+🧾 Explicación: git fsck verifica la integridad recalculando hashes y asegurando que las referencias (pads, trees, commits) sean coherentes.
+
+🧠 Pregunta 129
+
+¿Qué característica del DAG impide que se produzcan ciclos en el historial de Git?
+
+A. Cada commit tiene un hash único
+B. Los merges requieren al menos tres ramas
+C. Las aristas siempre apuntan del hijo al padre, garantizando una dirección temporal única
+D. Los packfiles descartan commits duplicados
+
+✅ Correcta: C
+🧾 Explicación: El DAG es acíclico porque los punteros de commit siempre miran a padres anteriores; nunca se permite un enlace que vuelva al futuro.
+
+🧠 Pregunta 130
+
+Durante la transición gradual de SHA-1 a SHA-256, Git mantiene compatibilidad con repos antiguos.
+¿Cuál es el mecanismo que mejor facilita esta coexistencia?
+
+A. Almacenar ambos hashes dentro de un único objeto Git
+B. Mantener repos SHA-1 y SHA-256 en carpetas .git separadas
+C. Registrar el algoritmo en el encabezado del commit y traducir en tiempo real cuando se intercambian objetos
+D. Renombrar todas las ramas para indicar el tipo de hash
+
+✅ Correcta: C
+🧾 Explicación: Cada objeto contiene un header que especifica el algoritmo; al intercambiar datos, Git interpreta el tipo y puede convertir o verificar acorde.
+
+🧠 Pregunta 141
+
+¿Qué ocurre si un solo carácter cambia en el contenido de un archivo versionado por Git?
+
+A. Solo cambia el commit
+B. Se cambia el blob, pero los trees y commits no se ven afectados
+C. Se cambia el blob, los trees padres y todos los commits que lo referencian
+D. Git ignora cambios triviales si son menores de 4 bytes
+
+✅ Correcta: C
+🧾 Explicación: Git recalcula el hash del blob afectado, lo que modifica el tree que lo contiene y cualquier commit que lo referencie, debido a la estructura de Merkle.
+
+🧠 Pregunta 142
+
+¿Cuál de los siguientes es un beneficio directo del modelo distribuido de Git?
+
+A. Los archivos se actualizan en tiempo real desde el servidor
+B. No se requiere sincronización entre ramas locales y remotas
+C. Cada clon es autónomo y puede actuar como respaldo completo
+D. Las ramas se bloquean para evitar conflictos entre usuarios
+
+✅ Correcta: C
+🧾 Explicación: En Git distribuido, cada clon contiene todo el historial y estructura del repositorio, permitiendo restaurarlo incluso si el servidor original falla.
+
+🧠 Pregunta 143
+
+¿Cuál es el impacto de usar hashes como identificadores únicos de objetos en Git?
+
+A. Aumenta el tamaño del repositorio
+B. Garantiza la trazabilidad y la integridad del historial
+C. Permite que diferentes objetos compartan el mismo contenido
+D. Obliga a usar un servidor central para validación
+
+✅ Correcta: B
+🧾 Explicación: Cada objeto (blob, tree, commit) es identificado por el hash de su contenido; cualquier alteración genera un hash distinto, asegurando integridad.
+
+🧠 Pregunta 144
+
+¿Qué comando de Git puede activar automáticamente la creación de packfiles para optimizar almacenamiento?
+
+A. git add
+B. git pack
+C. git gc
+D. git prune
+
+✅ Correcta: C
+🧾 Explicación: git gc (garbage collection) empaqueta objetos sueltos en packfiles, eliminando redundancias y optimizando espacio y acceso.
+
+🧠 Pregunta 145
+
+¿Qué ventaja aporta el uso de Merkle Trees en la base de datos interna de Git?
+
+A. Permiten evitar la creación de ramas locales
+B. Eliminan la necesidad de conflictos de merge
+C. Aseguran que cualquier cambio en archivos se refleje en los objetos ascendentes
+D. Facilitan la ejecución de git stash con cambios parciales
+
+✅ Correcta: C
+🧾 Explicación: En un árbol de Merkle, un cambio en un archivo se refleja en su blob, luego en el tree, y finalmente en el commit, permitiendo trazabilidad precisa.
+
+🧠 Pregunta 146
+
+¿Qué diferencia principal existe entre blobs y trees en Git?
+
+A. Los blobs representan carpetas; los trees, commits
+B. Los blobs son archivos individuales; los trees son estructuras de directorios
+C. Los blobs contienen metadatos; los trees contienen contenido
+D. Los blobs cambian con cada merge; los trees nunca cambian
+
+✅ Correcta: B
+🧾 Explicación: Un blob es un archivo (contenido plano), mientras que un tree representa una carpeta y contiene referencias a blobs y otros trees.
+
+🧠 Pregunta 147
+
+¿Por qué Git utiliza una estrategia de compresión + delta encoding en los packfiles?
+
+A. Para reducir el tamaño y evitar guardar versiones completas redundantes
+B. Para proteger los objetos del acceso no autorizado
+C. Para encriptar el contenido en tránsito
+D. Para forzar el uso de GitHub como servidor remoto
+
+✅ Correcta: A
+🧾 Explicación: Git guarda solo las diferencias entre objetos similares (delta encoding) y luego los comprime (zlib), ahorrando espacio y ancho de banda.
+
+🧠 Pregunta 148
+
+Si se cambia el algoritmo de hashing de un repositorio Git de SHA-1 a SHA-256, ¿qué se debe garantizar para mantener la compatibilidad?
+
+A. Convertir todos los blobs a JSON
+B. Añadir un campo temporal a cada commit
+C. Incluir en cada objeto el tipo de hash usado en su encabezado
+D. Reescribir completamente el historial con filter-branch
+
+✅ Correcta: C
+🧾 Explicación: Git incluye el tipo de algoritmo en la cabecera del objeto para poder verificar su integridad, aunque se mezclen SHA-1 y SHA-256.
+
+🧠 Pregunta 149
+
+En un DAG de Git, ¿qué representa una rama colgante?
+
+A. Una rama sin commits
+B. Una rama que no ha sido mergeada y no converge con otras
+C. Un objeto corrupto sin referencia
+D. Un blob con múltiples trees
+
+✅ Correcta: B
+🧾 Explicación: Una rama colgante es una secuencia de commits sin conexión a la línea principal del historial (por ejemplo, ramas olvidadas o abandonadas).
+
+🧠 Pregunta 150
+
+¿Cuál de los siguientes comandos permite recuperar la integridad del historial en un repositorio Git, tras un error del sistema de archivos?
+
+A. git reset --hard
+B. git stash apply
+C. git fsck --full
+D. git push --force
+
+✅ Correcta: C
+🧾 Explicación: git fsck --full verifica todos los objetos del repositorio, recalculando hashes y alertando sobre corrupción o enlaces rotos.
+
