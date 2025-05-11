@@ -1,0 +1,549 @@
+🧠 Pregunta 1
+¿Qué función cumple el hook pre-commit en Git?
+
+A. Ejecuta scripts después de hacer un push
+B. Valida o modifica el mensaje del commit
+C. Revisa el código antes de realizar un commit
+D. Notifica a los usuarios al recibir un pull
+
+✅ Correcta: C
+🧾 Explicación: El hook pre-commit permite realizar tareas previas a un commit, como validación de sintaxis o pruebas automáticas, y puede cancelar el commit si no se cumplen ciertos criterios.
+
+🧠 Pregunta 2
+¿Qué ventaja ofrece BFG Repo-Cleaner frente a git filter-branch?
+
+A. Es más complejo pero más personalizable
+B. Permite crear múltiples ramas automáticamente
+C. Es más rápido y fácil de usar en casos comunes
+D. Requiere menos memoria para clonar repositorios
+
+✅ Correcta: C
+🧾 Explicación: BFG Repo-Cleaner está optimizado para tareas frecuentes como eliminar archivos grandes o sensibles, ofreciendo una interfaz más amigable y un rendimiento superior.
+
+🧠 Pregunta 3
+¿Dónde se ubican los hooks en un repositorio Git?
+
+A. En la raíz del sistema operativo
+B. En la carpeta .git/hooks
+C. En el archivo .gitconfig
+D. En la carpeta src/hooks
+
+✅ Correcta: B
+🧾 Explicación: Los hooks se almacenan en la carpeta .git/hooks del repositorio y allí se pueden configurar scripts para ser ejecutados en eventos específicos.
+
+🧠 Pregunta 4
+¿Qué ocurre si un hook commit-msg detecta que el mensaje es demasiado corto?
+
+A. El commit se realiza pero se advierte al usuario
+B. Se cancela el commit hasta corregir el mensaje
+C. Se convierte automáticamente a un mensaje largo
+D. Se omite el mensaje y se genera uno por defecto
+
+✅ Correcta: B
+🧾 Explicación: El hook commit-msg puede interrumpir el proceso de commit si el mensaje no cumple con ciertas reglas, como la longitud mínima, para fomentar buenas prácticas.
+
+🧠 Pregunta 5
+¿Cuál es una ventaja de usar git worktree?
+
+A. Duplica el repositorio en una nueva máquina virtual
+B. Permite trabajar con múltiples ramas en directorios separados
+C. Aumenta el tamaño del repositorio para incluir más commits
+D. Elimina la necesidad de usar ramas
+
+✅ Correcta: B
+🧾 Explicación: git worktree permite crear múltiples áreas de trabajo vinculadas a diferentes ramas, lo que facilita trabajar en paralelo sin tener que hacer múltiples clones.
+
+🧠 Pregunta 6
+¿Qué hace el comando git worktree list?
+
+A. Muestra las diferencias entre dos ramas
+B. Enumera todos los hooks activos del repositorio
+C. Elimina los worktrees no utilizados
+D. Muestra las rutas y ramas de los worktrees activos
+
+✅ Correcta: D
+🧾 Explicación: git worktree list ofrece un resumen de todos los directorios de trabajo asociados, incluyendo la ruta y la rama activa en cada uno.
+
+🧠 Pregunta 7
+¿Qué hace el comando git filter-branch --index-filter?
+
+A. Crea una rama basada en un índice de commits
+B. Elimina archivos directamente del historial del índice
+C. Convierte archivos en ramas temporales
+D. Mejora el rendimiento de los filtros de log
+
+✅ Correcta: B
+🧾 Explicación: El uso de --index-filter en git filter-branch permite ejecutar comandos sobre el índice de cada commit, útil para eliminar archivos sensibles del historial.
+
+🧠 Pregunta 8
+¿Cuál es una desventaja de reescribir la historia de Git?
+
+A. Incrementa el tamaño del repositorio
+B. Crea múltiples ramas automáticamente
+C. Puede romper la sincronización con otros repositorios
+D. Hace imposible agregar nuevos commits
+
+✅ Correcta: C
+🧾 Explicación: Al cambiar los identificadores de los commits (hashes), se puede perder la sincronización con repositorios remotos, lo que genera conflictos si no se comunica adecuadamente.
+
+🧠 Pregunta 9
+¿Para qué se puede usar un alias como lg = log --oneline --graph --decorate --all?
+
+A. Para crear ramas
+B. Para hacer merge automático
+C. Para visualizar el historial en forma gráfica
+D. Para eliminar ramas antiguas
+
+✅ Correcta: C
+🧾 Explicación: Este alias permite ver el historial de Git de forma resumida y gráfica, con decoración de ramas y etiquetas, facilitando el análisis visual del repositorio.
+
+🧠 Pregunta 10
+¿Qué permite lograr un hook pre-push que ejecuta pruebas unitarias?
+
+A. Automatizar el pull en cada cambio
+B. Ejecutar tests luego del push
+C. Evitar que código defectuoso llegue al repositorio remoto
+D. Desplegar automáticamente el repositorio
+
+✅ Correcta: C
+🧾 Explicación: El hook pre-push puede abortar el envío de cambios si las pruebas unitarias fallan, protegiendo así la estabilidad del repositorio remoto.
+
+🧠 Pregunta 11
+¿Cuál es el propósito principal de los hooks del lado del servidor en Git?
+
+A. Realizar cambios en el sistema operativo
+B. Automatizar el despliegue de versiones locales
+C. Validar reglas antes de aceptar cambios remotos
+D. Cambiar la configuración global del repositorio
+
+✅ Correcta: C
+🧾 Explicación: Los hooks del lado del servidor permiten validar reglas, aplicar políticas o activar sistemas de integración continua antes de aceptar pushes en repositorios remotos.
+
+🧠 Pregunta 12
+¿Qué hook se ejecuta justo después de que se completa un commit?
+
+A. commit-msg
+B. post-commit
+C. pre-commit
+D. post-push
+
+✅ Correcta: B
+🧾 Explicación: El post-commit se ejecuta justo después de que el commit se ha creado. Puede utilizarse para notificaciones, métricas o procesos de registro.
+
+🧠 Pregunta 13
+¿Qué comando permite eliminar definitivamente datos no deseados después de usar BFG?
+
+A. git reset --hard
+B. git log --all
+C. git gc --prune=now --aggressive
+D. git merge --squash
+
+✅ Correcta: C
+🧾 Explicación: Después de usar BFG, se recomienda usar git gc --prune=now --aggressive para eliminar referencias antiguas y reducir el tamaño del repositorio.
+
+🧠 Pregunta 14
+¿Qué comando crea un nuevo worktree asociado a una rama?
+
+A. git clone --worktree
+B. git worktree add -b rama directorio
+C. git init worktree
+D. git create worktree
+
+✅ Correcta: B
+🧾 Explicación: El comando git worktree add -b nombre_rama ruta crea un nuevo directorio de trabajo con una rama específica, permitiendo trabajar en paralelo.
+
+🧠 Pregunta 15
+¿Cuál es una recomendación antes de eliminar un worktree?
+
+A. Asegurarse de que no tenga cambios pendientes
+B. Cambiar de rama en todos los worktrees
+C. Eliminar el repositorio principal
+D. Cerrar todos los editores de texto
+
+✅ Correcta: A
+🧾 Explicación: Es importante verificar que el worktree no tenga cambios no guardados, ya que al eliminarlo se perdería ese trabajo.
+
+🧠 Pregunta 16
+¿Qué tipo de tareas se suelen automatizar con scripts de integración continua?
+
+A. Creación de hooks locales
+B. Instalación de sistemas operativos
+C. Ejecución de pruebas, despliegues y análisis de código
+D. Generación de contraseñas seguras
+
+✅ Correcta: C
+🧾 Explicación: La integración continua automatiza tareas críticas como pruebas automáticas, análisis estático de código y despliegues, asegurando calidad y velocidad.
+
+🧠 Pregunta 17
+¿Cuál es un riesgo asociado al uso de git filter-branch?
+
+A. Aumenta la cantidad de ramas del repositorio
+B. Reduce el número de commits
+C. Rompe la sincronización con repositorios remotos
+D. No permite eliminar archivos
+
+✅ Correcta: C
+🧾 Explicación: Al modificar los hashes de los commits, git filter-branch puede provocar conflictos con repositorios remotos si no se maneja con precaución.
+
+🧠 Pregunta 18
+¿Qué se necesita para que un hook pueda ejecutarse correctamente?
+
+A. Estar en la rama main
+B. Tener permisos de ejecución
+C. Haber sido firmado con GPG
+D. Tener extensión .hook
+
+✅ Correcta: B
+🧾 Explicación: Los hooks deben tener permisos de ejecución (chmod +x) para que Git los pueda ejecutar automáticamente.
+
+🧠 Pregunta 19
+¿Cuál de las siguientes tareas no se puede automatizar directamente con un hook?
+
+A. Verificación del mensaje de commit
+B. Eliminación de ramas remotas
+C. Validación de sintaxis del código
+D. Ejecución de pruebas antes de un push
+
+✅ Correcta: B
+🧾 Explicación: Los hooks actúan sobre acciones del flujo de trabajo como commit, push o merge, pero no realizan operaciones administrativas como eliminar ramas remotas.
+
+🧠 Pregunta 20
+¿Cuál es una ventaja de los alias de Git?
+
+A. Permiten escribir scripts en JavaScript
+B. Facilitan la creación de múltiples repositorios
+C. Aceleran el acceso a comandos usados frecuentemente
+D. Automatizan el cambio de nombre de archivos
+
+✅ Correcta: C
+🧾 Explicación: Los alias permiten abreviar comandos repetitivos o compuestos, lo que ahorra tiempo y reduce errores al trabajar con Git.
+
+🧠 Pregunta 21
+¿Qué tipo de alias permite encadenar varios comandos Git?
+
+A. Alias locales
+B. Alias de sistema
+C. Alias compuestos
+D. Alias directos
+
+✅ Correcta: C
+🧾 Explicación: Los alias compuestos se definen usando !f() { ... }; f y permiten ejecutar múltiples comandos en secuencia como si fuera uno solo.
+
+🧠 Pregunta 22
+¿Dónde se configuran los alias globales de Git?
+
+A. En .bashrc
+B. En .git/hooks
+C. En ~/.gitconfig
+D. En el archivo README.md
+
+✅ Correcta: C
+🧾 Explicación: Los alias globales de Git se definen en el archivo ~/.gitconfig, y están disponibles para todos los repositorios del usuario.
+
+🧠 Pregunta 23
+¿Qué hace el alias unstage = reset HEAD --?
+
+A. Elimina archivos del disco
+B. Borra commits anteriores
+C. Saca archivos del área de staging
+D. Revierte el repositorio a un estado anterior
+
+✅ Correcta: C
+🧾 Explicación: El alias unstage revierte la acción de git add, eliminando los archivos del área de staging sin borrar su contenido.
+
+🧠 Pregunta 24
+¿En qué caso es ideal utilizar git worktree en lugar de hacer múltiples clones?
+
+A. Cuando se necesita acceder a múltiples commits antiguos
+B. Cuando se quiere usar diferentes versiones de Git
+C. Cuando se desea trabajar en varias ramas simultáneamente
+D. Cuando se necesita hacer backups
+
+✅ Correcta: C
+🧾 Explicación: git worktree permite trabajar en diferentes ramas en paralelo sin duplicar el repositorio completo.
+
+🧠 Pregunta 25
+¿Qué herramienta alternativa a git filter-branch se recomienda para tareas comunes de limpieza?
+
+A. Git Sweeper
+B. Repo-Tracker
+C. BFG Repo-Cleaner
+D. Git Analyzer
+
+✅ Correcta: C
+🧾 Explicación: BFG Repo-Cleaner es una herramienta moderna y eficiente para eliminar archivos grandes o sensibles de la historia de Git.
+
+🧠 Pregunta 26
+¿Qué tipo de hook se recomienda para ejecutar pruebas antes de realizar un push?
+
+A. pre-merge
+B. commit-msg
+C. pre-push
+D. pre-commit
+
+✅ Correcta: C
+🧾 Explicación: El hook pre-push permite validar el código (por ejemplo, ejecutar tests) antes de que sea enviado al repositorio remoto.
+
+🧠 Pregunta 27
+¿Qué beneficio aporta la configuración autocrlf = input en Git?
+
+A. Establece el comportamiento por defecto del editor
+B. Controla los finales de línea en distintos sistemas operativos
+C. Automatiza el despliegue continuo
+D. Cambia el color del log de commits
+
+✅ Correcta: B
+🧾 Explicación: autocrlf = input asegura que los finales de línea se manejen correctamente entre sistemas Windows y Unix, previniendo errores por diferencias de formato.
+
+🧠 Pregunta 28
+¿Qué hook puede impedir el uso de mensajes como "fix" o "update" sin contexto?
+
+A. post-commit
+B. pre-push
+C. commit-msg
+D. pre-rebase
+
+✅ Correcta: C
+🧾 Explicación: El hook commit-msg puede validar el mensaje del commit y rechazar aquellos que no cumplan con reglas de formato o contenido.
+
+🧠 Pregunta 29
+¿Cuál es el beneficio de usar chmod +x en scripts de hook?
+
+A. Permite que el sistema los reconozca como ejecutables
+B. Convierte el script en un archivo de configuración
+C. Mejora la velocidad del hook
+D. Activa el uso de variables de entorno
+
+✅ Correcta: A
+🧾 Explicación: chmod +x asigna permisos de ejecución al archivo, lo cual es obligatorio para que Git pueda ejecutarlo automáticamente como hook.
+
+🧠 Pregunta 30
+¿Qué acción realiza el hook pre-commit en el ejemplo con archivos .py?
+
+A. Ejecuta pruebas unitarias con Pytest
+B. Reemplaza el contenido de los archivos
+C. Valida sintaxis de archivos Python y bloquea el commit si hay errores
+D. Compara cambios con el repositorio remoto
+
+✅ Correcta: C
+🧾 Explicación: El hook recorre archivos .py en staging, los compila para verificar errores de sintaxis y cancela el commit si alguno falla.
+
+🧠 Pregunta 31
+¿Qué evento activa el hook commit-msg?
+
+A. Justo antes de ejecutar git push
+B. Durante la escritura del mensaje de commit
+C. Inmediatamente después de aplicar git add
+D. Al hacer merge entre ramas
+
+✅ Correcta: B
+🧾 Explicación: El hook commit-msg se ejecuta justo después de escribir el mensaje del commit, permitiendo validarlo antes de que se registre el commit en el historial.
+
+🧠 Pregunta 32
+¿Qué comando elimina todos los commits vacíos tras usar git filter-branch?
+
+A. git gc
+B. git prune
+C. --prune-empty
+D. --remove-history
+
+✅ Correcta: C
+🧾 Explicación: La opción --prune-empty elimina los commits que quedan vacíos luego de aplicar filtros, como la eliminación de archivos del historial.
+
+🧠 Pregunta 33
+¿Para qué se usa el hook pre-rebase?
+
+A. Validar conflictos durante un merge
+B. Bloquear el rebase si no se cumplen condiciones
+C. Cambiar el nombre de ramas
+D. Sincronizar automáticamente con remoto
+
+✅ Correcta: B
+🧾 Explicación: El hook pre-rebase puede cancelar el proceso de rebase si se detectan condiciones no deseadas, como una rama bloqueada o mal formateada.
+
+🧠 Pregunta 34
+¿Cuál es la forma correcta de eliminar un worktree que ya no se necesita?
+
+A. git worktree delete
+B. git worktree clean
+C. git worktree remove
+D. git remove worktree
+
+✅ Correcta: C
+🧾 Explicación: git worktree remove desasocia un directorio de trabajo del repositorio, siempre que esté limpio (sin cambios pendientes).
+
+🧠 Pregunta 35
+¿En qué casos es inseguro reescribir la historia de un repositorio?
+
+A. Cuando se usa git commit --amend
+B. Cuando ya se ha compartido la historia con otros colaboradores
+C. Siempre que se use una herramienta de terceros
+D. Si el repositorio contiene ramas vacías
+
+✅ Correcta: B
+🧾 Explicación: Reescribir la historia después de que otros usuarios hayan basado su trabajo en ella puede generar conflictos y pérdida de sincronización.
+
+🧠 Pregunta 36
+¿Qué ocurre si se ejecuta un script pre-push y falla?
+
+A. El push se detiene
+B. El repositorio remoto se borra
+C. El hook se desactiva automáticamente
+D. Se crea una nueva rama con los cambios
+
+✅ Correcta: A
+🧾 Explicación: Si el hook pre-push retorna un código de error, Git cancela el envío de cambios al repositorio remoto.
+
+🧠 Pregunta 37
+¿Qué tipo de hook sería más adecuado para ejecutar un análisis estático del código?
+
+A. post-merge
+B. post-commit
+C. pre-commit
+D. pre-push
+
+✅ Correcta: C
+🧾 Explicación: El hook pre-commit es ideal para validar calidad de código o ejecutar herramientas como linters antes de permitir el commit.
+
+🧠 Pregunta 38
+¿Qué hace el comando git config --global color.ui auto?
+
+A. Cambia el color de fondo del terminal
+B. Aplica una interfaz visual
+C. Habilita colores para facilitar la lectura de comandos Git
+D. Ejecuta los hooks en modo automático
+
+✅ Correcta: C
+🧾 Explicación: La configuración color.ui auto activa la coloración automática en la salida de los comandos de Git para mejorar la legibilidad.
+
+🧠 Pregunta 39
+¿Cuál es el objetivo del script run_tests.sh en un hook pre-push?
+
+A. Instalar dependencias
+B. Compilar los archivos
+C. Ejecutar pruebas antes de subir cambios
+D. Actualizar el repositorio remoto
+
+✅ Correcta: C
+🧾 Explicación: En el contexto de un pre-push, run_tests.sh se utiliza para ejecutar tests que aseguren la estabilidad del código antes de subirlo.
+
+🧠 Pregunta 40
+¿Qué característica distingue a BFG Repo-Cleaner frente a git filter-branch?
+
+A. Usa comandos Python
+B. Puede editar archivos de texto
+C. Está diseñado para tareas comunes de limpieza y es más veloz
+D. No funciona en sistemas Windows
+
+✅ Correcta: C
+🧾 Explicación: BFG Repo-Cleaner está optimizado para casos comunes como eliminar archivos grandes o sensibles y es considerablemente más rápido que git filter-branch.
+
+🧠 Pregunta 41
+¿Qué significa que git worktree comparta la base de datos del repositorio?
+
+A. Usa el mismo espacio en disco para los objetos
+B. Solo permite ver los logs del repositorio principal
+C. No se puede hacer commit desde un worktree
+D. Todos los worktrees están conectados por red
+
+✅ Correcta: A
+🧾 Explicación: Los worktrees comparten .git/objects y .git/refs, lo que permite ahorrar espacio y mantener sincronización entre ramas.
+
+🧠 Pregunta 42
+¿Cuál es el propósito de un script de configuración automatizada de Git?
+
+A. Crear un nuevo sistema operativo
+B. Configurar alias y hooks corporativos de forma estandarizada
+C. Generar claves SSH para todos los usuarios
+D. Eliminar configuraciones previas del sistema
+
+✅ Correcta: B
+🧾 Explicación: Los scripts de configuración permiten uniformizar el entorno Git en múltiples máquinas, incluyendo alias, editor, hooks, etc.
+
+🧠 Pregunta 43
+¿Qué sucede si un alias se define incorrectamente en ~/.gitconfig?
+
+A. Git lo corrige automáticamente
+B. El alias queda inactivo pero no da error
+C. Git puede lanzar un error al intentar usarlo
+D. Se convierte en una función del sistema
+
+✅ Correcta: C
+🧾 Explicación: Un alias mal definido puede provocar errores al ejecutarse si no cumple con la sintaxis esperada por Git.
+
+🧠 Pregunta 44
+¿Qué herramienta puede evitar que una contraseña filtrada llegue a un repositorio remoto?
+
+A. git stash
+B. git tag
+C. pre-commit hook
+D. git merge
+
+✅ Correcta: C
+🧾 Explicación: Un pre-commit hook puede analizar los archivos en staging y detener el commit si detecta información sensible.
+
+🧠 Pregunta 45
+¿Cuál es una práctica segura antes de reescribir la historia de un repositorio?
+
+A. Borrar todos los tags
+B. Avisar al equipo y hacer backup
+C. Reiniciar el sistema
+D. Crear nuevos worktrees
+
+✅ Correcta: B
+🧾 Explicación: Como reescribir la historia puede afectar a otros colaboradores, siempre se debe comunicar, hacer backup y planificar el cambio.
+
+🧠 Pregunta 46
+¿Qué indica el comando git log --oneline --graph --decorate --all?
+
+A. Borra todos los commits antiguos
+B. Visualiza el historial en un formato compacto y visual
+C. Elimina ramas locales
+D. Cambia el mensaje de los commits
+
+✅ Correcta: B
+🧾 Explicación: Este comando muestra un log gráfico resumido, ideal para comprender la estructura del historial y la relación entre ramas.
+
+🧠 Pregunta 47
+¿Qué ganancia aporta la ejecución de pruebas automáticas antes de cada push?
+
+A. Mayor velocidad en merges
+B. Mayor estabilidad en el código integrado
+C. Eliminación de ramas temporales
+D. Aumento del tamaño del repositorio
+
+✅ Correcta: B
+🧾 Explicación: Ejecutar tests automáticamente antes de subir cambios permite prevenir errores y asegurar que el código en remoto esté siempre funcional.
+
+🧠 Pregunta 48
+¿Dónde se configuran las opciones como editor predeterminado o final de línea en Git?
+
+A. .gitignore
+B. .githooks
+C. .gitmodules
+D. .gitconfig
+
+✅ Correcta: D
+🧾 Explicación: El archivo .gitconfig permite definir configuraciones como editor predeterminado, alias, colores y tratamiento de finales de línea.
+
+🧠 Pregunta 49
+¿Qué hace el comando git rm --cached dentro de un filtro?
+
+A. Elimina archivos del disco duro
+B. Quita archivos del staging sin borrarlos del disco
+C. Borra archivos del historial en la reescritura
+D. Reinicia todos los worktrees
+
+✅ Correcta: C
+🧾 Explicación: En el contexto de git filter-branch, git rm --cached se usa para eliminar archivos del índice (y por tanto del historial) sin afectar el archivo local.
+
+🧠 Pregunta 50
+¿Qué opción de configuración de Git se puede usar para definir la herramienta gráfica de comparación?
+
+A. [diff] tool = meld
+B. [alias] compare = meld
+C. [remote] visual = meld
+D. [branch] gui = meld
+
+✅ Correcta: A
+🧾 Explicación: En la sección [diff], se puede especificar tool = meld u otra herramienta gráfica para visualizar las diferencias entre versiones.
