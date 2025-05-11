@@ -1,0 +1,441 @@
+🧠 Pregunta 61
+¿Qué pasa cuando Git encuentra cambios independientes al fusionar dos ramas?
+
+A. Genera automáticamente un conflicto
+B. Fusiona automáticamente los cambios
+C. Descarta una de las ramas sin avisar
+D. Crea automáticamente una nueva rama
+
+✅ Respuesta correcta: B. Fusiona automáticamente los cambios
+
+🧠 Pregunta 62
+¿Cuál de las siguientes opciones describe mejor qué es un commit en Git?
+
+A. Un archivo que solo contiene cambios temporales
+B. Un punto específico en la historia del proyecto con un estado completo del repositorio
+C. Un servidor remoto específico de GitHub
+D. Una rama que almacena todos los archivos nuevos
+
+✅ Respuesta correcta: B. Un punto específico en la historia del proyecto con un estado completo del repositorio
+
+🧠 Pregunta 63
+¿Qué sucede en Git cuando modificas un archivo ya versionado y realizas un commit?
+
+A. Git almacena nuevamente el archivo completo sin cambios
+B. Git crea un objeto delta solo con las diferencias
+C. Git borra la versión anterior automáticamente
+D. Git pierde el historial del archivo modificado
+
+✅ Respuesta correcta: B. Git crea un objeto delta solo con las diferencias
+
+🧠 Pregunta 64
+¿Cuál es la principal diferencia entre los comandos git pull y git fetch?
+
+A. git fetch fusiona automáticamente los cambios; git pull no
+B. git pull fusiona automáticamente los cambios; git fetch no
+C. Ambos comandos hacen exactamente lo mismo
+D. git fetch elimina automáticamente cambios
+
+✅ Respuesta correcta: B. git pull fusiona automáticamente los cambios; git fetch no
+
+🧠 Pregunta 65
+¿Cuál de estas opciones refleja correctamente el uso de la estrategia "octopus merge"?
+
+A. Fusionar solo dos ramas
+B. Fusionar varias ramas simultáneamente
+C. Revertir múltiples commits a la vez
+D. Aplicar cambios puntuales desde otras ramas
+
+✅ Respuesta correcta: B. Fusionar varias ramas simultáneamente
+
+🧠 Pregunta 66
+¿Cuál es un escenario típico para utilizar el comando git cherry-pick?
+
+A. Cuando deseas aplicar todos los cambios de una rama completa
+B. Cuando solo necesitas ciertos commits específicos de otra rama
+C. Cuando deseas eliminar múltiples commits
+D. Cuando fusionas automáticamente múltiples ramas
+
+✅ Respuesta correcta: B. Cuando solo necesitas ciertos commits específicos de otra rama
+
+🧠 Pregunta 67
+¿Para qué sirve la propiedad de "avalancha" de los algoritmos criptográficos usados por Git?
+
+A. Incrementar el tamaño del repositorio
+B. Reducir la velocidad de procesamiento
+C. Garantizar que cambios mínimos generen hashes muy distintos
+D. Facilitar la recuperación del archivo original
+
+✅ Respuesta correcta: C. Garantizar que cambios mínimos generen hashes muy distintos
+
+🧠 Pregunta 68
+¿Qué ventaja clave ofrece el DAG en la estructura de Git al hacer merge?
+
+A. Evita la creación automática de conflictos
+B. Facilita encontrar el ancestro común entre ramas
+C. Elimina automáticamente cambios redundantes
+D. Obliga a un historial lineal siempre
+
+✅ Respuesta correcta: B. Facilita encontrar el ancestro común entre ramas
+
+🧠 Pregunta 69
+¿Qué beneficio directo tiene la replicación total del historial en cada clon de Git?
+
+A. Incrementa la vulnerabilidad frente a errores
+B. Elimina la necesidad de hacer commits frecuentes
+C. Permite una fácil recuperación de datos en caso de fallo
+D. Reduce automáticamente el tamaño del repositorio
+
+✅ Respuesta correcta: C. Permite una fácil recuperación de datos en caso de fallo
+
+🧠 Pregunta 70
+¿Cuál es una razón importante para la migración de SHA-1 a SHA-256 en Git?
+
+A. SHA-1 genera hashes más cortos
+B. SHA-256 es más vulnerable a ataques
+C. SHA-1 tiene vulnerabilidades teóricas y prácticas
+D. SHA-256 reduce el rendimiento del repositorio
+
+✅ Respuesta correcta: C. SHA-1 tiene vulnerabilidades teóricas y prácticas
+
+
+🧠 Pregunta 71
+¿Qué permite Git gracias a la propagación de hashes en su estructura?
+
+A. Almacenar más versiones sin necesidad de ramas
+B. Garantizar que cualquier cambio se refleje en toda la cadena de historial
+C. Compartir commits sin verificar su contenido
+D. Recuperar archivos originales a partir del hash
+
+✅ Respuesta correcta: B. Garantizar que cualquier cambio se refleje en toda la cadena de historial
+
+🧠 Pregunta 72
+¿Qué componente de Git representa un directorio que contiene archivos y subdirectorios?
+
+A. Blob
+B. Commit
+C. Tag
+D. Tree
+
+✅ Respuesta correcta: D. Tree
+
+🧠 Pregunta 73
+¿Cuál es el principal beneficio de que Git almacene objetos como blobs?
+
+A. Permite organizar archivos en carpetas
+B. Evita almacenar archivos grandes
+C. Permite identificar archivos por su contenido
+D. Elimina automáticamente versiones anteriores
+
+✅ Respuesta correcta: C. Permite identificar archivos por su contenido
+
+🧠 Pregunta 74
+¿Qué ocurre si haces un cambio menor en un archivo y luego haces commit?
+
+A. El blob original se mantiene sin cambios
+B. Solo cambia el hash del commit, pero no del tree
+C. Se recalculan los hashes del blob, del tree y del commit
+D. El cambio se ignora si es menor
+
+✅ Respuesta correcta: C. Se recalculan los hashes del blob, del tree y del commit
+
+🧠 Pregunta 75
+¿Cuál es una característica de seguridad fundamental del árbol de Merkle?
+
+A. Comprimir archivos grandes automáticamente
+B. Detectar cualquier alteración en los datos del repositorio
+C. Fusionar ramas con diferentes estructuras
+D. Permitir commits sin conexión
+
+✅ Respuesta correcta: B. Detectar cualquier alteración en los datos del repositorio
+
+🧠 Pregunta 76
+¿Qué sucede si cambias una sola línea en un archivo seguido de un commit?
+
+A. Solo cambia el hash del commit
+B. Se crea un nuevo objeto blob con un nuevo hash
+C. Git ignora el cambio por ser muy pequeño
+D. El tree se mantiene sin cambios
+
+✅ Respuesta correcta: B. Se crea un nuevo objeto blob con un nuevo hash
+
+🧠 Pregunta 77
+¿Para qué sirve el comando git log?
+
+A. Eliminar commits anteriores
+B. Fusionar ramas automáticamente
+C. Ver el historial de commits del repositorio
+D. Revertir el último commit
+
+✅ Respuesta correcta: C. Ver el historial de commits del repositorio
+
+🧠 Pregunta 78
+¿Qué significa que Git es un sistema "peer-to-peer"?
+
+A. Los cambios se sincronizan automáticamente sin intervención
+B. Todos los repositorios se actualizan desde un servidor central
+C. Cada usuario tiene una copia completa del repositorio
+D. Se necesita una red local para funcionar
+
+✅ Respuesta correcta: C. Cada usuario tiene una copia completa del repositorio
+
+🧠 Pregunta 79
+¿Qué ventaja permite Git al tener un modelo de trabajo asincrónico?
+
+A. Requiere que todos los desarrolladores trabajen al mismo tiempo
+B. Permite trabajar en paralelo y sincronizar cambios cuando se desee
+C. Bloquea las ramas cuando alguien más hace un commit
+D. Solo se puede hacer merge desde la rama main
+
+✅ Respuesta correcta: B. Permite trabajar en paralelo y sincronizar cambios cuando se desee
+
+🧠 Pregunta 80
+¿Cuál es la función del comando git show?
+
+A. Mostrar detalles de un commit específico
+B. Visualizar cambios antes de hacer un commit
+C. Eliminar archivos del repositorio
+D. Mostrar el contenido de una rama remota
+
+✅ Respuesta correcta: A. Mostrar detalles de un commit específico
+
+🧠 Pregunta 81
+¿Qué comando usarías para ver qué líneas de un archivo fueron modificadas y por quién?
+
+A. git log
+B. git show
+C. git blame
+D. git status
+
+✅ Respuesta correcta: C. git blame
+
+🧠 Pregunta 82
+¿Qué indica el hecho de que Git usa una estructura jerárquica con trees y blobs?
+
+A. Que Git organiza el código en capas de seguridad
+B. Que los archivos y carpetas se representan como objetos con relaciones claras
+C. Que Git solo guarda los archivos modificados
+D. Que Git necesita compilar el código antes de versionarlo
+
+✅ Respuesta correcta: B. Que los archivos y carpetas se representan como objetos con relaciones claras
+
+🧠 Pregunta 83
+¿Cuál es un uso importante del archivo .git/objects?
+
+A. Guardar las configuraciones de red
+B. Almacenar los objetos internos como commits, trees y blobs
+C. Registrar los logs del sistema
+D. Sincronizar automáticamente con GitHub
+
+✅ Respuesta correcta: B. Almacenar los objetos internos como commits, trees y blobs
+
+🧠 Pregunta 84
+¿Qué hace Git cuando dos ramas tienen archivos que se modificaron en secciones distintas?
+
+A. Falla automáticamente la fusión
+B. Solicita que el usuario resuelva el conflicto
+C. Fusiona automáticamente los archivos
+D. Crea un backup y reinicia el proceso
+
+✅ Respuesta correcta: C. Fusiona automáticamente los archivos
+
+🧠 Pregunta 85
+¿Para qué sirve el comando git gc?
+
+A. Borrar ramas antiguas
+B. Eliminar todos los commits
+C. Optimizar el repositorio generando packfiles
+D. Generar commits de forma automática
+
+✅ Respuesta correcta: C. Optimizar el repositorio generando packfiles
+
+🧠 Pregunta 86
+¿Qué estructura permite a Git mantener una línea temporal clara entre commits?
+
+A. Árbol de Merkle
+B. Hash binario
+C. Grafo acíclico dirigido (DAG)
+D. Lista de confirmaciones
+
+✅ Respuesta correcta: C. Grafo acíclico dirigido (DAG)
+
+🧠 Pregunta 87
+¿Por qué Git puede detectar si un archivo ha sido alterado sin autorización?
+
+A. Porque lo compara con el servidor
+B. Porque recalcula el hash y verifica la integridad con árboles de Merkle
+C. Porque consulta la fecha de modificación del sistema
+D. Porque depende del sistema operativo
+
+✅ Respuesta correcta: B. Porque recalcula el hash y verifica la integridad con árboles de Merkle
+
+🧠 Pregunta 88
+¿Cuál es el propósito del comando git merge?
+
+A. Aplicar solo un commit de otra rama
+B. Crear una nueva rama desde la principal
+C. Unir el historial de dos ramas
+D. Reescribir el historial completo
+
+✅ Respuesta correcta: C. Unir el historial de dos ramas
+
+🧠 Pregunta 89
+¿Qué estructura usa Git para mantener comprimidos y agrupados varios objetos del repositorio?
+
+A. Snapshot
+B. Tag
+C. Packfile
+D. Bundle
+
+✅ Respuesta correcta: C. Packfile
+
+🧠 Pregunta 90
+¿Cuál es una ventaja directa de trabajar con muchas ramas en Git?
+
+A. Obliga a sincronizar constantemente
+B. Facilita la experimentación sin afectar la rama principal
+C. Disminuye la capacidad de restaurar el historial
+D. Evita trabajar en equipo
+
+✅ Respuesta correcta: B. Facilita la experimentación sin afectar la rama principal
+
+🧠 Pregunta 91
+¿Qué comando de Git permite ver las diferencias entre el estado actual y el último commit?
+
+A. git status
+B. git diff
+C. git log
+D. git init
+
+✅ Respuesta correcta: B. git diff
+
+🧠 Pregunta 92
+¿Qué comando inicializa un nuevo repositorio Git?
+
+A. git new
+B. git init
+C. git start
+D. git create
+
+✅ Respuesta correcta: B. git init
+
+🧠 Pregunta 93
+¿Qué sucede cuando haces git add a un archivo?
+
+A. El archivo se guarda directamente en el repositorio remoto
+B. El archivo es eliminado del repositorio
+C. El archivo se prepara para ser incluido en el próximo commit
+D. El archivo se borra del historial
+
+✅ Respuesta correcta: C. El archivo se prepara para ser incluido en el próximo commit
+
+🧠 Pregunta 94
+¿Qué comando muestra el estado actual de los archivos versionados?
+
+A. git log
+B. git status
+C. git diff
+D. git push
+
+✅ Respuesta correcta: B. git status
+
+🧠 Pregunta 95
+¿Qué ventaja ofrece la descentralización de Git al colaborar en equipo?
+
+A. Permite que solo un desarrollador trabaje a la vez
+B. Requiere que todos los commits pasen por un administrador
+C. Permite a todos los desarrolladores trabajar de forma independiente y sincronizar después
+D. Obliga a mantener una única copia central del repositorio
+
+✅ Respuesta correcta: C. Permite a todos los desarrolladores trabajar de forma independiente y sincronizar después
+
+🧠 Pregunta 96
+¿Qué estructura de Git se encarga de representar el contenido de un commit?
+
+A. Blob
+B. Tree
+C. Tag
+D. Packfile
+
+✅ Respuesta correcta: B. Tree
+
+🧠 Pregunta 97
+¿Qué estrategia permite mantener un historial de commits más limpio y lineal?
+
+A. Merge automático
+B. Revert manual
+C. Rebase interactivo
+D. Cherry-pick múltiple
+
+✅ Respuesta correcta: C. Rebase interactivo
+
+🧠 Pregunta 98
+¿En qué momento Git suele generar automáticamente packfiles?
+
+A. Durante el primer commit
+B. Al usar git log
+C. Al ejecutar git gc o clonar un repositorio
+D. Solo al crear una nueva rama
+
+✅ Respuesta correcta: C. Al ejecutar git gc o clonar un repositorio
+
+🧠 Pregunta 99
+¿Cuál es una ventaja del uso de SHA-256 en comparación con SHA-1 en Git?
+
+A. Menor longitud del hash
+B. Mayor compatibilidad con versiones antiguas
+C. Mayor resistencia a colisiones
+D. Menor consumo de red
+
+✅ Respuesta correcta: C. Mayor resistencia a colisiones
+
+🧠 Pregunta 100
+¿Qué representa un "commit" en el contexto de Git?
+
+A. Un archivo de respaldo
+B. Un cambio temporal
+C. Un snapshot permanente del proyecto en un momento específico
+D. Una rama secundaria invisible
+
+✅ Respuesta correcta: C. Un snapshot permanente del proyecto en un momento específico
+
+
+🧠 Pregunta 101
+Observa el siguiente grafo de commits (DAG simplificado):
+
+
+C1 → C2 → C3 → C4
+             ↑
+            rama-feature
+
+Si haces un cambio en el commit C3 (por ejemplo, reescribiéndolo con git rebase -i), ¿qué commits deberán ser recalculados (sus hashes cambiarán)?
+
+A. Solo C3
+B. C3 y C4
+C. Solo C4
+D. C2, C3 y C4
+
+✅ Respuesta correcta: B. C3 y C4
+📌 Explicación: Al modificar C3, se genera un nuevo hash. Dado que C4 apunta a C3, su hash también debe cambiar.
+
+🧠 Pregunta 102
+Supón el siguiente árbol de Merkle en Git:
+
+
+        Commit
+          ↓
+        Tree A
+       /      \
+   Blob1     Tree B
+               ↓
+             Blob2
+
+Si se modifica una línea en Blob2, ¿qué objetos cambiarán su hash?
+
+A. Solo Blob2
+B. Blob2 y Tree B
+C. Blob2, Tree B y Tree A
+D. Todos, menos el commit
+
+✅ Respuesta correcta: C. Blob2, Tree B y Tree A
+📌 Explicación: La modificación en Blob2 afecta su hash, lo que cambia el hash de Tree B (su padre), lo que a su vez cambia el hash de Tree A (su abuelo). Esto eventualmente cambiará el commit también si se hace.

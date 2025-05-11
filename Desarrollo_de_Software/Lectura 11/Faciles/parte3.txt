@@ -1,0 +1,300 @@
+🧠 Pregunta 31
+¿Cuál es el principal beneficio de que Git realice operaciones críticas localmente?
+
+A. Aumento del consumo de red
+B. Reducción de la velocidad del sistema
+C. Mayor rapidez y autonomía en el trabajo
+D. Mayor dependencia del servidor
+
+✅ Respuesta correcta: C. Mayor rapidez y autonomía en el trabajo
+
+🧠 Pregunta 32
+¿Qué operación Git permite revertir el estado actual de la rama hacia un commit anterior, eliminando cambios intermedios en ramas privadas?
+
+A. git revert
+B. git reset
+C. git pull
+D. git merge
+
+✅ Respuesta correcta: B. git reset
+
+🧠 Pregunta 33
+¿Qué hace que cada commit en Git sea identificable de forma única?
+
+A. El mensaje del commit
+B. El autor del commit
+C. La fecha del commit
+D. El hash generado por su contenido
+
+✅ Respuesta correcta: D. El hash generado por su contenido
+
+🧠 Pregunta 34
+¿Qué pasaría si dos archivos tienen exactamente el mismo contenido en Git?
+
+A. Git los almacenará como objetos separados
+B. Git solo almacenará un objeto compartido para ambos archivos
+C. Git generará hashes diferentes para cada uno
+D. Git incrementará automáticamente el tamaño del repositorio
+
+✅ Respuesta correcta: B. Git solo almacenará un objeto compartido para ambos archivos
+
+🧠 Pregunta 35
+¿Cuál es la función principal del archivo .git en un repositorio Git?
+
+A. Almacenar temporalmente los archivos modificados
+B. Almacenar la base de datos interna del repositorio
+C. Contener documentación adicional del proyecto
+D. Registrar automáticamente cada cambio sin commits
+
+✅ Respuesta correcta: B. Almacenar la base de datos interna del repositorio
+
+🧠 Pregunta 36
+¿Cuándo se activa automáticamente la creación de packfiles en Git?
+
+A. Durante el uso diario de git status
+B. Al ejecutar git init
+C. Durante optimizaciones internas como git gc
+D. Al usar git checkout
+
+✅ Respuesta correcta: C. Durante optimizaciones internas como git gc
+
+🧠 Pregunta 37
+¿Qué permite Git al mantener el historial completo del proyecto en cada clon?
+
+A. Incrementar el tiempo de descarga inicial
+B. Hacer operaciones rápidas offline
+C. Duplicar constantemente el historial
+D. Eliminar el historial cuando se desee
+
+✅ Respuesta correcta: B. Hacer operaciones rápidas offline
+
+🧠 Pregunta 38
+¿Cuál de estos comandos de Git permite comparar directamente dos versiones del código?
+
+A. git fetch
+B. git push
+C. git diff
+D. git add
+
+✅ Respuesta correcta: C. git diff
+
+🧠 Pregunta 39
+¿Para qué sirve el comando git blame?
+
+A. Fusionar dos ramas automáticamente
+B. Mostrar quién hizo cada cambio en cada línea del archivo
+C. Revertir automáticamente cambios conflictivos
+D. Comprimir automáticamente el repositorio
+
+✅ Respuesta correcta: B. Mostrar quién hizo cada cambio en cada línea del archivo
+
+🧠 Pregunta 40
+¿Cuál es un beneficio clave del diseño distribuido de Git en caso de fallos del servidor?
+
+A. Es imposible recuperar el historial del proyecto
+B. El historial puede recuperarse desde cualquier clon
+C. Git elimina automáticamente los commits dañados
+D. Cada clon pierde el historial completo
+
+✅ Respuesta correcta: B. El historial puede recuperarse desde cualquier clon
+
+🧠 Pregunta 41
+¿Cuál es la principal consecuencia si cambias el contenido de un archivo almacenado en Git?
+
+A. El archivo se guarda sin modificar el historial
+B. Se genera un nuevo hash para ese archivo y sus objetos relacionados
+C. Git elimina la versión anterior automáticamente
+D. El archivo desaparece del repositorio
+
+✅ Respuesta correcta: B. Se genera un nuevo hash para ese archivo y sus objetos relacionados
+
+🧠 Pregunta 42
+¿Cuándo es especialmente útil trabajar offline con Git?
+
+A. Al usar herramientas que solo funcionan online
+B. Cuando necesitas realizar operaciones rápidas sin red
+C. Si deseas eliminar cambios irreversibles
+D. Durante fusiones automáticas
+
+✅ Respuesta correcta: B. Cuando necesitas realizar operaciones rápidas sin red
+
+🧠 Pregunta 43
+¿Cuál es un propósito clave del comando git pull?
+
+A. Enviar cambios locales al repositorio remoto
+B. Obtener y fusionar automáticamente cambios del repositorio remoto
+C. Comprimir el historial del repositorio
+D. Crear ramas nuevas automáticamente
+
+✅ Respuesta correcta: B. Obtener y fusionar automáticamente cambios del repositorio remoto
+
+🧠 Pregunta 44
+¿Qué característica específica del hash SHA-256 lo hace preferible sobre SHA-1 en Git?
+
+A. Es más fácil de calcular
+B. Mayor resistencia a colisiones
+C. Menor tamaño del hash generado
+D. Permite revertir hashes más fácilmente
+
+✅ Respuesta correcta: B. Mayor resistencia a colisiones
+
+🧠 Pregunta 45
+¿Cuál es un caso ideal para utilizar la estrategia de rebase interactivo (git rebase -i)?
+
+A. Para enviar cambios directamente a la rama principal sin revisión
+B. Para limpiar y organizar commits antes de fusionarlos
+C. Para eliminar todas las ramas locales
+D. Para sincronizar automáticamente con un servidor
+
+✅ Respuesta correcta: B. Para limpiar y organizar commits antes de fusionarlos
+
+🧠 Pregunta 46
+¿En qué consiste la técnica de delta encoding aplicada por Git?
+
+A. En almacenar archivos completos en cada versión
+B. En cifrar las diferencias entre archivos
+C. En almacenar únicamente las diferencias entre versiones
+D. En eliminar automáticamente cambios redundantes
+
+✅ Respuesta correcta: C. En almacenar únicamente las diferencias entre versiones
+
+🧠 Pregunta 47
+¿Cuál es una ventaja directa del almacenamiento en packfiles?
+
+A. Incrementa el número de objetos individuales
+B. Facilita la transferencia de múltiples objetos en un archivo comprimido
+C. Aumenta el consumo de ancho de banda
+D. Obliga a tener un historial lineal
+
+✅ Respuesta correcta: B. Facilita la transferencia de múltiples objetos en un archivo comprimido
+
+🧠 Pregunta 48
+¿Qué estrategia usa Git para fusionar dos ramas cuando no existe conflicto en los archivos modificados?
+
+A. Cherry-pick
+B. Octopus merge
+C. Recursive merge
+D. Rebase interactivo
+
+✅ Respuesta correcta: C. Recursive merge
+
+🧠 Pregunta 49
+¿Cuál es un beneficio práctico del archivo .idx asociado a los packfiles?
+
+A. Facilita la compresión adicional del packfile
+B. Permite identificar visualmente el historial de cambios
+C. Mejora el acceso rápido a los objetos dentro del packfile
+D. Almacena la información del autor de cada commit
+
+✅ Respuesta correcta: C. Mejora el acceso rápido a los objetos dentro del packfile
+
+🧠 Pregunta 50
+¿Qué tipo de estructura es un árbol de Merkle?
+
+A. Un grafo con ciclos
+B. Una lista enlazada
+C. Una estructura donde cada nodo tiene un hash derivado de sus hijos
+D. Una estructura con nodos independientes sin relación
+
+✅ Respuesta correcta: C. Una estructura donde cada nodo tiene un hash derivado de sus hijos
+
+
+🧠 Pregunta 51
+¿Cuál es una función clave del comando git push?
+
+A. Descargar cambios del repositorio remoto
+B. Enviar cambios locales al repositorio remoto
+C. Crear automáticamente nuevas ramas
+D. Eliminar el historial local
+
+✅ Respuesta correcta: B. Enviar cambios locales al repositorio remoto
+
+🧠 Pregunta 52
+¿Qué ocurre en Git cuando dos ramas diferentes modifican exactamente la misma línea de un archivo?
+
+A. Git ignora automáticamente uno de los cambios
+B. Git fusiona ambas modificaciones automáticamente sin avisar
+C. Git señala un conflicto que requiere intervención manual
+D. Git elimina ambas modificaciones automáticamente
+
+✅ Respuesta correcta: C. Git señala un conflicto que requiere intervención manual
+
+🧠 Pregunta 53
+¿Cuándo es recomendable utilizar el comando git revert?
+
+A. Cuando se quiere eliminar completamente un commit del historial
+B. Cuando se quiere revertir un commit en una rama pública de forma segura
+C. Cuando se quiere eliminar ramas locales no usadas
+D. Cuando se quiere reiniciar completamente un repositorio
+
+✅ Respuesta correcta: B. Cuando se quiere revertir un commit en una rama pública de forma segura
+
+🧠 Pregunta 54
+¿Qué método utiliza Git para garantizar la integridad de cada objeto almacenado?
+
+A. El cifrado simétrico
+B. La compresión zlib
+C. El cálculo de hashes criptográficos
+D. El uso de operaciones online constantes
+
+✅ Respuesta correcta: C. El cálculo de hashes criptográficos
+
+🧠 Pregunta 55
+¿Qué ventaja ofrece Git frente a sistemas centralizados como SVN si falla el servidor principal?
+
+A. Git pierde inmediatamente todos los datos
+B. Git puede restaurar fácilmente el repositorio desde cualquier clon
+C. Git requiere una reinstalación completa
+D. Git solo permite trabajar con copias parciales
+
+✅ Respuesta correcta: B. Git puede restaurar fácilmente el repositorio desde cualquier clon
+
+🧠 Pregunta 56
+¿Cuál es una consecuencia inmediata del uso de algoritmos hash criptográficos en Git?
+
+A. Git se vuelve dependiente de la conexión a internet
+B. Cualquier modificación en el contenido cambia completamente el hash
+C. Git duplica constantemente el contenido
+D. Git permite recuperar fácilmente la entrada original desde el hash
+
+✅ Respuesta correcta: B. Cualquier modificación en el contenido cambia completamente el hash
+
+🧠 Pregunta 57
+¿Cuál es el principal beneficio de usar interfaces visuales (como VS Code o GitKraken) en Git?
+
+A. Incrementar el consumo de recursos del sistema
+B. Reducir errores al resolver conflictos visualmente
+C. Eliminar la necesidad de comandos Git
+D. Acelerar automáticamente el repositorio
+
+✅ Respuesta correcta: B. Reducir errores al resolver conflictos visualmente
+
+🧠 Pregunta 58
+¿Qué técnica permite que Git no duplique datos si dos objetos tienen el mismo contenido?
+
+A. Compresión zlib
+B. Uso del mismo hash para objetos idénticos
+C. Delta encoding
+D. Creación automática de ramas
+
+✅ Respuesta correcta: B. Uso del mismo hash para objetos idénticos
+
+🧠 Pregunta 59
+¿Qué tipo de estructura evita la creación de ciclos en el historial de commits de Git?
+
+A. Listas enlazadas circulares
+B. Grafos acíclicos dirigidos (DAG)
+C. Árboles binarios completos
+D. Tablas hash lineales
+
+✅ Respuesta correcta: B. Grafos acíclicos dirigidos (DAG)
+
+🧠 Pregunta 60
+¿Cuál es el objetivo principal del comando git fetch?
+
+A. Descargar y fusionar automáticamente los cambios del remoto
+B. Descargar cambios del remoto sin integrarlos
+C. Enviar cambios locales al repositorio remoto
+D. Revertir cambios locales automáticamente
+
+✅ Respuesta correcta: B. Descargar cambios del remoto sin integrarlos
