@@ -1,15 +1,12 @@
-🧠 Pregunta 1
+🧠 Pregunta 30
 
-¿Cuál es el principal desafío que surge al utilizar múltiples ramas de código fuente y que los patrones presentados buscan mitigar?
+¿Qué ventaja ofrece el uso de git bisect frente a una revisión manual del historial?
 
-A. La dificultad de realizar un seguimiento de los cambios individuales.
-
-B. La necesidad de elegir un sistema de control de versiones adecuado.
-
-C. La complejidad de fusionar las ramas de nuevo en un todo coherente.
-
-D. La ineficiencia en la creación de nuevas ramas para cada tarea.
+A. Permite editar directamente los commits defectuosos
+B. Restaura commits eliminados automáticamente
+C. Encuentra el commit que introdujo un error usando búsqueda binaria
+D. Integra pruebas automatizadas automáticamente
 
 ✅ Correcta: C
+🧾 Explicación: git bisect reduce significativamente el número de pasos necesarios para encontrar el commit problemático aplicando el principio de búsqueda binaria sobre el historial.
 
-🧾 Explicación: El artículo destaca que, si bien la creación de ramas es sencilla, la fusión posterior puede generar complicaciones y consumir mucho tiempo de los equipos.
