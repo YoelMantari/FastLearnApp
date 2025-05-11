@@ -10,3 +10,17 @@ D. Git realiza el rebase en una copia local de la rama sin afectar la rama remot
 ✅ Correcta: B
 
 🧾 Explicación: Reescribir la historia (como con rebase) en ramas compartidas puede causar problemas para otros colaboradores. Git te advertirá, pero te permitirá continuar, asumiendo que entiendes los riesgos.
+
+
+🧠 Pregunta 90
+
+En un proyecto que utiliza múltiples submódulos, ¿qué estrategia se podría implementar para asegurar que al hacer checkout de una rama específica del proyecto principal, se utilicen las versiones de los submódulos que eran las correctas en el momento en que se creó o se actualizó por última vez esa rama del proyecto principal?
+
+A. Actualizar todos los submódulos a la última versión cada vez que se cambia de rama en el proyecto principal.
+B. Asegurarse de que los commits en la rama del proyecto principal registren los commits específicos de los submódulos que eran actuales en ese momento. Al hacer checkout de una rama antigua, los submódulos deberían inicializarse y actualizarse a las versiones registradas en los commits de esa rama.
+C. Mantener una rama separada para cada versión de los submódulos utilizada por el proyecto principal.
+D. Incluir el código de todos los submódulos directamente en el repositorio principal para evitar problemas de versiones.
+
+✅ Correcta: B
+
+🧾 Explicación: La clave para mantener la coherencia de las versiones de los submódulos al cambiar entre ramas del proyecto principal es que cada commit del proyecto principal debe registrar las versiones específicas (commits) de los submódulos que eran correctas en ese momento. Al hacer checkout de una rama, los submódulos deben actualizarse a las versiones apuntadas por los commits de esa rama.
