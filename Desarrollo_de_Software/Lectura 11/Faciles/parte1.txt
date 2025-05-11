@@ -1,4 +1,5 @@
 🧠 Pregunta 1
+
 ¿Cuál es una característica clave de Git como sistema de control de versiones distribuido?
 
 A. Depende de un único servidor central
@@ -9,6 +10,7 @@ D. Los cambios solo se guardan en el servidor principal
 ✅ Respuesta correcta: C. Cada clon del repositorio tiene todo el historial completo
 
 🧠 Pregunta 2
+
 ¿Qué ventaja principal ofrece el modelo peer-to-peer de Git?
 
 A. Requiere menos conocimiento técnico
@@ -19,6 +21,7 @@ D. Solo un desarrollador puede modificar el historial a la vez
 ✅ Respuesta correcta: C. Permite que todos los nodos trabajen de forma autónoma
 
 🧠 Pregunta 3
+
 ¿Qué estructura utiliza Git para representar el historial de commits?
 
 A. Árbol binario
@@ -29,6 +32,7 @@ D. Tabla hash lineal
 ✅ Respuesta correcta: B. Grafo acíclico dirigido (DAG)
 
 🧠 Pregunta 4
+
 ¿Cuál es la función principal de un árbol de Merkle en Git?
 
 A. Ejecutar los comandos en paralelo
@@ -39,6 +43,7 @@ D. Conectar múltiples repositorios remotos
 ✅ Respuesta correcta: C. Garantizar la integridad del contenido del repositorio
 
 🧠 Pregunta 5
+
 ¿Qué propiedad tiene el algoritmo de hash SHA-1 usado en Git?
 
 A. Genera claves simétricas para cifrar archivos
@@ -49,6 +54,7 @@ D. Aumenta automáticamente el tamaño del repositorio
 ✅ Respuesta correcta: C. Genera un identificador único basado en el contenido
 
 🧠 Pregunta 6
+
 ¿Cuál es uno de los beneficios del uso de packfiles en Git?
 
 A. Obligan a los desarrolladores a trabajar online
@@ -59,6 +65,7 @@ D. Mejoran la eficiencia de almacenamiento y transferencia
 ✅ Respuesta correcta: D. Mejoran la eficiencia de almacenamiento y transferencia
 
 🧠 Pregunta 7
+
 ¿Qué comando se usa en Git para aplicar solo algunos commits de otra rama sin fusionarla entera?
 
 A. git fetch
@@ -69,6 +76,7 @@ D. git reset
 ✅ Respuesta correcta: C. git cherry-pick
 
 🧠 Pregunta 8
+
 ¿Qué estrategia de fusión en Git se usa para integrar tres o más ramas simultáneamente?
 
 A. Recursive
@@ -79,6 +87,7 @@ D. Cherry
 ✅ Respuesta correcta: B. Octopus
 
 🧠 Pregunta 9
+
 ¿Por qué Git es resiliente ante fallos del servidor?
 
 A. Porque los commits se almacenan en la nube
@@ -89,6 +98,7 @@ D. Porque usa backup manual después de cada commit
 ✅ Respuesta correcta: C. Porque cada clon es un repositorio autónomo completo
 
 🧠 Pregunta 10
+
 ¿Qué comando de Git descarga cambios de otro repositorio sin integrarlos?
 
 A. git pull
@@ -99,6 +109,7 @@ D. git commit
 ✅ Respuesta correcta: B. git fetch
 
 🧠 Pregunta 11
+
 ¿Cuál es una ventaja directa del modelo distribuido de Git?
 
 A. Requiere más almacenamiento por usuario
@@ -109,6 +120,7 @@ D. Impide la colaboración paralela
 ✅ Respuesta correcta: C. Permite trabajar sin conexión a internet
 
 🧠 Pregunta 12
+
 ¿Cuál de los siguientes objetos Git representa un archivo individual?
 
 A. Commit
@@ -119,6 +131,7 @@ D. Blob
 ✅ Respuesta correcta: D. Blob
 
 🧠 Pregunta 13
+
 ¿Qué efecto tiene modificar una línea de código en un archivo bajo Git?
 
 A. Solo cambia el hash del archivo afectado
@@ -129,6 +142,7 @@ D. Cambia el hash de todos los archivos del repositorio
 ✅ Respuesta correcta: B. Cambia el hash del blob, tree y commit relacionados
 
 🧠 Pregunta 14
+
 ¿Cuál es la principal razón de la transición de Git de SHA-1 a SHA-256?
 
 A. SHA-1 es más difícil de calcular
@@ -139,6 +153,7 @@ D. SHA-256 ocupa menos espacio
 ✅ Respuesta correcta: C. SHA-1 tiene vulnerabilidades de colisión
 
 🧠 Pregunta 15
+
 ¿Qué comando de Git permite fusionar y reordenar commits antes de integrarlos?
 
 A. git merge
@@ -149,6 +164,7 @@ D. git pull
 ✅ Respuesta correcta: C. git rebase -i
 
 🧠 Pregunta 16
+
 ¿Para qué se utiliza el archivo .idx asociado a un packfile en Git?
 
 A. Para encriptar el contenido del repositorio
@@ -159,6 +175,7 @@ D. Para registrar el historial de cambios de ramas
 ✅ Respuesta correcta: C. Para indexar los objetos del packfile y acceder a ellos rápidamente
 
 🧠 Pregunta 17
+
 ¿Qué comando de Git crea un nuevo commit que revierte los cambios de otro commit?
 
 A. git reset
@@ -169,6 +186,7 @@ D. git rollback
 ✅ Respuesta correcta: B. git revert
 
 🧠 Pregunta 18
+
 ¿Qué permite Git mergetool?
 
 A. Ejecutar pruebas automáticas
@@ -179,6 +197,7 @@ D. Eliminar ramas remotas
 ✅ Respuesta correcta: B. Ver y resolver conflictos de fusión gráficamente
 
 🧠 Pregunta 19
+
 ¿Cuál de los siguientes beneficios proviene del uso de árboles de Merkle en Git?
 
 A. Permiten eliminar ramas más rápido
@@ -189,6 +208,7 @@ D. Mejoran la velocidad de conexión a internet
 ✅ Respuesta correcta: C. Facilitan la detección de corrupción de datos
 
 🧠 Pregunta 20
+
 ¿Qué ocurre cuando se ejecuta el comando git gc?
 
 A. Se eliminan todas las ramas locales
@@ -199,6 +219,7 @@ D. Se borra el historial de cambios antiguos
 ✅ Respuesta correcta: C. Se crean packfiles para optimizar el repositorio
 
 🧠 Pregunta 21
+
 ¿Qué estructura permite a Git realizar fusiones automáticas efectivas?
 
 A. Lista enlazada
@@ -209,6 +230,7 @@ D. Matriz de objetos
 ✅ Respuesta correcta: C. Grafo acíclico dirigido (DAG)
 
 🧠 Pregunta 22
+
 ¿Cuál de estas propiedades NO corresponde a un algoritmo de hash criptográfico como SHA-1 o SHA-256?
 
 A. Determinística
@@ -219,6 +241,7 @@ D. Capacidad para recuperar el contenido original
 ✅ Respuesta correcta: D. Capacidad para recuperar el contenido original
 
 🧠 Pregunta 23
+
 ¿Para qué se utiliza el delta encoding en Git?
 
 A. Para cifrar cambios en los archivos
@@ -229,6 +252,7 @@ D. Para verificar la integridad del repositorio
 ✅ Respuesta correcta: B. Para almacenar solo las diferencias entre versiones
 
 🧠 Pregunta 24
+
 ¿Cuál es una ventaja clave del uso de packfiles en Git?
 
 A. Incrementar la velocidad del procesador
@@ -239,6 +263,7 @@ D. Mantener una única rama activa en el repositorio
 ✅ Respuesta correcta: B. Reducir la cantidad de objetos sueltos
 
 🧠 Pregunta 25
+
 ¿Cuándo Git utiliza la estrategia de fusión octopus?
 
 A. Al fusionar exactamente dos ramas
@@ -249,6 +274,7 @@ D. Al aplicar commits específicos con cherry-pick
 ✅ Respuesta correcta: B. Al fusionar tres o más ramas simultáneamente
 
 🧠 Pregunta 26
+
 ¿Qué herramienta de Git permite reescribir y limpiar el historial de commits antes de fusionarlos?
 
 A. git commit
@@ -259,6 +285,7 @@ D. git stash
 ✅ Respuesta correcta: C. git rebase interactivo (git rebase -i)
 
 🧠 Pregunta 27
+
 ¿Por qué Git se considera resiliente a la corrupción de datos?
 
 A. Por su almacenamiento en múltiples servidores
@@ -269,6 +296,7 @@ D. Por la capacidad de rollback automático
 ✅ Respuesta correcta: C. Por la estructura de árbol de Merkle y hashes criptográficos
 
 🧠 Pregunta 28
+
 ¿Cuál es una limitación conocida del algoritmo SHA-1 utilizado históricamente en Git?
 
 A. Alto uso de memoria RAM
@@ -279,6 +307,7 @@ D. Necesidad constante de internet
 ✅ Respuesta correcta: B. Vulnerabilidad a colisiones
 
 🧠 Pregunta 29
+
 ¿En qué situación sería preferible usar el comando git cherry-pick?
 
 A. Cuando quieres fusionar múltiples ramas a la vez
@@ -289,6 +318,7 @@ D. Para restaurar completamente una rama eliminada
 ✅ Respuesta correcta: C. Para aplicar un commit específico sin fusionar toda la rama
 
 🧠 Pregunta 30
+
 ¿Cuál de estas afirmaciones es verdadera respecto a trabajar offline con Git?
 
 A. Es imposible hacer commits offline
@@ -297,4 +327,3 @@ C. Todas las operaciones críticas pueden hacerse offline
 D. El historial se pierde si no sincronizas regularmente
 
 ✅ Respuesta correcta: C. Todas las operaciones críticas pueden hacerse offline
-
