@@ -1,0 +1,605 @@
+🧠 Pregunta 1
+¿Cuál es el principal objetivo de una historia de usuario en metodologías ágiles?
+
+A. Especificar requerimientos técnicos complejos
+B. Medir el rendimiento del equipo de desarrollo
+C. Describir funcionalidades desde la perspectiva del usuario final
+D. Documentar errores del sistema
+
+✅ Correcta: C
+🧾 Explicación: Las historias de usuario buscan representar necesidades reales del usuario final, enfocando el desarrollo en aportar valor concreto y facilitar la comunicación entre equipos.
+
+🧠 Pregunta 2
+¿Cuál es la estructura común de una historia de usuario?
+
+A. "Como sistema, quiero ejecutar para ahorrar recursos."
+B. "Como [rol], quiero [funcionalidad] para [beneficio]."
+C. "Cuando [evento], entonces [acción] y [resultado]."
+D. "Dado que [estado], se ejecuta [proceso]."
+
+✅ Correcta: B
+🧾 Explicación: Esta estructura estándar permite identificar el rol del usuario, la funcionalidad deseada y el beneficio que se espera obtener, facilitando el enfoque centrado en el usuario.
+
+🧠 Pregunta 3
+¿Cuál es una característica clave de los criterios de aceptación?
+
+A. Deben incluir únicamente requerimientos técnicos
+B. Son opcionales en metodologías ágiles
+C. Deben ser claros, específicos y verificables
+D. Solo pueden ser escritos por desarrolladores
+
+✅ Correcta: C
+🧾 Explicación: Los criterios de aceptación deben ser precisos, medibles y entendibles por todos, ya que definen cuándo una historia de usuario se considera completada correctamente.
+
+🧠 Pregunta 4
+¿Qué función cumple el formato Given-When-Then?
+
+A. Definir algoritmos internos del sistema
+B. Medir el rendimiento de pruebas automatizadas
+C. Representar escenarios de prueba de forma estructurada y comprensible
+D. Describir la arquitectura de un sistema
+
+✅ Correcta: C
+🧾 Explicación: Given-When-Then permite expresar claramente condiciones iniciales, acciones del usuario y resultados esperados en lenguaje natural y estructurado.
+
+🧠 Pregunta 5
+¿Cuál de los siguientes es un criterio de aceptación negativo?
+
+A. "El usuario ve un mensaje de bienvenida al iniciar sesión."
+B. "El sistema registra al usuario si los datos son correctos."
+C. "Si la contraseña es incorrecta, el sistema muestra un mensaje de error."
+D. "Los productos se ordenan alfabéticamente."
+
+✅ Correcta: C
+🧾 Explicación: Los criterios negativos describen comportamientos esperados ante condiciones incorrectas o errores, como ingresar datos inválidos.
+
+🧠 Pregunta 6
+¿Qué ventaja ofrece Behave en el contexto de BDD?
+
+A. Permite desarrollar interfaces gráficas en Python
+B. Ejecuta pruebas en múltiples lenguajes a la vez
+C. Traduce escenarios escritos en Gherkin a pruebas automatizadas en Python
+D. Sustituye la necesidad de definir criterios de aceptación
+
+✅ Correcta: C
+🧾 Explicación: Behave interpreta los pasos definidos en Gherkin y los conecta con funciones Python, permitiendo automatizar pruebas basadas en el comportamiento.
+
+🧠 Pregunta 7
+¿Cuál es el propósito del lenguaje Gherkin en BDD?
+
+A. Realizar análisis estático del código
+B. Describir comportamientos de manera natural y estructurada
+C. Reemplazar la necesidad de código fuente
+D. Compilar pruebas automáticamente
+
+✅ Correcta: B
+🧾 Explicación: Gherkin permite expresar escenarios en un lenguaje comprensible por todos los miembros del equipo, facilitando la colaboración y la automatización de pruebas.
+
+🧠 Pregunta 8
+¿Qué tipo de prueba verifica si una funcionalidad cumple con los criterios de aceptación?
+
+A. Prueba unitaria
+B. Prueba de integración
+C. Prueba de sistema
+D. Prueba de aceptación
+
+✅ Correcta: D
+🧾 Explicación: Las pruebas de aceptación validan que una funcionalidad específica satisface los requisitos definidos en la historia de usuario y sus criterios de aceptación.
+
+🧠 Pregunta 9
+¿Qué característica tiene un buen escenario en Gherkin?
+
+A. Está escrito en código máquina
+B. Contiene múltiples decisiones en un solo paso
+C. Es claro, conciso y legible por humanos
+D. Debe contener pseudocódigo
+
+✅ Correcta: C
+🧾 Explicación: Los escenarios escritos en Gherkin deben ser simples, claros y fáciles de entender por todas las partes, técnicas y no técnicas.
+
+🧠 Pregunta 10
+¿Qué fase del Four-Phase Test se encarga de verificar que cada unidad del código funciona correctamente de forma aislada?
+
+A. Prueba de sistema
+B. Prueba de integración
+C. Prueba unitaria
+D. Prueba de aceptación
+
+✅ Correcta: C
+🧾 Explicación: Las pruebas unitarias evalúan componentes individuales del software para asegurar que su comportamiento es correcto antes de integrarlos con otras partes.
+
+🧠 Pregunta 11
+¿Cuál es una ventaja clave de utilizar historias de usuario breves y no técnicas?
+
+A. Facilita que solo los programadores las entiendan
+B. Asegura que se definan todos los requisitos técnicos
+C. Promueve la discusión y refinamiento progresivo
+D. Elimina la necesidad de criterios de aceptación
+
+✅ Correcta: C
+🧾 Explicación: Las historias de usuario breves y simples favorecen la colaboración entre equipos y permiten refinar los requisitos a medida que se desarrollan nuevas ideas.
+
+🧠 Pregunta 12
+¿En qué parte de un escenario Given-When-Then se describe el resultado esperado?
+
+A. Given
+B. When
+C. Then
+D. And
+
+✅ Correcta: C
+🧾 Explicación: La sección “Then” especifica el resultado o la reacción del sistema luego de ejecutarse una acción.
+
+🧠 Pregunta 13
+¿Cuál es el objetivo principal del desarrollo guiado por comportamiento (BDD)?
+
+A. Aumentar la cobertura de código
+B. Desarrollar características desde la perspectiva del sistema operativo
+C. Describir el comportamiento del sistema desde la perspectiva del usuario
+D. Reemplazar todas las pruebas unitarias por pruebas automatizadas
+
+✅ Correcta: C
+🧾 Explicación: BDD busca definir el comportamiento esperado del sistema desde el punto de vista del usuario, integrando desarrollo y validación.
+
+🧠 Pregunta 14
+¿Qué herramienta en Python se utiliza para implementar BDD mediante Gherkin?
+
+A. Pytest
+B. Behave
+C. Selenium
+D. Unittest
+
+✅ Correcta: B
+🧾 Explicación: Behave es una herramienta en Python que permite ejecutar escenarios escritos en Gherkin para validar comportamientos del sistema.
+
+🧠 Pregunta 15
+¿Qué fase del Four-Phase Test se enfoca en validar que el sistema completo cumple los requisitos?
+
+A. Prueba unitaria
+B. Prueba de integración
+C. Prueba de sistema
+D. Prueba de aceptación
+
+✅ Correcta: C
+🧾 Explicación: Las pruebas de sistema evalúan el comportamiento del software como un todo, verificando que todas las piezas trabajen juntas correctamente.
+
+🧠 Pregunta 16
+¿Cuál es una característica de los criterios de aceptación bien redactados?
+
+A. Son escritos exclusivamente en lenguaje técnico
+B. Son ambiguos y flexibles a interpretación
+C. Son verificables y centrados en el usuario
+D. Solo se usan al final del desarrollo
+
+✅ Correcta: C
+🧾 Explicación: Los buenos criterios de aceptación son objetivos, medibles y orientados a las necesidades del usuario.
+
+🧠 Pregunta 17
+¿Qué representa la palabra clave "Feature" en Gherkin?
+
+A. Una prueba automatizada
+B. Una condición de error
+C. Una agrupación de escenarios relacionados a una funcionalidad
+D. Una función matemática
+
+✅ Correcta: C
+🧾 Explicación: "Feature" agrupa escenarios que verifican una funcionalidad específica del sistema.
+
+🧠 Pregunta 18
+¿Cuál es el beneficio de usar expresiones regulares en los pasos de Behave?
+
+A. Generar errores automáticos
+B. Evitar la repetición de pruebas
+C. Hacer los pasos reutilizables y dinámicos
+D. Aumentar el tiempo de ejecución
+
+✅ Correcta: C
+🧾 Explicación: Las expresiones regulares permiten capturar valores variables en los pasos, facilitando su reutilización en múltiples escenarios.
+
+🧠 Pregunta 19
+¿Para qué sirve la estructura de directorios en un proyecto Behave?
+
+A. Separar código de producción y pruebas
+B. Ejecutar código en paralelo
+C. Organizar escenarios Gherkin, pasos en Python y configuraciones
+D. Aumentar la complejidad del proyecto
+
+✅ Correcta: C
+🧾 Explicación: Behave requiere una estructura organizada para separar archivos .feature, definiciones de pasos y configuraciones.
+
+🧠 Pregunta 20
+¿Qué tipo de criterio de aceptación verifica la resistencia del sistema ante entradas inesperadas?
+
+A. Positivo
+B. Negativo
+C. Malicioso
+D. Alternativo
+
+✅ Correcta: C
+🧾 Explicación: Los criterios maliciosos prueban la robustez del sistema frente a acciones inusuales, como intentos de inyección SQL.
+
+🧠 Pregunta 21
+¿Por qué las historias de usuario favorecen la colaboración entre equipos?
+
+A. Porque son documentos legales del proyecto
+B. Porque son redactadas solo por programadores
+C. Porque están escritas en lenguaje claro y accesible
+D. Porque eliminan la necesidad de reuniones
+
+✅ Correcta: C
+🧾 Explicación: El lenguaje simple de las historias de usuario permite que todos los equipos (negocio, desarrollo, QA) participen en su discusión y refinamiento.
+
+🧠 Pregunta 22
+¿Cuál es el objetivo principal de la prueba de integración?
+
+A. Verificar la velocidad de respuesta del servidor
+B. Validar que los distintos módulos funcionen correctamente juntos
+C. Asegurar que el diseño gráfico sea responsivo
+D. Verificar la conexión a la base de datos
+
+✅ Correcta: B
+🧾 Explicación: La prueba de integración evalúa la interacción entre diferentes componentes del sistema para garantizar su correcto funcionamiento conjunto.
+
+🧠 Pregunta 23
+¿Cuándo se considera que una historia de usuario está “completa”?
+
+A. Cuando se ejecutan las pruebas unitarias
+B. Cuando se implementa sin errores
+C. Cuando se cumplen todos sus criterios de aceptación
+D. Cuando se revisa por el líder técnico
+
+✅ Correcta: C
+🧾 Explicación: Una historia de usuario se considera completa cuando pasa todas las validaciones definidas por sus criterios de aceptación.
+
+🧠 Pregunta 24
+¿Qué ventaja clave ofrece el uso de Gherkin en equipos multidisciplinarios?
+
+A. Permite codificar directamente sin pruebas
+B. Facilita el entendimiento de requisitos entre técnicos y no técnicos
+C. Automatiza el diseño de interfaces gráficas
+D. Elimina la necesidad de documentación
+
+✅ Correcta: B
+🧾 Explicación: Gherkin, al usar lenguaje natural, facilita la comprensión y colaboración entre personas técnicas y de negocio.
+
+🧠 Pregunta 25
+¿Qué representa la palabra clave "And" en un escenario de Gherkin?
+
+A. Define un escenario alternativo
+B. Especifica una condición adicional en Given, When o Then
+C. Finaliza el escenario
+D. Marca el paso final obligatorio
+
+✅ Correcta: B
+🧾 Explicación: "And" se utiliza para agregar condiciones o pasos adicionales dentro de Given, When o Then.
+
+🧠 Pregunta 26
+¿Qué significa que una historia de usuario sea fácilmente modificable?
+
+A. Que se elimina sin necesidad de aprobación
+B. Que se adapta fácilmente conforme cambia el entorno o el feedback
+C. Que se puede traducir a cualquier lenguaje de programación
+D. Que se duplica para cada nuevo requerimiento
+
+✅ Correcta: B
+🧾 Explicación: La simplicidad de las historias de usuario permite actualizarlas con facilidad ante nuevas necesidades o descubrimientos.
+
+🧠 Pregunta 27
+¿Cuál es el papel de los archivos .feature en Behave?
+
+A. Ejecutar pruebas unitarias
+B. Contener funciones en Python
+C. Describir escenarios de prueba en lenguaje Gherkin
+D. Ejecutar pipelines de integración continua
+
+✅ Correcta: C
+🧾 Explicación: Los archivos .feature almacenan los escenarios escritos en Gherkin que describen comportamientos esperados del sistema.
+
+🧠 Pregunta 28
+¿Qué palabra clave de Gherkin indica el inicio de un nuevo escenario?
+
+A. Feature
+B. Given
+C. Scenario
+D. Then
+
+✅ Correcta: C
+🧾 Explicación: “Scenario” marca el comienzo de un conjunto de pasos que verifican un caso de uso particular dentro de una funcionalidad.
+
+🧠 Pregunta 29
+¿Qué resultado se busca con la aplicación del Four-Phase Test?
+
+A. Velocidad máxima de ejecución
+B. Validación parcial del sistema
+C. Cobertura total del comportamiento esperado del sistema
+D. Eliminación de pruebas manuales
+
+✅ Correcta: C
+🧾 Explicación: El objetivo del Four-Phase Test es cubrir todas las capas de validación: desde pruebas unitarias hasta pruebas de aceptación.
+
+🧠 Pregunta 30
+¿Por qué se recomienda automatizar la ejecución de pruebas en BDD?
+
+A. Para evitar escribir código
+B. Para reducir la cantidad de escenarios necesarios
+C. Para validar continuamente que el sistema sigue cumpliendo con los requisitos
+D. Para reemplazar completamente al equipo de QA
+
+✅ Correcta: C
+🧾 Explicación: Automatizar permite ejecutar pruebas de forma recurrente y detectar desviaciones tempranas respecto a los comportamientos esperados.
+
+🧠 Pregunta 31
+¿Qué permite el formato Given-When-Then en el desarrollo de software?
+
+A. Crear scripts de base de datos
+B. Redactar documentación legal del sistema
+C. Estandarizar escenarios de prueba con claridad
+D. Codificar directamente funcionalidades
+
+✅ Correcta: C
+🧾 Explicación: Given-When-Then estructura los escenarios de prueba para que sean comprensibles y verificables por todos los miembros del equipo.
+
+🧠 Pregunta 32
+¿Qué ventaja ofrece Git al permitir múltiples flujos de trabajo como Git Flow o GitHub Flow?
+
+A. Facilita el uso sin ramas
+B. Impide que dos usuarios trabajen en paralelo
+C. Permite adaptar el flujo de trabajo al estilo del equipo
+D. Requiere siempre trabajar en la rama main
+
+✅ Correcta: C
+🧾 Explicación: Git es flexible y permite aplicar diferentes flujos de trabajo según el tamaño y estilo del equipo, como ramas cortas o estructuras formales.
+
+🧠 Pregunta 33
+¿Qué acción realiza la herramienta Cucumber en el contexto de BDD?
+
+A. Ejecuta scripts SQL
+B. Transforma escenarios Gherkin en pasos automatizados
+C. Valida la conexión a servidores externos
+D. Reemplaza las pruebas manuales de UI
+
+✅ Correcta: B
+🧾 Explicación: Cucumber interpreta escenarios escritos en Gherkin y los convierte en pruebas automatizadas, permitiendo validar funcionalidades del sistema.
+
+🧠 Pregunta 34
+¿Qué tipo de pruebas busca detectar errores al combinar unidades del sistema?
+
+A. Pruebas unitarias
+B. Pruebas de aceptación
+C. Pruebas de integración
+D. Pruebas de regresión
+
+✅ Correcta: C
+🧾 Explicación: Las pruebas de integración comprueban que distintos módulos del sistema trabajen correctamente cuando se integran entre sí.
+
+🧠 Pregunta 35
+¿Por qué es importante la verificabilidad en un criterio de aceptación?
+
+A. Para asegurar que el diseño es visualmente atractivo
+B. Para que se puedan ejecutar pruebas objetivas
+C. Para permitir a los usuarios escribir código
+D. Para incluir métricas de rendimiento
+
+✅ Correcta: B
+🧾 Explicación: La verificabilidad garantiza que los criterios puedan comprobarse objetivamente mediante pruebas, evitando interpretaciones subjetivas.
+
+🧠 Pregunta 36
+¿Qué objetivo cumple el uso de decoradores como @given, @when y @then en Behave?
+
+A. Indicar que un escenario está deshabilitado
+B. Ejecutar código de bajo nivel
+C. Vincular pasos Gherkin con funciones en Python
+D. Definir variables globales en el sistema
+
+✅ Correcta: C
+🧾 Explicación: Estos decoradores conectan los pasos definidos en los archivos .feature con funciones de validación en código Python.
+
+🧠 Pregunta 37
+¿Qué representa la fase de “Pruebas de aceptación” en el enfoque Four-Phase Test?
+
+A. Validación funcional a nivel de usuario
+B. Verificación de errores de compilación
+C. Medición de uso de memoria
+D. Ejecución de scripts internos del sistema
+
+✅ Correcta: A
+🧾 Explicación: Las pruebas de aceptación confirman que el software cumple con los criterios definidos por el usuario final o cliente.
+
+🧠 Pregunta 38
+¿Qué beneficio aporta la “documentación viva” en BDD?
+
+A. Evita que los programadores escriban código
+B. Reduce la necesidad de ejecutar pruebas
+C. Refleja constantemente los requisitos actuales del sistema
+D. Se genera solo al final del proyecto
+
+✅ Correcta: C
+🧾 Explicación: En BDD, los escenarios automatizados se actualizan junto con el desarrollo, manteniendo la documentación siempre alineada con el comportamiento del sistema.
+
+🧠 Pregunta 39
+¿Qué función cumple la carpeta “steps” en un proyecto Behave?
+
+A. Almacena bases de datos
+B. Define configuraciones del servidor
+C. Contiene el código Python asociado a los pasos de Gherkin
+D. Ejecuta scripts Bash automáticamente
+
+✅ Correcta: C
+🧾 Explicación: El directorio “steps” guarda las definiciones en Python que se ejecutan cuando se procesan los pasos definidos en Gherkin.
+
+🧠 Pregunta 40
+¿Qué tipo de lenguaje es Gherkin?
+
+A. Lenguaje compilado de alto nivel
+B. Lenguaje de diseño gráfico
+C. Lenguaje de dominio específico para escribir pruebas
+D. Lenguaje de configuración de servidores
+
+✅ Correcta: C
+🧾 Explicación: Gherkin es un lenguaje diseñado para describir comportamientos de forma clara y legible, orientado a pruebas en BDD.
+
+🧠 Pregunta 41
+¿Qué permite la palabra clave “But” en Gherkin?
+
+A. Detener la ejecución del escenario
+B. Introducir una excepción dentro de los pasos
+C. Eliminar el paso anterior
+D. Ignorar el resultado del escenario
+
+✅ Correcta: B
+🧾 Explicación: “But” se usa para añadir condiciones excepcionales dentro de Given, When o Then, manteniendo la narrativa clara.
+
+🧠 Pregunta 42
+¿Qué rol cumple el backlog en la gestión de historias de usuario?
+
+A. Evitar el control de versiones
+B. Clasificar los errores por prioridad
+C. Organizar y priorizar funcionalidades del producto
+D. Reemplazar el código fuente del proyecto
+
+✅ Correcta: C
+🧾 Explicación: En metodologías ágiles, el backlog es donde se almacenan y priorizan las historias de usuario según su valor para el negocio y el usuario.
+
+🧠 Pregunta 43
+¿Qué tipo de criterio de aceptación se usa para validar condiciones ideales?
+
+A. Negativo
+B. Malicioso
+C. Positivo
+D. Preventivo
+
+✅ Correcta: C
+🧾 Explicación: Los criterios positivos describen el comportamiento esperado del sistema bajo condiciones normales o ideales.
+
+🧠 Pregunta 44
+¿Qué representa el “rol” en una historia de usuario?
+
+A. El desarrollador que programará la historia
+B. La prioridad asignada en el sprint
+C. El tipo de usuario que se beneficiará de la funcionalidad
+D. La tecnología que se debe usar
+
+✅ Correcta: C
+🧾 Explicación: El rol define el perfil del usuario que interactuará con la funcionalidad y se beneficiará de su implementación.
+
+🧠 Pregunta 45
+¿Qué permite lograr la colaboración continua entre áreas en BDD?
+
+A. Que cada miembro trabaje de forma aislada
+B. La exclusividad del lenguaje técnico
+C. La escritura colaborativa de escenarios comprensibles por todos
+D. El uso de bases de datos compartidas
+
+✅ Correcta: C
+🧾 Explicación: BDD fomenta la escritura compartida de escenarios claros que todos los involucrados pueden entender y validar.
+
+🧠 Pregunta 46
+¿Cuándo se deben revisar y actualizar los escenarios de BDD?
+
+A. Solo al final del proyecto
+B. Antes de cada release mayor
+C. Conforme cambian los requisitos o se descubren nuevos detalles
+D. Una vez por año
+
+✅ Correcta: C
+🧾 Explicación: En BDD, los escenarios se deben revisar y ajustar constantemente para reflejar los cambios en los requisitos del sistema.
+
+🧠 Pregunta 47
+¿Qué aspecto clave distingue a las pruebas de sistema?
+
+A. Se realizan únicamente sobre funciones individuales
+B. Se enfocan en validaciones a nivel de base de datos
+C. Simulan el uso real del sistema completo
+D. Se omiten en metodologías ágiles
+
+✅ Correcta: C
+🧾 Explicación: Las pruebas de sistema comprueban que todas las funcionalidades trabajen correctamente de forma integrada, como lo haría un usuario real.
+
+🧠 Pregunta 48
+¿Cuál es una buena práctica recomendada al escribir escenarios en Gherkin?
+
+A. Incluir términos técnicos detallados
+B. Utilizar pasos genéricos y sin contexto
+C. Redactar pasos concisos, claros y reutilizables
+D. Escribir todos los pasos en tercera persona
+
+✅ Correcta: C
+🧾 Explicación: Escenarios concisos y claros permiten su mantenimiento y reutilización, mejorando la calidad de las pruebas automatizadas.
+
+🧠 Pregunta 49
+¿Qué característica del BDD facilita el refactoring seguro del código?
+
+A. Uso de múltiples entornos virtuales
+B. Aplicación de pruebas al final del desarrollo
+C. Suite de pruebas automatizadas bien estructurada
+D. Escritura de documentación técnica detallada
+
+✅ Correcta: C
+🧾 Explicación: Una suite de pruebas robusta garantiza que los cambios en el código no rompan funcionalidades existentes, facilitando el refactoring.
+
+🧠 Pregunta 50
+¿Por qué es importante la automatización de pruebas en un pipeline de CI/CD?
+
+A. Porque evita escribir escenarios
+B. Porque reduce el trabajo del equipo de diseño
+C. Porque valida continuamente la calidad del software
+D. Porque elimina la necesidad de control de versiones
+
+✅ Correcta: C
+🧾 Explicación: Automatizar pruebas en el pipeline permite detectar rápidamente errores y asegurar que los cambios no afecten negativamente el sistema.
+
+🧠 Pregunta 51
+Un equipo detecta que varias funcionalidades desarrolladas recientemente no cumplen con lo que el cliente esperaba, a pesar de haber seguido historias de usuario. ¿Cuál podría ser la causa más probable?
+
+A. Las historias eran muy técnicas y difíciles de comprender por el cliente
+B. Se usó Gherkin para documentar pruebas automatizadas
+C. Se aplicó el enfoque BDD desde el inicio del proyecto
+D. El backlog fue priorizado en función del impacto del negocio
+
+✅ Correcta: A
+🧾 Explicación: Si las historias están redactadas en lenguaje técnico, el cliente puede no comprenderlas correctamente, lo que dificulta validar si las funcionalidades desarrolladas cumplen con sus expectativas reales.
+
+🧠 Pregunta 52
+En un escenario donde múltiples usuarios ingresan datos erróneos en un formulario, ¿qué tipo de criterio de aceptación ayudaría a prevenir vulnerabilidades de seguridad?
+
+A. Criterio positivo que valide credenciales correctas
+B. Criterio negativo que indique errores comunes
+C. Criterio malicioso que verifique resistencia ante ataques inesperados
+D. Criterio de rendimiento que mida tiempos de respuesta
+
+✅ Correcta: C
+🧾 Explicación: Los criterios maliciosos ayudan a proteger el sistema ante entradas anómalas o potenciales ataques, como inyecciones SQL o datos corruptos.
+
+🧠 Pregunta 53
+Un equipo implementa pruebas de aceptación con Behave, pero constantemente encuentra errores en producción. ¿Cuál podría ser una mejora necesaria?
+
+A. Eliminar los pasos "Given" para simplificar los escenarios
+B. Sustituir Behave por pruebas unitarias únicamente
+C. Integrar pruebas unitarias, de integración y de sistema con las de aceptación
+D. Utilizar un lenguaje más técnico en Gherkin
+
+✅ Correcta: C
+🧾 Explicación: Las pruebas de aceptación por sí solas no garantizan calidad total. Es necesario complementar con pruebas en distintas capas (unitarias, integración, sistema) para lograr una cobertura completa.
+
+🧠 Pregunta 54
+Si un escenario Gherkin se vuelve difícil de mantener debido a pasos repetitivos con ligeras variaciones, ¿qué técnica de Behave se puede aplicar?
+
+A. Eliminar los escenarios más largos
+B. Usar expresiones regulares para parametrizar los pasos
+C. Escribir todos los pasos en inglés técnico
+D. Convertir los escenarios en pruebas unitarias
+
+✅ Correcta: B
+🧾 Explicación: Las expresiones regulares permiten reutilizar pasos en Behave capturando datos dinámicos, lo que mejora la mantenibilidad y reduce la duplicación de código.
+
+🧠 Pregunta 55
+Un cliente solicita que se rediseñe una funcionalidad porque “no es como él lo había imaginado”, aunque pasó todos los criterios de aceptación. ¿Cuál sería la acción más efectiva?
+
+A. Eliminar los criterios y rehacer la funcionalidad
+B. Cambiar los escenarios Gherkin por documentación técnica
+C. Replantear junto con el cliente los criterios de aceptación para reflejar mejor sus expectativas
+D. Culpar al equipo de QA por no entender la historia
+
+✅ Correcta: C
+🧾 Explicación: Los criterios de aceptación deben reflejar claramente lo que el cliente espera. Si hay una desconexión, se deben revisar y redefinir en colaboración con él.
+
