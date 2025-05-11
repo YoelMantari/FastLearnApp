@@ -1,0 +1,356 @@
+🧠 Pregunta 56
+Dado el siguiente paso en Gherkin:
+
+gherkin
+Copiar
+Editar
+Given que el usuario "juan123" está registrado en el sistema
+¿Cuál es la definición correcta del paso en Behave usando expresiones regulares?
+
+A.
+
+python
+Copiar
+Editar
+@given('usuario registrado')
+def step_impl(context):
+    pass
+B.
+
+python
+Copiar
+Editar
+@given(r'que el usuario "juan123" está registrado en el sistema')
+def step_impl(context):
+    context.username = "juan123"
+C.
+
+python
+Copiar
+Editar
+@given(r'que el usuario "([^"]+)" está registrado en el sistema')
+def step_impl(context, username):
+    context.username = username
+D.
+
+python
+Copiar
+Editar
+@given(r'que el usuario registrado')
+def step_impl(context, username):
+    pass
+✅ Correcta: C
+🧾 Explicación: La opción C usa una expresión regular para capturar dinámicamente el nombre del usuario desde el paso en Gherkin, asignándolo a la variable username.
+
+🧠 Pregunta 57
+¿Qué hace el siguiente fragmento de código en Behave?
+
+python
+Copiar
+Editar
+@when('el usuario ingresa la contraseña "{password}"')
+def step_impl(context, password):
+    context.password = password
+A. Ejecuta una acción sobre la base de datos
+B. Captura dinámicamente la contraseña del paso en Gherkin y la guarda en el contexto
+C. Verifica que la contraseña sea válida
+D. Define un test unitario para validar contraseñas
+
+✅ Correcta: B
+🧾 Explicación: El decorador @when vincula un paso Gherkin que contiene una contraseña como parámetro y la guarda en context para ser usada en pasos posteriores.
+
+🧠 Pregunta 58
+Supón que tienes este escenario Gherkin:
+
+gherkin
+Copiar
+Editar
+Scenario: Inicio de sesión exitoso
+  Given que el usuario "carla" está registrado en el sistema
+  And la contraseña ingresada es "clave123"
+  When el usuario intenta iniciar sesión
+  Then el sistema le muestra el mensaje "Bienvenida, carla"
+¿Qué paso de Python corresponde al Then?
+
+A.
+
+python
+Copiar
+Editar
+@then('el sistema le muestra el mensaje "{mensaje}"')
+def step_impl(context, mensaje):
+    assert mensaje == "Bienvenida, carla"
+B.
+
+python
+Copiar
+Editar
+@then('el sistema le muestra el mensaje')
+def step_impl(context):
+    print("Mensaje mostrado")
+C.
+
+python
+Copiar
+Editar
+@then('la sesión es exitosa')
+def step_impl(context):
+    assert context.login == True
+D.
+
+python
+Copiar
+Editar
+@then('usuario logueado')
+def step_impl(context, mensaje):
+    assert mensaje in context.message
+✅ Correcta: A
+🧾 Explicación: Se usa una expresión parametrizada para validar que el mensaje mostrado coincide con el esperado. Es la forma correcta de comparar en pruebas BDD.
+
+🧠 Pregunta 59
+¿Cuál es el resultado de ejecutar el siguiente código en un paso @then si context.resultado = 42?
+
+python
+Copiar
+Editar
+@then('el resultado debe ser {esperado:d}')
+def step_impl(context, esperado):
+    assert context.resultado == esperado
+A. El paso se ejecutará correctamente si el resultado es 42
+B. El paso fallará si el resultado es 42
+C. La expresión :d convierte el valor a cadena
+D. esperado será capturado como string
+
+✅ Correcta: A
+🧾 Explicación: El parámetro {esperado:d} en Behave indica que se espera un número entero, y esperado se convierte automáticamente a tipo int para compararlo.
+
+🧠 Pregunta 60
+¿Qué estructura es válida para un archivo .feature en Gherkin?
+
+A.
+
+gherkin
+Copiar
+Editar
+Feature: Login
+
+Step: El usuario se registra
+B.
+
+gherkin
+Copiar
+Editar
+Scenario: Usuario presiona botón
+  Click al botón "Enviar"
+C.
+
+gherkin
+Copiar
+Editar
+Feature: Autenticación
+  Scenario: Login correcto
+    Given el usuario está en el formulario
+    When ingresa sus credenciales válidas
+    Then accede al sistema
+D.
+
+gherkin
+Copiar
+Editar
+Function: Login
+  Case: Ingreso
+    Start > Submit > Response
+✅ Correcta: C
+🧾 Explicación: La opción C respeta la sintaxis de Gherkin: Feature, Scenario, y pasos con Given, When, Then. Es la forma correcta de definir un archivo .feature.
+
+
+
+🧠 Pregunta 56
+Dado el siguiente paso de Gherkin: Dado que el usuario con nombre "Alice" y correo "alice@example.com" está registrado, ¿cómo se implementaría la función de Behave correspondiente en Python utilizando expresiones regulares para capturar los valores dinámicos?
+
+A.
+
+Python
+
+from behave import given
+
+@given('Dado que el usuario con nombre {nombre} y correo {correo} está registrado')
+def step_impl(context, nombre, correo):
+    context.nombre_usuario = nombre
+    context.correo_usuario = correo
+    # ... (código para verificar el registro)
+B.
+
+Python
+
+from behave import given
+
+@given(r'Dado que el usuario con nombre "(.*)" y correo "(.*)" está registrado')
+def step_impl(context, arg1, arg2):
+    context.nombre_usuario = arg1
+    context.correo_usuario = arg2
+    # ... (código para verificar el registro)
+C.
+
+Python
+
+from behave import given
+
+@given('Dado que el usuario con nombre \"(.*)\" y correo \"(.*)\" está registrado')
+def step_impl(context):
+    context.nombre_usuario = "Alice"
+    context.correo_usuario = "alice@example.com"
+    # ... (código para verificar el registro)
+D.
+
+Python
+
+from behave import given
+
+@given('Dado que el usuario con nombre $nombre y correo $correo está registrado')
+def step_impl(context, nombre, correo):
+    context.nombre_usuario = nombre
+    context.correo_usuario = correo
+    # ... (código para verificar el registro)
+✅ Correcta: B
+🧾 Explicación: La opción B utiliza la sintaxis correcta de expresiones regulares en Python (r'...') para capturar cualquier secuencia de caracteres entre comillas como los argumentos arg1 y arg2, que luego se asignan a las variables del contexto.
+
+🧠 Pregunta 57
+Se tiene el siguiente criterio de aceptación para una historia de usuario: "Al ingresar un correo electrónico inválido, el sistema debe mostrar el mensaje de error 'Formato de correo incorrecto'." ¿Cómo se podría escribir un escenario de Gherkin y un fragmento de código Behave (solo la parte del Then) para verificar este comportamiento?
+
+A.
+
+Gherkin
+
+Escenario: Intento de registro con correo inválido
+  Dado que el usuario está en la página de registro
+  Cuando ingresa el correo "usuario@invalido"
+  Entonces el sistema muestra el mensaje de éxito "Registro completado"
+
+# Python (Then step)
+from behave import then
+@then('el sistema muestra el mensaje de éxito "Registro completado"')
+def step_impl(context):
+    assert context.error_message == "Registro completado"
+B.
+
+Gherkin
+
+Escenario: Intento de registro con correo inválido
+  Dado que el usuario está en la página de registro
+  Cuando ingresa el correo "usuario@invalido"
+  Entonces el sistema no permite el registro
+
+# Python (Then step)
+from behave import then
+@then('el sistema no permite el registro')
+def step_impl(context):
+    assert not context.registration_successful
+C.
+
+Gherkin
+
+Escenario: Intento de registro con correo inválido
+  Dado que el usuario está en la página de registro
+  Cuando ingresa el correo "usuario@invalido"
+  Entonces el sistema muestra el mensaje de error 'Formato de correo incorrecto'
+
+# Python (Then step)
+from behave import then
+@then('el sistema muestra el mensaje de error \'{mensaje_error}\'')
+def step_impl(context, mensaje_error):
+    assert context.error_message == mensaje_error
+D.
+
+Gherkin
+
+Escenario: Intento de registro con correo inválido
+  Dado que el usuario está en la página de registro
+  Cuando ingresa el correo "usuario@invalido"
+  Entonces se muestra un error
+
+# Python (Then step)
+from behave import then
+@then('se muestra un error')
+def step_impl(context):
+    assert context.error_displayed is True
+✅ Correcta: C
+🧾 Explicación: La opción C alinea correctamente el escenario de Gherkin con el criterio de aceptación y utiliza una variable ({mensaje_error}) en el paso Then para comparar el mensaje de error real con el esperado.
+
+🧠 Pregunta 58
+En un proyecto Behave, se necesita acceder a un valor almacenado en el context durante un paso Given en un paso Then. Si en el paso Given se guardó el nombre de un producto como context.producto_nombre, ¿cómo se accedería a este valor en el paso Then para verificar un mensaje que lo incluya?
+
+A. Usando una variable global llamada producto_nombre.
+B. Accediendo directamente a producto_nombre sin el prefijo context.
+C. Utilizando context.producto_nombre dentro de la función del paso Then.
+D. Pasando el valor como un argumento adicional en el decorador @then.
+
+✅ Correcta: C
+🧾 Explicación: El objeto context en Behave se utiliza para compartir datos entre los diferentes pasos de un mismo escenario. La forma correcta de acceder a un atributo del contexto es utilizando context.nombre_atributo.
+
+🧠 Pregunta 59
+Dado el siguiente fragmento de código Python en un archivo de steps de Behave:
+
+Python
+
+from behave import when
+
+@when('el usuario hace clic en el botón "{boton_texto}"')
+def step_impl(context, boton_texto):
+    context.boton_clicado = boton_texto
+    # ... (código para simular el clic)
+Y el siguiente escenario de Gherkin:
+
+Gherkin
+
+Escenario: Realizar una acción
+  Dado que el usuario está en la página principal
+  Cuando el usuario hace clic en el botón "Guardar"
+  Entonces se debe registrar la acción del botón "Guardar"
+¿Cómo se verificaría en el paso Then que el botón correcto fue "clicado", utilizando la información almacenada en el context?
+
+A.
+
+Python
+
+from behave import then
+@then('se debe registrar la acción del botón "Guardar"')
+def step_impl(context):
+    assert "Guardar" in context.registro_acciones
+B.
+
+Python
+
+from behave import then
+@then('se debe registrar la acción del botón "Guardar"')
+def step_impl(context):
+    assert context.boton_clicado == "Acceder"
+C.
+
+Python
+
+from behave import then
+@then('se debe registrar la acción del botón "Guardar"')
+def step_impl(context):
+    assert context.boton_clicado is True
+D.
+
+Python
+
+from behave import then
+@then('se debe registrar la acción del botón "Guardar"')
+def step_impl(context):
+    assert context.boton_clicado == "Guardar"
+✅ Correcta: D
+🧾 Explicación: La opción D verifica correctamente que el valor almacenado en context.boton_clicado (que se estableció en el paso When) sea igual al texto del botón esperado ("Guardar").
+
+🧠 Pregunta 60
+En un proyecto Behave, se necesita ejecutar un código de configuración (setup) antes de que se ejecute cada Feature y un código de limpieza (teardown) después de cada Scenario. ¿Dónde se definirían estas funciones de "hooks"?
+
+A. Directamente dentro de los archivos .feature.
+B. En archivos separados con nombres específicos dentro del directorio steps.
+C. En un archivo llamado environment.py en la raíz del proyecto o en el directorio steps.
+D. En archivos de configuración .ini o .yaml.
+
+✅ Correcta: C
+🧾 Explicación: Behave utiliza un archivo especial llamado environment.py donde se pueden definir funciones de "hooks" como before_feature y after_scenario para ejecutar código en momentos específicos del ciclo de vida de las pruebas.
