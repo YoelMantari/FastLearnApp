@@ -1,0 +1,129 @@
+🧠 Pregunta 91 (2 puntos)
+
+Rebase interactivo y colaboración
+
+Un equipo de desarrollo está utilizando intensivamente ramas de características de larga duración. Antes de integrar estas ramas en la principal, cada desarrollador realiza un rebase interactivo para limpiar su historial local.
+
+a) Describe un escenario específico donde esta práctica, aunque bienintencionada, podría generar complicaciones significativas para la colaboración dentro del equipo. (1 punto)
+b) Propón una estrategia de comunicación o un conjunto de directrices que el equipo podría implementar para mitigar los riesgos asociados con el rebase interactivo en este contexto. (1 punto)
+
+✅ Correcta: (La respuesta debe abordar los riesgos de reescritura de historia compartida y proponer soluciones como comunicación clara y evitar rebasar commits ya publicados).
+
+🧾 Explicación: El rebase interactivo en ramas compartidas puede causar problemas de sincronización y pérdida de trabajo para otros colaboradores. Una buena estrategia implica comunicar las intenciones de rebase, evitar rebasar commits ya publicados y, en algunos casos, optar por merges sin Fast-Forward para mantener la trazabilidad.
+
+🧠 Pregunta 92 (2 puntos)
+
+Merge avanzado y flujo de trabajo
+
+Un proyecto tiene dos ramas principales activas: main para la versión estable y next para el desarrollo de la próxima versión. Se han completado varias características en ramas separadas y ahora deben integrarse primero en next y luego, selectivamente, en main.
+
+a) Describe cómo se podría utilizar un merge sin Fast-Forward para integrar una rama de característica en next, destacando los beneficios de este enfoque en este flujo de trabajo. (1 punto)
+b) Explica cómo se podría luego integrar solo un commit específico de la rama de característica (ya fusionada en next) a la rama main, y qué herramienta de Git permitiría realizar esta acción. (1 punto)
+
+✅ Correcta: (La respuesta debe explicar el uso de --no-ff para trazabilidad en next y el uso de cherry-pick para integrar commits específicos en main).
+
+🧾 Explicación: El merge sin Fast-Forward en next mantiene la historia de la característica. Para integrar un commit específico en main, se puede usar git cherry-pick para aplicar ese commit sin traer toda la rama.
+
+🧠 Pregunta 93 (2 puntos)
+
+Herramientas de diagnóstico y resolución de problemas
+
+Un desarrollador introduce un error en el código, pero no se da cuenta hasta varios commits después. El equipo decide utilizar git bisect para encontrar el commit culpable.
+
+a) Describe brevemente el proceso de git bisect, incluyendo los comandos clave y cómo el equipo colaboraría para identificar el commit problemático. (1 punto)
+b) Una vez identificado el commit, ¿cómo podría el desarrollador utilizar git blame y git log -L para comprender mejor el cambio que introdujo el error y su contexto? (1 punto)
+
+✅ Correcta: (La respuesta debe describir los pasos de git bisect y cómo git blame muestra la autoría de las líneas y git log -L la evolución de la función).
+
+🧾 Explicación: git bisect usa búsqueda binaria para encontrar el commit. git blame ayuda a ver quién modificó las líneas del error, y git log -L muestra la historia de la función afectada.
+
+🧠 Pregunta 94 (2 puntos)
+
+Reflog y recuperación de errores
+
+Un desarrollador ejecuta accidentalmente un git reset --hard HEAD~3 en su rama local, eliminando varios commits importantes que aún no habían sido compartidos.
+
+a) Explica cómo el desarrollador podría utilizar el reflog para identificar los commits perdidos y recuperar su trabajo. Incluye el comando clave para ver el reflog y la estrategia para restaurar la rama al estado deseado. (1 punto)
+b) ¿Qué advertencia importante se debe tener en cuenta si estos commits eliminados ya hubieran sido enviados a un repositorio remoto compartido? (1 punto)
+
+✅ Correcta: (La respuesta debe explicar cómo listar el reflog y usar git reset --hard HEAD@{n} para recuperar, y advertir sobre los riesgos de reescribir historia remota).
+
+🧾 Explicación: El reflog rastrea los cambios en HEAD. Se puede usar para encontrar el punto antes del reset y volver a él. Si los commits ya estaban en remoto, forzar un push puede causar problemas a otros.
+
+🧠 Pregunta 95 (2 puntos)
+
+Submódulos y gestión de dependencias
+
+Un proyecto utiliza un submódulo para incluir una biblioteca externa. El equipo necesita actualizar la biblioteca a una nueva versión.
+
+a) Describe los pasos necesarios para actualizar el submódulo a la última versión de su rama remota y cómo se registraría este cambio en el repositorio principal del proyecto. (1 punto)
+b) ¿Cuál es una posible desventaja de utilizar submódulos en comparación con subtrees en términos de la experiencia del desarrollador al clonar el proyecto por primera vez? (1 punto)
+
+✅ Correcta: (La respuesta debe detallar los comandos git submodule update --remote y el commit en el principal, y mencionar la necesidad de inicializar y actualizar submódulos al clonar).
+
+🧾 Explicación: Para actualizar un submódulo, se usa git submodule update --remote y luego se commite el cambio en el repositorio principal. Clonar un proyecto con submódulos requiere un paso adicional para inicializar y actualizar los submódulos.
+
+🧠 Pregunta 96 (2 puntos)
+
+Subtrees e integración de proyectos
+
+Un proyecto principal necesita integrar el código de otro repositorio interno como un subtree. Este repositorio interno se actualiza con frecuencia y el equipo desea incorporar estos cambios de manera regular.
+
+a) Describe el comando y el proceso para agregar el repositorio interno como un subtree al proyecto principal, especificando la importancia del prefijo. (1 punto)
+b) Explica cómo se realizarían las actualizaciones posteriores del subtree con los cambios del repositorio interno y qué opción se podría utilizar para mantener un historial más limpio en el proyecto principal durante estas actualizaciones. (1 punto)
+
+✅ Correcta: (La respuesta debe detallar git subtree add con el prefijo y git subtree pull con la opción --squash para un historial limpio).
+
+🧾 Explicación: git subtree add integra el repositorio externo en un subdirectorio (prefijo). Las actualizaciones se realizan con git subtree pull. La opción --squash combina los commits del subtree en uno solo en el proyecto principal.
+
+🧠 Pregunta 97 (2 puntos)
+
+Automatización con scripts
+
+Un equipo desea automatizar la tarea de verificar que todos los mensajes de commit sigan un formato específico antes de ser aceptados.
+
+a) Describe en pseudocódigo cómo se podría implementar un hook pre-commit en Git para verificar el formato del mensaje del commit. (1 punto)
+b) Explica cómo este tipo de automatización podría contribuir a la calidad del historial del repositorio a largo plazo y facilitar la comprensión de los cambios. (1 punto)
+
+✅ Correcta: (La respuesta debe incluir la lectura del mensaje, la verificación con una expresión regular y la salida de error si no coincide, explicando cómo esto mejora la consistencia y claridad del historial).
+
+🧾 Explicación: Un hook pre-commit puede leer el mensaje del commit y verificar su formato. Esto asegura la consistencia de los mensajes, lo que facilita la búsqueda y comprensión del historial.
+
+🧠 Pregunta 98 (2 puntos)
+
+Comparación de flujos de trabajo
+
+Compara brevemente las implicaciones en el historial del repositorio y la complejidad de la colaboración entre un flujo de trabajo que utiliza principalmente merges directos (Fast-Forward cuando sea posible) y uno que utiliza exclusivamente merges sin Fast-Forward.
+
+a) ¿Cómo se vería el historial en cada caso y qué información se destacaría o se perdería? (1 punto)
+b) ¿Qué consideraciones importantes deberían tenerse en cuenta al elegir uno de estos flujos de trabajo para un equipo colaborativo? (1 punto)
+
+✅ Correcta: (La respuesta debe describir un historial lineal con Fast-Forward y uno con commits de merge con --no-ff, discutiendo la trazabilidad vs. simplicidad y la importancia de la política del equipo).
+
+🧾 Explicación: Fast-Forward crea un historial lineal pero pierde la trazabilidad de las características como ramas. --no-ff mantiene la trazabilidad pero crea un historial más ramificado. La elección depende de las necesidades del equipo.
+
+🧠 Pregunta 99 (2 puntos)
+
+Anatomía del Object Database y Reflog
+
+Un desarrollador elimina accidentalmente un archivo importante que no estaba versionado en Git.
+
+a) Explica por qué este archivo no se puede recuperar directamente utilizando comandos de Git de manipulación del historial de commits (como git checkout de un commit anterior). (1 punto)
+b) Describe si el reflog podría ofrecer alguna ayuda en este escenario y, de ser así, cómo. (1 punto)
+
+✅ Correcta: (La respuesta debe explicar que Git rastrea commits, no archivos sin versionar, y que el reflog rastrea cambios en las referencias, no el contenido del working directory no versionado).
+
+🧾 Explicación: Git solo rastrea archivos versionados en commits. El reflog rastrea cambios en las referencias (HEAD, ramas), no archivos sin commit en el working directory. Por lo tanto, el reflog no ayudaría a recuperar un archivo no versionado eliminado.
+
+🧠 Pregunta 100 (2 puntos)
+
+Patrones de Branching y Desarrollo
+
+Considerando los patrones de "Feature Branching" y "Continuous Integration" mencionados en la lectura de Martin Fowler, describe un escenario de proyecto donde la adopción estricta de "Continuous Integration" podría presentar desafíos significativos para el equipo de desarrollo.
+
+a) Describe un tipo de proyecto o situación donde las integraciones frecuentes y pequeñas podrían ser difíciles de implementar o contraproducentes. (1 punto)
+b) ¿Qué patrón de branching podría ser una alternativa más adecuada en ese escenario y por qué? (1 punto)
+
+✅ Correcta: (La respuesta debe describir proyectos con características grandes y complejas que requieren un desarrollo aislado prolongado, sugiriendo "Feature Branching" como una alternativa para un desarrollo más aislado antes de la integración).
+
+🧾 Explicación: En proyectos con características grandes y complejas, la integración continua podría ser disruptiva. El "Feature Branching" permite un desarrollo más aislado antes de la integración, lo que puede ser más adecuado en estos casos.

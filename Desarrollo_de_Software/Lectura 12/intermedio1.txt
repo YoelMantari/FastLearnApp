@@ -1,0 +1,389 @@
+🧠 Pregunta 1
+
+¿Cuál es el propósito principal del rebase interactivo en Git?
+
+A. Fusionar múltiples ramas en una sola.
+B. Modificar y limpiar la historia de los commits antes de la integración.
+C. Rastrear los cambios realizados por diferentes colaboradores.
+D. Publicar los cambios locales en un repositorio remoto.
+
+✅ Correcta: B
+
+🧾 Explicación: El rebase interactivo permite reestructurar la línea de historia de un repositorio, facilitando la combinación de commits, la modificación de mensajes y la eliminación de commits innecesarios antes de integrar los cambios en la rama principal.
+
+🧠 Pregunta 2
+
+¿Qué comando de git rebase -i permite combinar dos o más commits en uno solo, conservando los cambios de todos ellos?
+
+A. reword
+B. edit
+C. squash
+D. fixup
+
+✅ Correcta: C
+
+🧾 Explicación: El comando squash (o su abreviatura s) en el rebase interactivo se utiliza para fusionar varios commits seleccionados en un único commit, combinando sus respectivos cambios en el proceso.
+
+🧠 Pregunta 3
+
+¿Cuál es la principal diferencia entre un merge normal y un merge sin Fast-Forward (--no-ff)?
+
+A. El merge sin Fast-Forward siempre evita los conflictos.
+B. El merge normal crea un commit adicional para registrar la fusión.
+C. El merge sin Fast-Forward fuerza la creación de un commit de merge, manteniendo la historia de la rama fusionada.
+D. El merge normal solo se puede realizar si la rama a fusionar está directamente detrás de la rama objetivo.
+
+✅ Correcta: C
+
+🧾 Explicación: La opción --no-ff en el comando git merge asegura que siempre se cree un commit de merge, incluso si la fusión podría realizarse con un Fast-Forward. Esto preserva la existencia de la rama de características en la historia del proyecto.
+
+🧠 Pregunta 4
+
+¿En qué escenario es más apropiado utilizar un "Octopus merge"?
+
+A. Cuando se necesita resolver conflictos complejos entre dos ramas.
+B. Cuando se desean fusionar secuencialmente varias ramas pequeñas.
+C. Cuando se quieren integrar múltiples ramas independientes en un solo commit.
+D. Cuando se busca una forma rápida y sencilla de fusionar dos ramas sin crear un commit adicional.
+
+✅ Correcta: C
+
+🧾 Explicación: El "Octopus merge" está diseñado para fusionar más de dos ramas simultáneamente en un solo commit, siendo ideal para integrar varias ramas de características que no tienen conflictos entre sí.
+
+🧠 Pregunta 5
+
+¿Cuál de las siguientes opciones describe mejor la función del comando git log --graph --decorate --oneline?
+
+A. Muestra una lista detallada de todos los commits, incluyendo autor, fecha y mensaje.
+B. Presenta la historia de commits de forma lineal, mostrando solo el hash y el mensaje de cada commit.
+C. Visualiza la historia de commits como un árbol, decorando cada commit con referencias y mostrando cada uno en una sola línea.
+D. Permite buscar commits específicos dentro del historial basándose en palabras clave en el mensaje.
+
+✅ Correcta: C
+
+🧾 Explicación: La combinación de --graph muestra la estructura de ramas y merges, --decorate añade información sobre las ramas y etiquetas, y --oneline compacta cada commit en una sola línea para una visión general más concisa.
+
+🧠 Pregunta 6
+
+¿Para qué se utiliza principalmente el comando git blame?
+
+A. Para comparar diferentes versiones de un archivo.
+B. Para identificar el commit que introdujo un error en el código.
+C. Para asociar cada línea de un archivo con el commit y el autor de la última modificación.
+D. Para mostrar el historial de cambios de un archivo específico.
+
+✅ Correcta: C
+
+🧾 Explicación: git blame anota cada línea de un archivo, mostrando el commit y el autor que realizaron la última modificación en esa línea, lo que ayuda a entender la autoría y el origen de los cambios.
+
+🧠 Pregunta 7
+
+El comando git bisect utiliza una estrategia de búsqueda para encontrar un commit específico. ¿Qué tipo de búsqueda emplea?
+
+A. Búsqueda lineal.
+B. Búsqueda por profundidad.
+C. Búsqueda binaria.
+D. Búsqueda heurística.
+
+✅ Correcta: C
+
+🧾 Explicación: git bisect utiliza una búsqueda binaria al dividir repetidamente el rango de commits a la mitad, lo que permite encontrar el commit que introdujo un error de manera eficiente al requerir probar solo un subconjunto logarítmico del historial.
+
+🧠 Pregunta 8
+
+En el contexto de git bisect, ¿qué significan los comandos git bisect good y git bisect bad?
+
+A. Indican el inicio y el final del proceso de búsqueda.
+B. Marcan un commit como libre de errores o como conteniendo el error, respectivamente.
+C. Muestran una lista de los commits que han sido probados.
+D. Permiten volver al commit anterior o avanzar al siguiente en la búsqueda.
+
+✅ Correcta: B
+
+🧾 Explicación: Después de probar un commit durante el proceso de git bisect, se utiliza git bisect good para indicar que ese commit no contiene el error, y git bisect bad para señalar que sí lo contiene, permitiendo a Git reducir el rango de búsqueda.
+
+🧠 Pregunta 9
+
+¿Cuál es la función principal del comando git reflog?
+
+A. Mostrar el historial de commits del repositorio.
+B. Rastrear todos los cambios en los punteros de las ramas y los movimientos de HEAD.
+C. Comparar las diferencias entre dos commits o ramas.
+D. Eliminar commits de la historia del repositorio de forma segura.
+
+✅ Correcta: B
+
+🧾 Explicación: git reflog registra cada cambio realizado en las referencias (como HEAD, ramas, etc.), permitiendo rastrear movimientos y potencialmente recuperar commits que se hayan perdido debido a operaciones como resets o rebases.
+
+🧠 Pregunta 10
+
+Si accidentalmente ejecutas git reset --hard HEAD~1, ¿qué comando podrías usar para intentar recuperar el estado anterior de tu rama, basándote en la lectura?
+
+A. git log
+B. git checkout
+C. git reflog seguido de git reset --hard HEAD@{n}
+D. git revert HEAD
+
+✅ Correcta: C
+
+🧾 Explicación: El git reflog registra los movimientos de HEAD. Al listar el reflog, puedes identificar el estado anterior (antes del reset) y usar git reset --hard HEAD@{n} (donde n es el índice del estado anterior en el reflog) para volver a ese punto.
+
+🧠 Pregunta 11
+
+¿Cuál es la principal diferencia entre un submódulo y un subtree en Git?
+
+A. Los submódulos integran el contenido del repositorio externo directamente en el principal, mientras que los subtrees mantienen una referencia separada.
+B. Los subtrees permiten tener diferentes versiones del repositorio externo en diferentes ramas del repositorio principal.
+C. Los submódulos mantienen un enlace a un commit específico del repositorio externo, requiriendo una actualización explícita, mientras que los subtrees integran el contenido sin una referencia separada.
+D. Los subtrees son más fáciles de inicializar y actualizar que los submódulos.
+
+✅ Correcta: C
+
+🧾 Explicación: Los submódulos actúan como enlaces a un commit específico de un repositorio externo, mientras que los subtrees copian el contenido del repositorio externo directamente al principal, facilitando la fusión pero sin un vínculo directo continuo.
+
+🧠 Pregunta 12
+
+¿Qué archivo se actualiza automáticamente cuando se agrega un submódulo a un repositorio Git?
+
+A. .gitignore
+B. .gitattributes
+C. .gitmodules
+D. .gitkeep
+
+✅ Correcta: C
+
+🧾 Explicación: El archivo .gitmodules almacena la información sobre los submódulos, como la URL del repositorio externo y la ruta local donde se encuentra el submódulo dentro del repositorio principal.
+
+🧠 Pregunta 13
+
+¿Cuál es el propósito de la opción --squash al agregar o actualizar un subtree?
+
+A. Comprimir el tamaño del repositorio del subtree.
+B. Fusionar todos los commits del subtree en un único commit en el repositorio principal.
+C. Evitar la creación de un commit de merge al integrar el subtree.
+D. Mantener el historial completo del subtree dentro del repositorio principal.
+
+✅ Correcta: B
+
+🧾 Explicación: La opción --squash al agregar o hacer pull de un subtree combina todos los commits del repositorio externo en un único commit dentro del repositorio principal, lo que puede ayudar a mantener un historial más limpio en el proyecto principal.
+
+🧠 Pregunta 14
+
+En el ejemplo completo proporcionado, después de realizar un "Octopus merge" de las ramas feature/login y feature/dashboard en master, ¿cuántos commits de merge se esperaría ver (asumiendo que no hubo conflictos)?
+
+A. Ninguno, los cambios se integrarían directamente en el último commit de master.
+B. Un commit de merge que combina los cambios de ambas ramas.
+C. Dos commits de merge, uno por cada rama fusionada.
+D. Un commit por cada cambio individual realizado en las ramas fusionadas.
+
+✅ Correcta: B
+
+🧾 Explicación: Un "Octopus merge" está diseñado para fusionar múltiples ramas en un solo commit de merge, lo que significa que se crearía un único commit para integrar los cambios de feature/login y feature/dashboard en la rama master.
+
+🧠 Pregunta 15
+
+¿Qué acción realiza el comando pick durante un rebase interactivo?
+
+A. Permite modificar el mensaje del commit.
+B. Detiene el proceso de rebase para permitir la edición del commit.
+C. Utiliza el commit tal como está, sin realizar ninguna modificación.
+D. Combina el commit actual con el commit anterior.
+
+✅ Correcta: C
+
+🧾 Explicación: El comando pick indica a Git que se debe mantener el commit seleccionado tal cual, sin realizar ninguna alteración en su contenido o mensaje durante el rebase interactivo.
+
+🧠 Pregunta 16
+
+¿Cuál es la diferencia fundamental entre los comandos squash y fixup en un rebase interactivo?
+
+A. squash permite editar el mensaje del commit combinado, mientras que fixup descarta el mensaje del commit que se está combinando.
+B. fixup combina los cambios de varios commits en uno solo, mientras que squash simplemente reordena los commits.
+C. squash se utiliza para eliminar commits, mientras que fixup se usa para modificar su contenido.
+D. No hay diferencia funcional entre squash y fixup; ambos realizan la misma acción.
+
+✅ Correcta: A
+
+🧾 Explicación: Tanto squash como fixup combinan commits, pero squash abre un editor para permitir la modificación del mensaje del commit resultante, mientras que fixup automáticamente descarta el mensaje del commit que se está fusionando, utilizando el mensaje del commit anterior.
+
+🧠 Pregunta 17
+
+¿Cuál es una ventaja de mantener un historial limpio en Git, lograda a través de técnicas como el rebase interactivo?
+
+A. Reduce el tamaño del repositorio.
+B. Acelera la ejecución de los comandos de Git.
+C. Facilita la revisión del código y el seguimiento de los cambios.
+D. Mejora el rendimiento de la aplicación desarrollada.
+
+✅ Correcta: C
+
+🧾 Explicación: Un historial limpio, con commits bien organizados y mensajes claros, facilita la comprensión de la evolución del proyecto, la identificación de cambios específicos y la colaboración entre desarrolladores.
+
+🧠 Pregunta 18
+
+En el contexto de Git, ¿qué se entiende por "Fast-Forward merge"?
+
+A. Una fusión que requiere la resolución manual de conflictos.
+B. Una fusión en la que la rama a integrar está directamente detrás de la rama objetivo, moviendo simplemente el puntero de la rama objetivo.
+C. Una fusión que crea siempre un nuevo commit de merge.
+D. Una técnica para fusionar ramas con historiales significativamente divergentes.
+
+✅ Correcta: B
+
+🧾 Explicación: Un "Fast-Forward merge" ocurre cuando la rama que se va a fusionar es un descendiente directo de la rama objetivo. En este caso, en lugar de crear un nuevo commit de merge, Git simplemente mueve el puntero de la rama objetivo al último commit de la rama que se está fusionando.
+
+🧠 Pregunta 19
+
+¿Cuál es la principal limitación del "Octopus merge" mencionada en la lectura?
+
+A. No se puede utilizar para fusionar más de tres ramas simultáneamente.
+B. Requiere que todas las ramas a fusionar tengan un ancestro común reciente.
+C. No permite la intervención manual en caso de conflictos.
+D. Solo se puede realizar si las ramas a fusionar tienen cambios en los mismos archivos.
+
+✅ Correcta: C
+
+🧾 Explicación: El "Octopus merge" está diseñado para fusionar ramas sin conflictos. Si Git detecta conflictos, la operación fallará y no se completará el merge, sin ofrecer la posibilidad de resolverlos durante el proceso.
+
+🧠 Pregunta 20
+
+Si deseas ver la historia de commits mostrando las ramas y etiquetas junto a cada commit, ¿qué opción agregarías al comando git log?
+
+A. --oneline
+B. --graph
+C. --decorate
+D. --stat
+
+✅ Correcta: C
+
+🧾 Explicación: La opción --decorate al comando git log añade información sobre las referencias (ramas, etiquetas) junto a cada commit en la salida, lo que facilita la comprensión de la estructura del repositorio.
+
+🧠 Pregunta 21
+
+Al utilizar git blame archivo.txt, ¿qué información principal se muestra para cada línea del archivo?
+
+A. El número de línea y el contenido de la línea.
+B. El hash del commit, el autor, la fecha y el contenido de la línea.
+C. Las diferencias entre la línea actual y la versión anterior.
+D. Los permisos del archivo y la fecha de la última modificación.
+
+✅ Correcta: B
+
+🧾 Explicación: El comando git blame anota cada línea del archivo, mostrando el commit que realizó la última modificación en esa línea, junto con el autor y la fecha de ese commit, además del contenido de la línea.
+
+🧠 Pregunta 22
+
+Durante una sesión de git bisect, si ejecutas un script de pruebas y este indica que el commit actual contiene el error, ¿qué comando debes ejecutar a continuación?
+
+A. git bisect next
+B. git bisect good
+C. git bisect bad
+D. git bisect reset
+
+✅ Correcta: C
+
+🧾 Explicación: Si el script de pruebas falla en el commit actual, significa que ese commit es "malo" (contiene el error), por lo que debes ejecutar git bisect bad para informar a Git y continuar con la búsqueda.
+
+🧠 Pregunta 23
+
+Después de finalizar una sesión de git bisect, ¿qué comando se recomienda ejecutar para volver a tu rama de trabajo original?
+
+A. git checkout HEAD
+B. git reset --hard
+C. git bisect reset
+D. git bisect finish
+
+✅ Correcta: C
+
+🧾 Explicación: El comando git bisect reset limpia el estado de bisect y devuelve tu repositorio a la rama y commit en los que estabas antes de iniciar el proceso de búsqueda binaria.
+
+🧠 Pregunta 24
+
+¿Qué tipo de información se puede encontrar en el git reflog que no está disponible en el git log tradicional?
+
+A. El contenido de los commits.
+B. Los mensajes de los commits.
+C. Los cambios en los punteros de las ramas y los movimientos de HEAD, incluso aquellos que no resultan en un nuevo commit.
+D. La lista de todos los archivos modificados en cada commit.
+
+✅ Correcta: C
+
+🧾 Explicación: El git reflog rastrea los movimientos de las referencias de Git, como los cambios de rama, los resets y los merges, proporcionando un historial de las acciones que han afectado el estado de tus ramas, incluso si no se crearon commits en el proceso.
+
+🧠 Pregunta 25
+
+Al agregar un submódulo, ¿a qué apunta inicialmente el enlace dentro del repositorio principal?
+
+A. A la última versión de la rama principal del repositorio externo.
+B. A una rama específica configurada durante la adición del submódulo.
+C. A un commit específico del repositorio externo.
+D. A la URL del repositorio externo, sin referencia a un commit específico hasta que se actualiza.
+
+✅ Correcta: C
+
+🧾 Explicación: Cuando se agrega un submódulo, se crea un enlace fijo a un commit específico del repositorio externo en el momento de la adición. Para actualizar el submódulo a una versión más reciente, se debe realizar una operación explícita.
+
+🧠 Pregunta 26
+
+¿Qué comando se utiliza para inicializar y actualizar los submódulos después de clonar un repositorio que los contiene?
+
+A. git submodule init seguido de git submodule update
+B. git clone --recurse-submodules
+C. git submodule add seguido de la URL del repositorio externo
+D. git submodule sync seguido de git submodule update
+
+✅ Correcta: A
+
+🧾 Explicación: Después de clonar un repositorio con submódulos, primero se debe inicializar la configuración de los submódulos con git submodule init, y luego se deben actualizar para traer el contenido de los repositorios externos referenciados con git submodule update. La opción --init --recursive en git submodule update también puede utilizarse para inicializar y actualizar submódulos anidados.
+
+🧠 Pregunta 27
+
+¿Cuál es una ventaja de utilizar subtrees en lugar de submódulos para integrar un proyecto externo?
+
+A. Los subtrees mantienen un enlace directo al historial del repositorio externo.
+B. Las actualizaciones de los subtrees son generalmente más automáticas.
+C. Los subtrees integran el contenido del repositorio externo directamente en el árbol del proyecto principal, facilitando la colaboración sin necesidad de inicializar o actualizar submódulos por separado.
+D. Los subtrees permiten tener múltiples versiones del proyecto externo dentro del mismo repositorio principal.
+
+✅ Correcta: C
+
+🧾 Explicación: Los subtrees integran el contenido de otro repositorio directamente en el árbol del repositorio principal, lo que puede simplificar el flujo de trabajo para algunos equipos al no requerir la gestión separada de los submódulos.
+
+🧠 Pregunta 28
+
+En el ejemplo completo, después de ejecutar git subtree add, ¿dónde se encuentra el contenido del repositorio externo https://github.com/usuario/lib-subs.git dentro del project-integrado?
+
+A. En un directorio llamado .git/modules/lib-subs.
+B. Directamente en la raíz del project-integrado.
+C. En un directorio llamado libs/lib-subs.
+D. Como un archivo comprimido dentro del repositorio principal.
+
+✅ Correcta: C
+
+🧾 Explicación: El comando git subtree add --prefix=libs/lib-subs ... especifica que el contenido del repositorio externo debe integrarse dentro de un directorio llamado libs/lib-subs dentro del repositorio principal.
+
+🧠 Pregunta 29
+
+¿Qué comando se utilizó en el ejemplo completo para simular la creación de la rama feature/login y cambiar a ella?
+
+A. git branch feature/login seguido de git checkout feature/login
+B. git checkout -b feature/login
+C. git branch -c feature/login
+D. git switch feature/login --create
+
+✅ Correcta: B
+
+🧾 Explicación: El comando git checkout -b <nombre_de_la_rama> crea una nueva rama con el nombre especificado y cambia inmediatamente a esa rama, combinando la creación y el cambio de rama en un solo paso.
+
+🧠 Pregunta 30
+
+En el escenario de recuperación utilizando git reflog, ¿qué indica la notación HEAD@{1}?
+
+A. El último commit en la rama actual.
+B. El commit al que HEAD apuntaba inmediatamente antes del estado actual.
+C. El primer commit realizado en la rama actual.
+D. Un commit específico identificado por el hash 1.
+
+✅ Correcta: B
+
+🧾 Explicación: La notación HEAD@{n} en el git reflog se refiere al estado de HEAD en un momento específico en el pasado, donde HEAD@{0} es el estado actual, HEAD@{1} es el estado anterior, y así sucesivamente. Por lo tanto, HEAD@{1} representa el estado de HEAD justo antes de la última operación que lo modificó.

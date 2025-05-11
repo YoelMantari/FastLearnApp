@@ -1,0 +1,390 @@
+🧠 Pregunta 31
+
+¿Qué ocurre si intentas realizar un rebase interactivo y existen commits que ya han sido compartidos con un repositorio remoto?
+
+A. Git automáticamente crea una nueva rama para el rebase.
+B. Git advierte sobre el peligro de reescribir la historia compartida, pero permite continuar.
+C. Git bloquea la operación de rebase para evitar inconsistencias en el repositorio remoto.
+D. Git realiza el rebase en una copia local de la rama sin afectar la rama remota.
+
+✅ Correcta: B
+
+🧾 Explicación: Reescribir la historia (como con rebase) en ramas compartidas puede causar problemas para otros colaboradores. Git te advertirá, pero te permitirá continuar, asumiendo que entiendes los riesgos.
+
+🧠 Pregunta 32
+
+¿Cuál de los siguientes comandos se utiliza para detener temporalmente un rebase interactivo para permitir modificaciones en un commit específico?
+
+A. git rebase --abort
+B. git rebase --continue
+C. git rebase --skip
+D. El comando edit dentro del editor de rebase.
+
+✅ Correcta: D
+
+🧾 Explicación: Al marcar un commit con edit en el editor de rebase interactivo, Git detendrá el proceso en ese commit, permitiéndote realizar modificaciones, stage changes y luego continuar el rebase con git rebase --continue.
+
+🧠 Pregunta 33
+
+Si durante un rebase interactivo utilizas el comando drop en un commit, ¿qué sucede con ese commit?
+
+A. Su mensaje se elimina, pero los cambios se mantienen.
+B. Se combina con el commit anterior.
+C. Se elimina por completo de la historia de la rama.
+D. Se mueve al final de la secuencia de commits a rebasar.
+
+✅ Correcta: C
+
+🧾 Explicación: El comando drop en el rebase interactivo instruye a Git para que elimine completamente el commit seleccionado de la historia de la rama que se está rebasando.
+
+🧠 Pregunta 34
+
+¿En qué situación sería más útil realizar un merge sin Fast-Forward (--no-ff)?
+
+A. Cuando se fusiona una rama de corrección rápida a la rama principal.
+B. Cuando se desea mantener un historial lineal y simplificado.
+C. Cuando se quiere preservar la información de cuándo y cómo se integró una característica completa.
+D. Cuando la rama a fusionar está directamente detrás de la rama objetivo.
+
+✅ Correcta: C
+
+🧾 Explicación: El merge sin Fast-Forward crea un commit de merge explícito, lo que permite visualizar claramente en el historial cuándo se integró una rama de características, incluso si la fusión podría haber sido un Fast-Forward.
+
+🧠 Pregunta 35
+
+¿Qué podría causar un conflicto durante un "Octopus merge"?
+
+A. Intentar fusionar más de tres ramas simultáneamente.
+B. Si las ramas a fusionar tienen cambios incompatibles en los mismos archivos.
+C. Si alguna de las ramas a fusionar tiene un historial muy largo.
+D. Si las ramas a fusionar no comparten un ancestro común.
+
+✅ Correcta: B
+
+🧾 Explicación: Al igual que con los merges normales, los conflictos en un "Octopus merge" ocurren cuando dos o más ramas que se están fusionando tienen cambios contradictorios en las mismas líneas de los mismos archivos.
+
+🧠 Pregunta 36
+
+Si deseas ver la historia de un archivo específico, incluyendo los commits que lo modificaron, ¿qué comando utilizarías?
+
+A. git log --follow <archivo>
+B. git history <archivo>
+C. git blame <archivo>
+D. git diff <archivo>
+
+✅ Correcta: A
+
+🧾 Explicación: El comando git log --follow <archivo> rastrea la historia del archivo especificado, incluso si el archivo ha sido renombrado a lo largo del tiempo.
+
+🧠 Pregunta 37
+
+¿Cuál es el propósito de la opción -L en el comando git log?
+
+A. Mostrar los logs en un formato más conciso (una línea).
+B. Limitar el número de logs mostrados.
+C. Seguir la evolución de un rango específico de líneas o una función dentro de un archivo.
+D. Mostrar los logs de una rama específica.
+
+✅ Correcta: C
+
+🧾 Explicación: La opción -L en git log permite filtrar el historial para mostrar solo los commits que afectaron a un rango específico de líneas o a una función dentro de un archivo, lo que es útil para entender la evolución de una parte particular del código.
+
+🧠 Pregunta 38
+
+Durante una sesión de git bisect, ¿qué ocurre si no estás seguro si un commit es "bueno" o "malo"?
+
+A. Debes marcarlo como "malo" para continuar la búsqueda.
+B. Debes marcarlo como "bueno" para continuar la búsqueda.
+C. Puedes usar git bisect skip para omitir este commit y probar el siguiente.
+D. Debes reiniciar la sesión de git bisect.
+
+✅ Correcta: C
+
+🧾 Explicación: Si no puedes determinar si un commit introdujo el error, puedes usar git bisect skip para que Git lo ignore y pase al siguiente commit en la búsqueda binaria.
+
+🧠 Pregunta 39
+
+Después de encontrar el commit que introdujo un error con git bisect, ¿qué información útil puedes obtener al usar git blame en las líneas afectadas?
+
+A. La fecha en que se creó el archivo.
+B. El número total de líneas de código añadidas y eliminadas por el commit culpable.
+C. El autor del commit culpable y la fecha en que se realizó el cambio.
+D. Una lista de todos los archivos modificados en el commit culpable.
+
+✅ Correcta: C
+
+🧾 Explicación: git blame en las líneas del commit culpable te mostrará quién realizó ese cambio específico y cuándo, lo que puede proporcionar pistas importantes sobre por qué se introdujo el error.
+
+🧠 Pregunta 40
+
+¿Qué comando se utiliza para ver el historial del reflog?
+
+A. git log --reflog
+B. git history reflog
+C. git reflog
+D. git log HEAD@{}
+
+✅ Correcta: C
+
+🧾 Explicación: El comando git reflog por sí solo muestra el historial de los movimientos de las referencias de tu repositorio local.
+
+🧠 Pregunta 41
+
+Si accidentalmente eliminas una rama local que contenía commits importantes, ¿cómo podrías intentar recuperarla utilizando el reflog?
+
+A. Buscar un commit en el reflog que estuviera en la rama eliminada y crear una nueva rama apuntando a ese commit.
+B. Utilizar git checkout -b <nombre_rama> HEAD para recrear la rama.
+C. El reflog solo rastrea cambios en HEAD, no eliminaciones de ramas.
+D. Ejecutar git branch -d <nombre_rama> nuevamente para deshacer la eliminación.
+
+✅ Correcta: A
+
+🧾 Explicación: El reflog registra cuándo se creó y eliminó tu rama local. Puedes buscar el último commit al que apuntaba esa rama antes de ser eliminada y crear una nueva rama que apunte a ese commit.
+
+🧠 Pregunta 42
+
+¿Cuál es el principal beneficio de usar submódulos para gestionar dependencias externas?
+
+A. Integran el código del proyecto externo directamente en tu repositorio, facilitando las modificaciones.
+B. Permiten mantener una referencia a un commit específico de la dependencia, asegurando la reproducibilidad.
+C. Actualizan automáticamente la dependencia a la última versión disponible.
+D. Reducen el tamaño de tu repositorio principal al no copiar el historial de la dependencia.
+
+✅ Correcta: B
+
+🧾 Explicación: Los submódulos permiten fijar la dependencia a una versión específica (un commit), lo que garantiza que tu proyecto siempre se construya con la misma versión probada de la dependencia.
+
+🧠 Pregunta 43
+
+Si realizas cambios en un submódulo dentro de tu repositorio principal, ¿cómo se registran esos cambios en el repositorio del submódulo?
+
+A. Se registran automáticamente en el repositorio principal como parte de los commits del proyecto.
+B. Debes navegar al directorio del submódulo y realizar commits allí por separado.
+C. Los cambios en los submódulos no se pueden realizar directamente desde el repositorio principal.
+D. Se registran automáticamente cuando se hace push del repositorio principal.
+
+✅ Correcta: B
+
+🧾 Explicación: Un submódulo es esencialmente un repositorio Git dentro de otro. Para registrar cambios realizados en el directorio del submódulo, debes navegar a ese directorio y realizar commits utilizando los comandos de Git dentro del propio submódulo.
+
+🧠 Pregunta 44
+
+¿Qué comando se utiliza para obtener la última versión de los cambios de un submódulo en tu repositorio principal?
+
+A. git update-submodule <path>
+B. git submodule fetch <path>
+C. git submodule merge <path>
+D. git submodule update --remote <path>
+
+✅ Correcta: D
+
+🧾 Explicación: El comando git submodule update --remote <path> se utiliza para buscar cambios en el repositorio remoto del submódulo y actualizar la referencia en tu repositorio principal al último commit de la rama rastreada del submódulo.
+
+🧠 Pregunta 45
+
+¿Cuál es una desventaja potencial de usar subtrees en comparación con los submódulos?
+
+A. Los subtrees no permiten incluir proyectos externos dentro de subdirectorios.
+B. Los subtrees pueden hacer que el historial de tu repositorio principal sea más complejo al integrar el historial del proyecto externo.
+C. Los subtrees no se pueden actualizar una vez agregados.
+D. Los subtrees requieren más comandos para su gestión que los submódulos.
+
+✅ Correcta: B
+
+🧾 Explicación: Al integrar un subtree, todo el historial del proyecto externo se copia en tu repositorio principal, lo que puede aumentar su tamaño y complejidad histórica.
+
+🧠 Pregunta 46
+
+En el ejemplo completo, después de agregar el subtree lib-subs, ¿cómo se actualizaría a una versión más reciente del repositorio remoto?
+
+A. Navegando al directorio libs/lib-subs y ejecutando git pull.
+B. Utilizando el comando git subtree update --prefix=libs/lib-subs https://github.com/usuario/lib-subs.git master --squash.
+C. Ejecutando git submodule update --remote libs/lib-subs.
+D. El subtree se actualiza automáticamente al hacer git pull en el repositorio principal.
+
+✅ Correcta: B
+
+🧾 Explicación: Para actualizar un subtree, se utiliza el comando git subtree pull especificando el prefijo, la URL del repositorio y la rama que se desea integrar, junto con la opción --squash si se usó al agregar el subtree.
+
+🧠 Pregunta 47
+
+¿Qué comando se utilizó en el ejemplo completo para combinar los commits de las ramas feature/login y feature/dashboard en un solo commit de merge en la rama master?
+
+A. git merge feature/login feature/dashboard
+B. git merge --squash feature/login feature/dashboard
+C. git merge --no-ff feature/login feature/dashboard -m "Octopus merge: integra feature/login y feature/dashboard"
+D. git rebase master feature/login feature/dashboard
+
+✅ Correcta: C
+
+🧾 Explicación: El comando git merge --no-ff fuerza la creación de un commit de merge, y al especificar múltiples ramas (feature/login y feature/dashboard), se realiza un "Octopus merge", combinándolas en un único commit con el mensaje proporcionado.
+
+🧠 Pregunta 48
+
+En el ejemplo de recuperación con git reflog, si el comando git reset --hard HEAD~1 eliminó el último commit de merge, ¿qué comando se utilizó para volver a ese estado?
+
+A. git checkout HEAD~1
+B. git merge --abort
+C. git reset --hard HEAD@{1}
+D. git revert HEAD
+
+✅ Correcta: C
+
+🧾 Explicación: El reflog rastrea que HEAD@{1} era el estado de HEAD justo antes del reset --hard. Al usar git reset --hard HEAD@{1}, se revierte el repositorio a ese estado anterior, recuperando el commit de merge perdido.
+
+🧠 Pregunta 49
+
+¿Cuál es el propósito del script run_test.sh mencionado en el ejemplo de git bisect?
+
+A. Automatizar la creación de commits "buenos" y "malos" para la búsqueda binaria.
+B. Compilar y ejecutar pruebas para determinar si un commit introduce el error buscado.
+C. Visualizar gráficamente el proceso de git bisect.
+D. Limpiar el repositorio de commits innecesarios antes de iniciar git bisect.
+
+✅ Correcta: B
+
+🧾 Explicación: En un flujo de trabajo de git bisect automatizado, un script de pruebas como run_test.sh se utiliza para verificar si el commit actual contiene el error. El resultado de este script (éxito o fallo) se utiliza para marcar el commit como "bueno" o "malo".
+
+🧠 Pregunta 50
+
+Al ejecutar git blame auth.c -L 100,150, ¿qué parte específica del archivo auth.c se analiza?
+
+A. Todo el archivo auth.c.
+B. Solo la primera y la última línea del archivo.
+C. Las líneas 100 a 150, inclusive.
+D. Las líneas que contienen la función autenticarUsuario.
+
+✅ Correcta: C
+
+🧾 Explicación: La opción -L 100,150 en el comando git blame especifica que solo se deben analizar las líneas que se encuentran dentro del rango de la línea 100 a la línea 150 del archivo auth.c.
+
+🧠 Pregunta 51
+
+¿Qué comando se utiliza en el ejemplo para seguir la evolución de la función autenticarUsuario en el archivo auth.c a lo largo del tiempo?
+
+A. git log auth.c
+B. git blame auth.c
+C. git log -L :autenticarUsuario:auth.c
+D. git diff -L :autenticarUsuario:auth.c
+
+✅ Correcta: C
+
+🧾 Explicación: El comando git log -L :<función>:<archivo> permite rastrear los cambios realizados a una función específica dentro de un archivo a lo largo del historial de commits.
+
+🧠 Pregunta 52
+
+¿Cuál es la principal ventaja de utilizar un script en Bash para automatizar tareas de Git, como se muestra en el ejemplo?
+
+A. Reduce la necesidad de entender los comandos de Git subyacentes.
+B. Permite ejecutar secuencias complejas de comandos de forma consistente y eficiente.
+C. Mejora el rendimiento de las operaciones de Git.
+D. Permite integrar Git con otros sistemas de control de versiones.
+
+✅ Correcta: B
+
+🧾 Explicación: Los scripts de Bash permiten automatizar tareas repetitivas o complejas de Git, asegurando que se ejecuten de la misma manera cada vez y ahorrando tiempo y esfuerzo a los desarrolladores.
+
+🧠 Pregunta 53
+
+En el contexto del script de Bash de ejemplo, ¿qué permite la selección de una rama para trabajar?
+
+A. Permite al usuario elegir la rama remota que se clonará.
+B. Permite al usuario especificar la rama local sobre la cual se realizarán las operaciones de mantenimiento.
+C. Permite al usuario crear una nueva rama con un nombre dinámico.
+D. Permite al usuario eliminar ramas remotas de forma segura.
+
+✅ Correcta: B
+
+🧾 Explicación: El script lista las ramas locales y permite al usuario seleccionar una de ellas para aplicar las operaciones de rebase, merge o diagnóstico que el script automatiza.
+
+🧠 Pregunta 54
+
+¿Qué operación avanzada de merge se incluye como opción en el script de Bash de ejemplo?
+
+A. Merge con squash.
+B. Merge con rebase.
+C. Merge sin Fast-Forward.
+D. Merge con resolución de conflictos automática.
+
+✅ Correcta: C
+
+🧾 Explicación: El script de ejemplo menciona la inclusión de operaciones avanzadas de merge, específicamente la opción de realizar un merge sin Fast-Forward, lo que permite preservar la historia de las ramas fusionadas.
+
+🧠 Pregunta 55
+
+¿Qué herramienta de diagnóstico de Git se ejemplifica utilizando el script de Bash para detectar un error en el repositorio?
+
+A. git status
+B. git diff
+C. git bisect
+D. gitk
+
+✅ Correcta: C
+
+🧾 Explicación: El script de ejemplo está diseñado para automatizar el uso de git bisect, facilitando la identificación del commit que introdujo un error al guiar al usuario a través del proceso de marcar commits como buenos o malos.
+
+🧠 Pregunta 56
+
+En el escenario de ejemplo con el repositorio project-autenticacion, ¿qué función específica se reporta que no se comporta como se esperaba?
+
+A. iniciarSesion()
+B. cerrarSesion()
+C. autenticarUsuario()
+D. cambiarContrasena()
+
+✅ Correcta: C
+
+🧾 Explicación: El escenario de ejemplo se centra en la función autenticarUsuario(), que se reporta que tiene un comportamiento inesperado y se utiliza como caso de estudio para aplicar las herramientas de diagnóstico de Git.
+
+🧠 Pregunta 57
+
+Durante el proceso interactivo de git bisect en el ejemplo, ¿qué acción debe realizar el desarrollador después de que Git selecciona automáticamente un commit intermedio?
+
+A. Examinar los metadatos del commit (autor, fecha, mensaje).
+B. Comparar el commit actual con el commit "bueno" conocido.
+C. Compilar, ejecutar las pruebas y determinar si el comportamiento de la función es correcto o no.
+D. Editar el commit para intentar corregir el error.
+
+✅ Correcta: C
+
+🧾 Explicación: El paso clave en git bisect es probar el commit que Git selecciona para determinar si el error está presente (git bisect bad) o no (git bisect good).
+
+🧠 Pregunta 58
+
+Después de identificar el commit culpable con git bisect en el ejemplo, ¿qué se utiliza para ver detalles de los cambios realizados en la sección del archivo donde se ubica la función problemática?
+
+A. git diff
+B. git show
+C. git blame
+D. git log -p
+
+✅ Correcta: C
+
+🧾 Explicación: git blame permite ver línea por línea quién realizó la última modificación y en qué commit, lo que ayuda a entender el contexto del cambio que introdujo el error.
+
+🧠 Pregunta 59
+
+¿Qué información proporciona la salida del comando git blame auth.c -L 100,150 en el ejemplo?
+
+A. Las diferencias entre las líneas 100 y 150 y la versión anterior del archivo.
+B. El número total de commits que han modificado las líneas 100 a 150.
+C. Para cada línea entre 100 y 150, el hash del commit, el autor, la fecha y el contenido de la línea.
+D. Una lista de los commits realizados por el autor de la última modificación en esas líneas.
+
+✅ Correcta: C
+
+🧾 Explicación: git blame anota cada línea dentro del rango especificado con información sobre el commit que la modificó por última vez, incluyendo el autor y la fecha.
+
+🧠 Pregunta 60
+
+¿Cuál es el propósito de utilizar git log -L :autenticarUsuario:auth.c en el escenario de ejemplo?
+
+A. Mostrar solo el último commit que modificó la función autenticarUsuario.
+B. Comparar las diferentes versiones de la función autenticarUsuario a lo largo del tiempo.
+C. Desplegar, en forma de historial de diffs, todos los commits que han afectado a la función autenticarUsuario.
+D. Mostrar las estadísticas de contribución del autor de la función autenticarUsuario.
+
+✅ Correcta: C
+
+🧾 Explicación: La opción -L con el nombre de la función permite rastrear la evolución de esa función específica a través de los diferentes commits que la han modificado, mostrando los cambios realizados en cada uno.
+

@@ -1,0 +1,389 @@
+🧠 Pregunta 61
+
+Considerando el uso del rebase interactivo para limpiar el historial antes de una fusión, ¿cuál sería el impacto a largo plazo en la colaboración de un equipo si esta práctica se aplicara de forma inconsistente o sin una comunicación clara?
+
+A. Mejoraría la eficiencia individual de los desarrolladores al tener historiales más limpios en sus ramas locales.
+B. Podría generar confusión y dificultar el seguimiento de los cambios para otros colaboradores si la historia compartida se reescribe inesperadamente.
+C. No tendría un impacto significativo, ya que cada desarrollador puede elegir su propia estrategia de limpieza del historial.
+D. Forzaría a los desarrolladores a adoptar un flujo de trabajo más estricto y estandarizado, mejorando la colaboración general.
+
+✅ Correcta: B
+
+🧾 Explicación: Si el rebase interactivo se usa inconsistentemente o sin informar a los demás, la reescritura de la historia en ramas compartidas puede llevar a desincronización, conflictos inesperados y dificultad para entender la evolución del código por parte de otros miembros del equipo.
+
+🧠 Pregunta 62
+
+Si un equipo decide utilizar merges sin Fast-Forward de manera exclusiva, ¿cómo afectaría esto la visualización del historial del proyecto en comparación con un equipo que utiliza Fast-Forward merges siempre que sea posible?
+
+A. El historial sería más lineal y fácil de seguir en el equipo que usa Fast-Forward.
+B. El historial mostraría explícitamente cuándo se integraron las ramas de características en el equipo que usa --no-ff, proporcionando más contexto.
+C. No habría una diferencia visual notable en el historial entre ambos equipos.
+D. El equipo que usa --no-ff tendría un historial más complejo y difícil de entender debido a la creación constante de commits de merge.
+
+✅ Correcta: B
+
+🧾 Explicación: El uso constante de --no-ff crea commits de merge para cada integración de rama, lo que visualmente preserva la existencia de las ramas de características y el momento de su integración en la rama principal, ofreciendo un historial más rico en contexto.
+
+🧠 Pregunta 63
+
+En un escenario donde un error crítico se introduce en la rama principal y no se descubre inmediatamente, ¿cómo podría la combinación de git log avanzado (con --graph, --decorate, --oneline) y git bisect ayudar a resolver el problema de manera eficiente?
+
+A. git log permitiría identificar rápidamente el commit sospechoso basándose en el mensaje, y git bisect permitiría revertir ese commit.
+B. git log ayudaría a visualizar la línea de tiempo de los cambios y las fusiones, mientras que git bisect facilitaría la localización del commit que introdujo el error a través de pruebas iterativas.
+C. git log mostraría quién realizó los cambios recientes, y git bisect permitiría enviar una notificación automática al desarrollador culpable.
+D. Ambas herramientas serían inútiles en este escenario; se requeriría una revisión manual exhaustiva de todos los commits recientes.
+
+✅ Correcta: B
+
+🧾 Explicación: git log avanzado proporciona una visión estructurada de la historia, ayudando a identificar posibles puntos de origen del error, mientras que git bisect automatiza la búsqueda del commit específico que introdujo el problema a través de la división y prueba del historial.
+
+🧠 Pregunta 64
+
+Considerando la diferencia entre submódulos y subtrees, ¿en qué tipo de proyecto sería más ventajoso utilizar subtrees y por qué?
+
+A. En proyectos con dependencias externas que se actualizan con frecuencia y donde se desea que los cambios se integren de forma más transparente en el historial del proyecto principal.
+B. En proyectos donde se necesita mantener una referencia estricta a una versión específica de una biblioteca externa para garantizar la estabilidad.
+C. En proyectos muy grandes con numerosos colaboradores, donde la gestión de dependencias debe ser lo más aislada posible.
+D. En proyectos donde el repositorio externo es mantenido por el mismo equipo y se considera una parte integral del proyecto principal.
+
+✅ Correcta: D
+
+🧾 Explicación: Los subtrees son más adecuados cuando el proyecto externo se considera una parte integral del proyecto principal y se desea que su contenido evolucione junto con él en el mismo historial, facilitando las modificaciones y la integración de cambios de manera más directa.
+
+🧠 Pregunta 65
+
+Si un desarrollador realiza accidentalmente un git reset --hard y luego utiliza el reflog para identificar el commit anterior de HEAD, ¿qué implicaciones podría tener para otros colaboradores si ya habían basado su trabajo en el estado actual (después del reset)?
+
+A. No habría ningún impacto, ya que el reset --hard solo afecta al repositorio local del desarrollador.
+B. Si el desarrollador hace push de su rama local reescrita, podría forzar a otros a realizar un rebase o reset en sus propias ramas para sincronizarse, lo que podría resultar en pérdida de trabajo si no se hace con cuidado.
+C. El repositorio remoto rechazaría el push del desarrollador, previniendo cualquier problema para los demás.
+D. Git fusionaría automáticamente los cambios del desarrollador con el trabajo de los demás, resolviendo cualquier inconsistencia.
+
+✅ Correcta: B
+
+🧾 Explicación: Reescribir la historia que ya ha sido compartida (mediante push) puede causar serios problemas para otros colaboradores que hayan basado su trabajo en esa historia. Forzar un push con la historia reescrita obligará a los demás a realinear sus ramas, lo que puede ser complejo y arriesgado.
+
+🧠 Pregunta 66
+
+En un equipo que utiliza intensivamente ramas de características de corta duración, ¿cómo podría el uso estratégico del rebase interactivo antes de fusionar a la rama principal afectar la claridad del historial y la resolución de conflictos futuros?
+
+A. Haría el historial más confuso al reordenar los commits de las características.
+B. Podría simplificar el historial al combinar commits relacionados y facilitar la resolución de conflictos al tener cambios más cohesivos.
+C. Aumentaría la probabilidad de conflictos durante la fusión debido a la modificación de los timestamps de los commits.
+D. No tendría un impacto significativo en la claridad del historial ni en la resolución de conflictos.
+
+✅ Correcta: B
+
+🧾 Explicación: Al limpiar y organizar los commits de una rama de característica con rebase interactivo antes de la fusión, se puede crear un historial más lineal y lógico en la rama principal, lo que facilita la comprensión de los cambios introducidos por la característica y puede simplificar la resolución de conflictos futuros al tener commits más enfocados.
+
+🧠 Pregunta 67
+
+Considerando el escenario donde se utiliza un script de Bash para automatizar git bisect, ¿cuál es la principal ventaja de esta automatización en comparación con la ejecución manual de los comandos?
+
+A. Permite a los desarrolladores que no están familiarizados con git bisect utilizar la herramienta.
+B. Agiliza el proceso al automatizar la prueba de cada commit, reduciendo el tiempo y el esfuerzo manual requerido.
+C. Garantiza que el resultado de git bisect sea siempre más preciso que la identificación manual.
+D. Permite integrar git bisect con otras herramientas de depuración y análisis de código de forma más sencilla.
+
+✅ Correcta: B
+
+🧾 Explicación: La automatización de git bisect con un script de pruebas elimina la necesidad de que el desarrollador pruebe manualmente cada commit y marque el resultado, lo que acelera significativamente el proceso de identificación del commit que introdujo el error, especialmente en historiales largos.
+
+🧠 Pregunta 68
+
+Si un equipo decide migrar de utilizar submódulos a subtrees para gestionar una dependencia externa, ¿qué consideraciones importantes deberían tener en cuenta durante la transición para evitar la pérdida de información o la corrupción del historial?
+
+A. Deberían simplemente eliminar el directorio del submódulo y agregar el subtree con la misma URL.
+B. Deberían asegurarse de haber fusionado todos los cambios pendientes del submódulo en el proyecto principal antes de la migración y ser conscientes de cómo se integrará el historial del subtree.
+C. No hay consideraciones importantes; la migración entre submódulos y subtrees es un proceso directo.
+D. Deberían crear un nuevo repositorio y copiar el código del proyecto principal y la dependencia al nuevo repositorio utilizando subtrees desde el inicio.
+
+✅ Correcta: B
+
+🧾 Explicación: La migración de submódulos a subtrees requiere cuidado, especialmente en relación con los cambios no confirmados en el submódulo y cómo se incorporará el historial del repositorio externo como un subtree en el historial del proyecto principal. Es crucial asegurarse de que no se pierdan cambios y comprender las implicaciones en el historial.
+
+🧠 Pregunta 69
+
+En un proyecto donde varios desarrolladores trabajan en la misma función y realizan numerosos commits locales antes de hacer push, ¿cómo podría el uso de git rebase -i para combinar sus commits relacionados antes del push afectar la revisión del código por parte de otros miembros del equipo?
+
+A. Haría la revisión más difícil al presentar un gran número de commits individuales.
+B. Facilitaría la revisión al presentar un conjunto más pequeño de commits lógicos y cohesivos que representan la implementación completa de la función o partes significativas de ella.
+C. No tendría ningún impacto en el proceso de revisión del código.
+D. Forzaría al revisor a examinar cada pequeño cambio individualmente, lo que llevaría más tiempo.
+
+✅ Correcta: B
+
+🧾 Explicación: Al combinar commits relacionados en unidades lógicas más grandes antes de la revisión, se facilita la comprensión del propósito y el contexto de los cambios, lo que puede hacer que el proceso de revisión del código sea más eficiente y efectivo.
+
+🧠 Pregunta 70
+
+Si un equipo utiliza merges sin Fast-Forward y luego decide revertir una característica completa que fue introducida por una rama fusionada, ¿cómo simplificaría el commit de merge creado por --no-ff este proceso de reversión en comparación con si se hubieran utilizado Fast-Forward merges?
+
+A. No habría diferencia en el proceso de reversión.
+B. El commit de merge creado por --no-ff actuaría como un único punto para revertir toda la característica con un solo comando (git revert -m 1 <hash_del_merge>).
+C. Sería más difícil revertir la característica debido a la existencia del commit de merge adicional.
+D. Git automáticamente identificaría y revertiría todos los commits individuales de la rama de la característica.
+
+✅ Correcta: B
+
+🧾 Explicación: El commit de merge creado por --no-ff representa la integración completa de la rama de la característica. Esto permite revertir todos los cambios introducidos por esa rama con un solo git revert al commit de merge, especificando la rama principal como el "padre" a mantener (-m 1).
+
+🧠 Pregunta 71
+
+En un flujo de trabajo donde se fomenta la creación frecuente de ramas de características, pero la rama principal debe mantenerse siempre estable y con un historial limpio, ¿cómo se podrían combinar estratégicamente el rebase interactivo en las ramas de características y los merges sin Fast-Forward en la rama principal para lograr estos objetivos?
+
+A. Rebasar las ramas de características contra la rama principal para obtener un historial lineal y luego usar Fast-Forward merge para integrarlas.
+B. Rebasar las ramas de características para limpiar su historial y luego usar merge sin Fast-Forward en la rama principal para mantener la trazabilidad de cada característica como un bloque.
+C. Usar merges sin Fast-Forward en las ramas de características para preservar su historial y luego rebasar la rama principal contra cada característica integrada para mantenerla lineal.
+D. Evitar el rebase y los merges sin Fast-Forward por completo para simplificar el historial y facilitar la estabilidad de la rama principal.
+
+✅ Correcta: B
+
+🧾 Explicación: Rebasar las ramas de características ayuda a tener un historial limpio y lineal de los cambios de cada característica. Luego, al usar un merge sin Fast-Forward en la rama principal, se crea un commit de merge que representa la integración de esa característica, manteniendo la trazabilidad de cuándo y cómo se añadió, incluso si la rama principal ha avanzado.
+
+🧠 Pregunta 72
+
+Si un equipo experimenta frecuentes problemas al intentar comprender la historia de los cambios en archivos específicos, ¿cómo podría la combinación del uso regular de mensajes de commit claros y descriptivos con el uso estratégico de git log -L mejorar esta situación?
+
+A. Los mensajes de commit claros harían innecesario el uso de git log -L.
+B. git log -L mostraría solo los commits con mensajes relevantes al archivo, filtrando el ruido.
+C. Los mensajes de commit claros proporcionarían el contexto general de los cambios, mientras que git log -L permitiría rastrear la evolución de líneas específicas de código y entender el por qué de los cambios en detalle.
+D. La combinación de ambos no tendría un impacto significativo en la comprensión del historial de archivos.
+
+✅ Correcta: C
+
+🧾 Explicación: Los buenos mensajes de commit ofrecen una visión general del propósito de cada cambio. Al combinarlos con git log -L, que permite ver la historia de líneas específicas, se puede obtener una comprensión profunda tanto del contexto general como de los detalles de cómo ha evolucionado el código en un archivo.
+
+🧠 Pregunta 73
+
+En un proyecto donde se utiliza git bisect para encontrar la causa de una regresión, y el script de pruebas automatizado devuelve resultados inconsistentes para algunos commits intermedios, ¿cómo debería el desarrollador proceder para asegurar la identificación correcta del commit problemático?
+
+A. Asumir que el primer commit marcado como "malo" es la causa de la regresión.
+B. Ejecutar las pruebas manualmente varias veces para esos commits inconsistentes y basar la decisión en la mayoría de los resultados.
+C. Reiniciar la sesión de git bisect y probar solo los commits más recientes.
+D. Marcar los commits inconsistentes como "skip" y esperar que git bisect pueda aislar el error con la información restante.
+
+✅ Correcta: B
+
+🧾 Explicación: La inconsistencia en los resultados de las pruebas sugiere un problema que no está directamente relacionado con un cambio de código específico (podría ser un problema ambiental o una prueba no determinista). En estos casos, la mejor estrategia es intentar determinar el resultado más probable ejecutando las pruebas varias veces para esos commits problemáticos.
+
+🧠 Pregunta 74
+
+Considerando el reflog como una red de seguridad para acciones en Git, ¿en qué escenario específico su utilidad sería más evidente para recuperar un trabajo que de otra manera se consideraría perdido?
+
+A. Cuando se elimina un archivo por error y no se ha realizado un commit.
+B. Cuando se realiza un git commit --amend y se sobrescribe el commit anterior con errores.
+C. Cuando se realiza un git reset --hard a una versión anterior y luego se quiere recuperar el estado en el que se estaba antes del reset.
+D. Cuando se olvida en qué rama se realizaron ciertos cambios locales.
+
+✅ Correcta: C
+
+🧾 Explicación: El reflog rastrea los movimientos de HEAD, incluyendo los resets. Si accidentalmente se revierte el repositorio a un estado anterior con reset --hard, el reflog contendrá una entrada que apunta al estado justo antes del reset, permitiendo volver a ese punto.
+
+🧠 Pregunta 75
+
+Si un equipo decide utilizar submódulos para incluir una biblioteca externa, pero necesita realizar modificaciones locales a esa biblioteca para adaptarla a su proyecto, ¿cuál es la estrategia recomendada para gestionar estos cambios a largo plazo y facilitar futuras actualizaciones de la biblioteca?
+
+A. Modificar los archivos directamente en el directorio del submódulo y esperar que las futuras actualizaciones no entren en conflicto.
+B. Hacer fork del repositorio de la biblioteca externa, realizar las modificaciones en el fork, y luego usar la URL del fork al agregar el submódulo. Las actualizaciones se gestionarían fusionando cambios del repositorio original al fork.
+C. Evitar el uso de submódulos y copiar directamente el código de la biblioteca en el proyecto principal para tener control total sobre las modificaciones.
+D. Utilizar subtrees en lugar de submódulos, ya que permiten una integración más directa de las modificaciones.
+
+✅ Correcta: B
+
+🧾 Explicación: Hacer fork del repositorio externo permite realizar modificaciones locales sin afectar el repositorio original y facilita la gestión de futuras actualizaciones al permitir la fusión de cambios desde el repositorio original al fork modificado. Luego, el proyecto principal utiliza el fork como submódulo.
+
+🧠 Pregunta 76
+
+En un proyecto que utiliza subtrees para integrar varios componentes internos que se desarrollan por separado, ¿cómo se podría asegurar la coherencia entre las versiones de estos componentes cuando se realiza un nuevo lanzamiento del proyecto principal?
+
+A. Asegurándose de que la rama principal del repositorio del proyecto principal siempre apunte a la última versión de las ramas principales de los subtrees.
+B. Utilizando etiquetas (tags) en los repositorios de los subtrees para marcar las versiones que corresponden a un lanzamiento específico del proyecto principal y referenciando esos tags al actualizar los subtrees.
+C. Fusionando continuamente los cambios de los subtrees en la rama principal del proyecto principal para que siempre estén sincronizados.
+D. Evitando el uso de subtrees para componentes internos y gestionándolos como dependencias separadas.
+
+✅ Correcta: B
+
+🧾 Explicación: El uso de etiquetas en los repositorios de los subtrees permite marcar puntos específicos en el tiempo que corresponden a una versión particular del componente. Al referenciar estas etiquetas al actualizar los subtrees en el proyecto principal para un lanzamiento, se asegura la coherencia de las versiones de los componentes.
+
+🧠 Pregunta 77
+
+Si un desarrollador está trabajando en una rama de característica y realiza varios commits pequeños e incrementales. Antes de fusionar esta rama a la principal, decide usar git rebase -i para combinarlos en un solo commit más significativo. ¿Qué consideraciones debería tener sobre el mensaje de este commit combinado para que sea útil para futuros desarrolladores que consulten el historial?
+
+A. Debería simplemente usar el mensaje del primer commit de la serie.
+B. Debería incluir una lista de todos los mensajes de los commits combinados.
+C. Debería escribir un mensaje conciso y de alto nivel que describa el resultado final de todos los cambios combinados, en lugar de los pasos individuales.
+D. No importa el mensaje, ya que los commits individuales ya no estarán visibles en la historia principal.
+
+✅ Correcta: C
+
+🧾 Explicación: El objetivo de combinar commits es presentar un cambio lógico y completo. El mensaje del commit combinado debe reflejar el resultado final de esos cambios, proporcionando una comprensión clara de la funcionalidad o la corrección que se introdujo, sin la necesidad de revisar los pasos intermedios.
+
+🧠 Pregunta 78
+
+En un proyecto con un gran número de colaboradores y una alta frecuencia de commits, ¿cómo podría el uso estratégico de herramientas de visualización del historial de Git (como las integradas en IDEs o herramientas externas) complementar los comandos de línea como git log avanzado para facilitar la comprensión del flujo de trabajo y la identificación de problemas?
+
+A. Las herramientas de visualización son principalmente para principiantes y no ofrecen ventajas sobre la línea de comandos para usuarios avanzados.
+B. Las herramientas de visualización pueden ofrecer una representación gráfica más intuitiva de las ramas, merges y el flujo de los cambios a lo largo del tiempo, lo que puede facilitar la identificación de patrones o anomalías que serían más difíciles de discernir solo con la salida de texto de git log.
+C. El uso de herramientas de visualización ralentizaría el proceso de revisión del historial en comparación con la rapidez de la línea de comandos.
+D. Las herramientas de visualización solo muestran la misma información que git log pero con un formato diferente, sin ofrecer ninguna ventaja analítica adicional.
+
+✅ Correcta: B
+
+🧾 Explicación: Las herramientas de visualización pueden transformar la información textual del historial de Git en representaciones gráficas, lo que facilita la comprensión de relaciones complejas entre ramas, la identificación de líneas de desarrollo paralelas, y la visualización del impacto de los merges y rebases de una manera más intuitiva que la salida de texto de git log.
+
+🧠 Pregunta 79
+
+Si un equipo decide no utilizar git rebase en ramas compartidas debido al riesgo de reescritura de la historia, pero aún desea mantener un historial limpio en la rama principal, ¿qué estrategia de merge podrían adoptar para lograr un equilibrio entre ambos objetivos?
+
+A. Utilizar siempre Fast-Forward merges para evitar la creación de commits de merge innecesarios.
+B. Utilizar merges sin Fast-Forward para preservar la historia de cada rama de característica como un bloque al integrarla en la principal.
+C. Realizar merges regulares y luego usar git filter-branch en la rama principal para eliminar commits innecesarios.
+D. Fusionar todas las ramas de características en una rama de integración separada y luego rebasar la rama principal contra esta rama de integración.
+
+✅ Correcta: B
+
+🧾 Explicación: El merge sin Fast-Forward crea un commit de merge explícito que une la rama de característica a la principal, preservando la historia de la característica como un bloque en el gráfico del historial, incluso si la rama principal ha avanzado. Esto mantiene la trazabilidad sin reescribir la historia ya compartida de la rama principal.
+
+🧠 Pregunta 80
+
+En un proyecto que depende de varios submódulos, y se necesita actualizar un submódulo específico a la última versión disponible en su repositorio remoto, ¿qué secuencia de comandos sería la más apropiada para realizar esta tarea de forma segura y registrar el cambio en el repositorio principal?
+
+A. cd <ruta_del_submódulo>, git pull, cd .., git add <ruta_del_submódulo>, git commit -m "Actualiza submódulo <nombre>"
+B. git submodule update --remote <ruta_del_submódulo>, git add <ruta_del_submódulo>, git commit -m "Actualiza submódulo <nombre>"
+C. git submodule foreach 'git pull', git add .gitmodules, git commit -m "Actualiza todos los submódulos"
+D. git submodule sync, git submodule update --init --recursive, git commit -am "Sincroniza y actualiza submódulos"
+
+✅ Correcta: B
+
+🧾 Explicación: git submodule update --remote <ruta_del_submódulo> busca la última confirmación en la rama rastreada del repositorio remoto del submódulo y actualiza la referencia en el repositorio principal. Luego, es necesario hacer git add a la ruta del submódulo y git commit para registrar esta actualización en el repositorio principal.
+
+🧠 Pregunta 81
+
+Considerando un equipo que adopta el uso de git blame de forma regular durante las revisiones de código, ¿cómo podría esta práctica influir en la responsabilidad del equipo sobre la calidad del código y la comprensión de las decisiones de implementación pasadas?
+
+A. Disminuiría la responsabilidad individual al diluir la autoría de cada línea de código.
+B. Fomentaría una mayor responsabilidad al hacer más transparente quién realizó cada cambio y cuándo, facilitando la discusión informada sobre decisiones de diseño y la identificación de posibles introductores de errores.
+C. No tendría un impacto significativo en la responsabilidad o la comprensión del historial.
+D. Haría que las revisiones de código se centren más en la persona que escribió el código que en la calidad del código en sí.
+
+✅ Correcta: B
+
+🧾 Explicación: Al hacer visible la autoría de cada línea de código, git blame puede fomentar una mayor sensación de responsabilidad sobre el código escrito. También proporciona contexto sobre cuándo y por qué se realizaron ciertos cambios, lo que enriquece la discusión durante las revisiones de código y ayuda a comprender las decisiones pasadas.
+
+🧠 Pregunta 82
+
+En un escenario donde un equipo utiliza un script de Bash para automatizar tareas comunes de Git, incluyendo git bisect, ¿qué consideraciones éticas deberían tenerse en cuenta al analizar los resultados de git bisect y la identificación del commit culpable?
+
+A. El resultado de git bisect debería ser considerado como la verdad absoluta y el único factor para determinar la responsabilidad.
+B. Debería utilizarse como una herramienta para comprender la historia del error y facilitar la corrección, en lugar de señalar culpables o asignar culpas.
+C. Los resultados de git bisect deberían hacerse públicos para fomentar la transparencia y la rendición de cuentas.
+D. El equipo debería centrarse en corregir el error lo más rápido posible, sin prestar atención a la identificación del commit culpable.
+
+✅ Correcta: B
+
+🧾 Explicación: git bisect es una herramienta para ayudar a comprender cómo se introdujo un error. El enfoque ético debe estar en la colaboración para corregir el problema, utilizando la información del commit culpable para entender el contexto y evitar errores similares en el futuro, en lugar de asignar culpa individual.
+
+🧠 Pregunta 83
+
+Si un desarrollador utiliza el reflog para recuperar un conjunto de commits que habían sido eliminados accidentalmente de una rama local, ¿qué implicaciones podría tener esta recuperación si, mientras tanto, otros desarrolladores habían continuado trabajando y haciendo push a la misma rama remota?
+
+A. No habría ningún problema, ya que Git fusionaría automáticamente los commits recuperados con los cambios remotos.
+B. El desarrollador podría necesitar realizar un rebase o un merge para integrar sus commits recuperados con los cambios remotos, lo que podría generar conflictos si hay ediciones superpuestas.
+C. El push de los commits recuperados sería rechazado por el repositorio remoto para evitar la reescritura de la historia.
+D. Los commits recuperados aparecerían como una rama separada en el repositorio remoto.
+
+✅ Correcta: B
+
+🧾 Explicación: Si la rama remota ha avanzado mientras el desarrollador recuperaba sus commits perdidos, la historia local del desarrollador divergerá de la remota. Para integrar sus cambios recuperados, necesitará sincronizar su rama local con la remota, lo que probablemente requerirá un rebase (si desea una historia lineal) o un merge, y podría resultar en la resolución de conflictos.
+
+🧠 Pregunta 84
+
+En un proyecto que utiliza submódulos para gestionar dependencias, y se actualiza el repositorio principal a una nueva versión que requiere una versión específica de uno de los submódulos, ¿cómo se aseguraría el equipo de que todos los desarrolladores utilicen la versión correcta del submódulo al clonar o actualizar el proyecto?
+
+A. Simplemente documentando la versión requerida del submódulo en el README del proyecto.
+B. Asegurándose de que el commit registrado en el repositorio principal para el submódulo apunte a la versión correcta en el repositorio del submódulo. Los desarrolladores necesitarían usar git submodule update --init --recursive para obtener esa versión específica.
+C. Incluyendo el código del submódulo directamente en el repositorio principal para evitar problemas de versiones.
+D. Forzando una actualización automática del submódulo cada vez que se hace git pull en el repositorio principal.
+
+✅ Correcta: B
+
+🧾 Explicación: La clave para asegurar la coherencia de la versión del submódulo es que el repositorio principal registre el commit específico del submódulo que se debe utilizar. Los desarrolladores deben inicializar y actualizar sus submódulos para que coincidan con este commit registrado.
+
+🧠 Pregunta 85
+
+Si un equipo decide migrar de subtrees a submódulos para gestionar una dependencia externa, ¿qué beneficios podrían esperar obtener de este cambio en términos de aislamiento de la dependencia y gestión de sus actualizaciones?
+
+A. Una integración más directa del código de la dependencia en el proyecto principal.
+B. Un historial más limpio y simplificado del proyecto principal.
+C. Una gestión más explícita y aislada de la dependencia, con la capacidad de referenciar commits específicos y facilitar las actualizaciones sin mezclar el historial de la dependencia con el del proyecto principal.
+D. Actualizaciones automáticas de la dependencia a la última versión disponible.
+
+✅ Correcta: C
+
+🧾 Explicación: Los submódulos proporcionan un mayor aislamiento de la dependencia, ya que se gestionan como un repositorio separado dentro del principal, con un enlace a un commit específico. Esto facilita la gestión de versiones y las actualizaciones de la dependencia de forma más controlada y sin saturar el historial del proyecto principal.
+
+🧠 Pregunta 86
+
+En un proyecto donde se realizan merges sin Fast-Forward para mantener la trazabilidad de las ramas de características, pero el gráfico del historial se vuelve muy complejo con el tiempo, ¿qué estrategias podrían utilizarse para navegar y comprender este historial de manera más efectiva?
+
+A. Convertir todos los merges sin Fast-Forward a Fast-Forward merges retroactivamente.
+B. Utilizar herramientas de visualización del historial de Git que permitan filtrar y analizar el gráfico de ramas y merges.
+C. Ignorar el gráfico del historial y centrarse únicamente en los mensajes de commit.
+D. Rebasar toda la rama principal para obtener un historial lineal.
+
+✅ Correcta: B
+
+🧾 Explicación: Las herramientas de visualización del historial de Git están diseñadas para manejar gráficos complejos de ramas y merges. Permiten filtrar por rama, autor, fecha, etc., y ofrecen una representación visual que puede facilitar la comprensión del flujo de trabajo y la identificación de la integración de características.
+
+🧠 Pregunta 87
+
+Si un equipo decide utilizar un script de Bash para automatizar la creación de ramas de características basadas en tickets de un sistema de seguimiento de issues, ¿qué ventajas podría ofrecer esta automatización en términos de consistencia y eficiencia del flujo de trabajo?
+
+A. Reduciría la necesidad de que los desarrolladores comprendan el sistema de seguimiento de issues.
+B. Aseguraría que los nombres de las ramas sigan una convención estándar, vincularía automáticamente las ramas a los tickets correspondientes y posiblemente configuraría el entorno de desarrollo adecuado, ahorrando tiempo y reduciendo errores manuales.
+C. Permitiría que los no desarrolladores creen ramas de características.
+D. Haría que el proceso de creación de ramas sea más lento debido a la sobrecarga del script.
+
+✅ Correcta: B
+
+🧾 Explicación: La automatización de la creación de ramas puede imponer consistencia en los nombres de las ramas, vincularlas directamente a los issues relevantes para una mejor trazabilidad y automatizar tareas de configuración, lo que mejora la eficiencia y reduce la posibilidad de errores humanos.
+
+🧠 Pregunta 88
+
+En un proyecto que utiliza extensivamente el reflog, ¿cómo se podría educar a los nuevos miembros del equipo sobre su utilidad y cuándo sería más apropiado recurrir a él para resolver problemas o recuperar trabajo?
+
+A. Explicándoles que es una herramienta avanzada que solo deben usar los desarrolladores experimentados.
+B. Proporcionando documentación clara y ejemplos de casos de uso donde el reflog ha sido crucial para la recuperación de trabajo perdido o la comprensión de cambios inesperados en el historial.
+C. Desactivando el reflog para evitar confusiones a los nuevos miembros del equipo.
+D. Asegurándose de que los nuevos miembros del equipo solo utilicen comandos de Git de alto nivel a través de una GUI.
+
+✅ Correcta: B
+
+🧾 Explicación: La mejor manera de educar sobre el reflog es a través de documentación clara y ejemplos prácticos que ilustren su poder para deshacer acciones accidentales o rastrear cambios en el estado del repositorio que no se reflejan directamente en el historial de commits.
+
+🧠 Pregunta 89
+
+Si un equipo decide no rebasar ramas compartidas, pero aún quiere tener un historial lineal en la rama principal, ¿qué implicaciones tendría la adopción de una política de "squash merge" de las ramas de características al fusionarlas a la principal?
+
+A. Se mantendría la historia detallada de cada commit en la rama de característica en la rama principal.
+B. La rama principal tendría un historial lineal, pero se perdería la historia detallada de los commits individuales de cada característica, quedando solo un commit de merge con un mensaje que resume la característica.
+C. Se evitarían los commits de merge por completo, resultando en un historial más limpio.
+D. Se requeriría una resolución de conflictos más frecuente durante la fusión.
+
+✅ Correcta: B
+
+🧾 Explicación: El "squash merge" combina todos los commits de una rama de característica en un único commit al fusionarla a la rama principal. Esto resulta en un historial lineal en la rama principal, pero se pierde la granularidad de los commits individuales de la característica, que solo permanecen en la rama de la característica (si no se elimina).
+
+🧠 Pregunta 90
+
+En un proyecto que utiliza múltiples submódulos, ¿qué estrategia se podría implementar para asegurar que al hacer checkout de una rama específica del proyecto principal, se utilicen las versiones de los submódulos que eran las correctas en el momento en que se creó o se actualizó por última vez esa rama del proyecto principal?
+
+A. Actualizar todos los submódulos a la última versión cada vez que se cambia de rama en el proyecto principal.
+B. Asegurarse de que los commits en la rama del proyecto principal registren los commits específicos de los submódulos que eran actuales en ese momento. Al hacer checkout de una rama antigua, los submódulos deberían inicializarse y actualizarse a las versiones registradas en los commits de esa rama.
+C. Mantener una rama separada para cada versión de los submódulos utilizada por el proyecto principal.
+D. Incluir el código de todos los submódulos directamente en el repositorio principal para evitar problemas de versiones.
+
+✅ Correcta: B
+
+🧾 Explicación: La clave para mantener la coherencia de las versiones de los submódulos al cambiar entre ramas del proyecto principal es que cada commit del proyecto principal debe registrar las versiones específicas (commits) de los submódulos que eran correctas en ese momento. Al hacer checkout de una rama, los submódulos deben actualizarse a las versiones apuntadas por los commits de esa rama.
