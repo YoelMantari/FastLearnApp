@@ -1,15 +1,8 @@
-🧠 Pregunta 96
+🧠 Pregunta 106
 
-Un equipo de desarrollo ha estado trabajando en una rama de característica durante varias semanas, generando numerosos commits que documentan los pasos incrementales de su trabajo Antes de fusionar esta rama a la principal, consideran utilizar el rebase interactivo
+Un desarrollador quiere combinar varios commits locales recientes en uno solo antes de hacer push a la rama remota ¿Qué comando de Git con qué opción le permitiría lograr esto de forma interactiva
 
-Describe dos comandos específicos de git rebase -i que podrían utilizar para simplificar y aclarar el historial de su rama de característica antes de la fusión Explica el propósito de cada comando.
-Discute una ventaja y una posible desventaja de aplicar extensivamente el rebase interactivo en ramas de características de larga duración en un entorno colaborativo.
-
-A. pick para mantener commits y drop para eliminarlos
-B. squash para combinar commits y reword para modificar mensajes
-C. edit para detener el rebase y exec para ejecutar comandos
-D. merge para fusionar con otra rama y next para continuar
-
-✅ Correcta: B
-
-🧾 Explicación: squash permite combinar varios commits en uno solo, creando un historial más limpio reword permite modificar los mensajes de los commits para mayor claridad La ventaja es un historial simplificado, la desventaja es el riesgo de reescribir historia compartida.
+A. git merge --squash HEAD~3
+B. git rebase -i HEAD~3
+C. git checkout --ours HEAD~3
+D. git reset --soft HEAD~3
