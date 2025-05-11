@@ -1,12 +1,12 @@
-🧠 Pregunta 101
+🧠 Pregunta 106
 
-Un equipo está utilizando ramas de características de corta duración y desea mantener un historial limpio en la rama principal ¿Qué estrategia de fusión recomendarías para lograr este objetivo sin reescribir la historia de la rama principal
+Un desarrollador quiere combinar varios commits locales recientes en uno solo antes de hacer push a la rama remota ¿Qué comando de Git con qué opción le permitiría lograr esto de forma interactiva
 
-A Usar siempre merge con Fast-Forward
-B Usar siempre merge sin Fast-Forward
-C Usar squash merge al fusionar las ramas de características
-D Rebasar la rama principal con la rama de característica
+A. git merge --squash HEAD~3
+B. git rebase -i HEAD~3
+C. git checkout --ours HEAD~3
+D. git reset --soft HEAD~3
 
-✅ Correcta: C
+✅ Correcta: B
 
-🧾 Explicación: Squash merge combina todos los commits de la rama de característica en un único commit al fusionarla a la principal, resultando en un historial lineal y limpio en la rama principal sin alterar su historia directamente.
+🧾 Explicación: El comando git rebase -i (interactive) seguido del punto de anclaje (HEAD~3 en este caso, para los últimos tres commits) abre un editor donde el desarrollador puede elegir la acción squash o fixup para combinar commits.
