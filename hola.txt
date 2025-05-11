@@ -1,12 +1,79 @@
 🧠 Pregunta 96
 
-Rebase interactivo y eficiencia del historial
+Un equipo de desarrollo ha estado trabajando en una rama de característica durante varias semanas, generando numerosos commits que documentan los pasos incrementales de su trabajo Antes de fusionar esta rama a la principal, consideran utilizar el rebase interactivo
 
-Un equipo de desarrollo ha estado trabajando en una rama de característica durante varias semanas, generando numerosos commits que documentan los pasos incrementales de su trabajo. Antes de fusionar esta rama a la principal, consideran utilizar el rebase interactivo.
+a) Describe dos comandos específicos de git rebase -i que podrían utilizar para simplificar y aclarar el historial de su rama de característica antes de la fusión Explica el propósito de cada comando (1 punto)
+b) Discute una ventaja y una posible desventaja de aplicar extensivamente el rebase interactivo en ramas de características de larga duración en un entorno colaborativo (1 punto)
 
-A. Describe dos comandos específicos de git rebase -i que podrían utilizar para simplificar y aclarar el historial de su rama de característica antes de la fusión. Explica el propósito de cada comando. (1 punto)
-B. Discute una ventaja y una posible desventaja de aplicar extensivamente el rebase interactivo en ramas de características de larga duración en un entorno colaborativo. (1 punto)
+A. pick para mantener commits y drop para eliminarlos
+B. squash para combinar commits y reword para modificar mensajes
+C. edit para detener el rebase y exec para ejecutar comandos
+D. merge para fusionar con otra rama y next para continuar
 
-✅ Correcta: (La respuesta debe mencionar squash o fixup para combinar commits y reword para modificar mensajes, y discutir la ventaja de un historial limpio frente al riesgo de reescritura de historia compartida).
+✅ Correcta: B
 
-🧾 Explicación: squash/fixup reducen el número de commits, reword mejora los mensajes. Un historial limpio facilita la comprensión, pero rebasar ramas compartidas puede causar problemas.
+🧾 Explicación: squash permite combinar varios commits en uno solo, creando un historial más limpio reword permite modificar los mensajes de los commits para mayor claridad La ventaja es un historial simplificado, la desventaja es el riesgo de reescribir historia compartida.
+
+🧠 Pregunta 97
+
+En un proyecto, se ha decidido utilizar la estrategia de merge sin Fast-Forward (--no-ff) para todas las fusiones de ramas de características a la rama principal
+
+a) Explica la principal razón para adoptar esta estrategia de merge, incluso en casos donde un Fast-Forward sería posible ¿Qué información importante se preserva en el historial del proyecto (1 punto)
+b) Si posteriormente se necesita revertir completamente la funcionalidad introducida por una rama de característica fusionada con --no-ff, ¿cómo facilitaría esta estrategia el proceso de reversión en comparación con un Fast-Forward merge (1 punto)
+
+A. Permite una reversión más granular de commits individuales
+B. Crea un punto explícito en el historial para la fusión de la característica, facilitando la reversión completa
+C. Evita la creación de commits de merge innecesarios
+D. Resuelve automáticamente los conflictos durante la fusión
+
+✅ Correcta: B
+
+🧾 Explicación: --no-ff fuerza la creación de un commit de merge, que representa la integración completa de la característica Esto facilita la reversión de toda la funcionalidad con un solo comando git revert al commit de merge.
+
+🧠 Pregunta 98
+
+Un equipo descubre una regresión en la rama principal y sospecha que fue introducida por uno de los muchos commits recientes Deciden utilizar git bisect para identificar la causa
+
+a) Describe los primeros tres comandos esenciales que el equipo ejecutaría para iniciar y configurar la sesión de git bisect Explica el propósito de cada comando en este contexto (1 punto)
+b) Una vez que git bisect aísla un commit sospechoso, ¿qué otra herramienta de diagnóstico de Git sería útil para examinar los cambios específicos introducidos por ese commit en los archivos afectados (Menciona el comando y explica brevemente cómo ayudaría en el diagnóstico) (1 punto)
+
+A. git start, git bad, git good
+B. git bisect start, git bisect bad, git bisect good
+C. git find, git error, git ok
+D. git trace, git fail, git pass
+
+✅ Correcta: B
+
+🧾 Explicación: git bisect start inicia el proceso de búsqueda binaria git bisect bad marca el commit actual (donde se encuentra el error) git bisect good marca un commit anterior conocido como libre de errores git show <commit_sospechoso> permite ver los cambios introducidos por ese commit.
+
+🧠 Pregunta 99
+
+Un desarrollador, mientras experimentaba, realizó varias operaciones de git reset --hard a diferentes commits en su rama local Ahora desea volver al estado exacto en el que se encontraba su rama hace dos horas
+
+a) ¿Qué comando de Git le permitiría al desarrollador ver un historial de los cambios en la punta de su rama local (HEAD) a lo largo del tiempo, incluyendo los resets (Menciona el comando) (0 5 punto)
+b) Basándose en la salida de este comando, ¿cómo podría el desarrollador identificar el estado de su rama de hace dos horas y volver a ese punto (Describe brevemente la estrategia) (0 5 punto)
+
+A. git log --all --graph
+B. git history
+C. git reflog
+D. git log -g
+
+✅ Correcta: C
+
+🧾 Explicación: git reflog muestra un historial de los movimientos de HEAD El desarrollador buscaría en la salida la entrada correspondiente a hace dos horas y utilizaría git reset --hard <reflog_entry_hash> para volver a ese estado.
+
+🧠 Pregunta 100
+
+Un proyecto necesita incluir el código de una biblioteca externa que se mantiene en un repositorio separado El equipo está debatiendo si utilizar submódulos o subtrees para integrar esta biblioteca
+
+a) Menciona una diferencia clave en cómo Git gestiona la inclusión del repositorio externo utilizando submódulos en comparación con subtrees (0 5 punto)
+b) Describe un escenario donde el uso de subtrees podría ser preferible a los submódulos para la gestión de esta dependencia externa (0 5 punto)
+
+A. Los submódulos copian el código, los subtrees enlazan al repositorio
+B. Los submódulos mantienen una referencia a un commit específico, los subtrees integran el código directamente
+C. Los submódulos son más fáciles de actualizar, los subtrees son más fáciles de clonar
+D. Los submódulos no afectan el historial principal, los subtrees sí
+
+✅ Correcta: B
+
+🧾 Explicación: Los submódulos enlazan a un commit específico de un repositorio externo, mientras que los subtrees copian el código del repositorio externo directamente al proyecto principal Un escenario preferible para subtrees es cuando se anticipan modificaciones locales a la biblioteca que deben formar parte del historial del proyecto principal.
