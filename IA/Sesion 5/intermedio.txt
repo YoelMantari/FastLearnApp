@@ -1,0 +1,505 @@
+🧠 Pregunta 1
+¿Cuál es el objetivo principal al resolver un Problema de Satisfacción de Restricciones (PSR)?
+
+  A. Encontrar la secuencia óptima de acciones para llegar a un estado objetivo.
+  B. Asignar valores a todas las variables de tal manera que se cumplan todas las restricciones.
+  C. Minimizar el costo del camino hacia un estado objetivo.
+  D. Explorar exhaustivamente todos los posibles estados del problema.
+
+  ✅ Correcta: B
+  🧾 Explicación: El objetivo fundamental de un PSR es hallar una asignación completa de valores a las variables que satisfaga todas las condiciones o restricciones definidas en el problema.
+🧠 Pregunta 2
+¿Qué diferencia principal existe entre los problemas de planificación y los Problemas de Satisfacción de Restricciones (PSRs) según la lectura?
+
+  A. En los problemas de planificación, el camino hacia la meta es crucial, mientras que en los PSRs el objetivo es la asignación final.
+  B. Los problemas de planificación siempre involucran espacios de estados discretos, a diferencia de los PSRs.
+  C. Los PSRs utilizan heurísticas específicas del problema, mientras que la planificación usa heurísticas de propósito general.
+  D. La planificación se enfoca en la identificación de asignaciones, mientras que los PSRs se centran en la secuencia de acciones.
+
+  ✅ Correcta: A
+  🧾 Explicación: La lectura destaca que en la planificación, la secuencia de acciones para alcanzar la meta es lo importante, mientras que en los PSRs, el foco está en la asignación de valores a las variables que cumplan las restricciones, sin importar el orden de asignación.
+🧠 Pregunta 3
+En la formulación de un PSR, ¿qué representan los dominios asociados a cada variable?
+
+  A. El conjunto de restricciones que afectan a esa variable.
+  B. El valor específico que se le ha asignado a la variable durante la búsqueda.
+  C. El conjunto de todos los posibles valores que puede tomar esa variable.
+  D. La función heurística utilizada para guiar la asignación de valores a la variable.
+
+  ✅ Correcta: C
+  🧾 Explicación: Los dominios definen el conjunto finito de valores permitidos que cada variable puede tomar en la búsqueda de una solución que satisfaga las restricciones.
+🧠 Pregunta 4
+¿Qué tipo de restricciones involucran a una única variable en un Problema de Satisfacción de Restricciones (PSR)?
+
+  A. Restricciones binarias.
+  B. Restricciones de orden superior.
+  C. Restricciones unarias.
+  D. Restricciones de preferencia (suaves).
+
+  ✅ Correcta: C
+  🧾 Explicación: Las restricciones unarias son aquellas que se aplican a una sola variable, limitando directamente los valores que puede tomar dentro de su dominio.
+🧠 Pregunta 5
+¿Cuál es la principal característica del algoritmo de búsqueda backtracking para resolver PSRs?
+
+  A. Explora todas las posibles asignaciones de variables en paralelo.
+  B. Realiza una búsqueda en anchura para encontrar la solución más cercana.
+  C. Es un algoritmo de búsqueda primero en profundidad que comprueba las restricciones a medida que asigna valores a las variables.
+  D. Utiliza una función heurística para guiar la asignación de variables de manera óptima.
+
+  ✅ Correcta: C
+  🧾 Explicación: El backtracking es una búsqueda primero en profundidad que va asignando valores a las variables y, en cada paso, verifica si la asignación parcial actual viola alguna de las restricciones. Si lo hace, retrocede (backtracks) para probar con otro valor.
+🧠 Pregunta 6
+¿Qué mejora introduce la técnica de "comprobación hacia adelante" (forward checking) en la búsqueda backtracking para PSRs?
+
+  A. Permite explorar caminos más prometedores utilizando una función de evaluación.
+  B. Detecta fallas futuras propagando las restricciones a las variables no asignadas después de cada asignación.
+  C. Reordena dinámicamente las variables para asignar primero las más restringidas.
+  D. Elimina por completo la necesidad de retroceder en la búsqueda.
+
+  ✅ Correcta: B
+  🧾 Explicación: La comprobación hacia adelante realiza un seguimiento de los dominios de las variables no asignadas y elimina los valores que entrarían en conflicto con la asignación actual, lo que permite detectar inconsistencias de manera temprana.
+🧠 Pregunta 7
+¿Qué significa que un arco X → Y sea consistente en el contexto de la propagación de restricciones en PSRs?
+
+  A. Que todas las variables en el problema tienen asignado un valor.
+  B. Que para cada valor posible de la variable X, existe al menos un valor posible para la variable Y que no viola la restricción entre ellas.
+  C. Que las variables X e Y no comparten ninguna restricción en común.
+  D. Que la asignación actual de valores a X e Y satisface todas las restricciones del problema.
+
+  ✅ Correcta: B
+  🧾 Explicación: La consistencia de un arco asegura que para cada valor en el dominio de la variable de origen (X), haya al menos un valor en el dominio de la variable de destino (Y) que sea compatible con la restricción que las relaciona.
+
+🧠 Pregunta 8
+¿Cuál de los siguientes problemas se describe en la lectura como un ejemplo clásico de un Problema de Satisfacción de Restricciones (PSR)?
+
+  A. Encontrar la ruta más corta entre dos ciudades.
+  B. Jugar una partida de ajedrez.
+  C. Colorear un mapa de tal manera que regiones adyacentes tengan colores diferentes.
+  D. Planificar la trayectoria de un robot en un laberinto.
+
+  ✅ Correcta: C
+  🧾 Explicación: El problema de colorear mapas, donde se deben asignar colores a las regiones vecinas de forma distinta, es un ejemplo fundamental utilizado para ilustrar los conceptos de los PSRs.
+🧠 Pregunta 9
+En el contexto de los PSRs, ¿qué se entiende por una "asignación completa"?
+
+  A. Una asignación de valores a un subconjunto de las variables que satisfacen algunas de las restricciones.
+  B. Una asignación de un valor a cada una de las variables del problema.
+  C. Una asignación de valores a todas las variables de tal manera que se cumplen todas las restricciones.
+  D. El proceso de explorar todas las posibles combinaciones de valores para las variables.
+
+  ✅ Correcta: B
+  🧾 Explicación: Una asignación completa implica que cada variable en el problema tiene asignado un valor de su dominio correspondiente. Una solución a un PSR es una asignación completa que además satisface todas las restricciones.
+🧠 Pregunta 10
+¿Qué tipo de variables pueden encontrarse en los Problemas de Satisfacción de Restricciones (PSRs)?
+
+  A. Únicamente variables booleanas (verdadero o falso).
+  B. Solo variables con dominios numéricos finitos.
+  C. Variables discretas (con dominios finitos o infinitos) y variables continuas.
+  D. Exclusivamente variables simbólicas (como colores o nombres).
+
+  ✅ Correcta: C
+  🧾 Explicación: Los PSRs pueden involucrar variables con dominios discretos, ya sean finitos (como en el coloreo de mapas) o infinitos (como en la programación de trabajos), así como variables continuas (como en la planificación de observaciones astronómicas).
+🧠 Pregunta 11
+¿Cuál de las siguientes describe una restricción binaria en un PSR?
+
+  A. Una restricción que limita el valor que puede tomar una única variable.
+  B. Una restricción que define una relación entre los valores de exactamente dos variables.
+  C. Una restricción que involucra a tres o más variables simultáneamente.
+  D. Una restricción que expresa una preferencia entre diferentes asignaciones de valores.
+
+  ✅ Correcta: B
+  🧾 Explicación: Las restricciones binarias especifican las condiciones que deben cumplir los valores asignados a un par de variables. Un ejemplo es la restricción de que dos regiones adyacentes en un mapa deben tener colores diferentes.
+🧠 Pregunta 12
+¿Qué papel juegan las heurísticas en la solución de Problemas de Satisfacción de Restricciones (PSRs) mediante búsqueda?
+
+  A. Siempre garantizan encontrar la solución óptima más rápidamente.
+  B. Proporcionan una guía para explorar el espacio de búsqueda de manera más eficiente, aunque no siempre son necesarias.
+  C. Son fundamentales para definir las restricciones del problema.
+  D. Se utilizan principalmente en la fase de verificación de la solución, no durante la búsqueda.
+
+  ✅ Correcta: B
+  🧾 Explicación: Aunque la lectura menciona que los PSRs permiten el uso de heurísticas de propósito general, la búsqueda backtracking básica no es informada. Las heurísticas pueden ser incorporadas para mejorar la eficiencia de la búsqueda, pero no son un componente obligatorio de todos los métodos de solución de PSRs.
+🧠 Pregunta 13
+¿Por qué se afirma en la lectura que la asignación de variables en los PSRs es conmutativa?
+
+  A. Porque el orden en que se verifican las restricciones no afecta la validez de la solución.
+  B. Porque cualquier solución encontrada puede ser reordenada para generar otras soluciones válidas.
+  C. Porque el orden en que se asignan los valores a las variables no altera el estado final de la asignación.
+  D. Porque las restricciones son inherentemente simétricas con respecto a las variables involucradas.
+
+  ✅ Correcta: C
+  🧾 Explicación: La conmutatividad de la asignación significa que el resultado final (la asignación de valores a las variables) es independiente del orden en que se realizaron las asignaciones individuales. Por ejemplo, asignar el valor rojo a la variable WA y luego verde a NT es equivalente a asignar verde a NT primero y luego rojo a WA.
+🧠 Pregunta 14
+En el contexto de la búsqueda backtracking para PSRs, ¿qué implica la frase "incrementa el objetivo"?
+
+  A. Que el algoritmo modifica las restricciones del problema durante la búsqueda.
+  B. Que el algoritmo intenta asignar valores a las variables de manera que se satisfagan cada vez más restricciones.
+  C. Que el algoritmo aumenta la profundidad de la búsqueda hasta encontrar una solución.
+  D. Que el algoritmo prioriza la asignación de valores a las variables con dominios más grandes.
+
+  ✅ Correcta: B
+  🧾 Explicación: "Incrementa el objetivo" se refiere a la estrategia de la búsqueda backtracking de construir gradualmente una asignación completa verificando en cada paso que la asignación parcial actual no viole ninguna de las restricciones. El objetivo se alcanza cuando se tiene una asignación completa que satisface todas las restricciones.
+🧠 Pregunta 15
+¿Cuál es una limitación de la búsqueda simple o ingenua (BFS o DFS) para resolver PSRs, mencionada en la lectura?
+
+  A. No pueden manejar problemas con un gran número de variables.
+  B. Son ineficientes porque exploran asignaciones que violan las restricciones desde el principio.
+  C. Solo son aplicables a PSRs con variables booleanas.
+  D. Requieren una función heurística muy específica para ser efectivas.
+
+  ✅ Correcta: B
+  🧾 Explicación: La búsqueda simple genera todas las posibles asignaciones completas y luego verifica si satisfacen las restricciones, lo que resulta ineficiente porque no detecta los conflictos hasta que se ha realizado una asignación completa.
+🧠 Pregunta 16
+¿Qué significa que la asignación de variables sea "conmutativa" en el contexto de los PSRs y la búsqueda backtracking?
+
+  A. Que el orden en que se eligen las variables para asignarles un valor no afecta el conjunto de soluciones posibles.
+  B. Que si una asignación parcial es válida, cualquier reordenamiento de esa asignación también es válida.
+  C. Que el algoritmo puede alternar entre asignar valores a diferentes variables en cualquier orden.
+  D. Que el costo de asignar un valor a una variable es independiente de las asignaciones previas.
+
+  ✅ Correcta: A
+  🧾 Explicación: La conmutatividad implica que el orden en que se seleccionan las variables para la asignación no cambia el espacio de búsqueda de soluciones. Por lo tanto, se puede considerar la asignación a una sola variable en cada paso sin perder generalidad.
+🧠 Pregunta 17
+¿Cuál es el propósito principal del "filtrado" en las mejoras de la búsqueda backtracking para PSRs?
+
+  A. Reordenar las variables para optimizar la búsqueda.
+  B. Realizar un seguimiento de los dominios de las variables no asignadas y eliminar las opciones inconsistentes.
+  C. Evaluar la calidad de las asignaciones parciales utilizando una función heurística.
+  D. Dividir el problema original en subproblemas más pequeños y fáciles de resolver.
+
+  ✅ Correcta: B
+  🧾 Explicación: El filtrado, como la comprobación hacia adelante y la consistencia de arco, busca reducir el espacio de búsqueda eliminando valores de los dominios de las variables no asignadas que no pueden formar parte de una solución válida debido a las restricciones ya consideradas.
+🧠 Pregunta 18
+¿Cómo propaga la información la técnica de "comprobación hacia adelante" en un PSR?
+
+  A. Asignando valores a las variables en el orden inverso a su aparición.
+  B. Revisando todas las restricciones que involucran a las variables ya asignadas.
+  C. Tachando los valores de los dominios de las variables no asignadas que entrarían en conflicto con la asignación actual.
+  D. Generando automáticamente nuevas restricciones basadas en las asignaciones previas.
+
+  ✅ Correcta: C
+  🧾 Explicación: La comprobación hacia adelante, al realizar una asignación, examina las restricciones que involucran a la variable recién asignada y reduce los dominios de las variables vecinas no asignadas, eliminando los valores que violarían esas restricciones.
+🧠 Pregunta 19
+¿Qué garantiza la consistencia de arco en un Problema de Satisfacción de Restricciones (PSR)?
+
+  A. Que se ha encontrado una solución al problema.
+  B. Que para cada par de variables restringidas, cada valor en el dominio de una tiene un valor compatible en el dominio de la otra.
+  C. Que todas las restricciones del problema han sido completamente verificadas.
+  D. Que el algoritmo de búsqueda backtracking no necesitará realizar ninguna vuelta atrás.
+
+  ✅ Correcta: B
+  🧾 Explicación: La consistencia de arco para un arco X → Y se cumple si, para cada valor en el dominio de X, existe al menos un valor en el dominio de Y que satisface la restricción entre X e Y. Aplicar la consistencia de arco a todas las restricciones puede reducir los dominios y detectar inconsistencias antes en la búsqueda.
+🧠 Pregunta 20
+Según la lectura, ¿cuál es una posible desventaja de hacer cumplir la consistencia de arco en un PSR?
+
+  A. Aumenta significativamente la complejidad espacial del algoritmo.
+  B. Puede llevar a la eliminación de soluciones válidas del espacio de búsqueda.
+  C. Requiere un tiempo de ejecución adicional que no siempre se traduce en una reducción del tiempo total de búsqueda.
+  D. Solo es aplicable a PSRs con restricciones binarias.
+
+  ✅ Correcta: C
+  🧾 Explicación: Aunque la consistencia de arco puede detectar fallas tempranamente, el proceso de hacerla cumplir tiene un costo computacional. Si la reducción del espacio de búsqueda no es lo suficientemente significativa, el tiempo dedicado a mantener la consistencia de arco podría superar el tiempo ahorrado en la búsqueda backtracking.
+🧠 Pregunta 21
+¿Cuál de los siguientes problemas del mundo real se menciona en la lectura como un ejemplo de aplicación de los PSRs?
+
+  A. Predicción del precio de las acciones.
+  B. Reconocimiento de voz.
+  C. Programación de horarios de clases.
+  D. Traducción automática de idiomas.
+
+  ✅ Correcta: C
+  🧾 Explicación: La lectura lista la "programación de horarios" como uno de los muchos problemas del mundo real que pueden ser modelados y resueltos como Problemas de Satisfacción de Restricciones.
+🧠 Pregunta 22
+¿En qué se diferencia la formulación de búsqueda estándar para PSRs del enfoque de búsqueda backtracking mejorado?
+
+  A. La búsqueda estándar utiliza heurísticas, mientras que el backtracking no.
+  B. La búsqueda estándar define estados como asignaciones completas desde el inicio, mientras que el backtracking construye asignaciones parciales.
+  C. La búsqueda estándar no verifica las restricciones hasta alcanzar un estado objetivo, mientras que el backtracking las comprueba en cada paso.
+  D. La búsqueda estándar explora el espacio de búsqueda en anchura, mientras que el backtracking lo hace en profundidad.
+
+  ✅ Correcta: C
+  🧾 Explicación: La formulación de búsqueda estándar genera todas las asignaciones completas y luego verifica las restricciones, mientras que el backtracking mejora esto verificando las restricciones a medida que se construyen las asignaciones parciales, lo que permite detectar fallas tempranamente y evitar la exploración de caminos inviables.
+🧠 Pregunta 23
+¿Qué tipo de problemas son particularmente adecuados para ser modelados como Problemas de Satisfacción de Restricciones (PSRs) según la lectura?
+
+  A. Problemas donde el camino hacia la solución es más importante que la solución en sí.
+  B. Problemas donde el objetivo es encontrar una secuencia óptima de acciones.
+  C. Problemas de identificación, donde el objetivo es encontrar una asignación de valores que cumpla ciertas propiedades.
+  D. Problemas con espacios de estados continuos y acciones no determinísticas.
+
+  ✅ Correcta: C
+  🧾 Explicación: La lectura indica que los PSRs son "Buenos para problemas de identificación", donde el foco está en encontrar una asignación de valores a las variables que satisfaga las restricciones, sin importar el proceso para llegar a esa asignación.
+🧠 Pregunta 24
+¿Qué se entiende por un PSR "k-consistente"? (Aunque no se define explícitamente en este extracto, se menciona al final del resumen, por lo que se espera una comprensión general del concepto en el contexto de la satisfacción de restricciones).
+
+  A. Un PSR donde todas las restricciones involucran exactamente a k variables.
+  B. Un PSR que puede ser resuelto en k pasos de búsqueda backtracking.
+  C. Una propiedad de un PSR que indica un nivel de coherencia local entre subconjuntos de k variables y sus posibles asignaciones.
+  D. Un PSR donde el tamaño del dominio de cada variable es como máximo k.
+
+  ✅ Correcta: C
+  🧾 Explicación: La k-consistencia es una propiedad más avanzada de los PSRs que implica que cualquier asignación consistente de k-1 variables se puede extender a una k-ésima variable de manera consistente. Es un concepto relacionado con la propagación de restricciones más allá de la consistencia de arco (2-consistencia).
+🧠 Pregunta 25
+¿Cuál es la relación entre la búsqueda backtracking y la búsqueda primero en profundidad (DFS) en el contexto de los PSRs?
+
+  A. Son enfoques completamente diferentes sin ninguna conexión.
+  B. La búsqueda backtracking es una especialización de la búsqueda en anchura (BFS) para PSRs.
+  C. La búsqueda backtracking es esencialmente una búsqueda primero en profundidad con mejoras específicas para el manejo de restricciones.
+  D. La búsqueda primero en profundidad se utiliza para problemas de planificación, mientras que el backtracking se aplica a los PSRs.
+
+  ✅ Correcta: C
+  🧾 Explicación: La lectura indica que la búsqueda backtracking es una búsqueda primero en profundidad que incorpora dos ideas clave para mejorar su eficiencia en la resolución de PSRs: asignar una variable a la vez y comprobar las restricciones en la marcha.
+🧠 Pregunta 26
+¿Qué sucede con los vecinos de una variable X si su dominio pierde un valor durante la aplicación de la consistencia de arco?
+
+  A. Sus dominios también se reducen automáticamente en la misma proporción.
+  B. Deben volver a comprobarse para asegurar que los arcos que los conectan sigan siendo consistentes.
+  C. Se les asigna un valor por defecto para mantener la consistencia.
+  D. Se marcan como variables cuya consistencia ya no necesita ser verificada.
+
+  ✅ Correcta: B
+  🧾 Explicación: Si el dominio de una variable X se reduce debido a la aplicación de la consistencia de arco, esto puede afectar la consistencia de los arcos que apuntan a X desde otras variables vecinas. Por lo tanto, estos vecinos deben ser revisados para mantener la propiedad de consistencia de arco en todo el grafo de restricciones.
+🧠 Pregunta 27
+¿Cuál es el peor caso de complejidad para encontrar una solución a un PSR con n variables, cada una con un dominio de tamaño d?
+
+  A. <span class="math-inline">O\(n \\times d\)</span>
+  B. <span class="math-inline">O\(n \+ d\)</span>
+  C. <span class="math-inline">O\(d^n\)</span>
+  D. <span class="math-inline">O\(n^d\)</span>
+
+  ✅ Correcta: C
+  🧾 Explicación: En el peor caso, sin ninguna optimización, un algoritmo de búsqueda podría tener que explorar todas las posibles asignaciones de valores a las <span class="math-inline">n</span> variables, donde cada variable puede tomar hasta <span class="math-inline">d</span> valores. Esto da como resultado un espacio de búsqueda de tamaño <span class="math-inline">O\(d^n\)</span>.
+🧠 Pregunta 28
+¿Qué significa que la consistencia de arco "detecta fallas antes" que la comprobación hacia adelante?
+
+  A. La consistencia de arco se aplica antes de que se realice cualquier asignación de variables.
+  B. La consistencia de arco considera las restricciones entre pares de variables de forma más proactiva, lo que puede revelar inconsistencias que la comprobación hacia adelante, que se centra en las consecuencias de la asignación actual, podría no detectar inmediatamente.
+  C. La comprobación hacia adelante solo se activa cuando se encuentra una solución parcial, mientras que la consistencia de arco opera continuamente.
+  D. La consistencia de arco utiliza información heurística para predecir futuros conflictos de manera más precisa.
+
+  ✅ Correcta: B
+  🧾 Explicación: La consistencia de arco examina las restricciones binarias de forma más exhaustiva, asegurando que para cada valor en el dominio de una variable, haya un soporte consistente en el dominio de la otra. Esto puede revelar inconsistencias (dominios que se vuelven vacíos) incluso antes de que se complete una asignación parcial que la comprobación hacia adelante podría detectar solo después de una asignación específica.
+🧠 Pregunta 29
+¿Qué se infiere sobre la dificultad de "detectar todos los futuros problemas" en un PSR al mencionar que es NP-difícil?
+
+  A. Que no existe ningún algoritmo eficiente para prever todas las posibles inconsistencias que podrían surgir durante la búsqueda.
+  B. Que los problemas de satisfacción de restricciones son inherentemente difíciles de resolver.
+  C. Que cualquier algoritmo que intente predecir todos los futuros problemas tendrá una complejidad exponencial en el número de variables.
+  D. Todas las anteriores.
+
+  ✅ Correcta: D
+  🧾 Explicación: La afirmación de que detectar todos los futuros problemas es NP-difícil sugiere que no hay un algoritmo de tiempo polinomial conocido para prever todas las inconsistencias que podrían surgir. Esto implica que la tarea es computacionalmente costosa, lo que se relaciona con la dificultad general de resolver ciertos tipos de PSRs y la complejidad de los algoritmos que intentan una predicción completa.
+
+🧠 Pregunta 30
+En el resumen final de la lectura sobre PSRs, ¿qué se destaca como una estrategia clave para abordar estos problemas?
+
+  A. Confiar únicamente en algoritmos de búsqueda no informada para garantizar la completitud.
+  B. Evitar la abstracción y modelización del problema para simplificar la resolución.
+  C. La combinación de técnicas de búsqueda con métodos de inferencia para mejorar la eficiencia.
+  D. Limitar el tamaño de los dominios de las variables a un pequeño conjunto de valores.
+
+  ✅ Correcta: C
+  🧾 Explicación: El resumen menciona "Algoritmos híbridos Heurística + inferencia" como una de las "Técnicas inferenciales" dentro del enfoque de "Búsqueda: Algoritmos híbridos", sugiriendo que la integración de estrategias de búsqueda con la capacidad de inferir nuevas restricciones o reducir dominios (inferencia) es fundamental para resolver PSRs de manera efectiva.
+
+¡Aquí tienes otras 20 preguntas de examen basadas en la lectura sobre Búsqueda y Satisfacción de Restricciones!
+
+🧠 Pregunta 31
+¿Cuál de las siguientes NO es un componente fundamental en la definición de un Problema de Satisfacción de Restricciones (PSR)?
+
+  A. Un conjunto finito de variables.
+  B. Una función objetivo a optimizar.
+  C. Un conjunto finito de dominios asociados a cada variable.
+  D. Un conjunto finito de restricciones que deben verificar los valores asignados.
+
+  ✅ Correcta: B
+  🧾 Explicación: Los PSRs se centran en encontrar una asignación que satisfaga las restricciones, no en optimizar una función objetivo. Los problemas con funciones objetivo y restricciones se conocen como problemas de optimización con restricciones.
+🧠 Pregunta 32
+En el ejemplo de "Coloreando mapas" presentado en la lectura, ¿qué representan las "variables"?
+
+  A. Los colores disponibles para colorear el mapa.
+  B. Las fronteras entre las diferentes regiones del mapa.
+  C. Cada una de las regiones geográficas del mapa que deben ser coloreadas.
+  D. Las combinaciones posibles de colores para regiones adyacentes.
+
+  ✅ Correcta: C
+  🧾 Explicación: En el problema de colorear mapas modelado como un PSR, cada región del mapa se representa como una variable a la que se le debe asignar un color de un conjunto de colores disponibles (el dominio de la variable).
+🧠 Pregunta 33
+En el ejemplo de "Las N-Reinas", ¿cuál es el dominio asociado a cada variable (que representa la posición de una reina en una columna)?
+
+  A. El conjunto de todas las posibles ubicaciones en el tablero.
+  B. El conjunto de las filas del tablero donde se puede colocar una reina.
+  C. El conjunto de las columnas del tablero donde se puede colocar una reina.
+  D. El conjunto de las diagonales del tablero que no están amenazadas.
+
+  ✅ Correcta: B
+  🧾 Explicación: En la formulación típica del problema de las N-Reinas como un PSR, cada columna del tablero se representa como una variable, y el dominio de cada variable es el conjunto de filas posibles donde se puede colocar una reina en esa columna.
+🧠 Pregunta 34
+¿Qué tipo de restricciones se utilizan típicamente en el problema de "Las N-Reinas"?
+
+  A. Restricciones unarias que limitan la posición de cada reina a una fila específica.
+  B. Restricciones binarias que impiden que dos reinas se ataquen entre sí (misma fila, columna o diagonal).
+  C. Restricciones de orden superior que consideran grupos de tres o más reinas simultáneamente.
+  D. Restricciones de preferencia que asignan costos a las posiciones de las reinas.
+
+  ✅ Correcta: B
+  🧾 Explicación: Las restricciones en el problema de las N-Reinas son principalmente binarias, ya que relacionan pares de reinas colocadas en diferentes columnas y aseguran que no se amenacen mutuamente según las reglas del ajedrez.
+🧠 Pregunta 35
+En el ejemplo de "Criptoaritmética", ¿qué representan las variables?
+
+  A. Las operaciones aritméticas (suma, resta, multiplicación).
+  B. Las letras que aparecen en la ecuación, cada una representando un dígito.
+  C. Las posiciones de los dígitos en los números.
+  D. El resultado numérico de la operación.
+
+  ✅ Correcta: B
+  🧾 Explicación: En los problemas de criptoaritmética modelados como PSRs, cada letra única en la ecuación se considera una variable, y el objetivo es asignar a cada letra un dígito del 0 al 9 de manera que la ecuación aritmética sea verdadera, con la restricción adicional de que letras diferentes deben tener dígitos diferentes y el dígito inicial de un número no puede ser cero.
+🧠 Pregunta 36
+En el ejemplo del "Sudoku", ¿cuál es el dominio inicial para cada variable (celda vacía)?
+
+  A. El conjunto de todos los números ya presentes en la misma fila, columna o región.
+  B. El conjunto vacío, ya que aún no se le ha asignado ningún valor.
+  C. El conjunto de los dígitos del 1 al 9.
+  D. Un subconjunto de los dígitos del 1 al 9 basado en las restricciones iniciales.
+
+  ✅ Correcta: C
+  🧾 Explicación: Inicialmente, para cada celda vacía en un Sudoku modelado como un PSR, el dominio consiste en todos los posibles dígitos (del 1 al 9), que luego se van reduciendo a medida que se aplican las restricciones (dígitos únicos por fila, columna y región).
+🧠 Pregunta 37
+¿Por qué se afirma que en los PSRs, las soluciones completas aparecen a una profundidad n en el árbol de búsqueda (donde n es el número de variables)?
+
+  A. Porque cada nivel del árbol representa la asignación de un valor a una restricción.
+  B. Porque cada nivel del árbol representa la asignación de un valor a una variable diferente.
+  C. Porque el algoritmo de búsqueda siempre explora <span class="math-inline">n</span> niveles de profundidad antes de retroceder.
+  D. Porque se necesitan <span class="math-inline">n</span> restricciones para definir completamente el problema.
+
+  ✅ Correcta: B
+  🧾 Explicación: En un PSR con <span class="math-inline">n</span> variables, una asignación completa implica que cada una de las <span class="math-inline">n</span> variables ha recibido un valor. Si se construye el árbol de búsqueda asignando un valor a una variable en cada nivel, se necesitarán <span class="math-inline">n</span> niveles para tener una asignación para todas las variables.
+🧠 Pregunta 38
+¿Cuál es una ventaja de utilizar algoritmos de búsqueda primero en profundidad para resolver PSRs con respecto a la búsqueda primero en anchura?
+
+  A. La búsqueda primero en anchura garantiza encontrar la solución más cercana a la raíz.
+  B. La búsqueda primero en profundidad tiende a tener menores requerimientos de memoria en comparación con la búsqueda primero en anchura.
+  C. La búsqueda primero en anchura es más eficiente para encontrar todas las soluciones.
+  D. La búsqueda primero en profundidad siempre encuentra una solución más rápidamente si existe.
+
+  ✅ Correcta: B
+  🧾 Explicación: La búsqueda primero en profundidad explora un camino hasta la profundidad máxima antes de retroceder, lo que generalmente requiere almacenar menos nodos en memoria en comparación con la búsqueda primero en anchura, que debe mantener todos los nodos de un nivel antes de pasar al siguiente.
+🧠 Pregunta 39
+¿Qué diferencia a las "restricciones suaves" o de preferencia de las restricciones "duras" en los PSRs?
+
+  A. Las restricciones suaves deben cumplirse estrictamente, mientras que las duras pueden ser violadas con una penalización.
+  B. Las restricciones duras definen condiciones obligatorias, mientras que las suaves indican preferencias que se desean satisfacer pero no son obligatorias.
+  C. Las restricciones suaves involucran menos variables que las restricciones duras.
+  D. Las restricciones duras se verifican al final de la búsqueda, mientras que las suaves se evalúan en cada paso.
+
+  ✅ Correcta: B
+  🧾 Explicación: Las restricciones duras son condiciones que deben ser absolutamente verdaderas para que una asignación sea válida. Las restricciones suaves, por otro lado, expresan deseos o preferencias, y las soluciones que las satisfacen pueden ser preferibles, pero no son un requisito para la validez de la solución en el sentido estricto del PSR. A menudo se relacionan con problemas de optimización con restricciones.
+🧠 Pregunta 40
+¿Cuál de las siguientes tareas podría modelarse como un Problema de Satisfacción de Restricciones?
+
+  A. Entrenar un modelo de aprendizaje automático para clasificar imágenes.
+  B. Planificar la ruta más eficiente para un vehículo de reparto.
+  C. Asignar estudiantes a diferentes proyectos grupales asegurando que se cumplan ciertas restricciones (ej. afinidad, cupo máximo).
+  D. Traducir un texto de un idioma a otro.
+
+  ✅ Correcta: C
+  🧾 Explicación: La asignación de estudiantes a proyectos con restricciones sobre afinidad y cupo máximo encaja perfectamente con la definición de un PSR, donde las variables son los estudiantes, los dominios son los proyectos, y las restricciones son las condiciones que deben cumplirse.
+🧠 Pregunta 41
+¿Qué significa que el algoritmo de búsqueda backtracking es "no-informado"?
+
+  A. Que no utiliza ninguna información sobre el problema más allá de su formulación (variables, dominios, restricciones) para guiar la búsqueda.
+  B. Que siempre encuentra la solución óptima para cualquier PSR.
+  C. Que requiere que el usuario proporcione información adicional para funcionar correctamente.
+  D. Que explora el espacio de búsqueda de manera aleatoria.
+
+  ✅ Correcta: A
+  🧾 Explicación: Un algoritmo de búsqueda no-informado, como el backtracking básico, no utiliza heurísticas o funciones de evaluación específicas del problema para decidir qué camino explorar a continuación. Simplemente sigue un procedimiento sistemático (en el caso del backtracking, una búsqueda primero en profundidad con verificación de restricciones).
+🧠 Pregunta 42
+¿Cuál es el principal beneficio de la "ordenación de variables" como una mejora en la búsqueda backtracking?
+
+  A. Reduce el número total de nodos explorados en el árbol de búsqueda al elegir variables que probablemente conduzcan a fallas tempranas o soluciones rápidas.
+  B. Simplifica la verificación de las restricciones al procesar las variables en un orden específico.
+  C. Permite al algoritmo cambiar dinámicamente el conjunto de restricciones durante la búsqueda.
+  D. Facilita la paralelización del proceso de búsqueda.
+
+  ✅ Correcta: A
+  🧾 Explicación: La ordenación de variables, como la estrategia de elegir primero la variable más restringida (la que tiene el dominio más pequeño), puede llevar a detectar inconsistencias más rápidamente y podar ramas del árbol de búsqueda antes, reduciendo así el esfuerzo computacional total.
+🧠 Pregunta 43
+¿En qué se diferencia la estrategia de "fallar en la primera restricción" (fail-first) en la búsqueda backtracking?
+
+  A. Prioriza la exploración de asignaciones que satisfacen la mayor cantidad de restricciones al principio.
+  B. Retrocede tan pronto como se viola la primera restricción encontrada en el camino actual de la búsqueda.
+  C. Revisa todas las restricciones que involucran a la variable recién asignada antes de continuar.
+  D. Intenta asignar valores a las variables de tal manera que se eviten futuras violaciones de restricciones.
+
+  ✅ Correcta: B
+  🧾 Explicación: La estrategia de "fallar en la primera restricción" es un principio que sugiere que, al elegir la siguiente variable para asignar, se debería seleccionar aquella que sea más probable que cause una falla si se le asigna un valor incorrecto. Esto a menudo se implementa eligiendo la variable con el dominio más pequeño.
+🧠 Pregunta 44
+¿Cuál es el objetivo de la "propagación de restricciones" en los PSRs?
+
+  A. Encontrar una solución válida lo más rápido posible.
+  B. Reducir los dominios de las variables eliminando valores que son inconsistentes con las restricciones.
+  C. Generar nuevas restricciones que faciliten la búsqueda de soluciones.
+  D. Evaluar la calidad de las asignaciones parciales utilizando funciones heurísticas.
+
+  ✅ Correcta: B
+  🧾 Explicación: La propagación de restricciones es un conjunto de técnicas que buscan hacer cumplir las restricciones localmente para reducir el tamaño de los dominios de las variables, eliminando valores que no pueden formar parte de ninguna solución válida. Esto puede llevar a la detección temprana de inconsistencias y a una búsqueda más eficiente.
+🧠 Pregunta 45
+¿Cómo se relaciona la "consistencia de nodo" con la consistencia de arco en los PSRs?
+
+  A. La consistencia de nodo es una condición más fuerte que implica la consistencia de arco.
+  B. La consistencia de arco se aplica a restricciones unarias, mientras que la consistencia de nodo se aplica a restricciones binarias.
+  C. La consistencia de nodo se refiere a las restricciones sobre una sola variable (unarias), asegurando que cada valor en su dominio satisfaga esas restricciones. La consistencia de arco extiende esta idea a las restricciones binarias.
+  D. Son términos intercambiables que describen el mismo concepto.
+
+  ✅ Correcta: C
+  🧾 Explicación: La consistencia de nodo es una forma de consistencia local que se aplica a restricciones unarias, asegurando que todos los valores en el dominio de una variable satisfagan todas las restricciones que involucran solo a esa variable. La consistencia de arco extiende este concepto a las restricciones binarias, considerando pares de variables y la compatibilidad de sus valores según la restricción entre ellas.
+🧠 Pregunta 46
+¿Por qué la aplicación repetida de la consistencia de arco no garantiza necesariamente la ausencia de una solución en un PSR?
+
+  A. Porque la consistencia de arco solo considera restricciones binarias y puede no detectar inconsistencias que involucren a tres o más variables.
+  B. Porque el orden en que se aplican los arcos para verificar la consistencia puede afectar el resultado.
+  C. Porque la consistencia de arco puede eliminar soluciones válidas si se aplica de forma demasiado agresiva.
+  D. Porque la verificación de la consistencia de arco es un proceso probabilístico que no siempre es exacto.
+
+  ✅ Correcta: A
+  🧾 Explicación: La consistencia de arco solo asegura la consistencia local entre pares de variables. Un conjunto de inconsistencias que involucran a tres o más variables podría no ser detectado por la aplicación de la consistencia de arco a cada par individualmente.
+🧠 Pregunta 47
+¿Qué papel juega la estructura del grafo de restricciones en la eficiencia de la solución de un PSR?
+
+  A. Una estructura más densa (más restricciones) siempre facilita la búsqueda de soluciones.
+  B. La estructura del grafo puede ser explotada por algoritmos específicos para resolver ciertos tipos de PSRs de manera más eficiente (ej. problemas con grafos de restricciones en forma de árbol).
+  C. La estructura del grafo de restricciones no tiene ningún impacto en la dificultad de resolver el PSR.
+  D. Una estructura más dispersa (menos restricciones) siempre conduce a una búsqueda más rápida.
+
+  ✅ Correcta: B
+  🧾 Explicación: La estructura del grafo de restricciones, que representa las variables como nodos y las restricciones como arcos, puede influir significativamente en la dificultad de resolver un PSR. Por ejemplo, los PSRs cuyo grafo de restricciones es un árbol pueden resolverse en tiempo polinomial utilizando algoritmos específicos.
+🧠 Pregunta 48
+¿Cuál es el objetivo de las "heurísticas de propósito general" mencionadas en la lectura en el contexto de los PSRs?
+
+  A. Guiar la búsqueda hacia soluciones óptimas en problemas de optimización con restricciones.
+  B. Proporcionar información específica del dominio del problema para acelerar la búsqueda en PSRs.
+  C. Ofrecer estrategias generales que pueden ser aplicadas a una amplia variedad de PSRs para mejorar la eficiencia de la búsqueda.
+  D. Simplificar la formulación del PSR reduciendo el número de variables y restricciones.
+
+  ✅ Correcta: C
+  🧾 Explicación: Las heurísticas de propósito general son estrategias o reglas que no dependen de las particularidades de un problema específico, sino que pueden ser aplicadas a diferentes tipos de PSRs para tomar decisiones informadas durante la búsqueda, como la selección de la siguiente variable o el orden de los valores a probar.
+🧠 Pregunta 49
+¿Qué se entiende por "abstracción/modelización" en el contexto de la resolución de PSRs?
+
+  A. El proceso de simplificar el problema original ignorando ciertos detalles irrelevantes.
+  B. La traducción de un problema del mundo real a la formalización de un PSR, identificando variables, dominios y restricciones.
+  C. La visualización gráfica del grafo de restricciones para facilitar la comprensión del problema.
+  D. El uso de analogías con otros problemas ya resueltos para guiar la búsqueda.
+
+  ✅ Correcta: B
+  🧾 Explicación: La abstracción y modelización en PSRs se refieren al proceso crucial de tomar un problema del mundo real y representarlo formalmente como un PSR, definiendo claramente cuáles son las variables, qué valores pueden tomar (sus dominios) y qué condiciones deben satisfacerse (las restricciones). Una buena modelización es fundamental para poder aplicar las técnicas de solución de PSRs.
+🧠 Pregunta 50
+Según el resumen de la lectura, ¿cuál es una dirección prometedora en la investigación y solución de PSRs?
+
+  A. El abandono de las técnicas de búsqueda en favor de métodos puramente de inferencia.
+  B. La limitación a problemas con solo restricciones binarias para simplificar la complejidad.
+  C. El desarrollo de algoritmos híbridos que combinan heurísticas con técnicas de inferencia.
+  D. El enfoque exclusivo en problemas con variables continuas, ya que son más comunes en aplicaciones del mundo real.
+
+  ✅ Correcta: C
+  🧾 Explicación: El resumen menciona explícitamente "Algoritmos híbridos Heurística + inferencia" como una de las técnicas clave en la solución de PSRs, sugiriendo que la combinación de la guía informada de las heurísticas con la capacidad de deducir nueva información a través de la inferencia es un enfoque poderoso y prometedor.

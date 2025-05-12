@@ -1,0 +1,549 @@
+🧠 Pregunta 1
+¿Qué objetivo tiene un Problema de Satisfacción de Restricciones (PSR)?
+
+A. Encontrar el camino óptimo hacia una meta
+B. Asignar valores a variables sin importar restricciones
+C. Encontrar una asignación de valores que satisfaga todas las restricciones
+D. Minimizar el costo de una secuencia de acciones
+
+✅ Correcta: C
+🧾 Explicación: El objetivo principal de un PSR es hallar una asignación completa de valores a las variables que cumpla con todas las restricciones impuestas.
+
+🧠 Pregunta 2
+¿Cuál es la característica principal del enfoque de backtracking en PSRs?
+
+A. Asigna todas las variables al inicio y verifica al final
+B. Recorre todos los caminos posibles sin restricciones
+C. Asigna una variable a la vez y verifica restricciones en el momento
+D. Utiliza BFS para buscar soluciones
+
+✅ Correcta: C
+🧾 Explicación: El algoritmo de backtracking asigna variables una a una y comprueba restricciones conforme avanza, descartando asignaciones inválidas lo antes posible.
+
+🧠 Pregunta 3
+¿Qué tipo de restricciones involucra más de dos variables?
+
+A. Unarias
+B. Binarias
+C. De orden superior
+D. Continuas
+
+✅ Correcta: C
+🧾 Explicación: Las restricciones de orden superior afectan a tres o más variables simultáneamente, como en el caso de la criptoaritmética.
+
+🧠 Pregunta 4
+¿Qué representa el estado inicial en la formulación de búsqueda de un PSR?
+
+A. La asignación parcial con todos los valores asignados
+B. Un conjunto completo de restricciones
+C. Una asignación vacía de variables
+D. El nodo objetivo en el árbol de búsqueda
+
+✅ Correcta: C
+🧾 Explicación: En PSRs, el estado inicial es una asignación vacía, lo que significa que aún no se ha asignado ningún valor a ninguna variable.
+
+🧠 Pregunta 5
+¿Qué mejora permite detectar inconsistencias antes que la comprobación hacia adelante?
+
+A. Selección de variables
+B. Filtrado por profundidad
+C. Propagación de restricciones por consistencia de arco
+D. Búsqueda BFS
+
+✅ Correcta: C
+🧾 Explicación: La consistencia de arco es una técnica que propaga restricciones entre variables y detecta inconsistencias antes que forward checking, al asegurar que cada posible valor de una variable tenga soporte en sus vecinos.
+
+🧠 Pregunta 6
+¿Qué representan los dominios en un PSR?
+
+A. Las restricciones que aplican a las variables
+B. El conjunto de variables aún no asignadas
+C. Los posibles valores que puede tomar cada variable
+D. Las soluciones parciales del problema
+
+✅ Correcta: C
+🧾 Explicación: En un PSR, el dominio de una variable define los valores posibles que esta puede adoptar.
+
+🧠 Pregunta 7
+¿Qué tipo de problema puede ser modelado como un PSR?
+
+A. Solución de ecuaciones diferenciales
+B. Problemas de planificación continua
+C. Sudoku o N-Reinas
+D. Problemas de clasificación supervisada
+
+✅ Correcta: C
+🧾 Explicación: Problemas como Sudoku, N-Reinas o criptoaritmética son ejemplos clásicos que se representan como PSRs con variables discretas y restricciones específicas.
+
+🧠 Pregunta 8
+¿Qué ocurre en la técnica de forward checking?
+
+A. Se asignan todos los valores posibles a la vez
+B. Se eliminan valores de los dominios que violarían restricciones futuras
+C. Se recorre el árbol completo antes de aplicar restricciones
+D. Se utiliza una heurística para reordenar los nodos
+
+✅ Correcta: B
+🧾 Explicación: Forward checking consiste en eliminar valores de los dominios de variables no asignadas que ya no son válidos según las restricciones y las asignaciones actuales.
+
+🧠 Pregunta 9
+¿Cuál de las siguientes afirmaciones sobre los PSRs es verdadera?
+
+A. El camino a la solución es más importante que la solución en sí
+B. Todos los caminos tienen distintos niveles de profundidad
+C. En muchos PSRs, todos los caminos tienen igual profundidad
+D. Las acciones son aleatorias en los PSRs
+
+✅ Correcta: C
+🧾 Explicación: En PSRs como el de N-Reinas, todos los caminos tienen igual profundidad ya que se asigna un valor a cada variable hasta completarlas.
+
+🧠 Pregunta 10
+¿Cuál es la principal ventaja del uso de heurísticas en PSRs?
+
+A. Aumentar el número de restricciones
+B. Evitar completamente el uso de búsqueda
+C. Guiar la búsqueda para encontrar soluciones más rápido
+D. Eliminar el uso de variables
+
+✅ Correcta: C
+🧾 Explicación: Las heurísticas permiten reducir el espacio de búsqueda al priorizar asignaciones prometedoras, mejorando la eficiencia.
+
+🧠 Pregunta 11
+¿Qué se busca en un PSR con preferencias o restricciones suaves?
+
+A. Una solución que evite cualquier costo
+B. Una solución óptima en términos de costos asignados
+C. Una solución sin restricciones
+D. Una solución con más de una asignación válida
+
+✅ Correcta: B
+🧾 Explicación: Las restricciones suaves o preferencias asignan costos a las decisiones, y el objetivo se convierte en minimizar ese costo total.
+
+🧠 Pregunta 12
+¿Cuál es la relación entre los PSRs y los algoritmos DFS?
+
+A. Los PSRs solo pueden resolverse con BFS
+B. DFS es popular en PSRs por su eficiencia y naturaleza recursiva
+C. DFS es inútil en PSRs
+D. DFS ignora restricciones en los PSRs
+
+✅ Correcta: B
+🧾 Explicación: DFS es útil en PSRs ya que permite construir soluciones paso a paso y retroceder (backtracking) al detectar inconsistencias.
+
+🧠 Pregunta 13
+¿Para qué se utiliza la propagación de restricciones en PSRs?
+
+A. Para aumentar el número de soluciones
+B. Para extender los dominios de las variables
+C. Para detectar inconsistencias antes de hacer asignaciones
+D. Para desordenar el árbol de búsqueda
+
+✅ Correcta: C
+🧾 Explicación: La propagación permite detectar restricciones no satisfechas antes de realizar asignaciones completas, reduciendo el trabajo innecesario.
+
+🧠 Pregunta 14
+¿Qué ocurre si un arco no es consistente en la propagación de restricciones?
+
+A. Se elimina la variable asociada
+B. Se reinicia la búsqueda
+C. Se eliminan valores del dominio del nodo origen
+D. Se aumenta la profundidad del árbol
+
+✅ Correcta: C
+🧾 Explicación: Cuando un arco no es consistente, significa que ciertos valores no tienen soporte y deben eliminarse del dominio de la variable origen.
+
+🧠 Pregunta 15
+¿Cuál es una desventaja de aplicar consistencia de arco?
+
+A. Aumenta el tamaño del dominio
+B. Puede ser costosa computacionalmente
+C. No reduce el espacio de búsqueda
+D. Elimina todas las restricciones
+
+✅ Correcta: B
+🧾 Explicación: Aunque útil, la consistencia de arco puede ser computacionalmente costosa, especialmente si se aplica repetidamente.
+
+🧠 Pregunta 16
+¿Qué estructura se utiliza para representar visualmente un PSR?
+
+A. Grafo de decisiones
+B. Grafo de restricciones
+C. Árbol de expansión
+D. Red de datos
+
+✅ Correcta: B
+🧾 Explicación: Los PSRs se representan mediante un grafo de restricciones donde nodos son variables y aristas indican restricciones entre ellas.
+
+🧠 Pregunta 17
+¿Qué permite la técnica de filtrado en PSRs?
+
+A. Ampliar el espacio de búsqueda
+B. Reordenar las variables en el grafo
+C. Detectar fallas rápidamente al descartar valores inválidos
+D. Cambiar los objetivos del problema
+
+✅ Correcta: C
+🧾 Explicación: El filtrado descarta valores que no cumplen restricciones, lo que ayuda a detectar inconsistencias antes de seguir con la búsqueda.
+
+🧠 Pregunta 18
+¿Qué tipo de variables suelen usarse en los PSRs clásicos como Sudoku o N-Reinas?
+
+A. Continuas
+B. Booleanas
+C. Discretas con dominios finitos
+D. Categóricas multinivel
+
+✅ Correcta: C
+🧾 Explicación: En estos problemas, se asignan valores de un conjunto finito, como posiciones o colores, a cada variable.
+
+🧠 Pregunta 19
+¿Qué aspecto diferencia a un PSR de un problema de planificación?
+
+A. En los PSRs el camino es lo importante
+B. La planificación usa restricciones suaves
+C. En los PSRs lo importante es la solución, no el camino
+D. No se usan variables en los PSRs
+
+✅ Correcta: C
+🧾 Explicación: A diferencia de la planificación, en los PSRs se busca directamente una asignación válida, sin importar cómo se llegó a ella.
+
+🧠 Pregunta 20
+¿Qué significa que un problema sea K-consistente?
+
+A. Que todas las variables tienen dominio vacío
+B. Que cumple con restricciones de tipo continuo
+C. Que cualquier conjunto de K−1 variables es consistente con una K-ésima variable
+D. Que solo hay una solución posible
+
+✅ Correcta: C
+🧾 Explicación: La K-consistencia garantiza que cualquier conjunto consistente de K−1 variables puede extenderse consistentemente a una variable adicional.
+
+🧠 Pregunta 21
+¿Por qué se prefiere asignar una variable a la vez en backtracking?
+
+A. Porque las asignaciones son independientes
+B. Porque reduce el número de nodos
+C. Porque la asignación es conmutativa y se puede evaluar progresivamente
+D. Porque permite usar BFS más fácilmente
+
+✅ Correcta: C
+🧾 Explicación: La asignación de variables es conmutativa y permite revisar las restricciones paso a paso, lo que mejora la eficiencia.
+
+🧠 Pregunta 22
+¿Qué se puede decir de los PSRs booleanos?
+
+A. No tienen restricciones
+B. Siempre tienen variables continuas
+C. Son casos particulares con valores de dominio {True, False}
+D. No se pueden representar en grafos
+
+✅ Correcta: C
+🧾 Explicación: Los PSRs booleanos tienen dominios reducidos a dos valores y son una forma simplificada de PSRs clásicos.
+
+🧠 Pregunta 23
+¿Cuál es una ventaja de detectar inconsistencias temprano en PSRs?
+
+A. Permite eliminar restricciones
+B. Reduce el espacio de búsqueda innecesario
+C. Permite más soluciones incorrectas
+D. Aumenta la complejidad del problema
+
+✅ Correcta: B
+🧾 Explicación: Al detectar inconsistencias pronto, se evita explorar caminos que inevitablemente fallarán, optimizando el proceso.
+
+🧠 Pregunta 24
+¿En qué se basa la selección de la siguiente variable a asignar?
+
+A. Siempre es aleatoria
+B. En la profundidad del árbol
+C. En heurísticas como la menor cantidad de valores posibles
+D. En el nombre de la variable
+
+✅ Correcta: C
+🧾 Explicación: Una estrategia efectiva es seleccionar la variable más restringida primero, usando heurísticas para reducir el número de asignaciones inválidas.
+
+🧠 Pregunta 25
+¿Qué define una solución válida en un PSR?
+
+A. Una asignación incompleta con restricciones
+B. Una asignación con dominios infinitos
+C. Una asignación completa que satisface todas las restricciones
+D. Cualquier asignación parcial
+
+✅ Correcta: C
+🧾 Explicación: Una solución válida en un PSR es aquella donde todas las variables están asignadas y todas las restricciones se cumplen.
+
+🧠 Pregunta 26
+¿Qué tipo de restricciones se aplican a una sola variable?
+
+A. Binarias
+B. Unarias
+C. De orden superior
+D. Temporales
+
+✅ Correcta: B
+🧾 Explicación: Las restricciones unarias afectan únicamente a una variable, y son equivalentes a reducir su dominio.
+
+🧠 Pregunta 27
+¿En qué consiste la idea de “incrementar el objetivo” en backtracking?
+
+A. En aumentar el tamaño del dominio
+B. En revisar todos los caminos posibles
+C. En verificar restricciones al hacer asignaciones parciales
+D. En cambiar las restricciones a mitad de la búsqueda
+
+✅ Correcta: C
+🧾 Explicación: “Incrementar el objetivo” implica verificar que las asignaciones parciales cumplan con las restricciones antes de continuar.
+
+🧠 Pregunta 28
+¿Qué representa cada nodo en el árbol de búsqueda de un PSR?
+
+A. Una variable
+B. Una restricción
+C. Una asignación parcial de variables
+D. Un dominio completo
+
+✅ Correcta: C
+🧾 Explicación: Cada nodo representa una asignación parcial, es decir, algunas variables ya tienen valores asignados.
+
+🧠 Pregunta 29
+¿Cuál es la principal diferencia entre forward checking y consistencia de arco?
+
+A. Forward checking se aplica después del backtracking
+B. La consistencia de arco puede detectar fallas más tempranas
+C. Forward checking modifica el árbol de búsqueda
+D. La consistencia de arco elimina variables
+
+✅ Correcta: B
+🧾 Explicación: La consistencia de arco analiza relaciones entre variables para detectar fallos antes que forward checking.
+
+🧠 Pregunta 30
+¿Qué se busca lograr con técnicas como ordenamiento de variables en PSRs?
+
+A. Minimizar el número de variables
+B. Agilizar la búsqueda hacia una solución
+C. Eliminar restricciones
+D. Incrementar el número de soluciones
+
+✅ Correcta: B
+🧾 Explicación: Ordenar las variables según ciertas heurísticas (como la más restringida primero) ayuda a encontrar soluciones más rápido.
+
+🧠 Pregunta 31
+¿Cuál de los siguientes es un ejemplo de PSR con variables continuas?
+
+A. Sudoku
+B. Criptoaritmética
+C. Programación de observaciones con telescopio
+D. Coloreado de mapas
+
+✅ Correcta: C
+🧾 Explicación: Las variables como horas de observación son continuas y requieren métodos diferentes para resolver el PSR.
+
+🧠 Pregunta 32
+¿Qué tipo de restricción puede involucrar simultáneamente tres variables o más?
+
+A. Binaria
+B. Continua
+C. Unaria
+D. De orden superior
+
+✅ Correcta: D
+🧾 Explicación: Las restricciones de orden superior afectan a múltiples variables a la vez, como en la suma de letras en criptoaritmética.
+
+🧠 Pregunta 33
+¿Cuál es el objetivo de usar propagación de restricciones?
+
+A. Aumentar el espacio de búsqueda
+B. Generar nuevas restricciones
+C. Eliminar variables innecesarias
+D. Prevenir asignaciones inválidas anticipadamente
+
+✅ Correcta: D
+🧾 Explicación: La propagación busca reducir dominios y detectar conflictos antes de hacer asignaciones completas.
+
+🧠 Pregunta 34
+¿Qué es un “grafo de restricciones”?
+
+A. Un conjunto de soluciones válidas
+B. Una red de nodos y aristas que representa variables y sus restricciones
+C. Un árbol de decisión
+D. Un tipo de heurística para backtracking
+
+✅ Correcta: B
+🧾 Explicación: Es una estructura que conecta variables entre sí mediante restricciones, facilitando el análisis y la propagación.
+
+🧠 Pregunta 35
+¿Por qué el problema de las N-Reinas es un PSR?
+
+A. Porque se puede resolver con BFS
+B. Porque tiene una única solución
+C. Porque requiere asignar posiciones a reinas cumpliendo restricciones
+D. Porque depende del tamaño del tablero
+
+✅ Correcta: C
+🧾 Explicación: En este problema, cada reina es una variable que debe colocarse sin amenazar a las demás, cumpliendo restricciones.
+
+🧠 Pregunta 36
+¿Qué ocurre si se hace backtracking sin verificación de restricciones?
+
+A. Se encuentran más soluciones
+B. Se evita el uso de dominios
+C. Se recorren muchos caminos inútiles
+D. Se ejecuta más rápido
+
+✅ Correcta: C
+🧾 Explicación: Sin verificar restricciones, el algoritmo explorará ramas del árbol que nunca podrían conducir a soluciones válidas.
+
+🧠 Pregunta 37
+¿Cuál es el efecto de aplicar consistencia de arco dentro del backtracking?
+
+A. Ralentiza todo el algoritmo
+B. Impide que se encuentren soluciones
+C. Elimina valores inválidos más eficientemente
+D. Duplica los dominios
+
+✅ Correcta: C
+🧾 Explicación: Integrar consistencia de arco permite detectar conflictos con más anticipación, mejorando el rendimiento del algoritmo.
+
+🧠 Pregunta 38
+¿En qué tipo de problema real se aplican PSRs?
+
+A. Generación de texto automático
+B. Traducción automática
+C. Problemas de horario y asignación de clases
+D. Detección de objetos en imágenes
+
+✅ Correcta: C
+🧾 Explicación: Los PSRs son útiles en problemas como la asignación de clases a profesores y horarios cumpliendo restricciones.
+
+🧠 Pregunta 39
+¿Cuál es la desventaja de aplicar demasiadas técnicas de consistencia?
+
+A. No permiten encontrar ninguna solución
+B. Incrementan el tiempo de ejecución
+C. No aplican a variables continuas
+D. Ocultan los resultados verdaderos
+
+✅ Correcta: B
+🧾 Explicación: Forzar consistencias más allá de cierto punto puede ser computacionalmente costoso sin garantizar mejores soluciones.
+
+🧠 Pregunta 40
+¿Cuándo aparece una solución válida en el árbol de búsqueda de un PSR?
+
+A. En el nodo raíz
+B. Al asignar todas las variables y cumplir restricciones
+C. Siempre en el primer intento
+D. Cuando se cumple forward checking
+
+✅ Correcta: B
+🧾 Explicación: Una solución completa ocurre cuando todas las variables tienen un valor asignado y se cumplen todas las restricciones.
+
+🧠 Pregunta 41
+¿Cuál de los siguientes problemas puede representarse como PSR?
+
+A. Clasificación de imágenes
+B. Diagnóstico médico basado en síntomas
+C. Traducción neuronal
+D. Cálculo de trayectorias físicas
+
+✅ Correcta: B
+🧾 Explicación: El diagnóstico por restricciones puede modelarse como un PSR, donde los síntomas deben satisfacer restricciones médicas.
+
+🧠 Pregunta 42
+¿Qué significa que los dominios sean finitos?
+
+A. Que tienen una cantidad infinita de soluciones
+B. Que los valores asignables a cada variable están limitados
+C. Que las restricciones no afectan
+D. Que se puede hacer BFS
+
+✅ Correcta: B
+🧾 Explicación: En dominios finitos, cada variable solo puede tomar un número determinado de valores, facilitando el análisis exhaustivo.
+
+🧠 Pregunta 43
+¿Qué pasa si un dominio se queda vacío durante la búsqueda?
+
+A. Se encuentra una solución parcial
+B. La búsqueda termina exitosamente
+C. Se detecta una inconsistencia y se hace retroceso
+D. Se agregan más restricciones
+
+✅ Correcta: C
+🧾 Explicación: Un dominio vacío indica que no hay valores válidos para una variable, por lo que se debe retroceder en la búsqueda.
+
+🧠 Pregunta 44
+¿Qué estrategia puede acelerar la detección de fallas?
+
+A. Seleccionar la variable más amplia
+B. Ampliar dominios continuamente
+C. Aplicar filtrado y propagación de restricciones
+D. Saltarse restricciones secundarias
+
+✅ Correcta: C
+🧾 Explicación: El filtrado y la propagación permiten detectar conflictos antes de asignar completamente las variables.
+
+🧠 Pregunta 45
+¿Cuál de estos problemas puede modelarse como PSR con restricciones de desigualdad?
+
+A. Sudoku
+B. Suma binaria
+C. Reconocimiento de imágenes
+D. Redes neuronales
+
+✅ Correcta: A
+🧾 Explicación: El Sudoku impone restricciones de desigualdad entre filas, columnas y regiones para que no se repitan los valores.
+
+🧠 Pregunta 46
+¿Qué ocurre con la complejidad al aumentar el número de variables y valores?
+
+A. Disminuye exponencialmente
+B. Se mantiene constante
+C. Aumenta exponencialmente
+D. Se vuelve lineal
+
+✅ Correcta: C
+🧾 Explicación: Si hay $n$ variables y cada una tiene $d$ valores, existen $O(d^n)$ posibles asignaciones, lo que crece exponencialmente.
+
+🧠 Pregunta 47
+¿Qué indica un arco consistente entre dos variables?
+
+A. Que se pueden eliminar todas las restricciones
+B. Que ambas variables tienen el mismo valor
+C. Que hay al menos un valor válido para ambas sin violar restricciones
+D. Que sus dominios son infinitos
+
+✅ Correcta: C
+🧾 Explicación: Un arco es consistente si, para cada valor en la variable origen, hay al menos un valor en la variable destino que respeta la restricción.
+
+🧠 Pregunta 48
+¿Qué hace forward checking tras asignar un valor a una variable?
+
+A. Ejecuta todo el árbol
+B. Elimina del dominio de variables no asignadas los valores que violarían restricciones
+C. Cambia los valores asignados
+D. Reasigna el objetivo
+
+✅ Correcta: B
+🧾 Explicación: Forward checking reduce los dominios de las variables restantes para reflejar la nueva asignación y evitar inconsistencias futuras.
+
+🧠 Pregunta 49
+¿Cuál es un ejemplo de restricción de orden superior en criptoaritmética?
+
+A. Dos letras no pueden ser iguales
+B. La suma de tres letras debe dar una cuarta
+C. Una letra debe ser mayor que otra
+D. Todas las letras deben ser diferentes
+
+✅ Correcta: B
+🧾 Explicación: Una restricción que involucra la suma de varias letras afecta a más de dos variables, siendo de orden superior.
+
+🧠 Pregunta 50
+¿Cuál es una razón por la que se usa backtracking en vez de BFS en PSRs?
+
+A. Porque BFS es más rápido
+B. Porque BFS solo sirve para problemas heurísticos
+C. Porque backtracking consume menos memoria y es más eficiente en espacios grandes
+D. Porque BFS ignora restricciones
+
+✅ Correcta: C
+🧾 Explicación: Backtracking es más eficiente en PSRs porque explora solo una rama a la vez y permite retroceder si se detectan fallas, evitando recorrer todo el árbol.

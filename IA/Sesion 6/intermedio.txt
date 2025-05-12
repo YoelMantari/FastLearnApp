@@ -1,0 +1,605 @@
+🧠 Pregunta 9
+¿Cuál es la relación entre el número de variables originales y el número de componentes principales que se pueden extraer en un ACP?
+
+   A. El número de componentes principales siempre es mayor que el número de variables originales.
+   B. El número de componentes principales siempre es menor que el número de variables originales.
+   C. El número de componentes principales es igual o menor que el número de variables originales.
+   D. No existe una relación directa entre ambos números.
+
+   ✅ Correcta: C
+   🧾 Explicación: En el ACP, se pueden extraer como máximo tantos componentes principales como el número de variables originales. El objetivo es, idealmente, quedarse con un número mucho menor que capture la mayor parte de la variabilidad.
+🧠 Pregunta 10
+¿Qué significa que los componentes principales sean "incorrelacionados"?
+
+   A. Que no tienen ninguna relación lineal entre sí.
+   B. Que sus medias son iguales a cero.
+   C. Que sus varianzas son iguales a uno.
+   D. Que se distribuyen de forma independiente.
+
+   ✅ Correcta: A
+   🧾 Explicación: La incorrelación entre los componentes principales implica que no existe una dependencia lineal entre ellos, lo que significa que cada componente captura una parte única de la variabilidad de los datos.
+🧠 Pregunta 11
+¿Cómo se determinan los autovectores en el contexto del Análisis de Componentes Principales?
+
+   A. Se seleccionan aleatoriamente de la matriz de datos.
+   B. Se calculan como las combinaciones lineales de las variables originales que maximizan la varianza de cada componente.
+   C. Se definen por el usuario antes de realizar el análisis.
+   D. Se obtienen directamente de la matriz de correlaciones sin ningún cálculo.
+
+   ✅ Correcta: B
+   🧾 Explicación: Los autovectores representan las direcciones en el espacio de las variables originales a lo largo de las cuales la varianza de los datos es máxima. Cada autovector define un componente principal.
+🧠 Pregunta 12
+¿Qué representa un autovalor en el Análisis de Componentes Principales?
+
+   A. La correlación entre las variables originales.
+   B. La varianza explicada por el componente principal asociado a ese autovalor.
+   C. La magnitud del autovector correspondiente.
+   D. La media de las variables originales.
+
+   ✅ Correcta: B
+   🧾 Explicación: El autovalor asociado a un componente principal cuantifica la cantidad de varianza total de los datos originales que es explicada por ese componente. Autovalores más altos indican una mayor varianza explicada.
+🧠 Pregunta 13
+¿Por qué es útil reducir la dimensionalidad de los datos utilizando ACP?
+
+   A. Siempre mejora la precisión de los modelos predictivos.
+   B. Facilita la visualización de datos complejos y reduce la redundancia de la información.
+   C. Asegura que todas las variables tengan la misma escala.
+   D. Elimina la necesidad de realizar análisis estadísticos posteriores.
+
+   ✅ Correcta: B
+   🧾 Explicación: La reducción de dimensionalidad simplifica la interpretación de los datos, permite la visualización en un número menor de dimensiones y elimina la multicolinealidad al crear componentes incorrelacionados.
+🧠 Pregunta 14
+¿Qué criterio se suele utilizar para decidir cuántos componentes principales conservar en un análisis?
+
+   A. Conservar siempre el mismo número de componentes que variables originales.
+   B. Conservar un número fijo de componentes (por ejemplo, los tres primeros).
+   C. Conservar los componentes que explican un porcentaje suficientemente alto de la varianza total (por ejemplo, el 70% u 80%).
+   D. Conservar solo el primer componente principal.
+
+   ✅ Correcta: C
+   🧾 Explicación: Un criterio común es retener aquellos componentes cuyos autovalores son significativamente mayores que 1 (criterio de Kaiser) o aquellos que acumulan un cierto umbral de la varianza explicada. También se pueden usar gráficos de sedimentación (scree plots).
+🧠 Pregunta 15
+¿Cuál es la relación entre la matriz de covarianzas y la matriz de correlaciones de un conjunto de datos estandarizados (media 0 y varianza 1)?
+
+   A. La matriz de covarianzas es la inversa de la matriz de correlaciones.
+   B. La matriz de covarianzas es igual a la matriz de correlaciones.
+   C. La matriz de covarianzas es la transpuesta de la matriz de correlaciones.
+   D. No existe una relación directa entre ellas.
+
+   ✅ Correcta: B
+   🧾 Explicación: Cuando las variables están estandarizadas, las covarianzas entre ellas son numéricamente iguales a sus correlaciones de Pearson.
+🧠 Pregunta 16
+¿Cómo se interpreta un componente principal con cargas factoriales altas para un subconjunto de variables originales?
+
+   A. Indica que esas variables son independientes del componente.
+   B. Sugiere que el componente representa una dimensión subyacente que está fuertemente influenciada por esas variables.
+   C. Implica que esas variables tienen muy poca variabilidad.
+   D. Significa que esas variables no fueron incluidas en el análisis.
+
+   ✅ Correcta: B
+   🧾 Explicación: Las cargas factoriales representan la correlación entre las variables originales y los componentes principales. Cargas altas (en valor absoluto) indican que la variable tiene una fuerte relación con ese componente.
+🧠 Pregunta 17
+¿Cuál es la diferencia clave entre el Análisis de Componentes Principales y el Análisis Factorial Exploratorio?
+
+   A. El ACP busca reducir la dimensionalidad, mientras que el AFE busca identificar factores latentes que explican las correlaciones entre las variables.
+   B. El ACP se utiliza para datos categóricos, mientras que el AFE se utiliza para datos continuos.
+   C. El ACP requiere más supuestos estadísticos que el AFE.
+   D. No hay diferencias significativas entre ambos métodos.
+
+   ✅ Correcta: A
+   🧾 Explicación: Aunque ambos métodos buscan reducir la dimensionalidad, el ACP es una técnica descriptiva que transforma las variables observadas, mientras que el AFE es un modelo que postula la existencia de variables latentes (factores) que causan las correlaciones observadas.
+🧠 Pregunta 18
+¿Qué implicación tiene el hecho de que la suma de las varianzas de las variables originales sea igual a la suma de las varianzas de los componentes principales?
+
+   A. Que no se pierde información sobre la variabilidad total de los datos durante la transformación.
+   B. Que los componentes principales no son útiles para la reducción de dimensionalidad.
+   C. Que los autovalores de la matriz de covarianzas siempre suman cero.
+   D. Que la matriz de datos original no tenía correlaciones entre las variables.
+
+   ✅ Correcta: A
+   🧾 Explicación: Esta igualdad asegura que el ACP conserva la variabilidad total presente en los datos originales, simplemente la redistribuye entre los componentes principales.
+🧠 Pregunta 19
+¿Cómo se relaciona la ortogonalidad de los autovectores con la incorrelación de los componentes principales?
+
+   A. Los autovectores ortogonales garantizan que los componentes principales resultantes estén correlacionados positivamente.
+   B. Los autovectores ortogonales son una condición necesaria para que los componentes principales sean incorrelacionados.
+   C. La ortogonalidad de los autovectores no tiene ninguna relación con la correlación de los componentes principales.
+   D. Los autovectores ortogonales implican que los componentes principales tienen la misma varianza.
+
+   ✅ Correcta: B
+   🧾 Explicación: La ortogonalidad de los autovectores de la matriz de covarianzas (o correlaciones) es la propiedad matemática que asegura que los componentes principales derivados sean linealmente incorrelacionados.
+🧠 Pregunta 20
+En la práctica, ¿por qué a menudo se intenta representar los datos utilizando los dos o tres primeros componentes principales?
+
+   A. Porque estos componentes siempre explican el 100% de la varianza.
+   B. Para facilitar la visualización de las relaciones entre las observaciones en un espacio de baja dimensionalidad, siempre que estos componentes capturen una parte sustancial de la variabilidad.
+   C. Porque los componentes posteriores siempre tienen autovalores negativos.
+   D. Porque el cálculo de más componentes es computacionalmente inviable.
+
+   ✅ Correcta: B
+   🧾 Explicación: La representación en 2D o 3D permite la creación de gráficos de dispersión que pueden revelar patrones, agrupaciones o valores atípicos en los datos, siempre que los primeros componentes capturen una proporción importante de la variabilidad total.
+🧠 Pregunta 21
+¿Qué ocurre con la varianza explicada por los componentes principales a medida que se consideran componentes de orden superior (tercero, cuarto, etc.)?
+
+   A. La varianza explicada tiende a aumentar.
+   B. La varianza explicada tiende a disminuir.
+   C. La varianza explicada permanece constante.
+   D. No hay una tendencia general definida.
+
+   ✅ Correcta: B
+   🧾 Explicación: Los componentes principales se ordenan por la cantidad de varianza que explican. El primer componente explica la mayor parte, el segundo la siguiente mayor parte, y así sucesivamente, por lo que la varianza explicada disminuye a medida que se consideran componentes de orden superior.
+🧠 Pregunta 22
+¿Cómo afecta la presencia de variables con escalas muy diferentes al resultado de un ACP realizado sobre la matriz de covarianzas?
+
+   A. Las variables con escalas mayores tenderán a tener una mayor influencia en la determinación de los componentes principales.
+   B. Las variables con escalas menores tendrán una mayor influencia.
+   C. La escala de las variables no afecta el resultado del ACP.
+   D. El ACP no se puede realizar con variables de diferentes escalas.
+
+   ✅ Correcta: A
+   🧾 Explicación: Cuando se utiliza la matriz de covarianzas, las variables con mayor varianza (a menudo debido a escalas más grandes) tendrán una mayor influencia en la dirección de los componentes principales. Por esta razón, a menudo se prefiere utilizar la matriz de correlaciones (que estandariza las variables).
+🧠 Pregunta 23
+¿Cuál es la utilidad de la matriz factorial en la interpretación de los componentes principales?
+
+   A. Muestra la varianza total explicada por cada variable original.
+   B. Indica la correlación entre cada variable original y cada componente principal, facilitando la comprensión de qué variables contribuyen más a cada componente.
+   C. Proporciona los autovalores asociados a cada componente.
+   D. Permite reconstruir la matriz de datos original sin pérdida de información.
+
+   ✅ Correcta: B
+   🧾 Explicación: La matriz factorial contiene las cargas factoriales, que son las correlaciones entre las variables originales y los componentes principales. Estas cargas ayudan a interpretar el significado de cada componente en términos de las variables originales.
+🧠 Pregunta 24
+Si los datos originales no presentan correlaciones significativas entre las variables, ¿será efectivo aplicar el Análisis de Componentes Principales para reducir la dimensionalidad?
+
+   A. Sí, siempre reducirá el número de dimensiones.
+   B. No, ya que el ACP se basa en la existencia de correlaciones para encontrar dimensiones subyacentes con mayor varianza.
+   C. Dependerá del número de variables.
+   D. El ACP solo es aplicable a datos con correlación perfecta.
+
+   ✅ Correcta: B
+   🧾 Explicación: El ACP es más efectivo cuando existen correlaciones entre las variables, ya que busca agrupar la variabilidad compartida en un número menor de componentes. Si las variables son en gran medida independientes, los componentes principales resultantes pueden no ofrecer una reducción significativa de la dimensionalidad.
+🧠 Pregunta 25
+¿Qué información se utiliza para calcular los componentes principales?
+
+   A. Solo las medias de las variables originales.
+   B. Solo las varianzas de las variables originales.
+   C. La matriz de covarianzas o la matriz de correlaciones de las variables originales.
+   D. Un conjunto de pesos definidos arbitrariamente por el usuario.
+
+   ✅ Correcta: C
+   🧾 Explicación: El ACP se basa en la estructura de varianza y covarianza (o correlación) entre las variables originales para identificar las direcciones de máxima variabilidad (los componentes principales).
+🧠 Pregunta 26
+¿Cómo se puede utilizar un gráfico de sedimentación (scree plot) para determinar el número de componentes principales a retener?
+
+   A. Se buscan los componentes con los autovalores más altos.
+   B. Se busca el "codo" en el gráfico, donde la pendiente de la curva de los autovalores disminuye bruscamente, sugiriendo que los componentes posteriores explican una cantidad relativamente pequeña de varianza.
+   C. Se retienen todos los componentes cuyos autovalores son mayores que la media de los autovalores.
+   D. Se retienen un número fijo de componentes predefinido por el usuario.
+
+   ✅ Correcta: B
+   🧾 Explicación: El scree plot grafica los autovalores en orden descendente. El punto donde la disminución de los autovalores se vuelve más gradual se considera el "codo", y los componentes antes de este punto suelen ser retenidos.
+🧠 Pregunta 27
+¿Qué ventaja ofrece el ACP en comparación con simplemente seleccionar un subconjunto de las variables originales con mayor varianza?
+
+   A. El ACP garantiza que los componentes retenidos sean incorrelacionados y capturen la máxima varianza posible en un número reducido de dimensiones, considerando la covariación entre las variables. La selección de variables individuales no tiene en cuenta estas relaciones.
+   B. Seleccionar variables con mayor varianza siempre conduce a una mejor reducción de la dimensionalidad.
+   C. El ACP es computacionalmente más sencillo que seleccionar un subconjunto de variables.
+   D. El ACP solo se puede aplicar a conjuntos de datos más grandes.
+
+   ✅ Correcta: A
+   🧾 Explicación: El ACP es una técnica más sofisticada que considera la estructura de covarianza entre las variables para crear nuevas dimensiones (componentes) que son óptimas en términos de varianza explicada y no redundancia (incorrelación).
+🧠 Pregunta 28
+¿Cuál es una posible limitación del Análisis de Componentes Principales?
+
+   A. Siempre produce componentes fáciles de interpretar.
+   B. La interpretación de los componentes puede ser subjetiva y difícil si no hay una clara correspondencia con conceptos subyacentes significativos.
+   C. Requiere un número muy pequeño de observaciones en comparación con el número de variables.
+   D. Solo se puede aplicar a datos que siguen una distribución normal multivariante.
+
+   ✅ Correcta: B
+   🧾 Explicación: Aunque el ACP reduce la dimensionalidad y encuentra las direcciones de mayor variabilidad, la interpretación de los componentes como constructos significativos puede ser desafiante y depende del contexto del problema.
+
+🧠 Pregunta 59
+Se aplica ACP a un conjunto de datos con 3 variables. Los autovalores obtenidos de la matriz de covarianzas son lambda1 = 7, lambda2 = 3 y lambda3 = 2. ¿Qué porcentaje de la varianza total explica el primer componente principal?
+
+   A. 70%
+   B. 50%
+   C. 58.33%
+   D. 33.33%
+
+   ✅ Correcta: C
+   🧾 Explicación: La varianza total es 7 + 3 + 2 = 12. El primer componente explica (7 / 12) * 100% aproximadamente 58.33%.
+🧠 Pregunta 60
+En un ACP realizado sobre la matriz de correlaciones de 5 variables, los autovalores obtenidos son 1.9, 1.4, 0.8, 0.6 y 0.3. Si se utiliza el criterio de Kaiser, ¿cuántos componentes principales se retendrán y cuál es la suma de sus autovalores?
+
+   A. 2 componentes, suma = 3.3
+   B. 3 componentes, suma = 4.1
+   C. 2 componentes, suma = 2.3
+   D. 3 componentes, suma = 3.1
+
+   ✅ Correcta: A
+   🧾 Explicación: Los autovalores mayores que 1 son 1.9 y 1.4. Se retendrán 2 componentes. La suma de sus autovalores es 1.9 + 1.4 = 3.3.
+🧠 Pregunta 61
+Se tiene un conjunto de datos con 4 variables. Después de realizar ACP, el primer componente explica el 60% de la varianza total. Si la varianza total es 15, ¿cuál es el valor del primer autovalor?
+
+   A. 6
+   B. 9
+   C. 10
+   D. 7.5
+
+   ✅ Correcta: B
+   🧾 Explicación: El primer autovalor es el 60% de la varianza total: 0.60 * 15 = 9.
+🧠 Pregunta 62
+En un ACP con 6 variables, los porcentajes de varianza explicada por los dos primeros componentes son 40% y 30%. ¿Qué porcentaje de la varianza total explican los cuatro componentes restantes combinados?
+
+   A. 20%
+   B. 70%
+   C. 30%
+   D. 60%
+
+   ✅ Correcta: C
+   🧾 Explicación: Los dos primeros componentes explican 40% + 30% = 70%. Por lo tanto, los cuatro restantes explican 100% - 70% = 30%.
+🧠 Pregunta 63
+Se realiza un ACP sobre la matriz de correlaciones de 3 variables. El primer autovalor es 1.5. ¿Qué porcentaje de la varianza total explica el primer componente principal?
+
+   A. 50%
+   B. 33.33%
+   C. 75%
+   D. 66.67%
+
+   ✅ Correcta: A
+   🧾 Explicación: La varianza total es igual al número de variables, que es 3. El porcentaje explicado por el primer componente es (1.5 / 3) * 100% = 50%.
+🧠 Pregunta 64
+Se aplica ACP y se decide retener los componentes que explican individualmente al menos el 20% de la varianza total. Si los porcentajes de varianza explicada son 30%, 25%, 15%, 12%, 10% y 8% (para 6 componentes), ¿cuántos componentes se retendrán?
+
+   A. 2
+   B. 3
+   C. 4
+   D. 5
+
+   ✅ Correcta: A
+   🧾 Explicación: Los componentes que explican al menos el 20% son el primero (30%) y el segundo (25%). Por lo tanto, se retendrán 2 componentes.
+🧠 Pregunta 65
+En un ACP con 5 variables, la suma de los cuatro primeros autovalores es 4.2. ¿Cuál es el valor del quinto autovalor si la varianza total es 5?
+
+   A. 0.8
+   B. 0.2
+   C. 1.2
+   D. 9.2
+
+   ✅ Correcta: A
+   🧾 Explicación: La varianza total es la suma de todos los autovalores. El quinto autovalor es 5 - 4.2 = 0.8.
+🧠 Pregunta 66
+Se realiza un ACP sobre la matriz de correlaciones de 7 variables. Si los tres primeros autovalores son 2.1, 1.6 y 1.1, ¿qué porcentaje de la varianza total explican estos tres componentes combinados?
+
+   A. 68.57%
+   B. 4.8%
+   C. 71.43%
+   D. 48%
+
+   ✅ Correcta: A
+   🧾 Explicación: La varianza total es 7. La suma de los tres primeros autovalores es 2.1 + 1.6 + 1.1 = 4.8. El porcentaje de varianza explicada es (4.8 / 7) * 100% aproximadamente 68.57%.
+🧠 Pregunta 67
+Se aplica ACP y el primer componente tiene un autovalor de 12, mientras que el segundo tiene un autovalor de 8. Si la varianza total del conjunto de datos es 30, ¿qué porcentaje de la varianza total explican los dos primeros componentes combinados?
+
+   A. 40%
+   B. 66.67%
+   C. 80%
+   D. 26.67%
+
+   ✅ Correcta: B
+   🧾 Explicación: La suma de los dos primeros autovalores es 12 + 8 = 20. El porcentaje de la varianza total explicada es (20 / 30) * 100% aproximadamente 66.67%.
+🧠 Pregunta 68
+En un ACP con 4 variables, se decide retener los componentes que explican al menos el 30% de la varianza total. Los autovalores son 1.5, 1.2, 0.8 y 0.5. ¿Cuántos componentes se retendrán?
+
+   A. 1
+   B. 2
+   C. 3
+   D. 4
+
+   ✅ Correcta: B
+   🧾 Explicación: La varianza total es 1.5 + 1.2 + 0.8 + 0.5 = 4. El primer componente explica (1.5 / 4) * 100% = 37.5%, y el segundo explica (1.2 / 4) * 100% = 30%. El tercero explica 20% y el cuarto 12.5%. Por lo tanto, se retendrán 2 componentes.
+
+🧠 Pregunta 69
+Se aplica ACP a un conjunto de datos con 5 variables. Los autovalores obtenidos son 2.0, 1.5, 1.0, 0.7 y 0.3. ¿Qué porcentaje de la varianza total explica el segundo componente principal?
+
+   A. 50%
+   B. 30%
+   C. 20%
+   D. 15%
+
+   ✅ Correcta: B
+   🧾 Explicación: La varianza total es 2.0 + 1.5 + 1.0 + 0.7 + 0.3 = 5.5. El segundo componente explica (1.5 / 5.5) * 100% aproximadamente 27.27%, que se redondea al 30% como la opción más cercana.
+🧠 Pregunta 70
+En un ACP realizado sobre la matriz de correlaciones de 4 variables, el primer componente explica el 55% de la varianza total. ¿Cuál es el valor del primer autovalor?
+
+   A. 1.1
+   B. 2.2
+   C. 0.55
+   D. 55
+
+   ✅ Correcta: B
+   🧾 Explicación: La varianza total es 4. El primer autovalor es el 55% de 4, que es 0.55 * 4 = 2.2.
+🧠 Pregunta 71
+Se tiene un conjunto de datos con 6 variables. Después de realizar ACP, los tres primeros autovalores son 2.5, 1.8 y 1.2. ¿Qué porcentaje de la varianza total explican estos tres componentes combinados?
+
+   A. 91.67%
+   B. 5.5%
+   C. 55%
+   D. 83.33%
+
+   ✅ Correcta: C
+   🧾 Explicación: La varianza total es 6. La suma de los tres primeros autovalores es 2.5 + 1.8 + 1.2 = 5.5. El porcentaje de varianza explicada es (5.5 / 6) * 100% aproximadamente 91.67%. (Error en las opciones, la correcta es aproximadamente 91.67%)
+🧠 Pregunta 72
+En un ACP con 3 variables, se decide retener los componentes con autovalores mayores que la media de todos los autovalores. Los autovalores son 4, 2 y 1. ¿Cuántos componentes se retendrán?
+
+   A. 1
+   B. 2
+   C. 3
+   D. 0
+
+   ✅ Correcta: A
+   🧾 Explicación: La media de los autovalores es (4 + 2 + 1) / 3 = 7 / 3 aproximadamente 2.33. Solo el primer autovalor (4) es mayor que la media. Por lo tanto, se retendrá 1 componente.
+🧠 Pregunta 73
+Se realiza un ACP y los dos primeros componentes explican el 70% de la varianza total. Si el primer componente explica el 45%, ¿qué porcentaje explica el segundo?
+
+   A. 115%
+   B. 25%
+   C. 35%
+   D. 55%
+
+   ✅ Correcta: B
+   🧾 Explicación: El porcentaje explicado por el segundo componente es 70% - 45% = 25%.
+🧠 Pregunta 74
+En un ACP con 7 variables, se retienen 3 componentes que explican el 25%, 20% y 15% de la varianza total respectivamente. ¿Qué porcentaje de la varianza total no está explicado por estos tres componentes?
+
+   A. 60%
+   B. 40%
+   C. 30%
+   D. 50%
+
+   ✅ Correcta: B
+   🧾 Explicación: Los tres componentes explican 25% + 20% + 15% = 60%. Por lo tanto, el porcentaje no explicado es 100% - 60% = 40%.
+🧠 Pregunta 75
+Se aplica ACP a un conjunto de datos y el primer autovalor es 10. Si la varianza total es 25, ¿qué porcentaje de la varianza total explica el primer componente?
+
+   A. 10%
+   B. 40%
+   C. 250%
+   D. 60%
+
+   ✅ Correcta: B
+   🧾 Explicación: El porcentaje de la varianza total explicada por el primer componente es (10 / 25) * 100% = 40%.
+🧠 Pregunta 76
+En un ACP de 4 variables, los autovalores son lambda1, lambda2, lambda3 y lambda4. Si lambda1 = 1.8, lambda2 = 1.1 y lambda3 = 0.7, ¿cuál debe ser el valor de lambda4 si la varianza total es 4 (matriz de correlaciones)?
+
+   A. 0.4
+   B. 1.4
+   C. 0.6
+   D. 1.0
+
+   ✅ Correcta: A
+   🧾 Explicación: La suma de los autovalores debe ser igual a la varianza total (4). Por lo tanto, lambda4 = 4 - (1.8 + 1.1 + 0.7) = 4 - 3.6 = 0.4.
+🧠 Pregunta 77
+Se realiza un ACP y los tres primeros componentes explican el 80% de la varianza total. Si los dos primeros explican el 65%, ¿qué porcentaje explica el tercer componente?
+
+   A. 15%
+   B. 25%
+   C. 45%
+   D. 20%
+
+   ✅ Correcta: A
+   🧾 Explicación: El porcentaje explicado por el tercer componente es 80% - 65% = 15%.
+🧠 Pregunta 78
+En un ACP con 6 variables, se decide retener los componentes que explican más del 15% de la varianza total. Los porcentajes son 28%, 22%, 18%, 14%, 10% y 8%. ¿Cuántos componentes se retendrán?
+
+   A. 2
+   B. 3
+   C. 4
+   D. 5
+
+   ✅ Correcta: B
+   🧾 Explicación: Los componentes que explican más del 15% son el primero (28%), el segundo (22%) y el tercero (18%). Por lo tanto, se retendrán 3 componentes.
+
+🧠 Pregunta 79
+Un investigador aplica ACP a datos de satisfacción del cliente para 10 atributos de un producto. Los dos primeros componentes explican el 65% de la varianza total. El primer componente tiene cargas altas y positivas para todos los atributos relacionados con la funcionalidad del producto, mientras que el segundo tiene cargas positivas altas para los atributos de diseño y estética. ¿Qué conclusiones prácticas podría obtener el investigador sobre las dimensiones clave de la satisfacción del cliente?
+
+   A. Los clientes solo se preocupan por la funcionalidad.
+   B. Los clientes consideran el diseño más importante que la funcionalidad.
+   C. La satisfacción del cliente se puede entender principalmente a través de dos dimensiones: funcionalidad y diseño/estética.
+   D. El ACP no es útil para entender la satisfacción del cliente.
+
+   ✅ Correcta: C
+   🧾 Explicación: Los dos primeros componentes capturan una proporción importante de la varianza y representan dos dimensiones distintas de la satisfacción del cliente: cómo funciona el producto y cómo se ve. Esto permite al investigador enfocar sus esfuerzos en mejorar estos dos aspectos clave.
+🧠 Pregunta 80
+Se realiza un ACP en datos de expresión génica de células cancerosas tratadas con diferentes fármacos. El primer componente principal separa claramente las células tratadas con un fármaco específico del resto. Las cargas factoriales de este componente son altas para genes conocidos por estar involucrados en la respuesta a ese fármaco. ¿Cómo podría esta información ser útil en la investigación farmacéutica?
+
+   A. Indica que el fármaco no tiene ningún efecto.
+   B. Sugiere que el ACP no es adecuado para datos de expresión génica.
+   C. Proporciona evidencia de que el fármaco tiene un efecto significativo en la expresión de genes relacionados con su mecanismo de acción.
+   D. Muestra que todos los fármacos tienen el mismo efecto en la expresión génica.
+
+   ✅ Correcta: C
+   🧾 Explicación: La separación clara de las células tratadas y las altas cargas en genes relevantes sugieren que el primer componente captura la respuesta biológica al fármaco, lo cual es crucial para entender su eficacia y mecanismo.
+🧠 Pregunta 81
+Un analista aplica ACP a datos macroeconómicos de varios países (PIB per cápita, tasa de desempleo, inflación, inversión extranjera). El primer componente principal tiene cargas positivas altas para el PIB per cápita y la inversión extranjera, y una carga negativa moderada para la tasa de desempleo. ¿Cómo podría interpretarse este componente en términos del "desarrollo económico"?
+
+   A. Un alto desempleo siempre acompaña a un alto PIB.
+   B. Este componente sugiere una dimensión de desarrollo económico donde un mayor PIB e inversión se asocian con menor desempleo.
+   C. La inflación es el factor más importante en el desarrollo económico.
+   D. El ACP no puede aplicarse a datos macroeconómicos.
+
+   ✅ Correcta: B
+   🧾 Explicación: El componente agrupa variables que típicamente se asocian con un mayor desarrollo económico, sugiriendo una dimensión subyacente que captura este concepto.
+🧠 Pregunta 82
+Se realiza un ACP en datos de calidad del aire con varios contaminantes. El primer componente principal tiene cargas altas para partículas finas (PM2.5) y partículas gruesas (PM10), mientras que el segundo componente tiene una carga alta para el dióxido de azufre (SO2). ¿Qué posibles fuentes de contaminación podrían estar indicando estos dos primeros componentes?
+
+   A. Ambas componentes indican la misma fuente de contaminación.
+   B. El primer componente podría indicar fuentes de combustión o actividad industrial general, mientras que el segundo podría señalar fuentes específicas como la quema de combustibles fósiles.
+   C. El ACP no puede identificar fuentes de contaminación.
+   D. Los contaminantes del aire no están correlacionados.
+
+   ✅ Correcta: B
+   🧾 Explicación: La agrupación de PM2.5 y PM10 sugiere fuentes comunes de partículas, mientras que el SO2, al estar en un componente diferente, podría provenir de procesos distintos.
+🧠 Pregunta 83
+Un ingeniero aplica ACP a datos de sensores de una máquina para predecir fallos. El primer componente principal está fuertemente correlacionado con la temperatura y la presión, mientras que el segundo lo está con las vibraciones. Para un sistema de alerta temprana de fallos, ¿cómo podría utilizar los valores de estos dos componentes en tiempo real?
+
+   A. Solo monitorear el primer componente, ya que explica más varianza.
+   B. Ignorar el ACP y analizar directamente los datos de los sensores.
+   C. Establecer umbrales para ambos componentes; desviaciones significativas podrían indicar posibles problemas en el sistema térmico/de presión o mecánico/de vibración.
+   D. Usar el componente con las cargas más altas para una sola variable.
+
+   ✅ Correcta: C
+   🧾 Explicación: Monitorear ambos componentes permite detectar diferentes tipos de anomalías relacionadas con distintas características del funcionamiento de la máquina.
+🧠 Pregunta 84
+Se realiza un ACP en datos de respuesta a una encuesta de personalidad con muchos ítems. El primer componente principal muestra altas cargas para ítems relacionados con la extroversión, mientras que el segundo muestra altas cargas para ítems relacionados con la amabilidad. Si un nuevo encuestado tiene una puntuación alta en el primer componente y baja en el segundo, ¿cómo se podría describir su perfil de personalidad en términos de estas dos dimensiones?
+
+   A. Introvertido y amable.
+   B. Extrovertido y poco amable.
+   C. Ni extrovertido ni amable.
+   D. Amable pero no extrovertido.
+
+   ✅ Correcta: B
+   🧾 Explicación: Una puntuación alta en el componente de extroversión y baja en el de amabilidad describe a una persona sociable y activa, pero con tendencia a ser menos cooperativa o considerada.
+🧠 Pregunta 85
+Un científico de datos aplica ACP a características de clientes de una tienda en línea (historial de compras, tiempo en el sitio web, clics en productos, etc.). El primer componente principal tiene cargas altas para la frecuencia de compra y el gasto total. ¿Qué segmento de clientes podría representar este componente?
+
+   A. Clientes nuevos.
+   B. Clientes inactivos.
+   C. Clientes leales y de alto valor.
+   D. Clientes que solo ven productos pero no compran.
+
+   ✅ Correcta: C
+   🧾 Explicación: Una alta frecuencia de compra y un alto gasto total son características típicas de clientes leales que contribuyen significativamente a los ingresos de la tienda.
+🧠 Pregunta 86
+Se realiza un ACP en datos de rendimiento deportivo de atletas en varias pruebas (velocidad, fuerza, resistencia). El primer componente principal tiene cargas positivas para todas las pruebas. ¿Qué podría indicar este componente sobre la capacidad física general de los atletas?
+
+   A. Los atletas solo destacan en una prueba.
+   B. Este componente sugiere una dimensión de aptitud física general donde los atletas que rinden bien en una prueba tienden a rendir bien en las demás.
+   C. El ACP no es útil en el análisis deportivo.
+   D. Las diferentes capacidades físicas no están relacionadas.
+
+   ✅ Correcta: B
+   🧾 Explicación: Cargas positivas en todas las pruebas indican que el primer componente captura una habilidad física general que subyace al rendimiento en diversas áreas.
+🧠 Pregunta 87
+Un analista de marketing aplica ACP a datos de percepción de marca en diferentes atributos (calidad, precio, innovación, confianza). El primer componente principal tiene cargas positivas altas para calidad e innovación, y una carga negativa moderada para precio. ¿Cómo podría interpretar la posición de una marca con una puntuación alta en este componente?
+
+   A. La marca es percibida como barata y poco innovadora.
+   B. La marca es percibida como de alta calidad e innovadora, aunque no necesariamente barata.
+   C. La marca es percibida como de baja calidad y poco confiable.
+   D. El precio es el único factor importante en la percepción de marca.
+
+   ✅ Correcta: B
+   🧾 Explicación: La puntuación alta en un componente con cargas positivas en calidad e innovación sugiere una percepción favorable en estos aspectos, incluso si el precio no es el más bajo.
+🧠 Pregunta 88
+Se realiza un ACP en datos de composición del suelo con diferentes nutrientes. El primer componente principal tiene cargas altas para nitrógeno y fósforo. ¿Qué implicaciones podría tener esto para la gestión agrícola y la fertilización?
+
+   A. El nitrógeno y el fósforo son independientes en el suelo.
+   B. Sugiere que el nitrógeno y el fósforo tienden a variar juntos en el suelo, lo que podría informar estrategias de fertilización que consideren la aplicación conjunta de estos nutrientes.
+   C. El ACP no es relevante para el análisis del suelo.
+   D. Solo se debe fertilizar con el nutriente con la carga más alta.
+
+   ✅ Correcta: B
+   🧾 Explicación: La covarianza del nitrógeno y el fósforo capturada por el primer componente sugiere una relación en su presencia o disponibilidad en el suelo.
+Preguntas Teóricas
+
+🧠 Pregunta 89
+¿Cuál es la principal diferencia filosófica entre el Análisis de Componentes Principales (ACP) y el Análisis Factorial Exploratorio (AFE)?
+
+   A. El ACP busca reducir la dimensionalidad, mientras que el AFE busca agrupar variables.
+   B. El ACP asume variables latentes, mientras que el AFE trabaja directamente con variables observadas.
+   C. El ACP es un método descriptivo que transforma variables, mientras que el AFE es un modelo que postula factores subyacentes.
+   D. No hay diferencias filosóficas significativas entre ambos métodos.
+
+   ✅ Correcta: C
+   🧾 Explicación: El ACP es una técnica de reducción de datos, mientras que el AFE es un modelo estadístico que intenta explicar las correlaciones observadas a través de constructos no medidos directamente.
+🧠 Pregunta 90
+¿Qué implicación tiene la ortogonalidad de los componentes principales obtenidos mediante ACP para la correlación entre ellos?
+
+   A. Implica una correlación positiva perfecta.
+   B. Implica una correlación negativa perfecta.
+   C. Implica que los componentes principales no están linealmente correlacionados (correlación cero).
+   D. No hay una relación necesaria entre la ortogonalidad y la correlación.
+
+   ✅ Correcta: C
+   🧾 Explicación: La construcción de los componentes principales asegura que sean linealmente independientes y, por lo tanto, su correlación lineal es cero.
+🧠 Pregunta 91
+¿Por qué la matriz de correlaciones se utiliza a menudo en ACP cuando las variables originales tienen escalas muy diferentes?
+
+   A. Porque la matriz de correlaciones siempre tiene autovalores mayores que la matriz de covarianzas.
+   B. Para dar más peso a las variables con mayor varianza.
+   C. Para estandarizar las variables, dando a cada una una varianza unitaria y evitando que las variables con escalas mayores dominen el análisis.
+   D. Porque la matriz de correlaciones es computacionalmente más fácil de manejar.
+
+   ✅ Correcta: C
+   🧾 Explicación: El uso de la matriz de correlaciones nivela la influencia de las variables con diferentes escalas, permitiendo que la estructura de correlación sea el factor determinante.
+🧠 Pregunta 92
+¿Qué representa la "varianza explicada" por un componente principal y cómo se calcula su proporción?
+
+   A. La correlación entre el componente y las variables originales; se calcula sumando las cargas factoriales.
+   B. La cantidad de información (variabilidad) del conjunto de datos original que es capturada por el componente; su proporción se calcula dividiendo el autovalor del componente por la suma total de los autovalores.
+   C. La importancia del componente para predecir una variable dependiente; se calcula mediante regresión.
+   D. El número de variables originales que tienen una carga alta en el componente; se calcula contando estas variables.
+
+   ✅ Correcta: B
+   🧾 Explicación: La varianza explicada cuantifica cuánta de la variabilidad total de los datos originales se resume en cada componente.
+🧠 Pregunta 93
+¿Cuál es la relación entre los autovalores de la matriz de covarianzas (o correlaciones) y la varianza de los componentes principales correspondientes?
+
+   A. La varianza de un componente principal es inversamente proporcional a su autovalor.
+   B. La varianza de un componente principal es igual a la raíz cuadrada de su autovalor.
+   C. La varianza de un componente principal es igual a su autovalor.
+   D. No existe una relación directa entre ellos.
+
+   ✅ Correcta: C
+   🧾 Explicación: El autovalor asociado a cada componente principal representa la varianza de ese componente.
+🧠 Pregunta 94
+¿Cuál es la utilidad del gráfico de sedimentación (scree plot) en la selección del número de componentes principales a retener?
+
+   A. Muestra la correlación entre los componentes.
+   B. Ayuda a identificar el "codo" donde la disminución de los autovalores se vuelve más gradual, sugiriendo que los componentes posteriores aportan menos información relevante.
+   C. Indica el porcentaje exacto de varianza explicada por cada componente.
+   D. Clasifica las variables originales según su importancia en los componentes.
+
+   ✅ Correcta: B
+   🧾 Explicación: El scree plot es una herramienta visual para ayudar a decidir cuántos componentes principales son significativos.
+🧠 Pregunta 95
+¿Qué se entiende por "cargas factoriales" en el contexto del ACP y cómo se interpretan sus valores?
+
+   A. Son los autovalores asociados a cada componente; valores altos indican mayor varianza explicada.
+   B. Son los pesos aplicados a las variables originales para formar los componentes; valores altos indican mayor influencia de la variable en el componente.
+   C. Son las correlaciones entre las variables originales y los componentes principales; valores altos (en magnitud) indican una fuerte relación entre la variable y el componente.
+   D. Son las medias de las variables originales después de la transformación; valores cercanos a cero indican una buena estandarización.
+
+   ✅ Correcta: C
+   🧾 Explicación: Las cargas factoriales son cruciales para interpretar el significado de cada componente en términos de las variables originales.
+🧠 Pregunta 96
+¿Por qué es importante que los componentes principales sean incorrelacionados?
+
+   A. Facilita la interpretación al representar dimensiones distintas de la variabilidad en los datos sin redundancia.
+   B. Asegura que cada componente explique la misma cantidad de varianza.
+   C. Permite reconstruir perfectamente la matriz de datos original con menos componentes.
+   D. Simplifica los cálculos matemáticos del ACP.
+
+   ✅ Correcta: A
+   🧾 Explicación: La incorrelación significa que cada componente captura una parte única de la variabilidad, evitando la redundancia de información entre ellos.
+🧠 Pregunta 97
+¿En qué situaciones podría ser preferible utilizar la matriz de covarianzas en lugar de la matriz de correlaciones para realizar un ACP?
+
+   A. Cuando todas las variables tienen escalas muy diferentes.
+   B. Cuando las escalas de las variables son significativas y se desea que las variables con mayor varianza tengan una mayor influencia en los componentes.
+   C. Cuando se busca estandarizar las variables para darles igual importancia.
+   D. La matriz de correlaciones siempre es preferible.
+
+   ✅ Correcta: B
+   🧾 Explicación: Si la magnitud de las varianzas tiene un significado importante para el análisis, usar la matriz de covarianzas puede ser más apropiado.
+🧠 Pregunta 98
+¿Cuál es una limitación potencial del ACP en términos de la interpretabilidad de los componentes resultantes?
+
+   A. Siempre produce componentes que corresponden directamente a conceptos teóricos preexistentes.
+   B. La interpretación de los componentes puede ser subjetiva y difícil si no existe una clara correspondencia con un significado sustantivo en el contexto del problema.
+   C. Solo se pueden interpretar los primeros dos o tres componentes.
+   D. Los componentes siempre reflejan las variables originales con las cargas más altas.
+
+   ✅ Correcta: B
+   🧾 Explicación: La interpretación de los componentes depende del contexto y del conocimiento del dominio, y a veces los componentes pueden ser difíciles de asignar a conceptos significativos.
