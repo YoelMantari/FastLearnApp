@@ -1,0 +1,559 @@
+🧠 Pregunta 1
+¿Cuál es la principal diferencia entre la búsqueda ciega y la búsqueda informada en el contexto de la Inteligencia Artificial?
+
+A. La búsqueda ciega utiliza una función heurística para guiar la búsqueda hacia el objetivo.
+B. La búsqueda informada utiliza conocimiento específico del problema para mejorar la eficiencia de la búsqueda.
+C. La búsqueda ciega siempre encuentra la solución óptima más rápido que la búsqueda informada.
+D. La búsqueda informada no requiere la definición de un estado objetivo.
+
+✅ Correcta: B
+🧾 Explicación: La búsqueda informada, también conocida como búsqueda heurística, aplica conocimiento sobre el problema para estimar la "bondad" de los estados y priorizar la exploración de los más prometedores, a diferencia de la búsqueda ciega que no tiene información sobre la distancia al objetivo.
+
+🧠 Pregunta 2
+En la búsqueda informada, ¿qué papel fundamental desempeña la función heurística?
+
+A. Determinar el costo real del camino recorrido hasta un estado.
+B. Estimar la distancia o el costo restante desde un estado actual hasta el estado objetivo.
+C. Garantizar que el algoritmo de búsqueda encuentre siempre la solución óptima.
+D. Definir el conjunto de operadores válidos para cada estado del problema.
+
+✅ Correcta: B
+🧾 Explicación: La función heurística es una estimación numérica de qué tan cerca se encuentra un estado del objetivo. Esta estimación se utiliza para ordenar la cola de nodos a explorar, dando preferencia a aquellos que parecen más cercanos a la solución.
+
+🧠 Pregunta 3
+¿Qué característica principal diferencia al algoritmo de Búsqueda de Costo Uniforme (UCS) de otros algoritmos de búsqueda?
+
+A. Utiliza una función heurística para guiar la búsqueda.
+B. Expande el nodo con el menor costo de camino desde el estado inicial.
+C. Explora el árbol de búsqueda en profundidad hasta encontrar una solución.
+D. Garantiza encontrar una solución en problemas con espacios de estados infinitos.
+
+✅ Correcta: B
+🧾 Explicación: UCS prioriza la expansión de nodos basándose en el costo acumulado del camino desde el inicio, asegurando que se exploren primero los caminos de menor costo. Aunque es completo y óptimo, puede ser ineficiente al explorar en todas direcciones sin información del objetivo.
+
+🧠 Pregunta 4
+¿Qué define una heurística admisible en el contexto del algoritmo de búsqueda A*?
+
+A. Una heurística que siempre sobreestima el costo real para llegar al objetivo.
+B. Una heurística que nunca sobreestima el costo real para llegar al objetivo.
+C. Una heurística que es fácil de calcular pero no necesariamente precisa.
+D. Una heurística que siempre devuelve un valor positivo.
+
+✅ Correcta: B
+🧾 Explicación: Una heurística admisible es aquella cuyo valor estimado (h(n)) para llegar al objetivo desde un nodo n nunca es mayor que el costo real del camino óptimo (h 
+∗
+ (n)). Esta propiedad es crucial para que A* garantice encontrar la solución óptima.
+
+🧠 Pregunta 5
+¿Cuál es la función de evaluación f(n) utilizada en el algoritmo de búsqueda A*?
+
+A. f(n)=h(n), donde h(n) es la estimación heurística del costo al objetivo.
+B. f(n)=g(n), donde g(n) es el costo del camino recorrido hasta el nodo n.
+C. f(n)=g(n)+h(n), donde g(n) es el costo del camino hasta n y h(n) es la estimación heurística desde n al objetivo.
+D. f(n)=g(n)−h(n), combinando el costo del camino con la estimación heurística.
+
+✅ Correcta: C
+🧾 Explicación: La función de evaluación f(n) en A* combina el costo real del camino recorrido hasta el nodo n (g(n)) con la estimación heurística del costo restante hasta el objetivo (h(n)), proporcionando una estimación del costo total de la solución que pasa por n.
+
+🧠 Pregunta 6
+¿En qué se diferencia principalmente el algoritmo de búsqueda voraz "primero el mejor" (Greedy Best-First Search) del algoritmo A*?
+
+A. El algoritmo voraz considera tanto el costo del camino recorrido como la estimación heurística.
+B. El algoritmo A* solo utiliza la función heurística para guiar la búsqueda.
+C. El algoritmo voraz expande los nodos basándose únicamente en la función heurística, sin considerar el costo del camino.
+D. El algoritmo A* no garantiza encontrar la solución óptima, mientras que el voraz sí lo hace.
+
+✅ Correcta: C
+🧾 Explicación: El algoritmo voraz "primero el mejor" toma decisiones de expansión basándose exclusivamente en la función heurística, intentando moverse hacia el estado que parece más cercano al objetivo en cada paso, sin tener en cuenta el costo del camino ya recorrido. En contraste, A* considera ambas el costo del camino y la heurística.
+
+🧠 Pregunta 7
+¿Cuál de las siguientes afirmaciones describe mejor el objetivo de la búsqueda informada?
+
+A. Explorar todos los posibles estados del problema de manera sistemática.
+B. Utilizar conocimiento específico del problema para guiar la búsqueda de manera más eficiente hacia el objetivo.
+C. Encontrar cualquier solución al problema, sin importar su costo.
+D. Minimizar la cantidad de memoria utilizada durante el proceso de búsqueda.
+
+✅ Correcta: B
+🧾 Explicación: La búsqueda informada se centra en aplicar el conocimiento disponible sobre el problema para priorizar la exploración de los estados que tienen más probabilidades de conducir a una solución, mejorando así la eficiencia en comparación con la búsqueda ciega.
+
+🧠 Pregunta 8
+En el contexto de la búsqueda heurística, ¿qué significa que una heurística sea "consistente" (o "monótona")?
+
+A. Que la heurística siempre devuelve el mismo valor para el mismo estado.
+B. Que la heurística nunca sobreestima el costo real al objetivo.
+C. Que para cualquier nodo n y cualquier sucesor n 
+′
+  generado por una acción con costo c(n,n 
+′
+ ), se cumple que h(n)≤c(n,n 
+′
+ )+h(n 
+′
+ ).
+D. Que la heurística siempre subestima el costo real al objetivo.
+
+✅ Correcta: C
+🧾 Explicación: La consistencia (o monotonía) es una propiedad más estricta que la admisibilidad. Asegura que la estimación heurística no "disminuya demasiado" al moverse a un nodo sucesor, lo cual es importante para la optimalidad de A* en grafos.
+
+🧠 Pregunta 9
+¿Cuál de los siguientes algoritmos de búsqueda garantiza encontrar la solución óptima si la función heurística utilizada es admisible?
+
+A. Búsqueda en Profundidad (DFS)
+B. Búsqueda en Anchura (BFS)
+C. Búsqueda Voraz Primero el Mejor (Greedy Best-First Search)
+D. Búsqueda A*
+
+✅ Correcta: D
+🧾 Explicación: El algoritmo A* garantiza encontrar la solución óptima si la heurística utilizada es admisible (nunca sobreestima el costo real al objetivo).
+
+🧠 Pregunta 10
+¿Qué implicación tiene una función heurística h(n)=0 para todos los nodos n en el algoritmo A*?
+
+A. El algoritmo se comporta como una búsqueda voraz.
+B. El algoritmo se comporta como una búsqueda en profundidad.
+C. El algoritmo se comporta como una búsqueda de costo uniforme (UCS).
+D. El algoritmo no encontrará ninguna solución.
+
+✅ Correcta: C
+🧾 Explicación: Si la heurística es siempre cero, la función de evaluación f(n)=g(n)+h(n) se reduce a f(n)=g(n), que es la función de evaluación utilizada por la búsqueda de costo uniforme.
+
+🧠 Pregunta 11
+¿Cuál es la principal desventaja en términos de complejidad espacial del algoritmo A* en el peor de los casos?
+
+A. Es lineal con respecto a la profundidad del árbol de búsqueda.
+B. Es logarítmica con respecto al número de nodos expandidos.
+C. Puede ser exponencial con respecto a la profundidad del árbol de búsqueda, ya que debe mantener todos los nodos en memoria.
+D. Es constante, independientemente del tamaño del espacio de estados.
+
+✅ Correcta: C
+🧾 Explicación: En el peor de los casos, A* puede tener que explorar una gran parte del espacio de estados, almacenando todos los nodos generados en la cola de ABIERTOS, lo que resulta en una complejidad espacial exponencial.
+
+🧠 Pregunta 12
+¿Qué estrategia sigue el algoritmo de búsqueda voraz "primero el mejor" al decidir qué nodo expandir a continuación?
+
+A. Expande el nodo con el menor costo de camino desde el inicio.
+B. Expande el nodo que se estima que está más cerca del objetivo según la función heurística.
+C. Expande los nodos en el orden en que fueron generados.
+D. Expande los nodos más profundos en el árbol de búsqueda.
+
+✅ Correcta: B
+🧾 Explicación: El algoritmo voraz se guía por la función heurística, siempre eligiendo expandir el nodo que parece más prometedor en términos de su proximidad estimada al estado objetivo.
+
+🧠 Pregunta 13
+¿Por qué el algoritmo de búsqueda voraz "primero el mejor" no garantiza encontrar la solución óptima?
+
+A. Porque no explora todos los posibles caminos hacia el objetivo.
+B. Porque la función heurística utilizada siempre sobreestima el costo real.
+C. Porque puede quedar atrapado en caminos subóptimos que parecen prometedores inicialmente.
+D. Porque requiere una gran cantidad de memoria para almacenar los nodos visitados.
+
+✅ Correcta: C
+🧾 Explicación: Al tomar decisiones basadas únicamente en la información heurística local, el algoritmo voraz puede seguir caminos que inicialmente parecen buenos pero que, a largo plazo, conducen a soluciones subóptimas.
+
+🧠 Pregunta 14
+Considera el problema del 8-puzzle. ¿Cuál de las siguientes heurísticas es admisible para este problema?
+
+A. El número total de movimientos realizados hasta el momento.
+B. El número de piezas que no están en su posición final.
+C. El número de movimientos necesarios para colocar la pieza '1' en su posición final.
+D. El número de piezas que están en su posición final.
+
+✅ Correcta: B
+🧾 Explicación: El número de piezas fuera de lugar es una heurística admisible porque cada pieza fuera de lugar requerirá al menos un movimiento para llegar a su posición correcta en el estado final.
+
+🧠 Pregunta 15
+En el contexto del problema del 8-puzzle, ¿qué representa la distancia Manhattan como función heurística?
+
+A. El número de movimientos en diagonal necesarios para llevar cada pieza a su posición final.
+B. La suma de las distancias horizontales y verticales que cada pieza debe recorrer para alcanzar su posición final.
+C. La distancia euclidiana directa entre la posición actual de cada pieza y su posición final.
+D. El número de piezas adyacentes al espacio vacío.
+
+✅ Correcta: B
+🧾 Explicación: La distancia Manhattan para una pieza es la suma de la diferencia absoluta de sus coordenadas filas y la diferencia absoluta de sus coordenadas columnas con respecto a su posición objetivo. La suma de estas distancias para todas las piezas es una heurística admisible para el 8-puzzle.
+
+🧠 Pregunta 16
+¿Qué se entiende por "costo de camino" en un problema de búsqueda con costos asociados a los operadores?
+
+A. El número de operadores aplicados para llegar al estado actual desde el estado inicial.
+B. La suma de los costos de cada operador aplicado en la secuencia de acciones que lleva al estado actual desde el estado inicial.
+C. El costo del último operador aplicado para llegar al estado actual.
+D. Una estimación del costo restante para alcanzar el estado objetivo desde el estado actual.
+
+✅ Correcta: B
+🧾 Explicación: El costo de camino es la acumulación de los costos incurridos al aplicar la secuencia de operadores que han llevado desde el estado inicial hasta el estado actual.
+
+🧠 Pregunta 17
+¿Cuál de los siguientes algoritmos utiliza una función de evaluación que considera tanto el costo del camino recorrido como una estimación del costo restante hasta el objetivo?
+
+A. Búsqueda en Anchura (BFS)
+B. Búsqueda en Profundidad (DFS)
+C. Búsqueda Voraz Primero el Mejor (Greedy Best-First Search)
+D. Búsqueda A*
+
+✅ Correcta: D
+🧾 Explicación: El algoritmo A* utiliza la función de evaluación f(n)=g(n)+h(n), donde g(n) es el costo del camino recorrido y h(n) es la estimación heurística del costo restante.
+
+🧠 Pregunta 18
+¿Qué condición debe cumplir una heurística para garantizar que el algoritmo A* encuentre la solución óptima en un grafo?
+
+A. Debe ser consistente (monótona).
+B. Debe ser computable en tiempo constante.
+C. Debe ser siempre mayor que cero.
+D. Debe sobreestimar el costo real al objetivo.
+
+✅ Correcta: A
+🧾 Explicación: En grafos, para garantizar la optimalidad de A*, la heurística debe ser consistente (o monótona), además de ser admisible.
+
+🧠 Pregunta 19
+¿Cuál es la principal ventaja de utilizar una función heurística informativa en un algoritmo de búsqueda?
+
+A. Siempre encuentra la solución más rápida posible.
+B. Reduce el número de nodos expandidos y, por lo tanto, mejora la eficiencia de la búsqueda.
+C. Garantiza que la solución encontrada sea la primera solución generada.
+D. Simplifica la implementación del algoritmo de búsqueda.
+
+✅ Correcta: B
+🧾 Explicación: Una buena heurística guía la búsqueda hacia las áreas más prometedoras del espacio de estados, evitando la exploración innecesaria de caminos menos probables y reduciendo así el tamaño del árbol de búsqueda y el tiempo de ejecución.
+
+🧠 Pregunta 20
+¿En qué situaciones podría ser preferible utilizar un algoritmo de búsqueda ciega en lugar de uno informado?
+
+A. Cuando se dispone de una heurística muy precisa y eficiente.
+B. Cuando el espacio de estados es muy grande y la heurística es poco informativa o costosa de calcular.
+C. Cuando se garantiza que el objetivo se encuentra a una profundidad pequeña.
+D. Cuando se necesita encontrar la solución óptima y la heurística no es admisible.
+
+✅ Correcta: B
+🧾 Explicación: Si la heurística disponible es de baja calidad o su cálculo es muy costoso, la sobrecarga de utilizarla podría superar los beneficios en la reducción del espacio de búsqueda, haciendo que un algoritmo de búsqueda ciega simple como BFS podría ser más práctico en ciertos casos.
+
+🧠 Pregunta 21
+¿Qué significa que un algoritmo de búsqueda sea "completo"?
+
+A. Que siempre encuentra una solución si existe.
+B. Que siempre encuentra la solución óptima.
+C. Que explora todos los nodos del espacio de estados.
+D. Que termina en un tiempo finito.
+
+✅ Correcta: A
+🧾 Explicación: La completitud de un algoritmo de búsqueda significa que si existe al menos una solución para el problema, el algoritmo está garantizado para encontrarla en un tiempo finito.
+
+🧠 Pregunta 22
+¿Cuál es la principal limitación de los algoritmos voraces en general?
+
+A. Su alta complejidad computacional en la mayoría de los problemas.
+B. La necesidad de una función heurística muy precisa para funcionar correctamente.
+C. Que no siempre encuentran la solución óptima al problema.
+D. Su incapacidad para manejar problemas con costos de camino negativos.
+
+✅ Correcta: C
+🧾 Explicación: Los algoritmos voraces toman decisiones localmente óptimas en cada paso con la esperanza de encontrar una solución globalmente óptima, pero esta estrategia no siempre garantiza el mejor resultado final.
+
+🧠 Pregunta 23
+Considerando la función de evaluación f(n)=g(n)+h(n) en A*, ¿qué representa g(n)?
+
+A. Una estimación del costo para llegar desde el nodo n al estado objetivo.
+B. El costo real del camino recorrido desde el estado inicial hasta el nodo n.
+C. Una combinación del costo del camino y la estimación heurística.
+D. El número de pasos realizados para alcanzar el nodo n.
+
+✅ Correcta: B
+🧾 Explicación: g(n) representa el costo acumulado de los operadores aplicados a lo largo del camino que se ha seguido para llegar desde el estado inicial hasta el nodo n.
+
+🧠 Pregunta 24
+¿Qué tipo de estructura de datos se utiliza comúnmente para implementar la cola de "ABIERTOS" en algoritmos de búsqueda informada como A* y Greedy Best-First Search?
+
+A. Una pila (stack).
+B. Una cola FIFO (first-in, first-out).
+C. Una cola de prioridad (priority queue).
+D. Un árbol binario de búsqueda balanceado.
+
+✅ Correcta: C
+🧾 Explicación: Tanto A* como Greedy Best-First Search utilizan una cola de prioridad para almacenar los nodos a explorar, priorizándolos según su valor de evaluación (f(n) en A* y h(n) en Greedy Best-First).
+
+🧠 Pregunta 25
+¿Cómo afecta la calidad de la función heurística al rendimiento del algoritmo A*?
+
+A. Una heurística más precisa generalmente conduce a una exploración más eficiente del espacio de estados.
+B. Una heurística menos precisa siempre resulta en una solución subóptima.
+C. La calidad de la heurística no tiene ningún impacto en la eficiencia de A*.
+D. Una heurística sobreestimada siempre garantiza la optimalidad.
+
+✅ Correcta: A
+🧾 Explicación: Una heurística que proporciona estimaciones más cercanas al costo real para llegar al objetivo permite a A* priorizar la exploración de los caminos más prometedores, reduciendo la cantidad de nodos expandidos y mejorando la eficiencia.
+
+🧠 Pregunta 26
+¿Cuál de las siguientes afirmaciones es verdadera con respecto a la relación entre admisibilidad y consistencia de una heurística?
+
+A. Una heurística consistente siempre es admisible.
+B. Una heurística admisible siempre es consistente.
+C. Admisibilidad y consistencia son propiedades independientes.
+D. Una heurística consistente nunca es admisible.
+
+✅ Correcta: A
+🧾 Explicación: Si una heurística es consistente, entonces también es admisible. La consistencia implica la admisibilidad, pero lo contrario no siempre es cierto.
+
+🧠 Pregunta 27
+¿Qué implicación tiene un factor de ramificación alto en la complejidad de los algoritmos de búsqueda?
+
+A. Reduce la cantidad de memoria necesaria.
+B. Disminuye el tiempo necesario para encontrar una solución.
+C. Aumenta exponencialmente el número de nodos a explorar.
+D. No tiene un impacto significativo en la complejidad.
+
+✅ Correcta: C
+🧾 Explicación: Un factor de ramificación alto significa que cada estado puede tener muchos sucesores, lo que lleva a un crecimiento exponencial del número de nodos en el árbol de búsqueda a medida que aumenta la profundidad.
+
+🧠 Pregunta 28
+¿En qué se diferencia la búsqueda de costo uniforme (UCS) de la búsqueda en anchura (BFS)?
+
+A. UCS utiliza una función heurística, mientras que BFS no.
+B. UCS expande nodos basándose en el costo del camino, mientras que BFS lo hace por profundidad.
+C. BFS garantiza la optimalidad en problemas con costos de paso variables, mientras que UCS no.
+D. No hay diferencia entre UCS y BFS.
+
+✅ Correcta: B
+🧾 Explicación: BFS explora el espacio de estados por niveles de profundidad, mientras que UCS expande los nodos en orden del costo del camino desde el inicio, lo que lo hace óptimo para problemas con costos de paso variables (no uniformes). Si todos los costos de paso son iguales, UCS se comporta como BFS.
+
+🧠 Pregunta 29
+¿Cuál es el principal objetivo de la poda en los algoritmos de búsqueda?
+
+A. Encontrar la solución más rápida posible.
+B. Reducir la cantidad de memoria utilizada.
+C. Evitar la exploración de caminos que no conducirán a una solución óptima o ya han sido explorados de manera más eficiente.
+D. Simplificar la implementación del algoritmo.
+
+✅ Correcta: C
+🧾 Explicación: La poda es una técnica para eliminar ramas del árbol de búsqueda que se consideran innecesarias o menos prometedoras, con el fin de mejorar la eficiencia del algoritmo al evitar la exploración de estados redundantes o subóptimos.
+
+🧠 Pregunta 30
+¿Cómo se define un "estado" en el contexto de un problema de búsqueda en Inteligencia Artificial?
+
+A. La secuencia de acciones necesarias para resolver el problema.
+B. Una configuración particular del mundo o del problema en un momento dado.
+C. El objetivo final que se desea alcanzar.
+D. El costo asociado a la realización de una acción.
+
+✅ Correcta: B
+🧾 Explicación: Un estado representa una situación específica o una configuración del problema en un punto particular del proceso de búsqueda. El algoritmo de búsqueda navega a través de diferentes estados aplicando operadores para alcanzar el estado objetivo.
+
+🧠 Pregunta 31
+¿Qué papel juegan los "operadores" en un problema de búsqueda en IA?
+
+A. Definen el estado inicial del problema.
+B. Representan las acciones que se pueden realizar para pasar de un estado a otro.
+C. Indican si se ha alcanzado el estado objetivo.
+D. Asignan un valor numérico a cada estado del problema.
+
+✅ Correcta: B
+🧾 Explicación: Los operadores son las acciones o movimientos válidos que transforman un estado del problema en otro, permitiendo la exploración del espacio de estados en busca de una solución.
+
+🧠 Pregunta 32
+¿Cuál es la diferencia fundamental entre un algoritmo de búsqueda "online" y uno "offline"?
+
+A. Los algoritmos online planifican la solución completa antes de comenzar a ejecutarla, mientras que los offline toman decisiones en tiempo real.
+B. Los algoritmos offline conocen el espacio de estados completo de antemano, mientras que los online aprenden sobre él a medida que actúan.
+C. Los algoritmos online siempre encuentran la solución óptima, mientras que los offline no.
+D. Los algoritmos offline requieren menos memoria que los online.
+
+✅ Correcta: B
+🧾 Explicación: Los algoritmos offline (como A* o BFS) planifican una solución completa antes de la ejecución, basándose en un conocimiento previo del entorno. Los algoritmos online (como el aprendizaje por refuerzo) actúan y aprenden sobre el entorno simultáneamente.
+
+🧠 Pregunta 33
+En el contexto de la búsqueda, ¿qué se entiende por "factor de ramificación"?
+
+A. La profundidad máxima del árbol de búsqueda.
+B. El número de acciones posibles desde el estado inicial.
+C. El número promedio de sucesores que tiene cada estado en el espacio de estados.
+D. El costo promedio de aplicar un operador.
+
+✅ Correcta: C
+🧾 Explicación: El factor de ramificación es una medida del número promedio de estados sucesores que se pueden generar a partir de un estado dado. Un factor de ramificación alto puede llevar a un crecimiento exponencial del árbol de búsqueda.
+
+🧠 Pregunta 34
+¿Cuál de los siguientes algoritmos de búsqueda es un ejemplo de búsqueda no informada (o ciega)?
+
+A. Búsqueda A*
+B. Búsqueda Voraz Primero el Mejor
+C. Búsqueda en Profundidad (DFS)
+D. Búsqueda con Profundidad Iterativa (IDS) utilizando una heurística.
+
+✅ Correcta: C
+🧾 Explicación: La Búsqueda en Profundidad (DFS) explora el espacio de estados avanzando por una rama hasta la profundidad límite antes de retroceder y explorar otra rama, sin utilizar ninguna información heurística sobre la distancia al objetivo.
+
+🧠 Pregunta 35
+¿Qué ventaja ofrece la Búsqueda con Profundidad Iterativa (IDS) sobre la Búsqueda en Profundidad (DFS)?
+
+A. IDS utiliza una función heurística para guiar la búsqueda.
+B. IDS garantiza encontrar la solución óptima en grafos con costos de arista variables.
+C. IDS es completa y encuentra la solución con la menor profundidad (como BFS) mientras usa menos memoria que BFS.
+D. IDS explora el espacio de estados más rápidamente que DFS.
+
+✅ Correcta: C
+🧾 Explicación: IDS combina los beneficios de DFS (menor requerimiento de memoria) con la completitud de BFS y la garantía de encontrar la solución con la menor profundidad al explorar el espacio de estados en profundidades crecientes.
+
+🧠 Pregunta 36
+¿Cuál es la principal diferencia entre un problema de búsqueda de "un solo agente" y un problema de búsqueda de "múltiples agentes"?
+
+A. Los problemas de múltiples agentes siempre tienen un costo de solución mayor.
+B. En los problemas de múltiples agentes, las acciones de un agente pueden afectar el entorno y las decisiones de otros agentes.
+C. Los problemas de un solo agente son inherentemente más complejos de resolver.
+D. Los problemas de múltiples agentes no pueden ser resueltos utilizando algoritmos de búsqueda heurística.
+
+✅ Correcta: B
+🧾 Explicación: En los problemas de múltiples agentes, es necesario considerar las interacciones y la posible cooperación o competencia entre los diferentes agentes, lo que añade complejidad al proceso de búsqueda de una solución.
+
+🧠 Pregunta 37
+¿Qué significa que un algoritmo de búsqueda sea "óptimo"?
+
+A. Que encuentra una solución en el menor tiempo posible.
+B. Que utiliza la menor cantidad de memoria posible.
+C. Que siempre encuentra la solución con el menor costo de camino.
+D. Que explora el menor número de nodos posible.
+
+✅ Correcta: C
+🧾 Explicación: Un algoritmo de búsqueda óptimo garantiza que la solución que encuentra es la que tiene el menor costo total en términos de la secuencia de acciones necesarias para alcanzar el estado objetivo desde el estado inicial.
+
+🧠 Pregunta 38
+En el contexto de la búsqueda local, ¿cuál es el objetivo principal?
+
+A. Encontrar una secuencia de acciones desde el estado inicial hasta el estado objetivo.
+B. Encontrar el camino de menor costo desde el estado inicial hasta el estado objetivo.
+C. Encontrar un buen estado objetivo (o una solución aceptable) dentro de un espacio de estados grande, posiblemente sin recordar el camino recorrido.
+D. Explorar sistemáticamente todo el espacio de estados para garantizar la optimalidad.
+
+✅ Correcta: C
+🧾 Explicación: Los algoritmos de búsqueda local se centran en mejorar un estado actual iterativamente, moviéndose a estados vecinos, con el objetivo de encontrar un estado que satisfaga un criterio de calidad (como un estado objetivo o un estado con un valor de función objetivo alto).
+
+🧠 Pregunta 39
+¿Cuál de los siguientes es un ejemplo de algoritmo de búsqueda local?
+
+A. Búsqueda en Anchura (BFS)
+B. Búsqueda A*
+C. Algoritmo de Ascenso de Colinas (Hill Climbing)
+D. Búsqueda con Profundidad Limitada (DLS)
+
+✅ Correcta: C
+🧾 Explicación: El algoritmo de Ascenso de Colinas es un algoritmo de búsqueda local que intenta encontrar un estado mejor moviéndose iterativamente al estado vecino con el valor heurístico más alto.
+
+🧠 Pregunta 40
+¿Cuál es una limitación común del algoritmo de Ascenso de Colinas?
+
+A. Requiere una gran cantidad de memoria para almacenar el espacio de estados.
+B. Puede quedar atrapado en máximos locales, que no son la solución global óptima.
+C. No puede ser aplicado a problemas con espacios de estados continuos.
+D. Siempre encuentra la solución óptima si existe.
+
+✅ Correcta: B
+🧾 Explicación: El Ascenso de Colinas es susceptible a quedarse atascado en "picos" locales en el espacio de búsqueda, donde ningún vecino tiene un valor mejor, aunque exista una solución globalmente mejor en otra parte del espacio.
+
+🧠 Pregunta 41
+¿Qué estrategia utiliza el algoritmo de "primero el mejor" con búsqueda voraz?
+
+A. Expandir el nodo con el menor costo de camino hasta el momento.
+B. Expandir el nodo que se estima más cercano al objetivo según la heurística.
+C. Expandir todos los nodos a una profundidad dada antes de pasar al siguiente nivel.
+D. Expandir el nodo que ha sido visitado menos recientemente.
+
+✅ Correcta: B
+🧾 Explicación: La búsqueda voraz "primero el mejor" prioriza la expansión de los nodos que tienen la heurística más prometedora, es decir, aquellos que se estiman más cercanos al estado objetivo.
+
+🧠 Pregunta 42
+¿Cuál es la función principal de la lista de "CERRADOS" en algoritmos de búsqueda como A*?
+
+A. Almacenar los nodos que aún no han sido explorados.
+B. Almacenar los nodos que ya han sido expandidos para evitar ciclos y redundancia en la búsqueda.
+C. Mantener los nodos ordenados por su valor heurístico.
+D. Registrar el camino seguido desde el estado inicial hasta el estado objetivo.
+
+✅ Correcta: B
+🧾 Explicación: La lista de "CERRADOS" se utiliza para llevar un registro de los nodos que ya han sido visitados y expandidos. Esto evita la repetición de la exploración de los mismos estados y ayuda a prevenir bucles infinitos en grafos con ciclos.
+
+🧠 Pregunta 43
+¿Qué se entiende por "admisibilidad" de una heurística en el contexto de algoritmos de búsqueda?
+
+A. Que la heurística siempre devuelve un valor positivo.
+B. Que la heurística es fácil de calcular eficientemente.
+C. Que la heurística nunca sobreestima el costo real para alcanzar el estado objetivo.
+D. Que la heurística proporciona una estimación exacta del costo restante.
+
+✅ Correcta: C
+🧾 Explicación: Una heurística admisible es aquella que proporciona una estimación del costo restante para llegar al objetivo que nunca es mayor que el costo real. Esta propiedad es crucial para garantizar la optimalidad de A*.
+
+🧠 Pregunta 44
+¿Cómo afecta un costo de paso no uniforme a la búsqueda de la solución óptima?
+
+A. Simplifica la búsqueda, ya que todos los caminos tienen el mismo costo.
+B. Requiere algoritmos que consideren el costo acumulado del camino, como la Búsqueda de Costo Uniforme o A*.
+C. Hace que la Búsqueda en Anchura (BFS) sea siempre la estrategia óptima.
+D. Impide el uso de funciones heurísticas.
+
+✅ Correcta: B
+🧾 Explicación: Cuando los costos de las acciones varían, es importante utilizar algoritmos que acumulen estos costos a lo largo del camino para poder comparar diferentes soluciones en términos de su costo total y encontrar la óptima.
+
+🧠 Pregunta 45
+¿Cuál es una posible desventaja de utilizar una heurística muy compleja en un algoritmo de búsqueda?
+
+A. Puede llevar a explorar un mayor número de nodos.
+B. Puede aumentar significativamente el tiempo de cálculo de la heurística por cada nodo.
+C. Puede hacer que el algoritmo encuentre una solución subóptima.
+D. Puede reducir la precisión de la estimación del costo al objetivo.
+
+✅ Correcta: B
+🧾 Explicación: Si el cálculo de la función heurística es muy costoso en términos de tiempo computacional, el beneficio de explorar menos nodos podría verse anulado por el tiempo adicional dedicado a calcular la heurística para cada nodo.
+
+🧠 Pregunta 46
+¿Qué tipo de problemas son más adecuados para ser resueltos con algoritmos de búsqueda local?
+
+A. Problemas donde se necesita encontrar el camino óptimo desde un inicio hasta un fin bien definido.
+B. Problemas con un espacio de estados pequeño y bien comprendido.
+C. Problemas donde el objetivo es encontrar un estado que cumpla ciertos criterios, y la ruta para llegar a él es menos importante o el espacio de estados es demasiado grande para una búsqueda sistemática.
+D. Problemas que requieren una exploración exhaustiva de todas las posibles soluciones.
+
+✅ Correcta: C
+🧾 Explicación: La búsqueda local es efectiva en problemas donde el objetivo es encontrar un "buen" estado, como en problemas de optimización o en espacios de estados vastos donde una búsqueda sistemática sería inviable.
+
+🧠 Pregunta 47
+¿Cómo se relaciona el concepto de "óptimamente eficiente" con el algoritmo A*?
+
+A. Significa que A* siempre encuentra la solución en el menor tiempo posible.
+B. Significa que A* utiliza la menor cantidad de memoria posible para encontrar la solución.
+C. Significa que ningún otro algoritmo que utilice la misma heurística admisible expandirá menos nodos que A*.
+D. Significa que A* es el algoritmo más fácil de implementar para problemas de búsqueda heurística.
+
+✅ Correcta: C
+🧾 Explicación: La optimal eficiencia de A* se refiere a su propiedad de expandir el mínimo número de nodos necesario para garantizar la optimalidad de la solución, dada una heurística admisible.
+
+🧠 Pregunta 48
+¿Qué diferencia a la Búsqueda en Anchura (BFS) de la Búsqueda en Profundidad (DFS)?
+
+A. BFS utiliza una función heurística, mientras que DFS no.
+B. BFS explora el espacio de estados nivel por nivel, mientras que DFS explora una rama hasta su profundidad límite.
+C. BFS es más eficiente en términos de memoria que DFS.
+D. DFS garantiza encontrar la solución óptima, mientras que BFS no.
+
+✅ Correcta: B
+🧾 Explicación: BFS explora todos los nodos a una profundidad dada antes de pasar al siguiente nivel, asegurando que se encuentre la solución con la menor profundidad. DFS explora una rama del árbol hasta una profundidad límite antes de retroceder.
+
+🧠 Pregunta 49
+¿En qué situaciones podría ser útil la Búsqueda con Profundidad Limitada (DLS)?
+
+A. Cuando se conoce una cota superior para la profundidad de la solución.
+B. Cuando se necesita explorar todo el espacio de estados.
+C. Cuando se busca la solución óptima en problemas con costos de paso variables.
+D. Cuando la función heurística es muy precisa.
+
+✅ Correcta: A
+🧾 Explicación: DLS es útil cuando se tiene alguna idea de la profundidad máxima a la que se puede encontrar la solución, lo que permite evitar la exploración de ramas innecesariamente largas.
+
+🧠 Pregunta 50
+¿Cuál es el objetivo principal de una función de evaluación en un algoritmo de búsqueda heurística?
+
+A. Determinar si un estado es el estado objetivo.
+B. Estimar la "deseabilidad" de un estado para guiar el proceso de búsqueda.
+C. Definir los operadores válidos para cada estado.
+D. Calcular el costo real del camino recorrido hasta un estado.
+
+✅ Correcta: B
+🧾 Explicación: La función de evaluación (como f(n) en A* o h(n) en Greedy Best-First) proporciona una medida de qué tan prometedor es un estado para alcanzar el objetivo, permitiendo al algoritmo priorizar la exploración de los estados más relevantes.

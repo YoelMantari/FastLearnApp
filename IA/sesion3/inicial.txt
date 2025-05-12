@@ -1,0 +1,135 @@
+Gracias por compartir la lectura. A continuación, te presento una serie de preguntas de examen siguiendo estrictamente el formato que me indicaste. Las preguntas abarcan los conceptos clave de la clase 3 del curso CC421: búsqueda informada, heurística, búsqueda voraz y A\*.
+
+---
+
+🧠 **Pregunta 1**
+¿Qué característica define a una búsqueda informada frente a una búsqueda ciega?
+
+A. No utiliza ninguna función para evaluar estados
+B. Requiere recorrer todo el árbol de búsqueda
+C. Utiliza una función heurística que estima la bondad de los estados
+D. Solo se aplica a problemas sin solución
+
+✅ **Correcta:** C
+🧾 **Explicación:** La búsqueda informada se basa en una función heurística que guía el proceso estimando qué tan prometedor es cada estado, haciéndolo más eficiente.
+
+---
+
+🧠 **Pregunta 2**
+¿Cuál es el objetivo principal de utilizar heurísticas en la búsqueda?
+
+A. Garantizar la solución más rápida sin errores
+B. Aplicar operadores sin evaluar su impacto
+C. Reducir el tamaño del árbol de búsqueda y mejorar la eficiencia
+D. Eliminar la necesidad de una función de evaluación
+
+✅ **Correcta:** C
+🧾 **Explicación:** Las heurísticas permiten priorizar los estados más prometedores, reduciendo el número de nodos explorados y ganando eficiencia.
+
+---
+
+🧠 **Pregunta 3**
+¿Qué define a una heurística admisible en A\*?
+
+A. Siempre sobreestima el coste real hasta la meta
+B. No considera estados repetidos
+C. Nunca sobreestima el coste real hasta la meta
+D. Garantiza que todos los caminos sean mínimos
+
+✅ **Correcta:** C
+🧾 **Explicación:** Una heurística admisible nunca sobreestima el coste real, lo cual asegura que A\* encuentre una solución óptima.
+
+---
+
+🧠 **Pregunta 4**
+¿Cuál de las siguientes funciones representa correctamente la evaluación utilizada en el algoritmo A\*?
+
+A. $f(n) = h(n)$
+B. $f(n) = g(n)$
+C. $f(n) = g(n) + h(n)$
+D. $f(n) = g(n) - h(n)$
+
+✅ **Correcta:** C
+🧾 **Explicación:** En A\*, $f(n)$ combina el coste real del camino $g(n)$ y el coste estimado hasta la meta $h(n)$ para evaluar los nodos.
+
+---
+
+🧠 **Pregunta 5**
+¿Por qué el algoritmo Greedy Best First (GBF) no garantiza encontrar la solución óptima?
+
+A. Porque ignora los costes de las acciones
+B. Porque siempre explora todos los nodos
+C. Porque almacena todos los estados previos
+D. Porque busca en orden inverso al objetivo
+
+✅ **Correcta:** A
+🧾 **Explicación:** GBF solo considera la heurística $h(n)$, sin tener en cuenta el coste acumulado, lo cual puede llevar a soluciones subóptimas.
+
+---
+
+🧠 **Pregunta 6**
+¿Cuál es una desventaja principal del algoritmo A\* a pesar de ser óptimo?
+
+A. No puede aplicarse en grafos
+B. Tiene alta complejidad en tiempo y espacio
+C. Requiere heurísticas perfectas
+D. No utiliza colas de prioridad
+
+✅ **Correcta:** B
+🧾 **Explicación:** A\* puede tener complejidad exponencial en tiempo y espacio, especialmente si la heurística no es suficientemente buena.
+
+---
+
+🧠 **Pregunta 7**
+¿Qué representa $g(n)$ en el algoritmo A\*?
+
+A. Estimación del coste desde $n$ hasta el objetivo
+B. Longitud del camino más corto conocido desde el inicio hasta $n$
+C. Total de operadores aplicados hasta $n$
+D. Nivel de profundidad del nodo $n$
+
+✅ **Correcta:** B
+🧾 **Explicación:** $g(n)$ es el coste acumulado del camino más corto conocido desde el nodo inicial hasta el nodo $n$.
+
+---
+
+🧠 **Pregunta 8**
+¿Cuándo un nodo será añadido a la lista ABIERTOS en A\*?
+
+A. Solo si su heurística es mayor que el nodo actual
+B. Siempre, sin importar si está repetido
+C. Si su estado no está en ABIERTOS ni CERRADOS, o si tiene menor coste que el existente
+D. Nunca, ya que A\* no maneja ABIERTOS
+
+✅ **Correcta:** C
+🧾 **Explicación:** A\* añade un nodo a ABIERTOS si no está en ABIERTOS ni CERRADOS o si ofrece un camino más barato al mismo estado.
+
+---
+
+🧠 **Pregunta 9**
+¿Cuál es la función principal de la cola de prioridad en los algoritmos de búsqueda informada?
+
+A. Guardar operadores aplicados
+B. Garantizar que todos los nodos se exploren
+C. Organizar los nodos abiertos según una función de evaluación
+D. Evitar repetir nodos en la solución
+
+✅ **Correcta:** C
+🧾 **Explicación:** La cola de prioridad ordena los nodos por su función de evaluación (como $f(n)$ en A\*), dirigiendo la búsqueda de forma eficiente.
+
+---
+
+🧠 **Pregunta 10**
+¿Cuál es el papel de la heurística en el problema del 8-puzzle con distancia Manhattan?
+
+A. Cuenta las piezas fuera de lugar
+B. Calcula la cantidad total de movimientos posibles
+C. Suma la distancia horizontal y vertical desde cada pieza hasta su posición final
+D. Calcula el área ocupada por los bloques
+
+✅ **Correcta:** C
+🧾 **Explicación:** La heurística de distancia Manhattan mide cuán lejos está cada pieza de su posición final, sumando distancias horizontal y vertical.
+
+---
+
+¿Deseas que continúe con más preguntas de esta lectura o paso a otra sección del curso?

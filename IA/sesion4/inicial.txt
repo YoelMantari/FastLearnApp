@@ -1,0 +1,550 @@
+🧠 Pregunta 1
+¿Qué caracteriza a la búsqueda local frente a otras estrategias de búsqueda?
+
+A. Se centra exclusivamente en el camino hacia la solución
+B. Requiere una definición clara del estado inicial
+C. Evalúa estados en función de una función objetivo y no busca caminos
+D. Utiliza siempre una base de datos de soluciones previas
+
+✅ Correcta: C
+🧾 Explicación: La búsqueda local busca soluciones "buenas" directamente en el espacio de soluciones, guiándose por una función objetivo, sin preocuparse por el camino recorrido.
+
+🧠 Pregunta 2
+¿Cuál es un problema común de la búsqueda en escalada?
+
+A. No permite moverse entre nodos vecinos
+B. Siempre encuentra el óptimo global
+C. Puede estancarse en máximos locales, mesetas o crestas
+D. Requiere mucha memoria para evaluar todos los estados posibles
+
+✅ Correcta: C
+🧾 Explicación: La búsqueda en escalada puede detenerse prematuramente en máximos locales, mesetas o crestas donde no hay mejora aparente, impidiendo alcanzar el óptimo global.
+
+🧠 Pregunta 3
+¿Qué diferencia al enfriamiento simulado de la búsqueda en escalada?
+
+A. Solo permite moverse hacia mejores soluciones
+B. Utiliza una función determinista para elegir vecinos
+C. Puede aceptar soluciones peores dependiendo de la temperatura
+D. No requiere parámetros de configuración
+
+✅ Correcta: C
+🧾 Explicación: El enfriamiento simulado acepta soluciones peores con cierta probabilidad, lo que le permite escapar de óptimos locales.
+
+🧠 Pregunta 4
+En el contexto del algoritmo genético, ¿qué representa el cromosoma?
+
+A. El número de generaciones
+B. Una función de evaluación
+C. La representación de una solución candidata
+D. El mecanismo de selección
+
+✅ Correcta: C
+🧾 Explicación: El cromosoma codifica las características de una solución candidata al problema de optimización.
+
+🧠 Pregunta 5
+¿Cuál es la función de la estrategia de "Random Restarting Hill Climbing"?
+
+A. Evitar usar la función heurística
+B. Explorar todos los vecinos de un nodo
+C. Reiniciar la búsqueda desde distintos puntos para evitar estancamientos
+D. Eliminar la aleatoriedad del algoritmo
+
+✅ Correcta: C
+🧾 Explicación: Esta técnica reinicia la búsqueda en nuevos puntos para aumentar la probabilidad de encontrar el óptimo global.
+
+🧠 Pregunta 6
+¿Cuál es una característica clave de los algoritmos metaheurísticos?
+
+A. Garantizan siempre la solución óptima
+B. Requieren derivadas para su funcionamiento
+C. Evaluan la calidad de las soluciones pero no garantizan el óptimo
+D. Siempre utilizan operadores deterministas
+
+✅ Correcta: C
+🧾 Explicación: Las metaheurísticas se enfocan en evaluar la calidad de las soluciones, pero no aseguran alcanzar el óptimo global.
+
+🧠 Pregunta 7
+¿Qué representa la “energía” en el algoritmo de enfriamiento simulado?
+
+A. El número de vecinos visitados
+B. La calidad de la solución actual
+C. La temperatura del sistema
+D. El tamaño del espacio de búsqueda
+
+✅ Correcta: B
+🧾 Explicación: En esta analogía física, la energía representa la calidad de la solución; se busca minimizarla como en los procesos de cristalización.
+
+🧠 Pregunta 8
+¿Cuál es una ventaja del algoritmo minimax?
+
+A. Permite explorar todo el árbol de decisiones sin coste computacional
+B. Ofrece decisiones óptimas contra un adversario racional
+C. No necesita considerar los movimientos del oponente
+D. Solo se puede aplicar en juegos con información imperfecta
+
+✅ Correcta: B
+🧾 Explicación: Minimax calcula la mejor jugada posible asumiendo que el oponente también jugará de forma óptima.
+
+🧠 Pregunta 9
+¿Qué busca evitar la poda alfa-beta en un árbol de búsqueda?
+
+A. El uso de funciones heurísticas
+B. El crecimiento de la población de soluciones
+C. Evaluar ramas que no influyen en la decisión final
+D. Repetir nodos ya visitados
+
+✅ Correcta: C
+🧾 Explicación: La poda alfa-beta elimina nodos innecesarios del árbol, reduciendo el número de evaluaciones sin alterar el resultado final.
+
+🧠 Pregunta 10
+En el algoritmo genético, ¿cuál es el rol de la operación de “crossover”?
+
+A. Eliminar soluciones no aptas
+B. Generar nuevas soluciones combinando dos padres
+C. Determinar la función de fitness
+D. Evaluar la calidad de las soluciones
+
+✅ Correcta: B
+🧾 Explicación: El crossover combina partes de dos individuos para producir nuevos candidatos que pueden heredar características ventajosas.
+
+🧠 Pregunta 11
+¿Qué representa la función de fitness en los algoritmos genéticos?
+
+A. La estrategia de cruce entre individuos
+B. La codificación genética de cada individuo
+C. La calidad o adaptación de una solución al problema
+D. La temperatura inicial del algoritmo
+
+✅ Correcta: C
+🧾 Explicación: La función de fitness evalúa qué tan buena es una solución respecto al problema que se desea resolver.
+
+🧠 Pregunta 12
+¿Qué estrategia permite escapar de un máximo local en la búsqueda por escalada?
+
+A. Usar funciones deterministas únicamente
+B. Disminuir progresivamente la temperatura
+C. Reiniciar la búsqueda desde otro punto aleatorio
+D. Fijar una función de evaluación estática
+
+✅ Correcta: C
+🧾 Explicación: Reiniciar en otro punto permite salir de máximos locales donde la búsqueda tradicional queda atrapada.
+
+🧠 Pregunta 13
+¿En qué tipo de problemas se recomienda el uso de enfriamiento simulado?
+
+A. Problemas con soluciones únicas y derivadas conocidas
+B. Problemas con múltiples óptimos locales y espacio de búsqueda complejo
+C. Problemas donde no se puede evaluar la calidad de la solución
+D. Problemas puramente deterministas sin restricciones
+
+✅ Correcta: B
+🧾 Explicación: El enfriamiento simulado es útil cuando hay muchos óptimos locales y se necesita una estrategia para explorarlos.
+
+🧠 Pregunta 14
+¿Qué caracteriza a un juego de suma cero con información perfecta?
+
+A. Ambos jugadores tienen objetivos cooperativos
+B. La suma de utilidades entre jugadores es constante y visible para ambos
+C. Existen elementos aleatorios como dados o cartas ocultas
+D. Solo uno de los jugadores conoce el estado del juego
+
+✅ Correcta: B
+🧾 Explicación: En juegos de suma cero con información perfecta, las ganancias de un jugador son pérdidas del otro y ambos conocen el estado completo.
+
+🧠 Pregunta 15
+¿Cuál es el principal beneficio de la poda alfa-beta en juegos complejos?
+
+A. Disminuir la cantidad de memoria utilizada
+B. Eliminar la necesidad de una función de utilidad
+C. Reducir el número de nodos evaluados sin alterar el resultado
+D. Permitir jugar sin función de evaluación
+
+✅ Correcta: C
+🧾 Explicación: La poda alfa-beta descarta ramas innecesarias del árbol de búsqueda, manteniendo la decisión correcta con menos evaluaciones.
+
+🧠 Pregunta 16
+¿Qué representa un individuo dentro de un algoritmo genético?
+
+A. Una función heurística
+B. Un nodo dentro del árbol de búsqueda
+C. Una solución candidata codificada
+D. Una operación de mutación
+
+✅ Correcta: C
+🧾 Explicación: Un individuo representa una posible solución al problema codificada, por ejemplo, como un cromosoma binario.
+
+🧠 Pregunta 17
+En la búsqueda local, ¿cuándo se detiene típicamente la búsqueda por escalada?
+
+A. Cuando se alcanzan todos los vecinos posibles
+B. Cuando un vecino tiene mejor función objetivo
+C. Cuando ningún vecino mejora el valor actual
+D. Cuando se agota la memoria disponible
+
+✅ Correcta: C
+🧾 Explicación: La búsqueda por escalada se detiene cuando todos los vecinos tienen igual o peor función que el nodo actual.
+
+🧠 Pregunta 18
+¿Cuál es el objetivo del algoritmo minimax?
+
+A. Explorar todos los caminos de un juego
+B. Seleccionar el movimiento que minimiza el valor del juego
+C. Maximizar el valor minimizado por el oponente racional
+D. Buscar la solución más corta
+
+✅ Correcta: C
+🧾 Explicación: El algoritmo minimax considera que el oponente juega de forma óptima y elige el movimiento que maximiza la ganancia frente a ese comportamiento.
+
+🧠 Pregunta 19
+¿Cuál de las siguientes afirmaciones sobre el paisaje adaptativo es correcta?
+
+A. Es una representación gráfica de la complejidad del algoritmo
+B. Es una analogía para representar el fitness de soluciones en un espacio multidimensional
+C. Representa la función de evaluación de minimax
+D. Es un gráfico de temperatura usado en enfriamiento simulado
+
+✅ Correcta: B
+🧾 Explicación: El paisaje adaptativo muestra cómo varía el fitness de los individuos según sus características.
+
+🧠 Pregunta 20
+¿Qué operador genético se encarga de introducir variabilidad aleatoria en los cromosomas?
+
+A. Crossover
+B. Mutación
+C. Selección
+D. Evaluación
+
+✅ Correcta: B
+🧾 Explicación: La mutación altera aleatoriamente partes del cromosoma para evitar la convergencia prematura y explorar nuevas soluciones.
+
+🧠 Pregunta 21
+¿Qué permite una mayor profundidad en la búsqueda minimax?
+
+A. Más movimientos aleatorios
+B. Menos uso de la función de evaluación
+C. Mejor toma de decisiones
+D. Reducción del espacio de búsqueda
+
+✅ Correcta: C
+🧾 Explicación: A mayor profundidad, se consideran más posibilidades futuras, mejorando la calidad de la decisión.
+
+🧠 Pregunta 22
+¿Qué representa el parámetro "temperatura" en el enfriamiento simulado?
+
+A. Nivel de aleatoriedad al aceptar soluciones peores
+B. Tiempo de ejecución del algoritmo
+C. Número de iteraciones restantes
+D. Porcentaje de vecinos evaluados
+
+✅ Correcta: A
+🧾 Explicación: La temperatura controla la probabilidad de aceptar soluciones peores; disminuye con el tiempo.
+
+🧠 Pregunta 23
+¿Por qué se considera que la búsqueda local no es completa?
+
+A. Siempre encuentra el óptimo global
+B. No explora todas las soluciones posibles
+C. No puede aplicarse a juegos
+D. Requiere una base de datos externa
+
+✅ Correcta: B
+🧾 Explicación: Al moverse solo a soluciones vecinas mejores o al azar, puede quedarse atrapada y no explorar todo el espacio.
+
+🧠 Pregunta 24
+¿Qué tipo de función se utiliza en minimax con profundidad limitada?
+
+A. Función de mutación
+B. Función heurística de evaluación
+C. Función de fitness
+D. Función de temperatura
+
+✅ Correcta: B
+🧾 Explicación: La función de evaluación estima el valor de un nodo cuando no es posible alcanzar un estado terminal.
+
+🧠 Pregunta 25
+¿Qué se logra combinando individuos en un algoritmo genético?
+
+A. Eliminar soluciones duplicadas
+B. Obtener descendientes que combinan características de sus padres
+C. Detener el algoritmo prematuramente
+D. Incrementar la temperatura del entorno
+
+✅ Correcta: B
+🧾 Explicación: La combinación o cruce de individuos permite explorar nuevas regiones del espacio de búsqueda mediante recombinación genética.
+
+🧠 Pregunta 26
+¿Cuál es un ejemplo clásico de problema para el que se usa búsqueda local?
+
+A. Compresión de imágenes
+B. Reconocimiento de voz
+C. Puzzle-8
+D. Compilación de código
+
+✅ Correcta: C
+🧾 Explicación: El puzzle-8 es un problema típico de optimización donde se puede aplicar búsqueda local con función heurística.
+
+🧠 Pregunta 27
+¿Qué estrategia se utiliza en algoritmos genéticos para elegir qué individuos sobreviven?
+
+A. Crossover aleatorio
+B. Selección basada en fitness
+C. Mutación progresiva
+D. Enfriamiento lento
+
+✅ Correcta: B
+🧾 Explicación: La selección favorece a los individuos con mejor fitness, que tienen mayor probabilidad de reproducirse.
+
+🧠 Pregunta 28
+¿Cuál de los siguientes juegos se considera de información perfecta?
+
+A. Poker
+B. Bridge
+C. Scrabble
+D. Ajedrez
+
+✅ Correcta: D
+🧾 Explicación: En el ajedrez, todos los jugadores conocen el estado completo del tablero; no hay cartas ocultas ni azar.
+
+🧠 Pregunta 29
+En el algoritmo minimax, ¿cuándo se aplica la poda alfa?
+
+A. Cuando un valor es menor al mejor de MIN
+B. Cuando un valor es mayor al mejor de MAX
+C. Cuando se alcanza una profundidad máxima
+D. Cuando no se encuentra solución
+
+✅ Correcta: B
+🧾 Explicación: Si un nodo MAX tiene un valor mayor que β, se descartan los demás hijos porque MIN no los considerará.
+
+🧠 Pregunta 30
+¿Qué impacto tiene el uso de poda alfa-beta en juegos como ajedrez?
+
+A. Reduce la precisión de la jugada
+B. Permite usar evaluaciones más complejas
+C. Aumenta la profundidad alcanzable en el árbol
+D. Elimina el uso del algoritmo minimax
+
+✅ Correcta: C
+🧾 Explicación: Al reducir el número de nodos evaluados, la poda permite explorar jugadas más profundas dentro del mismo tiempo.
+
+🧠 Pregunta 31
+¿Qué es un máximo local en la búsqueda en escalada?
+
+A. El nodo con mayor número de vecinos
+B. Un estado donde ningún vecino tiene mejor valor de la función objetivo
+C. La mejor solución posible del problema
+D. El primer estado evaluado al inicio del algoritmo
+
+✅ Correcta: B
+🧾 Explicación: Un máximo local es un punto donde todos los vecinos son peores, aunque no sea el óptimo global.
+
+🧠 Pregunta 32
+¿Qué permite la analogía del enfriamiento en el enfriamiento simulado?
+
+A. Calcular derivadas en tiempo real
+B. Aumentar la temperatura cuando se estanca
+C. Aceptar soluciones peores al inicio y reducir esa probabilidad con el tiempo
+D. Eliminar el uso de función heurística
+
+✅ Correcta: C
+🧾 Explicación: El enfriamiento simulado se basa en una alta exploración inicial (acepta soluciones peores) que se reduce con el tiempo al bajar la temperatura.
+
+🧠 Pregunta 33
+¿Qué tipo de búsqueda realiza el algoritmo minimax?
+
+A. Aleatoria
+B. Primero en amplitud
+C. Primero en profundidad
+D. Binaria
+
+✅ Correcta: C
+🧾 Explicación: Minimax explora el árbol del juego en profundidad, propagando valores desde las hojas hasta la raíz.
+
+🧠 Pregunta 34
+¿Cuál es el objetivo de la función de evaluación en minimax con profundidad limitada?
+
+A. Calcular el número de nodos hijos
+B. Determinar el movimiento del oponente
+C. Estimar la utilidad de estados intermedios
+D. Seleccionar aleatoriamente el siguiente nodo
+
+✅ Correcta: C
+🧾 Explicación: La función de evaluación se usa cuando no se llega a estados terminales y se necesita una estimación.
+
+🧠 Pregunta 35
+En el contexto del TSP (Traveling Salesman Problem), ¿qué representa la función de energía?
+
+A. El número de rutas posibles
+B. El tiempo de ejecución del algoritmo
+C. La suma total de las distancias entre ciudades
+D. El número de iteraciones restantes
+
+✅ Correcta: C
+🧾 Explicación: En el TSP, la energía representa el costo total de una ruta y se busca minimizarla.
+
+🧠 Pregunta 36
+¿Qué ocurre cuando en la búsqueda local se alcanza una meseta?
+
+A. Todos los vecinos son peores
+B. Todos los vecinos tienen el mismo valor
+C. Se alcanza el óptimo global
+D. El algoritmo se reinicia automáticamente
+
+✅ Correcta: B
+🧾 Explicación: Una meseta es una región plana del espacio de búsqueda donde todos los vecinos tienen igual calidad.
+
+🧠 Pregunta 37
+¿Cuál es el propósito de usar múltiples reinicios en la búsqueda por escalada?
+
+A. Usar más memoria para mejores resultados
+B. Encontrar el camino más corto
+C. Aumentar la posibilidad de hallar el óptimo global
+D. Disminuir la temperatura
+
+✅ Correcta: C
+🧾 Explicación: Reiniciar la búsqueda desde diferentes puntos puede evitar quedar atrapado en óptimos locales.
+
+🧠 Pregunta 38
+¿Cuál es la principal inspiración de los algoritmos genéticos?
+
+A. La mecánica cuántica
+B. El sistema inmunológico
+C. La evolución biológica
+D. El comportamiento de partículas
+
+✅ Correcta: C
+🧾 Explicación: Los algoritmos genéticos imitan la selección natural, reproducción y mutación para mejorar soluciones.
+
+🧠 Pregunta 39
+¿Qué representa el "fitness landscape"?
+
+A. Una representación del algoritmo minimax
+B. Una gráfica de temperatura en el tiempo
+C. Una visualización del grado de adaptación de soluciones
+D. Un gráfico del número de movimientos posibles en un juego
+
+✅ Correcta: C
+🧾 Explicación: El landscape muestra cómo varía el fitness de los individuos según sus características, representado en un espacio multidimensional.
+
+🧠 Pregunta 40
+¿Qué ventaja tiene usar poda alfa-beta sobre el algoritmo minimax tradicional?
+
+A. Encuentra soluciones sin usar heurísticas
+B. Elimina la necesidad de una función de evaluación
+C. Reduce el número de nodos evaluados manteniendo la exactitud
+D. Funciona solo con juegos de azar
+
+✅ Correcta: C
+🧾 Explicación: La poda alfa-beta evita explorar ramas que no afectarán la decisión final, haciendo el algoritmo más eficiente.
+
+🧠 Pregunta 41
+¿Cuál es el objetivo de la función de aceptación en enfriamiento simulado?
+
+A. Aumentar la temperatura cuando se encuentra una mala solución
+B. Decidir si se acepta una solución peor con cierta probabilidad
+C. Eliminar soluciones repetidas
+D. Comparar dos algoritmos heurísticos
+
+✅ Correcta: B
+🧾 Explicación: La función de aceptación controla si se acepta una solución peor según la diferencia de calidad y la temperatura actual.
+
+🧠 Pregunta 42
+¿Qué es una "cresta" en el contexto de búsqueda en escalada?
+
+A. Región donde todos los vecinos tienen peor valor
+B. Zona con muchos óptimos globales
+C. Sucesión de subidas y bajadas que dificultan el ascenso
+D. Nodo con la mejor evaluación de todos
+
+✅ Correcta: C
+🧾 Explicación: Una cresta tiene variaciones bruscas en la pendiente de la función, complicando encontrar la mejor dirección.
+
+🧠 Pregunta 43
+¿Qué representa un "gen" dentro de un algoritmo genético?
+
+A. Una estrategia de recombinación
+B. Un parámetro de enfriamiento
+C. Una variable individual en el cromosoma
+D. El índice de generación
+
+✅ Correcta: C
+🧾 Explicación: El gen es una unidad de información dentro del cromosoma que representa una parte de la solución.
+
+🧠 Pregunta 44
+¿Por qué los algoritmos de búsqueda local no requieren almacenar todo el árbol?
+
+A. Porque son aleatorios
+B. Porque no utilizan funciones objetivo
+C. Porque trabajan solo con el estado actual y sus vecinos
+D. Porque dependen de árboles de decisión
+
+✅ Correcta: C
+🧾 Explicación: En búsqueda local, no se registra el camino, solo el estado actual y las transiciones posibles.
+
+🧠 Pregunta 45
+¿Cuándo termina el algoritmo minimax en un juego de suma cero?
+
+A. Cuando encuentra el mejor movimiento aleatorio
+B. Cuando alcanza una profundidad o un estado terminal
+C. Cuando explora todo el espacio de búsqueda
+D. Cuando los jugadores intercambian turnos
+
+✅ Correcta: B
+🧾 Explicación: Minimax se detiene cuando llega a una profundidad máxima o a un estado terminal del juego.
+
+🧠 Pregunta 46
+¿Para qué sirve la estrategia de “beam search” en búsqueda por escalada?
+
+A. Recorrer todo el espacio de búsqueda
+B. Aumentar la temperatura
+C. Hacer backtracking hacia nodos anteriores usando memoria limitada
+D. Ejecutar la búsqueda más rápido sin vecinos
+
+✅ Correcta: C
+🧾 Explicación: Beam Search guarda algunos nodos prometedores para regresar si el camino actual no mejora.
+
+🧠 Pregunta 47
+En un algoritmo genético, ¿qué se busca al usar selección por fitness?
+
+A. Escoger soluciones al azar
+B. Favorecer individuos con mejor calidad
+C. Eliminar individuos similares
+D. Disminuir el número de generaciones
+
+✅ Correcta: B
+🧾 Explicación: Se busca que los mejores individuos tengan mayor probabilidad de reproducirse.
+
+🧠 Pregunta 48
+¿Qué sucede con las soluciones peores en enfriamiento simulado cuando la temperatura es baja?
+
+A. Se aceptan con alta probabilidad
+B. Nunca se aceptan
+C. Se aceptan con menor probabilidad
+D. Son convertidas en soluciones óptimas
+
+✅ Correcta: C
+🧾 Explicación: A medida que baja la temperatura, disminuye la probabilidad de aceptar soluciones de menor calidad.
+
+🧠 Pregunta 49
+¿Qué se busca minimizar o maximizar en un problema de optimización?
+
+A. El número de nodos
+B. El número de iteraciones
+C. Una función objetivo que cuantifica la calidad
+D. La complejidad del algoritmo
+
+✅ Correcta: C
+🧾 Explicación: El objetivo es encontrar el estado con el mejor valor de una función que mide la calidad de la solución.
+
+🧠 Pregunta 50
+¿Qué condición debe cumplirse para que poda alfa-beta funcione eficientemente?
+
+A. El árbol debe ser balanceado
+B. Se debe evaluar siempre desde los nodos más profundos
+C. Se debe visitar primero las mejores jugadas
+D. El árbol debe tener profundidad uniforme
+
+✅ Correcta: C
+🧾 Explicación: Si se visitan primero las mejores jugadas, la poda será más efectiva al eliminar ramas no prometedoras.
+
