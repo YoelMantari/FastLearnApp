@@ -1,0 +1,352 @@
+🧠 Pregunta 1
+¿Cuál es el objetivo de operar inteligentemente sobre los datos? y ¿qué pasos debemos seguir?
+
+A. Obtener resultados aleatorios sin seguir un proceso
+B. Ejecutar algoritmos sin analizar datos
+C. Tomar decisiones óptimas usando información relevante y estructurada
+D. Guardar los datos sin analizarlos
+
+✅ Correcta: C
+🧾 Explicación: Operar inteligentemente sobre los datos busca transformar información en conocimiento útil para la toma de decisiones. Los pasos comunes incluyen: recopilación, limpieza, análisis, inferencia y toma de decisiones.
+
+🧠 Pregunta 2
+¿Cuándo un código es inteligente? Explique de forma clara y detallada.
+
+A. Cuando tiene muchas líneas de código
+B. Cuando es capaz de aprender, adaptarse o tomar decisiones por sí mismo
+C. Cuando lo escribe un experto en programación
+D. Cuando se ejecuta rápido en una computadora
+
+✅ Correcta: B
+🧾 Explicación: Un código se considera inteligente si puede percibir su entorno, razonar sobre él, aprender de los datos o experiencias y actuar de forma autónoma, simulando alguna capacidad cognitiva.
+
+🧠 Pregunta 3
+¿Qué ventajas e inconvenientes tiene el backtracking como técnica de resolución de PSR?
+
+A. Es muy rápido en todos los casos y no tiene desventajas
+B. Ventaja: encuentra todas las soluciones; Inconveniente: puede ser muy lento
+C. Ventaja: evita búsquedas; Inconveniente: es inexacto
+D. No es útil para PSR
+
+✅ Correcta: B
+🧾 Explicación: El backtracking permite explorar todas las posibles soluciones de forma sistemática. Su mayor ventaja es su exhaustividad; su desventaja es el alto costo computacional si no se optimiza con podas o heurísticas.
+
+🧠 Pregunta 4
+¿Explique y escriba cuatro ejemplos de heurística admisibles?
+
+A. Heurística que sobreestima el costo al objetivo
+B. Heurística que no respeta las restricciones
+C. Heurística que nunca sobreestima el costo al objetivo
+D. Heurística que ignora completamente el problema
+
+✅ Correcta: C
+🧾 Explicación: Una heurística admisible es aquella que nunca sobreestima el costo real al objetivo. Ejemplos:
+
+Distancia Manhattan en rejillas
+
+Distancia Euclidiana en el plano
+
+Número de piezas mal colocadas en el 8-puzzle
+
+Número de pasos mínimos sin obstáculos
+
+🧠 Pregunta 5
+El test de Turing exige una serie de capacidades para que una máquina se considere inteligente. Explique de forma clara y concisa cada una de estas capacidades.
+
+A. Reconocimiento de voz únicamente
+B. Capacidad de memorizar datos
+C. Comprensión del lenguaje, razonamiento y respuestas coherentes
+D. Solo procesamiento de texto
+
+✅ Correcta: C
+🧾 Explicación: El test de Turing propone que una máquina sea considerada inteligente si puede imitar a un humano en una conversación. Para ello, debe comprender el lenguaje, razonar sobre lo que se le pregunta y responder de forma natural.
+
+🧠 Pregunta 6
+Explique de forma clara y detallada con sus propias palabras, lo que entiende del test de Turing (Alan Turing) y la habitación China (Searle).
+
+A. Son la misma teoría
+B. Ambos demuestran que las máquinas siempre son conscientes
+C. El test evalúa si una máquina parece humana; la habitación China critica que entender no es lo mismo que procesar símbolos
+D. No tienen relación con la IA
+
+✅ Correcta: C
+🧾 Explicación: El test de Turing plantea que una máquina es inteligente si no podemos distinguirla de un humano conversando. Searle, en cambio, critica que una máquina puede simular conversación sin entender nada (experimento mental de la habitación China).
+
+🧠 Pregunta 7
+De lo discutido en clase explique ¿Qué es la Inteligencia Artificial (IA)? Además, describa cuál fue el primer intento de definición de la IA.
+
+A. Códigos que resuelven problemas humanos
+B. Simulación de inteligencia en videojuegos
+C. Campo de estudio que busca crear sistemas que piensen o actúen como humanos o racionalmente
+D. Uso de computadoras para guardar información
+
+✅ Correcta: C
+🧾 Explicación: La IA se define como el campo que busca diseñar sistemas que piensen como humanos, actúen como humanos, piensen racionalmente o actúen racionalmente. El primer intento fue en 1956 en la conferencia de Dartmouth.
+
+🧠 Pregunta 8
+Explique las definiciones de inteligencia artificial propuesta por Peter Norvig y Stuart Russell. ¿Cuándo se considerará una máquina inteligente?
+
+A. Cuando hable como humano
+B. Cuando haga cálculos rápidamente
+C. Cuando perciba su entorno y actúe racionalmente para alcanzar metas
+D. Cuando copie el comportamiento de otros sistemas
+
+✅ Correcta: C
+🧾 Explicación: Norvig y Russell definen IA como el estudio de agentes que perciben su entorno y actúan racionalmente. Una máquina es inteligente cuando sus acciones están orientadas a maximizar su desempeño según un objetivo.
+
+🧠 Pregunta 9
+Explique de forma clara ¿Cuál es la diferencia entre Inteligencia Artificial y Machine Learning?
+
+A. No hay diferencia
+B. IA incluye ML, pero ML se enfoca en aprender de datos
+C. ML solo trabaja con imágenes
+D. IA no usa algoritmos
+
+✅ Correcta: B
+🧾 Explicación: La Inteligencia Artificial es un campo más amplio que incluye muchas técnicas. El Machine Learning (aprendizaje automático) es una subárea que se basa en el aprendizaje de patrones a partir de datos sin programación explícita.
+
+🧠 Pregunta 10
+¿Qué es el backtracking y cómo se puede implementar?
+
+A. Algoritmo que copia listas
+B. Método para evitar pruebas
+C. Técnica de búsqueda que explora soluciones posibles y retrocede al fallar
+D. Técnica que solo se usa en juegos
+
+✅ Correcta: C
+🧾 Explicación: Backtracking es una técnica de búsqueda en árboles o grafos que explora todas las soluciones posibles y retrocede cuando detecta una solución inválida. Se implementa recursivamente y es útil en problemas de satisfacción de restricciones (PSR).
+
+🧠 Pregunta 11
+¿Qué ventajas e inconvenientes tiene el backtracking como técnica de resolución de PSR?
+
+A. Es el más rápido en todos los casos
+B. Solo funciona en problemas pequeños
+C. Permite explorar soluciones pero puede ser muy lento si no se poda
+D. Siempre halla la mejor solución
+
+✅ Correcta: C
+🧾 Explicación: Su ventaja es que garantiza encontrar todas las soluciones posibles; su principal desventaja es su lentitud si el espacio de búsqueda es muy grande. Puede optimizarse con podas o heurísticas.
+
+🧠 Pregunta 12
+¿Explique y escriba cuatro ejemplos de heurística admisibles?
+
+A. Heurística que es siempre exacta
+B. Heurística que ignora obstáculos
+C. Heurística que nunca sobreestima el costo real
+D. Heurística que da el camino más largo
+
+✅ Correcta: C
+🧾 Explicación: Las heurísticas admisibles no sobreestiman el costo real al objetivo. Ejemplos:
+Distancia Manhattan
+Distancia Euclidiana
+Número de piezas fuera de lugar (8-puzzle)
+Número mínimo de movimientos sin obstáculos en rejilla
+
+🧠 Pregunta 1
+¿Qué tipo de agente inteligente es aquel que actúa de forma óptima en función de su conocimiento previo y de las percepciones que recibe?
+
+A. Agente reflexivo simple
+B. Agente reflexivo basado en modelos
+C. Agente basado en objetivos
+D. Agente basado en utilidad
+
+✅ Correcta: B
+🧾 Explicación: El agente reflexivo basado en modelos utiliza la información del entorno (percepciones) y su conocimiento interno (modelo del mundo) para decidir sus acciones. No solo reacciona, sino que razona sobre el estado actual.
+
+🧠 Pregunta 2
+¿Qué propiedad debe cumplir una función heurística para que una búsqueda informada sea óptima?
+
+A. Ser admisible
+B. Ser consistente
+C. Ser monótona
+D. Ser completa
+
+✅ Correcta: A
+🧾 Explicación: Una heurística es admisible si nunca sobreestima el costo real al objetivo. Esto garantiza que el algoritmo A* encuentre una solución óptima si existe.
+
+🧠 Pregunta 3
+¿Qué tipo de búsqueda no informada es la más adecuada para encontrar la solución más corta a un problema?
+
+A. Búsqueda en anchura
+B. Búsqueda en profundidad
+C. Búsqueda en profundidad limitada
+D. Búsqueda con costo uniforme
+
+✅ Correcta: D
+🧾 Explicación: La búsqueda con costo uniforme expande los nodos según el costo total acumulado, garantizando la solución más económica. Es óptima en problemas con diferentes costos de operadores.
+
+🧠 Pregunta 4
+¿Qué tipo de problema de búsqueda se puede ignorar, es decir, no tener en cuenta el costo de los operadores ni el orden de aplicación de los mismos?
+
+A. Un problema monótono
+B. Un problema reversible
+C. Un problema irrecuperable
+D. Un problema no determinista
+
+✅ Correcta: B
+🧾 Explicación: Un problema reversible permite deshacer las acciones sin afectar el resultado. Por lo tanto, el costo y el orden de los operadores no afectan la solución final.
+
+🧠 Pregunta 5
+¿Qué tipo de búsqueda informada utiliza una función de evaluación que combina el costo acumulado desde el estado inicial y el costo estimado hasta el estado objetivo?
+
+A. Búsqueda voraz o greedy
+B. Búsqueda A*
+C. Búsqueda de escalada o hill-climbing
+D. Búsqueda de haz o beam search
+
+✅ Correcta: B
+🧾 Explicación: La búsqueda A* evalúa cada nodo usando la función f(n) = g(n) + h(n), donde g(n) es el costo acumulado desde el inicio y $h(n)$ es la heurística que estima el costo restante al objetivo.
+
+🧠 Pregunta 6
+¿Qué tipo de agente inteligente es aquel que actúa de forma óptima en función de una medida de felicidad o satisfacción que depende del estado actual y del estado deseado?
+
+A. Agente reflexivo simple
+B. Agente reflexivo basado en modelos
+C. Agente basado en objetivos
+D. Agente basado en utilidad
+
+✅ Correcta: D
+🧾 Explicación: El agente basado en utilidad no solo busca alcanzar un objetivo, sino que elige entre varios posibles según cuál maximiza su utilidad. Su comportamiento está guiado por una función de utilidad.
+
+🧠 Pregunta 7
+¿Qué propiedad debe cumplir una función heurística para que una búsqueda informada sea completa, es decir, que garantice encontrar una solución si existe?
+
+A. Ser admisible
+B. Ser consistente
+C. Ser monótona
+D. Ser acotada
+
+✅ Correcta: B
+🧾 Explicación: Una heurística consistente (o monótona) asegura que el costo estimado nunca disminuye a lo largo del camino, lo que permite a A* mantener la completitud y no reexpandir nodos.
+
+🧠 Pregunta 8
+¿Qué tipo de búsqueda no informada es la más adecuada para encontrar una solución a un problema cuando el espacio de búsqueda es infinito o muy grande?
+
+A. Búsqueda en anchura
+B. Búsqueda en profundidad
+C. Búsqueda en profundidad iterativa
+D. Búsqueda con costo uniforme
+
+✅ Correcta: C
+🧾 Explicación: La búsqueda en profundidad iterativa combina las ventajas de la búsqueda en profundidad y en anchura, y es adecuada para espacios infinitos o muy grandes porque garantiza la completitud sin consumir demasiada memoria.
+
+🧠 Pregunta 9
+¿Qué tipo de problema de búsqueda se puede resolver mediante una búsqueda ciega, es decir, sin utilizar ninguna información adicional sobre el problema?
+
+A. Un problema monótono
+B. Un problema reversible
+C. Un problema irrecuperable
+D. Un problema determinista
+
+✅ Correcta: D
+🧾 Explicación: Un problema determinista tiene resultados predecibles para cada acción, lo que permite resolverlo sin heurísticas ni información adicional, usando técnicas como búsqueda ciega.
+
+🧠 Pregunta 10
+¿Qué tipo de búsqueda informada utiliza una función de evaluación que solo tiene en cuenta el costo estimado hasta el estado objetivo?
+
+A. Búsqueda voraz o greedy
+B. Búsqueda A*
+C. Búsqueda de escalada o hill-climbing
+D. Búsqueda de haz o beam search
+
+✅ Correcta: A
+🧾 Explicación: La búsqueda voraz (greedy) elige el nodo que parece más prometedor usando únicamente la heurística h(n), es decir, el costo estimado al objetivo. No considera el camino recorrido.
+
+🧠 Pregunta 1
+¿Qué es la Inteligencia Artificial (IA) y cómo se diferencia de la inteligencia humana?
+
+A. IA es una réplica exacta del cerebro humano
+B. IA simula comportamientos inteligentes sin conciencia o emociones
+C. IA tiene emociones como los humanos
+D. No hay diferencia entre IA y humanos
+
+✅ Correcta: B
+🧾 Explicación: La IA se enfoca en desarrollar sistemas que simulen comportamientos inteligentes, como razonar o aprender. A diferencia de la inteligencia humana, no tiene emociones ni conciencia.
+
+🧠 Pregunta 2
+Explica los fundamentos filosóficos y matemáticos que respaldan la IA.
+
+A. Provienen solo de la lógica aristotélica
+B. Incluyen filosofía, álgebra, lógica formal y teoría de la computación
+C. Solo se basa en estadísticas
+D. Se fundamenta únicamente en redes neuronales
+
+✅ Correcta: B
+🧾 Explicación: La IA se basa en fundamentos como la lógica formal (de Frege o Boole), la filosofía de la mente, la teoría de autómatas, el álgebra y modelos matemáticos de decisión como los de Turing y Shannon.
+
+🧠 Pregunta 3
+Describe brevemente los hitos más importantes en la historia de la inteligencia artificial desde su creación hasta la actualidad.
+
+A. Solo se desarrolló en los últimos 10 años
+B. Incluye desde el test de Turing hasta redes neuronales modernas y aprendizaje profundo
+C. Comenzó con la aparición de Python
+D. Solo se usó para juegos
+
+✅ Correcta: B
+🧾 Explicación: Los hitos clave incluyen el test de Turing (1950), la conferencia de Dartmouth (1956), el desarrollo de los primeros sistemas expertos (décadas 60–80), el auge del aprendizaje automático y el deep learning desde los 2010.
+
+🧠 Pregunta 4
+¿Qué es un agente racional en IA y cómo se mide su comportamiento racional?
+
+A. Actúa aleatoriamente en cualquier entorno
+B. Reacciona sin objetivo definido
+C. Toma decisiones para maximizar su desempeño en función de sus percepciones y conocimientos
+D. Solo repite acciones previamente aprendidas
+
+✅ Correcta: C
+🧾 Explicación: Un agente racional actúa buscando maximizar una medida de desempeño basada en sus percepciones y acciones posibles. Se mide por su efectividad en alcanzar sus objetivos dados.
+
+🧠 Pregunta 5
+Describe la diferencia entre un entorno determinista y un entorno estocástico en el contexto de los agentes inteligentes.
+
+A. Ambos entornos tienen el mismo comportamiento siempre
+B. El entorno determinista tiene resultados predecibles, el estocástico tiene incertidumbre
+C. El entorno estocástico repite los resultados
+D. No hay diferencia relevante
+
+✅ Correcta: B
+🧾 Explicación: En un entorno determinista, cada acción produce siempre el mismo resultado. En un entorno estocástico, existe incertidumbre en los efectos de las acciones, lo que hace más difícil la toma de decisiones.
+
+🧠 Pregunta 6
+¿Qué es una estrategia de búsqueda informada? Menciona un ejemplo de un algoritmo que utilice esta estrategia.
+
+A. Una estrategia que no usa ninguna información del problema
+B. Usa conocimiento adicional (heurística) para guiar la búsqueda
+C. Solo prueba caminos aleatorios
+D. No es aplicable en IA
+
+✅ Correcta: B
+🧾 Explicación: La búsqueda informada usa una función heurística para elegir los nodos más prometedores. Un ejemplo clásico es el algoritmo A*, que combina el costo acumulado con la estimación del costo restante.
+
+🧠 Pregunta 7
+¿Cuál es la principal diferencia entre la búsqueda local y la búsqueda sistemática en la resolución de problemas?
+
+A. La búsqueda local se limita a nodos iniciales
+B. La búsqueda sistemática prueba soluciones aleatorias
+C. La búsqueda local explora soluciones individuales, la sistemática explora todo el espacio
+D. No hay diferencia significativa
+
+✅ Correcta: C
+🧾 Explicación: La búsqueda local se enfoca en mejorar una sola solución mediante pequeñas modificaciones (ej. hill-climbing). La búsqueda sistemática recorre el espacio de soluciones de forma exhaustiva (ej. backtracking).
+
+🧠 Pregunta 8
+Define el concepto de juegos de adversarios y cómo se usa la teoría de juegos en la IA.
+
+A. Son juegos que no tienen reglas
+B. Son juegos donde se coopera con otros
+C. Son problemas donde los agentes compiten; la teoría de juegos permite modelar estrategias óptimas
+D. Solo aplica a juegos de mesa
+
+✅ Correcta: C
+🧾 Explicación: En los juegos de adversarios, los agentes compiten entre sí. La IA usa la teoría de juegos para tomar decisiones estratégicas, como en el algoritmo minimax y la poda alfa-beta en juegos como el ajedrez.
+
+🧠 Pregunta 9
+¿Qué es el Análisis de Componentes Principales (PCA) y en qué tipo de problemas es útil aplicarlo?
+
+A. Un algoritmo para crear redes neuronales
+B. Un método para clasificar imágenes
+C. Una técnica de reducción de dimensiones útil en problemas con muchos atributos
+D. Una función para calcular distancias
+
+✅ Correcta: C
+🧾 Explicación: PCA es una técnica matemática que transforma variables originales en componentes principales, permitiendo reducir la dimensionalidad de los datos. Se usa en análisis exploratorio, visualización y preprocesamiento en Machine Learning.
