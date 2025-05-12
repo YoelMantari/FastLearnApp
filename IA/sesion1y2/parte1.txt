@@ -1,0 +1,389 @@
+🧠 Pregunta 1
+
+¿Cuál es la definición de un agente en el contexto de la Inteligencia Artificial según la lectura?
+
+A. Un sistema que almacena información del entorno.
+B. Un programa de software que interactúa con los usuarios.
+C. Un sistema que percibe su entorno, procesa sus percepciones y actúa racionalmente para lograr sus objetivos.
+D. Una entidad física que manipula objetos en su entorno.
+
+✅ Correcta: C
+
+🧾 Explicación: La lectura define un agente como un sistema que utiliza sensores para percibir su entorno, procesa esa información y usa actuadores para actuar de manera racional con el fin de alcanzar sus metas.
+
+🧠 Pregunta 2
+
+En el ejemplo del "mundo de la aspiradora", ¿qué se considera el entorno del agente?
+
+A. La propia aspiradora y sus componentes internos.
+B. El programa que controla la aspiradora.
+C. Las dos cuadrículas A y B.
+D. La suciedad presente en las cuadrículas.
+
+✅ Correcta: C
+
+🧾 Explicación: El ejemplo describe el entorno como las dos cuadrículas (A y B) sobre las cuales la aspiradora opera.
+
+🧠 Pregunta 3
+
+Según la lectura, ¿qué conforma la estructura de un agente?
+
+A. El programa de software y los datos que procesa.
+B. El microprocesador y la memoria del sistema.
+C. La arquitectura (hardware) y el programa (software) del agente.
+D. Los sensores y los actuadores únicamente.
+
+✅ Correcta: C
+
+🧾 Explicación: La lectura establece que un agente está compuesto por su arquitectura (el hardware, incluyendo sensores y actuadores) y el programa de Inteligencia Artificial que lo controla.
+
+🧠 Pregunta 4
+
+¿Cuál de los siguientes NO es un ejemplo de agente en la Inteligencia Artificial mencionado en la lectura?
+
+A. Asistentes virtuales como Siri o Cortana.
+B. Sistemas operativos de computadoras personales.
+C. Bots de chat de atención al cliente.
+D. Sistemas de recomendación como los de Netflix o Spotify.
+
+✅ Correcta: B
+
+🧾 Explicación: Si bien los sistemas operativos son software complejos, la lectura los ejemplos proporcionados se centran en agentes que interactúan con un entorno para lograr objetivos específicos, como los asistentes virtuales, bots de chat y sistemas de recomendación.
+
+🧠 Pregunta 5
+
+¿Qué significa que un sistema actúe de forma racional, según la lectura?
+
+A. Que siempre toma la decisión correcta basada en toda la información disponible.
+B. Que imita el comportamiento humano inteligente.
+C. Que hace "lo correcto" en función de su conocimiento.
+D. Que aprende de sus errores y mejora con el tiempo.
+
+✅ Correcta: C
+
+🧾 Explicación: La lectura define la racionalidad como la capacidad de un sistema para hacer lo "correcto" basándose en la información que posee en ese momento.
+
+🧠 Pregunta 6
+
+¿Qué principio alega Herbert Simon en relación con la racionalidad?
+
+A. El Principio de la Racionalidad Absoluta, que busca la perfección en la toma de decisiones.
+B. El Principio de la Racionalidad Artificial, que se aplica solo a sistemas de IA.
+C. El Principio de la Racionalidad Restringida, que reconoce las limitaciones de los agentes.
+D. El Principio de la Racionalidad Óptima, que siempre conduce al mejor resultado posible.
+
+✅ Correcta: C
+
+🧾 Explicación: Herbert Simon propuso el Principio de la Racionalidad Restringida, que argumenta que la racionalidad ideal no es alcanzable debido a las limitaciones de los agentes.
+
+🧠 Pregunta 7
+
+¿Cuáles son algunas de las limitaciones que pueden afectar la racionalidad de un agente, según la lectura?
+
+A. Solo las limitaciones en su potencia computacional.
+B. Las limitaciones de sus sensores, efectores y potencia computacional disponible.
+C. Únicamente las limitaciones económicas.
+D. La falta de un programa de IA sofisticado.
+
+✅ Correcta: B
+
+🧾 Explicación: La lectura menciona que las limitaciones en los sensores, los efectores y la potencia computacional disponible (y en algunos casos, la optimización económica) impiden alcanzar la racionalidad ideal.
+
+🧠 Pregunta 8
+
+¿Qué se define como el punto de partida en la formulación de un problema dentro del espacio de estados?
+
+A. El conjunto de todas las posibles soluciones.
+B. La descripción de las acciones posibles.
+C. El estado inicial.
+D. La función de costo del camino.
+
+✅ Correcta: C
+
+🧾 Explicación: Al definir formalmente un problema, el estado inicial representa la situación desde la cual se comienza a buscar una solución.
+
+🧠 Pregunta 9
+
+¿Qué rol cumplen los "operadores" en la representación de un problema como espacio de estados?
+
+A. Definen el estado final o el objetivo a alcanzar.
+B. Asignan un costo numérico a cada posible solución.
+C. Son funciones de transformación que cambian un estado a otro.
+D. Describen las restricciones sobre el objetivo.
+
+✅ Correcta: C
+
+🧾 Explicación: Los operadores son las acciones o transformaciones que permiten pasar de un estado a otro dentro del espacio de estados del problema.
+
+🧠 Pregunta 10
+
+En el problema del puzzle-8, ¿qué representa un "estado"?
+
+A. Una secuencia de movimientos para resolver el puzzle.
+B. La posición del hueco en el tablero.
+C. Una configuración específica de las 8 fichas en el tablero.
+D. El número total de movimientos realizados.
+
+✅ Correcta: C
+
+🧾 Explicación: En el contexto del puzzle-8, cada posible disposición de las 8 fichas y el hueco en el tablero se considera un estado diferente.
+
+🧠 Pregunta 11
+
+¿Cuál es el objetivo principal de la resolución de problemas en el campo de la Inteligencia Artificial?
+
+A. Simular la capacidad humana de cometer errores al resolver problemas.
+B. Desarrollar programas que puedan resolver automáticamente diversos tipos de problemas.
+C. Analizar la complejidad de los problemas del mundo real.
+D. Mejorar la eficiencia de los algoritmos de búsqueda en bases de datos.
+
+✅ Correcta: B
+
+🧾 Explicación: El objetivo fundamental es lograr que las computadoras, a través de programas, sean capaces de encontrar soluciones a problemas de manera autónoma.
+
+🧠 Pregunta 12
+
+Para que un problema pueda resolverse automáticamente, ¿qué se necesita además de una representación común?
+
+A. Una interfaz de usuario intuitiva.
+B. Algoritmos que utilicen una estrategia para resolver problemas definidos en esa representación.
+C. Una gran cantidad de datos de entrenamiento.
+D. Hardware de alto rendimiento.
+
+✅ Correcta: B
+
+🧾 Explicación: Una representación común del problema es esencial, pero también se requieren algoritmos que puedan aplicar una estrategia sistemática para encontrar la solución dentro de esa representación.
+
+🧠 Pregunta 13
+
+¿Cuáles son los cuatro componentes principales que formalmente definen un problema?
+
+A. Estado inicial, acciones posibles, estado final y tiempo de ejecución.
+B. Estado inicial, descripción de acciones y restricciones, estado final y función de costo del camino.
+C. Entorno, agente, sensores y actuadores.
+D. Representación, algoritmo, solución y evaluación.
+
+✅ Correcta: B
+
+🧾 Explicación: La lectura especifica que un problema se define por un estado inicial, una descripción de las posibles acciones y restricciones, un estado final u objetivo, y una función de costo del camino.
+
+🧠 Pregunta 14
+
+¿Cuál de las siguientes NO es una forma general de representar problemas para su resolución automática mencionada en la lectura?
+
+A. Espacio de estados.
+B. Reducción a subproblemas.
+C. Resolución de juegos.
+D. Lógica proposicional.
+
+✅ Correcta: D
+
+🧾 Explicación: La lectura menciona el espacio de estados y la reducción a subproblemas como representaciones generales, y la resolución de juegos y la satisfacción de restricciones como representaciones para problemas específicos. La lógica proposicional no se menciona en este contexto.
+
+🧠 Pregunta 15
+
+¿Qué representa un "estado" en el contexto de la resolución de problemas mediante el espacio de estados?
+
+A. Una acción específica que se puede realizar para resolver el problema.
+B. El costo acumulado para llegar a una posible solución.
+C. La representación de los elementos que describen el problema en un momento dado.
+D. El camino óptimo desde el inicio hasta el final.
+
+✅ Correcta: C
+
+🧾 Explicación: Un estado captura la configuración o situación del problema en un instante particular de su resolución, describiendo los elementos relevantes y sus relaciones.
+
+🧠 Pregunta 16
+
+¿Qué definen los "operadores" en el contexto del espacio de estados?
+
+A. El orden en que se deben explorar los diferentes estados.
+B. La función que evalúa la calidad de un estado.
+C. Una relación de accesibilidad entre estados, permitiendo la transición de uno a otro.
+D. Las condiciones bajo las cuales un estado se considera la solución.
+
+✅ Correcta: C
+
+🧾 Explicación: Los operadores actúan como funciones de transformación que permiten moverse entre los diferentes estados del problema, definiendo qué estados son alcanzables desde otros.
+
+🧠 Pregunta 17
+
+Al resumir la descripción de un problema, ¿qué se debe especificar además del conjunto de estados, el estado inicial y el estado final?
+
+A. La complejidad computacional del problema.
+B. Los operadores de cambio de estado y el tipo de solución buscada.
+C. La arquitectura del agente que resolverá el problema.
+D. Los lenguajes de programación que se utilizarán.
+
+✅ Correcta: B
+
+🧾 Explicación: Un resumen completo de la descripción del problema debe incluir la especificación de cómo se puede pasar de un estado a otro (operadores) y qué tipo de solución se está buscando (una cualquiera, la mejor, etc.).
+
+🧠 Pregunta 18
+
+En el problema del puzzle-8, ¿cuál es el objetivo final?
+
+A. Encontrar cualquier configuración válida de las 8 fichas en el tablero.
+B. Realizar el menor número posible de movimientos.
+C. Pasar de una ordenación inicial a una ordenación final específica de las fichas.
+D. Determinar si el puzzle tiene solución.
+
+✅ Correcta: C
+
+🧾 Explicación: El objetivo del juego del puzzle-8 es reorganizar las fichas desde una configuración inicial dada hasta alcanzar una configuración final predefinida.
+
+🧠 Pregunta 19
+
+¿Cuál es la diferencia clave entre la representación y la implementación en el contexto del problema del puzzle-8?
+
+A. La representación se enfoca en los movimientos, mientras que la implementación se centra en los estados.
+B. La representación define el problema de forma abstracta, mientras que la implementación es cómo se estructura en un programa.
+C. La representación utiliza matrices, mientras que la implementación usa listas.
+D. No hay una diferencia significativa entre ambos conceptos.
+
+✅ Correcta: B
+
+🧾 Explicación: La representación se refiere a cómo se conceptualiza el problema (por ejemplo, como una lista o una matriz), mientras que la implementación es la manera específica en que esa representación se traduce en una estructura de datos dentro de un programa de computadora.
+
+🧠 Pregunta 20
+
+Según la lectura, ¿cuántos posibles estados existen en el problema del puzzle-8?
+
+A. 8!
+B. 9!
+C. 9! / 2
+D. 32
+
+✅ Correcta: C
+
+🧾 Explicación: La lectura indica que el número de estados posibles en el puzzle-8 es de 9! / 2, lo que se debe a las posibles permutaciones de las 9 casillas (8 fichas + el hueco) dividido por 2 debido a la imposibilidad de alcanzar ciertos estados desde otros.
+
+🧠 Pregunta 21
+
+¿Cuál es el propósito principal de los agentes que planifican con anticipación en la Inteligencia Artificial?
+
+A. Reaccionar de manera inmediata a los cambios en el entorno sin considerar el futuro.
+B. Simular el comportamiento humano en la toma de decisiones impulsivas.
+C. Construir agentes que actúen de forma racional mediante la realización de algún tipo de búsqueda en segundo plano para lograr sus tareas.
+D. Aprender del entorno a través de la interacción directa y la experiencia.
+
+✅ Correcta: C
+
+🧾 Explicación: Los agentes que planifican con anticipación utilizan procesos de búsqueda para determinar una secuencia de acciones que les permitan alcanzar sus objetivos de manera racional.
+
+🧠 Pregunta 22
+
+¿Qué define un problema de búsqueda en el contexto de la Inteligencia Artificial?
+
+A. Un conjunto de reglas lógicas para inferir nueva información a partir de datos existentes.
+B. Un proceso de aprendizaje automático para identificar patrones en grandes conjuntos de datos.
+C. Un espacio de estado, un estado de inicio y una función que determina si un estado es el objetivo.
+D. Un algoritmo matemático para optimizar una función objetivo sujeta a ciertas restricciones.
+
+✅ Correcta: C
+
+🧾 Explicación: Un problema de búsqueda se caracteriza por el conjunto de todos los estados posibles, el punto de partida de la búsqueda y una manera de identificar si se ha alcanzado el estado deseado.
+
+🧠 Pregunta 23
+
+¿Cuáles son las cuatro características principales que se utilizan para evaluar el rendimiento de los algoritmos de búsqueda?
+
+A. Velocidad, precisión, eficiencia y costo.
+B. Completitud, optimización, complejidad en tiempo y complejidad en espacio.
+C. Robustez, escalabilidad, interpretabilidad y generalización.
+D. Aprendizaje, adaptación, autonomía e inteligencia.
+
+✅ Correcta: B
+
+🧾 Explicación: Las cuatro métricas clave para evaluar algoritmos de búsqueda son si garantizan encontrar una solución (completitud), si encuentran la mejor solución (optimización), cuánto tiempo tardan (complejidad en tiempo) y cuánta memoria necesitan (complejidad en espacio).
+
+🧠 Pregunta 24
+
+¿Cuál es la principal diferencia entre la búsqueda no informada y la búsqueda informada?
+
+A. La búsqueda informada es más rápida que la búsqueda no informada.
+B. La búsqueda informada utiliza conocimiento específico del problema para guiar la búsqueda, mientras que la búsqueda no informada no lo hace.
+C. La búsqueda no informada siempre encuentra la solución óptima.
+D. La búsqueda no informada es más adecuada para problemas con espacios de estado pequeños.
+
+✅ Correcta: B
+
+🧾 Explicación: La característica distintiva es que los algoritmos de búsqueda informada (o heurística) emplean información adicional sobre el problema para hacer la búsqueda más eficiente, a diferencia de los métodos no informados (o a ciegas) que exploran el espacio de estados de manera sistemática sin conocimiento previo.
+
+🧠 Pregunta 25
+
+¿Cuáles de los siguientes algoritmos pertenecen a la categoría de búsqueda no informada?
+
+A. Búsqueda Voraz y A*.
+B. Primero en Profundidad, Primero en Amplitud y Costo Uniforme.
+C. Búsqueda con Retroceso y Escalada.
+D. Algoritmos Genéticos y Recocido Simulado.
+
+✅ Correcta: B
+
+🧾 Explicación: La lectura menciona específicamente Primero en Profundidad, Primero en Amplitud y Costo Uniforme como algoritmos de búsqueda no informada (o a ciegas).
+
+🧠 Pregunta 26
+
+¿Qué estructura de datos se utiliza en los algoritmos de búsqueda no informada para almacenar todos los estados posibles a los que se puede ir desde los estados actuales?
+
+A. Un árbol de búsqueda.
+B. Una matriz de adyacencia.
+C. Una franja (o frontera).
+D. Una lista enlazada.
+
+✅ Correcta: C
+
+🧾 Explicación: La "franja" (también conocida como frontera o cola de exploración) es la estructura de datos que mantiene un registro de los nodos que han sido generados pero aún no han sido explorados.
+
+🧠 Pregunta 27
+
+¿Cuál es la principal diferencia entre un grafo del espacio de estados y un árbol de búsqueda?
+
+A. El grafo representa todos los estados posibles, mientras que el árbol representa los caminos explorados durante la búsqueda.
+B. El árbol de búsqueda es siempre más grande que el grafo del espacio de estados.
+C. El grafo se utiliza en la búsqueda informada, y el árbol en la búsqueda no informada.
+D. No hay una diferencia significativa entre ambos conceptos.
+
+✅ Correcta: A
+
+🧾 Explicación: El grafo del espacio de estados muestra la totalidad de las posibles configuraciones y transiciones del problema, mientras que el árbol de búsqueda es una estructura que se construye dinámicamente durante el proceso de búsqueda, representando los caminos que se están explorando desde el estado inicial.
+
+🧠 Pregunta 28
+
+¿Cuál es la estrategia de exploración del algoritmo de búsqueda Primero en Profundidad?
+
+A. Expandir primero el nodo que está a menor profundidad en el árbol de búsqueda.
+B. Expandir primero el nodo que tiene el menor costo acumulado desde el estado inicial.
+C. Expandir primero el nodo más profundo en el árbol de búsqueda.
+D. Expandir los nodos de manera aleatoria.
+
+✅ Correcta: C
+
+🧾 Explicación: La búsqueda Primero en Profundidad explora tan profundamente como sea posible a lo largo de cada rama antes de retroceder y explorar otras ramas.
+
+🧠 Pregunta 29
+
+¿En qué escenario la búsqueda Primero en Amplitud supera a la búsqueda Primero en Profundidad en términos de encontrar una solución con el menor número de pasos (asumiendo costos iguales)?
+
+A. Cuando la solución se encuentra a una gran profundidad en el árbol de búsqueda.
+B. Cuando el árbol de búsqueda tiene una profundidad infinita.
+C. Cuando la solución se encuentra a una profundidad superficial en el árbol de búsqueda.
+D. La búsqueda Primero en Profundidad siempre es mejor en términos de número de pasos.
+
+✅ Correcta: C
+
+🧾 Explicación: La búsqueda Primero en Amplitud explora el árbol por niveles, por lo que garantiza encontrar la solución más superficial (con el menor número de pasos) si los costos de los pasos son uniformes.
+
+🧠 Pregunta 30
+
+¿Cuál es la estrategia de exploración del algoritmo de búsqueda de Costo Uniforme?
+
+A. Expandir primero el nodo generado más recientemente.
+B. Expandir primero el nodo que está a menor profundidad.
+C. Expandir primero el nodo con el menor costo acumulado desde el estado inicial.
+D. Expandir los nodos en un orden predefinido.
+
+✅ Correcta: C
+
+🧾 Explicación: La búsqueda de Costo Uniforme prioriza la expansión del nodo que tiene el camino de menor costo desde el estado inicial, independientemente del número de pasos.

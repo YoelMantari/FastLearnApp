@@ -1,0 +1,259 @@
+🧠 Pregunta 1
+
+¿Cuál es el componente que define formalmente el punto de partida en un problema?
+
+A. Estado final
+B. Representación
+C. Estado inicial
+D. Función costo
+
+✅ Correcta: C
+
+🧾 Explicación: El estado inicial representa el punto de partida desde el cual comienza la búsqueda o la resolución del problema.
+
+🧠 Pregunta 2
+
+¿Cuál de las siguientes afirmaciones describe mejor la racionalidad en un agente?
+
+A. Actuar siempre de forma perfecta.
+B. Seguir siempre la misma acción predefinida.
+C. Hacer lo correcto en función de su conocimiento y capacidades.
+D. Copiar las acciones de otros agentes.
+
+✅ Correcta: C
+
+🧾 Explicación: Un agente es racional si toma decisiones correctas de acuerdo con lo que sabe, sus sensores, actuadores y potencia de cómputo, no necesariamente de forma perfecta.
+
+🧠 Pregunta 3
+
+¿Qué tipo de agente toma decisiones sin considerar un modelo interno del mundo?
+
+A. Agente deliberativo
+B. Agente basado en objetivos
+C. Agente reactivo simple
+D. Agente híbrido
+
+✅ Correcta: C
+
+🧾 Explicación: Los agentes reactivos simples responden directamente a las percepciones sin mantener un modelo del entorno.
+
+🧠 Pregunta 4
+
+¿Cuál de los siguientes métodos de búsqueda garantiza una solución óptima solo si todos los costos son iguales?
+
+A. Primero en profundidad
+B. Primero en amplitud
+C. Costo uniforme
+D. Búsqueda voraz
+
+✅ Correcta: B
+
+🧾 Explicación: La búsqueda primero en amplitud es óptima únicamente si todos los costos de los caminos son iguales.
+
+🧠 Pregunta 5
+
+¿Cuál de los siguientes no es un componente de la definición formal de un problema?
+
+A. Operadores de transformación
+B. Estado final
+C. Espacio de soluciones heurísticas
+D. Función costo
+
+✅ Correcta: C
+
+🧾 Explicación: Los componentes formales son: estado inicial, acciones, estado final y función de costo; el espacio heurístico se asocia con búsquedas informadas.
+
+🧠 Pregunta 6
+
+¿Qué representa un operador en la resolución de problemas?
+
+A. Un agente externo que guía la búsqueda.
+B. Una función que transforma un estado en otro.
+C. Una condición de parada para el algoritmo.
+D. Un tipo especial de agente basado en modelos.
+
+✅ Correcta: B
+
+🧾 Explicación: Un operador es una función que transforma un estado en otro, permitiendo avanzar en el espacio de estados.
+
+🧠 Pregunta 7
+
+¿Qué técnica permite definir un problema como una serie de pasos desde el estado inicial al estado objetivo?
+
+A. Reducción de heurísticas
+B. Representación en espacio de estados
+C. Árbol de decisiones
+D. Inferencia lógica
+
+✅ Correcta: B
+
+🧾 Explicación: Representar un problema como espacio de estados permite describir el proceso de resolución como una secuencia de pasos entre estados.
+
+🧠 Pregunta 8
+
+¿Cuál es una característica no deseada en la búsqueda primero en profundidad?
+
+A. Bajo consumo de memoria
+B. No garantiza encontrar la solución óptima
+C. Tiempo de ejecución exponencial
+D. Alto costo computacional por nivel
+
+✅ Correcta: B
+
+🧾 Explicación: Primero en profundidad puede encontrar soluciones no óptimas ya que no considera el costo ni la profundidad óptima.
+
+🧠 Pregunta 9
+
+¿Qué propiedad se refiere a la capacidad del algoritmo de encontrar una solución si existe?
+
+A. Optimización
+B. Completitud
+C. Eficiencia temporal
+D. Eficiencia espacial
+
+✅ Correcta: B
+
+🧾 Explicación: La completitud indica si un algoritmo puede encontrar una solución siempre que esta exista.
+
+🧠 Pregunta 10
+
+En el problema del Puzzle-8, ¿cuál es una representación válida del estado?
+
+A. Una lista de booleanos
+B. Un número binario
+C. Una matriz con la ubicación de cada ficha
+D. Un árbol de operadores
+
+✅ Correcta: C
+
+🧾 Explicación: Una representación válida del estado es una matriz donde se ubican las fichas y el espacio vacío.
+
+🧠 Pregunta 1
+
+¿Cuál es la característica fundamental que distingue a un agente basado en utilidad respecto a uno basado en objetivos?
+
+A. Evalúa múltiples metas posibles y selecciona una al azar
+B. Considera no solo si se alcanza el objetivo, sino qué tan bueno es alcanzarlo
+C. Prioriza la rapidez sobre la calidad de la solución
+D. Ejecuta acciones sin modelo del entorno
+
+✅ Correcta: B
+
+🧾 Explicación: Un agente basado en utilidad va más allá de simplemente alcanzar un objetivo; cuantifica la “calidad” de las posibles metas, permitiendo elegir la mejor entre varias opciones válidas.
+
+🧠 Pregunta 2
+
+En el contexto de IA, ¿qué afirmación sobre omnisciencia es correcta?
+
+A. Es una condición alcanzable mediante sensores de alta fidelidad
+B. Implica conocimiento total del entorno, pero es inviable en la práctica
+C. Solo se aplica en entornos estáticos y completamente observables
+D. Es una forma avanzada de autonomía de los agentes
+
+✅ Correcta: B
+
+🧾 Explicación: La omnisciencia implica conocer completamente el entorno, pero es idealizada e inalcanzable en escenarios reales debido a limitaciones sensoriales y computacionales.
+
+🧠 Pregunta 3
+
+¿Cuál de los siguientes entornos requiere que el agente mantenga memoria del pasado para tomar decisiones correctas?
+
+A. Estático
+B. Episódico
+C. Secuencial
+D. Determinista
+
+✅ Correcta: C
+
+🧾 Explicación: En entornos secuenciales, cada acción influye en futuras decisiones, por lo tanto, el agente necesita recordar eventos anteriores para actuar correctamente.
+
+🧠 Pregunta 4
+
+¿Cuál es la diferencia clave entre un grafo del espacio de estados y un árbol de búsqueda?
+
+A. El grafo se construye desde el objetivo; el árbol desde el inicio
+B. El árbol de búsqueda representa caminos completos, el grafo estados conectados
+C. El grafo representa nodos terminales; el árbol, ciclos
+D. El árbol se limita a problemas no deterministas; el grafo a deterministas
+
+✅ Correcta: B
+
+🧾 Explicación: El grafo del espacio de estados representa las relaciones entre estados, mientras que el árbol de búsqueda representa rutas completas desde el estado inicial hacia diferentes soluciones posibles.
+
+🧠 Pregunta 5
+
+¿Qué ocurre si se aplica búsqueda en profundidad en un entorno con ciclos sin mecanismos para evitarlos?
+
+A. El algoritmo termina más rápido
+B. Se repiten los operadores hasta alcanzar el objetivo
+C. Puede entrar en un bucle infinito sin hallar solución
+D. El algoritmo optimiza automáticamente el recorrido
+
+✅ Correcta: C
+
+🧾 Explicación: Sin mecanismos para evitar ciclos, la búsqueda en profundidad puede recorrer los mismos estados indefinidamente, provocando bucle infinito.
+
+🧠 Pregunta 6
+
+¿Qué garantiza la búsqueda por costo uniforme que no puede garantizar la búsqueda en amplitud?
+
+A. Complejitud en espacios de estados finitos
+B. Expansión de todos los nodos antes de alcanzar el objetivo
+C. La solución con menor costo acumulado, incluso si los costos varían
+D. Recorrer primero los nodos más cercanos al objetivo
+
+✅ Correcta: C
+
+🧾 Explicación: A diferencia de la búsqueda en amplitud (óptima solo si los costos son iguales), la búsqueda por costo uniforme encuentra la solución de menor costo total, incluso si los pasos tienen diferentes costos.
+
+🧠 Pregunta 7
+
+En el diseño de un agente, ¿qué papel juega la función de percepción?
+
+A. Asigna un valor de utilidad a cada estado
+B. Determina qué acción ejecutar ante una entrada sensorial
+C. Traduce las señales de los sensores en representaciones internas
+D. Optimiza el uso de memoria del agente
+
+✅ Correcta: C
+
+🧾 Explicación: La función de percepción interpreta las señales sensoriales y las transforma en datos que el agente puede procesar para decidir acciones.
+
+🧠 Pregunta 8
+
+¿Cuál de los siguientes agentes requiere planificación anticipada y modelado interno del entorno?
+
+A. Agente reactivo simple
+B. Agente basado en modelos
+C. Agente basado en reflejos condicionados
+D. Agente aleatorio explorador
+
+✅ Correcta: B
+
+🧾 Explicación: Un agente basado en modelos mantiene una representación del entorno, lo que le permite razonar y planificar a futuro.
+
+🧠 Pregunta 9
+
+¿Qué define a un entorno como parcialmente observable?
+
+A. El agente puede predecir todas las consecuencias de sus acciones
+B. El agente debe colaborar con otros para lograr su objetivo
+C. El agente no puede acceder a toda la información del entorno
+D. El entorno cambia incluso si el agente no actúa
+
+✅ Correcta: C
+
+🧾 Explicación: En entornos parcialmente observables, el agente no tiene acceso completo a la información, lo que afecta su capacidad de tomar decisiones perfectas.
+
+🧠 Pregunta 10
+
+¿Cuál es la principal desventaja de la búsqueda en amplitud en entornos con alto factor de ramificación?
+
+A. Requiere aplicar heurísticas costosas
+B. No garantiza una solución óptima
+C. Consume una gran cantidad de memoria
+D. Se estanca si no encuentra el estado objetivo
+
+✅ Correcta: C
+
+🧾 Explicación: La búsqueda en amplitud requiere almacenar todos los nodos en cada nivel, lo que consume mucha memoria, especialmente si el número de ramificaciones por nodo es alto.
