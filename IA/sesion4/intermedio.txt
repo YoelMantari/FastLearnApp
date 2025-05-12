@@ -1,0 +1,551 @@
+🧠 Pregunta 1
+
+ ¿Cuál es la principal característica de los algoritmos de búsqueda local en comparación con otros algoritmos de búsqueda?
+
+ A. Siempre encuentran el camino óptimo hacia la solución.
+ B. Se enfocan en el camino para llegar al objetivo.
+ C. No se preocupan por el camino, sino por encontrar un buen estado solución.
+ D. Requieren un estado inicial claramente definido.
+
+ ✅ Correcta: C
+ 🧾 Explicación: Los algoritmos de búsqueda local exploran el espacio de soluciones buscando directamente un estado que optimice una función objetivo, sin mantener un registro del camino recorrido para llegar a ese estado.
+🧠 Pregunta 2
+
+ ¿Qué diferencia fundamental existe entre un problema de optimización y un problema de búsqueda tradicional en el contexto de la búsqueda local?
+
+ A. En la optimización se busca cualquier solución válida, mientras que en la búsqueda se busca la mejor solución.
+ B. En la búsqueda tradicional el camino es importante, mientras que en la optimización se evalúa la calidad del estado final.
+ C. Los problemas de optimización siempre tienen un estado inicial definido, a diferencia de la búsqueda tradicional.
+ D. La búsqueda tradicional utiliza funciones objetivo, mientras que la optimización se basa en operadores.
+
+ ✅ Correcta: B
+ 🧾 Explicación: En problemas de optimización resueltos con búsqueda local, el interés principal radica en la calidad del estado final (medida por una función objetivo), mientras que en la búsqueda tradicional se suele priorizar la secuencia de pasos para alcanzar un estado objetivo.
+🧠 Pregunta 3
+
+ ¿Cuál es una limitación significativa de la búsqueda de fuerza bruta para resolver problemas de optimización?
+
+ A. Requiere la existencia de derivadas de la función objetivo.
+ B. No garantiza encontrar la solución óptima.
+ C. Puede ser computacionalmente inviable debido a la gran cantidad de posibles soluciones.
+ D. Solo funciona en espacios de búsqueda discretos.
+
+ ✅ Correcta: C
+ 🧾 Explicación: La búsqueda de fuerza bruta implica evaluar todas las posibles soluciones, lo cual se vuelve extremadamente ineficiente o imposible en problemas con un espacio de soluciones grande.
+🧠 Pregunta 4
+
+ ¿Qué desventaja principal presentan las técnicas de búsqueda local basadas en gradiente?
+
+ A. No pueden aplicarse a problemas con funciones objetivo no diferenciables.
+ B. Tienden a quedar atrapadas en óptimos locales en lugar de encontrar el óptimo global.
+ C. Requieren una gran cantidad de memoria para almacenar el gradiente.
+ D. Son ineficaces en espacios de búsqueda de alta dimensionalidad.
+
+ ✅ Correcta: B
+ 🧾 Explicación: Las técnicas basadas en gradiente buscan mejorar la solución moviéndose en la dirección del mayor incremento (o decremento) de la función objetivo, lo que puede llevarlas a converger a un óptimo local que no es la mejor solución global.
+🧠 Pregunta 5
+
+ ¿Cuál es la idea central del algoritmo de Hill Climbing o búsqueda en escalada?
+
+ A. Explorar aleatoriamente el espacio de búsqueda hasta encontrar una solución.
+ B. Moverse iterativamente al estado vecino con el mejor valor de la función objetivo.
+ C. Mantener un conjunto de posibles soluciones y combinarlas para generar nuevas soluciones.
+ D. Simular el proceso de enfriamiento de metales para escapar de óptimos locales.
+
+ ✅ Correcta: B
+ 🧾 Explicación: El Hill Climbing es un algoritmo iterativo que comienza con un estado inicial y en cada paso se mueve al vecino que mejore el valor de la función objetivo, buscando ascender hacia un máximo local.
+🧠 Pregunta 6
+
+ ¿Cuál de los siguientes problemas puede enfrentar el algoritmo de Hill Climbing?
+
+ A. Converger siempre a la solución óptima global.
+ B. Explorar eficientemente grandes mesetas en el espacio de búsqueda.
+ C. Quedar atrapado en un máximo local donde ningún vecino es mejor.
+ D. Requerir una gran cantidad de memoria para almacenar los estados visitados.
+
+ ✅ Correcta: C
+ 🧾 Explicación: Uno de los principales problemas del Hill Climbing es quedarse atascado en un máximo local, un punto donde la función objetivo es mayor que la de sus vecinos inmediatos, pero no es el máximo global.
+🧠 Pregunta 7
+
+ ¿Qué estrategia se utiliza en "Random Restarting Hill Climbing" para intentar mitigar el problema de los máximos locales?
+
+ A. Limitar la profundidad de la búsqueda para evitar ciclos.
+ B. Permitir movimientos hacia vecinos con peor valor de la función objetivo.
+ C. Iniciar múltiples búsquedas de Hill Climbing desde diferentes puntos iniciales aleatorios.
+ D. Mantener una pila de estados para realizar backtracking.
+
+ ✅ Correcta: C
+ 🧾 Explicación: El Random Restarting Hill Climbing intenta superar el problema de los máximos locales ejecutando el algoritmo de Hill Climbing varias veces desde diferentes estados iniciales generados aleatoriamente, esperando que alguna de las búsquedas alcance un mejor óptimo.
+🧠 Pregunta 8
+
+ ¿En qué se inspira el algoritmo de Enfriamiento Simulado (Simulated Annealing)?
+
+ A. En la evolución biológica y la selección natural.
+ B. En el comportamiento de las colonias de hormigas en la búsqueda de alimento.
+ C. En el proceso físico de enfriamiento controlado de materiales para alcanzar estados de baja energía.
+ D. En la inteligencia colectiva de enjambres de partículas.
+
+ ✅ Correcta: C
+ 🧾 Explicación: El Enfriamiento Simulado se basa en la analogía del proceso termodinámico de annealing, donde un material se calienta a alta temperatura y luego se enfría lentamente para minimizar su energía interna y alcanzar una estructura estable.
+🧠 Pregunta 9
+
+ ¿Cuál es la característica clave del Enfriamiento Simulado que le permite potencialmente escapar de óptimos locales?
+
+ A. Siempre se mueve hacia estados vecinos con mejor valor de la función objetivo.
+ B. Introduce una componente aleatoria que permite aceptar movimientos hacia estados con peor valor con cierta probabilidad.
+ C. Mantiene una población de soluciones y las evoluciona a lo largo del tiempo.
+ D. Utiliza una función heurística determinista para guiar la búsqueda.
+
+ ✅ Correcta: B
+ 🧾 Explicación: A diferencia del Hill Climbing, el Enfriamiento Simulado permite, con una probabilidad que disminuye con el tiempo (la "temperatura"), moverse a estados vecinos con un valor inferior de la función objetivo, lo que le da la posibilidad de escapar de óptimos locales.
+🧠 Pregunta 10
+
+  ¿Qué analogía se establece en los Algoritmos Genéticos con el proceso de selección natural?
+
+ A. Las soluciones candidatas se asemejan al entorno en el que viven los organismos.
+ B. La función de calidad de una solución se corresponde con la capacidad de supervivencia y reproducción de un individuo.
+ C. Los operadores de mutación simulan los cambios ambientales que afectan a las poblaciones.
+ D. El tamaño de la población se mantiene constante a lo largo de las generaciones como en los ecosistemas estables.
+
+ ✅ Correcta: B
+ 🧾 Explicación: En los Algoritmos Genéticos, la función de fitness (calidad de la solución) juega un papel análogo a la adaptación de un organismo a su entorno, determinando su probabilidad de ser seleccionado para la reproducción y transmitir sus "genes" (características de la solución) a la siguiente generación.
+🧠 Pregunta 11
+
+  ¿Cuáles son los dos operadores principales utilizados en los Algoritmos Genéticos para generar nuevas soluciones a partir de la población existente?
+
+ A. Selección y evaluación.
+ B. Mutación y recombinación (crossover).
+ C. Gradiente y descenso.
+ D. Enfriamiento y templado.
+
+ ✅ Correcta: B
+ 🧾 Explicación: Los Algoritmos Genéticos utilizan principalmente los operadores de mutación (cambios aleatorios en las características de una solución) y recombinación o crossover (combinación de las características de dos soluciones "padre" para crear nuevas soluciones "hijo").
+🧠 Pregunta 12
+
+  En el contexto de la búsqueda de adversarios, ¿qué se entiende por un juego de "suma cero"?
+
+ A. Un juego donde la suma de los posibles resultados siempre es cero.
+ B. Un juego donde la ganancia de un jugador implica una pérdida equivalente para el otro jugador.
+ C. Un juego donde no hay posibilidad de empate o tablas.
+ D. Un juego donde la información es perfecta y no hay azar.
+
+ ✅ Correcta: B
+ 🧾 Explicación: Un juego de suma cero es aquel en el que los intereses de los jugadores son completamente opuestos; lo que un jugador gana, el otro lo pierde en igual medida.
+🧠 Pregunta 13
+
+  ¿Qué tipo de juegos se caracterizan por tener información perfecta?
+
+ A. Juegos donde los jugadores no tienen conocimiento completo del estado del juego.
+ B. Juegos donde todos los jugadores pueden ver todas las acciones y el estado del juego en todo momento.
+ C. Juegos donde el resultado depende en gran medida del azar.
+ D. Juegos con más de dos jugadores.
+
+ ✅ Correcta: B
+ 🧾 Explicación: En juegos con información perfecta, como el ajedrez o el Go, ambos jugadores tienen pleno conocimiento de la situación actual del juego, incluyendo todas las piezas en el tablero y los movimientos realizados.
+🧠 Pregunta 14
+
+  ¿Cuál es el objetivo principal del algoritmo Minimax en la búsqueda de adversarios?
+
+ A. Encontrar el camino más corto hacia un estado ganador.
+ B. Maximizar la utilidad del jugador actual asumiendo que el oponente jugará de forma óptima para minimizarla.
+ C. Minimizar la cantidad de memoria utilizada durante la búsqueda.
+ D. Explorar todas las posibles secuencias de juego para predecir el resultado.
+
+ ✅ Correcta: B
+ 🧾 Explicación: El algoritmo Minimax busca determinar la mejor jugada para el jugador actual (MAX) asumiendo que el oponente (MIN) siempre elegirá la jugada que minimice la utilidad de MAX.
+🧠 Pregunta 15
+
+  ¿Qué representa el valor minimax de un nodo en un árbol de juego?
+
+ A. La probabilidad de ganar desde ese estado.
+ B. El número de movimientos restantes hasta el final del juego.
+ C. La mejor utilidad alcanzable desde ese estado contra un oponente óptimo.
+ D. La profundidad del nodo en el árbol de juego.
+
+ ✅ Correcta: C
+ 🧾 Explicación: El valor minimax de un nodo representa el valor de la función de utilidad que el jugador que tiene el turno en ese estado puede asegurar, asumiendo que ambos jugadores juegan de manera óptima hasta el final del juego.
+🧠 Pregunta 16
+
+  ¿Por qué la búsqueda Minimax exhaustiva se vuelve impracticable en juegos complejos como el ajedrez o el Go?
+
+ A. La función de utilidad en estos juegos es demasiado compleja para calcular.
+ B. El número de posibles estados y movimientos es exponencialmente grande, lo que genera árboles de juego enormes.
+ C. Estos juegos involucran elementos de azar que no pueden ser modelados por Minimax.
+ D. La profundidad de búsqueda necesaria para tomar decisiones informadas es demasiado pequeña.
+
+ ✅ Correcta: B
+ 🧾 Explicación: La complejidad de los juegos como el ajedrez y el Go radica en su vasto espacio de estados y la gran cantidad de movimientos posibles en cada turno, lo que lleva a árboles de juego con un tamaño exponencial que hace inviable la exploración completa.
+🧠 Pregunta 17
+
+  ¿Cuál es la principal ventaja de utilizar la poda Alfa-Beta en el algoritmo Minimax?
+
+ A. Garantiza encontrar la solución óptima en menos tiempo que Minimax sin poda.
+ B. Permite explorar árboles de juego más profundos con los mismos recursos computacionales.
+ C. Simplifica la implementación del algoritmo Minimax.
+ D. Elimina la necesidad de una función de evaluación heurística.
+
+ ✅ Correcta: B
+ 🧾 Explicación: La poda Alfa-Beta es una técnica de optimización que reduce el número de nodos que necesita explorar el algoritmo Minimax al descartar ramas del árbol de juego que no pueden influir en la decisión final, permitiendo así buscar a mayor profundidad o en juegos más complejos con los mismos recursos.
+🧠 Pregunta 18
+Qué representan los valores alfa (α) y beta (β) en el algoritmo de poda Alfa-Beta?
+
+ A. La profundidad actual de la búsqueda y el número de nodos explorados.
+ B. Los límites inferior y superior, respectivamente, del valor minimax que el jugador MAX y el jugador MIN están seguros de poder alcanzar.
+ C. Las funciones de evaluación heurística para estados terminales y no terminales.
+ D. La probabilidad de ganar para MAX y la probabilidad de perder para MIN.
+
+ ✅ Correcta: B
+ 🧾 Explicación: Alfa (α) representa el mejor valor (máximo) que MAX ha encontrado hasta el momento en su camino de búsqueda, mientras que Beta (β) representa el mejor valor (mínimo) que MIN ha encontrado hasta ahora en su camino. La poda ocurre cuando se encuentra una situación donde una rama no puede mejorar el valor alfa para MAX o empeorar el valor beta para MIN.
+
+ 🧠 Pregunta 19
+
+ ¿En qué se diferencia la búsqueda local de los algoritmos de búsqueda informada como A*?
+
+ A. La búsqueda local siempre garantiza encontrar la solución óptima.
+ B. Los algoritmos informados utilizan una función heurística para guiar la búsqueda, mientras que la búsqueda local no.
+ C. La búsqueda local no mantiene un camino hacia el objetivo, solo el estado actual.
+ D. Los algoritmos informados son más propensos a quedar atrapados en óptimos locales.
+
+ ✅ Correcta: C
+ 🧾 Explicación: A diferencia de los algoritmos de búsqueda informada que rastrean un camino y utilizan una función heurística para estimar la distancia al objetivo, la búsqueda local opera sobre un único estado actual y se mueve a estados vecinos sin recordar la secuencia de pasos.
+🧠 Pregunta 20
+
+ ¿Cuál de las siguientes opciones describe mejor la función objetivo en un problema de optimización con búsqueda local?
+
+ A. Una estimación de la distancia al estado objetivo.
+ B. Una medida de la calidad o el valor de un estado solución.
+ C. Un conjunto de operadores que permiten moverse entre estados.
+ D. Una representación del camino seguido para alcanzar un estado.
+
+ ✅ Correcta: B
+ 🧾 Explicación: La función objetivo es crucial en la búsqueda local, ya que asigna un valor numérico a cada estado posible, permitiendo al algoritmo evaluar su calidad y determinar la dirección de la búsqueda hacia mejores soluciones.
+🧠 Pregunta 21
+
+ ¿Por qué la búsqueda aleatoria se considera una estrategia poco eficiente para problemas de optimización?
+
+ A. Requiere un conocimiento previo del espacio de búsqueda.
+ B. No garantiza encontrar soluciones óptimas o siquiera buenas en un tiempo razonable.
+ C. Solo funciona en problemas con un número limitado de soluciones posibles.
+ D. Es susceptible a quedar atrapada en óptimos locales.
+
+ ✅ Correcta: B
+ 🧾 Explicación: La búsqueda aleatoria explora el espacio de soluciones sin ninguna guía, lo que hace que sea muy ineficiente y poco probable que encuentre una solución de alta calidad en un tiempo práctico, especialmente en espacios de búsqueda grandes.
+🧠 Pregunta 22
+
+ ¿Qué característica debe tener un problema para que las técnicas basadas en gradiente sean aplicables?
+
+ A. Un espacio de búsqueda discreto.
+ B. Una función objetivo que sea diferenciable.
+ C. Un número limitado de óptimos locales.
+ D. Un estado inicial bien definido.
+
+ ✅ Correcta: B
+ 🧾 Explicación: Las técnicas basadas en gradiente utilizan las derivadas de la función objetivo para determinar la dirección de ascenso o descenso más pronunciada, por lo que requieren que la función sea diferenciable.
+🧠 Pregunta 23
+
+ ¿Cuál de los siguientes algoritmos de búsqueda local se inspira en el proceso de templado de metales?
+
+ A. Hill Climbing.
+ B. Algoritmos Genéticos.
+ C. Enfriamiento Simulado.
+ D. Búsqueda Aleatoria.
+
+ ✅ Correcta: C
+ 🧾 Explicación: El Enfriamiento Simulado toma su inspiración del proceso de annealing en metalurgia, donde el material se calienta y luego se enfría lentamente para alcanzar un estado de mínima energía.
+🧠 Pregunta 24
+
+ ¿Qué estrategia utiliza el algoritmo de "Beam Search" como una variación del Hill Climbing?
+
+ A. Reiniciar la búsqueda aleatoriamente varias veces.
+ B. Permitir movimientos hacia estados con peor valor de la función objetivo.
+ C. Mantener un haz (beam) de los k mejores estados y explorarlos en paralelo.
+ D. Aplicar múltiples operaciones antes de decidir el siguiente movimiento.
+
+ ✅ Correcta: C
+ 🧾 Explicación: Beam Search es una variante del Hill Climbing que mantiene un conjunto de los k mejores estados encontrados hasta el momento (el "haz") y expande la búsqueda desde todos ellos en cada paso, en lugar de solo un único estado actual.
+🧠 Pregunta 25
+
+ En el contexto del problema del puzzle-8 presentado, ¿qué representa la función de evaluación \(f(nodo) = \# casillas\ bien\ colocadas\)?
+
+ A. El costo para llegar al estado actual desde el estado inicial.
+ B. Una medida heurística de la calidad del estado actual, indicando qué tan cerca está del estado final.
+ C. El número de movimientos realizados para alcanzar el estado actual.
+ D. Una función objetivo que se busca minimizar.
+
+ ✅ Correcta: B
+ 🧾 Explicación: La función de evaluación en este caso es una heurística que estima la proximidad del estado actual al estado objetivo contando el número de casillas que ya están en su posición correcta.
+🧠 Pregunta 26
+
+ ¿Cuál de las siguientes analogías físicas se menciona como base para algoritmos de búsqueda local?
+
+ A. La propagación de ondas de sonido.
+ B. El flujo de fluidos en un sistema.
+ C. El enfriamiento de metales.
+ D. La mecánica de cuerpos celestes.
+
+ ✅ Correcta: C
+ 🧾 Explicación: La lectura menciona el "Simulated Annealing" como un algoritmo de búsqueda local basado en la analogía física del proceso de enfriamiento de metales.
+🧠 Pregunta 27
+
+ ¿Qué papel juega la "temperatura" en el algoritmo de Enfriamiento Simulado?
+
+ A. Controla la intensidad de la búsqueda en el espacio de soluciones.
+ B. Determina la probabilidad de aceptar movimientos hacia estados con peor valor de la función objetivo.
+ C. Mide la calidad de la solución actual.
+ D. Define el número máximo de iteraciones del algoritmo.
+
+ ✅ Correcta: B
+ 🧾 Explicación: La temperatura en el Enfriamiento Simulado es un parámetro que regula la probabilidad de aceptar movimientos que empeoran la solución actual. Inicialmente alta, permite una mayor exploración y la posibilidad de escapar de óptimos locales, y disminuye gradualmente para favorecer la convergencia hacia un óptimo.
+🧠 Pregunta 28
+
+ ¿Qué tipo de problemas son especialmente adecuados para ser resueltos con Enfriamiento Simulado?
+
+ A. Problemas con pocos óptimos locales bien definidos.
+ B. Problemas donde encontrar una heurística discriminante es sencillo.
+ C. Problemas grandes donde el óptimo puede estar rodeado de muchos óptimos locales.
+ D. Problemas que requieren encontrar el camino óptimo hacia la solución.
+
+ ✅ Correcta: C
+ 🧾 Explicación: El Enfriamiento Simulado es particularmente útil para problemas complejos con muchos óptimos locales, donde la capacidad de escapar de estos óptimos a través de la aceptación probabilística de peores movimientos puede llevar a encontrar una mejor solución global.
+🧠 Pregunta 29
+
+ ¿Qué concepto biológico fundamental inspira el diseño de los Algoritmos Genéticos?
+
+ A. El comportamiento de las neuronas en el cerebro.
+ B. La estructura del ADN y la replicación celular.
+ C. El mecanismo de la selección natural y la herencia genética.
+ D. La organización social de las colonias de insectos.
+
+ ✅ Correcta: C
+ 🧾 Explicación: Los Algoritmos Genéticos se basan en los principios de la evolución biológica, como la selección natural (supervivencia y reproducción de los más aptos) y la herencia genética (transmisión de características a través de la reproducción).
+🧠 Pregunta 30
+
+ En un Algoritmo Genético, ¿qué representa un "individuo"?
+
+ A. Un operador utilizado para modificar las soluciones.
+ B. Una medida de la calidad de una solución.
+ C. Una posible solución o candidato al problema de optimización.
+ D. Un parámetro que controla el proceso de evolución.
+
+ ✅ Correcta: C
+ 🧾 Explicación: En el contexto de los Algoritmos Genéticos, un individuo es una representación codificada de una posible solución al problema que se está tratando de optimizar.
+🧠 Pregunta 31
+
+ ¿Cuál es el propósito de la "función de fitness" en un Algoritmo Genético?
+
+ A. Definir los operadores de cruce y mutación.
+ B. Evaluar la calidad o adaptación de cada individuo (solución candidata).
+ C. Determinar el tamaño de la población en cada generación.
+ D. Controlar la probabilidad de mutación.
+
+ ✅ Correcta: B
+ 🧾 Explicación: La función de fitness asigna un valor numérico a cada individuo en la población, indicando qué tan bien resuelve el problema en cuestión. Los individuos con mayor fitness tienen más probabilidades de ser seleccionados para la reproducción.
+🧠 Pregunta 32
+
+ En la búsqueda de adversarios, ¿por qué se considera que los juegos con información perfecta son más fáciles de analizar teóricamente que aquellos con información imperfecta?
+
+ A. Los juegos con información imperfecta siempre involucran azar.
+ B. En juegos con información perfecta, todos los jugadores tienen acceso completo al estado del juego, lo que simplifica la toma de decisiones óptimas.
+ C. Los juegos con información perfecta suelen tener un espacio de estados más pequeño.
+ D. La función de utilidad es siempre más clara en juegos con información perfecta.
+
+ ✅ Correcta: B
+ 🧾 Explicación: La información perfecta permite a los jugadores razonar sobre todas las posibles secuencias de juego y las consecuencias de sus acciones, ya que no hay información oculta que introduzca incertidumbre.
+🧠 Pregunta 33
+
+ ¿Qué significa que un juego sea de "suma cero"?
+
+ A. La suma de las puntuaciones de los jugadores al final del juego siempre es cero.
+ B. Cualquier ganancia para un jugador resulta en una pérdida igual para el otro.
+ C. El juego siempre termina en un empate.
+ D. No hay incentivos para la cooperación entre los jugadores.
+
+ ✅ Correcta: B
+ 🧾 Explicación: En un juego de suma cero, los intereses de los jugadores están directamente opuestos; los recursos o la "utilidad" son fijos, de modo que la ganancia de uno es necesariamente la pérdida del otro.
+🧠 Pregunta 34
+
+ ¿Cuál es la principal limitación de la búsqueda Minimax básica en juegos complejos?
+
+ A. No puede manejar juegos con más de dos jugadores.
+ B. Requiere una función de utilidad que sea estrictamente binaria (ganar o perder).
+ C. Su complejidad temporal es exponencial con la profundidad del árbol de juego, haciéndola inviable para juegos con muchos movimientos posibles.
+ D. No puede ser adaptada para juegos con elementos de azar.
+
+ ✅ Correcta: C
+ 🧾 Explicación: La búsqueda Minimax explora recursivamente todas las posibles secuencias de juego hasta una profundidad dada, lo que resulta en una complejidad temporal exponencial \(O(b^m)\), donde \(b\) es el factor de ramificación y \(m\) es la profundidad. Esto la hace impracticable para juegos con muchos movimientos posibles.
+🧠 Pregunta 35
+
+ ¿Cuál es el propósito de la función de evaluación heurística en la búsqueda de adversarios con profundidad limitada?
+
+ A. Determinar el ganador del juego en estados no terminales.
+ B. Estimar la utilidad de un estado no terminal cuando la búsqueda no puede llegar a los estados finales.
+ C. Reducir el factor de ramificación del árbol de juego.
+ D. Garantizar que la búsqueda encuentre la jugada óptima.
+
+ ✅ Correcta: B
+ 🧾 Explicación: Cuando la búsqueda en el árbol de juego se limita por la profundidad, la función de evaluación heurística se utiliza para estimar el valor o la conveniencia de los estados que no son terminales, proporcionando una base para la decisión sin explorar el juego hasta el final.
+🧠 Pregunta 36
+
+ ¿Cómo afecta una mayor profundidad de búsqueda a la calidad de la decisión tomada por un algoritmo de búsqueda de adversarios?
+
+ A. Generalmente empeora la calidad de la decisión debido a la complejidad.
+ B. No tiene un impacto significativo en la calidad de la decisión.
+ C. Generalmente mejora la calidad de la decisión al permitir una mejor anticipación de las jugadas del oponente.
+ D. Solo mejora la calidad de la decisión si la función de evaluación heurística es perfecta.
+
+ ✅ Correcta: C
+ 🧾 Explicación: Explorar el árbol de juego a una mayor profundidad permite al algoritmo anticipar más movimientos del oponente y las posibles respuestas, lo que generalmente conduce a una mejor evaluación de la situación actual y, por lo tanto, a decisiones más informadas.
+🧠 Pregunta 37
+
+ ¿Cuál es la principal idea detrás de la poda Alfa-Beta?
+
+ A. Reordenar los nodos del árbol de juego para explorar primero las ramas más prometedoras.
+ B. Eliminar ramas del árbol de juego que no pueden influir en la decisión final del jugador actual.
+ C. Utilizar una función heurística para guiar la búsqueda hacia los estados más favorables.
+ D. Limitar la profundidad de la búsqueda para reducir la complejidad computacional.
+
+ ✅ Correcta: B
+ 🧾 Explicación: La poda Alfa-Beta es una técnica que optimiza el algoritmo Minimax al identificar y eliminar partes del árbol de juego que no necesitan ser exploradas porque ya se ha encontrado una jugada mejor (para MAX) o peor (para MIN) en otra rama.
+🧠 Pregunta 38
+
+ ¿En qué orden de visita de los nodos del árbol de juego es más efectiva la poda Alfa-Beta?
+
+ A. Un orden aleatorio.
+ B. Un orden de amplitud primero.
+ C. Un orden de profundidad primero.
+ D. Un orden que explore primero los movimientos que se consideran más prometedores.
+
+ ✅ Correcta: D
+ 🧾 Explicación: La poda Alfa-Beta es más efectiva cuando los nodos que conducen a buenos valores para el jugador actual y malos valores para el oponente se exploran primero, ya que esto aumenta la probabilidad de que se puedan podar otras ramas.
+
+🧠 Pregunta 39
+
+ ¿Cómo se relaciona el concepto de "paisaje adaptativo" con los Algoritmos Genéticos?
+
+ A. Representa la estructura física donde viven los individuos de la población.
+ B. Es una visualización del espacio de búsqueda donde la altura representa el fitness de cada posible solución.
+ C. Describe el conjunto de operadores genéticos utilizados para la reproducción.
+ D. Define la estrategia de selección de los padres para la siguiente generación.
+
+ ✅ Correcta: B
+ 🧾 Explicación: El paisaje adaptativo es una metáfora visual utilizada en Algoritmos Genéticos para imaginar el espacio de todas las posibles soluciones. La "altura" en este paisaje representa el valor de la función de fitness para cada solución, y el objetivo es encontrar los "picos" más altos (máximos de fitness).
+🧠 Pregunta 40
+
+ En un Algoritmo Genético, ¿qué implica una alta "presión de selección"?
+
+ A. Una baja probabilidad de que los individuos con alto fitness se reproduzcan.
+ B. Una alta probabilidad de que solo los individuos con el fitness más alto sean seleccionados para la reproducción.
+ C. Una selección aleatoria de los individuos para la reproducción, independientemente de su fitness.
+ D. Una tasa de mutación muy alta en la población.
+
+ ✅ Correcta: B
+ 🧾 Explicación: Una alta presión de selección significa que los individuos con un fitness significativamente mayor tienen una probabilidad mucho mayor de ser elegidos para la reproducción, lo que puede llevar a una convergencia más rápida pero también al riesgo de quedar atrapado en óptimos locales.
+🧠 Pregunta 41
+
+ ¿Cuál es la función principal del operador de "mutación" en los Algoritmos Genéticos?
+
+ A. Combinar las características de dos individuos padres para crear descendientes.
+ B. Evaluar la calidad de cada individuo en la población.
+ C. Introducir diversidad genética en la población mediante cambios aleatorios en los individuos.
+ D. Seleccionar a los individuos más aptos para la reproducción.
+
+ ✅ Correcta: C
+ 🧾 Explicación: La mutación introduce pequeños cambios aleatorios en los cromosomas de los individuos, lo que ayuda a explorar nuevas áreas del espacio de búsqueda y a evitar la convergencia prematura a óptimos locales al mantener la diversidad genética.
+🧠 Pregunta 42
+
+ ¿Qué caracteriza a un "entorno multiagente" en el contexto de la búsqueda?
+
+ A. Un entorno con un único agente que interactúa con el entorno.
+ B. Un entorno donde múltiples agentes actúan y perciben el entorno.
+ C. Un entorno determinista y completamente observable.
+ D. Un entorno estático que no cambia con el tiempo.
+
+ ✅ Correcta: B
+ 🧾 Explicación: Un entorno multiagente se define por la presencia de múltiples agentes autónomos que pueden percibir su entorno y actuar en él, lo que puede llevar a interacciones complejas, ya sean cooperativas o competitivas.
+🧠 Pregunta 43
+
+ ¿Qué diferencia fundamental existe entre los juegos deterministas y los juegos de azar en la búsqueda de adversarios?
+
+ A. En los juegos deterministas, el resultado siempre es predecible.
+ B. Los juegos de azar no pueden ser modelados con árboles de juego.
+ C. En los juegos deterministas, el resultado de cada acción está completamente determinado por el estado actual y la acción del jugador, mientras que en los juegos de azar intervienen elementos aleatorios.
+ D. Los juegos de azar siempre tienen información imperfecta.
+
+ ✅ Correcta: C
+ 🧾 Explicación: La clave diferencia radica en la presencia o ausencia de aleatoriedad. En juegos deterministas como el ajedrez, no hay elementos aleatorios; el resultado de un movimiento es siempre el mismo. En juegos de azar como el backgammon, el lanzamiento de dados introduce incertidumbre.
+🧠 Pregunta 44
+
+ ¿Por qué la teoría de juegos es relevante para la Inteligencia Artificial en el contexto de entornos multiagente?
+
+ A. Proporciona herramientas para analizar el comportamiento de agentes individuales.
+ B. Ofrece un marco teórico para entender y diseñar el comportamiento de múltiples agentes interactuando, especialmente en situaciones competitivas.
+ C. Permite modelar entornos completamente deterministas y con información perfecta.
+ D. Simplifica la representación de problemas de búsqueda complejos.
+
+ ✅ Correcta: B
+ 🧾 Explicación: La teoría de juegos proporciona conceptos y modelos para analizar las interacciones estratégicas entre múltiples agentes, lo cual es fundamental para diseñar agentes inteligentes que puedan cooperar, competir o negociar eficazmente en entornos complejos.
+🧠 Pregunta 45
+
+ En un árbol de juego de adversarios, ¿qué representan los nodos terminales?
+
+ A. Los estados iniciales del juego.
+ B. Los movimientos intermedios realizados por los jugadores.
+ C. Los estados donde el juego ha terminado, y se puede determinar el ganador o la utilidad.
+ D. Los estados donde un jugador debe tomar una decisión.
+
+ ✅ Correcta: C
+ 🧾 Explicación: Los nodos terminales en un árbol de juego representan los estados finales del juego, donde ya no hay movimientos posibles y se puede evaluar el resultado en términos de ganancia, pérdida o empate para los jugadores, utilizando la función de utilidad.
+🧠 Pregunta 46
+
+ ¿Qué significa la "función de utilidad" en el contexto de los juegos de adversarios?
+
+ A. Una medida del costo de realizar un movimiento.
+ B. Una valoración numérica del resultado final del juego desde la perspectiva de un jugador.
+ C. Una estimación de la probabilidad de ganar desde un estado dado.
+ D. Una representación del camino seguido para llegar a un estado terminal.
+
+ ✅ Correcta: B
+ 🧾 Explicación: La función de utilidad asigna un valor numérico a cada estado terminal del juego, representando el resultado para un jugador específico (generalmente MAX). Un valor alto indica un resultado favorable, mientras que un valor bajo indica un resultado desfavorable.
+🧠 Pregunta 47
+
+ ¿Cómo propaga el algoritmo Minimax los valores de utilidad desde los nodos terminales hacia la raíz del árbol de juego?
+
+ A. Tomando el promedio de los valores de los nodos hijo.
+ B. Seleccionando el valor máximo entre los nodos hijo cuando es el turno de MAX y el valor mínimo cuando es el turno de MIN.
+ C. Sumando los valores de utilidad de todos los nodos en el camino hacia la raíz.
+ D. Aplicando una función heurística a los valores de los nodos hijo.
+
+ ✅ Correcta: B
+ 🧾 Explicación: El algoritmo Minimax propaga los valores hacia arriba alternando entre la maximización (para el jugador MAX, que busca el mejor resultado posible) y la minimización (para el jugador MIN, que asume que intentará minimizar la utilidad de MAX).
+🧠 Pregunta 48
+
+ ¿Qué problema aborda la "búsqueda con profundidad limitada" en los juegos de adversarios?
+
+ A. La imposibilidad de explorar el árbol de juego completo debido a su gran tamaño.
+ B. La dificultad de definir una función de utilidad precisa para juegos complejos.
+ C. La presencia de elementos de azar en algunos juegos.
+ D. La necesidad de tomar decisiones en tiempo real con recursos computacionales limitados.
+
+ ✅ Correcta: A
+ 🧾 Explicación: La búsqueda con profundidad limitada es una estrategia para manejar la complejidad de los árboles de juego grandes. En lugar de explorar hasta los nodos terminales, la búsqueda se detiene a una profundidad predefinida y se utiliza una función de evaluación heurística para estimar el valor de los estados en ese nivel.
+🧠 Pregunta 49
+
+ ¿Cuál es la relación entre la profundidad de búsqueda y la calidad de la función de evaluación heurística en los algoritmos de búsqueda de adversarios con profundidad limitada?
+
+ A. Cuanto más profunda es la búsqueda, más importante es la calidad de la función de evaluación.
+ B. La calidad de la función de evaluación solo importa en búsquedas de poca profundidad.
+ C. A mayor profundidad de búsqueda, la calidad de la función de evaluación se vuelve menos crítica, ya que el algoritmo se acerca más a los estados terminales.
+ D. La profundidad de búsqueda y la calidad de la función de evaluación son independientes entre sí.
+
+ ✅ Correcta: C
+ 🧾 Explicación: A medida que la profundidad de búsqueda aumenta, el algoritmo explora más niveles del árbol de juego, acercándose a los estados terminales donde la función de utilidad es precisa. Por lo tanto, la influencia de las imprecisiones en la función de evaluación heurística en los niveles superiores disminuye.
+🧠 Pregunta 50
+
+ ¿Cómo se transmiten los valores alfa y beta durante la ejecución del algoritmo de poda Alfa-Beta?
+
+ A. Se calculan de forma independiente para cada nodo del árbol.
+ B. Se transmiten como límites desde los nodos padres a sus hijos, ajustándose a medida que se exploran los nodos.
+ C. Se utilizan solo en los nodos terminales para determinar el valor final del juego.
+ D. Se aplican únicamente en los niveles donde el jugador actual está maximizando (alfa) o minimizando (beta).
+
+ ✅ Correcta: B
+ 🧾 Explicación: Los valores alfa y beta actúan como ventanas de los valores que los jugadores (MAX y MIN respectivamente) pueden asegurar. Estos valores se pasan hacia abajo en el árbol y se actualizan en función de los valores de los nodos explorados, lo que permite identificar y podar ramas innecesarias.

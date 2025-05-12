@@ -1,7 +1,3 @@
-Gracias por compartir la lectura. A continuación, te presento una serie de preguntas de examen siguiendo estrictamente el formato que me indicaste. Las preguntas abarcan los conceptos clave de la clase 3 del curso CC421: búsqueda informada, heurística, búsqueda voraz y A\*.
-
----
-
 🧠 **Pregunta 1**
 ¿Qué característica define a una búsqueda informada frente a una búsqueda ciega?
 
@@ -130,6 +126,521 @@ D. Calcula el área ocupada por los bloques
 ✅ **Correcta:** C
 🧾 **Explicación:** La heurística de distancia Manhattan mide cuán lejos está cada pieza de su posición final, sumando distancias horizontal y vertical.
 
+
+🧠 **Pregunta 21**
+¿Cuál es la principal diferencia entre BFS y UCS?
+
+A. UCS utiliza heurística y BFS no
+B. UCS prioriza el camino con menor costo acumulado, BFS no considera costos
+C. BFS es óptimo y UCS no
+D. UCS solo funciona con problemas sin solución
+
+✅ **Correcta:** B
+🧾 **Explicación:** UCS prioriza los caminos por costo real acumulado ($g(n)$), mientras que BFS simplemente expande por niveles sin considerar costos.
+
 ---
 
-¿Deseas que continúe con más preguntas de esta lectura o paso a otra sección del curso?
+🧠 **Pregunta 22**
+¿Cuál de las siguientes afirmaciones es verdadera sobre los algoritmos de búsqueda informada?
+
+A. Siempre encuentran la solución en tiempo constante
+B. No utilizan heurística
+C. Son más eficientes gracias al conocimiento del dominio
+D. Nunca se detienen hasta recorrer todos los nodos
+
+✅ **Correcta:** C
+🧾 **Explicación:** Los algoritmos de búsqueda informada aprovechan el conocimiento del problema (vía heurística) para reducir el espacio de búsqueda.
+
+---
+
+🧠 **Pregunta 23**
+¿Cuál es el propósito de la función `SUCCESORES(NODO)` en los algoritmos de búsqueda?
+
+A. Identificar si un nodo tiene hijos
+B. Generar nodos que continúan el camino desde el nodo actual
+C. Verificar si el nodo es hoja
+D. Eliminar nodos duplicados
+
+✅ **Correcta:** B
+🧾 **Explicación:** La función `SUCCESORES` genera los nodos resultantes de aplicar los operadores al estado actual del nodo.
+
+---
+
+🧠 **Pregunta 24**
+¿Qué propiedad de una heurística garantiza que A\* encontrará la solución óptima?
+
+A. Que tenga el mismo valor para todos los estados
+B. Que sea mayor al coste real
+C. Que nunca sobreestime el coste real
+D. Que sea igual a cero en todos los estados
+
+✅ **Correcta:** C
+🧾 **Explicación:** Una heurística **admisible** nunca sobreestima el coste real y garantiza que A\* encuentre soluciones óptimas.
+
+---
+
+🧠 **Pregunta 25**
+¿Qué hace el algoritmo A\* si encuentra múltiples caminos hacia el mismo estado?
+
+A. Guarda todos sin importar su coste
+B. Elige el que tenga mayor coste
+C. Descarta todos
+D. Conserva el camino con menor coste acumulado
+
+✅ **Correcta:** D
+🧾 **Explicación:** A\* siempre conservará el camino de menor coste hacia un estado, descartando rutas más costosas.
+
+---
+
+🧠 **Pregunta 26**
+¿Cuál es el rol de la **cola de abiertos** en A\*?
+
+A. Almacenar solo nodos finales
+B. Guardar operadores pendientes
+C. Contener nodos candidatos a expansión, ordenados por $f(n)$
+D. Recolectar nodos inválidos
+
+✅ **Correcta:** C
+🧾 **Explicación:** La cola de abiertos contiene los nodos aún no expandidos, ordenados por su evaluación $f(n) = g(n) + h(n)$.
+
+---
+
+🧠 **Pregunta 27**
+¿Cuándo es preferible usar una búsqueda voraz (GBF)?
+
+A. Cuando se necesita la solución óptima garantizada
+B. Cuando el árbol de búsqueda es pequeño
+C. Cuando se prioriza rapidez sobre óptimo
+D. Cuando se desconoce el estado final
+
+✅ **Correcta:** C
+🧾 **Explicación:** GBF es útil cuando se busca una solución rápida, aunque no garantice que sea la óptima, guiándose solo por la heurística.
+
+---
+
+🧠 **Pregunta 28**
+¿Cuál de las siguientes heurísticas es **más informativa** para el problema del 8-puzzle?
+
+A. Número de piezas en su lugar
+B. Distancia Manhattan de las piezas a su lugar correcto
+C. Número total de movimientos ejecutados
+D. Tamaño del tablero
+
+✅ **Correcta:** B
+🧾 **Explicación:** La distancia Manhattan proporciona una estimación más precisa de cuántos movimientos faltan para llegar al objetivo.
+
+---
+
+🧠 **Pregunta 29**
+¿Qué función en A\* se utiliza para determinar qué tan prometedor es un nodo?
+
+A. $g(n)$
+B. $h(n)$
+C. $f(n) = g(n) + h(n)$
+D. $c(n) = h(n) - g(n)$
+
+✅ **Correcta:** C
+🧾 **Explicación:** La función de evaluación $f(n)$ considera tanto el coste acumulado como el estimado al objetivo.
+
+---
+
+🧠 **Pregunta 30**
+¿Qué significa que un algoritmo de búsqueda sea *óptimamente eficiente*?
+
+A. Encuentra una solución rápida sin memoria
+B. Es el que menos nodos expande entre todos los algoritmos óptimos
+C. Nunca necesita heurística
+D. Utiliza la menor cantidad de operadores posibles
+
+✅ **Correcta:** B
+🧾 **Explicación:** Un algoritmo óptimamente eficiente, como A\*, expande el mínimo número de nodos necesario para encontrar una solución óptima.
+
+---
+
+🧠 **Pregunta 31**
+¿Qué técnica permite a A\* evitar caminos inútiles?
+
+A. Heurística inconsistente
+B. Poda basada en heurísticas
+C. Exploración circular
+D. Eliminación aleatoria
+
+✅ **Correcta:** B
+🧾 **Explicación:** A\* puede evitar caminos inútiles gracias a la heurística, que le permite podar ramas del árbol de búsqueda.
+
+---
+
+🧠 **Pregunta 32**
+¿Cuál es el rol del conjunto CERRADOS en A\*?
+
+A. Registrar nodos descartados por errores
+B. Almacenar nodos con coste cero
+C. Evitar volver a expandir nodos ya visitados
+D. Calcular la heurística acumulada
+
+✅ **Correcta:** C
+🧾 **Explicación:** El conjunto CERRADOS guarda nodos ya expandidos para evitar ciclos y redundancias.
+
+---
+
+🧠 **Pregunta 33**
+¿Qué representa la expresión $O(b^d)$ en el análisis de A\*?
+
+A. Tiempo total necesario para ordenar los nodos
+B. Complejidad espacial de la búsqueda
+C. Complejidad en tiempo en el peor caso
+D. Número máximo de operadores válidos
+
+✅ **Correcta:** C
+🧾 **Explicación:** $O(b^d)$ representa la complejidad temporal en el peor caso, siendo $b$ el factor de ramificación y $d$ la profundidad de la solución.
+
+---
+
+🧠 **Pregunta 34**
+¿Qué ocurre si una heurística sobreestima el coste real al objetivo?
+
+A. Se garantiza una solución óptima
+B. Se explora menos, pero no se garantiza optimalidad
+C. El algoritmo se vuelve más rápido
+D. La búsqueda se vuelve completa pero no eficiente
+
+✅ **Correcta:** B
+🧾 **Explicación:** Si la heurística sobreestima, A\* puede encontrar soluciones más rápido, pero ya no se garantiza que sean óptimas.
+
+---
+
+🧠 **Pregunta 35**
+¿Qué característica comparten todos los algoritmos de búsqueda informada?
+
+A. Se basan en grafos dirigidos
+B. Requieren una función heurística
+C. Requieren recorrido por anchura
+D. No almacenan información del camino
+
+✅ **Correcta:** B
+🧾 **Explicación:** Todos los algoritmos informados utilizan una heurística para orientar la búsqueda hacia la solución.
+
+---
+
+🧠 **Pregunta 36**
+¿Qué representa el valor $f(n) = g(n) + h(n)$ para A\*?
+
+A. Número de nodos hijos
+B. Evaluación total del nodo $n$
+C. Profundidad máxima alcanzada
+D. Número de operadores aplicados
+
+✅ **Correcta:** B
+🧾 **Explicación:** $f(n)$ es el valor total estimado del camino pasando por $n$, suma del coste real y la estimación hasta la meta.
+
+---
+
+🧠 **Pregunta 37**
+¿Qué propiedad hace a una heurística **consistente**?
+
+A. $h(n) \leq h^*(n)$
+B. $h(n) = 0$ para todos los nodos
+C. $h(n) \leq c(n, n') + h(n')$
+D. $h(n) > h^*(n)$ en todos los casos
+
+✅ **Correcta:** C
+🧾 **Explicación:** La consistencia implica que la heurística de un nodo no es mayor que el coste de ir a un sucesor más su heurística.
+
+---
+
+🧠 **Pregunta 38**
+En GBF, ¿qué nodo se selecciona para expansión?
+
+A. El que tenga mayor $g(n)$
+B. El que tenga menor $h(n)$
+C. El más profundo del árbol
+D. El primero insertado en la cola
+
+✅ **Correcta:** B
+🧾 **Explicación:** GBF (Greedy Best First) selecciona siempre el nodo con menor heurística $h(n)$, ignorando el coste acumulado.
+
+---
+
+🧠 **Pregunta 39**
+¿Qué significa que una búsqueda no sea **mínima**?
+
+A. Que no encuentra solución
+B. Que genera ciclos
+C. Que no garantiza el menor número de operadores
+D. Que explora solo árboles binarios
+
+✅ **Correcta:** C
+🧾 **Explicación:** Una búsqueda no mínima puede encontrar soluciones que funcionan, pero no necesariamente con el menor número de pasos.
+
+---
+
+🧠 **Pregunta 40**
+¿Cuándo A\* se comporta como UCS?
+
+A. Cuando $h(n) = 0$ para todos los nodos
+B. Cuando $g(n) = 0$ para todos los nodos
+C. Cuando $f(n) = h(n)$
+D. Cuando todos los costos son negativos
+
+✅ **Correcta:** A
+🧾 **Explicación:** Si $h(n) = 0$, entonces $f(n) = g(n)$, lo que hace que A\* se comporte como una búsqueda de costo uniforme.
+
+---
+
+🧠 **Pregunta 41**
+¿Qué técnica utiliza A\* para evitar expandir nodos ya visitados?
+
+A. Reiniciar el árbol de búsqueda
+B. Usar una lista de nodos expandidos (CERRADOS)
+C. Volver a ejecutar la heurística
+D. Usar una cola FIFO
+
+✅ **Correcta:** B
+🧾 **Explicación:** A\* guarda en la lista de CERRADOS los nodos ya expandidos para no volver a procesarlos y evitar ciclos.
+
+---
+
+🧠 **Pregunta 42**
+En un algoritmo GBF, ¿cuál es el criterio para ordenar los nodos en ABIERTOS?
+
+A. Coste total $f(n)$
+B. Profundidad del nodo
+C. Coste acumulado $g(n)$
+D. Heurística $h(n)$
+
+✅ **Correcta:** D
+🧾 **Explicación:** GBF ordena los nodos según su valor de heurística, eligiendo aquel que parezca más cercano al objetivo.
+
+---
+
+🧠 **Pregunta 43**
+¿Qué ocurre si en A\* se usa una heurística que **siempre sobreestima** el coste?
+
+A. La solución siempre será óptima
+B. Se reduce el número de nodos expandidos
+C. La solución puede no ser óptima
+D. Se asegura completitud
+
+✅ **Correcta:** C
+🧾 **Explicación:** Una heurística que sobreestima no es admisible, lo que puede llevar a A\* a encontrar soluciones no óptimas.
+
+---
+
+🧠 **Pregunta 44**
+¿Cuál es el orden de complejidad **temporal** de A\* en el peor caso?
+
+A. $O(1)$
+B. $O(b^d)$
+C. $O(n \log n)$
+D. $O(d^2)$
+
+✅ **Correcta:** B
+🧾 **Explicación:** En el peor caso, A\* tiene una complejidad exponencial en tiempo de $O(b^d)$, donde $b$ es el factor de ramificación y $d$ la profundidad.
+
+---
+
+🧠 **Pregunta 45**
+En la implementación de A\*, ¿cuándo se retorna una solución?
+
+A. Al expandir el nodo con menor heurística
+B. Cuando un nodo de ABIERTOS tiene $h(n) = 0$
+C. Cuando el estado del nodo actual es un estado final
+D. Cuando la cola de ABIERTOS está vacía
+
+✅ **Correcta:** C
+🧾 **Explicación:** A\* termina y retorna la solución cuando el nodo actual representa un estado final.
+
+---
+
+🧠 **Pregunta 46**
+¿Qué tipo de búsqueda es el algoritmo voraz (Greedy Best First)?
+
+A. Exhaustiva
+B. Basada en coste acumulado
+C. No informada
+D. Informada y codiciosa
+
+✅ **Correcta:** D
+🧾 **Explicación:** El algoritmo GBF es informado porque usa heurística, y codicioso porque solo considera la heurística sin revisar decisiones previas.
+
+---
+
+🧠 **Pregunta 47**
+En A\*, ¿qué significa que $f(n) = g(n) + h(n)$?
+
+A. El coste total estimado del camino que pasa por el nodo $n$
+B. El coste de todos los operadores disponibles
+C. El número de estados posibles desde $n$
+D. El nivel de profundidad de $n$
+
+✅ **Correcta:** A
+🧾 **Explicación:** En A\*, $f(n)$ representa el coste total estimado para llegar al objetivo pasando por el nodo $n$.
+
+---
+
+🧠 **Pregunta 48**
+¿Qué es una función de factibilidad en GBF?
+
+A. Verifica si un nodo ha sido visitado
+B. Determina si un estado es final
+C. Comprueba si una solución parcial puede completarse
+D. Evalúa la calidad de la heurística
+
+✅ **Correcta:** C
+🧾 **Explicación:** La función de factibilidad evalúa si una solución parcial puede extenderse para formar una solución válida del problema.
+
+---
+
+🧠 **Pregunta 49**
+¿Cuál de los siguientes algoritmos **garantiza** una solución óptima si se usa una heurística admisible?
+
+A. DFS
+B. BFS
+C. Greedy Best First
+D. A\*
+
+✅ **Correcta:** D
+🧾 **Explicación:** A\* garantiza una solución óptima si la heurística usada es admisible (no sobreestima el coste).
+
+---
+
+🧠 **Pregunta 50**
+¿Cuándo A\* podría expandir más nodos que GBF?
+
+A. Siempre
+B. Cuando $g(n) = 0$
+C. Cuando la heurística es muy mala o constante
+D. Cuando los operadores son aleatorios
+
+✅ **Correcta:** C
+🧾 **Explicación:** Si la heurística no es informativa, A\* puede actuar casi como una búsqueda ciega, expandiendo más nodos que GBF.
+
+---
+
+🧠 **Pregunta 51**
+¿Cuál es la diferencia principal entre GBF y A\*?
+
+A. GBF usa $g(n)$, A\* no
+B. A\* ignora la heurística
+C. A\* considera el coste acumulado y estimado, GBF solo la heurística
+D. GBF garantiza soluciones óptimas
+
+✅ **Correcta:** C
+🧾 **Explicación:** GBF usa solo $h(n)$ para decidir la expansión, mientras que A\* utiliza $f(n) = g(n) + h(n)$.
+
+---
+
+🧠 **Pregunta 52**
+¿Qué valor toma $g(n)$ en el nodo inicial de A\*?
+
+A. 1
+B. 0
+C. $h(n)$
+D. El número de operadores disponibles
+
+✅ **Correcta:** B
+🧾 **Explicación:** El coste acumulado desde el nodo inicial hasta sí mismo es cero, por lo tanto, $g(n) = 0$.
+
+---
+
+🧠 **Pregunta 53**
+¿Qué hace que un algoritmo de búsqueda no sea **completo**?
+
+A. Que no use heurística
+B. Que dependa del tipo de operadores
+C. Que pueda quedar atrapado en un bucle sin fin
+D. Que use funciones de coste
+
+✅ **Correcta:** C
+🧾 **Explicación:** Un algoritmo no es completo si puede quedar atrapado en caminos infinitos sin llegar a una solución, como ocurre con heurísticas mal diseñadas.
+
+---
+
+🧠 **Pregunta 54**
+¿Qué estructura de datos se recomienda para ABIERTOS en A\*?
+
+A. Lista enlazada
+B. Pila
+C. Cola de prioridad
+D. Árbol AVL
+
+✅ **Correcta:** C
+🧾 **Explicación:** ABIERTOS debe ser una cola de prioridad ordenada por $f(n)$ para que A\* expanda siempre el mejor nodo estimado.
+
+---
+
+🧠 **Pregunta 55**
+¿Para qué sirve la función de selección en GBF?
+
+A. Para contar los nodos con menor coste
+B. Para determinar si la solución parcial es válida
+C. Para elegir el candidato más prometedor del conjunto restante
+D. Para verificar si un nodo es final
+
+✅ **Correcta:** C
+🧾 **Explicación:** La función de selección elige el nodo más prometedor a expandir según la heurística en el algoritmo GBF.
+
+---
+
+🧠 **Pregunta 56**
+En el algoritmo GBF, ¿qué representa la solución parcial?
+
+A. Todos los operadores no aplicados
+B. Los candidatos descartados
+C. El conjunto actual de nodos visitados
+D. El subconjunto de candidatos seleccionados hasta ese momento
+
+✅ **Correcta:** D
+🧾 **Explicación:** La solución parcial es el conjunto de elementos seleccionados hasta el momento para formar una solución completa.
+
+---
+
+🧠 **Pregunta 57**
+¿Qué significa que A\* sea **óptimo en árboles** si la heurística es admisible?
+
+A. Encuentra soluciones sin ciclos
+B. No se necesita CERRADOS
+C. Siempre encuentra la mejor solución
+D. Recorre todos los nodos antes de decidir
+
+✅ **Correcta:** C
+🧾 **Explicación:** Si la heurística es admisible, A\* encuentra la mejor solución posible sin expandir nodos innecesarios.
+
+---
+
+🧠 **Pregunta 58**
+¿Cuál es una ventaja clara de A\* sobre UCS?
+
+A. A\* no usa colas
+B. A\* es más lento pero más completo
+C. A\* expande menos nodos si la heurística es buena
+D. UCS no usa operadores
+
+✅ **Correcta:** C
+🧾 **Explicación:** A\* guía la búsqueda con heurística, lo que le permite reducir la cantidad de nodos expandidos respecto a UCS.
+
+---
+
+🧠 **Pregunta 59**
+¿Qué elemento es innecesario en GBF y sí se usa en A\*?
+
+A. Heurística
+B. Operadores
+C. Coste acumulado $g(n)$
+D. Cola ABIERTOS
+
+✅ **Correcta:** C
+🧾 **Explicación:** GBF solo usa la heurística $h(n)$, mientras que A\* necesita también el coste acumulado $g(n)$.
+
+---
+
+🧠 **Pregunta 60**
+¿Qué ocurre si dos nodos tienen el mismo $f(n)$ en A\*?
+
+A. Se descartan ambos
+B. Se elige aleatoriamente
+C. Se prioriza el de menor $h(n)$
+D. Se elige el último insertado
+
+✅ **Correcta:** C
+🧾 **Explicación:** En caso de empate en $f(n)$, A\* prefiere el nodo con menor heurística $h(n)$, buscando avanzar hacia el objetivo.
