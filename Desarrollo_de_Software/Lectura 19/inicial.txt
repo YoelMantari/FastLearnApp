@@ -1,0 +1,550 @@
+🧠 Pregunta 1
+¿Cuál es una de las principales ventajas de automatizar el testing dentro de un pipeline DevOps?
+
+A. Permitir ciclos de prueba más lentos pero detallados
+B. Eliminar la necesidad de pruebas de integración
+C. Detectar errores de forma continua y temprana
+D. Reemplazar completamente las pruebas de usuario final
+
+✅ Correcta: C
+🧾 Explicación: La automatización permite validar continuamente el código en cada cambio, detectando regresiones y errores antes de llegar a producción.
+
+🧠 Pregunta 2
+Según los principios SOLID aplicados al testing, ¿qué busca el principio de Responsabilidad Única (SRP) en una prueba?
+
+A. Que cada prueba use múltiples fixtures
+B. Que cada test tenga al menos tres asserts
+C. Que cada test valide exactamente un comportamiento
+D. Que los tests compartan configuraciones globales
+
+✅ Correcta: C
+🧾 Explicación: SRP aplicado a tests implica que cada uno debe verificar un único aspecto del comportamiento para facilitar su mantenimiento y diagnóstico.
+
+🧠 Pregunta 3
+¿Qué tipo de fixture en pytest se utiliza para crear instancias listas para usar de forma reutilizable?
+
+A. Setter-like
+B. Interface-driven
+C. Constructor-like
+D. Monkeypatch
+
+✅ Correcta: C
+🧾 Explicación: Las fixtures constructor-like actúan como fábricas de objetos configurados y se usan comúnmente en etapas de integración.
+
+🧠 Pregunta 4
+¿Cuál es el rol de las fixtures Interface-driven en pruebas unitarias?
+
+A. Exponer múltiples métodos para distintos propósitos
+B. Simular interfaces reales de manera ligera y controlada
+C. Modificar variables de entorno en tiempo de ejecución
+D. Administrar conexiones de red reales
+
+✅ Correcta: B
+🧾 Explicación: Estas fixtures imitan solo la interfaz necesaria para la lógica de negocio, permitiendo ejecutar pruebas rápidas y aisladas.
+
+🧠 Pregunta 5
+¿Qué principio SOLID se cumple cuando se parametrizan pruebas en pytest sin modificar la lógica del test?
+
+A. Liskov Substitution Principle (LSP)
+B. Open/Closed Principle (OCP)
+C. Interface Segregation Principle (ISP)
+D. Dependency Inversion Principle (DIP)
+
+✅ Correcta: B
+🧾 Explicación: El principio abierto/cerrado (OCP) indica que los tests deben ser extensibles sin necesidad de modificarlos, como al agregar nuevas entradas en una lista parametrizada.
+
+🧠 Pregunta 6
+¿Qué papel cumplen los reportes de cobertura en un pipeline DevOps?
+
+A. Medir el uso de CPU durante las pruebas
+B. Determinar el tamaño del repositorio
+C. Verificar qué porciones del código han sido ejecutadas
+D. Asegurar que no se repitan commits idénticos
+
+✅ Correcta: C
+🧾 Explicación: Los reportes de cobertura permiten identificar qué líneas del código fueron cubiertas por las pruebas, ayudando a detectar zonas no testeadas.
+
+🧠 Pregunta 7
+¿Cuál es la principal ventaja de usar create_autospec() en mocks?
+
+A. Crea tests más lentos pero detallados
+B. Obliga a que el mock siga la interfaz original
+C. Permite ejecutar código sin importar los argumentos
+D. Elimina la necesidad de escribir asserts
+
+✅ Correcta: B
+🧾 Explicación: create_autospec() fuerza que el mock respete la firma del objeto real, lo que asegura cumplimiento del principio Liskov.
+
+🧠 Pregunta 8
+¿Qué busca el principio DIP (Dependency Inversion Principle) en el diseño de pruebas?
+
+A. Que el test conozca cada detalle del backend
+B. Que el test use mocks al azar
+C. Que el código de producción dependa de abstracciones
+D. Que las fixtures compartan la base de datos real
+
+✅ Correcta: C
+🧾 Explicación: DIP promueve que el código de alto nivel (como los tests) interactúe con interfaces abstractas, no con implementaciones concretas.
+
+🧠 Pregunta 9
+¿Cuál es una técnica para acelerar pipelines en DevOps sin comprometer la cobertura?
+
+A. Reducir la cantidad de asserts
+B. Eliminar tests de integración
+C. Usar caching y ejecución paralela
+D. Ejecutar sólo tests visuales
+
+✅ Correcta: C
+🧾 Explicación: El uso de caching y ejecución paralela acelera los pipelines sin sacrificar la calidad o cobertura de pruebas.
+
+🧠 Pregunta 10
+¿Qué tipo de pruebas automatizadas simulan la experiencia completa del usuario?
+
+A. Unitarias
+B. Benchmarks
+C. End-to-End (E2E)
+D. Linters
+
+✅ Correcta: C
+🧾 Explicación: Las pruebas end-to-end (como con Selenium o Playwright) replican el flujo real del usuario para validar la aplicación completa.
+
+🧠 Pregunta 11
+¿Por qué se deben evitar múltiples asserts en una sola prueba?
+
+A. Porque el código se vuelve más eficiente
+B. Para cumplir con SRP y facilitar diagnóstico
+C. Para reducir el tiempo total de ejecución
+D. Porque las pruebas pierden cobertura
+
+✅ Correcta: B
+🧾 Explicación: Al usar un solo assert por prueba, se mantiene el principio de responsabilidad única (SRP), lo que mejora legibilidad y mantenimiento.
+
+🧠 Pregunta 12
+¿Cuál es el propósito de etiquetar pruebas con @unit o @integration en pytest?
+
+A. Indicar la complejidad del código
+B. Mostrar qué desarrollador escribió el test
+C. Agrupar pruebas por tipo y comportamiento
+D. Asignar colores en la salida de consola
+
+✅ Correcta: C
+🧾 Explicación: Las etiquetas permiten agrupar y ejecutar selectivamente diferentes tipos de pruebas en distintos entornos del pipeline.
+
+🧠 Pregunta 13
+¿Qué ventaja aporta el principio ISP (Interface Segregation Principle) en el diseño de fixtures?
+
+A. Que cada fixture tenga múltiples responsabilidades
+B. Que las fixtures sean intercambiables entre pipelines
+C. Que cada fixture exponga sólo lo necesario para el test
+D. Que los tests puedan funcionar sin asserts
+
+✅ Correcta: C
+🧾 Explicación: ISP implica que cada fixture tenga una interfaz específica y acotada, facilitando su composición y reutilización.
+
+🧠 Pregunta 14
+En pytest, ¿qué permite lograr la parametrización de pruebas?
+
+A. Ejecutar un test en paralelo
+B. Separar los tests por lenguaje
+C. Reutilizar un test con múltiples entradas
+D. Obtener cobertura del sistema operativo
+
+✅ Correcta: C
+🧾 Explicación: La parametrización permite correr un mismo test varias veces con diferentes datos de entrada, sin duplicar lógica.
+
+🧠 Pregunta 15
+¿Cuál es una función clave de las fixtures en pipelines DevOps?
+
+A. Verificar la integridad del código
+B. Inyectar dependencias de manera declarativa
+C. Ejecutar scripts de producción
+D. Reemplazar scripts de CI/CD
+
+✅ Correcta: B
+🧾 Explicación: Las fixtures permiten declarar qué necesita un test y pytest se encarga de proveerlo en tiempo de ejecución.
+
+🧠 Pregunta 16
+¿Qué ocurre si se incumple el principio LSP en un mock?
+
+A. El mock no genera errores
+B. Los tests ejecutan más rápido
+C. El mock puede romperse si cambia la interfaz real
+D. Las fixtures se reinician automáticamente
+
+✅ Correcta: C
+🧾 Explicación: Si un mock no respeta la firma original, cualquier cambio en la clase real no se refleja y puede causar errores silenciosos.
+
+🧠 Pregunta 17
+¿Qué tipo de fixture es ideal para simular fallos en servicios externos durante pruebas?
+
+A. Interface-driven
+B. Setter-like
+C. Constructor-like
+D. Lambda fixtures
+
+✅ Correcta: B
+🧾 Explicación: Las fixtures Setter-like permiten modificar dinámicamente comportamientos del código durante un test, útiles para simular fallos.
+
+🧠 Pregunta 18
+¿Qué significa que una suite de pruebas sea "chaos-friendly"?
+
+A. Puede ejecutarse sin importar el orden
+B. Detecta errores al azar
+C. Valida resiliencia ante errores simulados
+D. No requiere infraestructura
+
+✅ Correcta: C
+🧾 Explicación: Las suites chaos-friendly introducen fallos controlados para probar la robustez del sistema frente a situaciones inesperadas.
+
+🧠 Pregunta 19
+¿Cuál es el objetivo de una fixture constructor-like con scope "session"?
+
+A. Crear una instancia nueva por test
+B. Simular errores de infraestructura
+C. Reutilizar una instancia a lo largo de toda la sesión
+D. Resetear variables globales
+
+✅ Correcta: C
+🧾 Explicación: El scope "session" permite inicializar una vez una fixture que será compartida por todos los tests en esa sesión, mejorando rendimiento.
+
+🧠 Pregunta 20
+¿Qué tipo de test se ejecuta más rápido y de forma aislada?
+
+A. Unit Test
+B. Integration Test
+C. End-to-End Test
+D. Benchmark Test
+
+✅ Correcta: A
+🧾 Explicación: Las pruebas unitarias validan funciones individuales sin depender de servicios externos, por lo que son rápidas y estables.
+
+🧠 Pregunta 21
+¿Cuál es el beneficio de usar pytest-benchmark?
+
+A. Automatizar commits desde tests
+B. Evaluar el rendimiento de funciones críticas
+C. Mostrar gráficamente los cambios del código
+D. Verificar uso de memoria
+
+✅ Correcta: B
+🧾 Explicación: pytest-benchmark permite medir el rendimiento de funciones, registrando métricas como latencia y throughput.
+
+🧠 Pregunta 22
+¿Qué permite la trazabilidad completa de un pipeline de testing?
+
+A. Reutilizar variables en tiempo de ejecución
+B. Visualizar cada ejecución en vivo
+C. Almacenar artefactos como logs y reportes
+D. Ejecutar el pipeline sin cobertura
+
+✅ Correcta: C
+🧾 Explicación: La trazabilidad se logra guardando los artefactos generados (logs, binarios, métricas), útiles para auditoría o diagnóstico posterior.
+
+🧠 Pregunta 23
+¿Qué técnica permite ejecutar un mismo conjunto de pruebas con diferentes backends sin modificar el test?
+
+A. Caching de paquetes
+B. Inversión de dependencias con fixtures
+C. Uso de asserts múltiples
+D. Paralelización por módulos
+
+✅ Correcta: B
+🧾 Explicación: Al aplicar DIP con fixtures, se puede reutilizar el mismo test inyectando distintas implementaciones según el entorno.
+
+🧠 Pregunta 24
+¿Qué se debe evitar para mantener un pipeline eficiente y lógico?
+
+A. Correr todos los tests en paralelo sin validación
+B. Ejecutar pruebas end-to-end antes que las unitarias
+C. Generar reportes de cobertura
+D. Parametrizar los tests unitarios
+
+✅ Correcta: B
+🧾 Explicación: Un pipeline eficiente solo avanza a fases complejas si las básicas han sido validadas; no se deben ejecutar pruebas costosas si las básicas fallan.
+
+🧠 Pregunta 25
+¿Qué principio SOLID se refleja cuando se agregan nuevos casos a una lista de pruebas sin modificar el test?
+
+A. SRP
+B. OCP
+C. LSP
+D. DIP
+
+✅ Correcta: B
+🧾 Explicación: El principio Open/Closed indica que el código debe estar abierto a extensiones, pero cerrado a modificaciones, como al usar @pytest.mark.parametrize.
+
+🧠 Pregunta 26
+¿Qué ventaja proporciona usar pytest con --cov en un pipeline?
+
+A. Elimina las advertencias del código
+B. Verifica si se alcanzó un porcentaje mínimo de cobertura
+C. Evita que se ejecuten pruebas redundantes
+D. Acelera la ejecución al evitar fixtures
+
+✅ Correcta: B
+🧾 Explicación: El parámetro --cov junto con --fail-under permite bloquear el pipeline si no se alcanza un umbral mínimo de cobertura de código.
+
+🧠 Pregunta 27
+¿Qué característica distingue a las fixtures Interface-driven?
+
+A. Simulan fallos de red de forma automática
+B. Proveen instancias de clases abstractas
+C. Implementan sólo lo necesario para los tests
+D. Requieren base de datos real para operar
+
+✅ Correcta: C
+🧾 Explicación: Estas fixtures cumplen únicamente la interfaz esperada por la lógica de negocio, permitiendo tests rápidos, ligeros y desacoplados.
+
+🧠 Pregunta 28
+¿Qué estrategia se recomienda aplicar cuando se heredan suites de pruebas lentas y acopladas?
+
+A. Reescribir todos los tests desde cero
+B. Usar linters para minimizar asserts
+C. Aplicar el enfoque Boy-Scout para refactor progresivo
+D. Ejecutar los tests sólo en producción
+
+✅ Correcta: C
+🧾 Explicación: El enfoque Boy-Scout propone mejorar cada test al ser tocado, aplicando SRP, OCP, autospecs y mejorando fixtures paso a paso.
+
+🧠 Pregunta 29
+¿Cuál es un beneficio clave del principio Open/Closed en tests?
+
+A. Reducir la necesidad de mocks
+B. Permitir agregar nuevos escenarios sin modificar la lógica del test
+C. Evitar la ejecución en paralelo
+D. Eliminar la necesidad de asserts
+
+✅ Correcta: B
+🧾 Explicación: Con OCP, los tests están abiertos a extensión (por ejemplo, nuevos datos en parametrización), pero cerrados a cambios en su estructura.
+
+🧠 Pregunta 30
+¿Qué ocurre si una fixture comparte múltiples responsabilidades?
+
+A. Se facilita el mantenimiento
+B. Se mejora la trazabilidad
+C. Se viola el principio SRP
+D. Se acelera la ejecución del pipeline
+
+✅ Correcta: C
+🧾 Explicación: Cada fixture debe encargarse de una sola cosa. Si tiene múltiples responsabilidades, se rompe el principio de responsabilidad única.
+
+🧠 Pregunta 31
+¿Cuál es el uso principal de las fixtures Setter-like?
+
+A. Crear entornos de integración en staging
+B. Definir tests críticos en producción
+C. Proveer funciones para alterar comportamientos en tiempo de ejecución
+D. Ejecutar comandos del sistema operativo
+
+✅ Correcta: C
+🧾 Explicación: Las Setter-like permiten modificar el comportamiento de dependencias o módulos con parches temporales, ideales para simular fallos o estados específicos.
+
+🧠 Pregunta 32
+¿Por qué es importante aplicar el principio LSP (Liskov Substitution Principle) al usar mocks?
+
+A. Para que los tests se ejecuten sin docker
+B. Para garantizar que los mocks respeten la interfaz original
+C. Para eliminar la cobertura de código
+D. Para deshabilitar fixtures por entorno
+
+✅ Correcta: B
+🧾 Explicación: LSP exige que los mocks puedan sustituir a los objetos reales sin romper el código; create_autospec ayuda a verificar esto.
+
+🧠 Pregunta 33
+¿Qué se logra con un pipeline que bloquea el despliegue si la cobertura cae por debajo de un umbral?
+
+A. Asegurar estabilidad visual
+B. Evitar pérdida de commits
+C. Garantizar calidad y control de regresiones
+D. Automatizar los commits
+
+✅ Correcta: C
+🧾 Explicación: Al imponer umbrales mínimos de cobertura, se obliga a mantener un estándar de calidad que previene errores en producción.
+
+🧠 Pregunta 34
+¿Cómo se determina si usar un stub o una implementación real en un fixture Interface-driven?
+
+A. Revisando si el test es rápido
+B. Por el número de asserts
+C. A través de variables de entorno
+D. Según la profundidad del stack trace
+
+✅ Correcta: C
+🧾 Explicación: Las fixtures pueden detectar variables de entorno para decidir entre usar una implementación real o un stub, sin cambiar el test.
+
+🧠 Pregunta 35
+¿Cuál es una función clave del caching en pipelines DevOps?
+
+A. Aumentar el tiempo de espera para pruebas lentas
+B. Simular redes lentas en staging
+C. Almacenar dependencias para acelerar futuras ejecuciones
+D. Eliminar etapas duplicadas en producción
+
+✅ Correcta: C
+🧾 Explicación: Al cachear dependencias como pip o node_modules, se evita reinstalarlas cada vez, reduciendo el tiempo total de ejecución.
+
+🧠 Pregunta 36
+¿Qué tipo de pruebas suelen ejecutarse primero en un pipeline CI/CD?
+
+A. End-to-End
+B. Benchmarks
+C. Unitarias
+D. Visuales
+
+✅ Correcta: C
+🧾 Explicación: Las pruebas unitarias, al ser rápidas y aisladas, se ejecutan primero para detectar errores tempranos antes de pasar a pruebas más costosas.
+
+🧠 Pregunta 37
+¿Cuál es el objetivo principal de una fixture con scope="session"?
+
+A. Ejecutar sólo una vez por entorno
+B. Crear una sesión de debugging
+C. Compartir una instancia durante toda la sesión de testing
+D. Permitir cambios dinámicos en variables de entorno
+
+✅ Correcta: C
+🧾 Explicación: Este tipo de fixture se inicializa una vez y se reutiliza en toda la sesión, ahorrando recursos en componentes pesados.
+
+🧠 Pregunta 38
+¿Qué representa la inyección de dependencias con fixtures en Pytest?
+
+A. La automatización de linters
+B. La delegación del setup a un framework externo
+C. La separación entre lo que se necesita y cómo se obtiene
+D. La ejecución paralela de tests
+
+✅ Correcta: C
+🧾 Explicación: La DI con fixtures permite que los tests solo indiquen qué requieren, y Pytest se encarga de resolverlo en tiempo de ejecución.
+
+🧠 Pregunta 39
+¿Qué permite validar un benchmark en pytest?
+
+A. Que los tests se ejecuten en menos de 1 segundo
+B. Que el resultado sea superior a cero
+C. Que no se usen stubs
+D. Que se alcance el 100 % de cobertura
+
+✅ Correcta: B
+🧾 Explicación: Un benchmark valida el rendimiento de una función. Se usa un assert simple para evitar falsos positivos sin lógica funcional.
+
+🧠 Pregunta 40
+¿Cuál es un ejemplo típico del principio DIP aplicado con fixtures?
+
+A. Incluir funciones utilitarias en cada test
+B. Reutilizar variables globales para mejorar la cobertura
+C. Usar una fixture que devuelva una interfaz de repositorio
+D. Declarar rutas de acceso en cada función de prueba
+
+✅ Correcta: C
+🧾 Explicación: DIP promueve que el código y los tests dependan de abstracciones, no de detalles concretos; una fixture que devuelve una interfaz cumple con esta idea.
+
+🧠 Pregunta 41
+¿Cuál es el propósito de un trace-id en una prueba automatizada?
+
+A. Agregar color a los logs
+B. Validar si el test tiene fixtures
+C. Correlacionar métricas y peticiones en herramientas de observabilidad
+D. Ejecutar los tests en staging
+
+✅ Correcta: C
+🧾 Explicación: El uso de trace-id permite seguir el rastro de una petición a través de distintas capas del sistema y vincularla a una prueba concreta.
+
+🧠 Pregunta 42
+¿Qué principio se refleja cuando una misma prueba se puede ejecutar tanto con SQLite como con Postgres sin cambios?
+
+A. SRP
+B. LSP
+C. DIP
+D. ISP
+
+✅ Correcta: C
+🧾 Explicación: Esto se logra gracias a la inversión de dependencias: el test trabaja con una interfaz y no le importa la implementación concreta.
+
+🧠 Pregunta 43
+¿Cuál es una ventaja de las pruebas chaos-friendly?
+
+A. Permiten omitir casos extremos
+B. Simulan errores para validar resiliencia del sistema
+C. Desactivan servicios externos
+D. Evitan usar mocks y stubs
+
+✅ Correcta: B
+🧾 Explicación: Estas pruebas inyectan fallos intencionales (latencias, errores) para validar cómo responde la lógica ante perturbaciones reales.
+
+🧠 Pregunta 44
+¿Por qué las fixtures ayudan a escalar las suites de testing en DevOps?
+
+A. Reducen la cantidad de asserts por test
+B. Automatizan la actualización del README
+C. Permiten reutilizar configuración sin duplicar código
+D. Eligen automáticamente el entorno de producción
+
+✅ Correcta: C
+🧾 Explicación: Las fixtures encapsulan setup, teardown y configuración, facilitando el mantenimiento y ampliación de la suite sin duplicar lógica.
+
+🧠 Pregunta 45
+¿Qué alternativa describe mejor una pipeline flexible y reproducible?
+
+A. Ejecutar los tests sólo de forma local
+B. Depender del sistema operativo del desarrollador
+C. Permitir que las pruebas se adapten al entorno mediante fixtures y variables
+D. Usar múltiples herramientas sin control de versiones
+
+✅ Correcta: C
+🧾 Explicación: Un pipeline reproducible se adapta al entorno mediante fixtures, variables y estructuras bien definidas que aseguran consistencia.
+
+🧠 Pregunta 46
+¿Cómo se aplica el principio ISP al usar múltiples fixtures?
+
+A. Separando responsabilidades entre varias fixtures pequeñas
+B. Agrupando todos los comportamientos en una fixture
+C. Evitando el uso de pytest.mark.parametrize
+D. Usando únicamente stubs en todos los tests
+
+✅ Correcta: A
+🧾 Explicación: ISP recomienda que cada "interfaz" (en este caso, cada fixture) sea específica, clara y mínima para evitar acoplamiento innecesario.
+
+🧠 Pregunta 47
+¿Qué aspecto mejora la observabilidad cuando se usan fixtures instrumentadas?
+
+A. El número de asserts por test
+B. La trazabilidad entre pruebas y métricas del sistema
+C. El tamaño de los commits
+D. La latencia de los stubs
+
+✅ Correcta: B
+🧾 Explicación: Las fixtures instrumentadas pueden incluir cabeceras, labels o spans que permiten relacionar pruebas con datos en el stack de monitoreo.
+
+🧠 Pregunta 48
+¿Qué estrategia permite mantener un solo conjunto de pruebas para varios entornos?
+
+A. Definir rutas absolutas en el código
+B. Usar print en lugar de logging
+C. Cambiar la configuración de fixtures según el entorno
+D. Ejecutar los tests solo en staging
+
+✅ Correcta: C
+🧾 Explicación: Las fixtures pueden adaptarse usando variables como CI=true, permitiendo que un mismo test funcione en local, CI y staging.
+
+🧠 Pregunta 49
+¿Cuál es la principal razón para documentar los pipelines con README o convenciones de marcado?
+
+A. Mostrar métricas en producción
+B. Reducir el tiempo de ejecución
+C. Facilitar el mantenimiento y comprensión a largo plazo
+D. Eliminar la necesidad de pruebas
+
+✅ Correcta: C
+🧾 Explicación: La documentación ayuda a mantener claridad sobre cómo y por qué se ejecuta cada paso del pipeline, especialmente útil en equipos grandes.
+
+🧠 Pregunta 50
+¿Qué permiten los filtros por ruta en pipelines CI/CD?
+
+A. Asegurar la ejecución de pruebas no relacionadas
+B. Repetir todos los tests en cada commit
+C. Ejecutar solo las pruebas afectadas por los cambios
+D. Ejecutar pruebas en orden alfabético
+
+✅ Correcta: C
+🧾 Explicación: Con filtros por ruta, se ejecutan únicamente los tests relacionados con los archivos modificados, lo que mejora la eficiencia del pipeline.
+

@@ -1,0 +1,549 @@
+🧠 Pregunta 1
+¿Qué propósito tiene la clasificación de pruebas en un pipeline de CI/CD?
+
+A. Garantizar que todas las pruebas se ejecuten al mismo tiempo
+B. Ejecutar únicamente pruebas unitarias para ahorrar tiempo
+C. Permitir que las pruebas más críticas se ejecuten primero
+D. Separar las pruebas según el lenguaje de programación
+
+✅ Correcta: C
+🧾 Explicación: Clasificar las pruebas permite priorizar las más críticas y diferir las más costosas, optimizando tiempos y recursos en el pipeline.
+
+🧠 Pregunta 2
+¿Cuál es una característica distintiva de los tests end-to-end (E2E)?
+
+A. No utilizan interfaces de usuario
+B. Son los más rápidos del pipeline
+C. Requieren entornos reales y verifican flujos completos
+D. Solo validan funciones aisladas
+
+✅ Correcta: C
+🧾 Explicación: Las pruebas E2E despliegan entornos reales y validan workflows de negocio completos con todos los componentes involucrados.
+
+🧠 Pregunta 3
+¿Qué función cumple el Test Impact Analysis (TIA)?
+
+A. Ejecutar todos los tests automáticamente sin excepción
+B. Simular servicios externos para pruebas unitarias
+C. Ejecutar únicamente los tests afectados por los cambios
+D. Clasificar los tests por su duración promedio
+
+✅ Correcta: C
+🧾 Explicación: El TIA permite ejecutar solo aquellos tests que cubren las partes del código que han sido modificadas, optimizando tiempos de ejecución.
+
+🧠 Pregunta 4
+¿Cuál de los siguientes beneficios ofrece la paralelización inteligente de pruebas?
+
+A. Disminuye la cobertura de código
+B. Aumenta el tiempo total de ejecución
+C. Requiere más memoria pero mejora la velocidad
+D. Reduce significativamente el tiempo total del pipeline
+
+✅ Correcta: D
+🧾 Explicación: Paralelizar las pruebas en shards o jobs permite distribuir la carga entre varios runners, reduciendo el tiempo total de ejecución.
+
+🧠 Pregunta 5
+¿Por qué se recomienda contenerizar los entornos de prueba?
+
+A. Para evitar usar sistemas operativos reales
+B. Para reutilizar imágenes con dependencias ya instaladas
+C. Para ejecutar pruebas solo en hardware especializado
+D. Para asegurar que todos los tests usen la misma base de datos
+
+✅ Correcta: B
+🧾 Explicación: La contenerización permite construir imágenes base con dependencias preinstaladas, lo que reduce tiempos de setup en los pipelines.
+
+🧠 Pregunta 6
+¿Qué objetivo tiene revisar los tests más lentos usando pytest --durations=10?
+
+A. Eliminar todos los tests no unitarios
+B. Identificar y optimizar los tests más costosos en tiempo
+C. Detectar errores de cobertura
+D. Eliminar la dependencia de la base de datos
+
+✅ Correcta: B
+🧾 Explicación: Identificar los tests más lentos permite priorizar su refactorización y optimización, mejorando la eficiencia general de la suite.
+
+🧠 Pregunta 7
+¿Cuál es el beneficio de usar encuestas internas como métrica cualitativa?
+
+A. Reemplazan completamente las métricas cuantitativas
+B. Determinan automáticamente qué pruebas eliminar
+C. Identifican fricciones y cuellos de botella no evidentes
+D. Permiten medir la duración exacta de cada test
+
+✅ Correcta: C
+🧾 Explicación: Las encuestas permiten detectar sensaciones subjetivas de lentitud o complejidad que no siempre se reflejan en los datos numéricos.
+
+🧠 Pregunta 8
+¿Qué se recomienda para el onboarding de nuevos desarrolladores en la suite de pruebas?
+
+A. Ejecutar todos los tests manualmente
+B. Proporcionar acceso completo a todos los pipelines
+C. Crear documentación clara como README, guías y plantillas
+D. Eliminar los tests E2E por su complejidad
+
+✅ Correcta: C
+🧾 Explicación: La documentación bien estructurada (README, guías de estilo y templates) reduce la curva de aprendizaje y evita errores comunes.
+
+🧠 Pregunta 9
+¿Qué papel cumple un “Test Champion” en la cultura de calidad?
+
+A. Es el único responsable de escribir pruebas
+B. Supervisa los dashboards de producción
+C. Fomenta buenas prácticas, revisa métricas y propone mejoras
+D. Encargado de eliminar tests duplicados automáticamente
+
+✅ Correcta: C
+🧾 Explicación: El rol de Test Champion tiene como objetivo liderar la mejora continua en testing, promoviendo calidad en todo el equipo.
+
+🧠 Pregunta 10
+¿Cuándo se recomienda utilizar entornos persistentes en lugar de efímeros?
+
+A. Cuando se necesitan resultados totalmente aleatorios
+B. Para acelerar los tests unitarios exclusivamente
+C. En pruebas pesadas que requieren mantener estado
+D. Para simular múltiples sistemas operativos
+
+✅ Correcta: C
+🧾 Explicación: Los entornos persistentes son adecuados para pruebas que requieren mantener estado o evitar reinicializaciones costosas.
+
+🧠 Pregunta 11
+¿Cuál es el objetivo del pipeline de pre-commit o pre-push en una arquitectura de pruebas multinivel?
+
+A. Ejecutar únicamente pruebas E2E
+B. Validar cambios antes del merge
+C. Proporcionar feedback inmediato al desarrollador
+D. Ejecutar pruebas de rendimiento
+
+✅ Correcta: C
+🧾 Explicación: El pipeline de pre-commit o pre-push está diseñado para ser rápido y dar retroalimentación inmediata al developer, incluyendo tests unitarios y validaciones básicas.
+
+🧠 Pregunta 12
+¿Qué función tiene el uso de fixtures parametrizadas en pruebas de integración ligera?
+
+A. Medir la carga del sistema
+B. Simular servicios de terceros
+C. Preparar entornos simulados sin usar servicios reales
+D. Ejecutar benchmarks de memoria
+
+✅ Correcta: C
+🧾 Explicación: Las fixtures parametrizadas permiten construir entornos controlados para validar la interacción entre módulos sin desplegar servicios externos reales.
+
+🧠 Pregunta 13
+¿Cuándo debe activarse el fallback a ejecución completa en el TIA?
+
+A. Cuando los tests son unitarios
+B. Cuando se modifica más del 50% del código
+C. Siempre que se edita un archivo
+D. En pruebas pre-commit
+
+✅ Correcta: B
+🧾 Explicación: Si el TIA detecta que más del 50% del código está afectado por los cambios, se activa la ejecución completa para garantizar la validación completa.
+
+🧠 Pregunta 14
+¿Qué beneficio ofrece usar pytest -n auto?
+
+A. Limita la ejecución a un solo test
+B. Ejecuta tests con prioridad alta
+C. Habilita paralelización automática en todos los núcleos disponibles
+D. Corre tests únicamente de integración
+
+✅ Correcta: C
+🧾 Explicación: pytest -n auto utiliza todos los núcleos disponibles para paralelizar la ejecución de pruebas, reduciendo el tiempo total.
+
+🧠 Pregunta 15
+¿Qué estrategia se recomienda para evitar cuellos de botella en la paralelización de pruebas?
+
+A. Ejecutar todos los tests en un solo runner
+B. Deshabilitar los tests E2E
+C. Balancear el número de tests por shard
+D. Usar versiones antiguas de pytest
+
+✅ Correcta: C
+🧾 Explicación: Distribuir equitativamente los tests en los runners evita que uno de ellos quede con los más lentos, optimizando la duración total.
+
+🧠 Pregunta 16
+¿Qué ventaja ofrece el uso de servicios como WireMock o LocalStack?
+
+A. Reducen la cobertura de pruebas
+B. Eluden la ejecución de pruebas lentas
+C. Simulan servicios externos sin necesidad de invocar APIs reales
+D. Sustituyen por completo a los tests unitarios
+
+✅ Correcta: C
+🧾 Explicación: WireMock, LocalStack o Mountebank permiten emular APIs externas para evitar dependencias reales y acelerar los pipelines.
+
+🧠 Pregunta 17
+¿Cuál es una ventaja de usar entornos efímeros en las pruebas?
+
+A. Ejecutan pruebas E2E más rápido
+B. Permiten conservar el estado entre ejecuciones
+C. Aseguran un entorno limpio en cada job
+D. Eluden la contenerización
+
+✅ Correcta: C
+🧾 Explicación: Los entornos efímeros garantizan que cada ejecución comience en un estado limpio, evitando efectos secundarios entre pruebas.
+
+🧠 Pregunta 18
+¿Qué técnica permite reducir el tiempo de setup en entornos contenerizados?
+
+A. Cambiar de lenguaje de programación
+B. Eliminar el Dockerfile
+C. Preconstruir imágenes con dependencias instaladas
+D. Aumentar el número de tests
+
+✅ Correcta: C
+🧾 Explicación: Construir imágenes base con dependencias ya instaladas permite reutilizarlas y evitar instalaciones redundantes en cada ejecución.
+
+🧠 Pregunta 19
+¿Qué permite el uso de actions/cache en GitHub Actions?
+
+A. Evita el uso de contenedores
+B. Guarda el historial de commits
+C. Reutiliza dependencias para acelerar la ejecución
+D. Elimina tests antiguos automáticamente
+
+✅ Correcta: C
+🧾 Explicación: actions/cache permite conservar paquetes y archivos entre ejecuciones, reduciendo significativamente el tiempo de instalación.
+
+🧠 Pregunta 20
+¿Qué tipo de prueba es ideal para verificar el comportamiento bajo carga?
+
+A. Prueba unitaria
+B. Prueba E2E
+C. Prueba de integración
+D. Prueba de rendimiento
+
+✅ Correcta: D
+🧾 Explicación: Las pruebas de rendimiento o estrés miden tiempos de respuesta, escalabilidad y estabilidad bajo carga creciente.
+
+🧠 Pregunta 21
+¿Qué acción debe tomarse frente a un “test flaky”?
+
+A. Eliminarlo del repositorio
+B. Cambiarlo a test unitario
+C. Aislarlo y diagnosticar su comportamiento inestable
+D. Repetirlo automáticamente sin analizar
+
+✅ Correcta: C
+🧾 Explicación: Un test flaky debe marcarse y analizarse en un pipeline separado para identificar su origen (race conditions, timeouts, etc.).
+
+🧠 Pregunta 22
+¿Cuál es el objetivo de mantener un calendario de limpieza de tests?
+
+A. Reducir la cobertura de código
+B. Ejecutar menos pruebas por defecto
+C. Evitar acumulación de tests irrelevantes o duplicados
+D. Reemplazar pruebas de integración por unitarias
+
+✅ Correcta: C
+🧾 Explicación: Un calendario de limpieza permite mantener la suite saludable, eliminando redundancias y asegurando que las pruebas estén actualizadas.
+
+🧠 Pregunta 23
+¿Qué tipo de métrica NO se puede obtener directamente con herramientas de cobertura?
+
+A. Porcentaje de líneas ejecutadas
+B. Tiempo promedio de ejecución por test
+C. Nivel de satisfacción del equipo con los tests
+D. Porcentaje de ramas condicionales cubiertas
+
+✅ Correcta: C
+🧾 Explicación: Las métricas cualitativas como la percepción del equipo no se obtienen automáticamente, sino mediante encuestas o feedback.
+
+🧠 Pregunta 24
+¿Qué caracteriza a una guía de estilo de tests?
+
+A. Contiene pruebas E2E únicamente
+B. Se actualiza con cada commit
+C. Define convenciones de nombres y estructura de carpetas
+D. Solo incluye tests de performance
+
+✅ Correcta: C
+🧾 Explicación: La guía de estilo establece normas para nombrar pruebas, organizar carpetas y mantener coherencia en toda la suite.
+
+🧠 Pregunta 25
+¿Por qué usar benchmarks en los templates de tests?
+
+A. Para medir la cobertura de branches
+B. Para ejecutar tests más rápido
+C. Para comparar el rendimiento de funciones específicas
+D. Para ordenar las pruebas por duración
+
+✅ Correcta: C
+🧾 Explicación: Los benchmarks permiten evaluar el rendimiento de ciertas funciones y detectar regresiones relacionadas con la eficiencia.
+
+🧠 Pregunta 26
+¿Qué buena práctica mejora el onboarding del equipo con respecto a las pruebas?
+
+A. Usar solo documentación en formato PDF
+B. Proporcionar comandos claros y documentación local
+C. Eliminar los tests lentos
+D. Reemplazar documentación por comentarios en código
+
+✅ Correcta: B
+🧾 Explicación: Un README claro con instrucciones de ejecución local y documentación accesible facilita la incorporación de nuevos miembros.
+
+🧠 Pregunta 27
+¿Qué ventaja ofrece mostrar dashboards de cobertura y performance en el entorno de trabajo?
+
+A. Elimina la necesidad de revisar logs
+B. Motiva al equipo y mantiene el foco en la calidad
+C. Sustituye las reuniones de retroalimentación
+D. Acelera la ejecución de los tests
+
+✅ Correcta: B
+🧾 Explicación: Visibilizar métricas clave ayuda a mantener la cultura de calidad y a involucrar a todo el equipo en el cuidado de las pruebas.
+
+🧠 Pregunta 28
+¿Cuál es el rol de las "brown bag sessions"?
+
+A. Enseñar sobre Docker
+B. Implementar pipelines automáticamente
+C. Compartir aprendizajes informales sobre herramientas y buenas prácticas
+D. Ejecutar pruebas en producción
+
+✅ Correcta: C
+🧾 Explicación: Las brown bag sessions son encuentros informales en los que se comparten tips, plugins y experiencias útiles sobre testing.
+
+🧠 Pregunta 29
+¿Qué se logra con los code katas de pruebas?
+
+A. Reducir la complejidad del pipeline
+B. Practicar escritura de tests y fomentar soluciones colaborativas
+C. Eliminar tests duplicados
+D. Aumentar la cobertura automáticamente
+
+✅ Correcta: B
+🧾 Explicación: Los code katas promueven la práctica regular de testing y ayudan a compartir enfoques y patrones entre los miembros del equipo.
+
+🧠 Pregunta 30
+¿Por qué es útil tener una wiki interna sobre testing?
+
+A. Para bloquear cambios que no incluyan pruebas
+B. Para documentar estrategias avanzadas como TIA, mocks y paralelismo
+C. Para generar automáticamente los reportes de cobertura
+D. Para evitar documentar en el README
+
+✅ Correcta: B
+🧾 Explicación: Una wiki bien organizada permite documentar prácticas avanzadas y compartir conocimiento útil para mantener la suite de pruebas eficiente.
+
+🧠 Pregunta 31
+¿Qué tipo de prueba se recomienda para validar la compatibilidad de APIs entre servicios?
+
+A. Pruebas unitarias
+B. Pruebas de contrato
+C. Pruebas de carga
+D. Pruebas de integración ligera
+
+✅ Correcta: B
+🧾 Explicación: Las pruebas de contrato validan que las APIs cumplan con las expectativas y acuerdos entre servicios internos o externos.
+
+🧠 Pregunta 32
+¿Cuál es la duración típica esperada para un test unitario bien diseñado?
+
+A. Mayor a 1 segundo
+B. Entre 500 y 1000 ms
+C. Menor a 50 ms
+D. Exactamente 100 ms
+
+✅ Correcta: C
+🧾 Explicación: Los tests unitarios bien diseñados son rápidos y aislados, con una duración esperada inferior a 50 milisegundos.
+
+🧠 Pregunta 33
+¿Qué diferencia clave tienen las pruebas de integración ligera frente a las de integración completa?
+
+A. Se ejecutan en producción
+B. Usan bases de datos reales en la nube
+C. Simulan componentes usando fakes o memoria
+D. Solo testean una clase a la vez
+
+✅ Correcta: C
+🧾 Explicación: Las pruebas de integración ligera validan componentes conectados entre sí pero simulan dependencias con fakes o bases en memoria.
+
+🧠 Pregunta 34
+¿Qué técnica permite restaurar rápidamente una base de datos para pruebas de integración?
+
+A. Inyección de dependencias
+B. Carga de scripts en Bash
+C. Uso de snapshots o dumps SQL
+D. Ejecución de tests E2E
+
+✅ Correcta: C
+🧾 Explicación: Al guardar snapshots o volcar dumps SQL, es posible restaurar el estado inicial de la base de datos de forma rápida y automatizada.
+
+🧠 Pregunta 35
+¿Qué componente del pipeline generalmente ejecuta las pruebas más pesadas?
+
+A. Pre-commit
+B. Pre-push
+C. Pull Request
+D. Nightly builds
+
+✅ Correcta: D
+🧾 Explicación: Las nightly builds suelen ejecutar las pruebas más costosas como E2E y performance, además de actualizar dashboards históricos.
+
+🧠 Pregunta 36
+¿Qué rol cumple pytest-benchmark dentro de una suite de pruebas?
+
+A. Validar lógica de negocio
+B. Simular tráfico web
+C. Medir tiempos de ejecución para detectar regresiones de performance
+D. Identificar errores de linting
+
+✅ Correcta: C
+🧾 Explicación: pytest-benchmark permite incorporar métricas de tiempo en los tests para detectar degradaciones de rendimiento.
+
+🧠 Pregunta 37
+¿Cuál es una ventaja de usar matrices de estrategia (matrix builds) en GitHub Actions?
+
+A. Reducen la necesidad de paralelismo
+B. Ejecutan pruebas sin runners
+C. Prueban múltiples entornos en paralelo (SO, versiones)
+D. Evitan el uso de Docker
+
+✅ Correcta: C
+🧾 Explicación: Las matrix builds permiten ejecutar los mismos tests sobre múltiples versiones de Python o diferentes sistemas operativos de forma paralela.
+
+🧠 Pregunta 38
+¿Cuándo se recomienda usar un entorno persistente en pruebas?
+
+A. Para mantener estado entre ejecuciones de tests pesados
+B. Para ejecutar tests unitarios más rápido
+C. Para simular errores de red
+D. Para eliminar la necesidad de contenedores
+
+✅ Correcta: A
+🧾 Explicación: Un entorno persistente conserva datos entre ejecuciones, lo que es útil cuando las pruebas requieren recursos compartidos o cálculos previos.
+
+🧠 Pregunta 39
+¿Por qué deben evitarse tests que fallan de forma intermitente?
+
+A. Consumen más CPU
+B. Generan reportes incorrectos
+C. Afectan la confianza en la suite y bloquean automatizaciones
+D. Impiden generar snapshots
+
+✅ Correcta: C
+🧾 Explicación: Los "flaky tests" deterioran la confianza en la suite porque sus fallos no son consistentes, dificultando el diagnóstico y ralentizando los pipelines.
+
+🧠 Pregunta 40
+¿Qué propósito tiene la guía de estilo para los tests?
+
+A. Asegurar que todos los tests usen Docker
+B. Evitar la ejecución de pruebas en producción
+C. Homogeneizar nombres, estructura y patrones de los tests
+D. Forzar la ejecución diaria de todas las pruebas
+
+✅ Correcta: C
+🧾 Explicación: Una guía de estilo garantiza consistencia en la organización, nombres y diseño de las pruebas, facilitando su mantenimiento.
+
+🧠 Pregunta 41
+¿Cuál es una señal de que el Lead Time está siendo afectado negativamente por las pruebas?
+
+A. Aumento de la cobertura
+B. Caída sostenida del rendimiento de los tests
+C. Mejora en el uso de caché
+D. Reducción de pull requests
+
+✅ Correcta: B
+🧾 Explicación: Un aumento del Lead Time puede indicar problemas de lentitud en pruebas, despliegue o infraestructura, y debe ser diagnosticado.
+
+🧠 Pregunta 42
+¿Qué puede provocar fallos aleatorios en pruebas automatizadas?
+
+A. Uso de fixtures estáticos
+B. Pruebas con alta cobertura
+C. Race conditions o timeouts mal configurados
+D. Uso exclusivo de mocks
+
+✅ Correcta: C
+🧾 Explicación: Condiciones de carrera, dependencias temporales o límites de tiempo mal definidos suelen ser la causa principal de tests inestables.
+
+🧠 Pregunta 43
+¿Qué se recomienda hacer cada tres meses respecto a la suite de pruebas?
+
+A. Ejecutar todos los tests de nuevo
+B. Migrar a un nuevo framework
+C. Limpiar tests duplicados, obsoletos o irrelevantes
+D. Cambiar los nombres de los tests
+
+✅ Correcta: C
+🧾 Explicación: Un mantenimiento trimestral permite eliminar pruebas innecesarias y asegurar que la suite sigue alineada con el código actual.
+
+🧠 Pregunta 44
+¿Qué ventaja tiene almacenar un dump SQL para los tests?
+
+A. Aumenta el consumo de memoria
+B. Mejora la cobertura de líneas
+C. Permite restaurar la base de datos de forma inmediata
+D. Evita usar GitHub Actions
+
+✅ Correcta: C
+🧾 Explicación: Al tener un dump SQL, se puede restaurar un estado de base de datos rápidamente para repetir pruebas sin configurar desde cero.
+
+🧠 Pregunta 45
+¿Qué tipo de test generalmente requiere desplegar la interfaz de usuario?
+
+A. Test unitario
+B. Test de contrato
+C. Test end-to-end
+D. Test de integración ligera
+
+✅ Correcta: C
+🧾 Explicación: Las pruebas E2E validan el flujo completo del sistema, incluyendo UI y verificación de bases de datos y servicios.
+
+🧠 Pregunta 46
+¿Qué beneficio tiene orquestar contenedores simulados en un pipeline?
+
+A. Elimina la necesidad de escribir pruebas
+B. Garantiza coherencia en entornos de prueba complejos
+C. Hace que los tests unitarios sean innecesarios
+D. Permite hacer push directo a producción
+
+✅ Correcta: B
+🧾 Explicación: Orquestar contenedores simulados (con Docker Compose, por ejemplo) permite montar entornos de prueba consistentes con servicios externos simulados.
+
+🧠 Pregunta 47
+¿Por qué es importante que el código de pruebas evolucione junto al código productivo?
+
+A. Para evitar cambios en los linters
+B. Para mantener la suite relevante y efectiva
+C. Para cumplir con los requerimientos legales
+D. Para reducir la duración de los tests
+
+✅ Correcta: B
+🧾 Explicación: Si el código de pruebas no se actualiza junto con la lógica de negocio, pierde efectividad y puede generar falsos positivos o fallos irrelevantes.
+
+🧠 Pregunta 48
+¿Qué permite lograr el mapeo de cobertura inversa?
+
+A. Medir latencia en pruebas
+B. Determinar qué tests cubren qué líneas de código
+C. Ejecutar pruebas E2E automáticamente
+D. Guardar el historial de ejecución
+
+✅ Correcta: B
+🧾 Explicación: El mapeo de cobertura inversa relaciona cada test con las partes del código que valida, lo que permite ejecutar solo los necesarios tras un cambio.
+
+🧠 Pregunta 49
+¿Qué solución ayuda a detectar tests afectados usando git diff?
+
+A. CodeQL
+B. get_affected_tests.py
+C. pytest-lint
+D. test_impact.yaml
+
+✅ Correcta: B
+🧾 Explicación: El script get_affected_tests.py identifica qué tests deben ejecutarse según los archivos modificados, integrándose con TIA y git diff.
+
+🧠 Pregunta 50
+¿Por qué fomentar el pair programming para escribir tests?
+
+A. Para reducir el número de tests
+B. Para mejorar la cobertura de ramas
+C. Para mejorar la comprensión compartida y la calidad de los tests
+D. Para evitar el uso de Docker
+
+✅ Correcta: C
+🧾 Explicación: El pair programming en pruebas permite compartir conocimiento, detectar errores en el diseño de los tests y mejorar su robustez.

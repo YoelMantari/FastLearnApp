@@ -1,0 +1,549 @@
+🧠 Pregunta 1
+¿Cuál es el objetivo principal de medir la cobertura de pruebas en un contexto DevOps?
+
+A. Optimizar el tiempo de ejecución de las pruebas.
+B. Asegurar que todo el código sea revisado por múltiples desarrolladores.
+C. Cuantificar la proporción del código que ha sido ejecutada por pruebas automatizadas para mantener la calidad.
+D. Reducir el número total de pruebas automatizadas.
+
+✅ Correcta: C
+🧾 Explicación: La cobertura de pruebas busca medir qué tanto del código se valida automáticamente, siendo crucial en DevOps para prevenir la degradación de la calidad en los merges.
+
+🧠 Pregunta 2
+¿Qué diferencia fundamental existe entre la cobertura de línea y la cobertura de rama?
+
+A. La cobertura de línea considera todas las sentencias, mientras que la de rama solo las condicionales.
+B. La cobertura de rama se enfoca en las líneas ejecutadas, mientras que la de línea analiza las bifurcaciones.
+C. La cobertura de línea mide el porcentaje de líneas ejecutadas, mientras que la de rama evalúa los caminos de decisión (verdadero/falso) en el código.
+D. No existe una diferencia significativa entre ambas métricas.
+
+✅ Correcta: C
+🧾 Explicación: La cobertura de línea indica qué líneas se ejecutaron, pero la de rama va más allá, asegurando que se prueben todos los posibles resultados de las estructuras de control (if/else, bucles, etc.).
+
+🧠 Pregunta 3
+En un pipeline CI/CD, ¿cuál es el paso inmediatamente posterior a la ejecución de la suite de pruebas con la opción de cobertura activada?
+
+A. Despliegue a producción.
+B. Generación del informe de cobertura en formatos como HTML o XML.
+C. Validación de la complejidad ciclomática del código.
+D. Notificación al equipo de desarrollo sobre los resultados de las pruebas.
+
+✅ Correcta: B
+🧾 Explicación: Después de ejecutar las pruebas con la herramienta de cobertura, el siguiente paso lógico es generar un informe que detalle qué partes del código fueron cubiertas.
+
+🧠 Pregunta 4
+¿Qué representa la estrategia de "no decrementar" en la definición de umbrales de cobertura?
+
+A. Permitir que la cobertura disminuya ligeramente en nuevas funcionalidades.
+B. Bloquear merges que resulten en una disminución de la cobertura de pruebas existente.
+C. Aumentar gradualmente los umbrales de cobertura con cada nuevo despliegue.
+D. Ignorar las disminuciones de cobertura en módulos no críticos.
+
+✅ Correcta: B
+🧾 Explicación: La estrategia de "no decrementar" busca mantener o mejorar la calidad del código base al evitar que la cobertura de pruebas se reduzca con la introducción de nuevos cambios.
+
+🧠 Pregunta 5
+¿Cuál de las siguientes herramientas se menciona como capaz de analizar la cobertura de pruebas junto con otros indicadores de calidad del código como la complejidad ciclomática?
+
+A. Codecov.
+B. Coveralls.
+C. SonarQube.
+D. pytest-benchmark.
+
+✅ Correcta: C
+🧾 Explicación: SonarQube es una plataforma que integra el análisis de cobertura con otras métricas de calidad del código, proporcionando una visión más completa de la salud del software.
+
+🧠 Pregunta 6
+¿Cuál es el principal propósito del plugin pytest-benchmark en el ecosistema de pruebas de Python?
+
+A. Generar informes de cobertura de código detallados.
+B. Medir y comparar el tiempo de ejecución de las pruebas a lo largo del tiempo.
+C. Facilitar la creación de pruebas de integración complejas.
+D. Automatizar la ejecución de pruebas en diferentes entornos.
+
+✅ Correcta: B
+🧾 Explicación: pytest-benchmark se enfoca en el rendimiento de las pruebas, permitiendo a los desarrolladores identificar regresiones de tiempo y optimizar la suite de pruebas.
+
+🧠 Pregunta 7
+¿Qué información valiosa proporcionan los percentiles (p50, p95, p99) en los resultados de pytest-benchmark?
+
+A. El número total de pruebas ejecutadas.
+B. El tiempo promedio de ejecución de toda la suite de pruebas.
+C. El valor debajo del cual cae un cierto porcentaje de ejecuciones, ayudando a identificar valores atípicos (outliers).
+D. La diferencia entre la ejecución más rápida y la más lenta.
+
+✅ Correcta: C
+🧾 Explicación: Los percentiles ofrecen una visión de la distribución de los tiempos de ejecución, siendo útiles para detectar pruebas que ocasionalmente tardan mucho más de lo normal.
+
+🧠 Pregunta 8
+¿Qué utilidad tiene el parámetro --benchmark-fail-max-time-diff en pytest-benchmark dentro de un pipeline CI?
+
+A. Permite guardar los resultados de las pruebas de rendimiento en un archivo específico.
+B. Compara los resultados de la ejecución actual con una línea base guardada previamente.
+C. Detiene el pipeline si alguna prueba excede un porcentaje definido de lentitud en comparación con la línea base.
+D. Define el número mínimo de repeticiones para cada prueba de rendimiento.
+
+✅ Correcta: C
+🧾 Explicación: Este parámetro es crucial para la calidad, ya que evita que se introduzcan cambios que degraden significativamente el rendimiento de las pruebas sin ser detectados.
+
+🧠 Pregunta 9
+¿Cuál de las siguientes NO es una de las cuatro métricas DORA (DevOps Research and Assessment) utilizadas para medir el rendimiento de la entrega de software?
+
+A. Lead Time for Changes (Tiempo de entrega de cambios).
+B. Deployment Frequency (Frecuencia de despliegue).
+C. Code Churn Rate (Tasa de rotación de código).
+D. Change Failure Rate (Tasa de fallos en cambios).
+
+✅ Correcta: C
+🧾 Explicación: Code Churn Rate no es una de las cuatro métricas DORA principales, las cuales se centran en la velocidad y la estabilidad de la entrega.
+
+🧠 Pregunta 10
+¿Qué mide el "Lead Time for Changes" dentro de las métricas DORA?
+
+A. El tiempo que tarda un desarrollador en escribir el código para una nueva funcionalidad.
+B. El tiempo transcurrido desde que se detecta un fallo en producción hasta que se resuelve.
+C. El tiempo entre el commit de un cambio y su disponibilidad en producción para los usuarios finales.
+D. La frecuencia con la que se realizan despliegues a los diferentes entornos (desarrollo, staging, producción).
+
+✅ Correcta: C
+🧾 Explicación: El Lead Time for Changes es un indicador clave de la agilidad del equipo y la eficiencia del pipeline de entrega.
+
+🧠 Pregunta 11
+Una alta "Deployment Frequency" generalmente indica:
+
+A. Una mayor probabilidad de fallos en producción debido a la falta de pruebas exhaustivas.
+B. Un pipeline de entrega robusto y confiable que permite entregar valor de forma iterativa.
+C. Que el equipo de desarrollo se enfoca en entregar grandes lotes de funcionalidades de forma menos frecuente.
+D. Una menor necesidad de automatización de pruebas debido a la rapidez de los despliegues.
+
+✅ Correcta: B
+🧾 Explicación: Despliegues frecuentes suelen ser posibles gracias a una buena automatización y confianza en el proceso de entrega.
+
+🧠 Pregunta 12
+¿Qué significa una baja "Change Failure Rate" según las métricas DORA?
+
+A. Que los despliegues son muy frecuentes, lo que minimiza el impacto de los fallos.
+B. Que el equipo prioriza la velocidad de entrega por encima de la estabilidad.
+C. Que los despliegues son estables y las prácticas de testing e integración son efectivas.
+D. Que se realizan pocos cambios al código, lo que reduce la probabilidad de errores.
+
+✅ Correcta: C
+🧾 Explicación: Una baja tasa de fallos en los cambios es un buen indicador de la calidad del proceso de desarrollo y despliegue.
+
+🧠 Pregunta 13
+¿Cuál es el objetivo principal de medir el "Mean Time to Recovery" (MTTR)?
+
+A. Evaluar la frecuencia con la que el equipo realiza despliegues a producción.
+B. Medir la eficiencia del equipo en la detección y resolución de incidentes en producción.
+C. Cuantificar el tiempo que tardan los desarrolladores en escribir y probar nuevas funcionalidades.
+D. Determinar el porcentaje de despliegues que resultan en fallos o rollbacks.
+
+✅ Correcta: B
+🧾 Explicación: El MTTR se centra en la resiliencia del sistema y la capacidad del equipo para restaurar el servicio rápidamente después de una interrupción.
+
+🧠 Pregunta 14
+¿Qué componente del "Lead Time for Changes" se enfoca en la ejecución de pruebas unitarias y el empaquetado de artefactos?
+
+A. Tiempo de aprobación.
+B. Tiempo de despliegue.
+C. Tiempo de build.
+D. Tiempo de integración.
+
+✅ Correcta: C
+🧾 Explicación: El tiempo de build abarca las etapas iniciales del pipeline donde se compila y se prueban las unidades más pequeñas del código.
+
+🧠 Pregunta 15
+¿Qué tipo de pruebas se mencionan como importantes para reducir la "Change Failure Rate" además de las pruebas unitarias?
+
+A. Pruebas de rendimiento y pruebas de usabilidad.
+B. Pruebas de estrés y pruebas de seguridad.
+C. Smoke tests y pruebas de contrato (contract testing) para APIs externas.
+D. Pruebas exploratorias y pruebas A/B.
+
+✅ Correcta: C
+🧾 Explicación: Las smoke tests verifican la funcionalidad básica después del despliegue, mientras que las pruebas de contrato aseguran la compatibilidad con servicios externos.
+
+🧠 Pregunta 16
+¿Qué se debe hacer para transformar los registros de ejecución de un servidor CI/CD en métricas accionables?
+
+A. Analizar manualmente los logs de texto plano.
+B. Ignorar los datos de ejecución y centrarse en el código fuente.
+C. Emitir métricas en formatos estándar como Prometheus text exposition format o JSON.
+D. Almacenar los logs sin procesar en una base de datos.
+
+✅ Correcta: C
+🧾 Explicación: La emisión estructurada facilita la recolección y el análisis automatizado de las métricas por herramientas como Prometheus.
+
+🧠 Pregunta 17
+En el contexto de la captura de métricas desde el pipeline CI/CD, ¿qué propósito tienen los "hooks" o "post steps"?
+
+A. Ejecutar tareas al inicio de cada job del pipeline.
+B. Definir las dependencias entre diferentes etapas del pipeline.
+C. Calcular y exportar métricas después de la finalización de un job.
+D. Visualizar las métricas en un dashboard en tiempo real.
+
+✅ Correcta: C
+🧾 Explicación: Los "post steps" permiten realizar acciones como el cálculo de duraciones y la exportación de métricas una vez que la tarea principal del job ha concluido.
+
+🧠 Pregunta 18
+¿Cómo se integra el plugin pytest-benchmark con un pipeline CI para la captura de métricas de rendimiento?
+
+A. Ejecutando las pruebas sin ninguna opción adicional y analizando los logs.
+B. Utilizando la opción --benchmark-json para exportar los resultados en formato JSON, que luego puede ser transformado.
+C. Enviando directamente los resultados a un sistema de series de tiempo como Prometheus.
+D. Mostrando los resultados únicamente en la salida estándar del pipeline.
+
+✅ Correcta: B
+🧾 Explicación: La exportación a JSON permite un procesamiento posterior para adaptar los datos al formato requerido por los sistemas de monitorización.
+
+🧠 Pregunta 19
+¿Cuál es la principal diferencia entre el modelo de recolección de métricas de Prometheus y el de InfluxDB?
+
+A. Prometheus utiliza un modelo push, donde los agentes envían las métricas, mientras que InfluxDB usa un modelo pull.
+B. InfluxDB se basa en archivos de texto plano, mientras que Prometheus utiliza una base de datos optimizada para series de tiempo.
+C. Prometheus utiliza un modelo pull, donde el servidor scrapea los endpoints de los expositores de métricas, mientras que InfluxDB usa un modelo push.
+D. No hay una diferencia significativa en sus modelos de recolección.
+
+✅ Correcta: C
+🧾 Explicación: Esta diferencia en el modelo de recolección influye en cómo se instrumentan los sistemas para exponer y almacenar las métricas.
+
+🧠 Pregunta 20
+¿Por qué es importante el etiquetado (labels) en los sistemas de series de tiempo como Prometheus?
+
+A. Para reducir el tamaño de la base de datos de métricas.
+B. Para definir la retención de las métricas.
+C. Para facilitar el análisis multidimensional y el filtrado de las métricas por diferentes contextos.
+D. Para mejorar el rendimiento de la recolección de métricas.
+
+✅ Correcta: C
+🧾 Explicación: Las etiquetas añaden contexto a las métricas, permitiendo segmentar y analizar los datos de manera más efectiva.
+
+🧠 Pregunta 21
+¿Qué tipo de panel en Grafana es más adecuado para mostrar la tendencia del tiempo promedio desde el commit hasta el despliegue en producción?
+
+A. Un panel de tipo "stat".
+B. Un panel de tipo "bar gauge".
+C. Un gráfico de línea.
+D. Una tabla.
+
+✅ Correcta: C
+🧾 Explicación: Un gráfico de línea es ideal para visualizar la evolución de una métrica a lo largo del tiempo, como el Lead Time.
+
+🧠 Pregunta 22
+¿Qué utilidad tienen las "variables" en los dashboards de Grafana?
+
+A. Permiten crear paneles estáticos con valores predefinidos.
+B. Facilitan la edición masiva de múltiples paneles simultáneamente.
+C. Permiten cambiar rápidamente el contexto de los datos visualizados sin necesidad de editar los paneles.
+D. Mejoran el rendimiento de la carga de los dashboards.
+
+✅ Correcta: C
+🧾 Explicación: Las variables hacen que los dashboards sean más interactivos y adaptables a diferentes análisis.
+
+🧠 Pregunta 23
+¿Cuál es el propósito principal de configurar alertas en un sistema de monitorización como Prometheus Alertmanager?
+
+A. Generar informes periódicos sobre el estado del pipeline.
+B. Detectar tempranamente deterioros en el pipeline y mantener la confiabilidad del proceso de entrega.
+C. Visualizar las métricas históricas del rendimiento del pipeline.
+D. Automatizar la creación de dashboards en Grafana.
+
+✅ Correcta: B
+🧾 Explicación: Las alertas son fundamentales para la detección proactiva de problemas que puedan afectar la velocidad o la estabilidad de la entrega.
+
+🧠 Pregunta 24
+¿Qué tipo de reglas se definen en Prometheus para generar alertas basadas en el comportamiento de las métricas?
+
+A. Reglas de grabación (recording rules).
+B. Reglas de alerta (alerting rules).
+C. Reglas de consulta (query rules).
+D. Reglas de visualización (visualization rules).
+
+✅ Correcta: B
+🧾 Explicación: Las "alerting rules" especifican las condiciones bajo las cuales se deben disparar las notificaciones de alerta.
+
+🧠 Pregunta 25
+¿Qué son los "Service Level Objectives (SLOs)" aplicados al pipeline de entrega de software?
+
+A. Métricas detalladas del rendimiento de cada etapa del pipeline.
+B. Objetivos de rendimiento definidos para el propio proceso de entrega, como el tiempo de entrega o la frecuencia de despliegue.
+C. Acuerdos con los usuarios finales sobre la disponibilidad del software desplegado.
+D. Límites máximos aceptables para las métricas de rendimiento del pipeline.
+
+✅ Correcta: B
+🧾 Explicación: Los SLOs para el pipeline permiten medir y gestionar la eficiencia y la calidad del proceso de desarrollo y despliegue como un servicio interno.
+
+🧠 Pregunta 26
+¿Cómo se puede implementar el "gatekeeping" en pull requests utilizando métricas de benchmarking en GitHub Actions?
+
+A. Revisando manualmente los resultados de los benchmarks después de cada pull request.
+B. Configurando un job que compare los benchmarks con una línea base y bloquee el merge si se exceden los umbrales definidos.
+C. Utilizando herramientas externas para analizar los benchmarks después de que el código se ha mergeado.
+D. Mostrando los resultados de los benchmarks solo como una nota informativa en el pull request.
+
+✅ Correcta: B
+🧾 Explicación: La automatización de la comparación de benchmarks en el pipeline de pull requests previene la introducción de código que degrade el rendimiento.
+
+🧠 Pregunta 27
+¿Qué mecanismo se puede utilizar en pipelines CI/CD para reaccionar automáticamente ante una alta tasa de fallos en producción (Change Failure Rate)?
+
+A. Aumentar la frecuencia de los despliegues para diluir el impacto de los fallos.
+B. Desactivar automáticamente nuevas funcionalidades mediante feature flags.
+C. Detener todas las actividades de desarrollo hasta que se resuelvan los fallos.
+D. Reducir el número de pruebas automatizadas para acelerar los despliegues.
+
+✅ Correcta: B
+🧾 Explicación: Los feature flags ofrecen una forma rápida de mitigar el impacto de problemas introducidos por nuevos despliegues sin necesidad de un rollback completo.
+
+🧠 Pregunta 28
+¿Qué tipo de información sensible se debe tener en cuenta al trabajar con métricas de pipelines?
+
+A. El número total de líneas de código modificadas.
+B. La frecuencia con la que los desarrolladores hacen commit.
+C. Nombres de branches privados, identificadores de tickets y variables de entorno.
+D. El tiempo de ejecución de las pruebas unitarias.
+
+✅ Correcta: C
+🧾 Explicación: Es crucial filtrar y controlar el acceso a la información que podría comprometer la seguridad o la privacidad.
+
+🧠 Pregunta 29
+¿Cuál es la importancia de la automatización de respuestas basadas en métricas en un entorno DevOps maduro?
+
+A. Reducir la necesidad de monitorización manual de los dashboards.
+B. Permitir que el sistema reaccione automáticamente ante problemas sin intervención humana inmediata.
+C. Generar informes más detallados sobre el rendimiento del pipeline.
+D. Facilitar la comunicación entre los diferentes equipos involucrados en el ciclo de vida del software.
+
+✅ Correcta: B
+🧾 Explicación: La automatización de respuestas aumenta la eficiencia y la resiliencia del proceso de entrega al abordar problemas de forma proactiva.
+
+🧠 Pregunta 30
+¿Qué beneficio aporta la correlación y el análisis multidimensional de las métricas de benchmarking y DORA?
+
+A. Simplifica la visualización de los datos en dashboards más concisos.
+B. Permite entender cómo interactúan las diferentes métricas y obtener una visión integral del proceso de entrega.
+C. Reduce la cantidad de datos que necesitan ser almacenados y analizados.
+D. Facilita la definición de umbrales de alerta más precisos.
+
+✅ Correcta: B
+🧾 Explicación: Comprender las relaciones entre las métricas proporciona un contexto más rico para la toma de decisiones y la identificación de áreas de mejora.
+
+🧠 Pregunta 31
+¿Qué ventaja ofrece la emisión estructurada de métricas en el pipeline CI/CD en comparación con el análisis de logs de texto plano?
+
+A. Permite una interpretación más subjetiva de los datos.
+B. Facilita la recolección y el análisis automatizado por herramientas de monitorización.
+C. Reduce la cantidad de información generada por el pipeline.
+D. Elimina la necesidad de herramientas de visualización como Grafana.
+
+✅ Correcta: B
+🧾 Explicación: La estructura facilita que las máquinas interpreten y procesen los datos de manera eficiente.
+
+🧠 Pregunta 32
+¿Cómo contribuyen los "etiquetados" o "labels" a la utilidad de las métricas en sistemas como Prometheus?
+
+A. Definen el tipo de gráfico que se utilizará para visualizar la métrica.
+B. Determinan la frecuencia con la que se recolecta la métrica.
+C. Permiten segmentar, filtrar y analizar las métricas por diferentes dimensiones o contextos.
+D. Aseguran que todas las métricas tengan un nombre único.
+
+✅ Correcta: C
+🧾 Explicación: Los labels son esenciales para entender el contexto de cada punto de datos.
+
+🧠 Pregunta 33
+En un dashboard de Grafana dedicado a métricas de CI/CD, ¿qué tipo de panel sería más adecuado para mostrar la cantidad de despliegues exitosos por día durante la última semana?
+
+A. Un gráfico de línea.
+B. Un panel de tipo "gauge".
+C. Un panel de tipo "stat" o un gráfico de barras.
+D. Un histograma.
+
+✅ Correcta: C
+🧾 Explicación: Un contador simple o un gráfico de barras son ideales para mostrar cantidades discretas a lo largo del tiempo.
+
+🧠 Pregunta 34
+¿Cuál es la función principal de las "anotaciones" en los dashboards de Grafana?
+
+A. Mostrar valores agregados de las métricas.
+B. Permitir a los usuarios interactuar con los gráficos.
+C. Marcar eventos significativos para ayudar a correlacionar cambios con las métricas.
+D. Definir umbrales de alerta visuales en los gráficos.
+
+✅ Correcta: C
+🧾 Explicación: Las anotaciones proporcionan contexto narrativo a los datos visualizados.
+
+🧠 Pregunta 35
+¿Qué diferencia existe entre las "reglas de grabación" y las "reglas de alerta" en Prometheus?
+
+A. Las reglas de grabación definen cómo se almacenan las métricas, mientras que las de alerta definen cuándo notificar.
+B. Las reglas de grabación pre-calculan y almacenan nuevas series de tiempo basadas en consultas, mientras que las de alerta definen las condiciones para disparar notificaciones.
+C. Las reglas de grabación se utilizan para visualizar datos en Grafana, mientras que las de alerta se usan en Alertmanager.
+D. No hay una diferencia funcional significativa entre ambas.
+
+✅ Correcta: B
+🧾 Explicación: Las reglas de grabación optimizan las consultas, mientras que las de alerta automatizan las notificaciones.
+
+🧠 Pregunta 36
+¿Cuál es el propósito de definir "silencers temporales" en la configuración de Alertmanager?
+
+A. Reducir el volumen de alertas enviadas.
+B. Evitar el envío de alertas durante periodos de mantenimiento planificado.
+C. Priorizar las alertas más críticas.
+D. Rerutar las alertas a diferentes equipos según su tipo.
+
+✅ Correcta: B
+🧾 Explicación: Los silencers ayudan a evitar ruido innecesario durante periodos conocidos de inactividad o intervención.
+
+🧠 Pregunta 37
+¿Cómo se pueden utilizar las métricas de comparación de benchmarks para configurar alertas sobre regresiones de rendimiento?
+
+A. Alertando si el tiempo de ejecución absoluto de una prueba excede un umbral fijo.
+B. Alertando si el tiempo de ejecución de una prueba disminuye significativamente.
+C. Alertando si el incremento reciente en el tiempo de ejecución de una prueba es significativamente mayor que su promedio histórico.
+D. Alertando si el número total de pruebas de rendimiento disminuye.
+
+✅ Correcta: C
+🧾 Explicación: Comparar el rendimiento actual con el histórico ayuda a detectar degradaciones sutiles.
+
+🧠 Pregunta 38
+¿Cuál es el beneficio de definir Service Level Objectives (SLOs) para el pipeline de entrega?
+
+A. Garantizar que el software desplegado cumpla con los requisitos del usuario final.
+B. Medir y gestionar la eficiencia y la calidad del proceso de desarrollo y despliegue como un servicio interno.
+C. Reducir los costos asociados con la infraestructura del pipeline.
+D. Aumentar la velocidad de los despliegues individuales.
+
+✅ Correcta: B
+🧾 Explicación: Los SLOs proporcionan objetivos claros para el rendimiento del propio proceso de entrega.
+
+🧠 Pregunta 39
+En el contexto de GitHub Actions, ¿cómo se puede utilizar un "check" basado en métricas de benchmarking para controlar los merges de pull requests?
+
+A. Mostrando una advertencia si los benchmarks se degradan, pero permitiendo el merge.
+B. Bloqueando el merge si los benchmarks exceden un umbral definido, asegurando que no se introduzca código con rendimiento degradado.
+C. Registrando los resultados de los benchmarks solo después de que el código ha sido mergeado.
+D. Permitiendo que los desarrolladores ignoren los fallos de los benchmarks si consideran que son insignificantes.
+
+✅ Correcta: B
+🧾 Explicación: Los checks automatizados actúan como una puerta de calidad para el código.
+
+🧠 Pregunta 40
+¿Cómo pueden los "feature flags dinámicos" contribuir a la automatización de respuestas ante problemas detectados por las métricas de producción?
+
+A. Permitiendo a los desarrolladores modificar el código en producción directamente.
+B. Facilitando la reversión de cambios mediante rollbacks automáticos del despliegue completo.
+C. Permitiendo la activación o desactivación de funcionalidades sin necesidad de redeployar, en respuesta a métricas como la tasa de fallos.
+D. Redirigiendo el tráfico de usuarios a versiones anteriores del software automáticamente.
+
+✅ Correcta: C
+🧾 Explicación: Los feature flags ofrecen una forma granular y rápida de mitigar problemas.
+
+🧠 Pregunta 41
+¿Qué tipo de herramientas se pueden integrar con los sistemas de alerta para automatizar la creación de tickets de seguimiento ante incidentes detectados por las métricas?
+
+A. Herramientas de visualización de dashboards como Grafana.
+B. Sistemas de gestión de proyectos y seguimiento de incidencias como Jira o Azure Boards.
+C. Sistemas de control de versiones como Git.
+D. Herramientas de comunicación en equipo como Slack o Microsoft Teams.
+
+✅ Correcta: B
+🧾 Explicación: La integración con sistemas de ticketing automatiza el flujo de trabajo de respuesta a incidentes.
+
+🧠 Pregunta 42
+¿Cuál es la principal preocupación al manejar métricas de pipelines que contienen información sensible?
+
+A. El impacto en el rendimiento de los sistemas de almacenamiento de métricas.
+B. El cumplimiento de las políticas de retención de datos.
+C. La exposición no autorizada de información confidencial.
+D. La dificultad para analizar grandes volúmenes de datos.
+
+✅ Correcta: C
+🧾 Explicación: La seguridad y la privacidad de la información sensible deben ser una prioridad.
+
+🧠 Pregunta 43
+¿Qué práctica se menciona para mitigar los riesgos de exponer información sensible en las métricas de pipelines?
+
+A. Cifrar toda la información transmitida a los sistemas de monitorización.
+B. Auditar regularmente los logs del pipeline en busca de información sensible.
+C. Filtrar o evitar la exposición de etiquetas que contengan datos confidenciales.
+D. Almacenar las métricas sensibles en un sistema separado con acceso restringido.
+
+✅ Correcta: C
+🧾 Explicación: La prevención en la exposición es una estrategia clave.
+
+🧠 Pregunta 44
+¿Cómo puede la automatización de la creación de documentación basada en métricas beneficiar a los equipos de desarrollo y operaciones?
+
+A. Reduciendo la necesidad de escribir documentación manual.
+B. Proporcionando informes actualizados y basados en datos reales sobre el rendimiento del pipeline.
+C. Mejorando la comunicación con los usuarios finales sobre el estado del software.
+D. Automatizando el proceso de despliegue a producción.
+
+✅ Correcta: B
+🧾 Explicación: La documentación automatizada asegura que la información sea precisa y esté disponible para la revisión y la toma de decisiones.
+
+🧠 Pregunta 45
+¿Qué tipo de análisis se facilita al correlacionar las métricas de Lead Time con las métricas de benchmarking de las pruebas?
+
+A. Identificar qué desarrolladores contribuyen más al tiempo de entrega.
+B. Determinar si la lentitud en el pipeline está relacionada con la duración de la suite de pruebas.
+C. Predecir la frecuencia futura de los despliegues.
+D. Evaluar el impacto de los cambios de código en la tasa de fallos en producción.
+
+✅ Correcta: B
+🧾 Explicación: Esta correlación ayuda a optimizar el pipeline identificando cuellos de botella.
+
+🧠 Pregunta 46
+¿Qué posible consecuencia puede tener una frecuencia de despliegue muy alta si no se cuenta con una automatización robusta de pruebas end-to-end?
+
+A. Un aumento en el Lead Time for Changes.
+B. Una disminución en el Mean Time to Recovery.
+C. Un incremento en la Change Failure Rate.
+D. Una reducción en la complejidad del código desplegado.
+
+✅ Correcta: C
+🧾 Explicación: Despliegues frecuentes sin pruebas adecuadas aumentan el riesgo de introducir fallos.
+
+🧠 Pregunta 47
+¿Cómo puede un equipo con prácticas de "trunk-based development" beneficiarse en términos del Mean Time to Recovery (MTTR)?
+
+A. Al tener ramas de larga duración, se pueden aislar mejor los fallos.
+B. Al tener merges más complejos, se fuerza una revisión más exhaustiva del código.
+C. Al reducir la complejidad de los merges, se facilita la aplicación rápida de hotfixes.
+D. Al eliminar las ramas de desarrollo, se evitan los conflictos de merge.
+
+✅ Correcta: C
+🧾 Explicación: Un flujo de trabajo simplificado facilita la corrección rápida de problemas.
+
+🧠 Pregunta 48
+¿Qué rol juega la monitorización proactiva y las alertas en la reducción del Mean Time to Recovery (MTTR)?
+
+A. Permiten identificar la causa raíz de los incidentes más rápidamente.
+B. Reducen la necesidad de realizar rollbacks ante fallos.
+C. Aceleran el proceso de desarrollo de los hotfixes.
+D. Facilitan la detección temprana de problemas antes de que impacten significativamente al usuario.
+
+✅ Correcta: D
+🧾 Explicación: La detección temprana es crucial para una recuperación más rápida.
+
+🧠 Pregunta 49
+¿Qué tipo de análisis permite la combinación de métricas de infraestructura, logs y procesos de despliegue en una plataforma unificada como New Relic o Datadog?
+
+A. Un análisis aislado del rendimiento de cada componente.
+B. Una visión fragmentada del ciclo de vida del software.
+C. Una perspectiva holística que facilita la correlación de problemas en diferentes capas.
+D. Un análisis centrado únicamente en las métricas de negocio.
+
+✅ Correcta: C
+🧾 Explicación: La unificación de datos proporciona un contexto más completo para el diagnóstico y la resolución de problemas.
+
+🧠 Pregunta 50
+¿Cuál es el objetivo final de integrar las métricas de rendimiento en el ciclo de vida del software?
+
+A. Generar informes más detallados para la dirección.
+B. Reducir la carga de trabajo de los equipos de desarrollo y operaciones.
+C. Permitir a los equipos monitorizar tendencias, detectar anomalías y activar acciones automáticas para mejorar continuamente la velocidad y la estabilidad de la entrega.
+D. Justificar la inversión en herramientas de monitorización y automatización.
+
+✅ Correcta: C
+🧾 Explicación: El objetivo es mejorar continuamente el proceso de entrega basándose en datos objetivos.

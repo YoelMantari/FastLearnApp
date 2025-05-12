@@ -1,0 +1,502 @@
+🧠 Pregunta 1
+¿Cuál es el objetivo principal de la automatización de testing en un entorno DevOps con metodologías ágiles y microservicios?
+
+A. Reducir la cantidad de código escrito por los desarrolladores.
+B. Validar la calidad del software de forma sistemática a lo largo del ciclo de vida del desarrollo.
+C. Eliminar por completo la necesidad de pruebas manuales.
+D. Acelerar la publicación de nuevas funcionalidades sin considerar la calidad.
+
+✅ Correcta: B
+🧾 Explicación: La automatización de testing en DevOps busca asegurar la calidad del software de manera continua e integrada en el proceso de desarrollo.
+🧠 Pregunta 2
+¿Qué tipo de pruebas se encargan de verificar el comportamiento de funciones y módulos de manera aislada?
+
+A. Pruebas de aceptación.
+B. Pruebas end-to-end.
+C. Pruebas de integración.
+D. Pruebas unitarias.
+
+✅ Correcta: D
+🧾 Explicación: Las pruebas unitarias se enfocan en la validación individual de los componentes más pequeños del software.
+🧠 Pregunta 3
+¿Qué principio SOLID se relaciona con la idea de que un test debe responder a una sola pregunta, evitando múltiples aserciones y lógica compleja?
+
+A. Principio de Inversión de Dependencias (DIP).
+B. Principio de Responsabilidad Única (SRP).
+C. Principio de Abierto/Cerrado (OCP).
+D. Principio de Sustitución de Liskov (LSP).
+
+✅ Correcta: B
+🧾 Explicación: El Principio de Responsabilidad Única (SRP) aplicado a las pruebas implica que cada test debe tener un único motivo para fallar.
+🧠 Pregunta 4
+¿Cómo ayuda la parametrización en el testing, como la ofrecida por pytest, a cumplir con el Principio Abierto/Cerrado (OCP)?
+
+A. Permite modificar la lógica de las pruebas directamente para cubrir nuevos casos.
+B. Facilita la adición de nuevos casos de prueba mediante la inclusión de más datos sin alterar el código del test.
+C. Asegura que todos los tests se ejecuten con la misma configuración.
+D. Reduce la necesidad de escribir pruebas para diferentes escenarios.
+
+✅ Correcta: B
+🧾 Explicación: La parametrización permite extender la cobertura de las pruebas añadiendo nuevos datos de entrada y resultados esperados sin necesidad de modificar la estructura del test.
+🧠 Pregunta 5
+¿Qué utilidad tiene create_autospec al aplicar el Principio de Sustitución de Liskov (LSP) en el testing?
+
+A. Permite crear mocks con comportamientos predefinidos complejos.
+B. Asegura que los dobles de prueba (mocks) respeten la interfaz exacta del componente real.
+C. Facilita la inyección de dependencias sin necesidad de definir interfaces.
+D. Acelera la creación de mocks al inferir automáticamente sus métodos.
+
+✅ Correcta: B
+🧾 Explicación: `create_autospec` fuerza que los mocks implementen la misma firma que la clase real, garantizando la sustituibilidad según el Principio de Sustitución de Liskov.
+🧠 Pregunta 6
+¿Qué ventaja ofrece el uso de fixtures pequeñas y composables en el testing, en relación con el Principio de Segregación de la Interfaz (ISP)?
+
+A. Reduce la cantidad total de fixtures necesarias en un proyecto.
+B. Permite que los tests dependan solo de las funcionalidades que realmente necesitan, evitando dependencias innecesarias.
+C. Asegura que todas las configuraciones necesarias estén disponibles en una única fixture.
+D. Facilita la reutilización de configuraciones complejas entre diferentes tests.
+
+✅ Correcta: B
+🧾 Explicación: Al crear fixtures con interfaces específicas, los tests solo dependen de lo que usan, disminuyendo el acoplamiento y cumpliendo con el Principio de Segregación de la Interfaz.
+🧠 Pregunta 7
+¿Cuál es el objetivo principal del Principio de Inversión de Dependencias (DIP) en el contexto del testing?
+
+A. Asegurar que las dependencias concretas se creen directamente dentro de las clases que las utilizan.
+B. Trasladar la responsabilidad de conocer las implementaciones concretas a un punto de ensamblaje externo, permitiendo la inyección de fakes o stubs en los tests.
+C. Evitar el uso de abstracciones y depender directamente de las implementaciones concretas para mayor eficiencia.
+D. Reducir la complejidad del código de producción al eliminar las interfaces.
+
+✅ Correcta: B
+🧾 Explicación: DIP promueve que las dependencias se inyecten externamente, lo que facilita el uso de implementaciones de prueba (fakes, stubs) en lugar de las reales.
+🧠 Pregunta 8
+¿Cómo contribuyen las fixtures de pytest a la aplicación del Principio de Inversión de Dependencias (DIP)?
+
+A. Definen la lógica de negocio directamente dentro de las funciones de prueba.
+B. Actúan como abstracciones que proporcionan las dependencias necesarias a los tests sin que estos conozcan los detalles de su creación o configuración.
+C. Aseguran que todas las dependencias se inicialicen al comienzo de cada sesión de prueba.
+D. Permiten acceder directamente a las variables de entorno y configuraciones del sistema.
+
+✅ Correcta: B
+🧾 Explicación: Las fixtures permiten que los tests declaren sus necesidades (las dependencias) sin especificar cómo se obtienen, lo cual es un aspecto clave de la Inversión de Dependencias.
+🧠 Pregunta 9
+¿Qué caracteriza a las fixtures "Constructor-like" en pytest y cómo se utilizan en entornos DevOps?
+
+A. Proporcionan funciones para parchear dinámicamente el comportamiento de las dependencias.
+B. Actúan como fábricas preconfiguradas que devuelven instancias listas para usar de componentes complejos, como clientes HTTP o conexiones a bases de datos.
+C. Implementan solo los métodos exigidos por la capa de dominio, siendo ligeras y aisladas.
+D. Permiten definir el orden en que se ejecutan los tests dentro de una clase o módulo.
+
+✅ Correcta: B
+🧾 Explicación: Las fixtures "Constructor-like" centralizan la creación y configuración de objetos complejos, facilitando la adaptación a diferentes entornos DevOps (local, CI, staging) mediante la configuración.
+🧠 Pregunta 10
+¿Cuál es la función principal de las fixtures "Setter-like" en pytest y en qué escenarios de testing son particularmente útiles?
+
+A. Devolver instancias preconfiguradas de dependencias para su uso directo en los tests.
+B. Exponer funciones u objetos para modificar dinámicamente el comportamiento de dependencias o el código bajo prueba, siendo útiles para simular fallos o escenarios de borde.
+C. Proporcionar implementaciones ligeras de interfaces para aislar los tests de dependencias externas.
+D. Definir el ciclo de vida de los recursos compartidos entre múltiples tests.
+
+✅ Correcta: B
+🧾 Explicación: Las fixtures "Setter-like" ofrecen la flexibilidad de alterar comportamientos durante la ejecución de un test, lo que es crucial para probar la robustez ante diferentes condiciones.
+🧠 Pregunta 11
+¿Qué ventaja ofrecen las fixtures "Interface-driven" en términos de velocidad y aislamiento en las pruebas?
+
+A. Permiten interactuar con servicios externos reales para pruebas de integración más completas.
+B. Cargan todas las librerías y dependencias necesarias al inicio de la sesión de pruebas para un acceso rápido.
+C. Proporcionan implementaciones mínimas (fakes o stubs) que satisfacen solo la interfaz pública esperada, evitando la carga de librerías pesadas y la necesidad de conexiones externas.
+D. Aseguran que las pruebas se ejecuten en un orden específico para mantener la coherencia del estado.
+
+✅ Correcta: C
+🧾 Explicación: Al ser implementaciones ligeras y enfocadas en la interfaz, las fixtures "Interface-driven" minimizan el consumo de recursos y aíslan los tests de dependencias complejas, acelerando su ejecución.
+🧠 Pregunta 12
+¿Cómo se puede lograr la reutilización del código de test en diferentes etapas de un pipeline DevOps (unit vs. integration) utilizando fixtures de pytest?
+A. Escribiendo funciones de prueba separadas para cada etapa con la misma lógica pero diferentes configuraciones.
+B. Utilizando condicionales dentro de las funciones de prueba para adaptar su comportamiento según la etapa del pipeline.
+C. Creando fixtures que adaptan su implementación (de stubs a instancias reales con contenedores) basándose en variables de entorno o flags de configuración del pipeline.
+D. Ejecutando siempre todas las pruebas en todas las etapas del pipeline para asegurar la máxima cobertura.
+
+✅ Correcta: C
+🧾 Explicación: La clave para la reutilización está en la configuración dinámica de las fixtures, que pueden proporcionar stubs en pruebas unitarias y conexiones reales en pruebas de integración, manteniendo la misma lógica de aserciones en los tests.
+
+🧠 Pregunta 13
+¿Qué principio SOLID se ve reforzado al utilizar pytest-cov para establecer umbrales de cobertura automática en el pipeline de pruebas?
+
+A. Principio de Responsabilidad Única (SRP).
+B. Principio de Abierto/Cerrado (OCP).
+C. Principio de Sustitución de Liskov (LSP).
+D. Ninguno directamente, pero fomenta la calidad general del código probado.
+
+✅ Correcta: D
+🧾 Explicación: Si bien `pytest-cov` no se alinea directamente con un principio SOLID específico, ayuda a asegurar que el código esté adecuadamente probado, lo que indirectamente apoya los objetivos de estos principios (como la robustez y la mantenibilidad).
+🧠 Pregunta 14
+¿Cuál es la estrategia "Boy-Scout" mencionada en el texto para refactorizar suites de pruebas heredadas?
+
+A. Eliminar todas las pruebas acopladas y lentas de una sola vez.
+B. Refactorizar completamente un módulo de código y su test correspondiente en cada sprint.
+C. Identificar el test correspondiente a cada módulo de código tocado y aplicar principios SOLID de forma progresiva.
+D. Documentar las pruebas heredadas sin modificarlas para entender su funcionamiento.
+
+✅ Correcta: C
+🧾 Explicación: La estrategia "Boy-Scout" implica mejorar gradualmente la suite de pruebas al refactorizar los tests relacionados con el código que se está modificando.
+🧠 Pregunta 15
+Según el texto, ¿hacia dónde traslada la responsabilidad de conocer las implementaciones concretas el Principio de Inversión de Dependencias (DIP)?
+
+A. Hacia las capas de alto nivel o reglas de negocio.
+B. Hacia los tests unitarios, que deben configurar las dependencias.
+C. Hacia un punto de ensamblaje externo, como los fixtures en pytest.
+D. Hacia las implementaciones concretas, que deben ser autoconfigurables.
+
+✅ Correcta: C
+🧾 Explicación: DIP promueve que la creación y configuración de las dependencias se realice en un lugar separado de la lógica de negocio, facilitando la sustitución de implementaciones en los tests.
+🧠 Pregunta 16
+¿De qué manera la declaración explícita de necesidades en los tests de pytest (a través de los nombres de las fixtures en la firma de la función) materializa el Principio de Inversión de Dependencias (DIP)?
+
+A. Obliga a los desarrolladores a crear mocks complejos para cada dependencia.
+B. Permite que los tests indiquen *qué* necesitan sin especificar *cómo* obtenerlo, delegando la creación de las dependencias a pytest.
+C. Asegura que todas las dependencias se resuelvan al inicio de la sesión de pruebas.
+D. Reduce la necesidad de definir explícitamente las dependencias en los tests.
+
+✅ Correcta: B
+🧾 Explicación: Al declarar las dependencias como parámetros de las funciones de prueba, se establece una abstracción (la fixture) sin que el test se preocupe por la implementación concreta.
+🧠 Pregunta 17
+¿Qué beneficio principal se obtiene al centralizar la lógica de preparación y liberación de recursos dentro de las fixtures de pytest, en lugar de hacerlo directamente en los tests?
+
+A. Acelera la ejecución de las pruebas al evitar la repetición de código de setup.
+B. Permite versionar, revisar y endurecer la lógica de setup y teardown de manera similar a otros artefactos de la infraestructura.
+C. Asegura que los recursos se liberen automáticamente después de cada test, incluso en caso de fallo.
+D. Facilita la creación de entornos de prueba más complejos y personalizados para cada test.
+
+✅ Correcta: B
+🧾 Explicación: Centralizar la lógica en fixtures mejora la mantenibilidad y la seguridad del código de prueba, permitiendo un tratamiento consistente de la preparación y limpieza de los recursos.
+🧠 Pregunta 18
+¿Cuál de las siguientes NO es una característica clave de las fixtures "Constructor-like" en pytest mencionada en el texto?
+
+A. Inicialización única por sesión o módulo.
+B. Reutilización a nivel de suite de pruebas.
+C. Flexibilidad puntual para modificar el estado durante el test.
+D. Configuración centralizada de los objetos creados.
+
+✅ Correcta: C
+🧾 Explicación: La flexibilidad puntual para modificar el estado es una característica de las fixtures "Setter-like", no de las "Constructor-like", que se centran en la creación y configuración inicial de objetos.
+🧠 Pregunta 19
+¿En qué se diferencian principalmente las fixtures "Setter-like" de las "Constructor-like" en pytest?
+
+A. Las "Setter-like" crean instancias de objetos, mientras que las "Constructor-like" modifican su comportamiento.
+B. Las "Setter-like" tienen un scope más amplio (sesión o módulo) que las "Constructor-like" (función).
+C. Las "Setter-like" proporcionan funciones para parchear o ajustar comportamientos dinámicamente, mientras que las "Constructor-like" devuelven instancias ya configuradas.
+D. Las "Setter-like" se utilizan principalmente en pruebas de integración, y las "Constructor-like" en pruebas unitarias.
+
+✅ Correcta: C
+🧾 Explicación: La distinción clave radica en su propósito: las "Setter-like" modifican el comportamiento, y las "Constructor-like" crean y configuran objetos.
+🧠 Pregunta 20
+¿Qué ventaja principal ofrecen las fixtures "Interface-driven" en términos de recursos y dependencias en el testing?
+
+A. Permiten simular interacciones complejas con múltiples servicios externos.
+B. Requieren la configuración de bases de datos y otros servicios para su funcionamiento.
+C. Consumen pocos recursos y no necesitan conexiones externas al limitarse a implementaciones mínimas (fakes o stubs).
+D. Aseguran que las pruebas se ejecuten en el mismo entorno que la aplicación en producción.
+
+✅ Correcta: C
+🧾 Explicación: La ligereza y el aislamiento de las "Interface-driven" fixtures las hacen ideales para pruebas rápidas y confiables sin dependencias externas.
+🧠 Pregunta 21
+¿Cómo se relaciona el uso de fixtures "Interface-driven" con el Principio de Sustitución de Liskov (LSP)?
+
+A. Aseguran que los fakes o stubs creados por estas fixtures tengan un comportamiento idéntico a las implementaciones reales.
+B. Definen claramente las interfaces que deben cumplir las dependencias, permitiendo la intercambiabilidad de implementaciones.
+C. Facilitan la inyección de diferentes implementaciones de una interfaz sin necesidad de modificar los tests.
+D. Permiten probar diferentes escenarios de error al simular fallos en las implementaciones de las interfaces.
+
+✅ Correcta: B
+🧾 Explicación: Al proporcionar implementaciones que cumplen con las interfaces esperadas, las "Interface-driven" fixtures permiten sustituir las implementaciones reales por fakes o stubs sin que los tests lo noten, lo cual es fundamental para LSP.
+🧠 Pregunta 22
+En una etapa de pruebas unitarias de un pipeline DevOps, ¿qué tipo de fixtures serían más apropiadas para maximizar la velocidad de ejecución según el texto?
+
+A. Fixtures "Constructor-like" que levantan contenedores Docker.
+B. Fixtures "Setter-like" que parchean llamadas a servicios externos con stubs.
+C. Fixtures "Interface-driven" que proporcionan implementaciones ligeras en memoria.
+D. Tanto las fixtures "Setter-like" como las "Interface-driven".
+
+✅ Correcta: D
+🧾 Explicación: Ambas ("Setter-like" para simular dependencias y "Interface-driven" para proporcionar implementaciones ligeras) contribuyen a la rapidez de las pruebas unitarias al evitar la interacción con sistemas externos o la inicialización de componentes pesados.
+🧠 Pregunta 23
+¿Cómo se pueden reutilizar las fixtures "Constructor-like" en diferentes etapas del pipeline (por ejemplo, unit e integración) para interactuar con diferentes entornos (stubs vs. contenedores reales)?
+
+A. Creando fixtures completamente separadas para cada entorno.
+B. Utilizando condicionales dentro de la fixture para determinar qué tipo de instancia crear basándose en variables de entorno o flags de configuración.
+C. Asegurando que las fixtures siempre devuelvan stubs, independientemente del entorno.
+D. Modificando directamente el código de las fixtures antes de cada ejecución del pipeline.
+
+✅ Correcta: B
+🧾 Explicación: La adaptación basada en el entorno permite que la misma fixture proporcione diferentes implementaciones (stubs para unit tests, clientes reales para integración) sin necesidad de duplicar código de prueba.
+🧠 Pregunta 24
+Según el texto, ¿qué tipo de pruebas se benefician más del uso de fixtures "Constructor-like" que levantan contenedores Docker en la etapa de integración de un pipeline DevOps?
+
+A. Pruebas unitarias que necesitan un entorno aislado.
+B. Pruebas de rendimiento que requieren simular carga real.
+C. Pruebas de integración que verifican la interacción entre diferentes servicios.
+D. Pruebas de interfaz de usuario que necesitan un navegador web específico.
+
+✅ Correcta: C
+🧾 Explicación: Las fixtures "Constructor-like" que gestionan contenedores son ideales para las pruebas de integración, ya que permiten levantar las dependencias necesarias (bases de datos, colas, etc.) en un entorno controlado y efímero.
+🧠 Pregunta 25
+¿De qué manera la abstracción lograda mediante el uso de fixtures contribuye a la reutilización del código de test en diferentes etapas del pipeline?
+
+A. Permite que las funciones de prueba sean más específicas y dependan de menos fixtures.
+B. Asegura que cada test se ejecute en un entorno completamente aislado, evitando dependencias entre pruebas.
+C. Permite que el mismo conjunto de tests (funciones y aserciones) se ejecute con diferentes implementaciones de las dependencias proporcionadas por las fixtures (stubs vs. reales).
+D. Reduce la necesidad de escribir aserciones detalladas al confiar en el comportamiento predefinido de las fixtures.
+
+✅ Correcta: C
+🧾 Explicación: Al abstraer la obtención de las dependencias a través de fixtures, la lógica de los tests se mantiene independiente de la implementación concreta, lo que facilita su reutilización en diferentes contextos.
+🧠 Pregunta 26
+¿Qué ventaja ofrece la integración de métricas como la cobertura de código (pytest-cov) y el rendimiento (pytest-benchmark) en un pipeline SOLID de testing?
+
+A. Acelera la ejecución de las pruebas al optimizar la selección de casos de prueba.
+B. Genera automáticamente documentación detallada del código probado y su rendimiento.
+C. Permite establecer umbrales automáticos que pueden bloquear el pipeline si se detectan degradaciones o falta de cobertura, manteniendo la calidad sin intervención manual constante.
+D. Facilita la identificación de pruebas "flaky" al registrar la variabilidad en los tiempos de ejecución.
+
+✅ Correcta: C
+🧾 Explicación: La integración de métricas permite una vigilancia continua de la calidad y el rendimiento, automatizando la prevención de regresiones.
+🧠 Pregunta 27
+¿Cómo facilita una suite de pruebas bien diseñada bajo los principios SOLID la instrumentación de métricas como la cobertura y el rendimiento?
+
+A. Al organizar las pruebas en archivos separados por tipo (unit, integration, benchmark).
+B. Al hacer que cada prueba sea más compleja y evalúe múltiples aspectos del código simultáneamente.
+C. Al tener pruebas más enfocadas y modulares, lo que permite analizar la cobertura y el rendimiento de unidades específicas de manera más clara.
+D. Al reducir la cantidad total de código de prueba necesario para una cobertura completa.
+
+✅ Correcta: C
+🧾 Explicación: La claridad y el enfoque de las pruebas SOLID facilitan el análisis de métricas específicas por componente o funcionalidad.
+🧠 Pregunta 28
+¿Qué significa el término "flakiness" en el contexto de las pruebas automatizadas y cómo podría una suite bien diseñada bajo principios SOLID ayudar a mitigar este problema?
+
+A. Se refiere a la lentitud en la ejecución de las pruebas, y SOLID ayuda a optimizar el rendimiento.
+B. Describe pruebas que producen resultados inconsistentes (pasan o fallan sin cambios en el código), y SOLID, al promover el aislamiento y la claridad, reduce las dependencias ocultas y los efectos secundarios que pueden causar flakiness.
+C. Se refiere a la falta de cobertura de código, y SOLID guía sobre cómo escribir pruebas más exhaustivas.
+D. Describe pruebas que son difíciles de entender y mantener, y SOLID promueve la claridad y la simplicidad.
+
+✅ Correcta: B
+🧾 Explicación: La flakiness a menudo se debe a dependencias no gestionadas o efectos secundarios inesperados. Los principios SOLID, al fomentar el aislamiento y la claridad, ayudan a construir pruebas más deterministas.
+
+🧠 Pregunta 29
+¿Cuál es el principio fundamental detrás de la Inversión de Dependencias (DIP) aplicado al diseño de software y cómo se manifiesta en el testing a través de fixtures?
+
+A. Las clases de alto nivel deben depender de clases de bajo nivel. En testing, esto significa usar las implementaciones reales en las pruebas.
+B. Las clases de bajo nivel deben depender de clases de alto nivel. En testing, esto implica mockear las dependencias de la lógica de negocio.
+C. Las abstracciones no deben depender de los detalles. Los detalles deben depender de las abstracciones. En testing, esto se traduce en que los tests interactúan con abstracciones (fixtures) sin conocer los detalles de las implementaciones reales.
+D. Las abstracciones deben depender de los detalles. Los detalles no deben depender de las abstracciones. En testing, esto sugiere que los tests deben conocer las implementaciones concretas para ser precisos.
+
+✅ Correcta: C
+🧾 Explicación: DIP invierte la dependencia tradicional, haciendo que las capas de alto nivel dependan de abstracciones, no de implementaciones concretas. En testing, las fixtures actúan como estas abstracciones.
+🧠 Pregunta 30
+¿Cómo contribuye la elasticidad de los entornos efímeros en un pipeline DevOps a la efectividad de las pruebas que utilizan fixtures con Inversión de Dependencias (DIP)?
+
+A. Reduce la necesidad de usar stubs y mocks, ya que siempre se dispone de entornos reales.
+B. Permite que las mismas fixtures se configuren dinámicamente mediante variables de entorno para interactuar con diferentes tipos de entornos (embebidos, contenedores, gestionados) en distintas fases del pipeline.
+C. Asegura que todas las pruebas se ejecuten en el mismo entorno de producción para mayor realismo.
+D. Simplifica la gestión de secretos y credenciales al estar todo centralizado en el entorno efímero.
+
+✅ Correcta: B
+🧾 Explicación: La capacidad de configurar las fixtures según el entorno permite una gran flexibilidad y reutilización de las pruebas a lo largo del ciclo de vida del desarrollo.
+🧠 Pregunta 31
+¿De qué manera la instrumentación de un cliente HTTP con cabeceras de trace-id dentro de una fixture contribuye a la observabilidad y trazabilidad en un entorno DevOps?
+
+A. Permite que los tests se ejecuten más rápido al reducir la sobrecarga de las peticiones HTTP.
+B. Asegura que todas las peticiones HTTP realizadas durante la ejecución de los tests contengan información para correlacionarlas con métricas de latencia y otros datos en el stack de observabilidad.
+C. Simplifica la configuración de la autenticación y autorización para las llamadas a servicios externos.
+D. Genera automáticamente documentación sobre las interacciones HTTP realizadas por los tests.
+
+✅ Correcta: B
+🧾 Explicación: La inclusión de `trace-id` en las peticiones HTTP facilita el seguimiento de las transacciones a través de diferentes servicios, lo que es crucial para el diagnóstico y la monitorización.
+🧠 Pregunta 32
+¿Cómo puede la Inversión de Dependencias (DIP) a través de fixtures facilitar la gobernanza de datos en un pipeline DevOps, especialmente en lo referente a la protección de información sensible (PII)?
+
+A. Al forzar el uso de datos reales de producción en todas las etapas del pipeline para detectar problemas reales.
+B. Al permitir que las fixtures elijan dinámicamente entre un dataset anonimizado para pre-producción y un generador sintético de registros GDPR-safe para CI, garantizando el cumplimiento normativo sin exponer PII.
+C. Al cifrar automáticamente todos los datos utilizados por las pruebas en todas las etapas del pipeline.
+D. Al limitar el acceso a los datos de prueba solo a los desarrolladores autorizados.
+
+✅ Correcta: B
+🧾 Explicación: DIP permite inyectar diferentes implementaciones de la gestión de datos según el entorno, asegurando la protección de datos sensibles en las etapas adecuadas del pipeline.
+🧠 Pregunta 33
+¿Qué son las estrategias "chaos-friendly" en el contexto del testing y cómo pueden las fixtures parametrizadas contribuir a su implementación en un pipeline DevOps?
+
+A. Son estrategias para acelerar la ejecución de las pruebas mediante la paralelización masiva. Las fixtures parametrizadas permiten definir diferentes configuraciones de paralelización.
+B. Son estrategias para simular fallos e inestabilidad en las dependencias para validar la resiliencia de la aplicación. Las fixtures parametrizadas pueden envolver las dependencias con proxies que introducen fallos probabilísticos.
+C. Son estrategias para reducir la complejidad del código de prueba mediante la abstracción de las interacciones con las dependencias. Las fixtures parametrizadas simplifican la creación de mocks.
+D. Son estrategias para mejorar la cobertura del código mediante la generación automática de casos de prueba. Las fixtures parametrizadas permiten definir diferentes escenarios de entrada.
+
+✅ Correcta: B
+🧾 Explicación: Las pruebas de caos buscan verificar cómo la aplicación se comporta ante fallos. Las fixtures parametrizadas pueden inyectar proxies que simulan estos fallos de manera controlada.
+🧠 Pregunta 34
+¿Cómo puede la Inversión de Dependencias (DIP) a través de fixtures facilitar el versionado progresivo de librerías de dominio en un pipeline DevOps?
+
+A. Al obligar a detener el desarrollo funcional hasta que todas las dependencias se hayan actualizado a la nueva versión.
+B. Al permitir la creación de fixtures "adaptadoras" que implementan ambas versiones de una interfaz, ejecutando los tests contra cada versión para detectar incompatibilidades.
+C. Al eliminar la necesidad de actualizar las dependencias hasta que todos los tests hayan sido migrados a la nueva versión.
+D. Al generar automáticamente código de adaptación entre diferentes versiones de las dependencias.
+
+✅ Correcta: B
+🧾 Explicación: Las fixtures adaptadoras actúan como un puente entre las diferentes versiones de una dependencia, permitiendo una transición gradual y la detección temprana de problemas de compatibilidad.
+🧠 Pregunta 35
+¿Cuál de los principios SOLID se alinea más directamente con la idea de que los tests deben formular sus expectativas respecto a contratos semánticos (fixtures) y no respecto a tipos concretos ni detalles de infraestructura?
+
+A. Principio de Responsabilidad Única (SRP).
+B. Principio de Abierto/Cerrado (OCP).
+C. Principio de Sustitución de Liskov (LSP).
+D. Principio de Inversión de Dependencias (DIP).
+
+✅ Correcta: D
+🧾 Explicación: DIP promueve la dependencia de abstracciones (contratos definidos por las fixtures) en lugar de implementaciones concretas.
+🧠 Pregunta 36
+¿Cómo contribuye el Principio de Responsabilidad Única (SRP) aplicado al diseño de fixtures a la mantenibilidad y legibilidad de la suite de pruebas?
+
+A. Asegura que cada fixture proporcione todas las dependencias necesarias para un grupo de tests relacionados.
+B. Permite que cada fixture se centre en una única responsabilidad operativa (por ejemplo, abrir una conexión a la base de datos o autenticar a un usuario), manteniendo los tests pequeños y fáciles de entender.
+C. Reduce la cantidad total de fixtures necesarias al combinar funcionalidades relacionadas en una sola fixture.
+D. Facilita la reutilización de fixtures complejas en diferentes partes de la suite de pruebas.
+
+✅ Correcta: B
+🧾 Explicación: Fixtures con una única responsabilidad son más fáciles de entender, mantener y reutilizar, lo que mejora la calidad general de la suite de pruebas.
+🧠 Pregunta 37
+¿De qué manera el Principio de Abierto/Cerrado (OCP) se aplica al diseño de fixtures en pytest cuando se necesita soportar un nuevo backend o una nueva variante de inyección de dependencias?
+
+A. Se modifica la fixture existente para incluir la lógica del nuevo backend o variante de inyección.
+B. Se crea una nueva fixture que reemplaza la existente con la lógica para el nuevo backend o variante.
+C. Se añade una ruta condicional a la fixture existente o se crea una fixture adicional sin necesidad de modificar los tests ya aprobados.
+D. Se requiere la modificación de todos los tests que utilizan la fixture para que sean compatibles con el nuevo backend o variante.
+
+✅ Correcta: C
+🧾 Explicación: OCP busca extender la funcionalidad sin modificar el código existente. En el caso de las fixtures, esto implica añadir nuevas capacidades sin romper los tests que ya funcionan.
+🧠 Pregunta 38
+¿Cómo se relaciona el Principio de Sustitución de Liskov (LSP) con el diseño de fixtures "fake" o "spy" en pytest?
+
+A. Asegura que estos tipos de fixtures tengan un rendimiento similar a las implementaciones reales.
+B. Garantiza que cumplan la misma interfaz mínima que el recurso de producción, permitiendo su intercambiabilidad sin afectar el comportamiento de los tests.
+C. Facilita la inspección del estado interno de las dependencias durante la ejecución de los tests.
+D. Permite simular fallos complejos en las dependencias para probar la robustez del código.
+
+✅ Correcta: B
+🧾 Explicación: LSP establece que los subtipos deben ser sustituibles por sus tipos base. En testing, esto significa que los fakes o spies deben comportarse de manera compatible con las dependencias reales.
+🧠 Pregunta 39
+¿Cómo contribuye el Principio de Segregación de la Interfaz (ISP) al diseño de fixtures en pytest?
+
+A. Fomenta la creación de fixtures grandes que proporcionen todas las dependencias posibles para un grupo de tests.
+B. Promueve la creación de fixtures que exponen solo la funcionalidad que la capa de negocio invoca, minimizando el acoplamiento y evitando exponer funcionalidad innecesaria.
+C. Asegura que todas las fixtures tengan el mismo ciclo de vida y scope dentro de la suite de pruebas.
+D. Facilita la compartición de la misma instancia de una dependencia entre múltiples tests.
+
+✅ Correcta: B
+🧾 Explicación: ISP aboga por interfaces específicas para los clientes. En el caso de las fixtures, esto significa que cada fixture debe proporcionar solo lo necesario para los tests que la utilizan.
+🧠 Pregunta 40
+¿Cuál es el objetivo principal de integrar la Inversión de Dependencias (DIP) en los pipelines DevOps a través del uso de fixtures?
+
+A. Reducir la cantidad de código de prueba necesario para una cobertura completa.
+B. Acelerar la ejecución de las pruebas al eliminar la necesidad de configurar entornos complejos.
+C. Habilitar pipelines reproducibles, enriquecer la observabilidad y acelerar la detección de regresiones, al tiempo que se facilita el despliegue continuo confiable.
+D. Asegurar que todas las pruebas se ejecuten en un entorno lo más similar posible al de producción.
+
+✅ Correcta: C
+🧾 Explicación: La integración de DIP con fixtures busca mejorar la robustez, la mantenibilidad y la eficiencia de todo el proceso de desarrollo y despliegue.
+🧠 Pregunta 41
+¿Qué papel juegan las variables de entorno en la configuración dinámica de fixtures "Constructor-like" para diferentes etapas de un pipeline DevOps?
+
+A. Se utilizan para definir el orden en que se ejecutan las fixtures.
+B. Permiten especificar los nombres de los servicios y las credenciales necesarias para interactuar con los diferentes entornos (local, CI, staging).
+C. Controlan el scope (función, módulo, sesión) de las fixtures.
+D. Definen las marcas (marks) que se pueden utilizar para seleccionar subconjuntos de tests.
+
+✅ Correcta: B
+🧾 Explicación: Las variables de entorno proporcionan una forma flexible de configurar las fixtures para que apunten a los recursos correctos en cada etapa del pipeline.
+🧠 Pregunta 42
+¿Cómo contribuye la instrumentación de fixtures con etiquetas o spans a la observabilidad dentro de un pipeline DevOps?
+
+A. Permite visualizar la topología de las dependencias entre diferentes fixtures.
+B. Facilita la correlación de las acciones realizadas por los tests con métricas de latencia y otros datos de rendimiento en las herramientas de monitorización.
+C. Asegura que los logs generados por los tests se almacenen en un formato estandarizado.
+D. Permite la creación de dashboards personalizados con el estado de ejecución de las fixtures.
+
+✅ Correcta: B
+🧾 Explicación: Las etiquetas y spans añaden contexto a las operaciones realizadas por las fixtures, lo que facilita el seguimiento y análisis del comportamiento del sistema durante las pruebas.
+🧠 Pregunta 43
+¿De qué manera el uso de fixtures con Inversión de Dependencias (DIP) puede mejorar la seguridad en un pipeline DevOps en relación con la gestión de credenciales?
+
+A. Al codificar las credenciales directamente en las fixtures para facilitar su acceso.
+B. Al permitir que las fixtures obtengan las credenciales de mecanismos seguros como secret managers, en lugar de tenerlas directamente en el código de prueba.
+C. Al eliminar la necesidad de utilizar credenciales en los entornos de prueba.
+D. Al rotar automáticamente las credenciales después de cada ejecución de prueba.
+
+✅ Correcta: B
+🧾 Explicación: DIP facilita la separación de la lógica de prueba de la gestión de secretos, permitiendo que las fixtures obtengan las credenciales de forma segura.
+🧠 Pregunta 44
+¿Cómo facilita la Inversión de Dependencias (DIP) a través de fixtures la implementación de estrategias "chaos-friendly" en un pipeline DevOps para validar la resiliencia de la aplicación?
+
+A. Al simplificar la lógica de los tests para que sean menos propensos a fallar ante condiciones inesperadas.
+B. Al permitir la inyección de proxies o implementaciones alternativas de las dependencias que introducen comportamientos erráticos o latencia controlada.
+C. Al asegurar que todas las dependencias estén siempre disponibles y funcionando correctamente durante las pruebas.
+D. Al generar automáticamente informes detallados sobre los fallos detectados durante las pruebas de caos.
+
+✅ Correcta: B
+🧾 Explicación: DIP permite sustituir las implementaciones reales de las dependencias por versiones que simulan fallos, lo que es esencial para probar la resiliencia.
+🧠 Pregunta 45
+¿Qué ventaja ofrece la reutilización del mismo conjunto de tests en diferentes etapas del pipeline (unit e integración) mediante la configuración dinámica de fixtures?
+
+A. Reduce significativamente el tiempo total de ejecución del pipeline.
+B. Asegura que las pruebas unitarias y de integración siempre produzcan los mismos resultados.
+C. Permite una validación consistente de la lógica de negocio en diferentes niveles de integración, con la única diferencia en las implementaciones de las dependencias.
+D. Simplifica la creación de informes de cobertura al tener un único conjunto de tests.
+
+✅ Correcta: C
+🧾 Explicación: La reutilización de tests con diferentes configuraciones de fixtures asegura una validación coherente a lo largo del pipeline.
+🧠 Pregunta 46
+¿Cómo contribuye la abstracción lograda mediante fixtures a la escalabilidad de la suite de pruebas en un entorno DevOps con múltiples microservicios o repositorios?
+
+A. Al reducir la cantidad total de fixtures necesarias al hacerlas más genéricas.
+B. Al permitir añadir nuevas variantes de fixtures para nuevos microservicios sin necesidad de modificar los tests existentes que no dependen de ellos.
+C. Al asegurar que todas las fixtures se definan en un único lugar para facilitar su gestión.
+D. Al obligar a modificar todas las fixtures cada vez que se añade un nuevo microservicio.
+
+✅ Correcta: B
+🧾 Explicación: La abstracción a través de fixtures permite extender la suite de pruebas de forma modular, sin afectar el código de prueba existente.
+🧠 Pregunta 47
+¿Qué tipo de errores son más probables de identificar en las pruebas unitarias que utilizan fixtures con stubs e interfaces, en comparación con las pruebas de integración que utilizan contenedores reales?
+
+A. Problemas de configuración en los servicios externos.
+B. Incompatibilidades entre diferentes microservicios.
+C. Errores en la lógica de negocio pura dentro de los componentes individuales.
+D. Problemas de rendimiento y cuellos de botella en la infraestructura.
+
+✅ Correcta: C
+🧾 Explicación: Las pruebas unitarias se centran en la lógica interna de las unidades de código, mientras que las pruebas de integración se enfocan en las interacciones entre componentes.
+🧠 Pregunta 48
+¿Cómo facilita la práctica de la Inversión de Dependencias (DIP) con fixtures el mantenimiento de una suite de pruebas a largo plazo en un entorno DevOps en constante evolución?
+
+A. Al hacer que los tests dependan directamente de las implementaciones concretas, lo que facilita la detección de cambios en las dependencias.
+B. Al desacoplar los tests de los detalles de implementación de las dependencias, reduciendo el impacto de los cambios en las dependencias sobre los tests.
+C. Al obligar a reescribir todos los tests cada vez que una dependencia se actualiza.
+D. Al eliminar la necesidad de realizar pruebas cuando las dependencias no cambian.
+
+✅ Correcta: B
+🧾 Explicación: El desacoplamiento proporcionado por DIP hace que los tests sean más resilientes a los cambios en las dependencias, lo que facilita su mantenimiento.
+
+🧠 Pregunta 49
+¿Cuál es el beneficio de alcanzar un equilibrio entre velocidad y realismo en las pruebas dentro de un pipeline DevOps, y cómo contribuye la Inversión de Dependencias (DIP) a lograr este equilibrio?
+
+A. Un mayor realismo siempre es preferible, incluso si aumenta significativamente el tiempo de ejecución del pipeline. DIP ayuda a simular entornos de producción exactos.
+B. La velocidad es lo más importante para obtener feedback rápido. DIP permite ejecutar solo las pruebas más rápidas en cada commit.
+C. Un equilibrio permite obtener feedback rápido sobre la lógica de negocio (con pruebas rápidas y aisladas) y validar las interacciones en entornos más realistas (con pruebas de integración configurables mediante DIP), asegurando un flujo de entrega continuo y confiable.
+D. No es necesario un equilibrio; todas las pruebas deben ser tanto rápidas como completamente realistas. DIP no tiene un impacto significativo en esto.
+
+✅ Correcta: C
+🧾 Explicación: Un buen pipeline equilibra la rapidez de las pruebas unitarias (con DIP facilitando el aislamiento) con el realismo de las pruebas de integración (donde DIP permite configurar entornos más cercanos a producción).
+🧠 Pregunta 50
+En el contexto de un pipeline DevOps, ¿cómo la aplicación consistente de los principios SOLID al diseño de las pruebas, incluyendo la Inversión de Dependencias (DIP) a través de fixtures, impacta la confianza en los despliegues continuos?
+
+A. Disminuye la confianza al introducir más complejidad en el código de prueba.
+B. No tiene un impacto significativo en la confianza de los despliegues.
+C. Aumenta la confianza al asegurar que el software se valida de manera exhaustiva, modular y mantenible a lo largo del ciclo de vida del desarrollo, reduciendo el riesgo de regresiones y problemas en producción.
+D. Reduce la necesidad de realizar pruebas manuales después de los despliegues, lo que puede disminuir la confianza si no se detectan todos los problemas automáticamente.
+
+✅ Correcta: C
+🧾 Explicación: Una suite de pruebas bien diseñada bajo principios SOLID proporciona una validación robusta y confiable del software, lo que genera mayor confianza en la automatización de los despliegues continuos.

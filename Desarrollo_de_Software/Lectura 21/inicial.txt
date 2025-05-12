@@ -1,0 +1,549 @@
+🧠 Pregunta 1
+¿Cuál de las siguientes métricas ofrece una visión más precisa del comportamiento de las decisiones condicionales en el código?
+
+A. Cobertura de función
+B. Cobertura de sentencia
+C. Cobertura de línea
+D. Cobertura de rama
+
+✅ Correcta: D
+🧾 Explicación: La cobertura de rama verifica si cada camino posible (true/false) en decisiones condicionales ha sido ejecutado, lo que permite una validación más exhaustiva que simplemente ver si una línea se ejecutó.
+
+🧠 Pregunta 2
+¿Qué métrica DORA mide el tiempo desde que se realiza un commit hasta que el cambio está disponible en producción?
+
+A. Change Failure Rate
+B. Deployment Frequency
+C. Lead Time for Changes
+D. Mean Time to Recovery
+
+✅ Correcta: C
+🧾 Explicación: El "Lead Time for Changes" cuantifica la agilidad del equipo al medir cuánto tarda un cambio en pasar del commit a estar disponible para los usuarios.
+
+🧠 Pregunta 3
+¿Cuál de estas herramientas permite visualizar línea por línea los cambios en cobertura dentro de un Pull Request?
+
+A. Grafana
+B. pytest
+C. Coveralls
+D. Prometheus
+
+✅ Correcta: C
+🧾 Explicación: Coveralls es un servicio en la nube que muestra el diff de cobertura directamente en Pull Requests, ayudando a identificar qué líneas nuevas están cubiertas o no.
+
+🧠 Pregunta 4
+¿Qué opción describe mejor la utilidad del plugin pytest-benchmark?
+
+A. Ejecuta pruebas de integración
+B. Compara resultados de cobertura entre ramas
+C. Mide el rendimiento temporal de cada test
+D. Publica reportes de errores en GitHub
+
+✅ Correcta: C
+🧾 Explicación: pytest-benchmark mide tiempos de ejecución de tests, permitiendo detectar regresiones de rendimiento y generar estadísticas detalladas como p50, p95, p99.
+
+🧠 Pregunta 5
+¿Qué práctica permite desactivar una funcionalidad problemática sin necesidad de hacer un nuevo despliegue?
+
+A. Rollback manual
+B. Deploy canary
+C. Feature flag
+D. Refactor
+
+✅ Correcta: C
+🧾 Explicación: Los feature flags permiten activar o desactivar funcionalidades desde configuración, útil para revertir cambios en producción sin redeploy.
+
+🧠 Pregunta 6
+¿Qué métrica DORA refleja la estabilidad de los despliegues al medir qué porcentaje de ellos causa fallos en producción?
+
+A. MTTR
+B. Deployment Frequency
+C. Lead Time
+D. Change Failure Rate
+
+✅ Correcta: D
+🧾 Explicación: El "Change Failure Rate" indica cuántos despliegues resultan en errores o necesitan rollback, siendo clave para evaluar la estabilidad del pipeline.
+
+🧠 Pregunta 7
+¿Cuál es una ventaja de almacenar métricas en bases de datos de series de tiempo como Prometheus o InfluxDB?
+
+A. Permiten editar los logs del pipeline
+B. Ejecutan automáticamente todos los tests
+C. Soportan consultas temporales y dashboards
+D. Reemplazan al sistema de control de versiones
+
+✅ Correcta: C
+🧾 Explicación: Estas bases permiten almacenar datos cronológicos, hacer consultas como "promedios de 7 días" y construir dashboards visuales.
+
+🧠 Pregunta 8
+¿Qué acción automatizada se puede tomar si el tiempo de test supera en más de un 10% al benchmark anterior?
+
+A. El pipeline se reinicia automáticamente
+B. Se bloquea el merge del Pull Request
+C. Se duplican las pruebas de regresión
+D. Se elimina la rama en conflicto
+
+✅ Correcta: B
+🧾 Explicación: Usando pytest-benchmark --benchmark-fail-max-time-diff, el pipeline puede fallar si hay una regresión superior al umbral, bloqueando el merge.
+
+🧠 Pregunta 9
+¿Qué tipo de cobertura se enfoca en medir cuántas funciones o métodos han sido invocados por la suite de tests?
+
+A. Cobertura de sentencia
+B. Cobertura de línea
+C. Cobertura de función
+D. Cobertura de rama
+
+✅ Correcta: C
+🧾 Explicación: La cobertura de función asegura que cada función ha sido llamada al menos una vez, validando la ejecución de unidades conceptuales.
+
+🧠 Pregunta 10
+Según las métricas DORA, ¿cuál es el rango ideal del MTTR (Mean Time to Recovery) para un equipo considerado "Elite"?
+
+A. Más de una semana
+B. Menos de una hora
+C. Menos de 24 horas
+D. Entre 1 y 2 días
+
+✅ Correcta: B
+🧾 Explicación: Para un equipo Elite, el MTTR debe ser inferior a 1 hora, lo que indica alta capacidad de respuesta ante fallos en producción.
+
+🧠 Pregunta 11
+¿Cuál de las siguientes métricas se obtiene al dividir las líneas ejecutadas por las líneas totales en el código?
+
+A. Cobertura de función
+B. Cobertura de sentencia
+C. Cobertura de línea
+D. Cobertura de rama
+
+✅ Correcta: C
+🧾 Explicación: La cobertura de línea mide cuántas líneas de código han sido ejecutadas durante las pruebas, ofreciendo una primera aproximación del alcance de la suite.
+
+🧠 Pregunta 12
+¿Qué ventaja ofrece el uso de --benchmark-compare en pytest-benchmark?
+
+A. Identifica ramas no ejecutadas
+B. Genera automáticamente reportes HTML
+C. Permite comparar ejecuciones actuales con benchmarks anteriores
+D. Instala dependencias automáticamente
+
+✅ Correcta: C
+🧾 Explicación: La opción --benchmark-compare permite detectar si los tests actuales son más lentos o más rápidos que una ejecución base previamente guardada.
+
+🧠 Pregunta 13
+¿Cuál es el propósito de los percentiles (p50, p95, p99) en benchmarking?
+
+A. Determinar cobertura de línea
+B. Visualizar rutas de código no usadas
+C. Identificar la distribución de tiempos de ejecución
+D. Contar la cantidad de asserts por test
+
+✅ Correcta: C
+🧾 Explicación: Los percentiles muestran en qué tiempo se ubican la mayoría de las ejecuciones, ayudando a detectar outliers o regresiones.
+
+🧠 Pregunta 14
+¿Qué métrica evalúa el número de veces que un equipo despliega código en un periodo determinado?
+
+A. Deployment Frequency
+B. Change Failure Rate
+C. Lead Time
+D. Branch Coverage
+
+✅ Correcta: A
+🧾 Explicación: La Deployment Frequency mide la agilidad del equipo para entregar software en producción con frecuencia.
+
+🧠 Pregunta 15
+¿Cuál es una ventaja de usar microbenchmarking en pruebas?
+
+A. Reduce la cobertura de código
+B. Aumenta el uso de memoria
+C. Evalúa el rendimiento de funciones específicas sin interferencias
+D. Requiere menos líneas de test
+
+✅ Correcta: C
+🧾 Explicación: El microbenchmarking se enfoca en medir el rendimiento de funciones aisladas, evitando la contaminación de otros factores del entorno.
+
+🧠 Pregunta 16
+¿Qué plugin de pytest se utiliza para realizar benchmarking?
+
+A. pytest-profile
+B. pytest-cov
+C. pytest-benchmark
+D. pytest-metrics
+
+✅ Correcta: C
+🧾 Explicación: pytest-benchmark es el plugin oficial para medir y comparar tiempos de ejecución de tests con estadísticas avanzadas.
+
+🧠 Pregunta 17
+¿Cuál es el objetivo de la estrategia “no decrementar” en cobertura?
+
+A. Permitir que el coverage disminuya ligeramente
+B. Asegurar que la cobertura de código nunca disminuya tras un merge
+C. Evitar el uso de mocks y stubs
+D. Reducir el tiempo de ejecución del pipeline
+
+✅ Correcta: B
+🧾 Explicación: Esta estrategia impide aprobar cambios que reduzcan la cobertura existente en la rama principal, manteniendo altos estándares de calidad.
+
+🧠 Pregunta 18
+¿Cuál de los siguientes sistemas es una base de datos de series de tiempo útil para almacenar métricas CI/CD?
+
+A. MongoDB
+B. Redis
+C. InfluxDB
+D. SQLite
+
+✅ Correcta: C
+🧾 Explicación: InfluxDB está diseñado específicamente para almacenar y consultar datos de series de tiempo, como los generados en benchmarking.
+
+🧠 Pregunta 19
+¿Qué herramienta se usa comúnmente junto con Prometheus para crear dashboards visuales?
+
+A. JUnit
+B. Coveralls
+C. Grafana
+D. Docker
+
+✅ Correcta: C
+🧾 Explicación: Grafana es una herramienta de visualización de datos ampliamente utilizada para mostrar métricas de Prometheus y otros orígenes.
+
+🧠 Pregunta 20
+¿Cuál es una práctica recomendada para reducir el ruido estadístico en los resultados de benchmarking?
+
+A. Ejecutar los tests una sola vez
+B. Desactivar las fixtures
+C. Aumentar el número de repeticiones por prueba
+D. Ejecutar tests solo en horario nocturno
+
+✅ Correcta: C
+🧾 Explicación: Repetir los tests varias veces ayuda a obtener resultados más estables y confiables, reduciendo el impacto de variaciones aleatorias.
+
+🧠 Pregunta 21
+¿Qué métrica DORA refleja la capacidad del equipo para recuperarse de fallos?
+
+A. Branch Coverage
+B. MTTR
+C. Test Duration
+D. Deployment Frequency
+
+✅ Correcta: B
+🧾 Explicación: MTTR (Mean Time to Recovery) mide el tiempo promedio que tarda un equipo en restaurar el servicio después de un incidente en producción.
+
+🧠 Pregunta 22
+¿Para qué se usan los "Feature Flags" en un pipeline de despliegue?
+
+A. Para reducir la duración del test
+B. Para desactivar funcionalidades sin hacer un nuevo despliegue
+C. Para aumentar la cobertura de sentencia
+D. Para simular errores de producción
+
+✅ Correcta: B
+🧾 Explicación: Los feature flags permiten controlar el comportamiento del sistema en tiempo real, activando o desactivando funcionalidades sin necesidad de redeploy.
+
+🧠 Pregunta 23
+¿Cuál de estas opciones corresponde a un uso correcto de pytest para medir benchmark?
+
+A. pytest --test-benchmark
+B. pytest --cov=benchmark
+C. pytest --benchmark-only
+D. pytest --time-it
+
+✅ Correcta: C
+🧾 Explicación: La opción --benchmark-only permite ejecutar exclusivamente los tests que contienen mediciones de rendimiento.
+
+🧠 Pregunta 24
+¿Para qué se utiliza la opción --benchmark-fail-max-time-diff en pytest-benchmark?
+
+A. Para calcular cobertura de ramas
+B. Para detener pruebas lentas
+C. Para bloquear un merge si los tests son más lentos que el benchmark base
+D. Para generar reportes HTML
+
+✅ Correcta: C
+🧾 Explicación: Esta opción establece un umbral máximo de diferencia de tiempo respecto al benchmark guardado, fallando el test si se excede.
+
+🧠 Pregunta 25
+¿Qué tipo de cobertura considera la cantidad de sentencias ejecutables, incluso si están en una misma línea?
+
+A. Cobertura de línea
+B. Cobertura de rama
+C. Cobertura de función
+D. Cobertura de sentencia
+
+✅ Correcta: D
+🧾 Explicación: La cobertura de sentencia evalúa cada unidad ejecutable, lo que ofrece un análisis más detallado que simplemente contar líneas.
+
+🧠 Pregunta 26
+¿Qué acción puede automatizarse en GitHub Actions para bloquear un merge si la cobertura baja del umbral esperado?
+
+A. Crear un rollback
+B. Enviar un ticket a Jira
+C. Rechazar la Pull Request
+D. Notificar al Product Owner
+
+✅ Correcta: C
+🧾 Explicación: Si la cobertura de pruebas desciende por debajo del umbral establecido (por ejemplo, 80 %), GitHub Actions puede bloquear automáticamente el merge.
+
+🧠 Pregunta 27
+¿Cuál es un ejemplo de herramienta SaaS que permite monitorear y visualizar métricas DORA?
+
+A. Codecov
+B. SonarQube
+C. Datadog
+D. pytest
+
+✅ Correcta: C
+🧾 Explicación: Datadog es una herramienta SaaS que permite combinar métricas de CI/CD con trazas de aplicación para ofrecer una visión unificada del rendimiento.
+
+🧠 Pregunta 28
+¿Cuál es el componente más crítico para reducir el tiempo de diagnóstico durante un incidente?
+
+A. Tener más cobertura de línea
+B. Aumentar el número de pull requests
+C. Disponer de runbooks actualizados
+D. Usar print() en producción
+
+✅ Correcta: C
+🧾 Explicación: Los runbooks documentados permiten una rápida identificación y solución de problemas recurrentes, reduciendo el MTTR.
+
+🧠 Pregunta 29
+¿Cuál es una característica clave de la métrica "Function Coverage"?
+
+A. Valida la ejecución de condicionales
+B. Cuenta sentencias por línea
+C. Verifica si cada función ha sido ejecutada
+D. Evalúa performance del algoritmo
+
+✅ Correcta: C
+🧾 Explicación: La cobertura de función verifica que cada función o método haya sido llamado al menos una vez por la suite de pruebas.
+
+🧠 Pregunta 30
+¿Qué se busca evitar al configurar un "threshold global" de cobertura?
+
+A. Que se instalen nuevas dependencias
+B. Que se reduzca la cobertura general del código
+C. Que se cree una nueva rama
+D. Que se incrementen los errores de sintaxis
+
+✅ Correcta: B
+🧾 Explicación: El threshold global define el mínimo aceptable de cobertura para todo el repositorio y evita que nuevos cambios reduzcan la calidad.
+
+🧠 Pregunta 31
+¿Cuál es el objetivo de comparar benchmarks a lo largo del tiempo?
+
+A. Aumentar la cobertura de ramas
+B. Detectar regresiones de rendimiento
+C. Borrar datos antiguos
+D. Simplificar las pruebas
+
+✅ Correcta: B
+🧾 Explicación: Comparar benchmarks permite identificar si el código se ha vuelto más lento en nuevas versiones, lo que ayuda a prevenir degradaciones.
+
+🧠 Pregunta 32
+¿En qué casos se recomienda usar microbenchmarking?
+
+A. Cuando el test incluye muchas funciones
+B. Para medir el rendimiento aislado de una función crítica
+C. En pruebas de UI
+D. Para medir el uso de disco
+
+✅ Correcta: B
+🧾 Explicación: El microbenchmarking se enfoca en analizar funciones específicas con precisión, sin interferencias del resto del entorno de prueba.
+
+🧠 Pregunta 33
+¿Qué métrica se usa para representar la proporción de bifurcaciones de código cubiertas?
+
+A. Line coverage
+B. Function coverage
+C. Branch coverage
+D. Time coverage
+
+✅ Correcta: C
+🧾 Explicación: La cobertura de ramas mide si se han ejecutado todas las bifurcaciones de cada decisión lógica (if, else, bucles, etc.).
+
+🧠 Pregunta 34
+¿Cuál de los siguientes formatos permite exportar datos desde pytest-benchmark?
+
+A. CSV únicamente
+B. YAML
+C. JSON
+D. Markdown
+
+✅ Correcta: C
+🧾 Explicación: pytest-benchmark permite exportar sus resultados en formato JSON, ideal para integración con otras herramientas y visualizaciones.
+
+🧠 Pregunta 35
+¿Qué beneficio aporta parametrizar pruebas de rendimiento en pytest?
+
+A. Disminuye el uso de RAM
+B. Permite evaluar cómo escala el algoritmo con diferentes tamaños de entrada
+C. Reduce el tiempo de test
+D. Elimina la necesidad de fixtures
+
+✅ Correcta: B
+🧾 Explicación: La parametrización permite probar el rendimiento con múltiples tamaños de entrada, lo cual es útil para evaluar la escalabilidad.
+
+🧠 Pregunta 36
+¿Cuál es una recomendación clave al ejecutar benchmarks para asegurar resultados confiables?
+
+A. Ejecutarlos en horario laboral
+B. Mezclar pruebas funcionales y de rendimiento
+C. Aislar el entorno de ejecución
+D. Activar procesos en segundo plano
+
+✅ Correcta: C
+🧾 Explicación: Ejecutar los benchmarks en un entorno controlado y aislado minimiza la variabilidad y hace los resultados más precisos.
+
+🧠 Pregunta 37
+¿Cuál es una forma de monitorear la evolución del MTTR a lo largo del tiempo?
+
+A. Usar print() para imprimir logs
+B. Crear tickets manualmente
+C. Visualizar métricas en Grafana con series temporales
+D. Evaluar el número de ramas activas
+
+✅ Correcta: C
+🧾 Explicación: Grafana permite visualizar datos históricos como el MTTR usando dashboards interactivos con base en series temporales.
+
+🧠 Pregunta 38
+¿Qué ventaja tiene la integración de métricas con sistemas como Prometheus?
+
+A. Elimina pruebas redundantes
+B. Optimiza código duplicado
+C. Permite realizar alertas automáticas sobre umbrales
+D. Desactiva PRs con conflictos
+
+✅ Correcta: C
+🧾 Explicación: Prometheus permite definir reglas de alerta basadas en métricas y dispararlas cuando superan los límites definidos.
+
+🧠 Pregunta 39
+¿Cuál es el propósito de definir “Policies y SLOs para el pipeline”?
+
+A. Limitar el número de desarrolladores activos
+B. Crear ramas automáticas por cada commit
+C. Establecer objetivos medibles de rendimiento y calidad
+D. Forzar merges en horarios específicos
+
+✅ Correcta: C
+🧾 Explicación: Los SLOs (Service Level Objectives) ayudan a establecer expectativas sobre la calidad y velocidad del pipeline, y se usan como indicadores de salud.
+
+🧠 Pregunta 40
+¿Qué técnica permite desactivar un feature en caso de alta tasa de fallos?
+
+A. Refactor automático
+B. Feature flag dinámico
+C. Hotfix manual
+D. Restart de servicios
+
+✅ Correcta: B
+🧾 Explicación: Las feature flags dinámicas permiten desactivar automáticamente funcionalidades problemáticas ante métricas críticas como fallos o latencia alta.
+
+🧠 Pregunta 41
+¿Cuál de estas herramientas permite emitir métricas directamente desde el pipeline?
+
+A. Slack
+B. pytest
+C. python -m http.server
+D. GitHub Pages
+
+✅ Correcta: C
+🧾 Explicación: Se puede usar python -m http.server para exponer archivos como metrics.prom y permitir que Prometheus los scrapee.
+
+🧠 Pregunta 42
+¿Qué métrica se recomienda analizar con heatmaps o histogramas en Grafana?
+
+A. Número de ramas
+B. Duración de los tests
+C. Nombre del desarrollador
+D. Nombre del archivo test
+
+✅ Correcta: B
+🧾 Explicación: Las heatmaps o histogramas son útiles para visualizar la distribución del tiempo de ejecución de pruebas a lo largo de diferentes contextos.
+
+🧠 Pregunta 43
+¿Qué tipo de cobertura es más detallada que la cobertura de línea?
+
+A. Cobertura de test
+B. Cobertura de función
+C. Cobertura de sentencia
+D. Cobertura de métrica
+
+✅ Correcta: C
+🧾 Explicación: La cobertura de sentencia considera múltiples sentencias en una misma línea, haciendo su análisis más granular que la cobertura de línea.
+
+🧠 Pregunta 44
+¿Qué acción puede ejecutarse al superar el umbral de MTTR?
+
+A. Ejecutar comandos desde Slack (ChatOps)
+B. Ocultar métricas de producción
+C. Reiniciar la base de datos
+D. Eliminar tests lentos
+
+✅ Correcta: A
+🧾 Explicación: Con ChatOps, los equipos pueden reaccionar rápidamente a métricas críticas ejecutando scripts o comandos directamente desde Slack o Teams.
+
+🧠 Pregunta 45
+¿Qué información clave debe tener una métrica para ser útil en análisis multidimensional?
+
+A. Valor absoluto
+B. Descripción en inglés
+C. Etiquetas (labels) como branch, job_name o runner
+D. El nombre del autor del commit
+
+✅ Correcta: C
+🧾 Explicación: Las etiquetas permiten filtrar y correlacionar métricas según múltiples dimensiones del pipeline y del entorno de ejecución.
+
+🧠 Pregunta 46
+¿Qué formato se recomienda usar al emitir métricas para Prometheus?
+
+A. Markdown
+B. XML
+C. Prometheus exposition format
+D. YAML
+
+✅ Correcta: C
+🧾 Explicación: Prometheus utiliza un formato específico de exposición de métricas que puede ser scrapeado fácilmente desde archivos .prom.
+
+🧠 Pregunta 47
+¿Cuál es una herramienta de visualización que permite generar anotaciones sobre eventos relevantes?
+
+A. pytest
+B. New Relic
+C. Coveralls
+D. Grafana
+
+✅ Correcta: D
+🧾 Explicación: Grafana permite crear anotaciones verticales que indican eventos significativos como releases o cambios de infraestructura.
+
+🧠 Pregunta 48
+¿Qué herramienta permite detectar duplicación de código y complejidad junto con métricas de cobertura?
+
+A. InfluxDB
+B. pytest-benchmark
+C. SonarQube
+D. Prometheus
+
+✅ Correcta: C
+🧾 Explicación: SonarQube analiza la cobertura de pruebas y también la complejidad, duplicación de código, y otros aspectos de calidad estática del software.
+
+🧠 Pregunta 49
+¿Qué tipo de test se recomienda ejecutar progresivamente con distintos tamaños de entrada para evaluar escalabilidad?
+
+A. Test de UI
+B. Test de humo
+C. Test parametrizado
+D. Test de rollback
+
+✅ Correcta: C
+🧾 Explicación: Los tests parametrizados permiten evaluar el rendimiento de un componente bajo diferentes volúmenes de carga, midiendo así su escalabilidad.
+
+🧠 Pregunta 50
+¿Qué indicador podría disparar una alerta automática si supera el 20 % en la última semana?
+
+A. Lead Time
+B. MTTR
+C. Change Failure Rate
+D. Deployment Frequency
+
+✅ Correcta: C
+🧾 Explicación: El Change Failure Rate elevado indica inestabilidad en los despliegues y puede ser usado como condición para rechazar futuros despliegues automáticos.

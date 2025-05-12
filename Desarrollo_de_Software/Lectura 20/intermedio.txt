@@ -1,0 +1,549 @@
+🧠 Pregunta 1
+¿Cuál es el propósito principal de los mocks en las pruebas?
+
+A. Proveer datos deterministas al código bajo prueba.
+B. Simular dependencias y registrar interacciones.
+C. Implementar una versión simplificada de una dependencia real.
+D. Pasar objetos sin funcionalidad para completar parámetros.
+
+✅ Correcta: B
+🧾 Explicación: Los mocks no solo suministran respuestas, sino que también registran información sobre cómo se han llamado, lo que permite verificar las interacciones entre componentes.
+
+🧠 Pregunta 2
+¿Cuál de las siguientes NO es una característica clave de los stubs?
+
+A. Respuestas fijas.
+B. Simplicidad.
+C. Registro de llamadas.
+D. Velocidad.
+
+✅ Correcta: C
+🧾 Explicación: Los stubs se centran en proveer datos deterministas y son simples, rápidos y predecibles. No registran información sobre las llamadas.
+
+🧠 Pregunta 3
+¿Qué tipo de doble de prueba se utiliza para validar que un componente modifica el estado de otro objeto de forma adecuada, manteniendo la lógica original?
+
+A. Fake.
+B. Spy.
+C. Dummy.
+D. Mock.
+
+✅ Correcta: B
+🧾 Explicación: Los spies delegan las llamadas al objeto real y, además, "espían" qué métodos se invocan y con qué argumentos.
+
+🧠 Pregunta 4
+En el contexto de DevOps, ¿en qué etapa del pipeline se recomienda ejecutar tests unitarios ligeros con stubs?
+
+A. Pre-commit hooks.
+B. Build stage.
+C. Gate de integración.
+D. Despliegue en producción.
+
+✅ Correcta: A
+🧾 Explicación: Los tests unitarios ligeros con stubs permiten una retroalimentación rápida antes de que los cambios se integren.
+
+🧠 Pregunta 5
+¿Qué ventaja ofrece la escuela Mockist en comparación con la escuela Classical?
+
+A. Mayor confianza en la cohesión del sistema.
+B. Detección temprana de rupturas de interfaz.
+C. Mayor tiempo de ejecución.
+D. Mayor complejidad de mantenimiento.
+
+✅ Correcta: B
+🧾 Explicación: La escuela Mockist prioriza la velocidad y el aislamiento, lo que permite detectar cambios en las interfaces de forma inmediata.
+
+🧠 Pregunta 6
+¿Qué tipo de doble de prueba implementa una versión simplificada pero funcional de una dependencia real?
+
+A. Stub.
+B. Mock.
+C. Fake.
+D. Spy.
+
+✅ Correcta: C
+🧾 Explicación: Los fakes conservan parte de la lógica de producción, lo que permite realizar tests más cercanos a la realidad sin necesidad de desplegar servicios completos.
+
+🧠 Pregunta 7
+¿Cuál es el principal beneficio de utilizar mocks en las pruebas unitarias dentro de un pipeline de CI/CD?
+
+A. Asegurar la fidelidad de la implementación de las dependencias externas.
+B. Acelerar el feedback loop al eliminar la necesidad de interactuar con sistemas reales.
+C. Garantizar que las pruebas reflejen el comportamiento exacto del entorno de producción.
+D. Reducir la complejidad de la configuración de los entornos de prueba.
+
+✅ Correcta: B
+🧾 Explicación: Al simular las dependencias externas, los tests con mocks se ejecutan rápidamente y de forma aislada, proporcionando retroalimentación inmediata.
+
+🧠 Pregunta 8
+¿Qué permite verificar la propiedad side_effect de un mock?
+
+A. El número de veces que se llamó al mock.
+B. Los argumentos con los que se llamó al mock.
+C. Simular excepciones, retardos o devoluciones dinámicas.
+D. El valor de retorno del mock.
+
+✅ Correcta: C
+🧾 Explicación: side_effect en los mocks permite definir comportamientos más complejos que un simple valor de retorno, como lanzar excepciones o variar las respuestas en cada llamada.
+
+🧠 Pregunta 9
+¿Cuál es el propósito principal de un dummy en las pruebas?
+
+A. Verificar las interacciones con otras dependencias.
+B. Proveer datos de prueba específicos para diferentes escenarios.
+C. Cumplir con la firma de un método sin ser realmente utilizado.
+D. Simular el comportamiento de un sistema externo de manera realista.
+
+✅ Correcta: C
+🧾 Explicación: Los dummies son objetos sin funcionalidad que se pasan únicamente para completar la lista de parámetros de un método.
+
+🧠 Pregunta 10
+En la escuela Classical de testing, ¿cuál es la principal característica de las pruebas?
+
+A. Aislamiento estricto de cada unidad de código mediante mocks.
+B. Ejecución rápida y en milisegundos.
+C. Integración real de múltiples componentes en sus versiones reales.
+D. Verificación detallada de los contratos de interacción.
+
+✅ Correcta: C
+🧾 Explicación: La escuela Classical enfatiza la prueba del sistema con la mayor cantidad posible de componentes reales para asegurar la integridad.
+
+🧠 Pregunta 11
+¿Cuál es una desventaja clave de la escuela Mockist de testing?
+
+A. Mayor tiempo de ejecución de las pruebas.
+B. Complejidad en la configuración de los entornos de prueba.
+C. Posibilidad de falsos negativos en la integración.
+D. Dificultad para detectar rupturas en las interfaces.
+
+✅ Correcta: C
+🧾 Explicación: Al depender de simulaciones, las pruebas Mockist pueden no detectar problemas que surgen en la interacción con sistemas reales.
+
+🧠 Pregunta 12
+¿Qué utilidad tiene la parametrización de tests en pytest?
+
+A. Aislar completamente cada test para evitar dependencias.
+B. Ejecutar los tests en paralelo para reducir el tiempo total.
+C. Probar múltiples escenarios con un único bloque de código.
+D. Generar informes de cobertura detallados automáticamente.
+
+✅ Correcta: C
+🧾 Explicación: La parametrización permite ejecutar el mismo test con diferentes conjuntos de datos o configuraciones, aumentando la cobertura sin duplicar código.
+
+🧠 Pregunta 13
+¿Qué problema ayuda a resolver la técnica autospec al crear mocks?
+
+A. La lentitud en la creación de mocks complejos.
+B. La dificultad para verificar el número exacto de llamadas.
+C. La desincronización silenciosa cuando cambian las firmas de los métodos reales.
+D. La falta de soporte para simular métodos asíncronos.
+
+✅ Correcta: C
+🧾 Explicación: autospec crea mocks que respetan la firma de la implementación real, detectando llamadas con parámetros inválidos.
+
+🧠 Pregunta 14
+¿Para qué se utiliza la propiedad call_args_list de un mock?
+
+A. Para verificar si el mock fue llamado al menos una vez.
+B. Para obtener una lista de todas las llamadas realizadas al mock, con sus argumentos.
+C. Para simular una secuencia de valores de retorno diferentes.
+D. Para especificar los argumentos esperados en la última llamada al mock.
+
+✅ Correcta: B
+🧾 Explicación: call_args_list almacena un registro de todas las llamadas al mock, permitiendo inspeccionar el orden y los argumentos de cada una.
+
+🧠 Pregunta 15
+¿Cuál es la diferencia principal entre @pytest.mark.skip y @pytest.mark.xfail?
+
+A. skip se usa para marcar tests que fallan, mientras que xfail se usa para los que pasan inesperadamente.
+B. Los tests skip no se ejecutan y no se informan, mientras que los xfail se ejecutan y su resultado se informa.
+C. Los tests skip no se ejecutan pero se registran en el informe, mientras que los xfail se ejecutan y un fallo se considera esperado.
+D. skip se aplica a nivel de función, mientras que xfail se aplica a nivel de clase o módulo.
+
+✅ Correcta: C
+🧾 Explicación: skip se usa para pruebas que no son relevantes en ciertas condiciones, mientras que xfail se usa para pruebas que se espera que fallen (por un bug conocido, por ejemplo).
+
+🧠 Pregunta 16
+¿Cuál de las siguientes NO es una buena práctica al utilizar mocks y stubs en DevOps?
+
+A. Limitar la complejidad de los mocks para evitar simular toda la lógica.
+B. Asegurar que los tests sean no deterministas para cubrir una mayor variedad de escenarios.
+C. Documentar claramente el comportamiento simulado de los mocks y stubs.
+D. Revisar periódicamente la alineación de los mocks con las dependencias reales.
+
+✅ Correcta: B
+🧾 Explicación: Los tests deben ser deterministas para ser confiables y reproducibles. Depender de datos aleatorios o relojes del sistema introduce variabilidad.
+
+🧠 Pregunta 17
+En un pipeline de CI/CD, ¿qué beneficio aporta la integración de herramientas de cobertura como coverage.py con pytest?
+
+A. Permite visualizar el rendimiento de los tests a lo largo del tiempo.
+B. Asegura que un porcentaje mínimo del código esté cubierto por las pruebas.
+C. Facilita la creación y gestión de mocks y stubs complejos.
+D. Automatiza la ejecución de pruebas en diferentes entornos.
+
+✅ Correcta: B
+🧾 Explicación: Las herramientas de cobertura miden qué partes del código se ejecutan durante las pruebas, permitiendo establecer umbrales mínimos de cobertura.
+
+🧠 Pregunta 18
+¿Qué técnica de patching en Python permite sustituir un objeto o función solo dentro de un bloque de código específico?
+
+A. Decorador @patch.
+B. Context manager with patch(...).
+C. Fixture con monkeypatch.setattr.
+D. create_autospec.
+
+✅ Correcta: B
+🧾 Explicación: El context manager with patch(...) limita el alcance del parche al bloque de código dentro del with.
+
+🧠 Pregunta 19
+¿Cuál es el principal objetivo de utilizar mocks con lógica dinámica implementada a través de side_effect en un pipeline de CI/CD?
+
+A. Reducir el tiempo de ejecución de las pruebas unitarias.
+B. Simplificar la configuración de los entornos de prueba.
+C. Simular comportamientos de dependencias externas de forma realista, incluyendo errores y respuestas secuenciales.
+D. Aumentar la cobertura de código sin necesidad de escribir más tests.
+
+✅ Correcta: C
+🧾 Explicación: side_effect permite simular escenarios complejos como errores transitorios, paginación o validaciones dinámicas, aumentando la fiabilidad de las pruebas.
+
+🧠 Pregunta 20
+¿Qué métrica DORA podría verse afectada positivamente por una estrategia de pruebas bien implementada que incluya el uso efectivo de mocks y stubs?
+
+A. Frecuencia de despliegue.
+B. Tiempo de entrega de cambios.
+C. Tiempo medio de recuperación de incidentes.
+D. Tasa de cambio de fallos.
+
+✅ Correcta: D
+🧾 Explicación: Una buena estrategia de pruebas ayuda a detectar errores tempranamente, lo que debería reducir la cantidad de fallos que llegan a producción.
+
+🧠 Pregunta 21
+¿Qué diferencia fundamental existe entre un stub y un mock en cuanto a su uso en las pruebas?
+
+A. Los stubs verifican el comportamiento, mientras que los mocks solo proveen datos.
+B. Los mocks verifican las interacciones, mientras que los stubs solo proveen datos predefinidos.
+C. Los stubs son más complejos de implementar que los mocks.
+D. Los mocks se utilizan en pruebas de integración, mientras que los stubs en pruebas unitarias.
+
+✅ Correcta: B
+🧾 Explicación: Los mocks se centran en verificar cómo se interactúa con las dependencias, mientras que los stubs simplemente proporcionan respuestas controladas.
+
+🧠 Pregunta 22
+¿En qué situación sería más apropiado utilizar un fake en lugar de un mock o un stub?
+
+A. Cuando la dependencia externa es muy compleja y se necesita simular su comportamiento exacto.
+B. Cuando solo se necesita proveer una respuesta predefinida sin importar cómo se interactúe con la dependencia.
+C. Cuando se quiere verificar que se llama a la dependencia con argumentos específicos.
+D. Cuando se necesita una implementación simplificada pero funcional de la dependencia para pruebas de integración ligeras.
+
+✅ Correcta: D
+🧾 Explicación: Los fakes son útiles cuando se necesita mantener cierta lógica de la dependencia para que las pruebas sean más realistas sin la sobrecarga de la implementación completa.
+
+🧠 Pregunta 23
+¿Qué ventaja ofrece el uso de mocks en las pruebas unitarias en términos de aislamiento?
+
+A. Asegura que las pruebas se ejecuten en el mismo entorno que producción.
+B. Permite probar la unidad de código sin depender del estado o comportamiento de sus dependencias externas.
+C. Reduce el tiempo necesario para configurar los datos de prueba.
+D. Facilita la identificación de cuellos de botella en el rendimiento.
+
+✅ Correcta: B
+🧾 Explicación: Los mocks aíslan la unidad bajo prueba al simular el comportamiento de sus dependencias, haciendo que la prueba sea más enfocada y menos susceptible a fallos en otros componentes.
+
+🧠 Pregunta 24
+¿Cuál de las siguientes describe mejor el propósito de un spy en las pruebas?
+
+A. Reemplazar una dependencia con una implementación controlada y simplificada.
+B. Verificar las interacciones con una dependencia y su estado después de la interacción.
+C. Proveer datos predefinidos a la unidad bajo prueba.
+D. Actuar como un marcador de posición sin ninguna funcionalidad real.
+
+✅ Correcta: B
+🧾 Explicación: Un spy envuelve un objeto real, permitiendo observar cómo se interactúa con él y verificar su estado después de la interacción.
+
+🧠 Pregunta 25
+En el contexto de un pipeline de CI/CD, ¿cuál es el beneficio de ejecutar pruebas unitarias con mocks en las etapas tempranas?
+
+A. Permite detectar problemas de integración con servicios externos antes.
+B. Asegura que el código cumpla con los estándares de rendimiento de producción.
+C. Proporciona una retroalimentación rápida a los desarrolladores sobre la salud del código tras cada commit.
+D. Valida el despliegue correcto de la aplicación en diferentes entornos.
+
+✅ Correcta: C
+🧾 Explicación: La rapidez de ejecución de las pruebas unitarias con mocks facilita un feedback loop veloz, crucial para la integración continua.
+
+🧠 Pregunta 26
+¿Cuál es una limitación potencial del uso extensivo de mocks en las pruebas unitarias?
+
+A. Puede hacer que las pruebas sean más lentas de ejecutar.
+B. Puede llevar a pruebas que no reflejan con precisión el comportamiento en un entorno real.
+C. Dificulta la verificación de las interacciones entre diferentes componentes del sistema.
+D. Requiere una configuración más compleja de los entornos de prueba.
+
+✅ Correcta: B
+🧾 Explicación: Si los mocks no se configuran correctamente para simular el comportamiento real de las dependencias, las pruebas pueden pasar sin que el código funcione correctamente en un entorno integrado.
+
+🧠 Pregunta 27
+¿Qué funcionalidad de pytest permite ejecutar el mismo test con diferentes entradas y salidas esperadas?
+
+A. Fixtures.
+B. Marks (@pytest.mark).
+C. Parametrización (@pytest.mark.parametrize).
+D. Hooks.
+
+✅ Correcta: C
+🧾 Explicación: La parametrización es una característica clave de pytest para ejecutar un test múltiples veces con diferentes conjuntos de datos.
+
+🧠 Pregunta 28
+¿Cómo ayuda autospec a mejorar la mantenibilidad de las pruebas que utilizan mocks?
+
+A. Automatiza la creación de mocks basados en la documentación de las dependencias.
+B. Asegura que los mocks creados coincidan con la firma de las dependencias reales, evitando errores silenciosos.
+C. Permite generar mocks con comportamientos aleatorios para probar la robustez del sistema.
+D. Facilita la refactorización del código al proporcionar información sobre el uso de las dependencias.
+
+✅ Correcta: B
+🧾 Explicación: Al verificar la compatibilidad de la firma, autospec ayuda a que las pruebas fallen si la interfaz de la dependencia cambia, alertando sobre la necesidad de actualizar los mocks.
+
+🧠 Pregunta 29
+¿Qué información se puede inspeccionar utilizando la propiedad call_args_list de un mock?
+
+A. El número total de veces que se llamó al mock.
+B. Los argumentos de la última llamada al mock.
+C. Una lista de todas las llamadas al mock, incluyendo los argumentos posicionales y de palabra clave de cada una.
+D. Si el mock lanzó alguna excepción durante su ejecución.
+
+✅ Correcta: C
+🧾 Explicación: call_args_list proporciona un historial detallado de cada llamada al mock, con todos los argumentos utilizados.
+
+🧠 Pregunta 30
+¿En qué escenario sería más apropiado utilizar el marcador @pytest.mark.xfail en un flujo de CI/CD?
+
+A. Para marcar tests que siempre fallan y deben ignorarse.
+B. Para indicar tests que no son relevantes para la funcionalidad actual.
+C. Para señalar tests que se espera que fallen debido a un bug conocido o una funcionalidad incompleta, sin detener el pipeline.
+D. Para marcar tests que se ejecutan muy lentamente y deben omitirse en builds rápidos.
+
+✅ Correcta: C
+🧾 Explicación: @pytest.mark.xfail permite que el pipeline continúe incluso si estos tests fallan, pero informa sobre el estado esperado de fallo.
+
+🧠 Pregunta 31
+¿Cuál es una buena práctica para gestionar la complejidad de los mocks en las pruebas?
+
+A. Simular todos los posibles comportamientos de la dependencia para asegurar una cobertura completa.
+B. Utilizar mocks solo para las dependencias más críticas y utilizar objetos reales para las demás.
+C. Mantener los mocks simples y enfocados en el comportamiento necesario para la prueba específica, utilizando fakes o integraciones para escenarios más complejos.
+D. Generar mocks automáticamente a partir de las definiciones de las interfaces de las dependencias.
+
+✅ Correcta: C
+🧾 Explicación: Mocks complejos pueden volverse difíciles de mantener y pueden no reflejar con precisión el comportamiento real. Para escenarios complejos, a menudo es mejor usar fakes o realizar pruebas de integración.
+
+🧠 Pregunta 32
+¿Cómo contribuye una estrategia de pruebas bien definida con mocks y stubs a la filosofía "Shift-Left" en DevOps?
+
+A. Permite ejecutar pruebas más exhaustivas en las etapas finales del ciclo de desarrollo.
+B. Facilita la detección temprana de errores al permitir pruebas rápidas y aisladas en las etapas iniciales.
+C. Reduce la necesidad de pruebas de integración y de extremo a extremo.
+D. Automatiza la generación de documentación de las interfaces de las dependencias.
+
+✅ Correcta: B
+🧾 Explicación: Al permitir pruebas unitarias rápidas y aisladas, los mocks y stubs son fundamentales para la detección temprana de errores, moviendo las pruebas hacia la izquierda del ciclo de desarrollo.
+
+🧠 Pregunta 33
+¿Qué ventaja ofrece la técnica de "patching" en las pruebas con mocks?
+
+A. Permite modificar el comportamiento de objetos o funciones en tiempo de ejecución para simular dependencias.
+B. Facilita la creación de mocks que cumplen automáticamente con la interfaz de las dependencias.
+C. Permite verificar el número exacto de llamadas realizadas a una dependencia.
+D. Simplifica la configuración de los entornos de prueba al eliminar la necesidad de dependencias reales.
+
+✅ Correcta: A
+🧾 Explicación: Patching permite reemplazar temporalmente objetos o funciones con mocks dentro del alcance de una prueba.
+
+🧠 Pregunta 34
+¿Cuál es el beneficio de utilizar fixtures en pytest para la creación de mocks y stubs?
+
+A. Permite definir la configuración de los mocks y stubs de forma declarativa y reutilizable entre tests.
+B. Asegura que los mocks y stubs se creen en un orden específico antes de cada test.
+C. Facilita la ejecución de los mismos tests con diferentes implementaciones de mocks y stubs.
+D. Permite la generación automática de mocks y stubs basados en las dependencias del código bajo prueba.
+
+✅ Correcta: A
+🧾 Explicación: Las fixtures en pytest proporcionan una forma elegante y reutilizable de configurar el estado necesario para las pruebas, incluyendo la creación y configuración de mocks y stubs.
+
+🧠 Pregunta 35
+¿Qué información proporciona una herramienta de cobertura de código integrada con la ejecución de pruebas que utilizan mocks y stubs?
+
+A. El rendimiento de las pruebas en términos de tiempo de ejecución.
+B. La cantidad de código fuente que fue ejecutado por las pruebas.
+C. El número de interacciones verificadas con los mocks.
+D. La complejidad ciclomática del código probado.
+
+✅ Correcta: B
+🧾 Explicación: Las herramientas de cobertura miden qué líneas, ramas o funciones del código se ejecutan durante las pruebas, ayudando a identificar áreas no probadas.
+
+🧠 Pregunta 36
+¿Cómo puede la lógica dinámica en los mocks, implementada con side_effect, simular errores transitorios en un pipeline de CI/CD?
+
+A. Lanzando una excepción solo después de un cierto número de llamadas exitosas.
+B. Devolviendo un valor de error específico en cada llamada al mock.
+C. Lanzando una excepción en las primeras llamadas y luego devolviendo un valor exitoso para probar la lógica de reintento.
+D. Modificando los argumentos de las llamadas posteriores al mock.
+
+✅ Correcta: C
+🧾 Explicación: Simular errores transitorios permite probar la resiliencia del sistema ante fallos temporales de las dependencias.
+
+🧠 Pregunta 37
+¿Cuál es la principal ventaja de utilizar autospec en relación con el Principio de Inversión de Dependencias (DIP)?
+
+A. Reduce el acoplamiento al asegurar que el código dependa de abstracciones (interfaces) y que los mocks respeten esas interfaces.
+B. Facilita la creación de mocks que pueden ser inyectados en diferentes partes del sistema.
+C. Asegura que las dependencias concretas sean fácilmente reemplazables en tiempo de ejecución.
+D. Permite la creación automática de interfaces a partir de las implementaciones concretas.
+
+✅ Correcta: A
+🧾 Explicación: autospec ayuda a mantener la coherencia con las interfaces reales, promoviendo el DIP al asegurar que las dependencias se simulen correctamente según esas interfaces.
+
+🧠 Pregunta 38
+¿Qué tipo de verificación avanzada se puede realizar utilizando el historial de llamadas de un mock (call_args_list)?
+
+A. Verificar que una función fue llamada al menos una vez.
+B. Asegurar que la última llamada se realizó con argumentos específicos.
+C. Validar el orden exacto de las llamadas a diferentes métodos del mock.
+D. Comprobar si alguna llamada al mock lanzó una excepción.
+
+✅ Correcta: C
+🧾 Explicación: call_args_list permite inspeccionar la secuencia completa de llamadas, lo que es crucial para validar flujos de control complejos.
+
+🧠 Pregunta 39
+¿Cuál es la principal razón para gestionar las marcas skip y xfail en un flujo de CI/CD?
+
+A. Para eliminar permanentemente los tests que fallan o son irrelevantes.
+B. Para evitar que tests con problemas conocidos o dependencias no disponibles bloqueen el pipeline completo, manteniendo la visibilidad sobre su estado.
+C. Para priorizar la ejecución de los tests más importantes en cada build.
+D. Para generar informes de pruebas más concisos y fáciles de entender.
+
+✅ Correcta: B
+🧾 Explicación: La gestión adecuada de skip y xfail permite mantener un pipeline funcional sin ignorar problemas conocidos o dependencias faltantes.
+
+🧠 Pregunta 40
+¿Cuál es una recomendación clave para el mantenimiento de mocks y stubs a lo largo del tiempo en un entorno DevOps?
+
+A. Refactorizar los mocks y stubs cada vez que se refactoriza el código bajo prueba.
+B. Eliminar todos los mocks y stubs tan pronto como las dependencias reales estén disponibles en los entornos de prueba.
+C. Revisar periódicamente los mocks y stubs para asegurar su alineación con las interfaces de las dependencias reales y documentar su propósito.
+D. Generar automáticamente los mocks y stubs a partir de la documentación de las APIs para reducir el esfuerzo manual.
+
+✅ Correcta: C
+🧾 Explicación: El mantenimiento regular es crucial para asegurar que los mocks y stubs sigan siendo precisos y útiles a medida que evoluciona el sistema.
+
+🧠 Pregunta 41
+¿Qué tipo de doble de prueba es el más simple y se utiliza principalmente para cumplir con las firmas de métodos sin tener ningún comportamiento real?
+
+A. Stub.
+B. Mock.
+C. Fake.
+D. Dummy.
+
+✅ Correcta: D
+🧾 Explicación: Los dummies son objetos sin funcionalidad que se pasan solo para satisfacer los requisitos de parámetros.
+
+🧠 Pregunta 42
+En un pipeline de CI/CD, ¿qué ventaja específica ofrece la rápida ejecución de pruebas unitarias con mocks?
+
+A. Permite realizar pruebas de rendimiento en cada commit.
+B. Facilita la obtención de feedback inmediato sobre la integración del código.
+C. Asegura que la cobertura de código aumente con cada nueva funcionalidad.
+D. Permite la detección temprana de errores lógicos y de interfaz.
+
+✅ Correcta: D
+🧾 Explicación: La velocidad de las pruebas unitarias con mocks permite a los desarrolladores identificar y corregir problemas rápidamente durante el desarrollo.
+
+🧠 Pregunta 43
+¿Qué característica de los mocks permite simular diferentes resultados o efectos secundarios en llamadas sucesivas?
+
+A. return_value.
+B. assert_called_with().
+C. side_effect.
+D. call_count.
+
+✅ Correcta: C
+🧾 Explicación: side_effect permite definir una secuencia de valores de retorno, excepciones o incluso funciones que se ejecutarán en cada llamada al mock.
+
+🧠 Pregunta 44
+¿Cuál es el enfoque principal de las pruebas de integración según la escuela Classical de testing?
+
+A. Aislar cada componente individualmente utilizando mocks.
+B. Verificar las interacciones precisas entre componentes utilizando mocks detallados.
+C. Probar la interacción entre varios componentes reales para asegurar su correcta colaboración.
+D. Utilizar implementaciones simplificadas (fakes) de las dependencias externas.
+
+✅ Correcta: C
+🧾 Explicación: La escuela Classical se centra en probar las integraciones reales para detectar problemas que podrían no surgir en pruebas aisladas.
+
+🧠 Pregunta 45
+¿Qué riesgo principal se asocia con el uso excesivo de mocks que no están bien alineados con el comportamiento real de las dependencias?
+
+A. Aumento significativo en el tiempo de ejecución de las pruebas.
+B. Dificultad para refactorizar el código debido a las dependencias rígidas en los mocks.
+C. Falsos positivos en las pruebas, donde el código parece funcionar correctamente con los mocks pero falla con las dependencias reales.
+D. Mayor complejidad en la configuración y mantenimiento de los entornos de prueba.
+
+✅ Correcta: C
+🧾 Explicación: Si los mocks no reflejan con precisión el comportamiento de las dependencias reales, las pruebas pueden pasar sin detectar problemas que ocurrirían en un entorno integrado.
+
+🧠 Pregunta 46
+¿Cómo facilita la parametrización de tests en pytest la creación de pruebas más robustas?
+
+A. Permite ejecutar pruebas en paralelo en diferentes entornos.
+B. Reduce la cantidad de código de prueba necesario para cubrir múltiples escenarios.
+C. Asegura que todas las dependencias externas sean mockeadas de manera consistente.
+D. Genera automáticamente informes de cobertura detallados.
+
+✅ Correcta: B
+🧾 Explicación: Al permitir probar múltiples entradas y salidas esperadas con el mismo código de prueba, la parametrización aumenta la cobertura y reduce la redundancia.
+
+🧠 Pregunta 47
+¿Qué beneficio específico aporta autospec al trabajar con mocks en un entorno donde las interfaces de las dependencias cambian con frecuencia?
+
+A. Automatiza la actualización de los mocks cada vez que cambia la interfaz.
+B. Genera alertas en tiempo de compilación si los mocks no coinciden con la interfaz.
+C. Ayuda a detectar en tiempo de prueba si las llamadas a los mocks son incompatibles con la interfaz real.
+D. Permite crear mocks con comportamientos predefinidos basados en la documentación de la interfaz.
+
+✅ Correcta: C
+🧾 Explicación: autospec ayuda a mantener las pruebas actualizadas al verificar que las interacciones con los mocks sean consistentes con la interfaz real de las dependencias.
+
+🧠 Pregunta 48
+¿Para qué se utiliza la función call() del módulo unittest.mock?
+
+A. Para verificar si un mock fue llamado al menos una vez.
+B. Para crear un objeto que representa una llamada específica a un mock, útil para comparar con call_args_list.
+C. Para simular la llamada a un método de un mock con argumentos específicos.
+D. Para obtener el número total de veces que se llamó a un mock con argumentos específicos.
+
+✅ Correcta: B
+🧾 Explicación: call() se utiliza para crear objetos que representan llamadas específicas, lo que facilita la verificación del historial de llamadas de un mock.
+
+🧠 Pregunta 49
+¿Cuál es una estrategia recomendada para el mantenimiento de las marcas @pytest.mark.skip y @pytest.mark.xfail en un proyecto a largo plazo?
+
+A. Eliminar todas las marcas tan pronto como el problema subyacente se resuelva.
+B. Revisar periódicamente las marcas para determinar si todavía son necesarias y actualizarlas o eliminarlas según sea apropiado.
+C. Mantener todas las marcas indefinidamente para tener un registro histórico de los problemas.
+D. Automatizar la adición de marcas basadas en los informes de errores del sistema.
+
+✅ Correcta: B
+🧾 Explicación: La revisión periódica asegura que las marcas sigan siendo relevantes y que los tests se habiliten nuevamente cuando las condiciones lo permitan.
+
+🧠 Pregunta 50
+En el contexto de DevOps, ¿cómo contribuye el uso efectivo de mocks y stubs a la entrega continua de software?
+
+A. Permite automatizar el despliegue de software en múltiples entornos.
+B. Facilita la integración continua al proporcionar pruebas rápidas y confiables que se ejecutan en cada commit.
+C. Asegura que el software cumpla con los requisitos de rendimiento en producción.
+D. Permite la monitorización en tiempo real del estado de la aplicación desplegada.
+
+✅ Correcta: B
+🧾 Explicación: Al hacer que las pruebas sean rápidas y aisladas, los mocks y stubs son esenciales para un flujo de integración continua eficiente y confiable.

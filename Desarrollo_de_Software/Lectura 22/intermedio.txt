@@ -1,0 +1,599 @@
+🧠 Pregunta 1
+
+¿Cuál es el objetivo principal de clasificar y priorizar las pruebas en un entorno de desarrollo y entrega continua?
+
+A. Asegurar que todas las pruebas tengan la misma importancia y se ejecuten con la misma frecuencia.
+B. Diseñar pipelines que ejecuten primero las pruebas más costosas para identificar problemas tempranamente.
+C. Diseñar pipelines que ejecuten primero las pruebas más críticas y difieran las más costosas para acelerar el feedback loop.
+D. Reducir la cantidad total de pruebas necesarias para mantener la calidad del software.
+
+✅ Correcta: C
+🧾 Explicación: Clasificar y priorizar las pruebas permite enfocar los esfuerzos iniciales en validar la funcionalidad esencial y postergar las pruebas que consumen más tiempo, optimizando así el ciclo de retroalimentación.
+
+🧠 Pregunta 2
+
+¿Qué característica distingue a los "tests unitarios rápidos" de los "tests de integración ligera"?
+
+A. Los tests unitarios rápidos interactúan con bases de datos reales, mientras que los de integración ligera no.
+B. Los tests de integración ligera simulan dependencias con mocks y stubs, mientras que los unitarios rápidos conectan componentes reales.
+C. La duración típica de los tests unitarios rápidos es mayor que la de los tests de integración ligera.
+D. Los tests unitarios rápidos se centran en validar la lógica interna de funciones, mientras que los de integración ligera aseguran la cohesión entre módulos internos.
+
+✅ Correcta: D
+🧾 Explicación: Los tests unitarios se aíslan para verificar unidades de código individuales, mientras que los tests de integración verifican la interacción entre diferentes partes del sistema, aunque utilizando a menudo componentes simulados para ser más rápidos.
+
+🧠 Pregunta 3
+
+¿Cuál es el propósito principal de un "pipeline de pre-commit o pre-push"?
+
+A. Ejecutar la suite de pruebas completa antes de cada commit para asegurar la máxima calidad del código.
+B. Validar cambios complejos y despliegues en entornos reales antes de la integración.
+C. Proporcionar feedback inmediato al desarrollador mediante la ejecución de tests rápidos y la validación de estilo del código.
+D. Generar informes detallados de cobertura y benchmarking comparativo para el equipo de desarrollo.
+
+✅ Correcta: C
+🧾 Explicación: El pipeline de pre-commit/pre-push está diseñado para ofrecer una validación rápida y temprana de los cambios locales del desarrollador, ayudando a identificar y corregir problemas antes de que se compartan con el equipo.
+
+🧠 Pregunta 4
+
+¿Cómo ayuda el "Test Impact Analysis (TIA)" a optimizar la ejecución de pruebas?
+
+A. Ejecuta la suite de pruebas completa de forma más eficiente mediante la paralelización.
+B. Analiza el rendimiento de las pruebas más lentas para identificar cuellos de botella.
+C. Ejecuta solo aquellos tests que se ven afectados por un cambio de código específico.
+D. Reduce la cantidad de entornos de prueba necesarios al simular dependencias externas.
+
+✅ Correcta: C
+🧾 Explicación: El TIA se enfoca en la eficiencia al identificar y ejecutar únicamente las pruebas relevantes para las modificaciones realizadas en el código, lo que disminuye significativamente el tiempo de ejecución de la suite.
+
+🧠 Pregunta 5
+
+¿Qué beneficio principal aporta el uso de "caching de dependencias y artefactos" en los pipelines de prueba?
+
+A. Mejora la estabilidad de las pruebas al asegurar que siempre se utilicen las últimas versiones de las dependencias.
+B. Reduce el tiempo de ejecución de los pipelines al evitar la descarga y reinstalación repetida de dependencias y la recompilación de artefactos.
+C. Permite un mejor seguimiento de las dependencias utilizadas en cada ejecución de prueba.
+D. Facilita la replicación de entornos de prueba idénticos para garantizar la consistencia.
+
+✅ Correcta: B
+🧾 Explicación: El caching optimiza la velocidad de los pipelines al reutilizar recursos previamente descargados o construidos, lo que ahorra tiempo y ancho de banda en cada ejecución.
+
+🧠 Pregunta 6
+
+¿Cuál es una ventaja clave de utilizar contenedores Docker para los entornos de prueba?
+
+A. Permite compartir fácilmente el estado de la base de datos entre diferentes ejecuciones de prueba.
+B. Asegura que cada job corra en un entorno aislado y consistente, con dependencias pre-instaladas.
+C. Reduce la necesidad de definir archivos de configuración detallados para cada prueba.
+D. Aumenta la velocidad de ejecución de las pruebas al optimizar el uso de los recursos del sistema operativo.
+
+✅ Correcta: B
+🧾 Explicación: La contenerización proporciona aislamiento y consistencia, asegurando que cada ejecución de prueba se realice en un entorno predecible con las dependencias necesarias, lo que contribuye a la fiabilidad y eficiencia.
+
+🧠 Pregunta 7
+
+¿Por qué es importante realizar una "revisión de tests lentos" de forma periódica?
+
+A. Para asegurar que todos los tests se ejecuten dentro de un tiempo límite estricto.
+B. Para identificar y optimizar los tests que contribuyen significativamente al tiempo total de ejecución de la suite.
+C. Para detectar tests que no están cubriendo suficiente código y necesitan ser eliminados.
+D. Para garantizar que la distribución de tests entre los diferentes shards de paralelización sea uniforme.
+
+✅ Correcta: B
+🧾 Explicación: Identificar y optimizar los tests más lentos ayuda a reducir la duración general de los pipelines, lo que acelera el feedback y mejora la productividad del equipo.
+
+🧠 Pregunta 8
+
+¿Qué se busca lograr al marcar un test como "@pytest.mark.flaky"?
+
+A. Eliminar automáticamente el test de la suite de pruebas para evitar fallos intermitentes.
+B. Indicar que el test es inherentemente inestable y debe ser revisado en un pipeline separado para su diagnóstico.
+C. Reducir la prioridad del test en la ejecución para que no afecte los resultados de otras pruebas.
+D. Ejecutar el test con un mayor nivel de aislamiento para evitar interferencias con otros tests.
+
+✅ Correcta: B
+🧾 Explicación: Marcar tests como "flaky" permite identificarlos y aislarlos para su análisis, reconociendo que fallan de manera intermitente y requieren una investigación específica para determinar la causa raíz.
+
+🧠 Pregunta 9
+
+¿Cuál es el beneficio de tener una "Guía de estilo de tests" bien definida?
+
+A. Permite a los desarrolladores escribir tests que se ejecuten más rápidamente.
+B. Asegura la consistencia en la nomenclatura, estructura y organización de los tests, facilitando su comprensión y mantenimiento.
+C. Reduce la cantidad de código necesario para escribir cada test.
+D. Automatiza la generación de informes de cobertura de pruebas.
+
+✅ Correcta: B
+🧾 Explicación: Una guía de estilo promueve la uniformidad en la forma en que se escriben los tests, lo que mejora la legibilidad, el mantenimiento y la colaboración dentro del equipo.
+
+🧠 Pregunta 10
+
+¿Por qué es importante fomentar una "cultura de calidad" en el equipo de desarrollo en relación con las pruebas?
+
+A. Para asegurar que el equipo de pruebas sea el único responsable de la calidad del software.
+B. Para reducir la necesidad de documentación detallada sobre la suite de pruebas.
+C. Porque la responsabilidad de la calidad se comparte entre todos los miembros del equipo, lo que lleva a un mayor compromiso con la creación y el mantenimiento de pruebas efectivas.
+D. Para aumentar la cantidad de métricas cuantitativas disponibles sobre la cobertura y el rendimiento de las pruebas.
+
+✅ Correcta: C
+🧾 Explicación: Una cultura de calidad implica que todos los miembros del equipo valoran y contribuyen a las prácticas de prueba, lo que resulta en un software de mayor calidad y una suite de pruebas más robusta y mantenible.
+
+🧠 Pregunta 11
+
+Según el texto, ¿cuál es la duración típica de un test end-to-end (E2E)?
+
+A. Menos de 50 ms.
+B. Entre 50 y 500 ms.
+C. Más de 500 ms.
+D. Varía significativamente dependiendo del entorno.
+
+✅ Correcta: C
+🧾 Explicación: Los tests E2E involucran el despliegue de entornos reales y la validación de flujos completos, lo que generalmente resulta en una duración superior a 500 ms.
+
+🧠 Pregunta 12
+
+¿Qué tipo de pruebas se enfoca en validar la compatibilidad de APIs internas y externas?
+
+A. Tests unitarios.
+B. Tests de integración ligera.
+C. Tests de contrato (contract tests).
+D. Tests de rendimiento y estrés.
+
+✅ Correcta: C
+🧾 Explicación: Los tests de contrato están diseñados específicamente para asegurar que las interfaces entre diferentes servicios o componentes se mantengan consistentes a lo largo del tiempo.
+
+🧠 Pregunta 13
+
+En un pipeline multinivel, ¿qué tipo de tests se ejecutan típicamente en el "pipeline de pull request (CI)"?
+
+A. Solo tests unitarios rápidos.
+B. Tests E2E completos y suites de rendimiento.
+C. Tests unitarios y de integración ligera.
+D. Todos los tipos de tests definidos.
+
+✅ Correcta: C
+🧾 Explicación: El pipeline de pull request busca validar los cambios propuestos antes de la integración, por lo que se enfoca en tests rápidos pero que cubran la lógica y la interacción básica entre componentes.
+
+🧠 Pregunta 14
+
+¿Qué métrica ayuda a identificar las líneas o funciones de código cubiertas por cada test en el "Test Impact Analysis"?
+
+A. Métricas de rendimiento.
+B. Métricas de cobertura.
+C. Métricas de estabilidad.
+D. Métricas de complejidad.
+
+✅ Correcta: B
+🧾 Explicación: El TIA utiliza información de cobertura para mapear la relación entre los tests y el código que ejecutan, permitiendo así identificar los tests relevantes ante un cambio.
+
+🧠 Pregunta 15
+
+En el contexto del caching de dependencias en GitHub Actions, ¿qué propósito tiene la clave definida en el with?
+
+A. Especificar la ruta donde se almacenará la caché.
+B. Identificar de manera única la caché para un conjunto específico de dependencias.
+C. Definir el tiempo de vida de la caché antes de su invalidación.
+D. Limitar el tamaño máximo de la caché.
+
+✅ Correcta: B
+🧾 Explicación: La clave se utiliza para generar un identificador único basado en los archivos de dependencias (como requirements.txt), asegurando que se restaure la caché correcta cuando las dependencias no han cambiado.
+
+🧠 Pregunta 16
+
+¿Qué herramienta mencionada en el texto se puede utilizar en pytest para dividir la suite de pruebas en particiones y ejecutarlas en paralelo?
+
+A. pytest-benchmark.
+B. pytest-cov.
+C. pytest-xdist.
+D. pytest-flake8.
+
+✅ Correcta: C
+🧾 Explicación: pytest-xdist es un plugin de pytest que permite la ejecución distribuida de tests en múltiples procesos, facilitando la paralelización.
+
+🧠 Pregunta 17
+
+¿Cuál es una característica principal de los entornos de prueba "efímeros"?
+
+A. Mantienen el estado entre diferentes ejecuciones de prueba para acelerar la inicialización.
+B. Se inician desde un estado limpio para cada ejecución, lo que aumenta la seguridad y el aislamiento.
+C. Son más costosos de mantener debido a la necesidad de una configuración constante.
+D. Son ideales para ejecutar pruebas de rendimiento que requieren un entorno persistente.
+
+✅ Correcta: B
+🧾 Explicación: Los entornos efímeros proporcionan un alto nivel de aislamiento y evitan la acumulación de estado no deseado entre pruebas, aunque pueden tener un tiempo de inicialización más largo.
+
+🧠 Pregunta 18
+
+¿Qué tipo de servicio se menciona como una solución para simular APIs de terceros en los entornos de prueba?
+
+A. Un servicio de base de datos gestionado en la nube.
+B. Un sistema de gestión de contenedores como Docker Compose.
+C. Herramientas como WireMock, LocalStack o Mountebank.
+D. Un servicio de monitorización de rendimiento de aplicaciones (APM).
+
+✅ Correcta: C
+🧾 Explicación: Estas herramientas permiten crear stubs o mocks de servicios externos, lo que facilita la prueba de la lógica de la aplicación sin depender de la disponibilidad o el comportamiento real de esos servicios.
+
+🧠 Pregunta 19
+
+Según el texto, ¿qué comando de pytest se utiliza para extraer el top 10 de tests más costosos en términos de tiempo de ejecución?
+
+A. pytest --slowest=10.
+B. pytest --profile=10.
+C. pytest --durations=10.
+D. pytest --time=10.
+
+✅ Correcta: C
+🧾 Explicación: La opción --durations=N de pytest muestra la duración de los N tests más lentos, lo que ayuda a identificar candidatos para la optimización.
+
+🧠 Pregunta 20
+
+¿Cuál es el objetivo principal de marcar tests con @pytest.mark.flaky?
+
+A. Excluirlos de las ejecuciones regulares para mejorar la velocidad general.
+B. Identificarlos para su posterior análisis y diagnóstico en un pipeline separado.
+C. Reducir su prioridad para que otros tests se ejecuten primero.
+D. Ejecutarlos con un mayor número de repeticiones para mitigar la incertidumbre de sus fallos.
+
+✅ Correcta: B
+🧾 Explicación: Marcar tests como "flaky" permite gestionarlos de manera especial, reconociendo su inestabilidad y facilitando su investigación sin afectar la fiabilidad de los resultados de la suite principal.
+
+🧠 Pregunta 21
+
+¿Qué tipo de métricas, además de las cuantitativas, se sugiere utilizar para obtener una visión más completa del estado de la suite de pruebas?
+
+A. Métricas de complejidad ciclomática del código probado.
+B. Métricas de satisfacción del cliente con la calidad del software.
+C. Impresiones cualitativas compartidas por el equipo de desarrollo.
+D. Métricas de frecuencia de despliegue y tiempo de entrega.
+
+✅ Correcta: C
+🧾 Explicación: El feedback subjetivo de los desarrolladores puede revelar problemas o fricciones que no se reflejan directamente en los números de cobertura o tiempo de ejecución.
+
+🧠 Pregunta 22
+
+¿Cuál es un ejemplo de contenido que debería incluirse en el "README de tests"?
+
+A. La lista completa de todos los tests y su descripción detallada.
+B. Instrucciones para ejecutar localmente cada tipo de prueba y los requisitos del entorno.
+C. Los resultados históricos de las ejecuciones de prueba y las tendencias de rendimiento.
+D. El código fuente de los tests unitarios más importantes.
+
+✅ Correcta: B
+🧾 Explicación: Un buen README de tests proporciona la información esencial para que cualquier desarrollador pueda entender y ejecutar las pruebas en su entorno local.
+
+🧠 Pregunta 23
+
+¿Qué se propone como una actividad para fomentar una "cultura de calidad" en relación con las pruebas?
+
+A. Establecer cuotas obligatorias de número de tests que cada desarrollador debe escribir.
+B. Limitar el acceso a los resultados de las pruebas para evitar la desmotivación.
+C. Realizar sesiones internas informales ("Brown Bag") sobre temas relacionados con las pruebas.
+D. Externalizar la responsabilidad de las pruebas a un equipo dedicado para garantizar la objetividad.
+
+✅ Correcta: C
+🧾 Explicación: Las sesiones de intercambio de conocimiento y las actividades prácticas ayudan a construir una cultura donde las pruebas son valoradas y comprendidas por todo el equipo.
+
+🧠 Pregunta 24
+
+¿Qué información debería contener una "Wiki interna o Confluence" dedicada a las pruebas?
+
+A. Solo los resultados de las últimas ejecuciones de la suite de pruebas.
+B. Documentación sobre estrategias de TIA, patching, uso de mocks avanzados y prácticas de paralelismo.
+C. Un listado de los desarrolladores responsables de cada sección de la suite de pruebas.
+D. Las políticas de calidad y los objetivos de cobertura definidos por la dirección.
+
+✅ Correcta: B
+🧾 Explicación: Una wiki interna sirve como un repositorio de conocimiento sobre las prácticas y estrategias de prueba específicas del equipo, facilitando el aprendizaje y la adopción de buenas prácticas.
+
+🧠 Pregunta 25
+
+¿Cuál es el propósito de definir "Test Champions" dentro del equipo?
+
+A. Supervisar el trabajo de los demás desarrolladores en la creación de tests.
+B. Actuar como punto de contacto para todas las preguntas relacionadas con las pruebas.
+C. Fomentar buenas prácticas de testing, revisar métricas y proponer mejoras de forma rotativa.
+D. Asegurar que se cumplan los plazos de entrega de las tareas de prueba.
+
+✅ Correcta: C
+🧾 Explicación: Los Test Champions ayudan a mantener el foco en la calidad, promueven la mejora continua de las prácticas de prueba y distribuyen la responsabilidad dentro del equipo.
+
+🧠 Pregunta 26
+
+Según el texto, ¿qué métrica DORA podría verse afectada si los tiempos de ejecución de las pruebas aumentan significativamente?
+
+A. Frecuencia de despliegue.
+B. Tiempo de entrega (Lead Time).
+C. Tiempo medio de recuperación (MTTR).
+D. Tasa de cambio de fallos.
+
+✅ Correcta: B
+🧾 Explicación: Un aumento en los tiempos de prueba puede alargar el ciclo de desarrollo y entrega, impactando directamente en el tiempo que transcurre desde que se realiza un cambio en el código hasta que se implementa en producción.
+
+🧠 Pregunta 27
+
+¿Qué se recomienda hacer con los tests que fallan de manera intermitente ("flaky tests")?
+
+A. Eliminarlos inmediatamente de la suite de pruebas para evitar resultados confusos.
+B. Marcarlos y destinarlos a un pipeline separado para su diagnóstico.
+C. Ejecutarlos con mayor frecuencia para intentar reproducir el fallo de manera consistente.
+D. Ignorarlos temporalmente si no afectan la funcionalidad principal.
+
+✅ Correcta: B
+🧾 Explicación: Los tests "flaky" requieren una atención especial para identificar la causa de su inestabilidad y corregirla, por lo que se recomienda aislarlos para su análisis.
+
+🧠 Pregunta 28
+
+¿Cuál es un beneficio de utilizar "templates para nuevos tests"?
+
+A. Asegurar que todos los tests tengan exactamente la misma duración.
+B. Reducir la necesidad de que los desarrolladores aprendan los detalles de los frameworks de prueba.
+C. Proporcionar archivos base con código común (boilerplate) para facilitar la creación de nuevos tests.
+D. Automatizar la generación de documentación para cada nuevo test creado.
+
+✅ Correcta: C
+🧾 Explicación: Los templates agilizan la creación de nuevos tests al proporcionar una estructura inicial y código reutilizable, lo que ahorra tiempo y promueve la consistencia.
+
+🧠 Pregunta 29
+
+¿Qué se sugiere hacer periódicamente para mantener la suite de pruebas saludable?
+
+A. Aumentar la cantidad total de tests para mejorar la cobertura.
+B. Ejecutar la suite completa con mayor frecuencia para detectar problemas tempranamente.
+C. Eliminar tests duplicados o irrelevantes.
+D. Reducir el número de entornos de prueba para optimizar recursos.
+
+✅ Correcta: C
+🧾 Explicación: La limpieza regular de la suite de pruebas ayuda a evitar la acumulación de tests innecesarios que pueden ralentizar la ejecución y dificultar el mantenimiento.
+
+🧠 Pregunta 30
+
+¿Cuál es el objetivo principal de realizar "Code katas de tests" en un equipo de desarrollo?
+
+A. Evaluar el rendimiento individual de cada desarrollador en la escritura de tests.
+B. Practicar la creación de tests para pequeñas piezas de código y compartir soluciones y patrones dentro del equipo.
+C. Documentar detalladamente cada uno de los tests existentes en la suite.
+D. Automatizar la generación de informes de cobertura de pruebas para todo el proyecto.
+
+✅ Correcta: B
+🧾 Explicación: Los code katas son ejercicios prácticos que permiten al equipo mejorar sus habilidades de testing de forma colaborativa y aprender diferentes enfoques y patrones.
+
+🧠 Pregunta 31
+
+¿Cuál de las siguientes NO se menciona como un objetivo de los "tests unitarios rápidos"?
+
+A. Validar la lógica interna.
+B. Simular dependencias con mocks y stubs.
+C. Interactuar con bases de datos reales.
+D. Validar rutas críticas de funciones.
+
+✅ Correcta: C
+🧾 Explicación: Los tests unitarios rápidos están diseñados para ser aislados y no interactúan con sistemas externos como bases de datos reales.
+
+🧠 Pregunta 32
+
+¿Qué se utiliza comúnmente en los "tests de integración ligera" para preparar entornos simulados?
+
+A. Despliegue de contenedores completos.
+B. Fixtures parametrizadas.
+C. Interacción con APIs de producción.
+D. Ejecución en navegadores reales.
+
+✅ Correcta: B
+🧾 Explicación: Las fixtures parametrizadas permiten configurar diferentes escenarios de prueba de manera controlada y eficiente en los tests de integración ligera.
+
+🧠 Pregunta 33
+
+¿Cuál es el enfoque principal de las "pruebas de rendimiento y estrés"?
+
+A. Validar la correcta funcionalidad del software bajo condiciones normales de uso.
+B. Asegurar la compatibilidad con diferentes sistemas operativos y navegadores.
+C. Medir latencias, throughput y escalabilidad bajo carga creciente.
+D. Detectar errores de lógica y cálculos internos en unidades de código aisladas.
+
+✅ Correcta: C
+🧾 Explicación: Las pruebas de rendimiento y estrés están dedicadas a evaluar cómo se comporta el sistema ante diferentes niveles de carga y a identificar posibles cuellos de botella o puntos de falla.
+
+🧠 Pregunta 34
+
+En un "pipeline de nightly builds", ¿qué tipo de pruebas se incluyen típicamente?
+
+A. Solo tests unitarios y de integración ligera.
+B. Tests que se ejecutan en menos de 2 minutos.
+C. Tests E2E completos y suites de rendimiento.
+D. Tests que se ejecutan únicamente en entornos simulados.
+
+✅ Correcta: C
+🧾 Explicación: Los nightly builds son ejecuciones más completas que incluyen pruebas más exhaustivas y de mayor duración, como las E2E y las de rendimiento.
+
+🧠 Pregunta 35
+
+¿Qué se detecta durante el pipeline de pull request (CI) además de la correcta ejecución de los tests?
+
+A. Cuellos de botella en el rendimiento de la aplicación.
+B. Vulnerabilidades de seguridad en las dependencias.
+C. Degradaciones en la cobertura y benchmarking comparativo.
+D. Errores de sintaxis en la documentación del código.
+
+✅ Correcta: C
+🧾 Explicación: El pipeline de pull request también se encarga de generar informes sobre la cobertura del código por los tests y comparar el rendimiento con ejecuciones anteriores.
+
+🧠 Pregunta 36
+
+En el contexto del "Test Impact Analysis", ¿qué sucede en caso de cambios masivos o refactorizaciones?
+
+A. Se ejecuta un subconjunto optimizado de tests.
+B. Se omite la ejecución de tests para acelerar el pipeline.
+C. Se dispara la suite de pruebas completa como fallback.
+D. Se analizan manualmente los cambios para determinar qué tests ejecutar.
+
+✅ Correcta: C
+🧾 Explicación: Cuando el TIA detecta un gran número de cambios, puede ser más seguro y completo ejecutar toda la suite de pruebas para asegurar que no se hayan introducido regresiones.
+
+🧠 Pregunta 37
+
+¿Cuál es el beneficio de utilizar un "cache de compilación" en lenguajes compilados?
+
+A. Asegurar que siempre se utilicen las últimas versiones del compilador.
+B. Reducir el tiempo necesario para construir y desplegar artefactos al reutilizar compilaciones previas.
+C. Mejorar la seguridad del proceso de compilación al aislar los componentes.
+D. Facilitar la depuración de errores relacionados con la compilación.
+
+✅ Correcta: B
+🧾 Explicación: El cache de compilación guarda los resultados de compilaciones anteriores, permitiendo reutilizarlos si el código fuente no ha cambiado, lo que acelera significativamente el proceso de build.
+
+🧠 Pregunta 38
+
+En GitHub Actions, ¿qué permite la estrategia de "matrix builds"?
+
+A. Ejecutar los mismos tests secuencialmente en diferentes entornos.
+B. Lanzar múltiples jobs en paralelo con combinaciones de diferentes variables de entorno.
+C. Definir dependencias complejas entre diferentes etapas del pipeline.
+D. Limitar los recursos computacionales asignados a cada job de prueba.
+
+✅ Correcta: B
+🧾 Explicación: La matriz de construcción permite probar la aplicación en diversas configuraciones (por ejemplo, diferentes versiones de Python o sistemas operativos) de forma simultánea.
+
+🧠 Pregunta 39
+
+¿Cuál es una característica de los entornos de prueba "persistentes"?
+
+A. Se destruyen completamente después de cada ejecución de prueba.
+B. Conservan el estado entre diferentes jobs, como la caché del sistema operativo o paquetes instalados.
+C. Son más seguros ya que cada prueba se ejecuta en un entorno aislado.
+D. Son ideales para pruebas rápidas que requieren un entorno limpio en cada ejecución.
+
+✅ Correcta: B
+🧾 Explicación: Los entornos persistentes pueden acelerar la ejecución de pruebas pesadas al evitar la necesidad de reinstalar o reconfigurar componentes comunes en cada job.
+
+🧠 Pregunta 40
+
+¿Qué herramienta se menciona para orquestar contenedores simulados junto con el pipeline de pruebas?
+
+A. Dockerfile.
+B. Docker Hub.
+C. Docker Compose.
+D. Docker Swarm.
+
+✅ Correcta: C
+🧾 Explicación: Docker Compose permite definir y gestionar múltiples contenedores como una sola aplicación, facilitando la configuración de entornos de prueba con servicios simulados.
+
+🧠 Pregunta 41
+
+¿Qué acción se recomienda tomar con los tests que utilizan demasiada lógica de setup en fixtures globales?
+
+A. Eliminarlos por ser demasiado complejos.
+B. Refactorizarlos para hacer el setup más específico y eficiente.
+C. Moverlos a un pipeline separado de ejecución más lenta.
+D. Documentarlos detalladamente para que otros desarrolladores entiendan su funcionamiento.
+
+✅ Correcta: B
+🧾 Explicación: Un setup excesivo en fixtures globales puede hacer que los tests sean más lentos y menos comprensibles, por lo que se recomienda refactorizarlos.
+
+🧠 Pregunta 42
+
+¿Qué tipo de información se debe incluir en la documentación de la suite de pruebas en una "Wiki interna o Confluence"?
+
+A. El organigrama del equipo de desarrollo y sus responsabilidades.
+B. Las políticas de vacaciones y los horarios de trabajo del equipo.
+C. Ejemplos de pipelines y tips de optimización documentados por miembros del equipo.
+D. Los informes de rendimiento detallados de las últimas ejecuciones de prueba.
+
+✅ Correcta: C
+🧾 Explicación: La documentación interna debe ser práctica y útil para el equipo, incluyendo ejemplos y consejos que faciliten el trabajo con la suite de pruebas.
+
+🧠 Pregunta 43
+
+¿Qué se recomienda hacer con las zonas de código críticas que tienen baja cobertura de pruebas?
+
+A. Marcar el código como "de bajo riesgo" para evitar la necesidad de más pruebas.
+B. Planificar tickets de implementación de pruebas para aumentar la cobertura.
+C. Eliminar el código si no está suficientemente probado.
+D. Refactorizar el código para que sea más difícil de probar y así evitar la necesidad de tests.
+
+✅ Correcta: B
+🧾 Explicación: Identificar áreas críticas con baja cobertura es importante para priorizar la creación de nuevos tests y asegurar la calidad de las partes más importantes del sistema.
+
+🧠 Pregunta 44
+
+¿Qué tipo de preguntas se sugiere incluir en las "encuestas internas" a los desarrolladores sobre la suite de pruebas?
+
+A. Preguntas sobre la satisfacción general con el proceso de desarrollo.
+B. Preguntas sobre la sensación de lentitud en el pipeline y áreas de fricción.
+C. Preguntas sobre las preferencias individuales de cada desarrollador en cuanto a herramientas de prueba.
+D. Preguntas sobre la frecuencia con la que ejecutan las pruebas en su entorno local.
+
+✅ Correcta: B
+🧾 Explicación: Las encuestas buscan obtener feedback cualitativo sobre los puntos débiles o las áreas de mejora percibidas por los desarrolladores en relación con las pruebas.
+
+🧠 Pregunta 45
+
+¿Cuál es el propósito de las sesiones de "Pair programming en tests"?
+
+A. Evaluar las habilidades individuales de cada desarrollador en la escritura de tests.
+B. Fomentar la colaboración y el conocimiento compartido en la creación de tests para casos críticos.
+C. Reducir el tiempo dedicado a la escritura de tests al trabajar en parejas.
+D. Asegurar que todos los tests sean escritos por al menos dos desarrolladores diferentes.
+
+✅ Correcta: B
+🧾 Explicación: El pair programming en tests promueve la discusión, el intercambio de ideas y la mejora de la calidad de los tests a través del trabajo colaborativo.
+
+🧠 Pregunta 46
+
+¿Qué tipo de información se recomienda mostrar en pantallas de oficina para mejorar la visibilidad de la calidad?
+
+A. El número total de líneas de código en el proyecto.
+B. Los nombres de los desarrolladores que han realizado más commits recientemente.
+C. Dashboards clave de cobertura y performance de las pruebas.
+D. La lista de tareas pendientes en el sistema de seguimiento de issues.
+
+✅ Correcta: C
+🧾 Explicación: Mostrar métricas importantes de calidad de forma visible ayuda a mantener el foco del equipo en la importancia de las pruebas y el rendimiento.
+
+🧠 Pregunta 47
+
+¿Qué tipo de contenido se sugiere incluir en los "Templates para nuevos tests"?
+
+A. Los resultados de las últimas ejecuciones de tests similares.
+B. Archivos base con boilerplate de fixtures, parametrización y marcos de benchmarking.
+C. Instrucciones detalladas sobre cómo depurar los tests en caso de fallo.
+D. Un glosario de términos técnicos relacionados con las pruebas.
+
+✅ Correcta: B
+🧾 Explicación: Los templates facilitan la creación de nuevos tests al proporcionar una estructura inicial y código común, ahorrando tiempo y promoviendo la consistencia.
+
+🧠 Pregunta 48
+
+¿Con qué periodicidad se recomienda realizar una "Calendario de limpieza de tests"?
+
+A. Diariamente.
+B. Semanalmente.
+C. Cada tres meses.
+D. Anualmente.
+
+✅ Correcta: C
+🧾 Explicación: Una limpieza periódica, como cada tres meses, ayuda a mantener la suite de pruebas organizada y eficiente, eliminando tests obsoletos o duplicados.
+
+🧠 Pregunta 49
+
+¿Cuál es el objetivo principal de definir "Test Champions" con un rol rotativo?
+
+A. Asegurar que siempre haya una persona responsable de aprobar los pull requests relacionados con tests.
+B. Distribuir la responsabilidad de fomentar buenas prácticas de testing y la mejora continua dentro del equipo.
+C. Crear una competencia sana entre los desarrolladores para ver quién escribe los mejores tests.
+D. Centralizar todo el conocimiento sobre las pruebas en una única persona para facilitar la consulta.
+
+✅ Correcta: B
+🧾 Explicación: La rotación del rol de Test Champion ayuda a involucrar a diferentes miembros del equipo en la promoción de la calidad y la mejora de las prácticas de prueba.
+
+🧠 Pregunta 50
+
+¿Qué se debe evaluar al analizar las zonas de código críticas con baja cobertura?
+
+A. Si el código es lo suficientemente complejo como para justificar la falta de pruebas.
+B. Si el código debe refactorizarse para mejorar su testabilidad.
+C. Si los desarrolladores tienen suficiente experiencia en la escritura de tests para esa área.
+D. Si la baja cobertura se debe a la falta de tiempo en el ciclo de desarrollo.
+
+✅ Correcta: B
+🧾 Explicación: A menudo, la dificultad para escribir tests en ciertas áreas del código es un indicativo de que el diseño o la estructura del código podrían mejorarse para facilitar las pruebas.

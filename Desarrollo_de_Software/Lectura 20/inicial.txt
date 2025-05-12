@@ -1,0 +1,550 @@
+🧠 Pregunta 1
+¿Cuál es la principal función de un stub en el contexto de pruebas unitarias?
+
+A. Registrar todas las llamadas a una función
+B. Simular errores de red y latencias
+C. Proveer respuestas fijas a peticiones externas
+D. Verificar que una función fue llamada con argumentos específicos
+
+✅ Correcta: C
+🧾 Explicación: Los stubs están diseñados para devolver valores predefinidos de forma rápida y predecible, evitando la necesidad de contactar con servicios externos durante las pruebas.
+
+🧠 Pregunta 2
+¿Qué ventaja clave ofrecen los mocks frente a los stubs?
+
+A. Permiten evitar el uso de contenedores
+B. Registran información sobre llamadas como argumentos y frecuencia
+C. Generan datos de prueba automáticamente
+D. Evitan que se requiera cobertura de código
+
+✅ Correcta: B
+🧾 Explicación: Los mocks no solo simulan respuestas, sino que también registran metadatos de interacción, como número de llamadas y argumentos usados, permitiendo aserciones de comportamiento.
+
+🧠 Pregunta 3
+¿Qué tipo de doble de prueba se utiliza cuando se necesita una implementación funcional pero simplificada de una dependencia real?
+
+A. Stub
+B. Mock
+C. Dummy
+D. Fake
+
+✅ Correcta: D
+🧾 Explicación: Un fake mantiene parte de la lógica real y permite ejecutar pruebas funcionales sin requerir la infraestructura de producción.
+
+🧠 Pregunta 4
+¿Cuál es una desventaja clave del enfoque de pruebas mockist (Detroit School)?
+
+A. Las pruebas son demasiado lentas para ejecutarse en pipelines
+B. El uso de mocks impide medir la cobertura
+C. Las pruebas pueden ser frágiles ante cambios internos del código
+D. No permite simular errores como timeouts o excepciones
+
+✅ Correcta: C
+🧾 Explicación: Las pruebas mockist son rápidas, pero pueden romperse fácilmente ante cambios menores en la implementación, incluso si el comportamiento externo sigue siendo correcto.
+
+🧠 Pregunta 5
+¿Cuál es el objetivo de usar side_effect en un mock dentro de pytest?
+
+A. Ejecutar un test varias veces automáticamente
+B. Simular comportamiento dinámico o lanzar excepciones
+C. Generar fixtures de forma automática
+D. Asegurar que un test no dependa del sistema operativo
+
+✅ Correcta: B
+🧾 Explicación: side_effect permite definir respuestas dinámicas, lanzar errores o simular secuencias de llamadas, enriqueciendo el realismo del doble de prueba.
+
+🧠 Pregunta 6
+¿Qué ventaja proporciona el uso de stubs en los hooks de pre-commit?
+
+A. Permite ejecutar pruebas de integración en paralelo
+B. Garantiza validación de contratos de red
+C. Acelera la retroalimentación al ejecutar tests en milisegundos
+D. Evita que se necesiten pruebas unitarias
+
+✅ Correcta: C
+🧾 Explicación: Al usar stubs en pre-commit, se aíslan las dependencias y se obtienen resultados rápidos, mejorando la eficiencia del flujo DevOps.
+
+🧠 Pregunta 7
+¿Cuál es el rol principal de un dummy en una prueba?
+
+A. Ejecutar una lógica de negocio real
+B. Registrar interacciones con un servicio
+C. Cumplir con la firma del método sin funcionalidad
+D. Validar los contratos entre servicios
+
+✅ Correcta: C
+🧾 Explicación: Los dummies son objetos sin comportamiento que se usan solo para completar parámetros obligatorios.
+
+🧠 Pregunta 8
+¿Qué patrón se recomienda para evitar modificar el cuerpo de un test al añadir nuevos casos?
+
+A. Uso de fixtures
+B. Inversión de dependencias
+C. Parametrización con pytest
+D. Técnica de monkey patching
+
+✅ Correcta: C
+🧾 Explicación: La parametrización permite extender la variedad de casos sin cambiar la lógica del test, favoreciendo el Principio Open/Closed.
+
+🧠 Pregunta 9
+¿Cuál es una desventaja del enfoque classical (London School) en pruebas?
+
+A. No permite usar mocks
+B. Tiene alta fragilidad ante cambios internos
+C. Requiere entornos complejos y tiempos largos de ejecución
+D. Es incompatible con pipelines de CI/CD
+
+✅ Correcta: C
+🧾 Explicación: Las pruebas classical reproducen la realidad con mayor fidelidad, pero a costa de un tiempo de ejecución más elevado y mayor complejidad de mantenimiento.
+
+🧠 Pregunta 10
+¿En qué situación se recomienda el uso de autospec al crear mocks?
+
+A. Cuando se necesitan respuestas secuenciales
+B. Para validar firmas reales y evitar parámetros inválidos
+C. Cuando se desea omitir dependencias opcionales
+D. Para evitar el uso de fixtures
+
+✅ Correcta: B
+🧾 Explicación: autospec genera mocks basados en la interfaz real, previniendo errores por llamadas incorrectas y garantizando la coherencia.
+
+🧠 Pregunta 11
+¿Qué diferencia principal tienen los fakes respecto a los mocks?
+
+A. Los fakes no pueden ejecutarse en pruebas unitarias
+B. Los mocks simulan comportamiento real, los fakes no
+C. Los fakes implementan parte de la lógica real
+D. Los mocks requieren conexión a bases de datos
+
+✅ Correcta: C
+🧾 Explicación: Los fakes tienen una lógica funcional simplificada, útil para pruebas más cercanas a la producción sin necesidad de servicios reales.
+
+🧠 Pregunta 12
+¿Cuál es el objetivo del patching localizado?
+
+A. Simular todo el entorno en tiempo de compilación
+B. Aplicar mocks solo dentro del bloque o función de prueba
+C. Mantener la cobertura al 100%
+D. Ejecutar fixtures de forma asíncrona
+
+✅ Correcta: B
+🧾 Explicación: El patching localizado restringe el alcance del mock a una función o bloque específico, reduciendo efectos colaterales.
+
+🧠 Pregunta 13
+¿Cuál es el propósito del marcador @pytest.mark.xfail?
+
+A. Ejecutar pruebas que deben pasar bajo cualquier condición
+B. Ignorar la prueba sin mostrarla en el reporte
+C. Marcar pruebas con fallos esperados sin interrumpir el pipeline
+D. Repetir la prueba múltiples veces con distintos parámetros
+
+✅ Correcta: C
+🧾 Explicación: xfail se utiliza para señalar fallos conocidos en pruebas sin romper la ejecución general, aportando trazabilidad.
+
+🧠 Pregunta 14
+¿Qué validación ofrece mock.assert_called_once_with(...)?
+
+A. Que se haya llamado con al menos un argumento
+B. Que el mock fue llamado al menos una vez
+C. Que el mock fue invocado exactamente una vez con los argumentos dados
+D. Que no hubo ninguna llamada al mock
+
+✅ Correcta: C
+🧾 Explicación: Esta aserción garantiza precisión en la interacción esperada: una sola llamada con parámetros exactos.
+
+🧠 Pregunta 15
+¿Qué tipo de test se beneficiaría más de un fake que simula una base de datos?
+
+A. Test de UI
+B. Test unitario
+C. Test de integración ligera
+D. Test de performance
+
+✅ Correcta: C
+🧾 Explicación: Los fakes permiten simular partes funcionales del sistema, como bases de datos, sin desplegar infraestructura real.
+
+🧠 Pregunta 16
+¿Cuál es una desventaja del uso excesivo de mocks?
+
+A. Los mocks incrementan el tiempo de ejecución del pipeline
+B. Pueden ocultar errores reales al depender de implementaciones simuladas
+C. Requieren levantar contenedores adicionales
+D. No se pueden usar en pruebas automáticas
+
+✅ Correcta: B
+🧾 Explicación: Un uso abusivo de mocks puede generar tests que pasan sin detectar problemas reales en entornos de producción.
+
+🧠 Pregunta 17
+¿Qué permite validar el historial de llamadas (call_args_list) en un mock?
+
+A. Qué errores se lanzaron en producción
+B. El orden y argumentos de todas las invocaciones realizadas
+C. Qué datos fueron persistidos en una base de datos
+D. Qué pruebas han fallado y cuáles no
+
+✅ Correcta: B
+🧾 Explicación: call_args_list permite inspeccionar todas las llamadas a un mock, incluyendo sus parámetros y orden de ejecución.
+
+🧠 Pregunta 18
+¿Cuál es el beneficio de pytest-benchmark en el contexto DevOps?
+
+A. Automatizar el versionado de mocks
+B. Registrar tiempos de ejecución para detectar regresiones de rendimiento
+C. Evitar usar side_effect
+D. Simular múltiples respuestas de red
+
+✅ Correcta: B
+🧾 Explicación: pytest-benchmark permite medir el tiempo de ejecución de funciones clave y comparar rendimientos entre ejecuciones.
+
+🧠 Pregunta 19
+¿Qué garantiza el principio Open/Closed aplicado a los tests?
+
+A. Los tests pueden conectarse directamente con staging
+B. Los tests deben cubrir todo el sistema
+C. Los tests se pueden extender sin modificar su código original
+D. Los tests no deben depender de frameworks externos
+
+✅ Correcta: C
+🧾 Explicación: El principio OCP fomenta que los tests se mantengan estables, añadiendo nuevos escenarios mediante parametrización sin alterar el cuerpo del test.
+
+🧠 Pregunta 20
+¿Cuándo es preferible usar patching holístico?
+
+A. En pruebas unitarias con mocks simples
+B. Cuando el comportamiento depende del sistema operativo
+C. En pruebas de integración que reutilizan una configuración común
+D. Para evitar el uso de fixtures
+
+✅ Correcta: C
+🧾 Explicación: El patching holístico se usa cuando muchos tests necesitan la misma simulación, optimizando la configuración común a nivel de sesión o módulo.
+
+🧠 Pregunta 21
+¿Cuál es un buen criterio para decidir entre usar mocks o un entorno real?
+
+A. La cantidad de líneas de código
+B. La frecuencia de commits
+C. El tiempo disponible para pruebas
+D. El tipo de validación: comportamiento versus integración
+
+✅ Correcta: D
+🧾 Explicación: Para validar interacciones específicas, los mocks son útiles; para flujos integrados de extremo a extremo, es mejor usar entornos reales o fakes.
+
+🧠 Pregunta 22
+¿Qué componente de un test permite simular una excepción como TimeoutError?
+
+A. Un fake
+B. pytest.mark.xfail
+C. side_effect en un mock
+D. autospec
+
+✅ Correcta: C
+🧾 Explicación: side_effect permite lanzar excepciones simuladas como parte del comportamiento del mock.
+
+🧠 Pregunta 23
+¿Por qué es importante mantener los mocks alineados con la API real?
+
+A. Para no romper el entorno de staging
+B. Porque la documentación se genera automáticamente
+C. Para evitar inconsistencias entre pruebas y producción
+D. Porque reduce el uso de recursos computacionales
+
+✅ Correcta: C
+🧾 Explicación: Cuando la API real cambia, los mocks deben actualizarse para evitar desincronización y falsos positivos en pruebas.
+
+🧠 Pregunta 24
+¿Qué técnica permite simular respuestas paginadas en una API usando mocks?
+
+A. autospec con decorators
+B. side_effect con generadores
+C. pytest.mark.xfail con fixtures
+D. patch con skipif
+
+✅ Correcta: B
+🧾 Explicación: Al usar generadores con side_effect, se pueden simular varias respuestas secuenciales como una API paginada.
+
+🧠 Pregunta 25
+¿Cuál es una buena práctica al usar fixtures para mocks en pytest?
+
+A. Crear un nuevo stub por cada test manualmente
+B. Configurar respuestas dentro del test y no en la fixture
+C. Definir fixtures reutilizables con alcance controlado
+D. Evitar parametrización por temas de rendimiento
+
+✅ Correcta: C
+🧾 Explicación: Reutilizar fixtures permite mantener el código limpio y controlado, optimizando su uso según el alcance necesario (función, módulo, sesión).
+
+🧠 Pregunta 26
+¿Cuál es la principal diferencia entre un spy y un mock?
+
+A. El spy no permite verificar argumentos
+B. El spy ejecuta la lógica real y registra llamadas
+C. El mock siempre lanza excepciones
+D. El mock se usa solo para funciones asíncronas
+
+✅ Correcta: B
+🧾 Explicación: El spy actúa como un envoltorio del objeto real, permitiendo registrar llamadas sin alterar su comportamiento.
+
+🧠 Pregunta 27
+¿Para qué se utiliza monkeypatch en pytest?
+
+A. Crear dummies sin lógica
+B. Medir cobertura de ramas
+C. Parchear funciones o métodos durante los tests
+D. Repetir tests fallidos automáticamente
+
+✅ Correcta: C
+🧾 Explicación: monkeypatch permite cambiar atributos, funciones o métodos temporalmente durante la ejecución de un test.
+
+🧠 Pregunta 28
+¿Qué permite verificar mock.call_args_list?
+
+A. El número de líneas cubiertas por prueba
+B. Los argumentos de todas las llamadas hechas a un mock
+C. La conexión a una API externa real
+D. La cantidad de errores de un test
+
+✅ Correcta: B
+🧾 Explicación: call_args_list es una lista que contiene todos los argumentos con los que se llamó al mock en orden.
+
+🧠 Pregunta 29
+¿En qué caso se recomienda el uso de @pytest.mark.skip?
+
+A. Cuando una prueba está incompleta y falla constantemente
+B. Cuando un test depende de condiciones específicas no cumplidas
+C. Cuando el código no tiene cobertura suficiente
+D. Cuando se desea ocultar errores de los pipelines
+
+✅ Correcta: B
+🧾 Explicación: skip permite omitir pruebas que no deben ejecutarse en ciertos contextos, por ejemplo, sistemas operativos incompatibles.
+
+🧠 Pregunta 30
+¿Por qué se recomienda limitar la profundidad de mocks en una prueba?
+
+A. Porque los mocks no son compatibles con Python 3
+B. Porque los mocks incrementan el tamaño de los binarios
+C. Porque usar muchos mocks puede indicar exceso de acoplamiento
+D. Porque impiden ejecutar fixtures
+
+✅ Correcta: C
+🧾 Explicación: Si una prueba requiere muchos mocks, puede ser una señal de que se está probando demasiado o hay fuerte acoplamiento.
+
+🧠 Pregunta 31
+¿Qué validación realiza mock.assert_not_called()?
+
+A. Que no se haya ejecutado el test
+B. Que el resultado sea falso
+C. Que el mock nunca fue invocado durante el test
+D. Que haya ocurrido una excepción
+
+✅ Correcta: C
+🧾 Explicación: Este método verifica que el mock no haya sido llamado en ningún momento durante la ejecución del test.
+
+🧠 Pregunta 32
+¿Qué permite hacer el decorador @patch()?
+
+A. Convertir un mock en spy
+B. Reemplazar temporalmente una función o clase durante el test
+C. Hacer que un test se ejecute en todos los sistemas operativos
+D. Inyectar automáticamente errores
+
+✅ Correcta: B
+🧾 Explicación: @patch reemplaza un objeto en tiempo de ejecución para simular su comportamiento sin modificar el código fuente.
+
+🧠 Pregunta 33
+¿Qué ventaja ofrece la integración de coverage.py en el pipeline?
+
+A. Elimina la necesidad de pruebas manuales
+B. Permite ejecutar los tests en staging
+C. Bloquea el merge si no se alcanza una cobertura mínima
+D. Automatiza el versionado del código
+
+✅ Correcta: C
+🧾 Explicación: coverage.py mide qué partes del código son ejecutadas durante las pruebas y puede integrarse con reglas de bloqueo en CI.
+
+🧠 Pregunta 34
+¿Cuál es una buena práctica respecto al uso de datos en tests con mocks?
+
+A. Usar siempre datos reales
+B. Utilizar fixtures o valores deterministas
+C. Generar datos aleatorios en cada ejecución
+D. Usar relojes del sistema para crear timestamps
+
+✅ Correcta: B
+🧾 Explicación: Para mantener pruebas predecibles y repetibles, se recomienda usar fixtures con datos estáticos.
+
+🧠 Pregunta 35
+¿Qué característica tiene pytest.mark.xfail(strict=True)?
+
+A. Ignora la prueba si falla
+B. La considera un éxito incluso si falla
+C. Marca como error si la prueba pasa inesperadamente
+D. Desactiva los logs de errores
+
+✅ Correcta: C
+🧾 Explicación: strict=True obliga a que la prueba marcada como xfail falle, y genera error si por alguna razón pasa.
+
+🧠 Pregunta 36
+¿Qué se recomienda hacer con las marcas skip y xfail a largo plazo?
+
+A. Dejarlas activas permanentemente
+B. Reescribirlas como errores fatales
+C. Revisarlas periódicamente y eliminarlas si ya no aplican
+D. Convertirlas en fixtures
+
+✅ Correcta: C
+🧾 Explicación: Las marcas deben revisarse para evitar acumular deuda técnica o ignorar problemas que ya fueron resueltos.
+
+🧠 Pregunta 37
+¿Para qué sirve side_effect con generadores en pruebas de paginación?
+
+A. Para registrar llamadas de una API
+B. Para simular excepciones controladas
+C. Para devolver múltiples respuestas secuenciales
+D. Para medir la latencia entre llamadas
+
+✅ Correcta: C
+🧾 Explicación: Al usar side_effect con generadores, se pueden simular varias páginas de resultados en llamadas consecutivas.
+
+🧠 Pregunta 38
+¿Cuál es un riesgo al usar patching holístico en tests?
+
+A. Que los mocks se reinicien entre pruebas
+B. Que se ralentice el pipeline
+C. Que los efectos secundarios se propaguen entre tests
+D. Que no se pueda medir cobertura
+
+✅ Correcta: C
+🧾 Explicación: Un parche aplicado a nivel de módulo o sesión puede mantenerse activo entre pruebas y generar efectos colaterales.
+
+🧠 Pregunta 39
+¿Cuál es la principal ventaja del enfoque mockist?
+
+A. Requiere menos conocimientos técnicos
+B. Detecta fallos de integración automáticamente
+C. Aísla componentes para retroalimentación rápida
+D. Elimina la necesidad de pruebas de integración
+
+✅ Correcta: C
+🧾 Explicación: Mockist busca retroalimentación rápida probando unidades individuales con dependencias simuladas.
+
+🧠 Pregunta 40
+¿Qué escenario es ideal para usar un fake?
+
+A. Probar cómo responde el sistema a errores de red
+B. Ejecutar pruebas unitarias con mocks
+C. Reemplazar servicios reales con lógica funcional simplificada
+D. Verificar si un dummy fue llamado
+
+✅ Correcta: C
+🧾 Explicación: Los fakes implementan la lógica de manera simplificada para reemplazar servicios reales en pruebas funcionales.
+
+🧠 Pregunta 41
+¿Cuál es una buena métrica para evaluar el balance entre mocks y pruebas reales en un pipeline?
+
+A. Porcentaje de fixtures reutilizadas
+B. Cantidad de líneas de código
+C. Métricas DORA como tiempo de retroalimentación
+D. Número de pruebas ejecutadas por hora
+
+✅ Correcta: C
+🧾 Explicación: Las métricas DORA permiten medir el rendimiento de pipelines, incluyendo tiempo de ejecución y frecuencia de fallos.
+
+🧠 Pregunta 42
+¿Qué implica aplicar el principio de inversión de dependencias (DIP) con mocks?
+
+A. Usar una base de datos real en todos los tests
+B. Modificar el código para permitir inyección de dependencias simuladas
+C. Eliminar el uso de fixtures
+D. Integrar los mocks dentro del código de producción
+
+✅ Correcta: B
+🧾 Explicación: Aplicar DIP permite que el código dependa de abstracciones, facilitando el uso de mocks durante las pruebas.
+
+🧠 Pregunta 43
+¿Qué permite el uso del parámetro call_count en un mock?
+
+A. Saber cuántos errores hubo durante una ejecución
+B. Medir el rendimiento del pipeline
+C. Ver cuántas veces fue invocado un método
+D. Simular múltiples respuestas
+
+✅ Correcta: C
+🧾 Explicación: call_count indica el número total de veces que se ha llamado al mock.
+
+🧠 Pregunta 44
+¿Cuál es un objetivo clave del uso de técnicas de mocking en CI/CD?
+
+A. Ejecutar los tests solo al final del ciclo
+B. Facilitar el versionado semántico
+C. Garantizar feedback rápido sin dependencias externas
+D. Validar firmas de commits
+
+✅ Correcta: C
+🧾 Explicación: Mocking permite simular dependencias y obtener resultados inmediatos sin requerir servicios reales.
+
+🧠 Pregunta 45
+¿Qué utilidad tiene @pytest.fixture(scope="module")?
+
+A. Ejecutar la fixture una sola vez por archivo
+B. Parchear automáticamente todos los métodos del módulo
+C. Simular errores globales del sistema
+D. Activar xfail en todos los tests
+
+✅ Correcta: A
+🧾 Explicación: El scope="module" indica que la fixture se ejecuta solo una vez por módulo, reutilizándose en múltiples tests.
+
+🧠 Pregunta 46
+¿En qué situación es útil un dummy?
+
+A. Cuando se desea validar el comportamiento real de un objeto
+B. Para cumplir con los parámetros requeridos, sin usarlo realmente
+C. Para simular errores de red
+D. Cuando se necesita simular llamadas múltiples
+
+✅ Correcta: B
+🧾 Explicación: Un dummy se utiliza cuando un parámetro es obligatorio, pero no tiene ningún rol en la prueba.
+
+🧠 Pregunta 47
+¿Cuál es el riesgo de mocks mal configurados respecto a la API real?
+
+A. Reducen la cobertura
+B. Ocultan bugs por desincronización de comportamiento
+C. Generan pruebas demasiado lentas
+D. No permiten paralelismo
+
+✅ Correcta: B
+🧾 Explicación: Si los mocks no reflejan el comportamiento real actualizado, las pruebas pueden pasar sin detectar errores presentes en producción.
+
+🧠 Pregunta 48
+¿Qué patrón se rompe si se modifican los valores internos de un test parametrizado?
+
+A. Principio de Responsabilidad Única
+B. Principio de Sustitución de Liskov
+C. Principio Open/Closed
+D. Principio de Inversión de Dependencias
+
+✅ Correcta: C
+🧾 Explicación: El principio Open/Closed establece que el código debe ser abierto a extensión, pero cerrado a modificación.
+
+🧠 Pregunta 49
+¿Qué permite validar assert_any_call()?
+
+A. Que el mock fue llamado solo una vez
+B. Que al menos una de las llamadas coincide con los argumentos esperados
+C. Que el test contiene un dummy válido
+D. Que el pipeline se ejecutó con éxito
+
+✅ Correcta: B
+🧾 Explicación: Esta función valida que entre todas las llamadas realizadas, al menos una coincidió con ciertos argumentos.
+
+🧠 Pregunta 50
+¿Cuál es una ventaja del uso de mocks en pre-commits?
+
+A. Permiten ejecutar código en staging
+B. Aceleran el feedback del desarrollador antes del push
+C. Impiden que se realicen cambios en la base de datos
+D. Permiten revisar conflictos de merge
+
+✅ Correcta: B
+🧾 Explicación: Ejecutar tests con mocks en pre-commit permite identificar errores rápidamente antes de enviar código al repositorio.
+
