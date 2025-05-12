@@ -1,0 +1,559 @@
+🧠 Pregunta 1
+¿Qué beneficio aporta usar un Makefile en proyectos DevOps?
+
+A. Permite ejecutar código sin necesidad de Python
+B. Sirve como interfaz gráfica para el usuario
+C. Orquesta tareas repetitivas de forma declarativa y estandarizada
+D. Reemplaza completamente a pytest y Git
+
+✅ Correcta: C
+🧾 Explicación: El Makefile permite definir comandos complejos de forma declarativa y reproducible, promoviendo automatización, eficiencia y estandarización.
+
+🧠 Pregunta 2
+¿Qué propósito cumple la variable ACTIVITY en el Makefile presentado?
+
+A. Ejecutar todos los tests en paralelo
+B. Definir qué versión de Python se usará
+C. Seleccionar la carpeta específica de pruebas a ejecutar
+D. Activar el entorno virtual
+
+✅ Correcta: C
+🧾 Explicación: ACTIVITY permite al usuario enfocar las pruebas en una subcarpeta determinada, como aserciones_pruebas, facilitando una ejecución granular.
+
+🧠 Pregunta 3
+¿Cuál es el objetivo principal del comando make test_all?
+
+A. Ejecutar flake8 sobre todas las actividades
+B. Correr todos los tests en paralelo sin detenerse si fallan
+C. Ejecutar pytest en todas las actividades y detenerse si alguna falla
+D. Generar reportes de cobertura combinados
+
+✅ Correcta: C
+🧾 Explicación: El target test_all itera sobre todas las carpetas de pruebas (ACTIVITIES), ejecutando pytest y deteniendo el proceso si alguna prueba falla, ideal para entornos CI.
+
+🧠 Pregunta 4
+¿Qué hace la directiva .PHONY en un Makefile?
+
+A. Ejecuta Python automáticamente
+B. Indica que un objetivo puede ser sobrescrito por otro
+C. Impide que un archivo del mismo nombre interfiera con la regla
+D. Elimina variables de entorno del sistema
+
+✅ Correcta: C
+🧾 Explicación: .PHONY se usa para declarar que un target no representa un archivo real, evitando conflictos con archivos del mismo nombre.
+
+🧠 Pregunta 5
+¿Qué comando se sugiere para limpiar datos de cobertura antes de una nueva ejecución?
+
+A. rm -rf htmlcov
+B. pytest --clean
+C. coverage erase
+D. clear coverage
+
+✅ Correcta: C
+🧾 Explicación: coverage erase elimina datos de cobertura anteriores, asegurando que los nuevos resultados sean precisos y actualizados.
+
+🧠 Pregunta 6
+¿Qué ventaja ofrece el uso de fixtures con autouse=True en pytest?
+
+A. Permite pruebas paralelas sin conflictos
+B. Automatiza su ejecución en cada prueba sin necesidad de invocarla explícitamente
+C. Reduce el tiempo de ejecución de los tests
+D. Evita el uso de asserts en las pruebas
+
+✅ Correcta: B
+🧾 Explicación: Al definir un fixture con autouse=True, pytest lo inyecta automáticamente en cada test, ideal para configuraciones o setups globales.
+
+🧠 Pregunta 7
+¿Para qué sirve el target make clean en un entorno de desarrollo?
+
+A. Crea un nuevo entorno virtual limpio
+B. Elimina archivos temporales, cachés y reportes antiguos
+C. Reinicia el sistema operativo
+D. Borra los archivos de código fuente
+
+✅ Correcta: B
+🧾 Explicación: make clean se encarga de eliminar carpetas como __pycache__, .pytest_cache y reportes de cobertura para limpiar el entorno.
+
+🧠 Pregunta 8
+¿Qué patrón de prueba pertenece al enfoque "Four Test Patterns"?
+
+A. run-lint
+B. assert-clean
+C. setup → exercise → verify → teardown
+D. build → run → deploy → monitor
+
+✅ Correcta: C
+🧾 Explicación: Los Four Test Patterns definen un flujo claro para las pruebas: preparar datos (setup), ejecutar acciones (exercise), verificar resultados (verify) y limpiar (teardown).
+
+🧠 Pregunta 9
+¿Cuál es el objetivo del target make tdd?
+
+A. Automatizar la generación de código
+B. Ejecutar pruebas, detenerse si fallan, permitir implementación y volver a probar
+C. Crear una interfaz gráfica para pruebas
+D. Subir los cambios al repositorio
+
+✅ Correcta: B
+🧾 Explicación: make tdd simula el ciclo Red-Green-Refactor de TDD: fallar primero, implementar lo mínimo, pasar los tests y refactorizar.
+
+🧠 Pregunta 10
+¿Cuál es la utilidad de integrar Make con Git Hooks, como en el pre-commit?
+
+A. Ejecutar pruebas solo después del merge
+B. Permitir commits con errores
+C. Automatizar validaciones antes del commit, como lint y test
+D. Actualizar automáticamente la versión del Makefile
+
+✅ Correcta: C
+🧾 Explicación: Los hooks pre-commit permiten ejecutar acciones como make lint y make test, bloqueando commits que no pasen ciertas validaciones
+
+🧠 Pregunta 11
+¿Qué herramienta ejecuta el objetivo make lint según el Makefile?
+
+A. unittest
+B. flake8
+C. black
+D. behave
+
+✅ Correcta: B
+🧾 Explicación: El objetivo make lint ejecuta flake8, una herramienta que analiza errores de estilo y sintaxis en el código Python.
+
+🧠 Pregunta 12
+¿Qué ventaja ofrece make help en el flujo de trabajo?
+
+A. Ejecuta todas las pruebas automáticamente
+B. Muestra las actividades disponibles y comandos definidos
+C. Instala las dependencias de forma oculta
+D. Resuelve conflictos de git automáticamente
+
+✅ Correcta: B
+🧾 Explicación: make help muestra todos los comandos disponibles en el Makefile, funcionando como una documentación viva del proyecto.
+
+🧠 Pregunta 13
+¿Qué sucede si un archivo se llama igual que un target sin .PHONY?
+
+A. El target se ejecuta sin problemas
+B. El Makefile lo ignora automáticamente
+C. Se ejecuta el archivo en lugar de la regla
+D. Se elimina el archivo al ejecutar make
+
+✅ Correcta: C
+🧾 Explicación: Sin .PHONY, Make puede confundirse y creer que el archivo ya cumple el objetivo, evitando que la regla se ejecute.
+
+🧠 Pregunta 14
+¿Qué hace PYTHONWARNINGS="ignore::DeprecationWarning" en make test?
+
+A. Muestra advertencias detalladas en los tests
+B. Ignora los errores de importación
+C. Suprime las advertencias de funciones obsoletas
+D. Desactiva el pytest temporalmente
+
+✅ Correcta: C
+🧾 Explicación: Esta variable suprime los warnings de funciones obsoletas para que la salida de pytest sea más clara y enfocada.
+
+🧠 Pregunta 15
+¿Por qué se usa cd - >/dev/null al final de test_all?
+
+A. Elimina la carpeta actual
+B. Cambia a la raíz del sistema
+C. Regresa al directorio anterior sin mostrar la ruta
+D. Borra archivos temporales
+
+✅ Correcta: C
+🧾 Explicación: cd - retorna al directorio anterior, y >/dev/null suprime su salida para mantener la terminal limpia.
+
+🧠 Pregunta 16
+¿Qué objetivo se recomienda para generar reportes visuales de cobertura?
+
+A. make lint
+B. make help
+C. make coverage
+D. make tdd
+
+✅ Correcta: C
+🧾 Explicación: El objetivo make coverage ejecuta coverage html, generando un informe visual en HTML con las líneas cubiertas por los tests.
+
+🧠 Pregunta 17
+¿Qué permite el uso de ?= en ACTIVITY ?= aserciones_pruebas?
+
+A. Fijar la actividad como obligatoria
+B. Sobrescribir el valor por defecto desde línea de comandos
+C. Asignar siempre el valor a ACTIVITY
+D. Prevenir que se reemplace la variable
+
+✅ Correcta: B
+🧾 Explicación: ?= asigna un valor por defecto solo si la variable no fue definida previamente, lo que permite personalizarla al ejecutar make.
+
+🧠 Pregunta 18
+¿Qué ventaja tiene usar coverage_individual frente a coverage?
+
+A. Ejecuta menos pruebas
+B. Genera un solo archivo HTML de cobertura
+C. Permite analizar cobertura por cada carpeta de actividad
+D. No requiere instalar coverage
+
+✅ Correcta: C
+🧾 Explicación: El objetivo coverage_individual evalúa la cobertura de cada actividad por separado y genera un HTML específico por cada una.
+
+🧠 Pregunta 19
+¿Qué librería se sugiere para escaneo de vulnerabilidades en el proyecto?
+
+A. requests
+B. safety
+C. pytest
+D. matplotlib
+
+✅ Correcta: B
+🧾 Explicación: safety y pip-audit son herramientas que analizan las dependencias del proyecto para detectar vulnerabilidades conocidas.
+
+🧠 Pregunta 20
+¿Qué tag se usa en Behave para filtrar escenarios?
+
+A. #Scenario
+B. @pytest
+C. --filter
+D. --tags=@smoke
+
+✅ Correcta: D
+🧾 Explicación: Behave permite ejecutar escenarios específicos mediante la opción --tags, como --tags=@smoke.
+
+🧠 Pregunta 21
+¿Qué acción hace make docker-test en un flujo DevOps?
+
+A. Ejecuta pruebas sobre una máquina local
+B. Ejecuta pytest sobre todas las carpetas sin aislar el entorno
+C. Ejecuta make test_all dentro de un contenedor Docker
+D. Borra imágenes Docker antiguas
+
+✅ Correcta: C
+🧾 Explicación: El objetivo docker-test construye y ejecuta el contenedor miapp:dev y corre dentro de él make test_all, aislando el entorno.
+
+🧠 Pregunta 22
+¿Qué paso representa el patrón "Stimulus" en los Four Test Patterns?
+
+A. Preparar datos
+B. Ejecutar la acción que se desea probar
+C. Comparar resultados
+D. Limpiar entorno
+
+✅ Correcta: B
+🧾 Explicación: "Stimulus" se refiere a ejecutar la función o interacción que se quiere probar, como una división o un inicio de sesión.
+
+🧠 Pregunta 23
+¿Qué patrón se utiliza en test_division_por_cero para verificar una excepción?
+
+A. assert equal
+B. try-catch
+C. with pytest.raises
+D. assert not None
+
+✅ Correcta: C
+🧾 Explicación: La función with pytest.raises permite verificar que una excepción específica, como ZeroDivisionError, se haya lanzado.
+
+🧠 Pregunta 24
+¿Qué herramienta se menciona para cargar resultados de cobertura en GitHub Actions?
+
+A. flake8
+B. pipenv
+C. codecov-action
+D. github-linter
+
+✅ Correcta: C
+🧾 Explicación: codecov/codecov-action es una acción que permite subir los reportes generados por coverage a Codecov para su análisis en línea.
+
+🧠 Pregunta 25
+¿Qué práctica permite reproducir una build exactamente?
+
+A. Ejecutar pytest sin fixtures
+B. Usar random.seed(42)
+C. Guardar el timestamp y commit hash
+D. Instalar make con sudo
+
+✅ Correcta: C
+🧾 Explicación: Incluir el timestamp y commit hash en los reportes garantiza que se puede reproducir exactamente el estado de una compilación.
+
+🧠 Pregunta 26
+¿Qué hace el siguiente código en un hook pre-commit?
+make test ACTIVITY=pruebas_pytest
+
+A. Crea un entorno virtual
+B. Ejecuta todos los escenarios de BDD
+C. Ejecuta pytest en una carpeta específica antes del commit
+D. Borra los archivos de test
+
+✅ Correcta: C
+🧾 Explicación: Esta instrucción ejecuta las pruebas unitarias localizadas en la carpeta pruebas_pytest como parte de las validaciones previas al commit.
+
+🧠 Pregunta 27
+¿Qué comando de Make se usa para combinar BDD, TDD, lint y coverage?
+
+A. make tdd
+B. make help
+C. make ci
+D. make docker-test
+
+✅ Correcta: C
+🧾 Explicación: make ci combina los targets lint, test, bdd y coverage, integrando todas las validaciones clave en un solo flujo de integración.
+
+🧠 Pregunta 28
+¿Dónde deben colocarse las definiciones de pasos (step definitions) de Behave?
+
+A. En conftest.py
+B. En el archivo .feature
+C. En la carpeta steps/steps.py
+D. En requirements.txt
+
+✅ Correcta: C
+🧾 Explicación: Behave busca las definiciones de pasos dentro del archivo steps.py ubicado en la subcarpeta steps del directorio features.
+
+🧠 Pregunta 29
+¿Cuál de los siguientes es un ejemplo válido de expresión regular nombrada en Behave?
+
+A. ".*"
+B. (?<email>)
+C. (?P<email>[^"]+)
+D. ?P="email"
+
+✅ Correcta: C
+🧾 Explicación: (?P<email>[^"]+) es una expresión regular nombrada que permite capturar el valor del parámetro email con claridad y reutilización.
+
+🧠 Pregunta 30
+¿Qué significa la práctica DevOps de "idempotencia" aplicada a targets de Make?
+
+A. Cada target se ejecuta solo una vez por sesión
+B. El target solo puede ejecutarse si no hay errores
+C. Ejecutar un target varias veces no produce efectos colaterales adicionales
+D. Un target que se autoelimina al terminar
+
+✅ Correcta: C
+🧾 Explicación: La idempotencia garantiza que ejecutar un mismo target múltiples veces produzca el mismo resultado, sin duplicar efectos o introducir errores.
+
+🧠 Pregunta 31
+¿Qué efecto tiene make install en un entorno DevOps?
+
+A. Instala Make en el sistema
+B. Crea un contenedor Docker
+C. Instala las dependencias del proyecto desde requirements.txt
+D. Ejecuta todos los tests automáticamente
+
+✅ Correcta: C
+🧾 Explicación: make install ejecuta pip install -r requirements.txt, asegurando que el entorno tenga todas las dependencias del proyecto.
+
+🧠 Pregunta 32
+¿Qué ventaja ofrece Git al permitir múltiples flujos de trabajo como Git Flow o GitHub Flow?
+
+A. Facilita el uso sin ramas
+B. Impide que dos usuarios trabajen en paralelo
+C. Permite adaptar el flujo de trabajo al estilo del equipo
+D. Requiere siempre trabajar en la rama main
+
+✅ Correcta: C
+🧾 Explicación: Git es flexible y permite aplicar diferentes flujos de trabajo según el tamaño y estilo del equipo, como ramas cortas o estructuras formales.
+
+🧠 Pregunta 33
+¿Cuál es el propósito de usar @pytest.fixture(scope="module")?
+
+A. Ejecutar la fixture después de cada prueba
+B. Compartir la fixture entre múltiples funciones de prueba en el mismo módulo
+C. Evitar que se ejecute más de una vez
+D. Inyectar variables del sistema
+
+✅ Correcta: B
+🧾 Explicación: El scope "module" indica que la fixture se ejecuta una vez por módulo, siendo compartida por todas las pruebas dentro de él.
+
+🧠 Pregunta 34
+¿Qué ocurre si una de las pruebas falla en make test_all?
+
+A. Se ignora y continúa
+B. Se elimina el directorio
+C. Se detiene todo el proceso
+D. Se reinicia la ejecución de pruebas automáticamente
+
+✅ Correcta: C
+🧾 Explicación: || exit 1 hace que el proceso se detenga al fallar una actividad, ideal para validar calidad antes de un merge en CI/CD.
+
+🧠 Pregunta 35
+¿Cuál es la función del comando find . -type d -name "__pycache__"?
+
+A. Buscar archivos ocultos
+B. Listar dependencias del proyecto
+C. Buscar carpetas de caché para eliminarlas
+D. Encontrar errores en el código
+
+✅ Correcta: C
+🧾 Explicación: El comando busca y elimina directorios __pycache__ generados por Python, útiles para limpiar el entorno antes de una nueva ejecución.
+
+🧠 Pregunta 36
+¿Qué patrón de prueba representa mejor el step @then en Behave?
+
+A. Setup
+B. Teardown
+C. Exercise
+D. Verify
+
+✅ Correcta: D
+🧾 Explicación: El step @then se usa para verificar que el resultado de una acción coincide con lo esperado, cumpliendo el patrón de verificación (Verify).
+
+🧠 Pregunta 37
+¿Cuál es el objetivo de usar yield dentro de una fixture?
+
+A. Ejecutar dos pruebas al mismo tiempo
+B. Declarar que la función es una prueba
+C. Separar la fase de setup de la de teardown
+D. Eliminar código duplicado
+
+✅ Correcta: C
+🧾 Explicación: El uso de yield en una fixture permite definir acciones que ocurren antes (setup) y después (teardown) de cada prueba.
+
+🧠 Pregunta 38
+¿Para qué sirve coverage report -m?
+
+A. Ejecuta pruebas paralelas
+B. Genera métricas de rendimiento
+C. Muestra el porcentaje de cobertura con detalles de línea
+D. Crea archivos HTML con los errores
+
+✅ Correcta: C
+🧾 Explicación: Este comando muestra un reporte detallado en consola con métricas de cobertura línea por línea para cada archivo del proyecto.
+
+🧠 Pregunta 39
+¿Qué permite el uso de make scan?
+
+A. Verificar versiones antiguas de Python
+B. Hacer un análisis de vulnerabilidades en las dependencias
+C. Ejecutar los tests en contenedores
+D. Subir resultados a GitHub
+
+✅ Correcta: B
+🧾 Explicación: make scan es un objetivo que puede invocar herramientas como Bandit o safety para detectar vulnerabilidades conocidas en el proyecto.
+
+🧠 Pregunta 40
+¿Qué representa este bloque en un Makefile?
+
+make
+Copiar
+Editar
+ACTIVITY ?= aserciones_pruebas  
+A. La variable es obligatoria
+B. La variable ACTIVITY no puede ser modificada
+C. Se asigna un valor por defecto si no está definido
+D. Es una constante del sistema
+
+✅ Correcta: C
+🧾 Explicación: ?= define un valor por defecto que puede ser sobrescrito al momento de ejecutar make.
+
+🧠 Pregunta 41
+¿Dónde deben definirse los escenarios de Gherkin en Behave?
+
+A. En conftest.py
+B. En archivos .py
+C. En archivos .feature
+D. En __init__.py
+
+✅ Correcta: C
+🧾 Explicación: Los escenarios escritos en lenguaje Gherkin deben almacenarse en archivos .feature dentro del directorio features/.
+
+🧠 Pregunta 42
+¿Qué representa este paso en Behave?
+
+gherkin
+Copiar
+Editar
+Then debo ver el mensaje "Bienvenido, Cesar"
+A. Es una configuración
+B. Es un escenario de setup
+C. Es una afirmación esperada
+D. Es un nombre de feature
+
+✅ Correcta: C
+🧾 Explicación: El paso Then representa una afirmación que debe cumplirse después de ejecutar una acción, como verificar un mensaje de bienvenida.
+
+🧠 Pregunta 43
+¿Qué comando genera un reporte visual de cobertura por cada actividad?
+
+A. make coverage
+B. make coverage_individual
+C. make test_all
+D. make pytest-report
+
+✅ Correcta: B
+🧾 Explicación: make coverage_individual ejecuta pruebas y genera reportes de cobertura HTML por cada carpeta de actividad listada en ACTIVITIES.
+
+🧠 Pregunta 44
+¿Cuál es el propósito del target release?
+
+A. Subir resultados de test a un servidor
+B. Crear un entorno virtual
+C. Generar una etiqueta (tag) en Git con una nueva versión
+D. Lanzar una versión en producción automáticamente
+
+✅ Correcta: C
+🧾 Explicación: El objetivo release permite etiquetar versiones del código fuente en Git con git tag, facilitando la trazabilidad del software.
+
+🧠 Pregunta 45
+¿Qué herramienta se usa para el análisis estático de código Python en este Makefile?
+
+A. pytest
+B. safety
+C. flake8
+D. behave
+
+✅ Correcta: C
+🧾 Explicación: flake8 se encarga de verificar el estilo del código y errores estáticos como nombres no usados, ayudando a mantener estándares de calidad.
+
+🧠 Pregunta 46
+¿Qué representa el patrón Red-Green-Refactor?
+
+A. Tres etapas de validación de BDD
+B. Tres tipos de entornos de desarrollo
+C. Ciclo de TDD: fallo, implementación mínima y mejora del código
+D. Estados de un test hook
+
+✅ Correcta: C
+🧾 Explicación: El patrón Red-Green-Refactor es parte del TDD: primero se escribe un test que falla (Red), luego el código para pasarlo (Green), y finalmente se mejora (Refactor).
+
+🧠 Pregunta 47
+¿Cuál es el orden correcto de los Four Test Patterns?
+
+A. Refactor, Commit, Deploy, Merge
+B. Init, Verify, Test, Clean
+C. Setup, Exercise, Verify, Teardown
+D. Create, Launch, Debug, Delete
+
+✅ Correcta: C
+🧾 Explicación: El ciclo correcto para escribir pruebas robustas es: preparar el entorno (setup), ejecutar la acción (exercise), validar (verify) y limpiar (teardown).
+
+🧠 Pregunta 48
+¿Cuál es el objetivo de @then(r'debo ver el mensaje "(?P<mensaje>.+)"') en Behave?
+
+A. Filtrar mensajes de error
+B. Validar el mensaje devuelto por el sistema
+C. Llamar una función externa
+D. Compilar el proyecto
+
+✅ Correcta: B
+🧾 Explicación: Este step de Behave verifica que la respuesta del sistema incluya un mensaje esperado, como parte del patrón de verificación.
+
+🧠 Pregunta 49
+¿Qué significa usar make -j en contextos DevOps?
+
+A. Ejecutar una prueba específica
+B. Saltar todos los errores
+C. Ejecutar múltiples objetivos de Make en paralelo
+D. Generar un journal de logs
+
+✅ Correcta: C
+🧾 Explicación: make -j permite la ejecución paralela de tareas independientes, acelerando builds y validaciones en sistemas con múltiples núcleos.
+
+🧠 Pregunta 50
+¿Qué sucede si no se definen correctamente los targets .PHONY?
+
+A. Se ejecutan más rápido
+B. Se sobreescriben automáticamente
+C. El Makefile puede comportarse de forma inesperada si existe un archivo con el mismo nombre del target
+D. Se ignoran todas las reglas
+
+✅ Correcta: C
+🧾 Explicación: Sin .PHONY, si hay un archivo con el mismo nombre del target, Make podría asumir que ya está actualizado y no ejecutarlo.
+

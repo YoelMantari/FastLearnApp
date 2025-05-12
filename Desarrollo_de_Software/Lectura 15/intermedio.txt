@@ -1,0 +1,549 @@
+🧠 Pregunta 1
+¿Cuál es la principal ventaja de integrar Git avanzado en entornos de desarrollo ágil que utilizan Desarrollo Guiado por el Comportamiento (BDD)?
+
+A. Reduce la necesidad de pruebas unitarias.
+B. Permite ignorar los criterios de aceptación definidos en Gherkin.
+C. Asegura que cada cambio de código se valide mediante pruebas de aceptación automatizadas.
+D. Dificulta la colaboración entre desarrolladores y stakeholders.
+
+✅ Correcta: C
+🧾 Explicación: La integración de Git avanzado con BDD permite automatizar la validación de que el código cumple con los comportamientos especificados en los escenarios de Gherkin, mejorando la calidad del software.
+
+🧠 Pregunta 2
+¿Qué función cumplen los hooks de Git como pre-commit en la integración con BDD?
+
+A. Permiten subir cambios al repositorio remoto sin validación.
+B. Ejecutan scripts automáticamente en momentos clave del ciclo de vida del repositorio, como validar pruebas BDD antes de un commit.
+C. Se utilizan para modificar el historial de commits después de haber realizado un push.
+D. Desactivan la necesidad de realizar pruebas locales por parte del desarrollador.
+
+✅ Correcta: B
+🧾 Explicación: Los hooks como pre-commit automatizan tareas importantes, como la ejecución de pruebas BDD, antes de permitir un commit, asegurando que el código cumpla con los criterios de aceptación localmente.
+
+🧠 Pregunta 3
+En un pipeline de Integración Continua y Entrega Continua (CI/CD) integrado con BDD, ¿cuál es el propósito principal de ejecutar la suite de pruebas BDD?
+
+A. Optimizar el tiempo de compilación del proyecto.
+B. Asegurar que la infraestructura del servidor esté correctamente configurada.
+C. Validar que el comportamiento del sistema cumple con las especificaciones definidas en los escenarios de Gherkin.
+D. Generar automáticamente la documentación técnica del proyecto.
+
+✅ Correcta: C
+🧾 Explicación: La ejecución de las pruebas BDD en el pipeline de CI/CD garantiza que cada cambio en el código sea verificado contra los criterios de aceptación definidos por los stakeholders.
+
+🧠 Pregunta 4
+¿Por qué es beneficioso estandarizar el historial de commits en un proyecto que utiliza Git avanzado y BDD?
+
+A. Reduce el tamaño del repositorio Git.
+B. Facilita la compilación más rápida del código.
+C. Permite relacionar directamente los cambios del código con historias de usuario o escenarios de BDD, mejorando la trazabilidad.
+D. Simplifica la estructura de las ramas de Git.
+
+✅ Correcta: C
+🧾 Explicación: La estandarización de los mensajes de commit facilita el seguimiento de qué cambios responden a qué requisitos definidos en las especificaciones BDD.
+
+🧠 Pregunta 5
+¿Cómo contribuyen los git worktrees a la gestión paralela de funcionalidades en un entorno BDD?
+
+A. Permiten fusionar ramas conflictivas de forma automática.
+B. Facilitan el trabajo con múltiples ramas del mismo repositorio en diferentes directorios, permitiendo el desarrollo aislado y la prueba de funcionalidades sin interferencias.
+C. Reducen la necesidad de crear ramas para nuevas funcionalidades.
+D. Mejoran el rendimiento del repositorio al trabajar en una sola rama a la vez.
+
+✅ Correcta: B
+🧾 Explicación: Los git worktrees aíslan el trabajo en diferentes funcionalidades, lo que es especialmente útil para probar historias de usuario o escenarios BDD de forma independiente.
+
+🧠 Pregunta 6
+¿Qué utilidad tienen los alias de Git en la automatización de tareas en un entorno BDD?
+
+A. Permiten cambiar el autor de un commit ya realizado.
+B. Simplifican la visualización del historial de commits.
+C. Permiten definir comandos personalizados que pueden encadenar acciones como hacer un commit, ejecutar pruebas BDD y realizar un push.
+D. Se utilizan para gestionar las credenciales de acceso al repositorio remoto.
+
+✅ Correcta: C
+🧾 Explicación: Los alias de Git automatizan secuencias de comandos, lo que ayuda a asegurar que las pruebas BDD se ejecuten como parte del flujo de trabajo de desarrollo.
+
+🧠 Pregunta 7
+¿Cuál es la importancia de las expresiones regulares en la definición de steps en Gherkin?
+
+A. Permiten escribir escenarios en múltiples idiomas.
+B. Facilitan la creación de steps reutilizables que pueden capturar variables dinámicas de los escenarios.
+C. Mejoran la legibilidad de los archivos de características.
+D. Reducen el tiempo de ejecución de las pruebas BDD.
+
+✅ Correcta: B
+🧾 Explicación: Las expresiones regulares en Gherkin permiten parametrizar los steps, haciéndolos más flexibles y reutilizables para diferentes escenarios.
+
+🧠 Pregunta 8
+Dentro del Four Test Pattern integrado en un flujo BDD, ¿qué rol cumplen las pruebas de aceptación?
+
+A. Validar las unidades más pequeñas de código de forma aislada.
+B. Verificar la interacción entre distintos módulos o servicios del sistema.
+C. Asegurar que el software completo cumpla con los requisitos funcionales y no funcionales.
+D. Confirmar que el software cumple con los criterios de aceptación definidos en las historias de usuario, a través de los escenarios de Gherkin.
+
+✅ Correcta: D
+🧾 Explicación: Las pruebas de aceptación, derivadas de los escenarios BDD, son cruciales para asegurar que el software entregado satisfaga las necesidades del usuario final.
+
+🧠 Pregunta 9
+¿Qué sucede si un desarrollador intenta realizar un git commit y un hook pre-commit configurado para ejecutar pruebas BDD detecta un fallo?
+
+A. El commit se realiza de todas formas, pero se genera una advertencia.
+B. Git impide la realización del commit hasta que las pruebas sean exitosas.
+C. El commit se realiza, pero el pipeline de CI/CD se detiene.
+D. Se revierte automáticamente el último cambio realizado en los archivos.
+
+✅ Correcta: B
+🧾 Explicación: Los hooks pre-commit están diseñados para detener acciones si las validaciones configuradas (como la ejecución exitosa de pruebas BDD) no se cumplen.
+
+🧠 Pregunta 10
+En el contexto de la integración de Git avanzado y BDD, ¿cuál es el beneficio de integrar la ejecución de pruebas BDD en los pipelines de CI/CD?
+
+A. Permite desplegar el software más rápidamente sin importar los fallos en las pruebas.
+B. Asegura que cada cambio de código sea automáticamente validado contra los criterios de aceptación antes de su integración.
+C. Reduce la necesidad de realizar pruebas exploratorias por parte del equipo de QA.
+D. Simplifica la configuración del entorno de desarrollo local para los nuevos miembros del equipo.
+
+✅ Correcta: B
+🧾 Explicación: La integración en CI/CD automatiza la validación de los requisitos en cada cambio, asegurando la calidad del software de forma continua.
+
+🧠 Pregunta 11
+¿Qué tipo de información se podría validar utilizando un hook commit-msg en un proyecto BDD?
+
+A. El tamaño de los archivos que se están commiteando.
+B. El tiempo que tardó el desarrollador en realizar los cambios.
+C. El formato del mensaje del commit, por ejemplo, asegurando que incluya un identificador de historia de usuario.
+D. La complejidad ciclomática del código que se está commiteando.
+
+✅ Correcta: C
+🧾 Explicación: Los hooks commit-msg se utilizan para asegurar la adherencia a convenciones en los mensajes de commit, lo que facilita la trazabilidad con las historias de usuario en BDD.
+
+🧠 Pregunta 12
+¿Cuál es la principal utilidad de herramientas como git filter-branch o BFG Repo-Cleaner en un proyecto que sigue prácticas de BDD?
+
+A. Mejorar el rendimiento del repositorio Git al eliminar ramas antiguas.
+B. Reorganizar la estructura de los directorios del proyecto.
+C. Limpiar o reescribir el historial de Git para mantener la coherencia con las prácticas de documentación y trazabilidad de los requisitos.
+D. Automatizar la generación de informes de cobertura de pruebas.
+
+✅ Correcta: C
+🧾 Explicación: Estas herramientas ayudan a mantener un historial limpio y alineado con las historias de usuario y escenarios BDD, facilitando la comprensión de la evolución del proyecto.
+
+🧠 Pregunta 13
+¿Cómo facilita el uso de git worktrees la colaboración en un equipo que trabaja en múltiples funcionalidades definidas por escenarios BDD?
+
+A. Permite que varios desarrolladores editen el mismo archivo simultáneamente sin conflictos.
+B. Facilita la creación de múltiples copias completas del repositorio para cada desarrollador.
+C. Permite trabajar en diferentes ramas en directorios separados, aislando el desarrollo de cada funcionalidad y sus pruebas BDD.
+D. Automatiza la creación de ramas basadas en las historias de usuario de BDD.
+
+✅ Correcta: C
+🧾 Explicación: Los worktrees permiten un desarrollo paralelo y aislado, lo cual es ideal cuando diferentes miembros del equipo trabajan en distintas funcionalidades con sus propias pruebas de aceptación.
+
+🧠 Pregunta 14
+¿Qué tipo de tareas se pueden automatizar mediante scripts personalizados en un entorno de desarrollo BDD integrado con Git?
+
+A. La creación automática de archivos de características de Gherkin.
+B. La generación de informes de resultados de las pruebas BDD en formatos específicos.
+C. La estandarización de la configuración de Git, la instalación de hooks y la definición de alias útiles para el flujo de trabajo BDD.
+D. La implementación automática de los steps definidos en los archivos de características.
+
+✅ Correcta: C
+🧾 Explicación: Los scripts personalizados ayudan a asegurar un entorno de desarrollo consistente y a automatizar tareas repetitivas relacionadas con Git y la ejecución de pruebas BDD.
+
+🧠 Pregunta 15
+¿De qué manera el uso de expresiones regulares en los steps de Behave contribuye a la eficiencia de las pruebas BDD?
+
+A. Permite escribir escenarios de prueba en un lenguaje más técnico, reduciendo la ambigüedad.
+B. Facilita la creación de steps más específicos y menos reutilizables, enfocados en un solo caso.
+C. Posibilita la creación de steps genéricos que pueden adaptarse a múltiples escenarios al capturar diferentes valores dinámicamente.
+D. Mejora la velocidad de ejecución de las pruebas al optimizar la búsqueda de coincidencias en el código.
+
+✅ Correcta: C
+🧾 Explicación: La capacidad de capturar variables con expresiones regulares hace que los steps sean más reutilizables, reduciendo la cantidad de código necesario para cubrir diferentes escenarios.
+
+🧠 Pregunta 16
+En el contexto del Four Test Pattern, ¿qué diferencia principal existe entre las pruebas unitarias y las pruebas de aceptación (BDD)?
+
+A. Las pruebas unitarias son escritas por los testers, mientras que las pruebas de aceptación son escritas por los desarrolladores.
+B. Las pruebas unitarias validan el comportamiento del sistema desde la perspectiva del usuario final, mientras que las pruebas de aceptación se centran en componentes individuales.
+C. Las pruebas unitarias se ejecutan en el entorno de producción, mientras que las pruebas de aceptación se ejecutan en el entorno de desarrollo.
+D. Las pruebas unitarias verifican el correcto funcionamiento de pequeñas partes del código de forma aislada, mientras que las pruebas de aceptación validan que el sistema cumpla con los criterios definidos por el negocio.
+
+✅ Correcta: D
+🧾 Explicación: Las pruebas unitarias se enfocan en la lógica interna, mientras que las pruebas de aceptación (BDD) validan el cumplimiento de los requisitos del usuario.
+
+🧠 Pregunta 17
+¿Cómo se integra el Four Test Pattern con un flujo de trabajo BDD y Git avanzado en un pipeline de CI/CD?
+
+A. Se ejecutan solo las pruebas de aceptación para validar los cambios antes de la integración.
+B. Se ejecutan todos los niveles de pruebas (unitarias, integración, sistema y aceptación) en cada ciclo de integración para asegurar una validación exhaustiva del código.
+C. Los desarrolladores deciden qué tipo de pruebas ejecutar antes de cada commit.
+D. Las pruebas se ejecutan de forma manual en un entorno separado después de la integración.
+
+✅ Correcta: B
+🧾 Explicación: La integración completa implica la automatización de la ejecución de todos los niveles de pruebas en el pipeline para garantizar la calidad en cada etapa del desarrollo.
+
+🧠 Pregunta 18
+¿Cuál es el objetivo principal de mantener un historial de commits limpio y bien estructurado en un proyecto BDD?
+
+A. Reducir el tamaño del repositorio Git para mejorar el rendimiento.
+B. Facilitar la identificación de la causa de errores y la comprensión de la evolución del software en relación con los requisitos definidos en los escenarios BDD.
+C. Simplificar el proceso de merge entre diferentes ramas del repositorio.
+D. Asegurar que todos los commits sean realizados por un solo desarrollador para evitar conflictos.
+
+✅ Correcta: B
+🧾 Explicación: Un historial claro y bien organizado permite rastrear qué cambios se realizaron para cumplir con qué requisitos, facilitando el mantenimiento y la comprensión del proyecto.
+
+🧠 Pregunta 19
+¿Qué ventaja principal ofrece la automatización de pruebas de aceptación (BDD) mediante hooks de Git en un entorno de desarrollo colaborativo?
+
+A. Permite a los desarrolladores saltarse la revisión de código.
+B. Reduce significativamente la posibilidad de integrar código que no cumple con los criterios de aceptación en el repositorio remoto.
+C. Acelera el proceso de despliegue a producción al omitir pruebas manuales.
+D. Simplifica la gestión de múltiples ramas de desarrollo.
+
+✅ Correcta: B
+🧾 Explicación: La validación automática en cada commit o push ayuda a mantener la calidad del código base al asegurar que los cambios cumplen con los requisitos definidos.
+
+🧠 Pregunta 20
+¿Cómo influye la integración de Git avanzado con BDD en la documentación del proyecto?
+
+A. Genera automáticamente diagramas de la arquitectura del software.
+B. Mantiene la documentación técnica separada del código fuente.
+C. Los escenarios de BDD en Gherkin actúan como documentación viva y ejecutable de los requisitos del sistema.
+D. Reduce la necesidad de escribir documentación formal del usuario.
+
+✅ Correcta: C
+🧾 Explicación: Los escenarios de BDD, al ser especificaciones ejecutables, se convierten en una forma de documentación siempre actualizada y verificable.
+
+🧠 Pregunta 21
+¿Qué implicación tiene el uso de un hook pre-push que ejecuta pruebas BDD para la estabilidad del repositorio remoto?
+
+A. Permite a los desarrolladores forzar la subida de código incluso si las pruebas fallan localmente.
+B. Asegura que solo se envíen al repositorio central cambios que hayan superado las pruebas de aceptación, manteniendo la integridad de la rama principal.
+C. Ralentiza el proceso de envío de cambios al servidor remoto.
+D. Obliga a todos los desarrolladores a utilizar el mismo entorno de desarrollo.
+
+✅ Correcta: B
+🧾 Explicación: Al validar los cambios antes de ser compartidos, se minimiza el riesgo de introducir código defectuoso en el repositorio central.
+
+🧠 Pregunta 22
+¿De qué manera la estandarización de los mensajes de commit puede facilitar la colaboración entre el equipo de desarrollo y los stakeholders en un proyecto BDD?
+
+A. Permite a los stakeholders escribir directamente en el historial de commits.
+B. Facilita la generación automática de informes de progreso basados en las funcionalidades implementadas.
+C. Ayuda a vincular los cambios técnicos con las historias de usuario y los escenarios de aceptación que los originaron, mejorando la comprensión del valor entregado.
+D. Reduce la necesidad de reuniones de seguimiento del proyecto.
+
+✅ Correcta: C
+🧾 Explicación: Un historial de commits claro y vinculado a los requisitos facilita la comunicación y el entendimiento del avance del proyecto por parte de todos los involucrados.
+
+🧠 Pregunta 23
+¿Cuál es una ventaja de utilizar git worktrees en un proyecto donde diferentes funcionalidades impactan en gran medida la misma área del código?
+
+A. Permite combinar los cambios de diferentes funcionalidades automáticamente sin conflictos.
+B. Facilita el desarrollo aislado de cada funcionalidad en su propio espacio de trabajo, evitando interferencias y simplificando las pruebas.
+C. Reduce el tamaño del repositorio al no tener múltiples copias de las ramas.
+D. Acelera la conmutación entre diferentes ramas al mantener solo una copia del repositorio.
+
+✅ Correcta: B
+🧾 Explicación: El aislamiento proporcionado por los worktrees minimiza los riesgos de conflictos y facilita la prueba individual de cada funcionalidad.
+
+🧠 Pregunta 24
+¿Cómo pueden los alias de Git personalizados contribuir a la adopción de buenas prácticas de BDD dentro de un equipo?
+
+A. Pueden configurarse para evitar que los desarrolladores escriban escenarios de Gherkin incorrectamente.
+B. Pueden simplificar la ejecución de comandos que integran acciones de Git con la ejecución de pruebas BDD, fomentando su uso regular.
+C. Pueden generar automáticamente informes detallados del cumplimiento de los criterios de aceptación.
+D. Pueden forzar a los desarrolladores a realizar commits con mayor frecuencia.
+
+✅ Correcta: B
+🧾 Explicación: Los alias que combinan comandos de Git con la ejecución de pruebas BDD hacen que el proceso de validación sea más sencillo y fluido para los desarrolladores.
+
+🧠 Pregunta 25
+¿Por qué es importante la capacidad de las expresiones regulares en Gherkin para la creación de steps reutilizables?
+
+A. Reduce la necesidad de que los analistas de negocio participen en la definición de los escenarios.
+B. Permite que un mismo step de Behave se utilice para diferentes escenarios con datos variables, disminuyendo la redundancia en el código de prueba.
+C. Mejora la velocidad de ejecución de las pruebas al simplificar la lógica de los steps.
+D. Facilita la traducción de los escenarios de Gherkin a diferentes lenguajes de programación.
+
+✅ Correcta: B
+🧾 Explicación: La reutilización de steps a través de expresiones regulares hace que la suite de pruebas sea más mantenible y eficiente.
+
+🧠 Pregunta 26
+En el contexto del Four Test Pattern, ¿qué tipo de problemas se busca identificar principalmente con las pruebas de integración?
+
+A. Errores en la lógica interna de funciones o métodos individuales.
+B. Problemas que surgen de la interacción entre diferentes módulos o servicios del sistema.
+C. Fallos en el cumplimiento de los requisitos del usuario final.
+D. Problemas de rendimiento y escalabilidad del sistema en condiciones de carga.
+
+✅ Correcta: B
+🧾 Explicación: Las pruebas de integración se centran en asegurar que los diferentes componentes del sistema trabajen juntos correctamente.
+
+🧠 Pregunta 27
+¿Cómo contribuye la ejecución automatizada de todos los niveles del Four Test Pattern en un pipeline de CI/CD a la calidad del software en un proyecto BDD?
+
+A. Asegura que el software se despliegue más rápidamente al automatizar todas las pruebas.
+B. Proporciona una validación exhaustiva del software en diferentes niveles (unidad, integración, sistema y aceptación), detectando errores en etapas tempranas del ciclo de desarrollo.
+C. Elimina la necesidad de realizar pruebas exploratorias por parte del equipo de QA.
+D. Simplifica la configuración del entorno de pruebas.
+
+✅ Correcta: B
+🧾 Explicación: Una estrategia de pruebas multinivel y automatizada garantiza una alta calidad al verificar el software desde sus componentes más pequeños hasta su comportamiento global.
+
+🧠 Pregunta 28
+¿Qué implicación tiene para la trazabilidad de requisitos el mantener un historial de commits que sigue convenciones claras en un proyecto BDD?
+
+A. Facilita la anonimización de los contribuyentes al proyecto.
+B. Permite rastrear qué cambios en el código se realizaron para cumplir con qué historias de usuario y escenarios de aceptación.
+C. Simplifica la reescritura del historial de commits en caso de errores.
+D. Asegura que todos los desarrolladores sigan el mismo estilo de codificación.
+
+✅ Correcta: B
+🧾 Explicación: La trazabilidad es fundamental para entender la relación entre el código y los requisitos del negocio, lo cual se facilita con un historial de commits bien organizado.
+
+🧠 Pregunta 29
+¿Cuál es el riesgo de no utilizar hooks de Git para validar los criterios de aceptación definidos en BDD antes de integrar cambios al repositorio?
+
+A. Aumenta la velocidad de desarrollo al evitar la necesidad de ejecutar pruebas localmente.
+B. Incrementa la probabilidad de introducir en el código base funcionalidades que no cumplen con los requisitos del negocio.
+C. Reduce la complejidad del pipeline de CI/CD.
+D. Simplifica la gestión de las ramas de Git.
+
+✅ Correcta: B
+🧾 Explicación: Sin la validación temprana, es más probable que se integre código que no satisface las expectativas del usuario, lo que puede generar problemas posteriores.
+
+🧠 Pregunta 30
+¿De qué manera la práctica de BDD influye en la comunicación entre los miembros técnicos y no técnicos del equipo de desarrollo?
+
+A. Requiere que los miembros no técnicos aprendan lenguajes de programación.
+B. Fomenta el uso de un lenguaje común (Gherkin) para describir el comportamiento esperado del sistema, facilitando la comprensión y la colaboración entre todos.
+C. Reduce la necesidad de documentación formal al confiar en el conocimiento tácito del equipo.
+D. Limita la participación de los stakeholders a la definición inicial de los requisitos.
+
+✅ Correcta: B
+🧾 Explicación: El lenguaje natural de Gherkin permite que personas con diferentes roles comprendan y discutan los requisitos del sistema de manera efectiva.
+
+🧠 Pregunta 31
+¿Cómo puede la reescritura del historial de Git ser útil en un proyecto BDD en relación con la gestión de requisitos?
+
+A. Permite eliminar del historial commits que introdujeron funcionalidades que finalmente no se implementaron o que no cumplieron con los criterios de aceptación.
+B. Facilita la fusión de múltiples historias de usuario en un solo commit para simplificar el historial.
+C. Permite cambiar el autor de commits para reflejar mejor quién definió los requisitos.
+D. Automatiza la generación de los archivos de características de Gherkin a partir del historial de commits.
+
+✅ Correcta: A
+🧾 Explicación: Mantener un historial limpio y relevante ayuda a comprender la evolución de las funcionalidades que realmente se entregaron y cumplen con los requisitos.
+
+🧠 Pregunta 32
+¿Qué escenario podría beneficiarse especialmente del uso de git worktrees en un equipo que sigue un flujo de trabajo BDD?
+
+A. Cuando un desarrollador necesita revisar el código de otro miembro del equipo sin interrumpir su propio trabajo.
+B. Cuando varios desarrolladores necesitan trabajar simultáneamente en la misma historia de usuario con diferentes escenarios BDD.
+C. Cuando un desarrollador necesita trabajar en una nueva funcionalidad mientras mantiene una rama estable para realizar correcciones urgentes.
+D. Cuando el equipo necesita fusionar varias ramas de funcionalidades completadas en la rama principal.
+
+✅ Correcta: C
+🧾 Explicación: Los worktrees permiten manejar el desarrollo de nuevas funcionalidades y el mantenimiento de versiones estables de forma concurrente y aislada.
+
+🧠 Pregunta 33
+¿Cómo puede un script personalizado de Git ayudar a asegurar la correcta ejecución de las pruebas BDD antes de un push al repositorio remoto?
+
+A. Puede modificar el código fuente automáticamente para corregir fallos en las pruebas.
+B. Puede configurarse para ejecutar la suite de pruebas de Behave y abortar el push si alguna prueba falla.
+C. Puede generar un informe detallado de la cobertura de pruebas después de cada push.
+D. Puede notificar automáticamente a los stakeholders si las pruebas BDD fallan.
+
+✅ Correcta: B
+🧾 Explicación: Automatizar la ejecución de pruebas antes de compartir el código ayuda a mantener la calidad del repositorio central.
+
+🧠 Pregunta 34
+¿Cuál es la ventaja de utilizar expresiones regulares en los steps de Behave al interactuar con elementos de la interfaz de usuario?
+
+A. Permite escribir steps en un lenguaje más técnico, lo que facilita la automatización.
+B. Facilita la localización de elementos dinámicos en la interfaz que pueden variar entre diferentes escenarios o entornos.
+C. Mejora el rendimiento de la automatización al hacer que los selectores sean más específicos.
+D. Reduce la necesidad de utilizar frameworks de automatización de interfaz de usuario.
+
+✅ Correcta: B
+🧾 Explicación: Las expresiones regulares permiten crear selectores flexibles que pueden adaptarse a elementos dinámicos, haciendo los tests más robustos.
+
+🧠 Pregunta 35
+En el contexto del Four Test Pattern, ¿qué tipo de feedback se obtiene principalmente de las pruebas de aceptación (BDD)?
+
+A. Feedback sobre la eficiencia y el rendimiento del código.
+B. Feedback técnico detallado sobre posibles errores de implementación.
+C. Feedback sobre si el software cumple con las expectativas y necesidades del usuario final.
+D. Feedback sobre la cobertura del código por las pruebas unitarias.
+
+✅ Correcta: C
+🧾 Explicación: Las pruebas de aceptación están centradas en validar el valor entregado al usuario desde una perspectiva funcional.
+
+🧠 Pregunta 36
+¿Cómo se alinea el principio de "documentación viva" en BDD con la gestión del historial en Git avanzado?
+
+A. El historial de Git se convierte automáticamente en la documentación del proyecto.
+B. Las convenciones en los mensajes de commit pueden ayudar a trazar la evolución de las funcionalidades definidas en los escenarios BDD, complementando la documentación viva.
+C. La necesidad de documentación formal se elimina por completo gracias al historial de Git.
+D. El historial de Git se utiliza para almacenar los archivos de características de Gherkin.
+
+✅ Correcta: B
+🧾 Explicación: Un historial de commits bien estructurado puede proporcionar contexto sobre por qué se realizaron ciertos cambios en relación con los requisitos documentados en los escenarios BDD.
+
+🧠 Pregunta 37
+¿Qué desafío podría surgir al no integrar adecuadamente Git avanzado con las prácticas de BDD en un equipo de desarrollo ágil?
+
+A. Dificultad para realizar despliegues continuos debido a la falta de control de versiones.
+B. Riesgo de que el software entregado no cumpla con las expectativas del usuario debido a una validación inadecuada de los requisitos.
+C. Lentitud en la implementación de nuevas funcionalidades debido a la complejidad de Git.
+D. Problemas de comunicación entre los desarrolladores debido a la falta de un lenguaje común.
+
+✅ Correcta: B
+🧾 Explicación: Una integración deficiente puede llevar a una desconexión entre lo que se desarrolla y lo que realmente se necesita, resultando en un producto de menor valor.
+
+🧠 Pregunta 38
+¿Cómo puede el uso de alias de Git que incluyan la ejecución de pruebas BDD impactar en la mentalidad del equipo de desarrollo?
+
+A. Puede fomentar una mayor disciplina y conciencia sobre la importancia de validar el código contra los criterios de aceptación antes de compartirlo.
+B. Puede generar resistencia al flujo de trabajo al añadir pasos adicionales al proceso de commit y push.
+C. Puede llevar a una menor participación de los testers en el ciclo de desarrollo.
+D. Puede hacer que los desarrolladores dependan demasiado de la automatización y descuiden las pruebas manuales.
+
+✅ Correcta: A
+🧾 Explicación: La automatización de las pruebas como parte de las acciones comunes de Git refuerza la cultura de calidad y la responsabilidad individual sobre el cumplimiento de los requisitos.
+
+🧠 Pregunta 39
+¿Qué consideración importante se debe tener al utilizar git filter-branch o BFG Repo-Cleaner en un repositorio compartido por varios desarrolladores en un proyecto BDD?
+
+A. Estas herramientas no deben utilizarse en repositorios compartidos para evitar la pérdida de datos.
+B. Es crucial comunicar al equipo las acciones de reescritura del historial y coordinar la recuperación de los cambios para evitar problemas de sincronización.
+C. Es recomendable realizar estas operaciones solo en ramas locales y fusionarlas cuidadosamente.
+D. Estas herramientas solo deben ser utilizadas por el líder técnico del proyecto.
+
+✅ Correcta: B
+🧾 Explicación: La reescritura del historial en repositorios compartidos puede causar problemas si no se gestiona y comunica adecuadamente al equipo.
+
+🧠 Pregunta 40
+En un flujo de trabajo integrado de Git avanzado y BDD, ¿cuál es el resultado esperado de una ejecución exitosa de las pruebas de aceptación en el pipeline de CI/CD?
+
+A. Se genera automáticamente la siguiente versión del software para su despliegue.
+B. Se envía una notificación al equipo de desarrollo indicando que el código cumple con los criterios de aceptación definidos.
+C. Se habilita la fusión automática de la rama actual con la rama principal.
+D. Se confirma que el comportamiento del sistema coincide con las especificaciones acordadas con los stakeholders, lo que aumenta la confianza en la calidad del software.
+
+✅ Correcta: D
+🧾 Explicación: El éxito de las pruebas de aceptación es una señal clave de que el software está funcionando según lo esperado desde la perspectiva del negocio.
+
+🧠 Pregunta 41
+¿Cómo podría un equipo utilizar los hooks de Git para reforzar la colaboración y el cumplimiento de las prácticas de BDD más allá de la simple ejecución de pruebas?
+
+A. Para enviar automáticamente correos electrónicos de felicitación a los desarrolladores que realizan commits sin fallos en las pruebas.
+B. Para formatear automáticamente el código según un estándar definido antes de cada commit.
+C. Para evitar commits que no incluyan una referencia a la historia de usuario correspondiente en el mensaje.
+D. Para desplegar automáticamente la última versión del software a un entorno de pruebas después de cada push.
+
+✅ Correcta: C
+🧾 Explicación: Los hooks pueden utilizarse para hacer cumplir políticas de commit que vinculen el código con los requisitos definidos en las historias de usuario, mejorando la trazabilidad y la colaboración.
+
+🧠 Pregunta 42
+En un proyecto BDD, ¿qué valor añadido aporta la integración de los resultados de las pruebas de aceptación en las herramientas de gestión de proyectos?
+
+A. Permite al equipo de marketing conocer las últimas funcionalidades implementadas.
+B. Facilita el seguimiento del progreso de las historias de usuario al mostrar el estado de cumplimiento de sus criterios de aceptación.
+C. Automatiza la asignación de tareas a los desarrolladores en función de los fallos en las pruebas.
+D. Permite a los stakeholders participar directamente en la ejecución de las pruebas.
+
+✅ Correcta: B
+🧾 Explicación: La visibilidad del estado de las pruebas de aceptación en las herramientas de gestión de proyectos proporciona una visión clara del avance y el cumplimiento de los requisitos.
+
+🧠 Pregunta 43
+¿Cómo podría el uso avanzado de git log con opciones de filtrado ser beneficioso para un equipo que utiliza BDD?
+
+A. Para identificar rápidamente commits que introdujeron fallos en las pruebas de rendimiento.
+B. Para rastrear los commits asociados a una historia de usuario específica o a un conjunto de escenarios BDD.
+C. Para generar automáticamente la documentación técnica del proyecto a partir del historial de commits.
+D. Para visualizar la topología de las ramas del repositorio de forma más clara.
+
+✅ Correcta: B
+🧾 Explicación: Filtrar el historial de commits por palabras clave relacionadas con historias de usuario o escenarios BDD facilita la comprensión de qué cambios implementaron qué requisitos.
+
+🧠 Pregunta 44
+En un entorno BDD, ¿cómo se podría utilizar un alias de Git para simplificar el proceso de creación de una nueva rama basada en una historia de usuario y la creación de su worktree asociado?
+
+A. Un alias no puede automatizar la creación de worktrees.
+B. Se podría crear un alias que tome como argumento el ID de la historia de usuario y ejecute los comandos necesarios para crear la rama y el worktree con nombres basados en ese ID.
+C. Los alias de Git solo pueden utilizarse para acortar comandos existentes, no para combinar varios.
+D. La creación de ramas y worktrees debe realizarse siempre de forma manual para evitar errores.
+
+✅ Correcta: B
+🧾 Explicación: Los alias de Git pueden combinar múltiples comandos, facilitando flujos de trabajo comunes como la creación de ramas y worktrees para nuevas funcionalidades.
+
+🧠 Pregunta 45
+¿Qué implicación tiene para la mantenibilidad de la suite de pruebas BDD el uso efectivo de expresiones regulares en los steps de Behave?
+
+A. Reduce la necesidad de actualizar los steps cuando se realizan cambios en la interfaz de usuario.
+B. Permite que los steps sean más específicos y, por lo tanto, más fáciles de entender.
+C. Facilita la adaptación de los steps a variaciones en los datos o en la estructura de los escenarios sin necesidad de escribir nuevos steps.
+D. Mejora el rendimiento de la ejecución de las pruebas al hacer que la búsqueda de coincidencias sea más rápida.
+
+✅ Correcta: C
+🧾 Explicación: La flexibilidad de las expresiones regulares hace que los steps sean más resilientes a los cambios y reduce la cantidad de código de prueba que necesita ser mantenido.
+
+🧠 Pregunta 46
+En el contexto del Four Test Pattern y BDD, ¿cómo se complementan las pruebas del sistema con las pruebas de aceptación?
+
+A. Las pruebas del sistema validan el rendimiento y la escalabilidad, mientras que las pruebas de aceptación se centran en la funcionalidad.
+B. Las pruebas del sistema son escritas por desarrolladores, y las pruebas de aceptación por testers.
+C. Las pruebas del sistema se ejecutan en un entorno simulado, mientras que las pruebas de aceptación se ejecutan en el entorno de producción.
+D. Las pruebas del sistema verifican que todos los componentes del sistema trabajen juntos correctamente, mientras que las pruebas de aceptación validan que el sistema cumpla con los requisitos del usuario final.
+
+✅ Correcta: D
+🧾 Explicación: Ambas son pruebas de alto nivel, pero las pruebas del sistema se enfocan en la integración de todos los componentes, mientras que las pruebas de aceptación se centran en el valor entregado al usuario.
+
+🧠 Pregunta 47
+¿Qué estrategia podría utilizar un equipo BDD para asegurar que los nuevos miembros comprendan y sigan las convenciones de commit establecidas?
+
+A. Confiar en la documentación interna y la formación inicial.
+B. Implementar un hook commit-msg que valide el formato de los mensajes y proporcione retroalimentación inmediata.
+C. Realizar revisiones manuales del historial de commits de cada nuevo miembro.
+D. Limitar la capacidad de los nuevos miembros para realizar commits hasta que demuestren un conocimiento adecuado.
+
+✅ Correcta: B
+🧾 Explicación: Los hooks proporcionan una forma automatizada y consistente de hacer cumplir las políticas del equipo, asegurando que todos sigan las mismas prácticas.
+
+🧠 Pregunta 48
+¿Cómo podría la integración de Git con herramientas de seguimiento de tiempo beneficiar a un proyecto que utiliza BDD?
+
+A. Permite facturar automáticamente a los clientes en función de la cantidad de commits realizados.
+B. Facilita la asociación del tiempo dedicado al desarrollo con las historias de usuario y los escenarios BDD correspondientes.
+C. Automatiza la generación de informes de productividad de los desarrolladores.
+D. Permite pausar automáticamente el seguimiento del tiempo cuando se detectan fallos en las pruebas BDD.
+
+✅ Correcta: B
+🧾 Explicación: Vincular el tiempo de trabajo con los requisitos ayuda a comprender el esfuerzo dedicado a cada funcionalidad y a mejorar la planificación futura.
+
+🧠 Pregunta 49
+En un flujo de trabajo BDD, ¿qué consideraciones se deben tener al reescribir el historial de Git para eliminar información sensible accidentalmente commiteada?
+
+A. No es necesario informar al equipo si la información sensible se eliminó rápidamente.
+B. Es crucial coordinar con todo el equipo y proporcionar instrucciones claras sobre cómo actualizar sus repositorios locales para evitar la pérdida de trabajo.
+C. La reescritura del historial solo debe realizarse en ramas personales y nunca en ramas compartidas.
+D. Es mejor dejar la información sensible en el historial y simplemente evitar mencionarla en el futuro.
+
+✅ Correcta: B
+🧾 Explicación: La reescritura del historial en repositorios compartidos requiere una comunicación cuidadosa para evitar problemas de sincronización y pérdida de datos entre los miembros del equipo.
+
+🧠 Pregunta 50
+¿Cómo podría un equipo BDD utilizar las capacidades de branching y merging de Git para gestionar el desarrollo de múltiples funcionalidades complejas con muchos escenarios BDD asociados?
+
+A. Desarrollando todas las funcionalidades directamente en la rama principal para evitar la complejidad de las merges.
+B. Creando ramas de funcionalidades separadas para cada conjunto de escenarios BDD y utilizando merges estratégicos para integrar el trabajo, asegurando que todas las pruebas pasen antes de la integración.
+C. Utilizando una única rama de desarrollo a largo plazo donde todos los desarrolladores realizan commits directamente.
+D. Evitando la creación de ramas y utilizando solo commits directos para simplificar el flujo de trabajo.
+
+✅ Correcta: B
+🧾 Explicación: Las ramas de funcionalidades permiten el desarrollo aislado y la validación completa de cada conjunto de requisitos antes de su integración, manteniendo la estabilidad de la rama principal.

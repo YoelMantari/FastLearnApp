@@ -1,0 +1,522 @@
+🧠 Pregunta 1
+¿Cuál es la principal ventaja de utilizar un Makefile en flujos DevOps, según el texto?
+
+A. Simplifica la sintaxis de Python.
+B. Ofrece un punto de entrada estandarizado y declarativo para la automatización de tareas.
+C. Reemplaza la necesidad de utilizar entornos virtuales.
+D. Limita la capacidad de integrar diferentes herramientas de prueba.
+
+✅ Correcta: B
+🧾 Explicación: El Makefile centraliza y documenta la ejecución de comandos complejos, promoviendo la reproducibilidad y eficiencia en los flujos de trabajo DevOps.
+
+🧠 Pregunta 2
+Según el Makefile de ejemplo, ¿para qué se utiliza la variable ACTIVITIES?
+
+A. Para definir la actividad de prueba por defecto.
+B. Para especificar las dependencias del proyecto.
+C. Para listar todos los directorios de actividades, facilitando bucles en objetivos como test_all y coverage_individual.
+D. Para configurar las opciones de ejecución de flake8.
+
+✅ Correcta: C
+🧾 Explicación: La variable ACTIVITIES proporciona una lista exhaustiva de las carpetas de actividades, lo que permite iterar sobre ellas para ejecutar pruebas o generar informes de cobertura de manera automatizada.
+
+🧠 Pregunta 3
+¿Qué función cumple el objetivo .PHONY en un Makefile?
+
+A. Define variables de entorno globales.
+B. Ejecuta comandos en segundo plano.
+C. Evita conflictos con archivos que tengan el mismo nombre que los objetivos definidos.
+D. Especifica las dependencias entre diferentes objetivos.
+
+✅ Correcta: C
+🧾 Explicación: .PHONY se utiliza para declarar que un objetivo no representa un archivo real, sino una acción a ejecutar, previniendo errores si existiera un archivo con el mismo nombre.
+
+🧠 Pregunta 4
+¿Qué herramienta de análisis estático de código se menciona en el Makefile de ejemplo?
+
+A. pytest
+B. coverage
+C. flake8
+D. pip
+
+✅ Correcta: C
+🧾 Explicación: El objetivo lint del Makefile utiliza flake8 para verificar el estilo del código y detectar errores sintácticos o variables no utilizadas.
+
+🧠 Pregunta 5
+¿Cuál es el propósito del comando PYTHONWARNINGS="ignore::DeprecationWarning" pytest . dentro del objetivo test?
+
+A. Ejecutar solo las pruebas marcadas con DeprecationWarning.
+B. Mostrar todos los warnings de deprecación durante la ejecución de las pruebas.
+C. Ignorar los warnings de deprecación para mantener una salida de prueba más limpia.
+D. Detener la ejecución de las pruebas si se encuentra un DeprecationWarning.
+
+✅ Correcta: C
+🧾 Explicación: La variable de entorno PYTHONWARNINGS se configura para ignorar los warnings de deprecación, evitando que estos contaminen la salida de los tests de pytest.
+
+🧠 Pregunta 6
+En el contexto de la medición de cobertura de código con coverage, ¿qué hace el comando coverage html?
+
+A. Ejecuta las pruebas bajo la herramienta de cobertura.
+B. Muestra el porcentaje de cobertura en la terminal.
+C. Genera un reporte visual de la cobertura en formato HTML.
+D. Elimina los datos de cobertura recopilados previamente.
+
+✅ Correcta: C
+🧾 Explicación: El comando coverage html procesa los datos de cobertura recopilados y genera un informe detallado en formato HTML, facilitando la visualización de qué partes del código están cubiertas por las pruebas.
+
+🧠 Pregunta 7
+¿Qué utilidad tienen las fixtures en pytest, según el texto?
+
+A. Permiten definir el orden en que se ejecutan las pruebas.
+B. Se utilizan para marcar pruebas como lentas o que deben omitirse.
+C. Facilitan la compartición de datos de prueba, clientes simulados o conexiones falsas, reduciendo la duplicación de código de setup/teardown.
+D. Generan automáticamente documentación de las pruebas.
+
+✅ Correcta: C
+🧾 Explicación: Las fixtures en pytest son funciones que se ejecutan antes de las funciones de prueba para proporcionarles los recursos necesarios, como datos o dependencias simuladas, mejorando la eficiencia y legibilidad de las pruebas.
+
+🧠 Pregunta 8
+¿Cuál de las siguientes NO es una buena práctica DevOps relacionada con el uso de Make, mencionada en el texto?
+
+A. Asegurar la idempotencia de los objetivos.
+B. Utilizar variables para ajustar la verbosidad de la salida.
+C. Depender exclusivamente de variables de entorno para información sensible.
+D. Integrar con herramientas de contenedización como Docker.
+
+✅ Correcta: C
+🧾 Explicación: El texto explícitamente menciona que la información sensible como contraseñas o tokens no debe incluirse directamente en el Makefile, sino gestionarse de forma segura a través de mecanismos como los secrets en entornos de CI/CD.
+
+🧠 Pregunta 9
+¿Qué se logra al integrar Git Hooks con un Makefile, como se describe en el texto?
+
+A. Se automatiza la creación de ramas Git basadas en las actividades del Makefile.
+B. Se ejecutan automáticamente ciertos targets del Makefile (como lint y test) antes de operaciones Git críticas como el commit.
+C. Se sincronizan automáticamente los objetivos del Makefile con los comandos de Git.
+D. Se utilizan los hooks de Git para definir los targets del Makefile.
+
+✅ Correcta: B
+🧾 Explicación: Los Git Hooks permiten automatizar la ejecución de scripts antes o después de eventos de Git. Al invocar targets del Makefile desde hooks como pre-commit, se pueden asegurar estándares de calidad y pruebas antes de cada commit.
+
+🧠 Pregunta 10
+En el contexto de BDD con behave, ¿qué función cumplen las expresiones regulares en las definiciones de los pasos (steps.py)?
+
+A. Definen el orden en que se ejecutan los escenarios.
+B. Permiten que las funciones de Python (`step_impl`) capturen datos específicos del texto en lenguaje natural de los escenarios Gherkin.
+C. Se utilizan para generar automáticamente la documentación de los escenarios.
+D. Validan la estructura sintáctica de los archivos `.feature`.
+
+✅ Correcta: B
+🧾 Explicación: Las expresiones regulares en las definiciones de los pasos de `behave` permiten extraer información relevante del texto de los escenarios Gherkin y pasarla como argumentos a las funciones de Python que implementan la lógica de esos pasos.
+
+🧠 Pregunta 11
+¿Cuál es el propósito del objetivo install en el Makefile proporcionado?
+
+A. Instalar el sistema operativo base necesario para ejecutar el proyecto.
+B. Instalar las dependencias del proyecto listadas en el archivo requirements.txt.
+C. Instalar la herramienta make si no está presente en el sistema.
+D. Instalar un entorno virtual de Python para el proyecto.
+
+✅ Correcta: B
+🧾 Explicación: El objetivo install utiliza pip para instalar todas las librerías y dependencias requeridas por el proyecto, las cuales están especificadas en el archivo requirements.txt.
+
+🧠 Pregunta 12
+¿Qué beneficio principal aporta la documentación integrada a través del objetivo help en el Makefile?
+
+A. Genera automáticamente diagramas de flujo del proyecto.
+B. Permite a cualquier miembro del equipo conocer rápidamente las acciones disponibles y cómo ejecutarlas.
+C. Realiza una revisión gramatical de todos los comentarios en el Makefile.
+D. Publica la documentación del proyecto en un sitio web.
+
+✅ Correcta: B
+🧾 Explicación: El objetivo help proporciona una lista clara y concisa de los comandos disponibles en el Makefile, junto con una breve descripción de su uso, lo que facilita la incorporación de nuevos miembros al equipo y la comprensión de las tareas automatizadas.
+
+🧠 Pregunta 13
+¿Qué herramientas podrían complementarse con flake8 dentro del objetivo lint para un análisis de código más exhaustivo?
+
+A. pytest y coverage.
+B. black y mypy.
+C. git y docker.
+D. behave y selenium.
+
+✅ Correcta: B
+🧾 Explicación: black es un formateador de código que asegura la consistencia del estilo, mientras que mypy realiza un chequeo estático de tipos, lo que añade una capa adicional de verificación de la calidad del código al análisis de flake8.
+
+🧠 Pregunta 14
+¿Qué diferencia fundamental existe entre los objetivos test y test_all en el Makefile?
+
+A. test ejecuta pruebas solo en los archivos modificados recientemente, mientras que test_all ejecuta todas las pruebas.
+B. test permite especificar una actividad o subdirectorio de pruebas, mientras que test_all ejecuta pruebas en todas las actividades definidas.
+C. test genera un reporte de cobertura detallado, mientras que test_all solo indica si las pruebas pasaron o fallaron.
+D. test requiere una configuración específica del entorno, mientras que test_all se ejecuta en un entorno aislado.
+
+✅ Correcta: B
+🧾 Explicación: El objetivo test está diseñado para ejecutar pruebas de manera granular en una actividad específica, mientras que test_all itera sobre todas las actividades definidas en la variable ACTIVITIES y ejecuta las pruebas en cada una de ellas.
+
+🧠 Pregunta 15
+¿Cuál es la función del comando cd - >/dev/null utilizado en el objetivo test_all?
+
+A. Cambia al directorio raíz del proyecto y oculta cualquier salida.
+B. Regresa al directorio anterior después de ejecutar las pruebas en una actividad y suprime la salida de la ruta.
+C. Crea un nuevo directorio llamado /dev/null y se mueve a él.
+D. Elimina todos los archivos temporales generados durante la ejecución de las pruebas.
+
+✅ Correcta: B
+🧾 Explicación: cd - regresa al directorio previamente visitado, y >/dev/null redirige la salida estándar (en este caso, la ruta del directorio) a un "agujero negro", evitando que se muestre en la consola y manteniendo la salida más limpia.
+
+🧠 Pregunta 16
+En el contexto de la cobertura de código, ¿por qué es útil tener un objetivo coverage_individual que genera reportes por actividad?
+
+A. Permite fusionar los reportes de cobertura de diferentes actividades en un único archivo.
+B. Facilita la identificación de qué áreas específicas del código dentro de cada módulo tienen una cobertura de pruebas deficiente.
+C. Reduce el tiempo necesario para generar el reporte de cobertura total del proyecto.
+D. Asegura que la cobertura de código se mida utilizando diferentes herramientas para cada actividad.
+
+✅ Correcta: B
+🧾 Explicación: Generar reportes de cobertura individuales por actividad permite un análisis más detallado y específico, facilitando que los equipos responsables de componentes particulares identifiquen y mejoren la cobertura de pruebas en su área de responsabilidad.
+
+🧠 Pregunta 17
+¿Qué acciones realiza el objetivo clean en el Makefile de ejemplo?
+
+A. Elimina solo los archivos de caché de Python (__pycache__).
+B. Elimina archivos de caché de Python, la caché de pytest, los reportes de cobertura y los datos de cobertura generados.
+C. Revierte todos los cambios realizados en el código desde la última confirmación.
+D. Detiene todos los contenedores Docker asociados al proyecto.
+
+✅ Correcta: B
+🧾 Explicación: El objetivo clean está diseñado para eliminar los artefactos generados durante el desarrollo y las pruebas, como las cachés de Python y pytest, así como los reportes y datos de cobertura, proporcionando un estado limpio para futuras ejecuciones.
+
+🧠 Pregunta 18
+¿Cómo se puede especificar una actividad de prueba diferente a la predeterminada al ejecutar el objetivo test desde la línea de comandos con make?
+
+A. Utilizando la opción -a seguida del nombre de la actividad (e.g., make test -a factories_fakes).
+B. Estableciendo la variable de entorno ACTIVITY al invocar make (e.g., make test ACTIVITY=factories_fakes).
+C. Modificando directamente el valor de la variable ACTIVITY en el Makefile antes de ejecutar el comando.
+D. Utilizando un argumento posicional después del objetivo test (e.g., make test factories_fakes).
+
+✅ Correcta: B
+🧾 Explicación: La sintaxis ACTIVITY ?= aserciones_pruebas en el Makefile define un valor por defecto para la variable ACTIVITY, pero permite que este sea sobrescrito proporcionando un nuevo valor directamente en la línea de comandos al ejecutar make.
+
+🧠 Pregunta 19
+¿Cuál es el propósito principal de utilizar fixtures con el alcance de "session" (@pytest.fixture(scope="session")) en pytest?
+
+A. Ejecutar la fixture antes y después de cada test individual dentro de una sesión.
+B. Ejecutar la fixture una sola vez al inicio y al final de toda la sesión de pruebas, compartiendo los recursos creados entre todos los tests.
+C. Ejecutar la fixture automáticamente para todos los tests sin necesidad de declararla en cada función de prueba.
+D. Limitar el tiempo de ejecución de los tests que utilizan esta fixture.
+
+✅ Correcta: B
+🧾 Explicación: Las fixtures con alcance de "session" se ejecutan una única vez durante toda la sesión de pruebas, lo que es útil para configurar y liberar recursos costosos (como conexiones a bases de datos o inicialización de servicios) que pueden ser compartidos por múltiples tests, optimizando el tiempo de ejecución.
+
+🧠 Pregunta 20
+¿Qué ventaja ofrece el uso de Git Hooks combinados con Make en un flujo de desarrollo?
+
+A. Permite personalizar los comandos de Git utilizando la sintaxis de Makefile.
+B. Automatiza la ejecución de tareas definidas en el Makefile (como linting y pruebas) en puntos clave del flujo de trabajo de Git, asegurando la calidad del código antes de acciones como el commit o el push.
+C. Simplifica la gestión de múltiples ramas de Git directamente desde el Makefile.
+D. Genera automáticamente la documentación del repositorio Git en base a los targets del Makefile.
+
+✅ Correcta: B
+🧾 Explicación: La integración de Git Hooks con Make permite automatizar la aplicación de políticas de calidad y la ejecución de verificaciones importantes (como el estilo del código y las pruebas unitarias) justo en el momento en que los desarrolladores interactúan con Git, como antes de hacer un commit, asegurando una mayor consistencia y calidad en el código base.
+
+🧠 Pregunta 21
+En el contexto de BDD, ¿cuál es la función principal de los archivos con extensión .feature?
+
+A. Contienen las definiciones de los pasos de prueba en código Python.
+B. Describen el comportamiento esperado del sistema en lenguaje natural, utilizando la sintaxis de Gherkin.
+C. Almacenan los resultados de la ejecución de los escenarios BDD.
+D. Definen la configuración del entorno para la ejecución de las pruebas de comportamiento.
+
+✅ Correcta: B
+🧾 Explicación: Los archivos `.feature` son la base de la especificación en BDD. Utilizan el lenguaje Gherkin para describir los escenarios de comportamiento desde la perspectiva del usuario o del negocio, facilitando la comprensión y la colaboración entre los diferentes roles del equipo.
+🧠 Pregunta 22
+¿Qué representan las anotaciones @given, @when y @then en el contexto de behave?
+
+A. Son directivas para definir el orden de ejecución de los escenarios.
+B. Marcan funciones de Python que implementan las diferentes fases de un escenario BDD (preparación, acción y resultado).
+C. Se utilizan para definir variables de entorno específicas para cada escenario.
+D. Indican la prioridad de cada paso dentro de un escenario.
+
+✅ Correcta: B
+🧾 Explicación: Estas anotaciones de `behave` se utilizan en los archivos de definición de pasos (`steps.py`) para vincular las líneas de los escenarios Gherkin con las funciones de Python que contienen la lógica de implementación para la fase de preparación (`@given`), la acción (`@when`) y la verificación del resultado (`@then`).
+🧠 Pregunta 23
+Según el texto, ¿cuál es el primer paso del ciclo TDD (Red→Green→Refactor) que se busca automatizar con el Makefile?
+
+A. La implementación de la funcionalidad necesaria para pasar las pruebas.
+B. La refactorización del código para mejorar su estructura y legibilidad.
+C. La ejecución de las pruebas existentes, que se espera que fallen inicialmente.
+D. La escritura de nuevas pruebas basadas en los requisitos.
+
+✅ Correcta: C
+🧾 Explicación: El objetivo `tdd` en el `Makefile` primero ejecuta las pruebas existentes con la expectativa de que fallen (`--maxfail=1 && exit 1 || true`), lo que corresponde a la fase "Red" del ciclo TDD, donde se verifica que las pruebas fallan antes de implementar la funcionalidad.
+🧠 Pregunta 24
+En el ejemplo de la clase TestDividir con pytest, ¿para qué se utiliza la fixture setup_teardown con yield?
+
+A. Para definir el orden en que se ejecutan los métodos de prueba dentro de la clase.
+B. Para realizar acciones de configuración antes de cada prueba y, opcionalmente, acciones de limpieza después.
+C. Para marcar la clase de prueba como dependiente de otras clases de prueba.
+D. Para parametrizar los datos de entrada de las pruebas de división.
+
+✅ Correcta: B
+🧾 Explicación: La estructura con `yield` en una fixture de `pytest` permite definir una parte que se ejecuta antes de cada test (la configuración) y una parte opcional que se ejecuta después de cada test (la limpieza o teardown), siguiendo el patrón Setup/Teardown de las pruebas.
+🧠 Pregunta 25
+¿Qué comando make se podría utilizar para ejecutar tanto las pruebas unitarias como los escenarios BDD y generar un reporte de cobertura, según el ejemplo de integración híbrida?
+
+A. `make test && make bdd && make coverage`
+B. `make all`
+C. `make ci`
+D. `make test_bdd_coverage`
+
+✅ Correcta: C
+🧾 Explicación: El ejemplo define un objetivo `ci` que agrupa la ejecución de `lint`, `test`, `bdd` y `coverage`, permitiendo una validación completa de la calidad del código con un solo comando `make ci`.
+🧠 Pregunta 26
+¿Cuál es una consideración de seguridad importante al utilizar Makefiles en entornos DevOps, según el texto?
+
+A. Asegurarse de que todos los desarrolladores tengan los mismos permisos para ejecutar los comandos de `make`.
+B. Evitar incluir información sensible como contraseñas o tokens directamente en el `Makefile`, utilizando mecanismos seguros proporcionados por el entorno de CI/CD.
+C. Cifrar el archivo `Makefile` para proteger su contenido.
+D. Limitar el uso de variables de entorno en el `Makefile` para reducir riesgos de seguridad.
+
+✅ Correcta: B
+🧾 Explicación: El texto enfatiza la importancia de no incluir información sensible directamente en el `Makefile` debido al riesgo de exposición. En su lugar, se recomienda utilizar mecanismos seguros como los `secrets` proporcionados por las plataformas de integración continua.
+🧠 Pregunta 27
+¿Qué utilidad tiene el etiquetado (tagging) de versiones desde el Makefile (objetivo release)?
+
+A. Automatiza la publicación del código en un registro de paquetes.
+B. Facilita la creación de puntos de referencia inmutables en la historia del repositorio Git, identificando versiones específicas del software.
+C. Despliega automáticamente la nueva versión de la aplicación a producción.
+D. Genera automáticamente la documentación de la nueva versión.
+
+✅ Correcta: B
+🧾 Explicación: El etiquetado en Git permite marcar puntos específicos en la historia del repositorio con nombres significativos (generalmente números de versión), lo que facilita el seguimiento de las diferentes versiones del software y la posibilidad de volver a un estado anterior si es necesario. El objetivo `release` en el `Makefile` automatiza este proceso.
+🧠 Pregunta 28
+¿Qué implica el concepto de "Build reproducible" mencionado en el texto en relación con el Makefile?
+
+A. Que la construcción del software debe ser rápida y eficiente.
+B. Que cualquier intento de construir el software desde el mismo punto de partida (código fuente y entorno) debe producir el mismo resultado.
+C. Que el proceso de construcción debe generar automáticamente la documentación del software.
+D. Que los builds deben realizarse en contenedores Docker para asegurar la consistencia del entorno.
+
+✅ Correcta: B
+🧾 Explicación: Un "Build reproducible" significa que, dado el mismo código fuente y las mismas condiciones de entorno, el proceso de construcción siempre generará el mismo artefacto. Incluir información como el `timestamp` y el `commit hash` en los reportes ayuda a la trazabilidad y a asegurar esta reproducibilidad.
+🧠 Pregunta 29
+¿Cómo se integra un Makefile en un pipeline de GitHub Actions, según el ejemplo proporcionado?
+
+A. Se define un target especial en el `Makefile` llamado `github-actions`.
+B. Se crea un archivo YAML (`.github/workflows/ci.yml`) donde se definen los pasos del workflow, invocando comandos `make` para ejecutar tareas como instalación de dependencias, linting y pruebas.
+C. GitHub Actions analiza automáticamente el `Makefile` y ejecuta todos los targets definidos.
+D. Se utiliza una acción predefinida de GitHub Actions que interpreta y ejecuta el `Makefile`.
+
+✅ Correcta: B
+🧾 Explicación: La integración se realiza a través de un archivo de workflow en GitHub Actions (`.github/workflows/ci.yml`), donde se definen los diferentes jobs y steps. En los steps relevantes, se utiliza el comando `run: make <objetivo>` para invocar los targets definidos en el `Makefile`, orquestando así las tareas de construcción, prueba y análisis dentro del pipeline de CI/CD.
+
+🧠 Pregunta 30
+¿Cuál es el beneficio principal de utilizar expresiones regulares con nombres (?P<nombre>) en las definiciones de los pasos de behave?
+
+A. Mejoran el rendimiento de la ejecución de los escenarios BDD.
+B. Facilitan la captura y el acceso a los valores coincidentes del texto del escenario dentro de la función de Python del paso, utilizando el nombre definido.
+C. Permiten definir múltiples patrones para un mismo paso.
+D. Se utilizan para validar el formato de los datos de entrada en los escenarios.
+
+✅ Correcta: B
+🧾 Explicación: Las expresiones regulares con nombres permiten extraer partes específicas del texto de un paso en un escenario Gherkin y asignarlas a variables con nombres descriptivos dentro de la función de Python que implementa ese paso, lo que mejora la legibilidad y el manejo de los datos de prueba.
+
+🧠 Pregunta 31
+¿Qué se entiende por "idempotencia" en el contexto de los targets de un Makefile para DevOps?
+
+A. Que un target solo puede ejecutarse una vez durante la vida del proyecto.
+B. Que la ejecución repetida de un target produce el mismo resultado y no tiene efectos secundarios no deseados.
+C. Que los targets deben ejecutarse en un orden específico para evitar errores.
+D. Que cada target debe tener una única dependencia.
+
+✅ Correcta: B
+🧾 Explicación: La idempotencia es crucial en la automatización, especialmente en entornos de CI/CD. Un target idempotente puede ejecutarse varias veces sin alterar el estado del sistema de manera inesperada, asegurando la consistencia y la fiabilidad.
+🧠 Pregunta 32
+¿Cómo se podría alternar entre una salida silenciosa y una salida detallada al ejecutar comandos make, según las buenas prácticas mencionadas?
+
+A. Utilizando diferentes objetivos como `test_verbose` y `test_silent`.
+B. Definiendo una variable en el `Makefile` (e.g., `VERBOSE`) y utilizándola en los comandos con condicionales o pasando su valor a las herramientas de línea de comandos.
+C. Modificando la configuración global de `make` en el sistema.
+D. Utilizando flags específicos de `make` al invocar los comandos desde la terminal.
+
+✅ Correcta: B
+🧾 Explicación: El uso de variables como `VERBOSE` permite controlar el nivel de detalle de la salida de los comandos. Se pueden usar condicionales dentro del `Makefile` o pasar el valor de la variable a las herramientas subyacentes para ajustar la verbosidad.
+🧠 Pregunta 33
+¿Qué ventaja ofrece la ejecución paralela de targets independientes en make (e.g., con make -j)?
+
+A. Reduce la complejidad del `Makefile`.
+B. Acelera el tiempo total de ejecución al realizar múltiples tareas simultáneamente.
+C. Asegura que los targets se ejecuten en un orden específico.
+D. Permite una mejor gestión de las dependencias entre targets.
+
+✅ Correcta: B
+🧾 Explicación: La opción `-j` de `make` permite ejecutar múltiples targets en paralelo, siempre que sus dependencias lo permitan. Esto puede reducir significativamente el tiempo total necesario para completar todas las tareas, especialmente en proyectos con muchas pruebas o análisis independientes.
+🧠 Pregunta 34
+¿Por qué es recomendable integrar el Makefile con entornos virtuales de Python (como venv) o contenedores Docker?
+
+A. Para reducir el tamaño del repositorio del proyecto.
+B. Para asegurar un entorno de ejecución aislado y consistente, evitando problemas de dependencias entre diferentes proyectos o el sistema base.
+C. Para mejorar la seguridad del código fuente.
+D. Para facilitar la edición del `Makefile` en diferentes sistemas operativos.
+
+✅ Correcta: B
+🧾 Explicación: Los entornos virtuales y los contenedores proporcionan aislamiento, asegurando que el proyecto se ejecute con las dependencias y la configuración correctas, independientemente del entorno local del desarrollador o del servidor de CI/CD. Esto evita errores relacionados con versiones de librerías o configuraciones del sistema.
+🧠 Pregunta 35
+¿Qué función cumple el comando set -e en scripts shell invocados desde un Makefile?
+
+A. Establece variables de entorno para el script.
+B. Ejecuta el script en modo de depuración.
+C. Hace que el script se detenga inmediatamente si cualquier comando dentro del script falla (devuelve un código de salida diferente de cero).
+D. Redirige la salida de error del script a un archivo específico.
+
+✅ Correcta: C
+🧾 Explicación: `set -e` es una práctica importante para el control de errores en scripts. Al activarlo, el script se detendrá en el primer comando que falle, lo que ayuda a detectar y solucionar problemas de manera más temprana en los procesos automatizados.
+🧠 Pregunta 36
+¿Qué tipo de información se recomienda exponer como variables parametrizables en un Makefile?
+
+A. Contraseñas y tokens de acceso.
+B. Nombres de archivos fuente sensibles.
+C. Rutas de directorios, versiones de lenguajes de programación y ubicaciones de artefactos generados.
+D. La estructura interna del código fuente.
+
+✅ Correcta: C
+🧾 Explicación: Exponer rutas, versiones de herramientas y directorios de salida como variables facilita la configuración y adaptación del `Makefile` a diferentes entornos o necesidades sin tener que modificar la lógica de los targets.
+🧠 Pregunta 37
+¿Qué herramienta se menciona para auditar las dependencias de Python en busca de vulnerabilidades de seguridad?
+
+A. `flake8`
+B. `mypy`
+C. `pip-audit` o `safety`
+D. `coverage`
+
+✅ Correcta: C
+🧾 Explicación: `pip-audit` y `safety` son herramientas diseñadas específicamente para analizar las dependencias de un proyecto de Python y detectar vulnerabilidades de seguridad conocidas, lo cual es crucial en las consideraciones de seguridad en DevOps.
+🧠 Pregunta 38
+¿Qué tipo de vulnerabilidades podría ayudar a detectar la integración de objetivos como make scan que ejecutan OWASP Dependency-Check o Bandit?
+
+A. Errores de sintaxis en el código Python.
+B. Problemas de estilo de código que no cumplen con PEP 8.
+C. Vulnerabilidades en las dependencias del proyecto (OWASP Dependency-Check) y problemas de seguridad en el código fuente (Bandit).
+D. Errores de tipo en el código Python.
+
+✅ Correcta: C
+🧾 Explicación: OWASP Dependency-Check se centra en identificar vulnerabilidades conocidas en las dependencias del proyecto, mientras que Bandit es una herramienta que analiza el código fuente en busca de problemas de seguridad comunes. Integrar ambos en un `make scan` proporciona una capa robusta de análisis de seguridad.
+🧠 Pregunta 39
+¿Cuál es el propósito de copiar un script en .git/hooks/pre-commit y darle permisos de ejecución (chmod +x)?
+
+A. Definir alias personalizados para los comandos de Git.
+B. Automatizar la ejecución de ese script cada vez que se intenta realizar un commit en Git.
+C. Crear un acceso directo ejecutable a un script que se encuentra en otro directorio.
+D. Modificar el comportamiento predeterminado del comando `git commit`.
+
+✅ Correcta: B
+🧾 Explicación: Los scripts colocados en el directorio `.git/hooks` y marcados como ejecutables se activan automáticamente en puntos específicos del flujo de trabajo de Git. El hook `pre-commit` se ejecuta justo antes de que se realice un commit, lo que permite realizar verificaciones automáticas (como linting y pruebas) y abortar el commit si alguna falla.
+🧠 Pregunta 40
+¿Qué tipo de verificaciones se ejemplifican en el script del hook pre-commit proporcionado en el texto?
+
+A. Verificación de la firma digital del commit y análisis de la complejidad ciclomática del código.
+B. Ejecución de linting (con `make lint`) y pruebas unitarias rápidas (con `make test`).
+C. Generación automática de mensajes de commit y actualización del changelog.
+D. Creación de una rama de desarrollo basada en los cambios del commit y despliegue a un entorno de pruebas.
+
+✅ Correcta: B
+🧾 Explicación: El script de ejemplo para el hook `pre-commit` invoca los targets `make lint` para realizar un análisis de estilo y posibles errores en el código, y `make test ACTIVITY=pruebas_pytest` para ejecutar un subconjunto de pruebas unitarias rápidas, asegurando un nivel básico de calidad antes de permitir el commit.
+🧠 Pregunta 41
+En el contexto de BDD, ¿qué rol cumplen las "step definitions" (definiciones de pasos) en steps/steps.py?
+
+A. Describen los escenarios de comportamiento en lenguaje natural.
+B. Contienen el código Python que implementa la lógica de cada paso definido en los archivos `.feature`.
+C. Definen la estructura y la sintaxis de los archivos `.feature`.
+D. Generan automáticamente los archivos `.feature` a partir del código Python.
+
+✅ Correcta: B
+🧾 Explicación: Los archivos `steps/steps.py` contienen las funciones de Python que se ejecutan cuando `behave` encuentra un paso coincidente en un archivo `.feature`. Estas funciones contienen la lógica de prueba específica para cada paso.
+🧠 Pregunta 42
+¿Qué significa la etiqueta @smoke utilizada en el ejemplo de ejecución de behave (behave --tags=@smoke)?
+
+A. Indica que los escenarios marcados con esta etiqueta deben ejecutarse en un entorno de alto rendimiento.
+B. Selecciona y ejecuta solo los escenarios que han sido etiquetados con `@smoke`, típicamente representando pruebas rápidas y esenciales para verificar la funcionalidad básica.
+C. Aplica un formato de salida específico para los escenarios que fallan.
+D. Define un conjunto de variables de entorno que se aplicarán solo a estos escenarios.
+
+✅ Correcta: B
+🧾 Explicación: Las etiquetas (`@`) en Gherkin permiten organizar y seleccionar escenarios específicos para su ejecución. `@smoke` es una convención común para marcar pruebas de humo, que son un conjunto pequeño de pruebas rápidas diseñadas para verificar la funcionalidad más crítica del sistema.
+🧠 Pregunta 43
+¿Qué representan las "Four Test Patterns" en el contexto de las pruebas unitarias?
+
+A. Cuatro tipos diferentes de errores comunes en el software.
+B. Un modelo para estructurar cada prueba unitaria en cuatro fases: Setup, Exercise, Verify y Teardown.
+C. Cuatro herramientas esenciales para realizar pruebas unitarias efectivas.
+D. Cuatro niveles de granularidad en las pruebas: unitarias, de integración, de sistema y de aceptación.
+
+✅ Correcta: B
+🧾 Explicación: Las "Four Test Patterns" son un modelo conceptual para estructurar una prueba unitaria de manera clara y organizada, asegurando que cada prueba siga un flujo lógico de preparación, ejecución de la acción a probar, verificación del resultado esperado y limpieza del entorno si es necesario.
+🧠 Pregunta 44
+En el flujo de trabajo TDD con Make, ¿cuál es el objetivo de la fase "Red"?
+
+A. Escribir el código de producción que implementará la funcionalidad.
+B. Refactorizar el código existente para mejorar su calidad.
+C. Ejecutar las pruebas recién escritas (o existentes para una nueva funcionalidad) y verificar que fallan, confirmando que la prueba está configurada correctamente para detectar la ausencia de la funcionalidad.
+D. Asegurarse de que todas las pruebas pasen después de implementar la funcionalidad.
+
+✅ Correcta: C
+🧾 Explicación: La fase "Red" del TDD se centra en escribir una prueba para una funcionalidad que aún no existe y luego ejecutar esa prueba para confirmar que falla. Esto asegura que la prueba es válida y que realmente probará el comportamiento esperado una vez que se implemente la funcionalidad.
+🧠 Pregunta 45
+¿Qué se espera que haga el desarrollador en la fase "Green" del ciclo TDD descrito en el Makefile?
+
+A. Escribir más pruebas para cubrir diferentes casos de uso.
+B. Refactorizar el código de prueba para mejorar su legibilidad.
+C. Implementar la funcionalidad mínima necesaria para que las pruebas que fallaron en la fase "Red" pasen.
+D. Documentar el código recién implementado.
+
+✅ Correcta: C
+🧾 Explicación: La fase "Green" del TDD consiste en escribir el código de producción necesario para satisfacer los requisitos de las pruebas que fallaron en la fase "Red". El objetivo es hacer que las pruebas pasen lo más rápido posible, sin preocuparse demasiado por la perfección del código en esta etapa.
+🧠 Pregunta 46
+¿Cuál es el propósito de la fase "Refactor" en el ciclo TDD?
+
+A. Añadir nuevas funcionalidades al código.
+B. Optimizar el rendimiento del código.
+C. Mejorar la estructura, legibilidad y mantenibilidad del código productivo sin alterar su comportamiento (es decir, sin romper las pruebas existentes).
+D. Escribir la documentación del código.
+
+✅ Correcta: C
+🧾 Explicación: La fase "Refactor" se realiza después de que las pruebas pasan (fase "Green"). El objetivo es limpiar y mejorar el código productivo, eliminando duplicaciones, mejorando la claridad y asegurando que el código sea fácil de mantener a largo plazo, siempre verificando que las pruebas sigan pasando después de la refactorización.
+🧠 Pregunta 47
+En el ejemplo de la clase TestDividir en pytest, ¿qué propósito tiene el uso de with pytest.raises(ZeroDivisionError)?
+
+A. Permite que la prueba pase solo si la función `dividir` lanza una excepción de tipo `ZeroDivisionError` al intentar dividir por cero.
+B. Captura la excepción `ZeroDivisionError` si ocurre y la ignora, haciendo que la prueba siempre pase.
+C. Obliga a la función `dividir` a lanzar una excepción de tipo `ZeroDivisionError` durante la prueba.
+D. Muestra un mensaje de error específico si no se lanza una excepción `ZeroDivisionError`.
+
+✅ Correcta: A
+🧾 Explicación: `with pytest.raises(ZeroDivisionError)` es una forma idiomática en `pytest` de probar el comportamiento esperado de una función cuando debe lanzar una excepción. La prueba pasará solo si la excepción del tipo especificado (en este caso, `ZeroDivisionError`) es efectivamente raised por el código bajo prueba.
+🧠 Pregunta 48
+¿Qué se busca lograr al integrar BDD y TDD en un flujo de trabajo de desarrollo?
+
+A. Reducir la cantidad total de pruebas necesarias.
+B. Asegurar que las pruebas de unidad estén escritas en lenguaje natural.
+C. Cubrir la validación de la calidad desde las pruebas de unidad (TDD) hasta las pruebas de aceptación del negocio (BDD), asegurando que el software cumpla tanto con los requisitos técnicos como con las necesidades del negocio.
+D. Simplificar la configuración del entorno de pruebas.
+
+✅ Correcta: C
+🧾 Explicación: La integración de BDD y TDD proporciona una estrategia de pruebas completa. TDD asegura que el código se desarrolle de manera probada y con una alta cobertura a nivel de unidad, mientras que BDD valida que el software cumple con los requisitos del negocio y las expectativas del usuario a través de escenarios descritos en lenguaje natural.
+🧠 Pregunta 49
+¿Qué comando make se utiliza en el ejemplo para ejecutar la batería completa de verificaciones de calidad (linting, pruebas unitarias, pruebas BDD y cobertura)?
+
+A. `make all`
+B. `make check`
+C. `make quality`
+D. `make ci`
+
+✅ Correcta: D
+🧾 Explicación: El ejemplo define un target `ci` (Continuous Integration) que agrupa la ejecución de `lint`, `test`, `bdd` y `coverage`, representando un conjunto completo de verificaciones de calidad que típicamente se ejecutan en un pipeline de integración continua.
+🧠 Pregunta 50
+¿Cuál es el beneficio de incluir el timestamp y el commit hash en los reportes generados por el Makefile?
+
+A. Reducir el tamaño de los archivos de reporte.
+B. Facilitar la identificación precisa de la versión del código y el momento en que se generó el reporte, lo que es útil para la trazabilidad y la depuración.
+C. Mejorar la legibilidad de los reportes para usuarios no técnicos.
+D. Asegurar que los reportes sean compatibles con diferentes herramientas de análisis.
+
+✅ Correcta: B
+🧾 Explicación: Incluir el `timestamp` y el `commit hash` en los reportes proporciona un contexto crucial sobre cuándo y desde qué versión específica del código se generaron los resultados. Esto es fundamental para la trazabilidad, la auditoría y la reproducción de los resultados en el futuro.

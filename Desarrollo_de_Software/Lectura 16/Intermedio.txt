@@ -1,0 +1,769 @@
+🧠 Pregunta 1
+¿Cuál es el principal beneficio de utilizar expresiones regulares (regex) en la definición de steps en BDD con Gherkin y Behave?
+
+A. Simplifica la escritura de historias de usuario en lenguaje natural.
+B. Permite una validación de escenarios más flexible, reutilizable y precisa.
+C. Reduce la necesidad de definir múltiples steps para variaciones similares.
+D. Asegura que los steps sean directamente interpretados por los usuarios finales.
+
+✅ Correcta: B
+🧾 Explicación: Las expresiones regulares ofrecen flexibilidad para aceptar diversas entradas, reutilización de patrones genéricos, precisión en la validación de formatos complejos y centralización de la lógica de reconocimiento.
+
+🧠 Pregunta 2
+¿Qué función cumplen los anclajes ^ y $ en una expresión regular utilizada en un step de Behave?
+
+A. Definen el inicio y el final de un grupo de captura dentro del step.
+B. Indican que la coincidencia del patrón debe ocurrir al principio o al final de la línea del escenario, respectivamente.
+C. Permiten la búsqueda del patrón en cualquier parte de la línea del escenario.
+D. Marcan el inicio y el final de una palabra clave específica en el step.
+
+✅ Correcta: B
+🧾 Explicación: El carácter ^ ancla la expresión regular al inicio de la línea, mientras que $ la ancla al final, asegurando que el patrón coincida con toda la línea y no solo con una parte.
+
+🧠 Pregunta 3
+En la expresión regular ([^"]+), ¿qué significa la parte [^"]+?
+
+A. Coincide con cualquier carácter, incluyendo las comillas dobles.
+B. Coincide con una o más ocurrencias de cualquier carácter excepto las comillas dobles.
+C. Coincide con cero o más ocurrencias de cualquier carácter excepto las comillas dobles.
+D. Captura opcionalmente cualquier carácter que no sea una comilla doble.
+
+✅ Correcta: B
+🧾 Explicación: Los corchetes [^...] definen una clase de caracteres negada, y el + indica una o más ocurrencias del carácter que no está dentro de los corchetes (en este caso, la comilla doble).
+
+🧠 Pregunta 4
+¿Cómo se podría definir un step en Behave para el siguiente texto en Gherkin: "la aplicación está en modo mantenimiento o en modo lectura"?
+
+A. @given(r'^la aplicación está en modo (mantenimiento|lectura)$')
+B. @given(r'^la aplicación está en modo mantenimiento|lectura$')
+C. @given(r'^la aplicación está en modo [mantenimiento|lectura]$')
+D. @given(r'^la aplicación está en modo mantenimiento o lectura$')
+
+✅ Correcta: A
+🧾 Explicación: El uso de paréntesis () crea un grupo, y la barra vertical | dentro del grupo actúa como un operador de disyunción (OR), permitiendo que coincida "mantenimiento" o "lectura".
+
+🧠 Pregunta 5
+¿Qué representa el cuantificador ? en la expresión regular artículo?s??
+
+A. Indica que la palabra "artículo" debe aparecer una o cero veces, seguida opcionalmente de la letra "s".
+B. Indica que la letra "o" en "artículo" y la letra "s" son opcionales.
+C. Indica que tanto la palabra "artículo" como la letra "s" son opcionales.
+D. Indica que la letra inmediatamente anterior al ? (la "o" en "artículo" y la "s") puede aparecer cero o una vez.
+
+✅ Correcta: D
+🧾 Explicación: El cuantificador ? hace que el carácter precedente (en este caso, la "o" al final de "artículo" y la "s") sea opcional, es decir, que aparezca cero o una vez.
+
+🧠 Pregunta 6
+¿Cuál es la diferencia entre \s+ y \s* en una expresión regular?
+
+A. \s+ coincide con cualquier carácter de espacio en blanco, mientras que \s* coincide con cualquier carácter no alfanumérico.
+B. \s+ coincide con uno o más caracteres de espacio en blanco, mientras que \s* coincide con cero o más caracteres de espacio en blanco.
+C. \s+ coincide con cero o más caracteres de espacio en blanco, mientras que \s* coincide con uno o más caracteres de espacio en blanco.
+D. No hay diferencia, ambos coinciden con cualquier cantidad de espacios en blanco.
+
+✅ Correcta: B
+🧾 Explicación: El cuantificador + significa "una o más ocurrencias", mientras que * significa "cero o más ocurrencias" del elemento precedente (\s, que representa un carácter de espacio en blanco).
+
+🧠 Pregunta 7
+¿Para qué se utiliza la secuencia \b en la expresión regular \bError\b?
+
+A. Para indicar que la palabra "Error" debe estar al principio y al final de la línea.
+B. Para capturar la palabra "Error" como un grupo.
+C. Para asegurar que "Error" coincida como una palabra completa, sin formar parte de otra palabra.
+D. Para indicar que la "E" y la "r" en "Error" son caracteres especiales.
+
+✅ Correcta: C
+🧾 Explicación: \b es un anclaje de límite de palabra. Asegura que la coincidencia de "Error" esté delimitada por caracteres que no son palabras (como espacios, puntuación o el inicio/fin de la cadena).
+
+🧠 Pregunta 8
+En la expresión regular (activo|inactivo), ¿qué función cumplen los paréntesis?
+
+A. Definen un grupo de captura que contendrá "activo" o "inactivo".
+B. Indican que los caracteres dentro del paréntesis son opcionales.
+C. Agrupan las alternativas para que la disyunción | se aplique a toda la palabra.
+D. Delimitan una clase de caracteres que incluye "a", "c", "t", "i", "v", "o", "n".
+
+✅ Correcta: C
+🧾 Explicación: Los paréntesis crean un subpatrón, y dentro de él, la barra vertical | actúa como un operador OR, de modo que la expresión coincidirá con "activo" O "inactivo".
+
+🧠 Pregunta 9
+¿Cuál es la diferencia entre [0-9] y \d en expresiones regulares?
+
+A. [0-9] coincide con cualquier dígito, mientras que \d coincide con cualquier carácter no numérico.
+B. \d es una forma abreviada o alias de la clase de caracteres [0-9], por lo que ambos tienen la misma función.
+C. [0-9] solo funciona en ciertos lenguajes de programación, mientras que \d es un estándar universal.
+D. \d tiene funcionalidades adicionales para coincidir con formatos numéricos específicos.
+
+✅ Correcta: B
+🧾 Explicación: \d es una clase de carácter abreviada que representa cualquier dígito decimal (0-9), siendo equivalente a la clase de caracteres [0-9].
+
+🧠 Pregunta 10
+¿Qué indica el cuantificador {n,m} en una expresión regular?
+
+A. Que el elemento precedente debe aparecer exactamente n veces o exactamente m veces.
+B. Que el elemento precedente debe aparecer al menos n veces y como máximo m veces.
+C. Que el elemento precedente debe aparecer entre n y m veces, inclusive, pero solo si se encuentra dentro de un grupo.
+D. Que el elemento precedente puede aparecer n veces, m veces o cualquier número intermedio, de forma opcional.
+
+✅ Correcta: B
+🧾 Explicación: El cuantificador {n,m} especifica un rango de ocurrencias para el elemento precedente, indicando que debe aparecer como mínimo n veces y como máximo m veces para que haya una coincidencia.
+
+🧠 Pregunta 11
+¿Por qué es importante usar raw strings (prefijo r) al definir expresiones regulares en Python para Behave?
+
+A. Para que las expresiones regulares sean interpretadas directamente por Gherkin.
+B. Para evitar la necesidad de escapar ciertos caracteres especiales de Python (como la barra invertida \).
+C. Para mejorar el rendimiento de la búsqueda de patrones.
+D. Para que la sintaxis de las expresiones regulares sea compatible con otros lenguajes.
+
+✅ Correcta: B
+🧾 Explicación: Los raw strings tratan las barras invertidas \ como caracteres literales, lo que es crucial en expresiones regulares donde la barra invertida se utiliza para escapar caracteres especiales de la regex. Sin raw strings, habría que duplicar algunas barras invertidas.
+
+🧠 Pregunta 12
+¿Qué problema se intenta evitar al anclar siempre las expresiones regulares en los steps de Behave con ^ y $?
+
+A. Coincidir con múltiples líneas en un solo step.
+B. Capturar grupos innecesarios dentro de la línea del escenario.
+C. Que el patrón coincida con una parte de la línea del escenario en lugar de la línea completa.
+D. Que la expresión regular sea demasiado específica y no coincida con variaciones válidas.
+
+✅ Correcta: C
+🧾 Explicación: Al usar ^ al principio y $ al final de una regex en un step, se asegura que el patrón coincida con la totalidad de la línea del escenario, evitando coincidencias parciales que podrían llevar a interpretaciones incorrectas del comportamiento.
+
+🧠 Pregunta 13
+¿Cuál es el propósito de la función re.compile() recomendada en las buenas prácticas para el uso de regex en BDD?
+
+A. Para validar la sintaxis de la expresión regular durante la ejecución de las pruebas.
+B. Para optimizar la búsqueda del patrón al pre-compilar la expresión regular, especialmente si se usa varias veces.
+C. Para convertir la expresión regular en un formato legible para los usuarios finales.
+D. Para generar automáticamente ejemplos de datos que coincidan con la expresión regular.
+
+✅ Correcta: B
+🧾 Explicación: re.compile() compila la expresión regular en un objeto de patrón, lo que puede mejorar la eficiencia si el mismo patrón se utiliza repetidamente, ya que la compilación solo se realiza una vez.
+
+🧠 Pregunta 14
+¿Por qué es útil modularizar patrones de regex comunes en constantes dentro de un módulo de Python en un proyecto de BDD?
+
+A. Para que los archivos .feature puedan referenciar directamente las expresiones regulares.
+B. Para centralizar y facilitar el mantenimiento de las expresiones regulares utilizadas en múltiples steps.
+C. Para mejorar la compatibilidad de las expresiones regulares con diferentes versiones de Python.
+D. Para reducir el tamaño de los archivos de definición de steps.
+
+✅ Correcta: B
+🧾 Explicación: Definir patrones comunes en constantes facilita su reutilización en diferentes steps, mejora la legibilidad del código y simplifica las actualizaciones o modificaciones de los patrones.
+
+🧠 Pregunta 15
+En un escenario de Gherkin donde se espera un correo electrónico válido, ¿qué parte de la expresión regular ^[\w\.-]+@[\w\.-]+\.[a-z]{2,}$ se encarga de validar el dominio de nivel superior (TLD)?
+
+A. ^[\w\.-]+
+B. @[\w\.-]+
+C. \.
+D. [a-z]{2,}$
+
+✅ Correcta: D
+🧾 Explicación: La parte [a-z]{2,}$ coincide con dos o más letras minúsculas al final de la cadena, lo que típicamente representa el dominio de nivel superior (como "com", "org", "es"). El \. anterior asegura que haya un punto separando el dominio del TLD.
+
+🧠 Pregunta 16
+¿Qué significa el lookahead positivo (?=\d) en la expresión regular ^el módulo "([^"]+)"(?=\d)Version(\d+)$?
+
+A. Asegura que el nombre del módulo capturado sea seguido por al menos un dígito, sin incluir ese dígito en la captura del nombre.
+B. Indica que la palabra "Version" debe estar presente y seguida por un dígito.
+C. Requiere que la línea comience con "el módulo" y que el nombre del módulo contenga al menos un dígito.
+D. Valida que la versión capturada (\d+) sea un número positivo.
+
+✅ Correcta: A
+🧾 Explicación: El lookahead positivo (?=\d) afirma que la posición actual en la cadena debe ser seguida por un dígito, pero esa coincidencia no se consume (no forma parte de la coincidencia general ni se incluye en ningún grupo de captura).
+
+🧠 Pregunta 17
+¿Cuál es el propósito del lookahead negativo (?!TMP) en la expresión regular ^(?!TMP)[A-Z]{3}\d{4}$?
+
+A. Asegurar que el código capturado contenga las letras "TMP".
+B. Excluir cualquier cadena que comience con las letras "TMP" de la coincidencia.
+C. Validar que las tres primeras letras del código sean diferentes de "TMP".
+D. Indicar que la parte [A-Z]{3}\d{4} es opcional si la cadena comienza con "TMP".
+
+✅ Correcta: B
+🧾 Explicación: El lookahead negativo (?!TMP) verifica que la cadena que se está evaluando no comience con la secuencia "TMP". Si lo hace, la coincidencia falla.
+
+🧠 Pregunta 18
+En una historia de usuario con el step Given como "Administrador" o "Usuario", ¿cómo se utiliza la expresión regular en el step de Behave correspondiente?
+
+A. @given(r'^como "(Administrador" y "Usuario)"$') para capturar ambos roles simultáneamente.
+B. @given(r'^como "(Administrador|Usuario)"$') para capturar uno de los dos roles.
+C. @given(r'^como "Administrador o Usuario"$') para coincidir con la frase literal.
+D. @given(r'^como "(Administrador)" o "(Usuario)"$') para capturar cada rol en grupos separados.
+
+✅ Correcta: B
+🧾 Explicación: La expresión regular @given(r'^como "(Administrador|Usuario)"$') utiliza la disyunción | dentro de un grupo () para coincidir con "Administrador" o "Usuario", capturando el rol en el grupo.
+
+🧠 Pregunta 19
+En el contexto de los criterios de aceptación, ¿por qué es útil validar el formato de un campo como el correo electrónico utilizando expresiones regulares en los steps de Behave?
+
+A. Para asegurar que los datos de ejemplo en los archivos .feature sean sintácticamente correctos.
+B. Para verificar que la interfaz de usuario presente los datos en un formato legible para el usuario.
+C. Para automatizar la verificación de que los datos manejados por el sistema cumplen con un formato específico requerido por la lógica de negocio.
+D. Para generar automáticamente correos electrónicos de prueba con diferentes formatos.
+
+✅ Correcta: C
+🧾 Explicación: Validar el formato de los datos con regex en los steps automatizados asegura que el sistema bajo prueba esté manejando la información de acuerdo con las reglas definidas en los criterios de aceptación, lo cual es fundamental para la calidad del software.
+
+🧠 Pregunta 20
+Al definir un step en Behave para el Gherkin Given el SKU "<sku>" debe coincidir con /\w{3}-\d{4}/, ¿qué se está validando realmente en el código Python asociado?
+
+A. Que la cadena literal "&lt;sku>" aparezca en el texto del step.
+B. Que el valor del parámetro sku (extraído del escenario) coincida con la expresión regular \w{3}-\d{4}.
+C. Que el texto /\w{3}-\d{4}/ se evalúe como una expresión regular válida en Python.
+D. Que el nombre del escenario contenga la palabra "SKU".
+
+✅ Correcta: B
+🧾 Explicación: El step está diseñado para tomar el valor del <sku> del escenario y verificar, mediante una expresión regular (en este caso, \w{3}-\d{4}), que ese valor cumple con el patrón esperado (tres caracteres alfanuméricos seguidos de un guion y cuatro dígitos).
+
+🧠 Pregunta 21
+¿Cuál es la principal diferencia entre las clases de caracteres simples como [abc] y los rangos como [a-z] en expresiones regulares?
+
+A. Las clases simples solo pueden contener letras, mientras que los rangos pueden incluir números y símbolos.
+B. Las clases simples definen un conjunto específico de caracteres a coincidir, mientras que los rangos definen un intervalo de caracteres.
+C. Los rangos son una forma abreviada de escribir clases simples para secuencias alfabéticas.
+D. No hay diferencia funcional entre ambas, solo una diferencia en la sintaxis.
+
+✅ Correcta: B
+🧾 Explicación: Una clase de caracteres simple enumera los caracteres exactos que se aceptarán, mientras que un rango especifica un intervalo continuo de caracteres (letras o números).
+
+🧠 Pregunta 22
+En la expresión regular [^A-Za-z0-9\s], ¿qué conjunto de caracteres coincidirá?
+
+A. Cualquier letra mayúscula, minúscula, dígito o espacio en blanco.
+B. Cualquier carácter que NO sea una letra mayúscula, minúscula, dígito o espacio en blanco.
+C. Solo los caracteres que no están dentro de los rangos A-Z, a-z, 0-9, ni sean un espacio.
+D. Cualquier carácter alfanumérico que no sea un espacio en blanco.
+
+✅ Correcta: B
+🧾 Explicación: El símbolo ^ dentro de los corchetes [...] niega la clase de caracteres, por lo que la expresión coincidirá con cualquier carácter que no esté incluido en la lista (letras mayúsculas, minúsculas, dígitos o espacios en blanco).
+
+🧠 Pregunta 23
+¿Cómo se podría modificar la expresión regular \d+ artículo?s? para que coincida también con la frase "el carro no contiene artículos"?
+
+A. \d* artículo?s?
+B. \d+ o no artículo?s?
+C. (no \d+)? artículo?s?
+D. (no )?\d* artículo?s?
+
+✅ Correcta: D
+🧾 Explicación: Al hacer opcional el "no " con (no )? y permitir cero o más dígitos con \d*, la expresión puede coincidir tanto con la presencia como con la ausencia de un número de artículos.
+
+🧠 Pregunta 24
+¿Qué diferencia fundamental existe entre el cuantificador * (Kleene star) y el cuantificador + (Kleene plus)?
+
+A. * coincide con una o más ocurrencias, mientras que + coincide con cero o más.
+B. * solo se aplica a grupos, mientras que + se aplica a caracteres individuales.
+C. + requiere al menos una ocurrencia del elemento precedente, mientras que * permite cero o más ocurrencias.
+D. No hay una diferencia significativa en su funcionalidad.
+
+✅ Correcta: C
+🧾 Explicación: El cuantificador * permite que el elemento precedente aparezca cero, una o más veces, mientras que + exige que aparezca al menos una vez.
+
+🧠 Pregunta 25
+¿En qué situación sería más apropiado utilizar el límite de palabra \b en lugar de simplemente buscar una cadena literal dentro de un step?
+
+A. Cuando la palabra clave siempre aparece al principio o al final de la línea.
+B. Cuando se necesita capturar la palabra clave para usarla como parámetro en el step.
+C. Cuando se quiere asegurar que la palabra clave coincida como una unidad completa y no como parte de otra palabra.
+D. Cuando la palabra clave puede tener variaciones en mayúsculas o minúsculas.
+
+✅ Correcta: C
+🧾 Explicación: \b es útil cuando la integridad de la palabra es importante, evitando coincidencias no deseadas dentro de palabras más largas.
+
+🧠 Pregunta 26
+¿Cómo se podría definir un step en Behave para el siguiente texto en Gherkin: "el usuario puede ser administrador, editor o lector"?
+
+A. @given(r'^el usuario puede ser (administrador|editor|lector)$')
+B. @given(r'^el usuario puede ser administrador|editor|lector$')
+C. @given(r'^el usuario puede ser [administrador|editor|lector]$')
+D. @given(r'^el usuario puede ser (administrador, editor, lector)$')
+
+✅ Correcta: A
+🧾 Explicación: Al agrupar las opciones "administrador", "editor" y "lector" con paréntesis () y usar la disyunción |, la expresión regular coincidirá con cualquiera de las tres palabras.
+
+🧠 Pregunta 27
+¿Cuál es la ventaja de utilizar alias o clases abreviadas como \w, \d, \s en expresiones regulares?
+
+A. Hacen que las expresiones regulares sean más potentes y capaces de validar formatos más complejos.
+B. Mejoran el rendimiento de la búsqueda de patrones en comparación con las clases de caracteres explícitas.
+C. Hacen que las expresiones regulares sean más concisas y fáciles de leer y escribir.
+D. Permiten una mayor compatibilidad con diferentes lenguajes de programación que utilizan regex.
+
+✅ Correcta: C
+🧾 Explicación: Los alias como \w (alfanumérico y guion bajo), \d (dígito) y \s (espacio en blanco) son formas abreviadas de clases de caracteres comunes, lo que mejora la legibilidad y reduce la verbosidad de las expresiones regulares.
+
+🧠 Pregunta 28
+En la expresión regular [A-Fa-f0-9]{8}, ¿qué se está especificando sobre la cadena que debe coincidir?
+
+A. Debe contener exactamente 8 caracteres que sean letras de la A a la F (mayúsculas o minúsculas) o dígitos del 0 al 9.
+B. Debe contener entre 8 y 16 caracteres hexadecimales.
+C. Debe comenzar con una letra de la A a la F y terminar con un dígito del 0 al 9, con una longitud total de 8 caracteres.
+D. Debe contener 8 ocurrencias de cualquier carácter alfanumérico.
+
+✅ Correcta: A
+🧾 Explicación: La clase de caracteres [A-Fa-f0-9] define los caracteres hexadecimales válidos, y el cuantificador {8} especifica que debe haber exactamente 8 de estos caracteres.
+
+🧠 Pregunta 29
+¿Cuál es la función del carácter de escape \ en una expresión regular?
+
+A. Iniciar un grupo de captura.
+B. Indicar el final de una línea de coincidencia.
+C. Tratar un carácter especial de regex como un carácter literal.
+D. Definir una clase de caracteres abreviada.
+
+✅ Correcta: C
+🧾 Explicación: La barra invertida \ se utiliza para escapar caracteres que tienen un significado especial en las expresiones regulares (como ., *, [, ], \, etc.), permitiendo que se interpreten como caracteres literales en la búsqueda.
+
+🧠 Pregunta 30
+¿En qué escenario el uso de un lookbehind (positivo o negativo) podría ser particularmente útil en la definición de un step de Behave?
+
+A. Cuando se necesita validar la presencia o ausencia de un patrón al principio de la línea.
+B. Cuando la decisión de coincidir un patrón depende de lo que le precede en la cadena, sin incluir ese precedente en la coincidencia.
+C. Cuando se necesita capturar múltiples ocurrencias de un patrón dentro de una sola línea.
+D. Cuando se quiere optimizar la velocidad de ejecución de las pruebas.
+
+✅ Correcta: B
+🧾 Explicación: Los lookbehind permiten verificar si un patrón está precedido por otro patrón específico, sin que este último forme parte de la coincidencia principal. Esto es útil para validaciones contextuales basadas en lo que viene antes.
+
+🧠 Pregunta 31
+¿Cómo se integra el uso de expresiones regulares en la estructura de una Historia de Usuario en BDD?
+
+A. Las expresiones regulares se utilizan directamente en la sección de "Narrativa" para definir el comportamiento esperado.
+B. Los títulos de los escenarios en las Historias de Usuario a menudo describen el patrón de entrada esperado, que luego se implementa con regex en los steps.
+C. Las expresiones regulares se incluyen en la sección de "Para" para especificar los criterios de aceptación técnicos.
+D. Las Historias de Usuario no tienen una relación directa con las expresiones regulares; estas se utilizan solo en la capa de automatización de los steps.
+
+✅ Correcta: B
+🧾 Explicación: Aunque Gherkin en sí no interpreta regex, es una buena práctica documentar en los títulos o descripciones de los escenarios el formato esperado de los datos, lo que guía la creación de las expresiones regulares en los steps correspondientes.
+
+🧠 Pregunta 32
+¿Cuál es el beneficio de utilizar tablas de ejemplos (Examples) en los archivos .feature al probar steps que utilizan expresiones regulares?
+
+A. Permite definir múltiples conjuntos de datos de prueba que se aplicarán al mismo escenario, verificando la robustez y la cobertura de la expresión regular.
+B. Simplifica la sintaxis de las expresiones regulares dentro de los steps.
+C. Genera automáticamente la documentación de las expresiones regulares utilizadas en el proyecto.
+D. Mejora el rendimiento de la ejecución de las pruebas al reducir la complejidad de las expresiones regulares.
+
+✅ Correcta: A
+🧾 Explicación: Las tablas de ejemplos permiten probar un mismo escenario con diversas entradas, lo que es crucial para asegurar que la expresión regular definida en el step funcione correctamente con diferentes variaciones de los datos esperados.
+
+🧠 Pregunta 33
+¿Qué implica la buena práctica de "validar con ejemplos" al trabajar con expresiones regulares en BDD?
+
+A. Asegurarse de que la documentación de la expresión regular incluya ejemplos de cadenas que coincidan y que no coincidan.
+B. Utilizar las tablas de ejemplos en los archivos .feature para proporcionar diferentes entradas que prueben la expresión regular del step.
+C. Escribir pruebas unitarias separadas en Python para verificar que la expresión regular compile correctamente con re.compile().
+D. Comentar detalladamente cada parte de la expresión regular para explicar su funcionamiento con ejemplos.
+
+✅ Correcta: B
+🧾 Explicación: "Validar con ejemplos" en el contexto de BDD se refiere principalmente a la práctica de usar la sección Examples en los archivos .feature para proporcionar múltiples casos de prueba que ejerciten la lógica de las expresiones regulares en los steps.
+
+🧠 Pregunta 34
+En un step que valida una fecha en formato ISO como "2025-04-17" con la regex (\d{4})-(\d{2})-(\d{2}), ¿para qué se utilizan los paréntesis?
+
+A. Para definir la estructura general del formato de fecha (año-mes-día).
+B. Para asegurar que los guiones - sean tratados como caracteres literales.
+C. Para capturar el año, el mes y el día como grupos separados, que luego pueden ser utilizados en el código del step.
+D. Para indicar que cada parte de la fecha (año, mes, día) es opcional.
+
+✅ Correcta: C
+🧾 Explicación: Los paréntesis en la expresión regular crean grupos de captura. En este caso, cada parte de la fecha (año, mes, día) se captura en un grupo diferente, lo que permite acceder a estos valores individualmente en la función del step (por ejemplo, para convertirlos a enteros y validarlos).
+
+🧠 Pregunta 35
+¿Cuál es una recomendación clave para mantener las expresiones regulares utilizadas en los steps de Behave de manera efectiva a largo plazo?
+
+A. Utilizar las expresiones regulares más complejas posibles para cubrir todas las variaciones de entrada en un solo step.
+B. Evitar el uso de alias como \w, \d, \s para que las expresiones sean más explícitas.
+C. Documentar claramente qué parte de la entrada coincide con cada grupo de captura y la razón de ser de la expresión regular.
+D. Generar automáticamente las expresiones regulares a partir de los archivos .feature para asegurar la coherencia.
+
+✅ Correcta: C
+🧾 Explicación: Una documentación clara y concisa de las expresiones regulares, incluyendo qué capturan los grupos y el propósito del patrón, es fundamental para el mantenimiento y la comprensión del código a lo largo del tiempo, especialmente cuando las expresiones pueden volverse complejas.
+
+🧠 Pregunta 36
+¿Qué ocurriría si en un step de Behave se define una expresión regular sin los anclajes ^ y $, por ejemplo, el usuario ingresa \d+?
+
+A. La expresión regular solo coincidiría si la línea del escenario contiene exactamente "el usuario ingresa" seguido de uno o más dígitos, sin ningún otro texto.
+B. La expresión regular coincidiría con cualquier línea del escenario que contenga la secuencia "el usuario ingresa" seguida de uno o más dígitos, incluso si hay texto adicional al principio o al final.
+C. Behave ignoraría la expresión regular y buscaría una coincidencia literal del texto en el step.
+D. Se generaría un error durante la ejecución de las pruebas debido a la falta de anclajes.
+
+✅ Correcta: B
+🧾 Explicación: Sin los anclajes ^ (inicio de línea) y $ (fin de línea), la expresión regular buscará la secuencia especificada en cualquier parte de la línea del escenario, lo que podría llevar a coincidencias no deseadas.
+
+🧠 Pregunta 37
+¿Cuál es la ventaja de utilizar grupos de captura (definidos con paréntesis ()) en las expresiones regulares de los steps de Behave?
+
+A. Permiten que la expresión regular coincida con múltiples líneas del escenario.
+B. Facilitan la validación de la sintaxis de la expresión regular en tiempo de ejecución.
+C. Permiten extraer partes específicas del texto coincidente para utilizarlas como argumentos en la función del step.
+D. Mejoran el rendimiento de la búsqueda de patrones al delimitar las partes importantes de la expresión.
+
+✅ Correcta: C
+🧾 Explicación: Los paréntesis crean grupos de captura, lo que significa que la parte del texto del escenario que coincide con el patrón dentro de los paréntesis se puede acceder y utilizar como parámetros en la función Python asociada al step.
+
+🧠 Pregunta 38
+¿Cómo se podría modificar la expresión regular [A-Za-z]+ para que coincida con una o más letras, pero también permita la inclusión de guiones bajos?
+
+A. [A-Za-z_-]+
+B. [A-Za-z\u]+
+C. [A-Za-z Guion_bajo]+
+D. [A-Za-z]-[_]+
+
+✅ Correcta: A
+🧾 Explicación: Al añadir el guion bajo _ dentro de la clase de caracteres [], la expresión regular ahora coincidirá con una o más ocurrencias de letras mayúsculas, minúsculas o guiones bajos. El guion - se escapa con \ o se coloca al principio o al final de la clase para ser tratado como literal.
+
+🧠 Pregunta 39
+¿En qué situación sería útil utilizar un cuantificador de rango como {3,5} en una expresión regular dentro de un step de BDD?
+
+A. Cuando se necesita coincidir con un número específico de ocurrencias, ni más ni menos.
+B. Cuando la parte del texto a coincidir tiene una longitud variable dentro de un límite definido (mínimo y máximo).
+C. Cuando se quiere especificar un número exacto de repeticiones o un número ilimitado de repeticiones.
+D. Cuando se necesita hacer que una parte de la expresión regular sea opcional.
+
+✅ Correcta: B
+🧾 Explicación: Un cuantificador de rango como {3,5} especifica que el elemento precedente debe aparecer al menos 3 veces y como máximo 5 veces para que haya una coincidencia.
+
+🧠 Pregunta 40
+¿Cuál es la diferencia entre . (punto) y \. (punto escapado) en una expresión regular utilizada en un step de Behave?
+
+A. No hay diferencia; ambos coinciden con cualquier carácter.
+B. . coincide con cualquier carácter excepto el salto de línea, mientras que \. coincide con el carácter literal punto.
+C. . coincide con el carácter literal punto, mientras que \. coincide con cualquier carácter.
+D. . se utiliza solo dentro de clases de caracteres, mientras que \. se utiliza fuera de ellas.
+
+✅ Correcta: B
+🧾 Explicación: El punto . es un metacarácter que coincide con cualquier carácter individual excepto el carácter de nueva línea. Para coincidir con el carácter literal punto, debe escaparse con una barra invertida: \..
+
+🧠 Pregunta 41
+¿Cómo se podría definir un step en Behave para el siguiente texto en Gherkin: "se muestra el precio de $19.99 o €15.50"?
+
+A. @then(r'^se muestra el precio de (\$|\€)\d+\.\d{2}$')
+B. @then(r'^se muestra el precio de [$€]\d+.\d{2}$')
+C. @then(r'^se muestra el precio de (\$\d+\.\d{2}|\€\d+\.\d{2})$')
+D. @then(r'^se muestra el precio de [\$\€]\d+.\d{2}$')
+
+✅ Correcta: C
+🧾 Explicación: Esta expresión utiliza la disyunción | dentro de un grupo para permitir la coincidencia de dos patrones alternativos: uno que comienza con $ y otro con €, ambos seguidos de un número con dos decimales. Los caracteres $ y € no necesitan ser escapados dentro de una clase de caracteres, pero aquí se usan como literales dentro de las alternativas.
+
+🧠 Pregunta 42
+¿Qué representa la secuencia \w+ en una expresión regular?
+
+A. Cualquier carácter de espacio en blanco repetido una o más veces.
+B. Cualquier dígito repetido una o más veces.
+C. Cualquier carácter alfanumérico (letras, números y guion bajo) repetido una o más veces.
+D. Cualquier carácter no alfanumérico repetido una o más veces.
+
+✅ Correcta: C
+🧾 Explicación: \w es una clase de carácter abreviada que representa letras (mayúsculas y minúsculas), dígitos (0-9) y el guion bajo (_). El cuantificador + significa "una o más ocurrencias".
+
+🧠 Pregunta 43
+¿Cuál es la función del cuantificador {n} en una expresión regular?
+
+A. Indica que el elemento precedente debe aparecer al menos n veces.
+B. Indica que el elemento precedente debe aparecer como máximo n veces.
+C. Indica que el elemento precedente debe aparecer exactamente n veces.
+D. Indica que el elemento precedente puede aparecer hasta n veces, de forma opcional.
+
+✅ Correcta: C
+🧾 Explicación: El cuantificador {n} especifica que el elemento que le precede debe ocurrir exactamente n veces para que haya una coincidencia.
+
+🧠 Pregunta 44
+¿En qué se diferencia un lookahead de un lookbehind en expresiones regulares?
+
+A. Un lookahead verifica lo que precede al patrón, mientras que un lookbehind verifica lo que le sigue.
+B. Un lookahead consume los caracteres coincidentes, mientras que un lookbehind no lo hace.
+C. Un lookahead verifica si un patrón está seguido (o no seguido) por otro patrón, mientras que un lookbehind verifica si un patrón está precedido (o no precedido) por otro patrón. Ninguno de los dos consume los caracteres verificados.
+D. No hay una diferencia funcional significativa entre ambos en el contexto de Behave.
+
+✅ Correcta: C
+🧾 Explicación: Tanto los lookahead como los lookbehind son aserciones de ancho cero, lo que significa que verifican la presencia (o ausencia) de un patrón en una posición dada sin incluir esos caracteres en la coincidencia real. La diferencia radica en la dirección de la verificación: hacia adelante (lookahead) o hacia atrás (lookbehind).
+
+🧠 Pregunta 45
+¿Cómo se podría utilizar una expresión regular con grupos de captura en un step de Behave para extraer un nombre de archivo y su extensión de una cadena como "documento.pdf"?
+
+A. @then(r'^el archivo es ([^.]+)\.([^.]+)$')
+B. @then(r'^el archivo es (.*)\.(.*)$')
+C. @then(r'^el archivo es (.+)\..+$')
+D. @then(r'^el archivo es (\w+)\.(\w+)$')
+
+✅ Correcta: A
+🧾 Explicación: Esta expresión utiliza dos grupos de captura (...). El primero ([^.]+) captura uno o más caracteres que no sean un punto (el nombre del archivo). Luego, \. coincide con el punto literal, y el segundo grupo ([^.]+) captura uno o más caracteres que no sean un punto (la extensión).
+
+🧠 Pregunta 46
+¿Por qué es importante considerar la precedencia de los operadores al construir expresiones regulares complejas para los steps de BDD?
+
+A. Para asegurar que la expresión regular sea lo más corta y eficiente posible.
+B. Para controlar el orden en que se aplican las diferentes partes de la expresión (como la concatenación, la disyunción y los cuantificadores) y asegurar que coincida con el patrón deseado.
+C. Para mejorar la legibilidad de la expresión regular para los desarrolladores que no están familiarizados con regex.
+D. Para optimizar el rendimiento de la ejecución de las pruebas en Behave.
+
+✅ Correcta: B
+🧾 Explicación: La precedencia de los operadores en regex determina el orden en que se evalúan las diferentes partes de la expresión. Comprender y tener en cuenta esta precedencia es crucial para construir expresiones que coincidan con el patrón esperado y evitar comportamientos inesperados.
+
+🧠 Pregunta 47
+¿Cuál es una buena práctica al nombrar las constantes que almacenan expresiones regulares comunes en un módulo de Python para BDD?
+
+A. Utilizar nombres cortos y genéricos para facilitar su reutilización.
+B. Incluir la propia expresión regular como parte del nombre de la constante.
+C. Utilizar nombres descriptivos que indiquen el tipo de patrón que la expresión regular valida (por ejemplo, EMAIL_PATTERN, DATE_ISO_PATTERN).
+D. Nombrar las constantes siguiendo la misma convención de nomenclatura que las variables locales dentro de las funciones de los steps.
+
+✅ Correcta: C
+🧾 Explicación: Utilizar nombres descriptivos para las constantes que almacenan expresiones regulares mejora la legibilidad del código y facilita la comprensión del propósito de cada patrón.
+
+🧠 Pregunta 48
+En un escenario de Gherkin que describe la creación de un producto con un SKU, ¿cómo se podría utilizar una expresión regular directamente en el título del escenario o en una condición Given?
+
+A. Gherkin interpreta directamente las expresiones regulares para validar los datos de los ejemplos.
+B. Se puede incluir una descripción del patrón esperado en el título o en un Given, que luego se implementa con una expresión regular en el step correspondiente.
+C. Las expresiones regulares solo se pueden utilizar dentro de las definiciones de los steps en Python.
+D. Se pueden usar comentarios especiales en el archivo .feature para documentar la expresión regular esperada.
+
+✅ Correcta: B
+🧾 Explicación: Aunque Gherkin no ejecuta expresiones regulares, es una práctica útil documentar el formato esperado de los datos directamente en el archivo .feature para proporcionar contexto y claridad sobre la validación que se realizará en el step correspondiente.
+
+🧠 Pregunta 49
+¿Cuál es un beneficio de escribir pruebas unitarias para las funciones de los steps que utilizan expresiones regulares?
+
+A. Permite verificar que las expresiones regulares definidas en los steps coinciden con los datos de ejemplo proporcionados en los archivos .feature.
+B. Permite probar la lógica de la función del step con diferentes entradas extraídas por la expresión regular, asegurando que la función se comporta correctamente.
+C. Asegura que la sintaxis de las expresiones regulares sea válida antes de ejecutar las pruebas de BDD completas.
+D. Todas las opciones anteriores son beneficios de escribir pruebas unitarias para los steps.
+
+✅ Correcta: B
+🧾 Explicación: Las pruebas unitarias para los steps se centran en la lógica de la función Python que implementa el step, probando cómo maneja los parámetros capturados por la expresión regular en diferentes escenarios. Si bien la validez de la regex se puede verificar con re.compile(), las pruebas unitarias aseguran que la lógica del step sea correcta.
+
+🧠 Pregunta 50
+¿Qué consideraciones importantes se deben tener en cuenta al decidir si una validación compleja debe realizarse directamente en una expresión regular dentro de un step o en la lógica de la función Python del step?
+
+A. La complejidad de la validación, la legibilidad de la expresión regular resultante y la necesidad de extraer y utilizar partes específicas de la entrada.
+B. El impacto en el rendimiento de la ejecución de las pruebas; las expresiones regulares complejas siempre son más lentas.
+C. La facilidad con la que se puede documentar la lógica de validación; la documentación en Python es siempre mejor que en una expresión regular.
+D. La compatibilidad de la expresión regular con diferentes motores de regex; es mejor mantenerlas simples y portátiles.
+
+✅ Correcta: A
+🧾 Explicación: Si la validación es muy compleja, una expresión regular puede volverse difícil de leer y mantener. En tales casos, puede ser mejor extraer partes de la entrada con grupos de captura y realizar la lógica de validación más compleja en el código Python del step, donde es más fácil de escribir, leer y probar.
+
+🧠 Pregunta 1
+¿Qué ventaja principal ofrece el uso de expresiones regulares en los steps de Behave?
+
+A. Elimina la necesidad de escribir código Python
+B. Permite adaptar el flujo de trabajo al estilo del equipo
+C. Facilita la captura de parámetros y validación de formatos complejos
+D. Reduce la necesidad de escribir historias de usuario
+
+✅ Correcta: C
+🧾 Explicación: Las regex permiten capturar parámetros dinámicos y validar formatos específicos (como fechas o correos) directamente en los steps.
+
+🧠 Pregunta 2
+¿Qué representa el patrón ([^"]+) en un step de Behave?
+
+A. Captura cualquier carácter incluyendo comillas dobles
+B. Captura secuencias que excluyen comillas dobles
+C. Valida un campo vacío
+D. Coincide con números decimales
+
+✅ Correcta: B
+🧾 Explicación: [^"] es una clase de caracteres negada que coincide con cualquier carácter excepto comillas dobles, y + captura una o más ocurrencias.
+
+🧠 Pregunta 3
+¿Para qué sirven los anclajes ^ y $ en una regex de Behave?
+
+A. Capturar múltiples grupos en un paso
+B. Validar que el patrón coincida exactamente con toda la línea
+C. Ignorar mayúsculas y minúsculas
+D. Permitir coincidencias parciales en el texto
+
+✅ Correcta: B
+🧾 Explicación: ^ (inicio) y $ (fin) aseguran que la regex coincida con la línea completa, evitando coincidencias no deseadas.
+
+🧠 Pregunta 4
+¿Qué permite el cuantificador {1,6} en el patrón \d{1,6}?
+
+A. Exactamente 6 dígitos
+B. Entre 1 y 6 dígitos consecutivos
+C. Mínimo 1 letra y máximo 6 números
+D. Cualquier carácter entre 1 y 6 veces
+
+✅ Correcta: B
+🧾 Explicación: Los cuantificadores de rango {n,m} definen el número mínimo y máximo de repeticiones del elemento anterior.
+
+🧠 Pregunta 5
+¿Qué efecto tiene (activo|inactivo) en una regex de Behave?
+
+A. Captura ambos estados como un solo parámetro
+B. Valida que el texto contenga ambas palabras
+C. Excluye las palabras "activo" e "inactivo"
+D. Genera un error de sintaxis
+
+✅ Correcta: A
+🧾 Explicación: La disyunción | permite capturar alternativas específicas, y los paréntesis agrupan las opciones para capturarlas como un parámetro.
+
+🧠 Pregunta 6
+¿Qué valida la clase de caracteres [A-Za-z0-9]?
+
+A. Solo letras mayúsculas
+B. Letras (mayúsculas/minúsculas) y dígitos
+C. Solo caracteres especiales
+D. Números hexadecimales
+
+✅ Correcta: B
+🧾 Explicación: Las clases de caracteres definen un conjunto de caracteres aceptados. A-Za-z0-9 incluye letras y números.
+
+🧠 Pregunta 7
+¿Qué representa r'^el mensaje termina con un punto \.$'?
+
+A. Un punto literal al final del mensaje
+B. Cualquier carácter especial
+C. Un parámetro opcional
+D. Un error de sintaxis por escape incorrecto
+
+✅ Correcta: A
+🧾 Explicación: \. escapa el punto para que coincida con el carácter literal en lugar de actuar como comodín.
+
+🧠 Pregunta 8
+¿Para qué se usa \b en la regex \bError\b?
+
+A. Coincidir con "Error" como palabra completa
+B. Capturar errores de sintaxis
+C. Validar un formato de código binario
+D. Ignorar mayúsculas/minúsculas
+
+✅ Correcta: A
+🧾 Explicación: \b marca un límite de palabra, asegurando que "Error" no sea parte de otra palabra (ej: "Error404").
+
+🧠 Pregunta 9
+¿Qué ventaja ofrece usar r'...' (raw strings) en Python para regex?
+
+A. Convertir automáticamente a mayúsculas
+B. Evitar el escape doble de barras invertidas
+C. Permitir interpolación de variables
+D. Validar patrones sin anclajes
+
+✅ Correcta: B
+🧾 Explicación: Las raw strings simplifican la escritura de regex al no requerir escapar barras invertidas (ej: \d en lugar de \\d).
+
+🧠 Pregunta 10
+¿Qué hace el lookahead positivo (?=\d) en la regex @when(r'^el módulo "([^"]+)"(?=\d)Version(\d+)$')?
+
+A. Captura el dígito de la versión como parte del nombre
+B. Asegura que el nombre del módulo termina con un dígito
+C. Valida que haya un dígito después del nombre, sin incluirlo en la captura
+D. Excluye módulos con números en el nombre
+
+✅ Correcta: C
+🧾 Explicación: El lookahead positivo (?=...) verifica que el patrón exista pero no lo consume para la captura.
+
+🧠 Pregunta 11
+¿Qué patrón valida un correo electrónico correctamente?
+
+A. r'^[\w\.-]+@[\w\.-]+.[a-z]{2,}$'
+B. r'^[a-zA-Z0-9]+@[a-zA-Z0-9]+$'
+C. r'^.*@.*$'
+D. r'^[\w]+@[\w]+$'
+
+✅ Correcta: A
+🧾 Explicación: Este patrón permite caracteres válidos (letras, números, puntos, guiones) en ambas partes del correo y un dominio de al menos 2 letras.
+
+🧠 Pregunta 12
+¿Qué representa \w en una regex?
+
+A. Cualquier carácter de espacio en blanco
+B. Un dígito numérico
+C. Un carácter alfanumérico o guión bajo
+D. Un carácter especial
+
+✅ Correcta: C
+🧾 Explicación: \w es equivalente a [A-Za-z0-9_], incluyendo letras, números y guiones bajos.
+
+🧠 Pregunta 13
+¿Qué valida r'^campo\s+valor\s*$'?
+
+A. "campo valor" con exactamente un espacio
+B. "campo" seguido de uno o más espacios y "valor" con espacios opcionales al final
+C. "campo-valor" sin espacios
+D. "campo valor" en cualquier orden
+
+✅ Correcta: B
+🧾 Explicación: \s+ coincide con uno o más espacios, y \s* con cero o más espacios al final.
+
+🧠 Pregunta 14
+¿Qué permite la regex r'^la clave tiene exactamente [A-Fa-f0-9]{8}$'?
+
+A. Claves de 8 caracteres hexadecimales
+B. Claves de 8 letras mayúsculas
+C. Claves con 8 dígitos decimales
+D. Claves de longitud variable
+
+✅ Correcta: A
+🧾 Explicación: [A-Fa-f0-9] acepta dígitos hexadecimales (0-9, A-F, a-f), y {8} exige exactamente 8 caracteres.
+
+🧠 Pregunta 15
+¿Qué representa r'^(?!TMP)[A-Z]{3}\d{4}$'?
+
+A. Códigos que empiezan con "TMP" seguido de 4 dígitos
+B. Códigos de 3 letras (excluyendo "TMP") y 4 dígitos
+C. Códigos que contienen "TMP" en cualquier posición
+D. Códigos con 3 dígitos y 4 letras
+
+✅ Correcta: B
+🧾 Explicación: El lookahead negativo (?!TMP) excluye códigos que empiezan con "TMP", seguido de 3 letras mayúsculas y 4 dígitos.
+
+🧠 Pregunta 16
+¿Qué se logra con @given(r'^el carro contiene \d+ artículo?s?$')?
+
+A. Capturar números decimales
+B. Manejar singular/plural en "artículo(s)"
+C. Validar un formato de fecha
+D. Excluir artículos del carro
+
+✅ Correcta: B
+🧾 Explicación: El ? hace opcional la "s", permitiendo tanto "artículo" como "artículos".
+
+🧠 Pregunta 17
+¿Qué práctica mejora la mantenibilidad de las regex en Behave?
+
+A. Evitar el uso de anclajes
+B. Centralizar patrones comunes en constantes
+C. Usar comentarios complejos dentro de las regex
+D. No validar ejemplos en Gherkin
+
+✅ Correcta: B
+🧾 Explicación: Definir patrones comunes (como EMAIL_PATTERN) en constantes reutilizables facilita actualizaciones y reduce duplicación.
+
+🧠 Pregunta 18
+¿Qué valida r'[^A-Za-z0-9\s]' en un paso?
+
+A. Presencia de caracteres no alfanuméricos ni espacios
+B. Ausencia de letras mayúsculas
+C. Solo números y espacios
+D. Textos en minúsculas
+
+✅ Correcta: A
+🧾 Explicación: La clase negada [^...] coincide con cualquier carácter fuera del conjunto especificado (no alfanuméricos ni espacios).
+
+🧠 Pregunta 19
+¿Qué representa r'^.{6,12}$' en una validación de contraseña?
+
+A. Exactamente 12 caracteres
+B. Entre 6 y 12 caracteres cualesquiera
+C. Solo letras y números
+D. Mínimo 6 dígitos
+
+✅ Correcta: B
+🧾 Explicación: . coincide con cualquier carácter (excepto saltos de línea), y {6,12} define la longitud permitida.
+
+🧠 Pregunta 20
+¿Por qué es importante anclar regex con ^ y $ en Behave?
+
+A. Para permitir coincidencias parciales en medio del texto
+B. Para garantizar que el paso completo coincida con el patrón
+C. Para ignorar mayúsculas/minúsculas
+D. Para capturar múltiples grupos opcionales
+
+✅ Correcta: B
+🧾 Explicación: Los anclajes aseguran que el patrón se aplique a toda la línea del step, evitando coincidencias no deseadas por texto adicional.

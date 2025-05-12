@@ -1,0 +1,551 @@
+🧠 Pregunta 1
+¿Cuál es una de las principales ventajas del uso de BDD en entornos ágiles?
+
+A. Reemplaza completamente las pruebas unitarias
+B. Permite escribir documentación en lenguaje de bajo nivel
+C. Convierte escenarios escritos en lenguaje natural en pruebas automatizadas
+D. Sustituye la necesidad de control de versiones
+
+✅ Correcta: C
+🧾 Explicación: El Desarrollo Guiado por el Comportamiento (BDD) convierte escenarios escritos en lenguaje natural (como Gherkin) en pruebas automatizadas que validan el comportamiento del sistema.
+
+🧠 Pregunta 2
+¿Qué permite lograr un pre-commit hook configurado con Behave?
+
+A. Automatizar el merge de ramas sin conflictos
+B. Bloquear cambios en ramas protegidas
+C. Ejecutar pruebas BDD y abortar el commit si fallan
+D. Ejecutar pruebas unitarias remotas antes de clonar
+
+✅ Correcta: C
+🧾 Explicación: Un pre-commit hook puede ejecutar la suite de pruebas de Behave y, si alguna falla, impide que se registre el commit.
+
+🧠 Pregunta 3
+¿Cuál es el objetivo de un commit-msg hook en el contexto de Git y BDD?
+
+A. Reducir el tamaño de los commits
+B. Validar que los commits estén firmados digitalmente
+C. Forzar un formato de mensaje que incluya identificadores de historias de usuario
+D. Automatizar la fusión de ramas en producción
+
+✅ Correcta: C
+🧾 Explicación: El commit-msg hook valida el mensaje del commit mediante expresiones regulares para garantizar que siga un formato estandarizado, como "US1234: descripción".
+
+🧠 Pregunta 4
+¿Cuál es una ventaja de los Git worktrees en un equipo de desarrollo ágil?
+
+A. Reemplazan los entornos de staging
+B. Permiten desarrollar múltiples funcionalidades en paralelo en directorios separados
+C. Obligan a trabajar siempre en la rama main
+D. Solo se usan con submódulos
+
+✅ Correcta: B
+🧾 Explicación: Los worktrees permiten tener distintas ramas en carpetas separadas, facilitando el trabajo paralelo sin conflictos y con pruebas independientes.
+
+🧠 Pregunta 5
+¿Cuál es el propósito del uso de expresiones regulares en pasos Gherkin?
+
+A. Validar mensajes de error del sistema
+B. Repetir pruebas fallidas automáticamente
+C. Capturar valores dinámicos dentro de los escenarios
+D. Generar automáticamente los pasos en código
+
+✅ Correcta: C
+🧾 Explicación: Las expresiones regulares permiten capturar dinámicamente valores como nombres de usuario, contraseñas o mensajes esperados desde los escenarios escritos en Gherkin.
+
+🧠 Pregunta 6
+¿Qué característica del Four Test Pattern permite detectar errores en la integración entre módulos?
+
+A. Pruebas del sistema
+B. Pruebas de aceptación
+C. Pruebas de integración
+D. Pruebas unitarias
+
+✅ Correcta: C
+🧾 Explicación: Las pruebas de integración validan cómo interactúan entre sí distintos módulos del sistema, detectando errores que no se ven en pruebas unitarias.
+
+🧠 Pregunta 7
+¿Cuál es el objetivo principal del uso de pipelines CI/CD integrados con BDD?
+
+A. Eliminar la necesidad de pruebas manuales
+B. Ejecutar automáticamente todas las pruebas, incluyendo las de aceptación
+C. Evitar la creación de nuevas ramas
+D. Automatizar la creación de escenarios Gherkin
+
+✅ Correcta: B
+🧾 Explicación: La integración con pipelines permite ejecutar automáticamente pruebas unitarias, de integración, del sistema y de aceptación (BDD) cada vez que se actualiza el repositorio.
+
+🧠 Pregunta 8
+¿Qué ventaja aporta el uso de Git alias como bddpush en un entorno de BDD?
+
+A. Permite clonar el repositorio automáticamente
+B. Crea commits sin necesidad de mensaje
+C. Encadena acciones como commit, ejecución de pruebas BDD y push
+D. Limpia el historial de Git
+
+✅ Correcta: C
+🧾 Explicación: Los alias como bddpush encapsulan múltiples comandos en uno solo, garantizando que se ejecuten pruebas y se realice push solo si estas pasan.
+
+🧠 Pregunta 9
+¿Para qué se usa git filter-branch en un repositorio Git?
+
+A. Para eliminar ramas protegidas
+B. Para cambiar autores de commits en remoto
+C. Para reescribir el historial, eliminar datos o estandarizar mensajes
+D. Para sincronizar ramas automáticamente
+
+✅ Correcta: C
+🧾 Explicación: git filter-branch permite recorrer y modificar todos los commits del historial, por ejemplo, para corregir mensajes o eliminar información sensible.
+
+🧠 Pregunta 10
+¿Qué validación garantiza el hook commit-msg mostrado en la lectura?
+
+A. Que el commit sea enviado a producción
+B. Que el mensaje del commit esté firmado con GPG
+C. Que el mensaje comience con un identificador como “US1234:”
+D. Que el commit no contenga errores ortográficos
+
+✅ Correcta: C
+🧾 Explicación: El hook commit-msg utiliza una expresión regular para asegurar que los mensajes sigan el patrón de historias de usuario, asegurando trazabilidad con BDD.
+
+🧠 Pregunta 11
+¿Qué permite garantizar el uso de Gherkin en escenarios de BDD?
+
+A. Que solo los testers puedan escribir los escenarios
+B. Que los escenarios se redacten en inglés técnico
+C. Que los escenarios sean comprensibles y ejecutables por todas las partes
+D. Que el sistema se ejecute más rápido
+
+✅ Correcta: C
+🧾 Explicación: Gherkin permite redactar escenarios en lenguaje natural compartido, comprensible tanto para desarrolladores como para stakeholders.
+
+🧠 Pregunta 12
+¿Qué problema resuelve la automatización de pruebas con hooks como pre-push?
+
+A. Validar conflictos de merge
+B. Asegurar que no se suban cambios que rompan criterios de aceptación
+C. Comprimir el repositorio antes del push
+D. Cambiar automáticamente la rama remota
+
+✅ Correcta: B
+🧾 Explicación: El hook pre-push ejecuta pruebas (como las de Behave) antes de enviar cambios al repositorio remoto, evitando rupturas de comportamiento.
+
+🧠 Pregunta 13
+¿Qué herramienta moderna permite limpiar el historial de Git de forma más rápida que git filter-branch?
+
+A. git prune
+B. git stash
+C. BFG Repo-Cleaner
+D. git fsck
+
+✅ Correcta: C
+🧾 Explicación: El BFG Repo-Cleaner permite limpiar el historial de manera más eficiente y es especialmente útil para eliminar archivos grandes o sensibles.
+
+🧠 Pregunta 14
+¿Qué elemento del pipeline de GitHub Actions se asegura de que las pruebas de BDD se ejecuten después de la construcción?
+
+A. El uso de behave
+B. La definición del paso checkout
+C. La dependencia needs: build
+D. El comando pip install
+
+✅ Correcta: C
+🧾 Explicación: needs: build establece que el job de pruebas BDD depende del éxito del job build, asegurando la secuencia correcta.
+
+🧠 Pregunta 15
+¿Cuál es el beneficio principal de estandarizar los mensajes de commit?
+
+A. Reducir la longitud de cada commit
+B. Ocultar los cambios al equipo de QA
+C. Facilitar la trazabilidad con historias de usuario
+D. Eliminar la necesidad de documentación
+
+✅ Correcta: C
+🧾 Explicación: Al estandarizar los mensajes, se puede asociar cada commit con una historia de usuario o escenario BDD, mejorando la trazabilidad.
+
+🧠 Pregunta 16
+¿Para qué sirve el patrón ^US[0-9]{4}: en un hook?
+
+A. Para identificar archivos de configuración
+B. Para validar el formato del mensaje de commit
+C. Para limitar el uso de comandos de Git
+D. Para detectar conflictos en merges
+
+✅ Correcta: B
+🧾 Explicación: Es una expresión regular que valida que el mensaje del commit inicie con el identificador de historia de usuario (ej. US1234:).
+
+🧠 Pregunta 17
+¿Qué ventaja ofrece la automatización del entorno de desarrollo con scripts?
+
+A. Aumentar el tamaño del repositorio
+B. Limitar el acceso a los hooks
+C. Estandarizar configuraciones en todos los equipos
+D. Reducir el número de ramas en el proyecto
+
+✅ Correcta: C
+🧾 Explicación: Los scripts aseguran que todos los desarrolladores tengan configuraciones homogéneas (hooks, alias, entorno), evitando inconsistencias.
+
+🧠 Pregunta 18
+¿Qué tipo de pruebas están más directamente relacionadas con los escenarios de Gherkin?
+
+A. Pruebas unitarias
+B. Pruebas de integración
+C. Pruebas de aceptación
+D. Pruebas de rendimiento
+
+✅ Correcta: C
+🧾 Explicación: Las pruebas de aceptación derivan directamente de los escenarios de BDD escritos en Gherkin y validan el comportamiento del sistema frente a los requisitos.
+
+🧠 Pregunta 19
+¿Cuál es una práctica recomendada al usar Git avanzado en proyectos con BDD?
+
+A. Evitar el uso de hooks para mantener el control manual
+B. Crear ramas sin nombre
+C. Asociar commits a historias de usuario mediante formato de mensaje
+D. Hacer push sin pruebas previas
+
+✅ Correcta: C
+🧾 Explicación: Relacionar commits con historias de usuario permite conectar los cambios de código con sus escenarios de BDD correspondientes.
+
+🧠 Pregunta 20
+¿Para qué se utiliza git worktree add ../feature-US1234 US1234-feature-branch?
+
+A. Eliminar una rama
+B. Clonar el repositorio
+C. Crear una copia paralela de la rama en un directorio separado
+D. Renombrar una historia de usuario
+
+✅ Correcta: C
+🧾 Explicación: Este comando crea un nuevo directorio donde se trabaja una rama específica en paralelo, ideal para desarrollar funcionalidades aisladas.
+
+🧠 Pregunta 21
+¿Por qué es útil tener un alias como bddpush en Git?
+
+A. Reduce el número de commits
+B. Automatiza acciones repetitivas como pruebas y push
+C. Elimina pruebas del flujo de trabajo
+D. Borra el historial local
+
+✅ Correcta: B
+🧾 Explicación: Un alias como bddpush permite ejecutar en una sola línea: commit, ejecución de pruebas y push si todo pasa correctamente.
+
+🧠 Pregunta 22
+¿Qué nivel del Four Test Pattern asegura que el sistema completo funcione como un todo?
+
+A. Pruebas unitarias
+B. Pruebas de integración
+C. Pruebas del sistema
+D. Pruebas de aceptación
+
+✅ Correcta: C
+🧾 Explicación: Las pruebas del sistema validan el comportamiento global del software en un entorno que simula condiciones reales.
+
+🧠 Pregunta 23
+¿Cuál es la función del job bdd_tests en un workflow de GitHub Actions?
+
+A. Hacer rollback de cambios
+B. Publicar artefactos de producción
+C. Ejecutar pruebas de aceptación con Behave
+D. Documentar el código automáticamente
+
+✅ Correcta: C
+🧾 Explicación: bdd_tests contiene los pasos necesarios para ejecutar los escenarios BDD definidos con Behave.
+
+🧠 Pregunta 24
+¿Qué asegura la ejecución de hooks pre-commit y pre-push?
+
+A. Evitan que se creen ramas temporales
+B. Ejecutan pruebas automatizadas antes de registrar o subir cambios
+C. Eligen automáticamente la mejor rama para trabajar
+D. Aumentan la velocidad del sistema
+
+✅ Correcta: B
+🧾 Explicación: Estos hooks permiten validar cambios de forma anticipada, ejecutando pruebas locales antes de que el código entre al repositorio.
+
+🧠 Pregunta 25
+¿Qué se logra al usar expresiones regulares en pasos de Behave?
+
+A. Evitar que los pasos fallen
+B. Capturar variables dentro de los escenarios
+C. Traducir escenarios a inglés
+D. Generar commits automáticos
+
+✅ Correcta: B
+🧾 Explicación: Las expresiones regulares permiten parametrizar los pasos, reutilizarlos y extraer valores como nombres o contraseñas desde Gherkin.
+
+🧠 Pregunta 26
+¿Cuál es el efecto de behave --no-capture --no-capture-stderr?
+
+A. Silenciar los resultados de las pruebas
+B. Mostrar toda la salida de consola de las pruebas BDD
+C. Evitar la ejecución de escenarios
+D. Capturar errores en el hook pre-push
+
+✅ Correcta: B
+🧾 Explicación: Esta configuración muestra en consola toda la salida de behave, útil para depurar fallos en las pruebas.
+
+🧠 Pregunta 27
+¿Qué nivel del Four Test Pattern se asegura de validar requisitos del usuario final?
+
+A. Pruebas unitarias
+B. Pruebas del sistema
+C. Pruebas de aceptación
+D. Pruebas de integración
+
+✅ Correcta: C
+🧾 Explicación: Las pruebas de aceptación validan que el software cumpla con los criterios definidos por el usuario en las historias.
+
+🧠 Pregunta 28
+¿Qué asegura el mantenimiento regular del historial de commits con herramientas como filter-branch o BFG?
+
+A. Aumentar el tamaño del repositorio
+B. Eliminar ramas principales
+C. Mantener un historial limpio, rastreable y sin datos sensibles
+D. Combinar automáticamente todos los commits
+
+✅ Correcta: C
+🧾 Explicación: Estas herramientas permiten limpiar o reescribir el historial para mantener orden, cumplir normas o eliminar errores.
+
+🧠 Pregunta 29
+¿Por qué es importante validar los mensajes de commit con un hook?
+
+A. Para reducir el tamaño del repositorio
+B. Para detectar bugs
+C. Para mantener la trazabilidad con requisitos
+D. Para permitir push en ramas protegidas
+
+✅ Correcta: C
+🧾 Explicación: Validar los mensajes asegura que cada commit esté vinculado a una historia de usuario, facilitando la auditoría y el seguimiento.
+
+🧠 Pregunta 30
+¿Qué ocurre si se ejecuta un hook pre-commit y las pruebas BDD fallan?
+
+A. Se omite el error y se realiza el commit
+B. Se borra el archivo modificado
+C. Se cancela el commit y se muestra un mensaje
+D. Se reinicia el sistema
+
+✅ Correcta: C
+🧾 Explicación: El hook detiene el proceso de commit y notifica que las pruebas fallaron, evitando introducir errores en el repositorio.
+
+
+🧠 Pregunta 31
+¿Cuál es una característica clave de las metodologías ágiles que favorece la integración de BDD?
+
+A. Ciclos de entrega anuales
+B. Feedback continuo e iteraciones rápidas
+C. Aislamiento total de roles en el equipo
+D. Rechazo de pruebas automatizadas
+
+✅ Correcta: B
+🧾 Explicación: Las metodologías ágiles promueven el feedback constante y ciclos cortos, condiciones ideales para implementar BDD de forma efectiva.
+
+🧠 Pregunta 32
+¿Qué ventaja ofrece Git al permitir múltiples flujos de trabajo como Git Flow o GitHub Flow?
+
+A. Facilita el uso sin ramas
+B. Impide que dos usuarios trabajen en paralelo
+C. Permite adaptar el flujo de trabajo al estilo del equipo
+D. Requiere siempre trabajar en la rama main
+
+✅ Correcta: C
+🧾 Explicación: Git es flexible y permite aplicar diferentes flujos de trabajo según el tamaño y estilo del equipo, como ramas cortas o estructuras formales.
+
+🧠 Pregunta 33
+¿Qué funcionalidad de Git asegura que los hooks como pre-commit funcionen correctamente?
+
+A. Que estén en formato .md
+B. Que tengan permisos de ejecución
+C. Que estén en la raíz del proyecto
+D. Que incluyan un README
+
+✅ Correcta: B
+🧾 Explicación: Para que un hook funcione, debe tener permisos de ejecución, de lo contrario, Git lo ignorará.
+
+🧠 Pregunta 34
+¿Cuál es el propósito de un archivo .git/hooks/commit-msg?
+
+A. Evitar que se haga push a una rama
+B. Validar el formato del mensaje antes de confirmar el commit
+C. Evitar la creación de nuevos commits
+D. Borrar ramas antiguas automáticamente
+
+✅ Correcta: B
+🧾 Explicación: El hook commit-msg se usa para validar la estructura del mensaje de commit antes de que sea guardado.
+
+🧠 Pregunta 35
+¿Cuál es una buena práctica para relacionar escenarios de BDD con el historial de Git?
+
+A. Crear ramas con nombres aleatorios
+B. Incluir el nombre del tester en el mensaje
+C. Usar identificadores como US1234: al inicio de los commits
+D. Hacer commits directamente en producción
+
+✅ Correcta: C
+🧾 Explicación: Incluir el identificador de la historia de usuario permite vincular el cambio con el escenario de BDD correspondiente.
+
+🧠 Pregunta 36
+¿Qué nivel del Four Test Pattern puede detectar errores en el sistema completo bajo condiciones reales?
+
+A. Unit Testing
+B. System Testing
+C. Acceptance Testing
+D. Integration Testing
+
+✅ Correcta: B
+🧾 Explicación: Las pruebas del sistema verifican que todos los componentes funcionen juntos bajo condiciones similares al entorno real.
+
+🧠 Pregunta 37
+¿Cuál es el principal beneficio de integrar Behave en pipelines CI/CD?
+
+A. Eliminar el historial de Git
+B. Validar automáticamente los criterios de aceptación
+C. Generar documentación en PDF
+D. Reducir el uso de ramas
+
+✅ Correcta: B
+🧾 Explicación: Behave permite automatizar la validación de los criterios de aceptación definidos en Gherkin cada vez que se integra código nuevo.
+
+🧠 Pregunta 38
+¿Qué permite hacer git config --global alias.bddpush?
+
+A. Instalar una extensión de Git
+B. Configurar Git para que ignore archivos temporales
+C. Definir un alias que automatiza commit, pruebas y push
+D. Ejecutar pruebas BDD en remoto
+
+✅ Correcta: C
+🧾 Explicación: Este alias simplifica y encadena tareas comunes como hacer commit, ejecutar pruebas y hacer push.
+
+🧠 Pregunta 39
+¿Qué expresión regular valida correctamente un mensaje que comience con un identificador de historia?
+
+A. [0-9]{4}
+B. ^US\d{4}:
+C. commit-123:
+D. :US1234
+
+✅ Correcta: B
+🧾 Explicación: ^US\d{4}: valida que un mensaje empiece con “US” seguido de cuatro dígitos y dos puntos, tal como se especifica en la lectura.
+
+🧠 Pregunta 40
+¿Qué permite lograr un hook pre-commit mal configurado?
+
+A. Acelera el flujo de desarrollo
+B. Se ejecuta dos veces por cada commit
+C. Puede fallar en validar correctamente el código
+D. Borra automáticamente el staging area
+
+✅ Correcta: C
+🧾 Explicación: Si el hook está mal configurado, las pruebas pueden no ejecutarse correctamente y fallar en detectar errores antes del commit.
+
+🧠 Pregunta 41
+¿Qué comando se usa para limpiar archivos como .log del historial?
+
+A. git clean -fd
+B. git reset --hard
+C. java -jar bfg.jar --delete-files *.log
+D. git log --grep
+
+✅ Correcta: C
+🧾 Explicación: El BFG Repo-Cleaner permite eliminar de forma masiva archivos específicos del historial del repositorio.
+
+🧠 Pregunta 42
+¿Qué etapa se ejecuta primero en un pipeline CI/CD bien estructurado?
+
+A. Acceptance tests
+B. System tests
+C. Build
+D. Unit tests
+
+✅ Correcta: C
+🧾 Explicación: Primero se prepara el entorno con la etapa de build, y luego se ejecutan pruebas unitarias, de integración, etc.
+
+🧠 Pregunta 43
+¿Cuál es el objetivo principal de un script de configuración en entornos BDD?
+
+A. Ejecutar GitLab Runner
+B. Personalizar el historial local
+C. Automatizar la instalación de hooks y alias
+D. Actualizar automáticamente las ramas
+
+✅ Correcta: C
+🧾 Explicación: Los scripts de configuración permiten aplicar configuraciones estándar, como alias y hooks, en todos los entornos de desarrollo.
+
+🧠 Pregunta 44
+¿Qué representa behave dentro del ecosistema BDD?
+
+A. Un framework de desarrollo ágil
+B. Un sistema de control de versiones
+C. Una herramienta para ejecutar escenarios de BDD
+D. Una librería de Gherkin para GitHub
+
+✅ Correcta: C
+🧾 Explicación: behave es una herramienta para Python que ejecuta escenarios de BDD escritos en Gherkin.
+
+🧠 Pregunta 45
+¿Qué significa que Gherkin sea “lenguaje ubicuo”?
+
+A. Que es difícil de traducir
+B. Que solo lo usan desarrolladores
+C. Que es comprensible por todas las partes involucradas
+D. Que se ejecuta directamente en producción
+
+✅ Correcta: C
+🧾 Explicación: Gherkin utiliza un lenguaje común que facilita la comunicación entre desarrolladores, testers y stakeholders.
+
+🧠 Pregunta 46
+¿Qué prueba del Four Test Pattern se basa directamente en escenarios escritos por usuarios?
+
+A. Prueba del sistema
+B. Prueba de integración
+C. Prueba unitaria
+D. Prueba de aceptación
+
+✅ Correcta: D
+🧾 Explicación: Las pruebas de aceptación validan que el comportamiento del sistema coincida con las expectativas del usuario final.
+
+🧠 Pregunta 47
+¿Cuál es una función crítica de git filter-branch?
+
+A. Fusionar ramas automáticamente
+B. Eliminar archivos temporales del sistema
+C. Reescribir mensajes de commit en todo el historial
+D. Aplicar stash de forma masiva
+
+✅ Correcta: C
+🧾 Explicación: git filter-branch permite recorrer el historial y reescribir mensajes, autores o eliminar contenido.
+
+🧠 Pregunta 48
+¿Qué permite detectar más rápidamente la ejecución de pruebas tras cada push?
+
+A. Hooks locales
+B. Worktrees
+C. Pipelines CI/CD
+D. Git rebase
+
+✅ Correcta: C
+🧾 Explicación: Los pipelines CI/CD automatizan la validación de cambios cada vez que se hace un push, detectando errores de inmediato.
+
+🧠 Pregunta 49
+¿Cuál es una ventaja clave de usar git worktree en proyectos con BDD?
+
+A. Ejecutar pruebas solo desde una rama
+B. Permitir trabajar con múltiples ramas en paralelo sin conflicto
+C. Crear automáticamente scripts de configuración
+D. Hacer staging en remoto
+
+✅ Correcta: B
+🧾 Explicación: git worktree permite mantener entornos aislados por funcionalidad, ideal para ejecutar pruebas independientes por historia.
+
+🧠 Pregunta 50
+¿Qué rol cumplen las pruebas unitarias en el patrón de los Cuatro Tipos de Prueba?
+
+A. Validar que el sistema completo funcione
+B. Probar módulos individuales de forma aislada
+C. Garantizar la seguridad de la red
+D. Asegurar la conexión con el repositorio
+
+✅ Correcta: B
+🧾 Explicación: Las pruebas unitarias se centran en validar funciones o métodos de manera independiente para detectar errores internos.
+

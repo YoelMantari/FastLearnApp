@@ -1,0 +1,87 @@
+🧠 Pregunta 1
+¿Qué función cumple el hook pre-commit en Git cuando se usa con regex para validar archivos?
+
+A. Verifica que los mensajes de commit sigan un formato específico
+B. Filtra archivos no permitidos (ej. extensiones no válidas) antes del commit
+C. Detecta conflictos de merge automáticamente
+D. Ejecuta pruebas unitarias en paralelo
+
+✅ Correcta: B
+🧾 Explicación: El hook pre-commit valida los archivos en staging (ej. con regex como \.(py|js)$) y rechaza el commit si no cumplen las reglas definidas.
+
+🧠 Pregunta 2
+En el patrón ^(feat|fix|docs)\([a-z0-9\-]+\)?:, ¿qué representa el símbolo \(?
+
+A. Un grupo opcional de caracteres
+B. Un paréntesis literal escapado para el "scope"
+C. Una disyunción entre tipos de commit
+D. El inicio de un comentario
+
+✅ Correcta: B
+🧾 Explicación: La barra inversa (\) escapa el paréntesis, permitiendo que se interprete como carácter literal en el "scope" (ej. fix(ui):).
+
+🧠 Pregunta 3
+¿Qué principio FIRST se viola si una prueba con regex tarda 10 segundos en ejecutarse?
+
+A. Isolated
+B. Fast
+C. Repeatable
+D. Self-validating
+
+✅ Correcta: B
+🧾 Explicación: El principio Fast exige que las pruebas sean rápidas para facilitar iteraciones frecuentes. Regex complejas con backtracking pueden ralentizarlas.
+
+🧠 Pregunta 4
+En el ciclo RGR (Red-Green-Refactor), la fase "Red" implica:
+
+A. Escribir una regex que pase todos los tests existentes
+B. Crear un test que falle por no implementar el requisito
+C. Optimizar la regex sin modificar su funcionalidad
+D. Documentar la expresión regular en un reporte
+
+✅ Correcta: B
+🧾 Explicación: En "Red" se escribe un test que falle (ej. validar un nuevo formato de email), para luego implementar la regex en "Green".
+
+🧠 Pregunta 5
+¿Qué ventaja tiene usar re.VERBOSE en regex de Python?
+
+A. Permite anclajes más flexibles
+B. Mejora el rendimiento de la expresión
+C. Facilita la legibilidad con comentarios y espacios
+D. Hace opcionales todos los grupos de captura
+
+✅ Correcta: C
+🧾 Explicación: re.VERBOSE ignora espacios y permite comentarios, haciendo patrones complejos más legibles (ej. separar partes de un email).
+
+🧠 Pregunta 6
+En GitHub Actions, ¿qué patrón filtraría tags como v1.2.3?
+
+A. 'v[0-9].[0-9].[0-9]'
+B. 'v[0-9]+.[0-9]+.[0-9]+'
+C. '^v\d{1,2}\.\d{1,2}\.\d{1,2}$'
+D. 'v*.*.*'
+
+✅ Correcta: B
+🧾 Explicación: [0-9]+ captura uno o más dígitos, permitiendo versiones como v1.22.3. Las otras opciones son demasiado restrictivas o inexactas.
+
+🧠 Pregunta 7
+¿Qué aseveración es cierta sobre el lookahead (?=.*[A-Z]) en regex?
+
+A. Consume caracteres hasta encontrar una mayúscula
+B. Verifica que haya al menos una mayúscula sin consumir texto
+C. Busca mayúsculas solo al inicio de la cadena
+D. Es equivalente a [A-Z] sin anclajes
+
+✅ Correcta: B
+🧾 Explicación: Los lookaheads (?=) verifican condiciones sin consumir texto. Este en particular asegura que exista una mayúscula en cualquier posición.
+
+🧠 Pregunta 8
+En el patrón \b(?:cat|dog)s?\b, ¿qué indica (?: ... )?
+
+A. Un grupo de captura obligatorio
+B. Un grupo no capturado (solo agrupación)
+C. Una condición opcional
+D. Un comentario interno
+
+✅ Correcta: B
+🧾 Explicación: (?: ... ) agrupa opciones (cat|dog) sin capturar el match, mejorando eficiencia y evitando grupos innecesarios.

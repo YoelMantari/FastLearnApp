@@ -1,0 +1,549 @@
+🧠 Pregunta 1
+¿Qué rol cumplen las expresiones regulares dentro de los Git hooks?
+
+A. Modifican el historial de commits.
+B. Definen la estructura del repositorio.
+C. Garantizan la calidad y consistencia mediante validaciones.
+D. Automatizan la creación de ramas.
+
+✅ Correcta: C
+🧾 Explicación: Las regex en Git hooks permiten validar aspectos como el formato de los mensajes de commit o los tipos de archivos incluidos, asegurando la consistencia del repositorio.
+
+🧠 Pregunta 2
+En un hook pre-commit, ¿qué propósito tiene la siguiente expresión regular: \.(py|js|ts|java)$?
+
+A. Busca archivos con esas extensiones para eliminarlos del commit.
+B. Asegura que solo se incluyan archivos con las extensiones especificadas.
+C. Renombra los archivos con esas extensiones antes del commit.
+D. Comprime los archivos con esas extensiones para optimizar el repositorio.
+
+✅ Correcta: B
+🧾 Explicación: La regex verifica que la ruta del archivo termine ($) con alguna de las extensiones listadas (.py, .js, .ts, .java).
+
+🧠 Pregunta 3
+¿Qué parte de la siguiente expresión regular en commit-msg es opcional: ^(feat|fix|docs|style|refactor|perf|test|chore)(\([a-z0-9\-]+\))?:(\s).{1,72}$?
+
+A. El tipo de commit (feat|fix|...).
+B. Los dos puntos y el espacio que siguen al tipo y scope.
+C. El scope encerrado entre paréntesis (\([a-z0-9\-]+\))?.
+D. La descripción del commit .{1,72}.
+
+✅ Correcta: C
+🧾 Explicación: El signo de interrogación ? al final del grupo (\([a-z0-9\-]+\)) indica que este grupo (el scope) puede o no estar presente en el mensaje de commit.
+
+🧠 Pregunta 4
+En el contexto del hook post-merge, ¿qué se busca con la expresión regular '^(.*):[0-9]+: trailing whitespace'?
+
+A. Líneas que contengan más de un espacio en blanco.
+B. Líneas que finalicen con espacios en blanco.
+C. Líneas que comiencen con espacios en blanco.
+D. La presencia de cualquier tipo de espacio en blanco en las líneas modificadas.
+
+✅ Correcta: B
+🧾 Explicación: El patrón busca líneas que, según la salida de git diff --check, contengan la indicación "trailing whitespace" al final de la línea.
+
+🧠 Pregunta 5
+Dentro del script de generación de reportes, ¿qué función cumple grep -Po 'Duration: \K[0-9]+\.[0-9]+s'?
+
+A. Busca la línea que contiene la palabra "Duration" y la imprime completa.
+B. Extrae únicamente el valor numérico de la duración, excluyendo "Duration: " y "s".
+C. Cuenta el número de líneas que contienen la palabra "Duration".
+D. Reemplaza la palabra "Duration" por "Tiempo total".
+
+✅ Correcta: B
+🧾 Explicación: -Po habilita la coincidencia solo de la parte del patrón que sigue a \K, en este caso, el número con decimales representando la duración.
+
+🧠 Pregunta 6
+En la configuración de GitHub Actions, ¿para qué se utiliza la siguiente expresión regular dentro de on.tags: 'v[0-9]+.[0-9]+.[0-9]+'?
+
+A. Para nombrar automáticamente las etiquetas de las versiones.
+B. Para disparar el workflow solo cuando se crea una etiqueta con formato de versionado semántico (vX.Y.Z).
+C. Para validar que las etiquetas existentes sigan ese formato.
+D. Para eliminar las etiquetas que no coincidan con ese formato.
+
+✅ Correcta: B
+🧾 Explicación: La regex define un patrón que deben seguir los nombres de las etiquetas para que el workflow se ejecute en eventos de push de esas etiquetas.
+
+🧠 Pregunta 7
+Dentro de la condición if en un paso de GitHub Actions, ¿qué extrae la siguiente expresión regular: 'RELEASE\-\K[0-9]{4}' del mensaje de commit?
+
+A. La palabra completa "RELEASE".
+B. Los cuatro dígitos que siguen a "RELEASE-".
+C. Cualquier número de cuatro dígitos dentro del mensaje.
+D. La línea completa que contiene "RELEASE-".
+
+✅ Correcta: B
+🧾 Explicación: \K hace que grep -Po omita la parte coincidente anterior ("RELEASE-") y solo capture los cuatro dígitos siguientes.
+
+🧠 Pregunta 8
+En el patrón Arrange-Act-Assert (AAA), ¿cuál es el propósito de la fase "Act"?
+
+A. Preparar los datos y el contexto necesarios para la prueba.
+B. Verificar que el resultado de la acción sea el esperado.
+C. Ejecutar la acción o la función que se está probando.
+D. Limpiar cualquier estado modificado durante la prueba.
+
+✅ Correcta: C
+🧾 Explicación: La fase "Act" se centra en la ejecución del código que se está probando, que en este contexto podría ser la aplicación de una expresión regular.
+
+🧠 Pregunta 9
+En el ejemplo de prueba con pytest, ¿qué valida la expresión regular ^[\w\.-]+@[\w\.-]+\.(com|net|org|co)$?
+
+A. Que una cadena contenga al menos una letra, un número y un símbolo.
+B. Que una cadena tenga un formato de correo electrónico válido con ciertos dominios de nivel superior.
+C. Que una cadena contenga la arroba (@) y un punto (.).
+D. Que una cadena no contenga caracteres especiales.
+
+✅ Correcta: B
+🧾 Explicación: La regex define un patrón para verificar la estructura básica de una dirección de correo electrónico con restricciones en los dominios finales.
+
+🧠 Pregunta 10
+¿Qué beneficio aporta la bandera re.VERBOSE al definir expresiones regulares en Python?
+
+A. Mejora el rendimiento de la búsqueda de coincidencias.
+B. Permite incluir espacios en blanco y comentarios dentro del patrón para mejorar la legibilidad.
+C. Hace que la coincidencia de patrones no distinga entre mayúsculas y minúsculas.
+D. Permite que el patrón coincida en múltiples líneas.
+
+✅ Correcta: B
+🧾 Explicación: re.VERBOSE ignora los espacios en blanco y los comentarios (precedidos por #) dentro de la cadena del patrón, facilitando su documentación y comprensión.
+
+🧠 Pregunta 11
+Según el principio FIRST en pruebas, ¿qué significa que una prueba debe ser "Fast"?
+
+A. Que la prueba debe escribirse rápidamente.
+B. Que la prueba debe ejecutarse en un tiempo mínimo.
+C. Que la prueba debe fallar rápidamente si la condición no se cumple.
+D. Que la prueba debe cubrir la mayor cantidad de código posible en el menor tiempo.
+
+✅ Correcta: B
+🧾 Explicación: Una prueba "Fast" se ejecuta rápidamente para no ralentizar el ciclo de desarrollo y permitir una retroalimentación ágil.
+
+🧠 Pregunta 12
+En el ciclo RGR (Red-Green-Refactor), ¿cuál es el objetivo del paso "Green"?
+
+A. Escribir una prueba que inicialmente falle.
+B. Mejorar la estructura o legibilidad del código sin cambiar su comportamiento.
+C. Modificar el código de la manera más sencilla posible para que la prueba falle.
+D. Modificar el código de la manera más sencilla posible para que la prueba pase.
+
+✅ Correcta: D
+🧾 Explicación: El objetivo de la fase "Green" es implementar la funcionalidad necesaria para que la prueba previamente fallida en la fase "Red" ahora pase.
+
+🧠 Pregunta 13
+En el primer ciclo RGR del ejemplo ("cat" o "dog"), ¿por qué la primera versión del patrón r'cat|dog' no era suficiente en la fase "Green"?
+
+A. Porque no coincidía con las palabras completas "cat" o "dog".
+B. Porque también coincidía con la palabra "cow".
+C. Porque no permitía plurales como "cats" o "dogs".
+D. Porque no distinguía entre mayúsculas y minúsculas.
+
+✅ Correcta: B
+🧾 Explicación: Aunque coincidía con "cat" y "dog", también coincidiría con "cow" si estuviera dentro de una cadena más larga, por lo que no cumplía con la restricción implícita de ser solo "cat" o "dog".
+
+🧠 Pregunta 14
+¿Qué problema se intentó resolver en el tercer ciclo RGR al cambiar .match() por .fullmatch() en las pruebas?
+
+A. Asegurar que la coincidencia no distinguiera entre mayúsculas y minúsculas.
+B. Asegurar que el patrón coincidiera con la cadena completa y no solo con una parte de ella.
+C. Mejorar el rendimiento de la búsqueda de coincidencias.
+D. Permitir la búsqueda del patrón dentro de cadenas más largas.
+
+✅ Correcta: B
+🧾 Explicación: .fullmatch() requiere que toda la cadena coincida con el patrón, a diferencia de .match() que solo requiere una coincidencia al inicio.
+
+🧠 Pregunta 15
+¿Qué representa el metacaracter \b en la expresión regular r'\b(?:cat|dog)s?\b' utilizada en el cuarto ciclo RGR?
+
+A. Un espacio en blanco.
+B. El inicio o el final de una palabra.
+C. Cualquier carácter alfanumérico.
+D. Una nueva línea.
+
+✅ Correcta: B
+🧾 Explicación: \b es una "ancla de límite de palabra" que asegura que el patrón coincida solo con las palabras completas "cat" o "dog" (y sus plurales), evitando coincidencias dentro de otras palabras.
+
+🧠 Pregunta 16
+En el quinto ciclo RGR, ¿cuál fue la principal razón para considerar reemplazar la expresión regular con un conjunto (set) para la validación de animales?
+
+A. Para simplificar la sintaxis del patrón.
+B. Para mejorar el rendimiento en validaciones masivas.
+C. Para permitir la coincidencia con variaciones idiomáticas más fácilmente.
+D. Para integrar la validación directamente en la lógica de la interfaz de usuario.
+
+✅ Correcta: B
+🧾 Explicación: La búsqueda en un conjunto (con la conversión a minúsculas) tiene una complejidad temporal promedio de O(1), lo que es más eficiente para grandes volúmenes de validaciones en comparación con la búsqueda de patrones en una regex compleja.
+
+🧠 Pregunta 17
+¿Cuál de los siguientes es un caso de uso típico de las expresiones regulares en el desarrollo de software, según el texto?
+
+A. Definir la estructura de bases de datos relacionales.
+B. Validar el formato de archivos de configuración YAML.
+C. Extraer información específica de archivos de log.
+D. Generar documentación automática a partir del código fuente.
+
+✅ Correcta: C
+🧾 Explicación: El texto menciona explícitamente la extracción de datos de logs con timestamps y niveles como un caso de uso común de regex.
+
+🧠 Pregunta 18
+¿Qué función cumplen los "lookahead" positivos como (?=.*[A-Z]) en una expresión regular para validar contraseñas?
+
+A. Aseguran que la cadena coincida completamente con el patrón principal.
+B. Verifican la presencia de un patrón específico en la cadena sin consumir esos caracteres.
+C. Definen grupos de captura para extraer partes específicas de la contraseña.
+D. Permiten que la contraseña contenga cualquier carácter alfanumérico.
+
+✅ Correcta: B
+🧾 Explicación: Los lookahead positivos ((?=...)) realizan una aserción sobre lo que debe seguir en la cadena, pero la posición de búsqueda no avanza después de la aserción. En este caso, aseguran la presencia de al menos una mayúscula, una minúscula y un dígito en cualquier parte de la cadena.
+
+🧠 Pregunta 19
+¿Qué se busca lograr al integrar expresiones regulares en un pipeline de TDD y CI?
+
+A. Reducir la cantidad de código escrito.
+B. Automatizar la implementación de nuevas funcionalidades.
+C. Asegurar que cada expresión regular evolucione bajo cobertura de pruebas, manteniendo la confiabilidad.
+D. Optimizar el tiempo de compilación de la aplicación.
+
+✅ Correcta: C
+🧾 Explicación: La integración de regex en TDD y CI busca garantizar que las expresiones regulares sean probadas exhaustivamente a medida que se desarrollan y modifican, lo que conduce a patrones más robustos y confiables.
+
+🧠 Pregunta 20
+En el contexto de la validación de contraseñas con la regex ^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[A-Za-z\d]{8,16}$, ¿qué asegura la parte [A-Za-z\d]{8,16}$?
+
+A. Que la contraseña contenga al menos una mayúscula, una minúscula y un dígito.
+B. Que la contraseña tenga una longitud entre 8 y 16 caracteres y solo contenga letras y números.
+C. Que la contraseña no contenga caracteres especiales.
+D. Que la contraseña termine con un dígito.
+
+✅ Correcta: B
+🧾 Explicación: [A-Za-z\d] define el conjunto de caracteres permitidos (letras mayúsculas, minúsculas y dígitos), y {8,16} especifica que la cadena debe tener una longitud mínima de 8 y máxima de 16 caracteres. El anclaje $ asegura que esta restricción se aplique al final de la cadena.
+
+🧠 Pregunta 21
+¿Cuál es la principal ventaja de utilizar expresiones regulares en los Git hooks en lugar de validaciones más simples?
+
+A. Mayor velocidad de ejecución de los hooks.
+B. Mayor flexibilidad y capacidad para definir patrones de validación complejos.
+C. Integración automática con todas las plataformas de Git.
+D. Reducción del tamaño del repositorio Git.
+
+✅ Correcta: B
+🧾 Explicación: Las regex ofrecen un lenguaje potente para describir patrones complejos, lo que permite realizar validaciones más sofisticadas que las simples comparaciones de cadenas.
+
+🧠 Pregunta 22
+Si en un hook pre-commit se quisiera permitir también archivos con extensión .css, ¿cómo se modificaría la siguiente regex: \.(py|js|ts|java)$?
+
+A. \.(py|js|ts|java|css)
+B. \.(py|js|ts|java\.css)$
+C. \.(py|js|ts|java|css)$
+D. \.(py,js,ts,java,css)$
+
+✅ Correcta: C
+🧾 Explicación: Se agrega |css dentro del grupo de disyunción (...) para incluir la nueva extensión permitida.
+
+🧠 Pregunta 23
+En la expresión regular para commit-msg: ^(feat|fix|docs|style|refactor|perf|test|chore)(\([a-z0-9\-]+\))?:(\s).{1,72}$, ¿qué representa [a-z0-9\-]+ dentro del scope opcional?
+
+A. Cualquier carácter alfabético o numérico exactamente una vez.
+B. Uno o más caracteres alfabéticos en minúscula, números o guiones.
+C. Cero o más caracteres alfabéticos en minúscula, números o guiones.
+D. Un rango de caracteres alfabéticos y numéricos.
+
+✅ Correcta: B
+🧾 Explicación: [a-z0-9\-] define un conjunto de caracteres permitidos (minúsculas, números y guion), y + indica que debe haber al menos uno de estos caracteres.
+
+🧠 Pregunta 24
+¿Qué indica la ausencia de anclajes (^ o $) en la expresión regular 'trailing whitespace' utilizada por git diff --check?
+
+A. Que solo se buscarán espacios en blanco al inicio y al final de la línea.
+B. Que se buscarán espacios en blanco en cualquier parte de la línea.
+C. Que se buscarán líneas que contengan la secuencia literal "trailing whitespace".
+D. Que se buscarán líneas que no contengan espacios en blanco.
+
+✅ Correcta: C
+🧾 Explicación: Sin los anclajes, la regex buscará la secuencia "trailing whitespace" en cualquier lugar de la línea de salida de git diff --check.
+
+🧠 Pregunta 25
+En el script de reportes, ¿qué función cumple el operador || true al final de las líneas que usan grep para ERRORS y WARNINGS?
+
+A. Asegura que el script se detenga si no se encuentran errores o advertencias.
+B. Hace que el comando grep siempre devuelva un código de salida exitoso (0), incluso si no encuentra coincidencias.
+C. Imprime un mensaje indicando que no se encontraron errores o advertencias.
+D. Guarda la salida de grep en una variable incluso si está vacía.
+
+✅ Correcta: B
+🧾 Explicación: Si grep no encuentra coincidencias, devuelve un código de salida distinto de cero, lo que en un script con set -e haría que se detuviera. || true asegura que siempre se ejecute un comando exitoso después de grep, evitando la detención del script.
+
+🧠 Pregunta 26
+En GitHub Actions, ¿qué propósito tiene paths-ignore al definir los disparadores de un workflow?
+
+A. Especificar los archivos que deben incluirse para disparar el workflow.
+B. Definir patrones de nombres de archivos que deben ser ignorados para no disparar el workflow.
+C. Establecer las rutas donde se guardarán los artefactos generados por el workflow.
+D. Indicar los directorios donde el workflow buscará los archivos YAML de configuración.
+
+✅ Correcta: B
+🧾 Explicación: paths-ignore permite definir patrones de rutas de archivos; si los cambios en un push solo afectan a estos archivos, el workflow no se ejecutará.
+
+🧠 Pregunta 27
+¿Qué significa el cuantificador {4} en la expresión regular 'RELEASE\-[0-9]{4}' utilizada en la condición if de GitHub Actions?
+
+A. Que debe haber exactamente cuatro ocurrencias de cualquier carácter.
+B. Que debe haber entre uno y cuatro dígitos.
+C. Que debe haber exactamente cuatro dígitos.
+D. Que debe haber como máximo cuatro dígitos.
+
+✅ Correcta: C
+🧾 Explicación: El cuantificador {n} especifica que el elemento precedente (en este caso, [0-9], cualquier dígito) debe ocurrir exactamente n veces.
+
+🧠 Pregunta 28
+En el patrón AAA, ¿cuál es el objetivo de la fase "Assert"?
+
+A. Ejecutar la acción que se va a probar.
+B. Preparar los datos necesarios para la prueba.
+C. Verificar si el resultado de la acción coincide con el resultado esperado.
+D. Limpiar el entorno después de la ejecución de la prueba.
+
+✅ Correcta: C
+🧾 Explicación: La fase "Assert" es crucial para determinar si la acción realizada en la fase "Act" produjo el resultado correcto según lo definido en la fase "Arrange".
+
+🧠 Pregunta 29
+En la expresión regular ^[\w\.-]+@[\w\.-]+\.(com|net|org|co)$, ¿qué representa \w?
+
+A. Cualquier carácter de espacio en blanco.
+B. Cualquier dígito.
+C. Cualquier carácter alfanumérico (letras, números y guion bajo).
+D. Cualquier carácter que no sea alfanumérico.
+
+✅ Correcta: C
+🧾 Explicación: \w es una clase de carácter predefinida que coincide con letras (mayúsculas y minúsculas), dígitos (0-9) y el guion bajo (_).
+
+🧠 Pregunta 30
+¿Por qué se recomienda usar raw strings (prefijo r) al definir expresiones regulares en Python?
+
+A. Para mejorar el rendimiento de la búsqueda de patrones.
+B. Para evitar la necesidad de escapar ciertos caracteres especiales de regex con barras invertidas.
+C. Para habilitar la funcionalidad de comentarios y espacios en blanco con re.VERBOSE.
+D. Para que las expresiones regulares sean compatibles con otros lenguajes de programación.
+
+✅ Correcta: B
+🧾 Explicación: Los raw strings tratan las barras invertidas como caracteres literales, lo que es útil en regex donde la barra invertida tiene un significado especial. Esto evita tener que escribir doble barra invertida para escapar metacaracteres como . o \.
+
+🧠 Pregunta 31
+Según el principio FIRST, ¿qué implica que una prueba debe ser "Isolated"?
+
+A. Que la prueba debe probar múltiples aspectos de una funcionalidad al mismo tiempo.
+B. Que cada prueba debe depender de los resultados de otras pruebas para asegurar la coherencia.
+C. Que cada prueba debe validar un único aspecto de la funcionalidad y no depender de un estado global o de otras pruebas.
+D. Que las pruebas deben ejecutarse en un entorno de pruebas separado del entorno de desarrollo.
+
+✅ Correcta: C
+🧾 Explicación: El aislamiento asegura que el fallo de una prueba no se deba a efectos secundarios de otras pruebas o a un estado compartido inconsistente, facilitando la identificación de la causa del fallo.
+
+🧠 Pregunta 32
+En el ciclo RGR, ¿cuál es el propósito del paso "Refactor"?
+
+A. Escribir la primera versión de una prueba para una nueva funcionalidad.
+B. Hacer que una prueba previamente fallida pase utilizando la solución más rápida posible.
+C. Mejorar la estructura, legibilidad o eficiencia del código (incluyendo la regex) sin alterar su comportamiento funcional.
+D. Eliminar las pruebas que ya no son relevantes.
+
+✅ Correcta: C
+🧾 Explicación: La refactorización busca mejorar la calidad del código después de que la prueba pasa, haciéndolo más mantenible y comprensible, sin introducir nuevos errores.
+
+🧠 Pregunta 33
+En el ejemplo del primer ciclo RGR, ¿qué se añadió en la fase "Refactor" a la regex r'^(cat|dog)$'?
+
+A. La capacidad de ignorar mayúsculas y minúsculas.
+B. La validación de que "cat" o "dog" no aparezcan dentro de otras palabras.
+C. La opción de que las palabras "cat" o "dog" puedan estar en plural.
+D. La restricción de que solo se acepten las palabras "cat" o "dog" al inicio de la línea.
+
+✅ Correcta: C
+🧾 Explicación: Se añadió s? para hacer que la "s" al final de "cat" o "dog" sea opcional, permitiendo así la coincidencia con los plurales.
+
+🧠 Pregunta 34
+¿Qué función tiene .fullmatch() en Python al trabajar con expresiones regulares?
+
+A. Busca cualquier ocurrencia del patrón dentro de la cadena.
+B. Verifica si el patrón coincide con el inicio de la cadena.
+C. Verifica si el patrón coincide con toda la cadena, desde el principio hasta el final.
+D. Reemplaza todas las ocurrencias del patrón en la cadena.
+
+✅ Correcta: C
+🧾 Explicación: .fullmatch() requiere que la totalidad de la cadena de entrada coincida con el patrón de la expresión regular para que la coincidencia sea exitosa.
+
+🧠 Pregunta 35
+¿Qué se logró al refactorizar la regex para incluir acentos y variaciones idiomáticas en el cuarto ciclo RGR?
+
+A. Se simplificó la expresión regular original.
+B. Se mejoró el rendimiento de la búsqueda de coincidencias.
+C. Se hizo el patrón más específico para evitar coincidencias no deseadas.
+D. Se amplió el patrón para aceptar "gato" y "perro" además de "cat" y "dog".
+
+✅ Correcta: D
+🧾 Explicación: La refactorización en este ciclo se centró en extender la funcionalidad del patrón para que pudiera coincidir con las traducciones de las palabras clave en español.
+
+🧠 Pregunta 36
+¿Qué posible problema de rendimiento se menciona en el texto al trabajar con expresiones regulares complejas, específicamente con el patrón (a|aa)+b?
+
+A. Un consumo excesivo de memoria durante la compilación del patrón.
+B. Un bucle infinito en el motor de regex al intentar encontrar una coincidencia.
+C. Un backtracking costoso que puede llevar a una "explosión de estados" y un tiempo de ejecución muy largo.
+D. La incompatibilidad del patrón con diferentes motores de regex.
+
+✅ Correcta: C
+🧾 Explicación: El patrón (a|aa)+b es un ejemplo de una regex que puede generar una gran cantidad de posibles caminos de coincidencia (backtracking), lo que puede hacer que el motor de regex tarde mucho tiempo en procesar ciertas entradas o incluso parecer que se "cuelga".
+
+🧠 Pregunta 37
+En el contexto de TDD con regex, ¿por qué es importante escribir las pruebas antes de implementar la expresión regular (Timely en FIRST)?
+
+A. Para que las pruebas sirvan como documentación de la regex.
+B. Para asegurarse de que la regex sea lo más compleja posible desde el inicio.
+C. Para guiar el desarrollo de la regex y asegurar que cumpla con los requisitos definidos por las pruebas.
+D. Para optimizar el rendimiento de la regex antes de su uso.
+
+✅ Correcta: C
+🧾 Explicación: Escribir las pruebas primero (TDD) ayuda a definir claramente qué debe hacer la regex y permite verificar que la implementación cumpla con esos requisitos. Las pruebas guían el desarrollo de la regex paso a paso.
+
+🧠 Pregunta 38
+¿Qué tipo de aserción se recomienda utilizar en las pruebas de regex según el principio Self-validating de FIRST?
+
+A. Aserciones que solo verifican si la regex encuentra alguna coincidencia.
+B. Aserciones que imprimen un mensaje en caso de fallo, pero no detienen la prueba.
+C. Aserciones claras y específicas que verifican el resultado esperado de la aplicación de la regex (ej., assert patron.fullmatch(x)).
+D. Aserciones que dependen del estado de variables globales definidas fuera de la prueba.
+
+✅ Correcta: C
+🧾 Explicación: Las aserciones auto-validadas son explícitas sobre lo que se espera y facilitan la identificación de la causa de un fallo en la prueba. assert patron.fullmatch(x) es un ejemplo claro de esto.
+
+🧠 Pregunta 39
+En el primer paso del flujo RGR (Red), ¿cuál es el objetivo principal al escribir una prueba?
+
+A. Asegurarse de que la prueba pase inmediatamente.
+B. Documentar el comportamiento esperado de la funcionalidad.
+C. Crear una prueba que falle porque la funcionalidad aún no está implementada o la implementación actual es incorrecta.
+D. Optimizar el rendimiento de la prueba para futuras ejecuciones.
+
+✅ Correcta: C
+🧾 Explicación: La fase "Red" busca establecer una prueba que demuestre la necesidad de la nueva funcionalidad o la corrección de un error, y que inicialmente falle.
+
+🧠 Pregunta 40
+En el segundo paso del flujo RGR (Green), ¿cuál es la estrategia recomendada al modificar la expresión regular (o el código)?
+
+A. Implementar la solución más robusta y completa posible desde el principio.
+B. Modificar la regex de la manera más sencilla posible para que la prueba escrita en la fase "Red" pase.
+C. Refactorizar la regex existente para mejorar su legibilidad antes de hacer que la prueba pase.
+D. Buscar la solución más eficiente en términos de rendimiento, incluso si es más compleja.
+
+✅ Correcta: B
+🧾 Explicación: La fase "Green" se centra en hacer que la prueba pase rápidamente, incluso si la solución inicial no es la más elegante o eficiente. La refactorización viene después.
+
+🧠 Pregunta 41
+¿Qué se buscaba evitar al añadir la bandera re.IGNORECASE en el segundo ciclo RGR del ejemplo?
+
+A. Que el patrón coincidiera con caracteres especiales.
+B. Que el patrón distinguiera entre letras mayúsculas y minúsculas.
+C. Que el patrón solo coincidiera al inicio de la cadena.
+D. Que el patrón permitiera múltiples ocurrencias de las palabras clave.
+
+✅ Correcta: B
+🧾 Explicación: La bandera re.IGNORECASE hace que la búsqueda de coincidencias no distinga entre mayúsculas y minúsculas, permitiendo que el patrón coincida con "Cat" y "cat", por ejemplo.
+
+🧠 Pregunta 42
+¿Por qué se cambió .match() a .fullmatch() en el tercer ciclo RGR del ejemplo?
+
+A. Para que la búsqueda del patrón fuera más eficiente.
+B. Para asegurar que solo se encontraran coincidencias al inicio de la cadena.
+C. Para garantizar que la expresión regular coincidiera con toda la cadena de prueba y no solo con una parte.
+D. Para permitir la búsqueda del patrón en múltiples líneas.
+
+✅ Correcta: C
+🧾 Explicación: .fullmatch() exige que la totalidad de la cadena coincida con el patrón, lo que era necesario para evitar coincidencias dentro de palabras más largas como "scatter".
+
+🧠 Pregunta 43
+¿Qué ventaja principal ofrecía la refactorización en el cuarto ciclo RGR al extraer el sufijo opcional s? a una subexpresión común?
+
+A. Mejoró significativamente el rendimiento de la regex.
+B. Hizo que el patrón fuera más fácil de entender y mantener, especialmente si se añadían más idiomas en el futuro.
+C. Permitió que el patrón coincidiera con un mayor número de variaciones de las palabras clave.
+D. Redujo la longitud total de la expresión regular.
+
+✅ Correcta: B
+🧾 Explicación: Al extraer el sufijo opcional, se hizo el patrón más modular y fácil de modificar si se necesitaban añadir más palabras clave en el futuro, manteniendo la consistencia del sufijo opcional.
+
+🧠 Pregunta 44
+En el quinto ciclo RGR, ¿cuál fue la principal motivación para considerar reemplazar la regex con un conjunto para la validación de animales?
+
+A. Para simplificar la lógica de las pruebas unitarias.
+B. Para mejorar la legibilidad del código de validación.
+C. Para optimizar el rendimiento en el caso de un gran número de validaciones.
+D. Para facilitar la integración con otras partes del sistema.
+
+✅ Correcta: C
+🧾 Explicación: El uso de un conjunto para la búsqueda (con conversión a minúsculas) ofrece una complejidad temporal promedio de O(1), lo que es mucho más eficiente para grandes volúmenes de datos en comparación con la búsqueda de patrones con una regex compleja.
+
+🧠 Pregunta 45
+¿Qué se menciona como una posible acción en la fase de "Refactor" si después de varios cambios la regex se vuelve compleja y afecta el rendimiento?
+
+A. Eliminar la regex y usar métodos de string más simples.
+B. Convertir el patrón en un autómata simplificado o usar una lista precompilada para la validación masiva.
+C. Aumentar los recursos computacionales para ejecutar la regex más rápidamente.
+D. Dividir la regex compleja en varias regex más pequeñas.
+
+✅ Correcta: B
+🧾 Explicación: La refactorización puede implicar simplificar el patrón o, si el rendimiento es crítico para grandes conjuntos de datos, considerar alternativas como un autómata o una estructura de datos más eficiente (como un conjunto o un diccionario).
+
+🧠 Pregunta 46
+¿Cuál de los siguientes es un ejemplo de validación de formato utilizando regex mencionado en el texto?
+
+A. Verificar que un archivo tenga la extensión correcta.
+B. Asegurar que el mensaje de un commit siga una convención.
+C. Validar el formato de fechas ISO (ej., ^\d{4}-\d{2}-\d{2}$).
+D. Extraer niveles de log de un archivo de texto.
+
+✅ Correcta: C
+🧾 Explicación: El texto proporciona ^\d{4}-\d{2}-\d{2}$ como un ejemplo específico de una regex utilizada para validar el formato de fechas ISO.
+
+🧠 Pregunta 47
+¿Qué se utiliza en la regex para validar contraseñas ^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[A-Za-z\d]{8,16}$ para asegurar la presencia de al menos una letra mayúscula, una minúscula y un dígito sin consumir esos caracteres en la coincidencia principal?
+
+A. Grupos de captura (...).
+B. Cuantificadores *, +, ?.
+C. Lookahead positivos (?=...).
+D. Clases de caracteres [A-Z], [a-z], \d.
+
+✅ Correcta: C
+🧾 Explicación: Los lookahead positivos (?=.*[A-Z]), (?=.*[a-z]), y (?=.*\d) verifican si existe al menos una mayúscula, una minúscula y un dígito respectivamente en cualquier parte de la cadena, sin que estos caracteres formen parte de la coincidencia principal que luego es restringida por [A-Za-z\d]{8,16}.
+
+🧠 Pregunta 48
+¿Qué se busca lograr al integrar la metodología RGR en el desarrollo de expresiones regulares?
+
+A. Escribir la regex más corta posible.
+B. Asegurar que la regex sea fácil de leer y entender desde el principio.
+C. Desarrollar la regex de forma incremental y bajo la guía de pruebas automatizadas, lo que lleva a patrones más robustos y confiables.
+D. Optimizar el rendimiento de la regex antes de escribir cualquier código que la utilice.
+
+✅ Correcta: C
+🧾 Explicación: El flujo RGR aplicado a las regex permite un desarrollo iterativo donde cada cambio en el patrón está respaldado por una prueba, lo que ayuda a construir regex complejas de manera más segura y con mayor confianza en su corrección.
+
+🧠 Pregunta 49
+En un pipeline de calidad que integra regex, ¿en qué etapa se suelen utilizar los Git hooks con validaciones de patrones en mensajes y nombres de ramas?
+
+A. En la etapa de construcción (build).
+B. En la etapa de pruebas (test).
+C. En la etapa de pre-commit y otros momentos del flujo de trabajo local.
+D. En la etapa de despliegue (deploy).
+
+✅ Correcta: C
+🧾 Explicación: Los Git hooks se ejecutan localmente en el entorno del desarrollador en puntos específicos del flujo de trabajo de Git, como antes de un commit (pre-commit) o después de un merge (post-merge), permitiendo validaciones tempranas.
+
+🧠 Pregunta 50
+¿Cuál es el beneficio de utilizar pruebas parametrizadas (como con @pytest.mark.parametrize) al probar expresiones regulares?
+
+A. Reduce la cantidad de código de prueba necesario para cubrir diferentes casos de entrada.
+B. Mejora el rendimiento de la ejecución de las pruebas.
+C. Permite generar automáticamente la documentación de la expresión regular.
+D. Asegura que todas las pruebas se ejecuten en el mismo orden.
+
+✅ Correcta: A
+🧾 Explicación: La parametrización permite ejecutar la misma prueba con diferentes conjuntos de datos de entrada y resultados esperados, lo que facilita la cobertura de múltiples casos de prueba con menos código repetitivo.

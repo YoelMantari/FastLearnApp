@@ -1,0 +1,783 @@
+🧠 Pregunta 1
+¿Cuál es el beneficio principal de usar expresiones regulares en los steps de Behave?
+
+A. Reemplazar el lenguaje Gherkin por completo
+B. Generar interfaces gráficas automáticamente
+C. Capturar parámetros y validar entradas en los pasos
+D. Evitar el uso de Python en pruebas
+
+✅ Correcta: C
+🧾 Explicación: Las expresiones regulares permiten capturar datos, validar formatos complejos y reutilizar patrones, lo cual facilita la automatización de pruebas con Behave.
+
+🧠 Pregunta 2
+¿Qué expresión regular valida correctamente un identificador alfanumérico de entre 4 y 10 caracteres?
+
+A. [A-Za-z]{4,10}
+B. \w{4,10}
+C. \d{4,10}
+D. [^A-Za-z0-9]{4,10}
+
+✅ Correcta: B
+🧾 Explicación: \w representa caracteres alfanuméricos y guiones bajos. El cuantificador {4,10} limita la longitud entre 4 y 10 caracteres.
+
+🧠 Pregunta 3
+¿Qué significa el uso del símbolo ^ al inicio de una expresión regular?
+
+A. Permite que coincida con cualquier parte de la línea
+B. Indica el final de una palabra
+C. Ancla la expresión al inicio de la línea
+D. Niega el patrón de coincidencia
+
+✅ Correcta: C
+🧾 Explicación: El símbolo ^ se usa como ancla para indicar que la coincidencia debe comenzar al inicio de la línea.
+
+🧠 Pregunta 4
+¿Cuál es el propósito del grupo ([^"]+) en una expresión regular?
+
+A. Captura comillas dobles
+B. Captura cualquier número seguido de letras
+C. Captura una secuencia sin comillas dobles
+D. Captura caracteres especiales
+
+✅ Correcta: C
+🧾 Explicación: [^"]+ es una clase de negación que captura cualquier conjunto de caracteres excepto comillas dobles.
+
+🧠 Pregunta 5
+¿Qué patrón permite validar una fecha con formato YYYY-MM-DD?
+
+A. \d{2}-\d{2}-\d{4}
+B. (\d{4})/(\d{2})/(\d{2})
+C. (\d{4})-(\d{2})-(\d{2})
+D. [0-9]{2}\.[0-9]{2}\.[0-9]{4}
+
+✅ Correcta: C
+🧾 Explicación: Este patrón captura un año de 4 dígitos seguido de mes y día de 2 dígitos cada uno, separados por guiones.
+
+🧠 Pregunta 6
+¿Qué hace el operador ? en una expresión regular?
+
+A. Indica cero o más repeticiones
+B. Obliga la presencia del carácter anterior
+C. Permite que el carácter anterior sea opcional
+D. Captura todos los caracteres siguientes
+
+✅ Correcta: C
+🧾 Explicación: El operador ? indica que el elemento anterior puede aparecer 0 o 1 vez, es decir, es opcional.
+
+🧠 Pregunta 7
+¿Cuál es la utilidad del lookahead positivo (?=...)?
+
+A. Verifica que algo no aparezca antes del patrón
+B. Excluye coincidencias que empiezan con cierto patrón
+C. Confirma la presencia de un patrón sin consumirlo
+D. Captura todo el contenido entre comillas
+
+✅ Correcta: C
+🧾 Explicación: El lookahead positivo (?=...) comprueba si un patrón sigue al actual sin incluirlo en la captura.
+
+🧠 Pregunta 8
+¿Qué expresión valida un correo electrónico simple?
+
+A. .+@.+\..+
+B. [\w\.-]+@[\w\.-]+\.[a-z]{2,}
+C. [A-Z]+@[A-Z]+\.[A-Z]+
+D. \d{3}-\d{3}
+
+✅ Correcta: B
+🧾 Explicación: Este patrón permite letras, números, puntos o guiones antes y después del @, y requiere un dominio de al menos dos letras.
+
+🧠 Pregunta 9
+¿Para qué se usa la disyunción | en una expresión regular?
+
+A. Para repetir el patrón anterior
+B. Para capturar grupos de palabras completas
+C. Para validar una de varias opciones
+D. Para declarar variables dentro de una expresión
+
+✅ Correcta: C
+🧾 Explicación: El operador | permite alternar entre múltiples opciones dentro de un grupo, por ejemplo, (activo|inactivo).
+
+🧠 Pregunta 10
+¿Qué clase de caracteres se usa para negar caracteres específicos?
+
+A. [A-Z]
+B. {1,6}
+C. [^A-Za-z0-9]
+D. \w+
+
+✅ Correcta: C
+🧾 Explicación: [^...] define una clase de negación que coincide con cualquier carácter que no esté dentro del conjunto especificado.
+
+🧠 Pregunta 11
+¿Qué operador permite validar una cantidad específica de repeticiones en una expresión regular?
+
+A. +
+B. {n}
+C. *
+D. ?
+
+✅ Correcta: B
+🧾 Explicación: El operador {n} exige exactamente n repeticiones del patrón anterior, como en \d{4} para cuatro dígitos.
+
+🧠 Pregunta 12
+¿Qué patrón usarías para capturar códigos como ABC1234, compuestos por tres letras seguidas de cuatro números?
+
+A. [A-Z]{3}[0-9]{4}
+B. \w{7}
+C. [A-Za-z0-9]{7}
+D. [A-Z]+[0-9]+
+
+✅ Correcta: A
+🧾 Explicación: Se necesitan exactamente tres letras mayúsculas [A-Z]{3} seguidas de cuatro dígitos [0-9]{4}.
+
+🧠 Pregunta 13
+¿Qué hace el modificador \b en una expresión regular?
+
+A. Ancla la expresión al final
+B. Valida espacios entre palabras
+C. Detecta límites de palabra
+D. Elimina caracteres no deseados
+
+✅ Correcta: C
+🧾 Explicación: \b representa un límite de palabra, útil para evitar coincidencias parciales (ej: \bError\b).
+
+🧠 Pregunta 14
+¿Cuál es el símbolo que representa cualquier cantidad de repeticiones, incluyendo cero?
+
+A. +
+B. *
+C. ?
+D. !
+
+✅ Correcta: B
+🧾 Explicación: El símbolo * indica "cero o más repeticiones" del patrón anterior.
+
+🧠 Pregunta 15
+¿Cuál es la forma correcta de escribir una expresión regular como cadena en Python para evitar errores con las barras invertidas?
+
+A. Usando comillas simples
+B. Usando r'...'
+C. Usando "...\\"
+D. Especificando escape=True
+
+✅ Correcta: B
+🧾 Explicación: Al usar r'...', se define una raw string, lo que evita la necesidad de duplicar cada barra invertida.
+
+🧠 Pregunta 16
+¿Qué hace la expresión [^\d]?
+
+A. Coincide con cualquier número
+B. Coincide con cualquier carácter que no sea dígito
+C. Coincide con letras y espacios
+D. Coincide sólo con letras mayúsculas
+
+✅ Correcta: B
+🧾 Explicación: ^ dentro de una clase de caracteres [...] representa negación, por lo tanto \d se niega.
+
+🧠 Pregunta 17
+¿Qué patrón permite aceptar “persona” o “personas” en una misma expresión?
+
+A. persona|s
+B. (persona|personas)
+C. personas?
+D. persona+s
+
+✅ Correcta: C
+🧾 Explicación: El patrón personas? acepta “persona” con una s opcional gracias al operador ?.
+
+🧠 Pregunta 18
+¿Cuál es el propósito del uso de @given, @when y @then en Behave?
+
+A. Son funciones para conectar Gherkin con JavaScript
+B. Son comandos para compilar tests
+C. Son decoradores que vinculan steps con funciones en Python
+D. Son clases que definen la estructura de una historia de usuario
+
+✅ Correcta: C
+🧾 Explicación: Estos decoradores conectan cada step en Gherkin con su función correspondiente en Python.
+
+🧠 Pregunta 19
+¿Qué representa el símbolo . en una expresión regular?
+
+A. Un punto final obligatorio
+B. Un delimitador de oración
+C. Cualquier carácter excepto salto de línea
+D. Solo letras minúsculas
+
+✅ Correcta: C
+🧾 Explicación: El punto . es un comodín que representa cualquier carácter, excepto saltos de línea.
+
+🧠 Pregunta 20
+¿Qué patrón usarías para capturar una contraseña de entre 6 y 12 caracteres?
+
+A. .{6,12}
+B. \d{6,12}
+C. \w+
+D. [a-zA-Z]{6,12}
+
+✅ Correcta: A
+🧾 Explicación: . representa cualquier carácter, y {6,12} limita la longitud de la cadena entre 6 y 12 caracteres.
+
+🧠 Pregunta 21
+¿Cuál es el resultado de usar re.fullmatch()?
+
+A. Valida si hay alguna coincidencia parcial
+B. Asegura que todo el texto coincida con el patrón
+C. Devuelve una lista de coincidencias
+D. Permite omitir validaciones
+
+✅ Correcta: B
+🧾 Explicación: re.fullmatch() valida que toda la cadena coincida con la expresión regular, no solo una parte.
+
+🧠 Pregunta 22
+¿Qué hace el patrón (\d{4})-(\d{2})-(\d{2})?
+
+A. Valida una fecha con formato DD-MM-YYYY
+B. Captura texto alfanumérico
+C. Captura fechas con formato YYYY-MM-DD
+D. Rechaza caracteres numéricos
+
+✅ Correcta: C
+🧾 Explicación: Captura un año de 4 dígitos, seguido de mes y día de 2 dígitos separados por guiones.
+
+🧠 Pregunta 23
+¿Qué significa \s+ en un patrón?
+
+A. Uno o más dígitos
+B. Un carácter de puntuación
+C. Uno o más espacios o tabulaciones
+D. Sólo un espacio
+
+✅ Correcta: C
+🧾 Explicación: \s representa un carácter de espacio (incluye tabulaciones), y + indica una o más repeticiones.
+
+🧠 Pregunta 24
+¿Qué patrón se puede usar para validar que una cadena no comience con "TMP"?
+
+A. ^TMP.*$
+B. [^TMP].*
+C. (?!TMP)[A-Z]{3}\d{4}
+D. TMP.+
+
+✅ Correcta: C
+🧾 Explicación: (?!TMP) es un lookahead negativo, que excluye las cadenas que empiezan con “TMP”.
+
+🧠 Pregunta 25
+¿Cuál es el efecto de los paréntesis () en una expresión regular?
+
+A. Eliminar espacios vacíos
+B. Convertir el patrón en una lista
+C. Agrupar subpatrones y capturar valores
+D. Separar palabras con guiones
+
+✅ Correcta: C
+🧾 Explicación: Los paréntesis agrupan partes de la expresión y capturan los valores coincidentes.
+
+🧠 Pregunta 26
+¿Qué patrón permite validar un SKU como ABC-1234?
+
+A. \w+-\d+
+B. [A-Z]{3}-\d{4}
+C. [a-z]{3}\d{4}
+D. [A-Z]{3}_\d{4}
+
+✅ Correcta: B
+🧾 Explicación: [A-Z]{3} valida tres letras mayúsculas, - es el guión, y \d{4} valida cuatro dígitos.
+
+🧠 Pregunta 27
+¿Qué se recomienda para mantener la mantenibilidad de las expresiones regulares en proyectos grandes?
+
+A. Evitar expresiones largas
+B. Escribir las expresiones en comentarios
+C. Modularizar patrones comunes como constantes
+D. No usar expresiones regulares en steps
+
+✅ Correcta: C
+🧾 Explicación: Definir patrones como constantes (EMAIL_PATTERN, etc.) mejora la mantenibilidad y reutilización.
+
+🧠 Pregunta 28
+¿Qué patrón permite capturar nombres de usuario entre comillas?
+
+A. "([^"]+)"
+B. '(.+)'
+C. ".*"
+D. [^"]+
+
+✅ Correcta: A
+🧾 Explicación: ([^"]+) captura el contenido dentro de comillas dobles sin incluirlas.
+
+🧠 Pregunta 29
+¿Cuál es la función del símbolo | en (activo|inactivo)?
+
+A. Reemplazar ambos términos
+B. Separar los valores capturados en listas
+C. Indicar una opción u otra (disyunción)
+D. Terminar la expresión regular
+
+✅ Correcta: C
+🧾 Explicación: El símbolo | funciona como un "o" lógico, eligiendo entre varias alternativas.
+
+🧠 Pregunta 30
+¿Qué ventaja ofrece el uso de expresiones regulares en archivos .feature?
+
+A. Gherkin puede interpretarlas directamente
+B. Mejora la visualización gráfica de los pasos
+C. Documentan patrones esperados para los datos
+D. Permite ejecutar código Python dentro del archivo
+
+✅ Correcta: C
+🧾 Explicación: Aunque Gherkin no interpreta regex, usarlas en los ejemplos o descripciones documenta claramente las restricciones del input.
+
+🧠 Pregunta 11
+¿Qué operador permite validar una cantidad específica de repeticiones en una expresión regular?
+
+A. +
+B. {n}
+C. *
+D. ?
+
+✅ Correcta: B
+🧾 Explicación: El operador {n} exige exactamente n repeticiones del patrón anterior, como en \d{4} para cuatro dígitos.
+
+🧠 Pregunta 12
+¿Qué patrón usarías para capturar códigos como ABC1234, compuestos por tres letras seguidas de cuatro números?
+
+A. [A-Z]{3}[0-9]{4}
+B. \w{7}
+C. [A-Za-z0-9]{7}
+D. [A-Z]+[0-9]+
+
+✅ Correcta: A
+🧾 Explicación: Se necesitan exactamente tres letras mayúsculas [A-Z]{3} seguidas de cuatro dígitos [0-9]{4}.
+
+🧠 Pregunta 13
+¿Qué hace el modificador \b en una expresión regular?
+
+A. Ancla la expresión al final
+B. Valida espacios entre palabras
+C. Detecta límites de palabra
+D. Elimina caracteres no deseados
+
+✅ Correcta: C
+🧾 Explicación: \b representa un límite de palabra, útil para evitar coincidencias parciales (ej: \bError\b).
+
+🧠 Pregunta 14
+¿Cuál es el símbolo que representa cualquier cantidad de repeticiones, incluyendo cero?
+
+A. +
+B. *
+C. ?
+D. !
+
+✅ Correcta: B
+🧾 Explicación: El símbolo * indica "cero o más repeticiones" del patrón anterior.
+
+🧠 Pregunta 15
+¿Cuál es la forma correcta de escribir una expresión regular como cadena en Python para evitar errores con las barras invertidas?
+
+A. Usando comillas simples
+B. Usando r'...'
+C. Usando "...\\"
+D. Especificando escape=True
+
+✅ Correcta: B
+🧾 Explicación: Al usar r'...', se define una raw string, lo que evita la necesidad de duplicar cada barra invertida.
+
+🧠 Pregunta 16
+¿Qué hace la expresión [^\d]?
+
+A. Coincide con cualquier número
+B. Coincide con cualquier carácter que no sea dígito
+C. Coincide con letras y espacios
+D. Coincide sólo con letras mayúsculas
+
+✅ Correcta: B
+🧾 Explicación: ^ dentro de una clase de caracteres [...] representa negación, por lo tanto \d se niega.
+
+🧠 Pregunta 17
+¿Qué patrón permite aceptar “persona” o “personas” en una misma expresión?
+
+A. persona|s
+B. (persona|personas)
+C. personas?
+D. persona+s
+
+✅ Correcta: C
+🧾 Explicación: El patrón personas? acepta “persona” con una s opcional gracias al operador ?.
+
+🧠 Pregunta 18
+¿Cuál es el propósito del uso de @given, @when y @then en Behave?
+
+A. Son funciones para conectar Gherkin con JavaScript
+B. Son comandos para compilar tests
+C. Son decoradores que vinculan steps con funciones en Python
+D. Son clases que definen la estructura de una historia de usuario
+
+✅ Correcta: C
+🧾 Explicación: Estos decoradores conectan cada step en Gherkin con su función correspondiente en Python.
+
+🧠 Pregunta 19
+¿Qué representa el símbolo . en una expresión regular?
+
+A. Un punto final obligatorio
+B. Un delimitador de oración
+C. Cualquier carácter excepto salto de línea
+D. Solo letras minúsculas
+
+✅ Correcta: C
+🧾 Explicación: El punto . es un comodín que representa cualquier carácter, excepto saltos de línea.
+
+🧠 Pregunta 20
+¿Qué patrón usarías para capturar una contraseña de entre 6 y 12 caracteres?
+
+A. .{6,12}
+B. \d{6,12}
+C. \w+
+D. [a-zA-Z]{6,12}
+
+✅ Correcta: A
+🧾 Explicación: . representa cualquier carácter, y {6,12} limita la longitud de la cadena entre 6 y 12 caracteres.
+
+🧠 Pregunta 21
+¿Cuál es el resultado de usar re.fullmatch()?
+
+A. Valida si hay alguna coincidencia parcial
+B. Asegura que todo el texto coincida con el patrón
+C. Devuelve una lista de coincidencias
+D. Permite omitir validaciones
+
+✅ Correcta: B
+🧾 Explicación: re.fullmatch() valida que toda la cadena coincida con la expresión regular, no solo una parte.
+
+🧠 Pregunta 22
+¿Qué hace el patrón (\d{4})-(\d{2})-(\d{2})?
+
+A. Valida una fecha con formato DD-MM-YYYY
+B. Captura texto alfanumérico
+C. Captura fechas con formato YYYY-MM-DD
+D. Rechaza caracteres numéricos
+
+✅ Correcta: C
+🧾 Explicación: Captura un año de 4 dígitos, seguido de mes y día de 2 dígitos separados por guiones.
+
+🧠 Pregunta 23
+¿Qué significa \s+ en un patrón?
+
+A. Uno o más dígitos
+B. Un carácter de puntuación
+C. Uno o más espacios o tabulaciones
+D. Sólo un espacio
+
+✅ Correcta: C
+🧾 Explicación: \s representa un carácter de espacio (incluye tabulaciones), y + indica una o más repeticiones.
+
+🧠 Pregunta 24
+¿Qué patrón se puede usar para validar que una cadena no comience con "TMP"?
+
+A. ^TMP.*$
+B. [^TMP].*
+C. (?!TMP)[A-Z]{3}\d{4}
+D. TMP.+
+
+✅ Correcta: C
+🧾 Explicación: (?!TMP) es un lookahead negativo, que excluye las cadenas que empiezan con “TMP”.
+
+🧠 Pregunta 25
+¿Cuál es el efecto de los paréntesis () en una expresión regular?
+
+A. Eliminar espacios vacíos
+B. Convertir el patrón en una lista
+C. Agrupar subpatrones y capturar valores
+D. Separar palabras con guiones
+
+✅ Correcta: C
+🧾 Explicación: Los paréntesis agrupan partes de la expresión y capturan los valores coincidentes.
+
+🧠 Pregunta 26
+¿Qué patrón permite validar un SKU como ABC-1234?
+
+A. \w+-\d+
+B. [A-Z]{3}-\d{4}
+C. [a-z]{3}\d{4}
+D. [A-Z]{3}_\d{4}
+
+✅ Correcta: B
+🧾 Explicación: [A-Z]{3} valida tres letras mayúsculas, - es el guión, y \d{4} valida cuatro dígitos.
+
+🧠 Pregunta 27
+¿Qué se recomienda para mantener la mantenibilidad de las expresiones regulares en proyectos grandes?
+
+A. Evitar expresiones largas
+B. Escribir las expresiones en comentarios
+C. Modularizar patrones comunes como constantes
+D. No usar expresiones regulares en steps
+
+✅ Correcta: C
+🧾 Explicación: Definir patrones como constantes (EMAIL_PATTERN, etc.) mejora la mantenibilidad y reutilización.
+
+🧠 Pregunta 28
+¿Qué patrón permite capturar nombres de usuario entre comillas?
+
+A. "([^"]+)"
+B. '(.+)'
+C. ".*"
+D. [^"]+
+
+✅ Correcta: A
+🧾 Explicación: ([^"]+) captura el contenido dentro de comillas dobles sin incluirlas.
+
+🧠 Pregunta 29
+¿Cuál es la función del símbolo | en (activo|inactivo)?
+
+A. Reemplazar ambos términos
+B. Separar los valores capturados en listas
+C. Indicar una opción u otra (disyunción)
+D. Terminar la expresión regular
+
+✅ Correcta: C
+🧾 Explicación: El símbolo | funciona como un "o" lógico, eligiendo entre varias alternativas.
+
+🧠 Pregunta 30
+¿Qué ventaja ofrece el uso de expresiones regulares en archivos .feature?
+
+A. Gherkin puede interpretarlas directamente
+B. Mejora la visualización gráfica de los pasos
+C. Documentan patrones esperados para los datos
+D. Permite ejecutar código Python dentro del archivo
+
+✅ Correcta: C
+🧾 Explicación: Aunque Gherkin no interpreta regex, usarlas en los ejemplos o descripciones documenta claramente las restricciones del input.
+
+¿Deseas ahora 5 preguntas con código o que continúe con preguntas teóricas del mismo tipo?
+
+
+
+
+
+
+Tú dijiste:
+dame otras 20 preguntas
+
+
+ChatGPT Plus
+Aquí tienes otras 20 preguntas de examen con alternativas, respuesta correcta y explicación, basadas exclusivamente en la lectura sobre regex en BDD con Behave, siguiendo el mismo formato:
+
+🧠 Pregunta 31
+¿Qué patrón usarías para capturar un campo que puede contener letras, números y espacios, pero no signos de puntuación?
+
+A. [A-Za-z0-9\s]+
+B. [^A-Za-z0-9\s]
+C. \D+
+D. \s*
+
+✅ Correcta: A
+🧾 Explicación: Este patrón acepta letras, dígitos y espacios. La ausencia de signos de puntuación se garantiza excluyéndolos explícitamente.
+
+🧠 Pregunta 32
+¿Qué patrón valida correctamente una dirección en formato C:\Users\Nombre\Documents?
+
+A. C:/Users/.+/Documents
+B. C:\\Users\\[^\\]+\\Documents
+C. C:/Users/.*/Documents
+D. C:\\Users\\.*\\Documents
+
+✅ Correcta: B
+🧾 Explicación: Se debe escapar cada barra invertida con \\, y [^\\]+ asegura que no haya subdirectorios intermedios en “Nombre”.
+
+🧠 Pregunta 33
+¿Qué expresión regular puede validar si un mensaje termina en punto?
+
+A. .*\.
+B. \.$
+C. .*\.$
+D. \.
+
+✅ Correcta: C
+🧾 Explicación: .*\.$ valida cualquier cadena que termine con un punto. El \. escapa el carácter especial.
+
+🧠 Pregunta 34
+¿Cuál es la diferencia principal entre .+ y .*?
+
+A. .+ no existe
+B. .+ requiere al menos una coincidencia, .* permite cero
+C. .* exige al menos una coincidencia
+D. Son equivalentes
+
+✅ Correcta: B
+🧾 Explicación: + indica una o más ocurrencias, mientras que * acepta cero o más ocurrencias.
+
+🧠 Pregunta 35
+¿Qué significa (?=\d) en una expresión regular?
+
+A. Captura el dígito siguiente
+B. Excluye el dígito siguiente
+C. Valida que hay un dígito a continuación, sin consumirlo
+D. Termina la expresión
+
+✅ Correcta: C
+🧾 Explicación: Es un lookahead positivo, que revisa que después viene un dígito pero no lo incluye en el grupo actual.
+
+🧠 Pregunta 36
+¿Qué decorador usarías para mapear un paso como Then el mensaje es válido?
+
+A. @test
+B. @when
+C. @then
+D. @step
+
+✅ Correcta: C
+🧾 Explicación: @then se utiliza para los pasos que validan el resultado de un escenario.
+
+🧠 Pregunta 37
+¿Qué patrón valida un código hexadecimal de exactamente 8 caracteres?
+
+A. [0-9A-F]+
+B. [A-Fa-f0-9]{8}
+C. \d{8}
+D. [A-Z]{8}
+
+✅ Correcta: B
+🧾 Explicación: Este patrón acepta exactamente 8 caracteres hexadecimales, en mayúsculas o minúsculas.
+
+🧠 Pregunta 38
+¿Para qué se usa re.search() en una expresión?
+
+A. Para buscar solo al inicio de la cadena
+B. Para reemplazar caracteres
+C. Para buscar coincidencias en cualquier parte de la cadena
+D. Para validar expresiones booleanas
+
+✅ Correcta: C
+🧾 Explicación: re.search() busca coincidencias en cualquier parte del texto, no necesariamente al principio.
+
+🧠 Pregunta 39
+¿Qué clase abreviada representa espacios, tabulaciones y saltos de línea?
+
+A. \w
+B. \d
+C. \b
+D. \s
+
+✅ Correcta: D
+🧾 Explicación: \s incluye todos los caracteres de espacio, como espacios normales, tabulaciones y saltos de línea.
+
+🧠 Pregunta 40
+¿Qué paso en Gherkin sería mapeado por el patrón r'^el estado debe ser "(activo|inactivo)"$'?
+
+A. Then el estado debe ser "activo"
+B. When el estado debe ser "validado"
+C. Given el estado inicial
+D. Then debe estar activo
+
+✅ Correcta: A
+🧾 Explicación: El patrón espera que la cadena sea exactamente "activo" o "inactivo", encerrada entre comillas.
+
+🧠 Pregunta 41
+¿Cuál es el propósito de usar agrupaciones como (\d{4})-(\d{2})-(\d{2})?
+
+A. Ignorar datos numéricos
+B. Contar las repeticiones
+C. Separar y capturar subcomponentes (año, mes, día)
+D. Limitar los valores posibles
+
+✅ Correcta: C
+🧾 Explicación: Los paréntesis agrupan partes para capturarlas por separado. Es útil para dividir fechas.
+
+🧠 Pregunta 42
+¿Qué representa \w en una expresión regular?
+
+A. Solo letras
+B. Letras y espacios
+C. Letras, dígitos y guiones bajos
+D. Cualquier carácter visible
+
+✅ Correcta: C
+🧾 Explicación: \w representa letras, dígitos y el guion bajo _.
+
+🧠 Pregunta 43
+¿Qué tipo de expresión regular usarías para validar una palabra exacta en una línea?
+
+A. ^palabra
+B. .*palabra.*
+C. \bpalabra\b
+D. palabra+
+
+✅ Correcta: C
+🧾 Explicación: \bpalabra\b valida que la palabra esté aislada y no dentro de otra.
+
+🧠 Pregunta 44
+En Behave, ¿qué ocurre si no usas ^ y $ en la expresión regular de un step?
+
+A. El step falla siempre
+B. El step no puede ejecutar código
+C. El patrón puede coincidir parcialmente
+D. La expresión se vuelve más precisa
+
+✅ Correcta: C
+🧾 Explicación: Al no anclar la expresión, se permite coincidencia parcial con el texto del step.
+
+🧠 Pregunta 45
+¿Qué se debe hacer para usar una expresión como C:\Users\... en Python?
+
+A. Reemplazar las barras por /
+B. Duplicar cada barra invertida con \\
+C. Eliminar las barras
+D. Agregar espacios entre carpetas
+
+✅ Correcta: B
+🧾 Explicación: En Python, el carácter \ es especial, así que debe escribirse como \\.
+
+🧠 Pregunta 46
+¿Qué patrón se usaría para validar una contraseña entre 6 y 12 caracteres de cualquier tipo?
+
+A. [a-zA-Z]{6,12}
+B. .{6,12}
+C. \d{6,12}
+D. \w{6}
+
+✅ Correcta: B
+🧾 Explicación: El punto . representa cualquier carácter y {6,12} define la longitud permitida.
+
+🧠 Pregunta 47
+¿Qué hace el patrón [^\\]+ dentro de una expresión como ruta de archivo?
+
+A. Captura varias barras invertidas
+B. Coincide con cadenas vacías
+C. Captura cualquier texto que no tenga \
+D. Convierte la ruta en texto plano
+
+✅ Correcta: C
+🧾 Explicación: [^\\]+ niega la barra invertida, permitiendo capturar un nombre de carpeta o archivo sin subdirectorios.
+
+🧠 Pregunta 48
+¿Qué alternativa permite validar tanto “persona” como “people”?
+
+A. (persona|people)
+B. person[a|e]
+C. people|persona
+D. [persona|people]
+
+✅ Correcta: A
+🧾 Explicación: La disyunción dentro de un grupo () permite aceptar cualquiera de las dos palabras.
+
+🧠 Pregunta 49
+¿Qué ocurre si colocas r'^.*$' como patrón?
+
+A. Se valida que la línea esté vacía
+B. Se captura todo el contenido de la línea
+C. Se descarta cualquier texto
+D. Se permite solo números
+
+✅ Correcta: B
+🧾 Explicación: .* captura todo, ^ y $ anclan el patrón al inicio y fin de la línea, validando la línea completa.
+
+🧠 Pregunta 50
+¿Qué ventaja ofrece usar expresiones regulares en los archivos .feature, aunque Gherkin no las interprete?
+
+A. Permite ejecutar código directamente
+B. Documenta los patrones esperados para inputs
+C. Evita definir pasos en Python
+D. Genera tests automáticos
+
+✅ Correcta: B
+🧾 Explicación: Incluir regex en ejemplos o descripciones permite que los testers comprendan claramente los formatos válidos.

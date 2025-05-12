@@ -1,0 +1,551 @@
+🧠 Pregunta 1
+¿Qué validación realiza típicamente un hook pre-commit usando expresiones regulares?
+
+A. Verifica que el mensaje de commit tenga el formato correcto
+B. Detecta conflictos de fusión en los archivos
+C. Filtra archivos por extensión y aplica linters
+D. Sube artefactos generados al repositorio
+
+✅ Correcta: C
+🧾 Explicación: El hook pre-commit se usa para asegurar que solo se suban archivos válidos (por ejemplo, con extensiones .py, .js, etc.) y que el código pase validaciones automáticas, lo cual se logra utilizando expresiones regulares en Bash.
+
+🧠 Pregunta 2
+¿Qué patrón regex se usaría para validar commits del tipo feat(nombre): descripción?
+
+A. ^\w+\(\w+\):.*$
+B. ^(feat|fix|docs|style|refactor|perf|test|chore)(\([a-z0-9\-]+\))?:(\s).{1,72}$
+C. feat:.*$
+D. .*(feat|fix).*
+
+✅ Correcta: B
+🧾 Explicación: Este patrón valida commits según el formato Conventional Commits, aceptando tipos como feat, fix, etc., con un scope opcional y una descripción de máximo 72 caracteres.
+
+🧠 Pregunta 3
+¿Cuál de las siguientes expresiones detecta marcadores de conflicto en un post-merge?
+
+A. (\.conflict)$
+B. git diff --check
+C. ^<<<<<<< |^=======|^>>>>>>>
+D. .*MERGE.*
+
+✅ Correcta: C
+🧾 Explicación: Los marcadores de conflicto generados por Git se detectan con expresiones que empiezan por ^<<<<<<<, ^======= y ^>>>>>>>, ancladas al inicio de la línea.
+
+🧠 Pregunta 4
+¿Qué funcionalidad ofrece \K en una expresión regular?
+
+A. Ancla el patrón al final de la línea
+B. Obliga coincidencia exacta
+C. Ignora todo lo que precede en la captura
+D. Escapa un carácter especial
+
+✅ Correcta: C
+🧾 Explicación: \K permite reiniciar la captura desde ese punto, descartando lo que venga antes en el patrón; útil para extraer solo la parte deseada de una coincidencia.
+
+🧠 Pregunta 5
+¿Cuál es el propósito del principio FIRST en pruebas con regex?
+
+A. Garantizar que el código pase sin tests
+B. Establecer reglas para combinar múltiples expresiones
+C. Asegurar que las pruebas sean rápidas, aisladas y fiables
+D. Ordenar los commits con base en prioridades
+
+✅ Correcta: C
+🧾 Explicación: FIRST (Fast, Isolated, Repeatable, Self-validating, Timely) busca que las pruebas sean eficientes, claras, confiables y mantenibles, características esenciales en el desarrollo guiado por pruebas.
+
+🧠 Pregunta 6
+En el ciclo Red-Green-Refactor (RGR), ¿qué sucede en la fase "Green"?
+
+A. Se define una nueva prueba que falla
+B. Se refactoriza el código o patrón
+C. Se implementa una solución mínima para pasar la prueba
+D. Se borra la prueba para evitar errores
+
+✅ Correcta: C
+🧾 Explicación: En la fase "Green" del ciclo RGR, se escribe el código más simple posible para hacer que la prueba anteriormente fallida ahora pase.
+
+🧠 Pregunta 7
+¿Cuál es la finalidad de usar re.VERBOSE en una expresión regular en Python?
+
+A. Permitir múltiples coincidencias
+B. Habilitar modo interactivo de ejecución
+C. Ignorar errores de sintaxis
+D. Añadir espacios y comentarios para legibilidad
+
+✅ Correcta: D
+🧾 Explicación: re.VERBOSE permite escribir expresiones regulares multilínea con espacios y comentarios, facilitando su lectura y mantenimiento.
+
+🧠 Pregunta 8
+¿Cuál es una ventaja de usar .fullmatch() en vez de .search()?
+
+A. Permite validar múltiples expresiones a la vez
+B. Solo busca coincidencias parciales
+C. Exige que toda la cadena cumpla con la regex
+D. Aplica lookahead negativo automáticamente
+
+✅ Correcta: C
+🧾 Explicación: .fullmatch() valida que toda la cadena coincida exactamente con la expresión regular, evitando coincidencias parciales como las que detecta .search().
+
+🧠 Pregunta 9
+¿Qué patrón de GitHub Actions permite ejecutar solo para etiquetas como v1.2.3?
+
+A. 'version-[0-9].[0-9].[0-9]'
+B. 'v\d{1,2}.\d+.\d+'
+C. 'v[0-9]+.[0-9]+.[0-9]+'
+D. 'v*.*.*'
+
+✅ Correcta: C
+🧾 Explicación: El patrón 'v[0-9]+.[0-9]+.[0-9]+' captura versiones semánticas como v1.2.3, usando cuantificadores + para uno o más dígitos.
+
+🧠 Pregunta 10
+¿Cuál es la ventaja de reemplazar una regex compleja por una búsqueda en un conjunto (set) en Python?
+
+A. Mejora el orden alfabético del código
+B. Permite buscar múltiples archivos
+C. Reduce el tiempo de búsqueda a O(1) promedio
+D. Elimina la necesidad de pruebas unitarias
+
+✅ Correcta: C
+🧾 Explicación: Usar un conjunto (set) para verificar si un texto está en una lista predefinida ofrece una búsqueda en tiempo promedio constante (O(1)), mucho más eficiente que evaluar una regex compleja.
+
+🧠 Pregunta 11
+¿Cuál es el objetivo de un hook commit-msg que usa expresiones regulares?
+
+A. Validar el contenido del archivo modificado
+B. Detectar espacios en blanco innecesarios
+C. Asegurar que el mensaje del commit cumpla con un formato
+D. Impedir que se suban archivos grandes
+
+✅ Correcta: C
+🧾 Explicación: El hook commit-msg verifica que el mensaje del commit siga una convención específica como Conventional Commits, usando regex.
+
+🧠 Pregunta 12
+¿Qué indica el anclaje $ en la expresión \.(py|js|ts|java)$?
+
+A. Que el archivo debe iniciar con esa extensión
+B. Que la extensión debe ir al final de la cadena
+C. Que se permite cualquier extensión
+D. Que debe coincidir con un nombre de carpeta
+
+✅ Correcta: B
+🧾 Explicación: El símbolo $ ancla la expresión al final de la cadena, asegurando que coincida justo al terminar, es decir, que sea la extensión final del archivo.
+
+🧠 Pregunta 13
+¿Cuál es el beneficio de extraer errores con grep -P '^(E|ERROR):' en un script de CI?
+
+A. Generar reportes de cobertura
+B. Agilizar el despliegue en producción
+C. Automatizar la extracción de mensajes críticos
+D. Ejecutar las pruebas más rápido
+
+✅ Correcta: C
+🧾 Explicación: La expresión regular busca líneas de log que comienzan con E: o ERROR:, útil para recopilar errores en reportes automáticos.
+
+🧠 Pregunta 14
+En GitHub Actions, ¿qué función cumple la instrucción paths-ignore: - 'docs/**'?
+
+A. Desactiva todas las pruebas
+B. Evita ejecutar el workflow al cambiar archivos de documentación
+C. Aumenta la cobertura de pruebas
+D. Ignora los cambios en el repositorio completo
+
+✅ Correcta: B
+🧾 Explicación: paths-ignore excluye ciertos archivos o carpetas del disparador del workflow, en este caso, cualquier cambio en docs/ no activa la CI.
+
+🧠 Pregunta 15
+¿Qué ventaja ofrece usar re.IGNORECASE en una expresión regular?
+
+A. Habilita la coincidencia de cualquier cantidad de caracteres
+B. Evita que se lance una excepción si no hay coincidencia
+C. Permite que la coincidencia no distinga entre mayúsculas y minúsculas
+D. Incrementa la velocidad de ejecución
+
+✅ Correcta: C
+🧾 Explicación: re.IGNORECASE permite que letras mayúsculas y minúsculas se consideren equivalentes en la búsqueda.
+
+🧠 Pregunta 16
+¿Cuál es una característica clave de las pruebas bien diseñadas según el principio FIRST?
+
+A. Deben ejecutarse una sola vez por versión
+B. Deben depender de un servicio externo
+C. Deben poder ejecutarse múltiples veces con el mismo resultado
+D. Deben probar múltiples condiciones a la vez
+
+✅ Correcta: C
+🧾 Explicación: Las pruebas deben ser Repeatable, es decir, deben generar el mismo resultado en cada ejecución bajo las mismas condiciones.
+
+🧠 Pregunta 17
+¿Qué efecto tiene usar (?:cat|dog)s? en una expresión regular?
+
+A. Solo captura “cat”
+B. Coincide con “cats” y “dogs”, pero evita capturar el grupo
+C. Rechaza los plurales
+D. Acepta cualquier palabra que termine en "s"
+
+✅ Correcta: B
+🧾 Explicación: (?:...) define un grupo sin captura y s? hace que el plural sea opcional, permitiendo coincidir con "cat", "cats", "dog" y "dogs".
+
+🧠 Pregunta 18
+¿Qué propósito tiene el uso de set -euo pipefail en scripts Bash?
+
+A. Permite ejecutar el script de forma paralela
+B. Aumenta la compatibilidad con sistemas antiguos
+C. Mejora la robustez del script al detenerlo ante errores
+D. Habilita el uso de expresiones regulares extendidas
+
+✅ Correcta: C
+🧾 Explicación: Esta línea configura Bash para que detenga el script ante errores (-e), variables no definidas (-u) y fallos en una tubería (-o pipefail).
+
+🧠 Pregunta 19
+¿Cuál es una ventaja de usar pytest.mark.parametrize en pruebas con regex?
+
+A. Aumenta el rendimiento de la aplicación
+B. Permite ejecutar varios casos de prueba con un solo test
+C. Obliga a cumplir el principio DRY en todos los tests
+D. Elimina la necesidad de fixtures
+
+✅ Correcta: B
+🧾 Explicación: pytest.mark.parametrize facilita ejecutar múltiples escenarios de prueba con distintos valores, ideal para validar expresiones regulares con diferentes entradas.
+
+🧠 Pregunta 20
+En una CI, ¿qué utilidad tiene capturar Duration: \K[0-9]+\.[0-9]+s?
+
+A. Validar que el mensaje tenga un formato correcto
+B. Obtener la duración de las pruebas en segundos
+C. Comparar dos ramas automáticamente
+D. Filtrar archivos temporales del repositorio
+
+✅ Correcta: B
+🧾 Explicación: Esta expresión captura únicamente la duración en segundos de las pruebas, útil para medir rendimiento en un reporte de CI.
+
+🧠 Pregunta 21
+¿Qué se busca evitar al usar \n{2,} en una transformación de texto?
+
+A. Que falten saltos de línea
+B. Que haya múltiples saltos de línea consecutivos
+C. Que se escape una expresión
+D. Que el script se detenga
+
+✅ Correcta: B
+🧾 Explicación: El patrón \n{2,} coincide con dos o más saltos de línea consecutivos, y se puede usar para reemplazarlos por solo uno o dos, limpiando el texto.
+
+🧠 Pregunta 22
+En el patrón ^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[A-Za-z\d]{8,16}$, ¿qué valida?
+
+A. Correos electrónicos
+B. Contraseñas con requisitos mínimos
+C. Formato de fechas
+D. Hashes de Git
+
+✅ Correcta: B
+🧾 Explicación: Esta regex valida contraseñas que tengan al menos una mayúscula, una minúscula y un número, con una longitud entre 8 y 16 caracteres.
+
+🧠 Pregunta 23
+¿Qué representa [\w\.-]+ dentro de una expresión regular?
+
+A. Un grupo de letras únicamente
+B. Una sola letra al inicio o fin
+C. Uno o más caracteres alfanuméricos, guiones o puntos
+D. Una línea vacía
+
+✅ Correcta: C
+🧾 Explicación: El conjunto [\w\.-] incluye caracteres alfanuméricos, guion bajo, guión y punto. El + indica que deben aparecer uno o más.
+
+🧠 Pregunta 24
+En la regex ^\d{4}-\d{2}-\d{2}$, ¿qué formato se está validando?
+
+A. UUID
+B. Fecha ISO (YYYY-MM-DD)
+C. Direcciones IP
+D. RFCs
+
+✅ Correcta: B
+🧾 Explicación: La expresión valida el formato de fechas ISO 8601 con año de cuatro dígitos, mes y día de dos.
+
+🧠 Pregunta 25
+¿Por qué es útil el patrón (?P<nombre>...) en una expresión regular?
+
+A. Para eliminar grupos anidados
+B. Para evitar capturas
+C. Para nombrar los grupos capturados
+D. Para ignorar los errores de coincidencia
+
+✅ Correcta: C
+🧾 Explicación: (?P<nombre>...) crea un grupo de captura nombrado, lo que facilita extraer datos como campos de logs por nombre en lugar de índices.
+
+🧠 Pregunta 26
+¿Qué componente del patrón RELEASE\-[0-9]{4} define la cantidad de dígitos?
+
+A. RELEASE-
+B. \K
+C. [0-9]{4}
+D. .
+
+✅ Correcta: C
+🧾 Explicación: [0-9]{4} especifica que deben coincidir exactamente cuatro dígitos después de la palabra "RELEASE-".
+
+🧠 Pregunta 27
+¿Por qué se utiliza \b en patrones como \b(?:cat|dog)\b?
+
+A. Para capturar grupos sin usar paréntesis
+B. Para evitar coincidencias parciales dentro de otras palabras
+C. Para acelerar la ejecución
+D. Para incluir todos los caracteres posibles
+
+✅ Correcta: B
+🧾 Explicación: \b es un límite de palabra, que asegura que la coincidencia no ocurra dentro de palabras como "scatter" o "hotdog".
+
+🧠 Pregunta 28
+¿Qué se busca al aplicar el patrón color? en una expresión?
+
+A. Que se permita solo la palabra “color”
+B. Que la letra “u” sea opcional
+C. Que se ignoren las letras
+D. Que el texto inicie con la letra “c”
+
+✅ Correcta: B
+🧾 Explicación: El patrón colou?r usa ? para hacer opcional la letra "u", permitiendo variantes como “color” y “colour”.
+
+🧠 Pregunta 29
+¿Cuándo se recomienda reemplazar una expresión regular por una colección (set)?
+
+A. Cuando se validan muchas palabras exactas repetidamente
+B. Cuando se quiere aumentar la complejidad
+C. Cuando se requiere evaluar varias expresiones a la vez
+D. Nunca, ya que regex es siempre más eficiente
+
+✅ Correcta: A
+🧾 Explicación: Usar un set permite búsquedas más rápidas que una regex cuando se trata de verificar igualdad con muchas palabras exactas.
+
+🧠 Pregunta 30
+En el ciclo RGR, ¿qué objetivo tiene la fase Refactor?
+
+A. Eliminar los tests
+B. Simplificar o mejorar la expresión regular sin romper tests
+C. Repetir los errores del test inicial
+D. Cambiar el flujo de trabajo de Git
+
+✅ Correcta: B
+🧾 Explicación: En la fase Refactor se reorganiza el código o la expresión para mejorar claridad o rendimiento, asegurándose de no romper los tests existentes.
+
+
+🧠 Pregunta 31
+¿Qué hace el hook post-merge al buscar el patrón 'trailing whitespace'?
+
+A. Elimina líneas vacías
+B. Detecta líneas con espacios al final
+C. Encuentra líneas duplicadas
+D. Borra archivos temporales
+
+✅ Correcta: B
+🧾 Explicación: El comando git diff --check puede detectar líneas con espacios en blanco al final, que son identificadas mediante ese patrón.
+
+🧠 Pregunta 32
+¿Qué ventaja ofrece usar (?:...) en una expresión regular?
+
+A. Repite la expresión indefinidamente
+B. Captura múltiples grupos
+C. Define un grupo sin capturarlo
+D. Permite comentarios en la regex
+
+✅ Correcta: C
+🧾 Explicación: (?:...) crea un grupo de agrupación sin captura, útil cuando no se necesita almacenar el valor coincidente.
+
+🧠 Pregunta 33
+¿Qué hace re.compile(..., re.VERBOSE) en Python?
+
+A. Desactiva los caracteres especiales
+B. Permite escribir expresiones con comentarios y saltos de línea
+C. Agrega tolerancia a errores
+D. Convierte la expresión en una lista
+
+✅ Correcta: B
+🧾 Explicación: El flag re.VERBOSE permite escribir regex con espacios y comentarios, haciendo el patrón más legible.
+
+🧠 Pregunta 34
+¿Cuál es el beneficio de usar \K en un grep -Po dentro de GitHub Actions?
+
+A. Repetir el patrón anterior
+B. Mostrar solo el prefijo
+C. Excluir el prefijo de la captura
+D. Usar coincidencias multilínea
+
+✅ Correcta: C
+🧾 Explicación: \K reinicia la captura en ese punto, descartando lo que precede, ideal para extraer solo el número tras RELEASE-.
+
+🧠 Pregunta 35
+¿Por qué se recomienda usar .fullmatch() en lugar de .match() o .search() en validaciones?
+
+A. Porque es más rápida
+B. Porque ignora errores
+C. Porque requiere coincidencia exacta de toda la cadena
+D. Porque permite valores nulos
+
+✅ Correcta: C
+🧾 Explicación: .fullmatch() exige que toda la cadena coincida con el patrón, a diferencia de .search() que encuentra coincidencias parciales.
+
+🧠 Pregunta 36
+¿Qué acción típica se realiza en la fase Arrange del patrón AAA?
+
+A. Ejecutar la acción a probar
+B. Definir las aserciones
+C. Preparar datos y el entorno de prueba
+D. Medir el tiempo de ejecución
+
+✅ Correcta: C
+🧾 Explicación: La fase Arrange establece los datos de entrada, mocks o configuraciones necesarias para realizar la prueba.
+
+🧠 Pregunta 37
+¿Qué patrón valida correctamente correos como “user@example.com”?
+
+A. ^\d{3}\.com$
+B. ^[\w\.-]+@[\w\.-]+\.(com|net|org|co)$
+C. ^user@.+$
+D. .+\.com
+
+✅ Correcta: B
+🧾 Explicación: La expresión incluye alfanuméricos, guiones, puntos, arroba y termina con dominios válidos.
+
+🧠 Pregunta 38
+¿Cuál es el riesgo de usar patrones como (a|aa)+b sin precaución?
+
+A. La expresión nunca se ejecuta
+B. Puede provocar un backtracking excesivo
+C. Obliga a usar re.VERBOSE
+D. Solo funciona con strings vacíos
+
+✅ Correcta: B
+🧾 Explicación: Ese tipo de patrón causa explosión exponencial de combinaciones en backtracking, afectando rendimiento.
+
+🧠 Pregunta 39
+¿Qué permite lograr paths-ignore: - 'docs/**' en GitHub Actions?
+
+A. Ejecutar acciones solo en producción
+B. Ignorar errores de documentación
+C. Prevenir la ejecución de CI cuando solo se modifican archivos en docs/
+D. Restringir el push a usuarios con permisos especiales
+
+✅ Correcta: C
+🧾 Explicación: paths-ignore impide que un push en ciertas rutas (como docs/) dispare el flujo de trabajo.
+
+🧠 Pregunta 40
+¿Qué uso se le da comúnmente al patrón \d{4}-\d{2}-\d{2}?
+
+A. Validación de emails
+B. Identificación de versiones
+C. Validación de fechas ISO
+D. Filtrado de hashes
+
+✅ Correcta: C
+🧾 Explicación: Ese patrón representa fechas en formato YYYY-MM-DD, muy usado en logs y validaciones.
+
+🧠 Pregunta 41
+En TDD, ¿cuál es el propósito del paso Red en el ciclo RGR?
+
+A. Refactorizar el código antes de probar
+B. Crear un test que pase exitosamente
+C. Escribir una prueba que falle inicialmente
+D. Configurar Git para automatizar pruebas
+
+✅ Correcta: C
+🧾 Explicación: La etapa "Red" implica escribir una prueba que falle porque la funcionalidad aún no está implementada.
+
+🧠 Pregunta 42
+¿Cuál es la principal diferencia entre grep -P y grep -Po?
+
+A. -Po permite patrones negativos
+B. -P ignora comentarios
+C. -Po muestra solo la coincidencia sin línea completa
+D. No hay diferencia
+
+✅ Correcta: C
+🧾 Explicación: -Po combina Perl regex con salida solo de coincidencia (-o), útil para extraer partes específicas de texto.
+
+🧠 Pregunta 43
+¿Qué hace retention-days: 7 en GitHub Actions?
+
+A. Ejecuta el workflow durante 7 días
+B. Elimina los artefactos luego de 7 días
+C. Espera 7 días antes de correr el CI
+D. Muestra errores cada 7 días
+
+✅ Correcta: B
+🧾 Explicación: Define cuántos días se almacenará un artefacto antes de ser eliminado automáticamente por GitHub.
+
+🧠 Pregunta 44
+¿Qué representa el patrón build/**/*.log en GitHub Actions?
+
+A. Todos los logs que empiezan con “build/”
+B. Todos los logs de un solo nivel
+C. Todos los archivos .log dentro de build/ y subcarpetas
+D. Ningún archivo válido
+
+✅ Correcta: C
+🧾 Explicación: El doble asterisco (**) indica coincidencia recursiva en todos los niveles dentro de build/.
+
+🧠 Pregunta 45
+¿Qué tipo de validación se logra con (?=.*[A-Z])(?=.*[a-z])(?=.*\d)?
+
+A. Validación de nombres
+B. Validación de contraseñas con al menos una mayúscula, minúscula y dígito
+C. Validación de emails
+D. Validación de fechas
+
+✅ Correcta: B
+🧾 Explicación: Son lookaheads positivos que aseguran la existencia de ciertos tipos de caracteres en la cadena.
+
+🧠 Pregunta 46
+¿Qué representa [\w\-\.]+ en una expresión regular?
+
+A. Un solo carácter especial
+B. Ningún carácter permitido
+C. Una o más letras, guiones o puntos
+D. Una URL completa
+
+✅ Correcta: C
+🧾 Explicación: \w incluye letras, dígitos y guion bajo; junto con \- y \. representa varios caracteres comunes en emails o rutas.
+
+🧠 Pregunta 47
+¿Qué patrón permite validar códigos como “ABC-1234”?
+
+A. ^[A-Z]{3}-\d{4}$
+B. \w+\d+
+C. ABC-[0-9]+
+D. ^.*-.*$
+
+✅ Correcta: A
+🧾 Explicación: Valida tres letras mayúsculas seguidas de un guion y cuatro dígitos exactamente.
+
+🧠 Pregunta 48
+¿Qué significa set -e al inicio de un script Bash?
+
+A. El script ignora los errores
+B. El script se detiene si ocurre un error
+C. El script elimina espacios innecesarios
+D. Ejecuta los comandos dos veces
+
+✅ Correcta: B
+🧾 Explicación: -e indica que el script debe abortar si cualquier comando falla, lo que mejora la robustez.
+
+🧠 Pregunta 49
+¿Por qué se recomienda usar pytest en pipelines de integración continua?
+
+A. Es el único compatible con Git
+B. Permite validar regex automáticamente sin configuración
+C. Facilita la ejecución automatizada y generación de logs de prueba
+D. Porque reemplaza a git diff
+
+✅ Correcta: C
+🧾 Explicación: pytest permite ejecutar pruebas fácilmente, generar logs y reportes que pueden ser procesados por CI.
+
+🧠 Pregunta 50
+¿Cuál es una buena práctica tras múltiples mejoras a una expresión regular compleja?
+
+A. Borrar todos los tests existentes
+B. Convertir la regex en string JSON
+C. Reemplazar la validación con una función en Python que use set
+D. Eliminar todos los grupos de captura
+
+✅ Correcta: C
+🧾 Explicación: Cuando la validación consiste en verificar si un string está en un conjunto fijo de palabras, usar un set es más eficiente que una regex compleja.
+
