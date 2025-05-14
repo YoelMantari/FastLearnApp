@@ -1,0 +1,785 @@
+
+🧠 **Pregunta 1**
+¿Qué representa un peso (\$w\$) en una neurona artificial?
+
+A. Una variable de salida
+B. Un tipo de función de activación
+C. La importancia de una entrada
+D. Un número aleatorio sin efecto
+
+✅ Correcta: C
+🧾 Explicación: El peso representa cuánto influye una entrada en la salida de la neurona. Durante el entrenamiento, se ajusta para mejorar la predicción.
+
+---
+
+🧠 **Pregunta 2**
+¿Cuál es la función de una capa oculta en una red neuronal?
+
+A. Recibir datos crudos como entrada
+B. Producir directamente la salida final
+C. Detectar patrones complejos no evidentes
+D. Eliminar entradas redundantes
+
+✅ Correcta: C
+🧾 Explicación: Las capas ocultas procesan la información y ayudan a encontrar patrones que no son lineales ni obvios en los datos.
+
+---
+
+🧠 **Pregunta 3**
+¿Qué sucede si una red neuronal no tiene capas ocultas?
+
+A. No puede realizar operaciones básicas
+B. Se comporta como una regresión lineal o logística
+C. Su salida siempre será 0
+D. Se vuelve una red recurrente
+
+✅ Correcta: B
+🧾 Explicación: Sin capas ocultas, una red neuronal actúa como una regresión lineal (o logística si tiene función sigmoide).
+
+---
+
+🧠 **Pregunta 4**
+¿Cuál es la función de activación más usada en capas ocultas?
+
+A. Threshold
+B. Sigmoid
+C. Tanh
+D. ReLU
+
+✅ Correcta: D
+🧾 Explicación: ReLU es eficiente, rápida y permite manejar grandes redes, por eso es la más utilizada en capas ocultas.
+
+---
+
+🧠 **Pregunta 5**
+¿Cuál es el propósito de la normalización o estandarización de datos?
+
+A. Aumentar el número de entradas
+B. Disminuir el aprendizaje de la red
+C. Acelerar la convergencia del entrenamiento
+D. Eliminar valores atípicos
+
+✅ Correcta: C
+🧾 Explicación: Al mantener los valores en un rango uniforme, la red aprende más rápido y con mayor estabilidad.
+
+---
+
+🧠 **Pregunta 6**
+¿Qué significa el término “backpropagation”?
+
+A. Conexión inversa entre neuronas
+B. Proceso de enviar señales entre neuronas
+C. Ajuste de pesos basado en el error
+D. Predicción final del modelo
+
+✅ Correcta: C
+🧾 Explicación: Backpropagation es el proceso por el cual el error se propaga hacia atrás para ajustar los pesos y mejorar el modelo.
+
+---
+
+🧠 **Pregunta 7**
+¿Qué tipo de salida tiene un modelo de regresión en redes neuronales?
+
+A. Un número entre 0 y 1
+B. Un número entero
+C. Una clase específica
+D. Un valor numérico continuo
+
+✅ Correcta: D
+🧾 Explicación: En regresión, la salida es un número continuo como un precio, temperatura, etc.
+
+---
+
+🧠 **Pregunta 8**
+¿Qué representa una época (epoch) en el entrenamiento de redes neuronales?
+
+A. Una actualización de un peso
+B. Una observación procesada
+C. Un ciclo completo por todos los datos
+D. Un tipo de función de activación
+
+✅ Correcta: C
+🧾 Explicación: Una época es una pasada completa de todos los datos de entrenamiento por la red para actualizar los pesos.
+
+---
+
+🧠 **Pregunta 9**
+¿Para qué sirve la función de activación sigmoid?
+
+A. Prevenir sobreajuste
+B. Crear múltiples salidas
+C. Generar una salida entre 0 y 1 interpretada como probabilidad
+D. Activar neuronas negativas
+
+✅ Correcta: C
+🧾 Explicación: La función sigmoide convierte la entrada en un valor entre 0 y 1, ideal para clasificaciones binarias.
+
+---
+
+🧠 **Pregunta 10**
+¿Qué combinación de funciones es recomendable en una red neuronal para clasificación binaria?
+
+A. Capa oculta con Tanh, salida con Threshold
+B. Capa oculta con ReLU, salida con Sigmoid
+C. Capa oculta con Threshold, salida con ReLU
+D. Capa oculta con Sigmoid, salida con ReLU
+
+✅ Correcta: B
+🧾 Explicación: ReLU permite un aprendizaje eficiente en capas ocultas, y Sigmoid es ideal para obtener una probabilidad final en problemas binarios.
+
+---
+
+Perfecto. Aquí tienes **30 preguntas más** tipo examen, con opciones, respuesta correcta y explicación, basadas en la lectura que enviaste sobre redes neuronales artificiales:
+
+---
+
+🧠 **Pregunta 11**
+¿Qué parte de una neurona biológica recibe las señales de entrada?
+
+A. Soma
+B. Axón
+C. Dendritas
+D. Sinapsis
+
+✅ Correcta: C
+🧾 Explicación: Las dendritas son ramificaciones que reciben señales de otras neuronas.
+
+---
+
+🧠 **Pregunta 12**
+En una neurona artificial, ¿qué representa el bias?
+
+A. Un tipo de entrada fija
+B. Un valor que ajusta la salida final
+C. La importancia de la función de activación
+D. Un error aleatorio
+
+✅ Correcta: B
+🧾 Explicación: El bias permite ajustar la salida incluso cuando todas las entradas son cero, ayudando a mejorar el aprendizaje.
+
+---
+
+🧠 **Pregunta 13**
+¿Qué hace la función de activación?
+
+A. Multiplica los pesos por las entradas
+B. Calcula el error del modelo
+C. Decide si una neurona se activa o no
+D. Normaliza los datos
+
+✅ Correcta: C
+🧾 Explicación: La función de activación transforma la suma ponderada en la salida de la neurona.
+
+---
+
+🧠 **Pregunta 14**
+¿Qué rango de valores puede producir la función tanh?
+
+A. Entre 0 y 1
+B. Entre -1 y 1
+C. Desde 0 hasta infinito
+D. Solo valores positivos
+
+✅ Correcta: B
+🧾 Explicación: Tanh es una función centrada en cero que produce valores entre -1 y 1.
+
+---
+
+🧠 **Pregunta 15**
+¿Por qué es útil la función ReLU?
+
+A. Genera probabilidades
+B. Elimina entradas negativas
+C. Reduce el tamaño de la red
+D. Mejora el tiempo de convergencia
+
+✅ Correcta: D
+🧾 Explicación: ReLU es eficiente, evita el problema del desvanecimiento del gradiente y permite un entrenamiento más rápido.
+
+---
+
+🧠 **Pregunta 16**
+¿Qué sucede si no normalizas los datos antes de entrenar una red?
+
+A. El modelo será más preciso
+B. Los pesos serán irrelevantes
+C. El entrenamiento será más lento y menos estable
+D. No se podrá usar la función sigmoid
+
+✅ Correcta: C
+🧾 Explicación: Normalizar ayuda a que todos los datos estén en rangos similares, mejorando la estabilidad del entrenamiento.
+
+---
+
+🧠 **Pregunta 17**
+¿Qué función de activación produce salidas tipo "todo o nada"?
+
+A. ReLU
+B. Sigmoid
+C. Threshold
+D. Tanh
+
+✅ Correcta: C
+🧾 Explicación: Threshold o escalón es una función binaria que activa la neurona si se pasa un umbral.
+
+---
+
+🧠 **Pregunta 18**
+¿Cuál es el resultado de una red con múltiples capas ocultas?
+
+A. Menor tiempo de entrenamiento
+B. Más precisión y capacidad de detectar patrones complejos
+C. Menor uso de funciones de activación
+D. No mejora respecto a una sola capa
+
+✅ Correcta: B
+🧾 Explicación: Más capas permiten que la red aprenda representaciones más abstractas y profundas.
+
+---
+
+🧠 **Pregunta 19**
+¿Qué es una observación en el contexto de redes neuronales?
+
+A. Una columna en el dataset
+B. Un dato fuera de lo común
+C. Una fila de datos con entradas y salida esperada
+D. Un error del modelo
+
+✅ Correcta: C
+🧾 Explicación: Una observación es un conjunto de características (una fila) que se usa para entrenar o predecir.
+
+---
+
+🧠 **Pregunta 20**
+¿Qué significa que una neurona artificial esté “activada”?
+
+A. Que ha sido eliminada
+B. Que su salida es diferente de cero
+C. Que ha recibido muchas entradas
+D. Que no se puede ajustar
+
+✅ Correcta: B
+🧾 Explicación: La activación ocurre cuando la suma ponderada pasa por la función de activación y produce una salida significativa.
+
+---
+
+🧠 **Pregunta 21**
+¿Qué parte del modelo ajusta los pesos para mejorar su rendimiento?
+
+A. La capa de entrada
+B. La función de activación
+C. El proceso de entrenamiento
+D. La normalización
+
+✅ Correcta: C
+🧾 Explicación: Durante el entrenamiento, los pesos se ajustan para minimizar el error entre predicción y valor real.
+
+---
+
+🧠 **Pregunta 22**
+¿Qué sucede si usamos una red sin función de activación?
+
+A. Se convierte en un clasificador binario
+B. No puede representar relaciones no lineales
+C. Se vuelve más precisa
+D. No requiere entrenamiento
+
+✅ Correcta: B
+🧾 Explicación: Las funciones de activación permiten que la red aprenda relaciones no lineales. Sin ellas, solo aprende funciones lineales.
+
+---
+
+🧠 **Pregunta 23**
+¿Cuál es el propósito de la función de costo?
+
+A. Calcular los pesos iniciales
+B. Determinar la cantidad de capas necesarias
+C. Medir el error entre la predicción y el valor real
+D. Eliminar neuronas innecesarias
+
+✅ Correcta: C
+🧾 Explicación: La función de costo evalúa qué tan mal está prediciendo el modelo, lo cual guía el ajuste de pesos.
+
+---
+
+🧠 **Pregunta 24**
+En una red neuronal, ¿qué ocurre en cada época?
+
+A. Se ajustan los pesos al azar
+B. Se entrena con una fila de datos
+C. Se entrena con todo el conjunto de datos una vez
+D. Se eliminan neuronas inactivas
+
+✅ Correcta: C
+🧾 Explicación: Una época representa una pasada completa por todos los datos de entrenamiento para ajustar pesos.
+
+---
+
+🧠 **Pregunta 25**
+¿Qué tipo de problemas resuelve la red si la salida es continua?
+
+A. Clasificación
+B. Regresión
+C. Agrupamiento
+D. Reducción de dimensionalidad
+
+✅ Correcta: B
+🧾 Explicación: Cuando la salida es un número continuo, la red está realizando una tarea de regresión.
+
+---
+
+🧠 **Pregunta 26**
+¿En qué parte de la red se realiza la predicción final?
+
+A. En la capa de entrada
+B. En las capas ocultas
+C. En la capa de salida
+D. En los pesos
+
+✅ Correcta: C
+🧾 Explicación: La capa de salida produce el valor final predicho por el modelo, sea clasificación o regresión.
+
+---
+
+🧠 **Pregunta 27**
+¿Qué permite que una red neuronal aprenda?
+
+A. El cambio constante de funciones de activación
+B. La retropropagación del error y ajuste de pesos
+C. El uso de entradas siempre iguales
+D. Tener muchas capas de salida
+
+✅ Correcta: B
+🧾 Explicación: La red aprende al ajustar los pesos mediante retropropagación, guiada por el error de predicción.
+
+---
+
+🧠 **Pregunta 28**
+¿Cuál es el primer paso al recibir una observación en la red?
+
+A. Calcular la función de activación
+B. Predecir el resultado
+C. Recibir las entradas y multiplicarlas por los pesos
+D. Comparar con el valor real
+
+✅ Correcta: C
+🧾 Explicación: Primero, se reciben las entradas y se combinan con los pesos antes de aplicar cualquier función.
+
+---
+
+🧠 **Pregunta 29**
+¿Qué tipo de salida se usa para clasificaciones multiclase?
+
+A. Un solo valor continuo
+B. Una variable booleana
+C. Varias salidas dummy o codificadas
+D. Un número negativo
+
+✅ Correcta: C
+🧾 Explicación: En clasificación multiclase, se usa una salida por clase y se codifican como variables dummy (0 o 1).
+
+---
+
+🧠 **Pregunta 30**
+¿Qué analogía se usa para describir cómo trabajan las neuronas en conjunto?
+
+A. Un motor de coche
+B. Una ecuación matemática
+C. Una colonia de hormigas
+D. Un archivo comprimido
+
+✅ Correcta: C
+🧾 Explicación: Como las hormigas, cada neurona individual hace poco, pero juntas logran tareas complejas.
+
+---
+
+🧠 **Pregunta 31**
+¿Qué representa el símbolo \$\hat{y}\$ en una red neuronal?
+
+A. El valor real observado
+B. El promedio de las entradas
+C. La predicción del modelo
+D. El error de predicción
+
+✅ Correcta: C
+🧾 Explicación: \$\hat{y}\$ es la salida predicha por la red neuronal para una observación.
+
+---
+
+🧠 **Pregunta 32**
+¿Cuál es el objetivo final de una red neuronal entrenada?
+
+A. Minimizar el número de neuronas
+B. Predecir con precisión sobre nuevos datos
+C. Cambiar sus funciones de activación
+D. Reducir el número de épocas
+
+✅ Correcta: B
+🧾 Explicación: Una red bien entrenada debe generalizar correctamente y predecir bien sobre datos no vistos.
+
+---
+
+🧠 **Pregunta 33**
+¿Qué parte de una neurona artificial se asemeja al axón biológico?
+
+A. Las entradas
+B. El peso
+C. La salida
+D. La sinapsis
+
+✅ Correcta: C
+🧾 Explicación: El axón transmite la salida de una neurona a otra, lo que equivale al output en una neurona artificial.
+
+---
+
+🧠 **Pregunta 34**
+¿Qué sucede con la salida si una entrada negativa pasa por ReLU?
+
+A. Se convierte en 1
+B. Se mantiene igual
+C. Se transforma en 0
+D. Se invierte el signo
+
+✅ Correcta: C
+🧾 Explicación: La función ReLU convierte cualquier valor negativo en 0, bloqueando la activación.
+
+---
+
+🧠 **Pregunta 35**
+¿Cuándo se detiene el entrenamiento de una red neuronal?
+
+A. Cuando ya no hay entradas nuevas
+B. Cuando el error es cero
+C. Cuando se alcanza el número de épocas o se minimiza el error
+D. Después de la primera predicción
+
+✅ Correcta: C
+🧾 Explicación: El entrenamiento se detiene al alcanzar un número de épocas o cuando el error ya no mejora.
+
+
+---
+
+🧠 **Pregunta 36**
+¿Qué relación hay entre pesos y entradas en una neurona artificial?
+
+A. Se suman directamente
+B. Las entradas determinan el número de pesos
+C. Cada entrada se multiplica por su peso correspondiente
+D. Los pesos reemplazan a las entradas
+
+✅ Correcta: C
+🧾 Explicación: Cada entrada se multiplica por un peso que representa su importancia para la predicción.
+
+---
+
+🧠 **Pregunta 37**
+¿Qué nombre recibe la suma ponderada de entradas y pesos más el bias?
+
+A. Salida
+B. Error
+C. Entrada neta
+D. Activación
+
+✅ Correcta: C
+🧾 Explicación: La entrada neta es el resultado de combinar entradas y pesos, más el bias, antes de aplicar la función de activación.
+
+---
+
+🧠 **Pregunta 38**
+¿Cuál es la ventaja de usar la función Tanh en lugar de Sigmoid?
+
+A. Es más rápida
+B. Tiene un rango mayor
+C. Está centrada en cero
+D. Requiere menos datos
+
+✅ Correcta: C
+🧾 Explicación: Tanh produce valores entre -1 y 1, lo cual puede facilitar el aprendizaje al estar centrada en cero.
+
+---
+
+🧠 **Pregunta 39**
+¿Qué se debe hacer si los datos tienen escalas muy distintas?
+
+A. Aplicar dropout
+B. Normalizarlos o estandarizarlos
+C. Usar más neuronas
+D. Cambiar la función de activación
+
+✅ Correcta: B
+🧾 Explicación: La normalización y estandarización ajustan los datos para que tengan rangos similares y el modelo aprenda mejor.
+
+---
+
+🧠 **Pregunta 40**
+¿Qué determina el número de neuronas en la capa de salida?
+
+A. El número de capas ocultas
+B. El número de entradas
+C. El tipo de problema (regresión, binaria, multiclase)
+D. El valor del bias
+
+✅ Correcta: C
+🧾 Explicación: La salida depende del tipo de problema: 1 neurona para regresión o binaria, varias para clasificación multiclase.
+
+---
+
+🧠 **Pregunta 41**
+¿Qué función de activación usarías para una red neuronal que clasifica entre manzana, plátano y naranja?
+
+A. Threshold
+B. Tanh
+C. Softmax
+D. ReLU
+
+✅ Correcta: C
+🧾 Explicación: Softmax convierte los valores en probabilidades que suman 1, ideal para clasificación multiclase.
+
+---
+
+🧠 **Pregunta 42**
+¿Qué representa la sinapsis en una red neuronal artificial?
+
+A. La función de activación
+B. El proceso de entrenamiento
+C. La conexión con un peso entre dos neuronas
+D. El conjunto de capas ocultas
+
+✅ Correcta: C
+🧾 Explicación: La sinapsis artificial es el enlace con peso entre una neurona y otra.
+
+---
+
+🧠 **Pregunta 43**
+¿Qué hace la red si una propiedad tiene más de 100 años, según el ejemplo de neuronas?
+
+A. Ignora la edad
+B. Reduce el precio
+C. Activa una neurona especializada
+D. Cambia la función de activación
+
+✅ Correcta: C
+🧾 Explicación: Se activa una neurona diseñada para detectar propiedades históricas con más de 100 años.
+
+---
+
+🧠 **Pregunta 44**
+¿Por qué ReLU es más eficiente que sigmoid en redes profundas?
+
+A. Es más precisa
+B. Tiene un rango negativo
+C. No activa valores negativos y es computacionalmente más simple
+D. Funciona solo con datos pequeños
+
+✅ Correcta: C
+🧾 Explicación: ReLU es rápida y evita cálculos innecesarios con entradas negativas (las convierte en 0).
+
+---
+
+🧠 **Pregunta 45**
+¿Qué tipo de modelo es una red sin capas ocultas y con función sigmoid?
+
+A. Regresión lineal
+B. Árbol de decisión
+C. Regresión logística
+D. K-NN
+
+✅ Correcta: C
+🧾 Explicación: Una red sin capas ocultas con activación sigmoide equivale a una regresión logística.
+
+---
+
+🧠 **Pregunta 46**
+¿Qué significa que los pesos se ajusten en dirección opuesta al gradiente?
+
+A. Aumentan su valor
+B. Disminuyen en cada época
+C. Buscan minimizar el error
+D. Cambian aleatoriamente
+
+✅ Correcta: C
+🧾 Explicación: Se actualizan en la dirección que reduce la función de costo, lo que mejora las predicciones.
+
+---
+
+🧠 **Pregunta 47**
+¿Cuál es el propósito del bias en una neurona?
+
+A. Impedir que se activen todas las neuronas
+B. Normalizar las entradas
+C. Desplazar la función de activación
+D. Representar el error
+
+✅ Correcta: C
+🧾 Explicación: El bias ajusta el punto de activación de la función, actuando como un desplazamiento.
+
+---
+
+🧠 **Pregunta 48**
+¿Qué sucede si el modelo tiene muchos errores durante el entrenamiento?
+
+A. Se reinician los pesos
+B. Se ajustan los pesos usando backpropagation
+C. Se elimina una capa
+D. Se detiene el entrenamiento
+
+✅ Correcta: B
+🧾 Explicación: Los errores se retropropagan y permiten ajustar los pesos para reducir ese error.
+
+---
+
+🧠 **Pregunta 49**
+¿Qué representa el valor de salida de una función sigmoid?
+
+A. Una clase exacta
+B. Una cantidad continua
+C. Una probabilidad entre 0 y 1
+D. El promedio de los pesos
+
+✅ Correcta: C
+🧾 Explicación: La función sigmoide devuelve un valor entre 0 y 1 que puede interpretarse como probabilidad.
+
+---
+
+🧠 **Pregunta 50**
+¿Qué pasa si el número de épocas es demasiado alto?
+
+A. La red no aprenderá
+B. Puede ocurrir sobreajuste (overfitting)
+C. Se eliminan neuronas
+D. El modelo se vuelve lineal
+
+✅ Correcta: B
+🧾 Explicación: Demasiadas épocas pueden hacer que el modelo aprenda demasiado bien el entrenamiento y falle con nuevos datos.
+
+---
+
+🧠 **Pregunta 51**
+¿Qué técnica se usa para procesar muchas observaciones al mismo tiempo?
+
+A. Retroalimentación
+B. Minibatch
+C. Backpropagation
+D. Normalización
+
+✅ Correcta: B
+🧾 Explicación: Minibatch permite que varias observaciones se procesen en paralelo, acelerando el entrenamiento.
+
+---
+
+🧠 **Pregunta 52**
+¿Cuál es el flujo básico de una red neuronal simple?
+
+A. Salida → Entrada → Oculta
+B. Entrada → Salida → Oculta
+C. Entrada → Oculta → Salida
+D. Bias → Salida → Oculta
+
+✅ Correcta: C
+🧾 Explicación: El flujo de información siempre va desde la entrada, pasa por capas ocultas y termina en la salida.
+
+---
+
+🧠 **Pregunta 53**
+¿Qué valor de activación tiene una ReLU con entrada de -5?
+
+A. -5
+B. 5
+C. 0
+D. 1
+
+✅ Correcta: C
+🧾 Explicación: ReLU convierte todos los valores negativos en 0.
+
+---
+
+🧠 **Pregunta 54**
+¿Qué pasaría si se usaran solo funciones lineales en todas las capas?
+
+A. El modelo no se entrena
+B. El modelo no aprende patrones complejos
+C. La función de costo no funciona
+D. Las capas ocultas no existen
+
+✅ Correcta: B
+🧾 Explicación: Las funciones lineales no pueden capturar relaciones no lineales complejas, por eso se usan activaciones.
+
+---
+
+🧠 **Pregunta 55**
+¿Cuál es el objetivo del descenso por gradiente?
+
+A. Aumentar los errores
+B. Hacer más rápida la predicción
+C. Minimizar la función de costo
+D. Predecir el valor real sin entrenamiento
+
+✅ Correcta: C
+🧾 Explicación: Es una técnica que ajusta pesos para reducir el error, o función de costo.
+
+---
+
+🧠 **Pregunta 56**
+¿Qué puede pasar si no usamos función de activación?
+
+A. Las capas ocultas no procesan
+B. El modelo se detiene
+C. El modelo no podrá clasificar correctamente
+D. El bias no se actualiza
+
+✅ Correcta: C
+🧾 Explicación: Sin función de activación, el modelo se reduce a una combinación lineal y no puede aprender patrones complejos.
+
+---
+
+🧠 **Pregunta 57**
+¿Cuál de estas funciones tiene una salida en el rango \[0, ∞)?
+
+A. Threshold
+B. Sigmoid
+C. ReLU
+D. Tanh
+
+✅ Correcta: C
+🧾 Explicación: ReLU solo da valores mayores o iguales a 0, ideal para capas ocultas.
+
+---
+
+🧠 **Pregunta 58**
+¿Qué hace la red después de aplicar la función de activación?
+
+A. Ajusta los pesos
+B. Calcula la media
+C. Pasa la salida a la siguiente capa
+D. Borra las entradas
+
+✅ Correcta: C
+🧾 Explicación: La salida activada se transmite a las neuronas siguientes.
+
+---
+
+🧠 **Pregunta 59**
+¿Cuál es el rol de las capas ocultas?
+
+A. Normalizar los datos
+B. Combinar pesos y bias
+C. Aprender patrones intermedios entre entrada y salida
+D. Aplicar función de costo
+
+✅ Correcta: C
+🧾 Explicación: Las capas ocultas permiten que la red detecte relaciones no evidentes y construya abstracciones.
+
+---
+
+🧠 **Pregunta 60**
+¿Qué resultado espera una red neuronal en una tarea de clasificación binaria?
+
+A. Un número negativo
+B. Un valor booleano
+C. Una probabilidad entre 0 y 1
+D. Una etiqueta textual
+
+✅ Correcta: C
+🧾 Explicación: En clasificación binaria, la red devuelve una probabilidad que puede ser umbralizada (por ejemplo, >0.5 es "sí").
+
+---
