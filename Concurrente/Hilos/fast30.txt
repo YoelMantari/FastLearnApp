@@ -1,0 +1,334 @@
+
+🧠 Pregunta 1
+¿Qué es la concurrencia en programación?
+
+A. Ejecutar un solo proceso por vez.
+B. Ejecutar múltiples instrucciones en orden secuencial.
+C. Capacidad de realizar múltiples tareas al mismo tiempo.
+D. Ejecutar procesos sin usar memoria compartida.
+
+✅ Correcta: C
+🧾 Explicación: La concurrencia permite que múltiples tareas se ejecuten simultáneamente o aparenten hacerlo.
+
+🧠 Pregunta 2
+¿Cuál de las siguientes afirmaciones es verdadera sobre un proceso?
+
+A. Comparte su memoria con otros procesos.
+B. Es una unidad ligera dentro de un hilo.
+C. Tiene su propio espacio de memoria.
+D. No requiere comunicación entre procesos.
+
+✅ Correcta: C
+🧾 Explicación: Un proceso tiene su propio espacio de memoria y recursos, a diferencia de los hilos.
+
+🧠 Pregunta 3
+¿Qué ventaja tienen los hilos respecto a los procesos?
+
+A. Se ejecutan más lentos.
+B. No pueden compartir memoria.
+C. Su comunicación es más difícil.
+D. Son más ligeros y eficientes.
+
+✅ Correcta: D
+🧾 Explicación: Los hilos son más livianos y comparten la memoria del proceso, facilitando la comunicación.
+
+🧠 Pregunta 4
+¿Qué clase en Java se puede extender para crear un hilo?
+
+A. ThreadPool
+B. Thread
+C. Runnable
+D. Executor
+
+✅ Correcta: B
+🧾 Explicación: La clase Thread permite crear un hilo extendiéndola y sobreescribiendo el método run().
+
+🧠 Pregunta 5
+¿Cuál es la forma recomendada de crear un hilo en Java?
+
+A. Extender Thread siempre.
+B. Llamar directamente a run().
+C. Usar la interfaz Runnable.
+D. Invocar la JVM con hilos.
+
+✅ Correcta: C
+🧾 Explicación: Se recomienda usar Runnable porque es más flexible y permite extender otras clases.
+
+🧠 Pregunta 6
+¿Qué método inicia realmente un hilo en Java?
+
+A. run()
+B. execute()
+C. start()
+D. launch()
+
+✅ Correcta: C
+🧾 Explicación: El método start() crea un nuevo hilo y luego ejecuta run() internamente.
+
+🧠 Pregunta 7
+¿Cuál de los siguientes es un estado posible de un hilo?
+
+A. Terminated
+B. Frozen
+C. Running
+D. WaitingForever
+
+✅ Correcta: C
+🧾 Explicación: Running es uno de los estados válidos de un hilo, indica que se está ejecutando.
+
+🧠 Pregunta 8
+¿Qué hace el método Thread.currentThread()?
+
+A. Crea un nuevo hilo.
+B. Detiene un hilo existente.
+C. Devuelve el hilo en ejecución actual.
+D. Asigna una prioridad al hilo.
+
+✅ Correcta: C
+🧾 Explicación: Este método devuelve una referencia al hilo actual que se está ejecutando.
+
+🧠 Pregunta 9
+¿Cuál es el efecto de llamar run() en lugar de start()?
+
+A. Crea un nuevo hilo.
+B. Ejecuta en paralelo.
+C. Ejecuta en el mismo hilo actual.
+D. Cierra el hilo.
+
+✅ Correcta: C
+🧾 Explicación: Si llamas run() directamente, el código se ejecuta en el hilo actual, no se lanza uno nuevo.
+
+🧠 Pregunta 10
+¿Para qué sirve Thread.sleep()?
+
+A. Terminar un hilo.
+B. Reanudar un hilo.
+C. Pausar un hilo temporalmente.
+D. Crear múltiples hilos.
+
+✅ Correcta: C
+🧾 Explicación: El método sleep() detiene temporalmente la ejecución del hilo actual.
+
+🧠 Pregunta 11
+¿Qué excepción lanza Thread.sleep()?
+
+A. NullPointerException
+B. IllegalThreadStateException
+C. IOException
+D. InterruptedException
+
+✅ Correcta: D
+🧾 Explicación: sleep() puede lanzar InterruptedException si otro hilo interrumpe al actual.
+
+🧠 Pregunta 12
+¿Cuándo puede usarse setDaemon(true)?
+
+A. Después de start().
+B. En cualquier momento.
+C. Antes de start().
+D. Nunca, es automático.
+
+✅ Correcta: C
+🧾 Explicación: setDaemon(true) debe llamarse antes de iniciar el hilo con start().
+
+🧠 Pregunta 13
+¿Qué método se usa para esperar a que un hilo termine?
+
+A. wait()
+B. sleep()
+C. stop()
+D. join()
+
+✅ Correcta: D
+🧾 Explicación: join() hace que el hilo actual espere hasta que otro hilo termine su ejecución.
+
+🧠 Pregunta 14
+¿Qué representa la prioridad de un hilo?
+
+A. El orden de creación.
+B. Qué tanto se repite el hilo.
+C. Preferencia de ejecución.
+D. Su tamaño en memoria.
+
+✅ Correcta: C
+🧾 Explicación: La prioridad sugiere al sistema qué hilo debe ejecutarse primero si hay varios esperando.
+
+🧠 Pregunta 15
+¿Cuál es la prioridad por defecto de un hilo en Java?
+
+A. 1
+B. 5
+C. 10
+D. 0
+
+✅ Correcta: B
+🧾 Explicación: La constante Thread.NORM_PRIORITY tiene el valor 5 y es la prioridad por defecto.
+
+🧠 Pregunta 16
+¿Qué tipo de hilo se termina cuando el resto finaliza?
+
+A. User thread
+B. Garbage thread
+C. Foreground thread
+D. Daemon thread
+
+✅ Correcta: D
+🧾 Explicación: Un daemon thread se finaliza automáticamente cuando ya no quedan hilos de usuario activos.
+
+🧠 Pregunta 17
+¿Cuál es una característica de los daemon threads?
+
+A. Ejecutan primero que los hilos normales.
+B. Bloquean el sistema si no terminan.
+C. Se eliminan con los hilos de usuario.
+D. No pueden crearse con Thread.
+
+✅ Correcta: C
+🧾 Explicación: Los daemon threads funcionan en segundo plano y finalizan cuando no quedan hilos de usuario.
+
+🧠 Pregunta 18
+¿Qué sucede si se llama setDaemon(true) después de start()?
+
+A. Se ejecuta normalmente.
+B. El hilo cambia a daemon.
+C. Lanza excepción.
+D. Se pausa el hilo.
+
+✅ Correcta: C
+🧾 Explicación: Se lanza IllegalThreadStateException porque no se puede cambiar el estado después de iniciar.
+
+🧠 Pregunta 19
+¿Qué método detecta interrupciones sin borrar la bandera?
+
+A. Thread.sleep()
+B. isInterrupted()
+C. interrupted()
+D. checkInterruption()
+
+✅ Correcta: B
+🧾 Explicación: isInterrupted() verifica si el hilo fue interrumpido sin borrar su estado.
+
+🧠 Pregunta 20
+¿Qué método verifica y borra la bandera de interrupción?
+
+A. isInterrupted()
+B. Thread.interrupted()
+C. checkInterruptFlag()
+D. clearInterrupt()
+
+✅ Correcta: B
+🧾 Explicación: Thread.interrupted() retorna true si el hilo fue interrumpido y borra la bandera.
+
+(Continúa en el siguiente mensaje por límite de caracteres...)
+
+(Continuación de las 30 preguntas de examen)
+
+🧠 Pregunta 21
+¿Qué debe implementar una clase para usar Runnable?
+
+A. Un método llamado execute().
+B. Una interfaz con múltiples métodos.
+C. El método run().
+D. Ningún método, se implementa solo.
+
+✅ Correcta: C
+🧾 Explicación: Runnable es una interfaz funcional que requiere la implementación del método run().
+
+🧠 Pregunta 22
+¿Por qué se recomienda implementar Runnable en lugar de extender Thread?
+
+A. Porque consume menos memoria.
+B. Porque permite extender otra clase.
+C. Porque es más lento.
+D. Porque evita excepciones.
+
+✅ Correcta: B
+🧾 Explicación: Implementar Runnable da más flexibilidad ya que Java no permite herencia múltiple.
+
+🧠 Pregunta 23
+¿Qué hace el método interrupt() en un hilo?
+
+A. Obliga a terminar el hilo de inmediato.
+B. Pausa el hilo por tiempo indefinido.
+C. Envía una señal para detenerlo.
+D. Destruye el hilo.
+
+✅ Correcta: C
+🧾 Explicación: interrupt() no detiene el hilo directamente, pero le indica que debería hacerlo si lo maneja.
+
+🧠 Pregunta 24
+¿Qué sucede si un hilo no maneja la interrupción?
+
+A. Se borra del sistema.
+B. El hilo ignora la señal.
+C. Lanza automáticamente una excepción.
+D. Se pausa indefinidamente.
+
+✅ Correcta: B
+🧾 Explicación: Si un hilo no revisa la bandera de interrupción, simplemente continúa su ejecución.
+
+🧠 Pregunta 25
+¿Cuál es una ventaja de los hilos sobre los procesos?
+
+A. Pueden ejecutarse sin usar CPU.
+B. Pueden compartir memoria fácilmente.
+C. No pueden ser interrumpidos.
+D. Son independientes del proceso principal.
+
+✅ Correcta: B
+🧾 Explicación: Los hilos comparten el espacio de memoria del proceso, lo que facilita la comunicación entre ellos.
+
+🧠 Pregunta 26
+¿En qué casos se recomienda usar hilos?
+
+A. Para tareas largas y secuenciales.
+B. Para tareas concurrentes como descargas o animaciones.
+C. Para almacenar información persistente.
+D. Para reemplazar funciones recursivas.
+
+✅ Correcta: B
+🧾 Explicación: Los hilos son ideales para manejar múltiples tareas concurrentes en paralelo o asincronía.
+
+🧠 Pregunta 27
+¿Qué sucede si dos hilos acceden y modifican una misma variable al mismo tiempo?
+
+A. Se ejecutan sin problemas.
+B. Se duplica el valor automáticamente.
+C. Puede generarse una condición de carrera.
+D. Se reinicia la variable a cero.
+
+✅ Correcta: C
+🧾 Explicación: Esto genera una condición de carrera, que es un error común en programación concurrente.
+
+🧠 Pregunta 28
+¿Qué tipo de error es causado por acceso concurrente a recursos compartidos?
+
+A. StackOverflowError
+B. RuntimeException
+C. Condición de carrera
+D. NullPointerException
+
+✅ Correcta: C
+🧾 Explicación: Una condición de carrera ocurre cuando dos o más hilos acceden a una variable compartida al mismo tiempo.
+
+🧠 Pregunta 29
+¿Cuándo cambia un hilo de estado “Runnable” a “Running”?
+
+A. Cuando es creado.
+B. Cuando finaliza otro hilo.
+C. Cuando el planificador del sistema lo elige.
+D. Cuando se llama a run() directamente.
+
+✅ Correcta: C
+🧾 Explicación: El planificador del sistema operativo decide qué hilo se ejecuta en base a disponibilidad y prioridad.
+
+🧠 Pregunta 30
+¿Cuál de las siguientes afirmaciones es verdadera sobre el Garbage Collector en Java?
+
+A. Es un hilo principal del sistema.
+B. Se ejecuta manualmente desde el usuario.
+C. Es un hilo daemon.
+D. Nunca se detiene.
+
+✅ Correcta: C
+🧾 Explicación: El Garbage Collector es un hilo daemon que funciona en segundo plano para liberar memoria.
