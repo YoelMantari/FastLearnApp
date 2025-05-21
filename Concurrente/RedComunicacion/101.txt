@@ -1,0 +1,110 @@
+🧠 Pregunta 1
+¿Cuándo hablamos específicamente de comunicación en red?
+
+A. Cuando se transmite información entre personas directamente
+B. Cuando la interacción ocurre a través de una red de computadoras
+C. Solo cuando se usa un teléfono fijo
+D. Solo entre dispositivos IoT
+
+✅ Correcta: B
+🧾 Explicación: La comunicación en red implica el intercambio de datos a través de una red como Internet, Wi-Fi, etc.
+
+🧠 Pregunta 2
+¿Qué se asemeja al proceso de enviar datos en una red?
+
+A. Guardar archivos en disco
+B. Transportar un objeto físico de un punto a otro
+C. Codificar un mensaje
+D. Apagar y encender una máquina
+
+✅ Correcta: B
+🧾 Explicación: La transferencia de información se compara al transporte físico, ya que requiere empaquetar, enviar y recibir.
+
+🧠 Pregunta 3
+¿Para qué sirve la encapsulación de datos?
+
+A. Para eliminar redundancia
+B. Para envolver los datos con encabezados y colas
+C. Para borrar la información sensible
+D. Para traducir datos a imágenes
+
+✅ Correcta: B
+🧾 Explicación: Encapsular es el proceso de añadir encabezado y cola a los datos para su transmisión.
+
+🧠 Pregunta 4
+¿Qué rol cumple el payload en un paquete de red?
+
+A. Es el nombre del remitente
+B. Es la información útil que se desea transmitir
+C. Es la dirección IP del servidor
+D. Es la hora en que fue enviado
+
+✅ Correcta: B
+🧾 Explicación: El payload representa el contenido principal del mensaje dentro del paquete.
+
+🧠 Pregunta 5
+¿A qué dispositivo corresponde la función de seleccionar rutas para paquetes de red?
+
+A. Switch
+B. Router
+C. Firewall
+D. Terminal
+
+✅ Correcta: B
+🧾 Explicación: El router dirige los paquetes basándose en direcciones IP y su tabla de rutas.
+
+🧠 Pregunta 6
+¿Qué función clave tiene un gateway en una red?
+
+A. Conectar switches
+B. Traducir protocolos entre redes distintas
+C. Ampliar la señal de red Wi-Fi
+D. Filtrar paquetes por seguridad
+
+✅ Correcta: B
+🧾 Explicación: Un gateway permite comunicación entre redes que usan diferentes protocolos.
+
+🧠 Pregunta 7
+¿Qué dispositivo evita que un broadcast se propague entre diferentes redes?
+
+A. Switch
+B. Router
+C. Repetidor
+D. Terminal
+
+✅ Correcta: B
+🧾 Explicación: El router bloquea los mensajes broadcast, conteniéndolos dentro de una red.
+
+🧠 Pregunta 8
+¿Cuál es la función principal del switch?
+
+A. Crear subredes
+B. Enrutar paquetes entre redes
+C. Conectar múltiples dispositivos en una LAN
+D. Traducir direcciones IP
+
+✅ Correcta: C
+🧾 Explicación: El switch opera en la capa 2 y permite la interconexión de varios dispositivos dentro de una misma red local.
+
+🧠 Pregunta 9
+¿Cuál es una ventaja clara de usar un Fit AP con AC en redes grandes?
+
+A. Todos los APs se administran individualmente
+B. Requiere menos hardware para funcionar
+C. Se puede administrar centralizadamente desde un controlador
+D. Tiene más señal que un Fat AP
+
+✅ Correcta: C
+🧾 Explicación: Los Fit AP dependen de un Access Controller, lo cual permite una administración centralizada y escalable.
+
+🧠 Pregunta 10
+¿Qué es una DMZ en una red?
+
+A. Un servidor de respaldo
+B. Una red aislada que permite acceso limitado desde Internet
+C. Un firewall avanzado
+D. Un tipo de switch especializado
+
+✅ Correcta: B
+🧾 Explicación: La DMZ es una zona intermedia entre la red interna y externa, útil para alojar servicios públicos con seguridad.
+

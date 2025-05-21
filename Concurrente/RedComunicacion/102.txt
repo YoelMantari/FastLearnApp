@@ -1,0 +1,109 @@
+🧠 Pregunta 11
+¿Para qué sirve un firewall?
+
+A. Para traducir direcciones IP
+B. Para bloquear todos los datos de salida
+C. Para controlar el tráfico según reglas y proteger la red interna
+D. Para acelerar la conexión Wi-Fi
+
+✅ Correcta: C
+🧾 Explicación: El firewall filtra el tráfico según reglas definidas y protege el acceso entre redes internas y externas.
+
+🧠 Pregunta 12
+¿Qué determina si una red es LAN, MAN o WAN?
+
+A. La velocidad de los datos
+B. El número de routers que posee
+C. El área geográfica que cubre
+D. El tipo de dispositivos conectados
+
+✅ Correcta: C
+🧾 Explicación: La clasificación se basa en el tamaño físico: local (LAN), ciudad (MAN) o país/mundo (WAN).
+
+🧠 Pregunta 13
+¿Qué tipo de red conecta universidades dentro de una ciudad?
+
+A. LAN
+B. MAN
+C. WAN
+D. PAN
+
+✅ Correcta: B
+🧾 Explicación: Una MAN conecta múltiples LANs en un área metropolitana como una ciudad.
+
+🧠 Pregunta 14
+¿Cuál de estas topologías mejora la tolerancia a fallos mediante caminos alternativos?
+
+A. Bus
+B. Anillo
+C. Estrella
+D. Malla
+
+✅ Correcta: D
+🧾 Explicación: La topología en malla permite múltiples rutas, asegurando continuidad ante fallos.
+
+🧠 Pregunta 15
+¿Qué capa del modelo OSI se encarga de traducir formatos como imágenes y texto?
+
+A. Capa de aplicación
+B. Capa de presentación
+C. Capa de transporte
+D. Capa de red
+
+✅ Correcta: B
+🧾 Explicación: La capa 6 (presentación) convierte los datos a un formato comprensible para el usuario y el sistema.
+
+🧠 Pregunta 16
+En el modelo OSI, ¿qué capa fragmenta los datos en segmentos y controla el flujo?
+
+A. Aplicación
+B. Transporte
+C. Red
+D. Enlace de datos
+
+✅ Correcta: B
+🧾 Explicación: La capa de transporte (capa 4) se encarga de segmentar datos y controlar su transmisión confiable.
+
+🧠 Pregunta 17
+¿Qué protocolo usa típicamente la capa de red para direccionar y enrutar?
+
+A. HTTP
+B. TCP
+C. IP
+D. FTP
+
+✅ Correcta: C
+🧾 Explicación: IP es el protocolo de la capa 3 que se encarga del direccionamiento lógico y enrutamiento.
+
+🧠 Pregunta 18
+¿Qué representa el proceso de encapsulación de datos?
+
+A. Leer un archivo comprimido
+B. Agregar encabezados y colas a los datos al pasar por las capas OSI
+C. Codificar datos para seguridad
+D. Eliminar información redundante
+
+✅ Correcta: B
+🧾 Explicación: En encapsulación, cada capa añade su propia información de control antes de enviar los datos.
+
+🧠 Pregunta 19
+¿Qué protocolo se usa comúnmente para navegar por páginas web?
+
+A. FTP
+B. Telnet
+C. SMTP
+D. HTTP
+
+✅ Correcta: D
+🧾 Explicación: HTTP permite la transferencia de páginas web entre servidores y navegadores.
+
+🧠 Pregunta 20
+¿Cuál es una ventaja del modelo TCP/IP frente al OSI?
+
+A. Tiene más capas
+B. Es menos eficiente
+C. Es una versión práctica y más usada en Internet
+D. No utiliza direcciones IP
+
+✅ Correcta: C
+🧾 Explicación: El modelo TCP/IP es más simple, agrupa funciones del OSI y es el estándar real en Internet.
