@@ -1,0 +1,66 @@
+🧠 Pregunta 10
+¿Cuál sería un ejemplo real de una tarea mixta en paralelización?
+
+A. Multiplicar varios números independientes
+B. Leer archivo → procesar → guardar resultados
+C. Calcular la raíz cuadrada de un número
+D. Descargar un archivo sin dividirlo
+
+✅ Correcta: B
+🧾 Explicación: Una tarea mixta tiene partes secuenciales (lectura y escritura) y paralelizables (procesamiento del contenido), como en el ejemplo.
+
+🧠 Pregunta 11
+Analiza por qué crear muchos hilos puede aumentar la latencia total si no se controla bien.
+
+A. Porque los hilos trabajan más lento en conjunto
+B. Porque se genera sobrecarga por coordinación y sincronización
+C. Porque el sistema ignora los hilos extra
+D. Porque bloquean el rendimiento de la red
+
+✅ Correcta: B
+🧾 Explicación: Crear y coordinar muchos hilos añade tiempo extra (overhead), y si las tareas no lo justifican, puede empeorar el desempeño.
+
+🧠 Pregunta 12
+En el contexto de latencia, ¿cuál sería un beneficio real de usar multithreading en un procesador de 8 núcleos?
+
+A. Reducir la carga total del sistema
+B. Procesar 8 tareas simultáneamente si son independientes
+C. Aumentar el uso de memoria
+D. Disminuir el throughput general
+
+✅ Correcta: B
+🧾 Explicación: Si hay 8 núcleos y 8 tareas independientes, cada núcleo puede procesar una en paralelo, reduciendo la latencia general.
+
+🧠 Pregunta 13
+Compara el impacto de la latencia y el throughput en una plataforma de video en vivo.
+
+A. La latencia determina cuántos usuarios pueden conectarse
+B. El throughput es irrelevante para el rendimiento
+C. La latencia afecta el retraso del video; el throughput afecta la fluidez
+D. Ambos solo afectan al sistema operativo
+
+✅ Correcta: C
+🧾 Explicación: Alta latencia genera retrasos visibles; bajo throughput genera cortes y pausas, ambos impactan la experiencia del usuario.
+
+🧠 Pregunta 14
+¿Qué sucede si una de las tareas paralelas tarda más que las demás en completarse?
+
+A. Se cancela el procesamiento total
+B. No afecta el resultado
+C. Todos los hilos deben esperar a que termine esa tarea
+D. Se reduce automáticamente el throughput
+
+✅ Correcta: C
+🧾 Explicación: En muchos casos, los hilos paralelos deben sincronizar al final, por lo que una tarea lenta puede frenar el conjunto (cuello de botella final).
+
+🧠 Pregunta 15
+¿Por qué agregar resultados en una tarea paralelizada puede convertirse en un costo oculto?
+
+A. Porque impide la comunicación entre hilos
+B. Porque obliga a reiniciar los hilos
+C. Porque requiere sincronización y tiempo extra para combinar datos
+D. Porque bloquea el uso del procesador
+
+✅ Correcta: C
+🧾 Explicación: Al finalizar una tarea paralela, sumar o combinar los resultados parciales requiere sincronización, lo cual añade tiempo y complejidad.
+

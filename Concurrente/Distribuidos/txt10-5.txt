@@ -1,0 +1,330 @@
+🧠 Pregunta 1
+Analiza por qué un sistema distribuido puede parecer un solo sistema para el usuario final.
+
+A. Porque todos los nodos usan el mismo sistema operativo
+B. Porque el middleware unifica la comunicación y oculta diferencias
+C. Porque las tareas se ejecutan siempre localmente
+D. Porque no existe diferencia entre hardware y software
+
+✅ Correcta: B
+🧾 Explicación: El middleware proporciona una capa que oculta diferencias de red, hardware y ubicación, haciendo que todo parezca un único sistema.
+
+🧠 Pregunta 2
+¿Cuál es la función principal del middleware en un sistema distribuido?
+
+A. Eliminar la necesidad de redes
+B. Facilitar la comunicación entre componentes heterogéneos
+C. Ejecutar directamente el sistema operativo
+D. Servir como base de datos distribuida
+
+✅ Correcta: B
+🧾 Explicación: El middleware coordina la comunicación y abstrae las diferencias entre plataformas, permitiendo interoperabilidad entre nodos distintos.
+
+🧠 Pregunta 3
+Explica por qué RPC y SOAP son considerados middleware en sistemas distribuidos.
+
+A. Porque gestionan las interfaces gráficas
+B. Porque permiten acceso físico al hardware
+C. Porque facilitan llamadas remotas y comunicación entre servicios
+D. Porque se ejecutan como procesos locales
+
+✅ Correcta: C
+🧾 Explicación: RPC y SOAP son mecanismos que permiten a componentes remotos interactuar como si fueran locales, lo cual es una función clave del middleware.
+
+🧠 Pregunta 4
+Compara el impacto de la ubicación del servidor en sistemas bursátiles.
+
+A. No afecta en absoluto mientras haya red
+B. Afecta solo si la red es Wi-Fi
+C. Afecta la latencia y la equidad de competencia
+D. Solo afecta si hay más de tres servidores
+
+✅ Correcta: C
+🧾 Explicación: En sistemas sensibles al tiempo, como los bursátiles, la proximidad física al servidor reduce la latencia, dando ventaja competitiva.
+
+🧠 Pregunta 5
+Deduce qué desafío aborda directamente la técnica de usar máquinas virtuales en código móvil.
+
+A. Seguridad
+B. Escalabilidad
+C. Heterogeneidad
+D. Concurrencia
+
+✅ Correcta: C
+🧾 Explicación: Las máquinas virtuales permiten ejecutar código independientemente del hardware o sistema operativo, resolviendo la heterogeneidad.
+
+🧠 Pregunta 6
+Analiza cómo la extensibilidad permite que un sistema distribuido evolucione.
+
+A. Eliminando la necesidad de nuevas computadoras
+B. Limitando el acceso a servicios antiguos
+C. Permitendo integrar nuevos nodos o servicios sin rediseñar el sistema
+D. Aislando los cambios en software para evitar afectaciones
+
+✅ Correcta: C
+🧾 Explicación: La extensibilidad permite agregar hardware y servicios sin modificar todo el sistema, promoviendo adaptabilidad.
+
+🧠 Pregunta 7
+¿Cuál es una característica típica de un sistema abierto?
+
+A. Sus interfaces no están documentadas
+B. Puede integrarse con soluciones de otros proveedores
+C. Solo puede modificarse por el fabricante original
+D. No permite el crecimiento de software
+
+✅ Correcta: B
+🧾 Explicación: Los sistemas abiertos tienen interfaces públicas que permiten que otros desarrolladores extiendan o integren nuevos módulos fácilmente.
+
+🧠 Pregunta 8
+Explica cómo se relaciona la seguridad con el uso de redes públicas en sistemas distribuidos.
+
+A. La red pública garantiza la disponibilidad total de los datos
+B. Las redes públicas obligan a deshabilitar la integridad
+C. El uso de redes públicas incrementa los riesgos de confidencialidad e integridad
+D. Las redes públicas reducen la necesidad de disponibilidad
+
+✅ Correcta: C
+🧾 Explicación: Al usar redes públicas, los datos pueden ser interceptados o manipulados, por eso la seguridad debe proteger confidencialidad, integridad y disponibilidad.
+
+🧠 Pregunta 9
+Aplica el concepto de escalabilidad en el siguiente caso: una app pasa de 100 a 1 millón de usuarios. ¿Qué propiedad debería mantener?
+
+A. La misma interfaz
+B. La misma velocidad y fiabilidad sin fallos
+C. El mismo número de servidores
+D. La misma estructura de datos
+
+✅ Correcta: B
+🧾 Explicación: Un sistema escalable mantiene rendimiento y funcionalidad a pesar del crecimiento en usuarios o carga, lo cual es clave para la disponibilidad.
+
+🧠 Pregunta 10
+Deduce qué técnica se aplica cuando un sistema detecta errores y redirige tareas a una copia funcional.
+
+A. Recuperación
+B. Redundancia
+C. Enmascaramiento
+D. Concurrencia
+
+✅ Correcta: C
+🧾 Explicación: Enmascaramiento consiste en ocultar el fallo al usuario, por ejemplo, redirigiendo a un componente redundante que funcione correctamente.
+
+
+🧠 Pregunta 11
+Compara las propiedades de un proceso y un hilo en cuanto a consumo de recursos y comunicación.
+
+A. Los procesos consumen menos recursos y se comunican fácilmente.
+B. Los hilos consumen más recursos y no pueden compartir memoria.
+C. Los procesos son más pesados y se comunican por mecanismos complejos; los hilos son ligeros y comparten memoria.
+D. No hay diferencias entre procesos e hilos en sistemas modernos.
+
+✅ Correcta: C
+🧾 Explicación: Los procesos requieren más recursos y comunicación mediante IPC, mientras que los hilos comparten memoria, lo que facilita la interacción.
+
+🧠 Pregunta 12
+Analiza por qué los hilos, aunque más complejos de programar, son preferidos en aplicaciones concurrentes.
+
+A. Porque reducen la escalabilidad del sistema
+B. Porque garantizan la seguridad automáticamente
+C. Porque permiten alto rendimiento en tareas simultáneas
+D. Porque se ejecutan uno por uno
+
+✅ Correcta: C
+🧾 Explicación: A pesar de su complejidad (requieren sincronización), los hilos permiten ejecutar tareas concurrentes con eficiencia dentro del mismo proceso.
+
+🧠 Pregunta 13
+Aplica el concepto de concurrencia en un videojuego. ¿Qué ventaja concreta ofrece?
+
+A. El juego se ejecuta en una única secuencia lógica
+B. El audio, IA y entrada del usuario se pueden gestionar simultáneamente
+C. El rendimiento baja para evitar bloqueos
+D. Se reduce la complejidad del motor gráfico
+
+✅ Correcta: B
+🧾 Explicación: La concurrencia permite dividir la lógica del juego en múltiples hilos, lo que mejora la experiencia y evita cuellos de botella.
+
+🧠 Pregunta 14
+¿Qué diferencia existe entre paralelismo real y paralelismo lógico?
+
+A. El real simula tareas concurrentes; el lógico usa múltiples núcleos
+B. Ambos son idénticos
+C. El real usa varios núcleos; el lógico simula multitarea en uno solo
+D. El lógico no se usa en sistemas modernos
+
+✅ Correcta: C
+🧾 Explicación: El paralelismo real ocurre en procesadores multinúcleo; el lógico se basa en alternancia rápida entre tareas en un solo núcleo.
+
+🧠 Pregunta 15
+Deduce qué ventaja de la concurrencia se relaciona con una menor “brecha semántica” respecto al mundo real.
+
+A. Permite codificar tareas de forma lineal
+B. Refleja mejor situaciones reales donde ocurren múltiples cosas a la vez
+C. Simplifica la depuración de errores
+D. Elimina la necesidad de programar interacciones
+
+✅ Correcta: B
+🧾 Explicación: La concurrencia se alinea con la forma en que el mundo opera: múltiples eventos suceden en paralelo, lo que reduce la brecha entre modelo y realidad.
+
+🧠 Pregunta 16
+Explica por qué una condición de carrera puede causar errores aleatorios en un programa concurrente.
+
+A. Porque los hilos se ejecutan en orden fijo
+B. Porque los hilos nunca comparten recursos
+C. Porque varios hilos modifican una variable sin sincronización
+D. Porque el sistema operativo impide el acceso concurrente
+
+✅ Correcta: C
+🧾 Explicación: Una condición de carrera se da cuando dos o más hilos acceden/modifican una variable sin control, produciendo resultados impredecibles.
+
+🧠 Pregunta 17
+Analiza qué ocurre en un interbloqueo (deadlock) y cómo afecta al sistema.
+
+A. Un solo hilo bloquea todos los recursos disponibles
+B. Varios hilos se quedan esperando indefinidamente recursos entre sí
+C. Los recursos se liberan automáticamente
+D. Se fuerza una condición de carrera
+
+✅ Correcta: B
+🧾 Explicación: Un interbloqueo ocurre cuando múltiples hilos esperan mutuamente por recursos que el otro posee, bloqueando todo progreso.
+
+🧠 Pregunta 18
+¿Por qué la depuración de programas concurrentes es más difícil que en los secuenciales?
+
+A. Porque el compilador impide ver los errores
+B. Porque los errores no se registran
+C. Porque el orden de ejecución de los hilos puede variar en cada ejecución
+D. Porque solo se pueden usar procesos
+
+✅ Correcta: C
+🧾 Explicación: La ejecución de hilos no sigue un orden fijo, lo que hace difícil reproducir y localizar errores en programas concurrentes.
+
+🧠 Pregunta 19
+¿Qué tipo de transparencia permite que el usuario no sepa si un recurso está replicado o duplicado?
+
+A. Transparencia de movilidad
+B. Transparencia de replicación
+C. Transparencia de acceso
+D. Transparencia de fallo
+
+✅ Correcta: B
+🧾 Explicación: La transparencia de replicación oculta si un recurso está duplicado por razones de rendimiento o disponibilidad, presentando una única interfaz.
+
+🧠 Pregunta 20
+Aplica el concepto de tolerancia a fallos en un servidor web que continúa funcionando pese a una caída de uno de sus nodos. ¿Qué propiedad técnica lo permite?
+
+A. Heterogeneidad
+B. Transparencia
+C. Redundancia
+D. Interbloqueo
+
+✅ Correcta: C
+🧾 Explicación: La redundancia (copias o servicios alternos) permite que el sistema continúe funcionando aunque una parte falle, habilitando la tolerancia a fallos.
+
+🧠 Pregunta 21
+Compara el uso de hilos en un servidor web como Apache con una arquitectura basada en procesos. ¿Qué ventaja concreta ofrece el uso de hilos?
+
+A. Reduce la necesidad de seguridad
+B. Evita que los usuarios accedan simultáneamente
+C. Permite manejar múltiples clientes con menor consumo de recursos
+D. Aumenta la complejidad en la interfaz de usuario
+
+✅ Correcta: C
+🧾 Explicación: Apache usa un hilo por cliente para atender múltiples solicitudes sin necesidad de crear un proceso por cada uno, mejorando eficiencia y escalabilidad.
+
+🧠 Pregunta 22
+Explica cómo Google Chrome mejora la estabilidad y seguridad mediante su arquitectura de procesos.
+
+A. Ejecutando todo en un solo hilo para evitar errores
+B. Usando un proceso por pestaña, aislando fallos y recursos
+C. Desactivando la ejecución paralela de tareas
+D. Forzando la ejecución secuencial de las páginas
+
+✅ Correcta: B
+🧾 Explicación: Cada pestaña en Chrome es un proceso independiente, lo que mejora la estabilidad (una falla no afecta a las demás) y la seguridad (aislamiento de recursos).
+
+🧠 Pregunta 23
+Deduce cuál de los siguientes sistemas se beneficiaría más del paralelismo real.
+
+A. Un editor de texto sin formato
+B. Un sistema de tickets en papel
+C. Un videojuego con IA, sonido y gráficos intensivos
+D. Un cronómetro digital
+
+✅ Correcta: C
+🧾 Explicación: El paralelismo real (varios núcleos) permite ejecutar múltiples tareas pesadas simultáneamente, ideal para videojuegos complejos.
+
+🧠 Pregunta 24
+Aplica el concepto de sincronización en programación concurrente. ¿Qué propósito cumple?
+
+A. Garantiza que múltiples hilos escriban datos al mismo tiempo
+B. Permite que los hilos compartan memoria sin control
+C. Coordina el acceso ordenado a recursos compartidos para evitar errores
+D. Aumenta la probabilidad de condiciones de carrera
+
+✅ Correcta: C
+🧾 Explicación: La sincronización evita accesos conflictivos a recursos compartidos, previniendo errores como condiciones de carrera o interbloqueos.
+
+🧠 Pregunta 25
+Analiza por qué los sistemas distribuidos requieren transparencia de movilidad.
+
+A. Para que los nodos puedan moverse físicamente entre redes
+B. Para ocultar si un recurso ha cambiado de ubicación dentro del sistema
+C. Para permitir que todos los recursos estén en un solo servidor
+D. Para evitar replicación de datos
+
+✅ Correcta: B
+🧾 Explicación: La transparencia de movilidad permite al usuario acceder a un recurso sin saber que cambió de ubicación en el sistema distribuido.
+
+🧠 Pregunta 26
+¿Qué relación hay entre escalabilidad y rendimiento en un sistema distribuido?
+
+A. A mayor escalabilidad, menor rendimiento siempre
+B. Un sistema escalable mantiene el rendimiento aunque aumenten usuarios o recursos
+C. Escalabilidad y rendimiento no tienen relación
+D. La escalabilidad solo afecta a la seguridad del sistema
+
+✅ Correcta: B
+🧾 Explicación: Un sistema escalable soporta aumentos en demanda sin perder eficiencia, lo que es clave para servicios masivos o globales.
+
+🧠 Pregunta 27
+¿Cuál de los siguientes elementos contribuye directamente a la detección de fallos en un sistema distribuido?
+
+A. Redundancia de usuarios
+B. Middleware distribuido
+C. Checksum en la transmisión de datos
+D. Interfaces públicas
+
+✅ Correcta: C
+🧾 Explicación: Checksum es una técnica que detecta errores en la transmisión de datos, lo que permite identificar fallos y aplicar mecanismos correctivos.
+
+🧠 Pregunta 28
+Explica por qué los lenguajes portables, como Java, son esenciales para código móvil.
+
+A. Porque solo funcionan en sistemas operativos propietarios
+B. Porque permiten que el código funcione igual en diferentes plataformas
+C. Porque requieren menos instrucciones por segundo
+D. Porque bloquean el acceso al sistema de archivos
+
+✅ Correcta: B
+🧾 Explicación: Java es portable gracias a la máquina virtual, lo que permite ejecutar el mismo código en distintas plataformas sin modificaciones.
+
+🧠 Pregunta 29
+¿Qué pilar de la seguridad asegura que los datos no se modifiquen de forma maliciosa o accidental?
+
+A. Confidencialidad
+B. Disponibilidad
+C. Redundancia
+D. Integridad
+
+✅ Correcta: D
+🧾 Explicación: La integridad garantiza que los datos lleguen al destino sin alteraciones no autorizadas, protegiendo la confianza en el sistema.
+
+🧠 Pregunta 30
+Compara el uso de hilos con procesos para aplicaciones concurrentes intensivas. ¿Qué ventaja clave tienen los hilos?
+
+A. Requieren su propio sistema operativo
+B. Usan más memoria y tiempo de CPU
+C. Comparten memoria del proceso padre, facilitando la comunicación
+D. Solo pueden ejecutarse uno por uno
+
+✅ Correcta: C
+🧾 Explicación: Los hilos comparten el mismo espacio de memoria, lo que reduce el costo de comunicación y los hace ideales para tareas intensivas concurrentes.

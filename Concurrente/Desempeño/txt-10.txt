@@ -1,0 +1,111 @@
+🧠 Pregunta 1
+Analiza por qué una alta latencia puede afectar negativamente a un sistema de Machine Learning en producción.
+
+A. Porque los modelos se entrenan más rápido
+B. Porque las predicciones llegan demasiado tarde para ser útiles
+C. Porque aumenta el uso de memoria
+D. Porque los modelos consumen menos energía
+
+✅ Correcta: B
+🧾 Explicación: Si la latencia es alta, las predicciones llegan tarde, afectando decisiones en tiempo real. Las otras opciones no se relacionan con el impacto real de la latencia.
+
+🧠 Pregunta 2
+Compara latencia y throughput usando el ejemplo de una panadería. ¿Qué representa el throughput?
+
+A. El tiempo que tarda en hornearse un pan
+B. La cantidad de panes producidos por hora
+C. El tiempo entre que se hace clic en “comprar” y se confirma
+D. La distancia entre cliente y panadero
+
+✅ Correcta: B
+🧾 Explicación: Throughput mide cuántas tareas (panes) se completan en un periodo. La latencia mide el tiempo de una tarea individual.
+
+🧠 Pregunta 3
+Deduce qué condiciones deben cumplirse para que dividir una tarea entre N hilos reduzca efectivamente la latencia.
+
+A. Que los hilos compartan muchos datos entre sí
+B. Que todas las tareas sean interdependientes
+C. Que las tareas sean completamente independientes y haya suficientes núcleos
+D. Que la tarea solo se ejecute en un solo núcleo
+
+✅ Correcta: C
+🧾 Explicación: El paralelismo solo reduce la latencia si las tareas pueden dividirse sin depender entre sí y hay recursos (núcleos) para ejecutarlas en paralelo.
+
+🧠 Pregunta 4
+Explica por qué el uso de Hyper-Threading no duplica el rendimiento del sistema aunque duplique los hilos visibles.
+
+A. Porque los hilos virtuales no pueden ejecutar tareas
+B. Porque los núcleos físicos comparten recursos
+C. Porque los hilos virtuales solo ejecutan una instrucción
+D. Porque el sistema operativo no los reconoce
+
+✅ Correcta: B
+🧾 Explicación: En Hyper-Threading, dos hilos comparten los recursos de un mismo núcleo físico, lo que limita su rendimiento comparado con dos núcleos físicos reales.
+
+🧠 Pregunta 5
+Analiza cuál de los siguientes factores es un costo oculto al paralelizar tareas.
+
+A. Reducir el número de tareas simultáneas
+B. Crear hilos e integrar sus resultados
+C. Mejorar el hardware de la red
+D. Dividir una tarea secuencial en partes
+
+✅ Correcta: B
+🧾 Explicación: Crear hilos y combinar resultados tiene un costo en tiempo y recursos que afecta la eficiencia total de la paralelización.
+
+🧠 Pregunta 6
+Compara el impacto de la distancia física y la congestión de red en la latencia de un sistema distribuido.
+
+A. Solo la congestión aumenta la latencia, no la distancia
+B. Ambas afectan la latencia al aumentar el tiempo de respuesta
+C. La distancia física solo afecta throughput
+D. La congestión de red mejora la velocidad del sistema
+
+✅ Correcta: B
+🧾 Explicación: Tanto la distancia física (retraso de propagación) como la congestión (esperas y transmisión) aumentan la latencia total de una solicitud.
+
+🧠 Pregunta 7
+Aplica el concepto de “retraso en cola” en un servidor web muy concurrido.
+
+A. Se refiere al tiempo que tarda en renderizar una página
+B. Es el tiempo en que el usuario elige su producto
+C. Es el tiempo que una solicitud espera antes de ser procesada
+D. Es el tiempo que tarda en llegar el paquete de datos
+
+✅ Correcta: C
+🧾 Explicación: El retraso en cola ocurre cuando hay muchas solicitudes y una debe esperar su turno para ser atendida por el servidor.
+
+🧠 Pregunta 8
+¿Cuál de las siguientes estrategias NO reduce directamente la latencia?
+
+A. Balanceo de carga entre servidores
+B. Uso de algoritmos más rápidos
+C. Aumentar el tamaño de los paquetes de red
+D. Mejorar el hardware del sistema
+
+✅ Correcta: C
+🧾 Explicación: Paquetes grandes pueden aumentar la latencia por mayor tiempo de transmisión. Las demás estrategias reducen cuellos de botella y aceleran el procesamiento.
+
+🧠 Pregunta 9
+Deduce por qué no todas las tareas son paralelizables.
+
+A. Porque todas dependen de una sola variable
+B. Porque algunas requieren que una parte se complete antes de continuar
+C. Porque los sistemas no soportan múltiples hilos
+D. Porque el throughput siempre es fijo
+
+✅ Correcta: B
+🧾 Explicación: En tareas secuenciales o con dependencias internas, una parte debe completarse antes de iniciar otra, lo que impide su paralelización.
+
+🧠 Pregunta 10
+¿Cuál sería un ejemplo real de una tarea mixta en paralelización?
+
+A. Multiplicar varios números independientes
+B. Leer archivo → procesar → guardar resultados
+C. Calcular la raíz cuadrada de un número
+D. Descargar un archivo sin dividirlo
+
+✅ Correcta: B
+🧾 Explicación: Una tarea mixta tiene partes secuenciales (lectura y escritura) y paralelizables (procesamiento del contenido), como en el ejemplo.
+
+
