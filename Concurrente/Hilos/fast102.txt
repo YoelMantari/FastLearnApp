@@ -1,0 +1,109 @@
+🧠 Pregunta 1
+¿Cuál es la diferencia esencial entre un proceso y un hilo?
+
+A. Los hilos tienen su propia memoria, mientras que los procesos no.
+B. Los procesos son unidades ligeras de ejecución dentro de un hilo.
+C. Los procesos tienen memoria propia; los hilos comparten la del proceso.
+D. No existe diferencia entre procesos e hilos.
+
+✅ Correcta: C
+🧾 Explicación: Un proceso tiene su propia memoria y recursos, mientras que los hilos comparten los recursos del proceso que los contiene.
+
+🧠 Pregunta 2
+¿Qué define a un programa como concurrente?
+
+A. Puede manejar múltiples tareas en distintos lenguajes.
+B. Puede ejecutar tareas en varios hilos o responder a eventos simultáneamente.
+C. Puede ejecutarse en cualquier sistema operativo.
+D. Solo utiliza un hilo principal.
+
+✅ Correcta: B
+🧾 Explicación: Un programa concurrente puede gestionar múltiples tareas o eventos al mismo tiempo, sin bloquearse.
+
+🧠 Pregunta 3
+¿Qué componente del sistema decide cuándo un hilo pasa de "Runnable" a "Running"?
+
+A. El desarrollador.
+B. El compilador de Java.
+C. El planificador del sistema operativo.
+D. El recolector de basura.
+
+✅ Correcta: C
+🧾 Explicación: El sistema operativo decide cuál hilo se ejecuta entre los que están listos (Runnable).
+
+🧠 Pregunta 4
+¿Cuál es el efecto de llamar start() sobre un objeto Thread en Java?
+
+A. Crea un nuevo hilo y ejecuta su método run().
+B. Ejecuta run() en el hilo actual.
+C. Termina el hilo inmediatamente.
+D. Lo convierte en hilo daemon automáticamente.
+
+✅ Correcta: A
+🧾 Explicación: start() crea un nuevo hilo independiente y luego ejecuta automáticamente el método run().
+
+🧠 Pregunta 5
+¿Qué estado representa que un hilo está esperando acceso a un recurso?
+
+A. Running
+B. Suspended
+C. Blocked
+D. Runnable
+
+✅ Correcta: C
+🧾 Explicación: Blocked indica que el hilo está detenido porque espera acceder a un recurso que está ocupado.
+
+🧠 Pregunta 6
+¿Qué sucede si se llama run() en lugar de start() en un hilo?
+
+A. Se crea un nuevo hilo en segundo plano.
+B. No pasa nada, el hilo no se ejecuta.
+C. El código de run() se ejecuta en el hilo actual, sin concurrencia.
+D. El hilo entra automáticamente en estado daemon.
+
+✅ Correcta: C
+🧾 Explicación: Llamar run() directamente ejecuta el código en el mismo hilo actual, no se lanza ningún hilo nuevo.
+
+🧠 Pregunta 7
+¿Cuál es el propósito principal del método join() en Java?
+
+A. Sincronizar todos los hilos de un proceso.
+B. Esperar a que otro hilo termine antes de continuar.
+C. Asignar una prioridad mayor a un hilo.
+D. Detener un hilo indefinidamente.
+
+✅ Correcta: B
+🧾 Explicación: join() hace que el hilo actual espere hasta que otro hilo finalice.
+
+🧠 Pregunta 8
+¿Qué ocurre si un hilo daemon sigue corriendo cuando todos los hilos de usuario terminan?
+
+A. El hilo daemon se bloquea.
+B. El hilo daemon continúa funcionando.
+C. El hilo daemon se termina automáticamente.
+D. El hilo daemon se convierte en hilo principal.
+
+✅ Correcta: C
+🧾 Explicación: Los daemon threads se eliminan automáticamente cuando no quedan hilos de usuario activos.
+
+🧠 Pregunta 9
+¿Cuál es el objetivo de la bandera de interrupción en un hilo?
+
+A. Indicar que el hilo ha terminado su tarea.
+B. Confirmar si un hilo fue pausado por sleep().
+C. Detectar si un hilo ha sido interrumpido y reaccionar apropiadamente.
+D. Incrementar la prioridad de un hilo.
+
+✅ Correcta: C
+🧾 Explicación: La bandera de interrupción permite que el hilo sepa si ha sido interrumpido y tome decisiones en consecuencia (como terminar su ejecución).
+
+🧠 Pregunta 10
+¿Por qué se considera a Runnable una práctica recomendada frente a extender Thread?
+
+A. Porque requiere menos código.
+B. Porque permite heredar de otra clase y es más flexible.
+C. Porque es más rápido.
+D. Porque no requiere método run().
+
+✅ Correcta: B
+🧾 Explicación: Al implementar Runnable, se puede extender otra clase al mismo tiempo, lo cual es imposible si se extiende Thread (Java no admite herencia múltiple).

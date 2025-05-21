@@ -1,0 +1,109 @@
+🧠 Pregunta 31
+Analiza por qué la concurrencia mejora la eficiencia en sistemas distribuidos.
+
+A. Porque permite ejecutar varias tareas al mismo tiempo y aprovechar mejor los recursos
+B. Porque reduce el número de procesos necesarios en el sistema
+C. Porque elimina la necesidad de programar con múltiples lenguajes
+D. Porque limita el número de usuarios que pueden acceder al sistema
+
+✅ Correcta: A
+🧾 Explicación: La concurrencia permite que múltiples tareas avancen simultáneamente, reduciendo tiempos muertos y aprovechando mejor CPU, E/S y red.
+
+🧠 Pregunta 32
+Aplica el concepto de escalabilidad a un sistema de videollamadas que crece de 100 a 10,000 usuarios. ¿Qué propiedad debería mantener el sistema?
+
+A. El mismo número de servidores
+B. La misma velocidad de respuesta y disponibilidad
+C. La misma cantidad de memoria usada
+D. La misma interfaz gráfica
+
+✅ Correcta: B
+🧾 Explicación: Un sistema escalable puede crecer sin afectar negativamente el rendimiento (como velocidad o disponibilidad). No implica mantener constantes los recursos físicos.
+
+🧠 Pregunta 33
+Explica por qué la seguridad es más desafiante en un sistema distribuido que en uno local.
+
+A. Porque se usan más lenguajes de programación
+B. Porque todos los nodos tienen el mismo sistema operativo
+C. Porque los datos viajan a través de redes, a menudo públicas
+D. Porque solo hay un punto central de ataque
+
+✅ Correcta: C
+🧾 Explicación: En sistemas distribuidos, los datos pueden ser interceptados, alterados o bloqueados al pasar por redes públicas, por lo que seguridad es más crítica.
+
+🧠 Pregunta 34
+Compara la creación de hilos con la de procesos en términos de rendimiento.
+
+A. Crear procesos es más rápido y consume menos recursos
+B. Crear hilos es más costoso porque usan más memoria
+C. Crear hilos es más ligero y rápido que crear procesos
+D. Crear hilos y procesos tienen el mismo costo computacional
+
+✅ Correcta: C
+🧾 Explicación: Los hilos comparten memoria y recursos del proceso, lo que los hace más eficientes que crear procesos independientes con memoria propia.
+
+🧠 Pregunta 35
+Deduce qué problema ocurre cuando varios hilos compiten por un mismo recurso sin sincronización.
+
+A. Interbloqueo
+B. Pérdida de paquetes
+C. Condición de carrera
+D. Transparencia de concurrencia
+
+✅ Correcta: C
+🧾 Explicación: Una condición de carrera sucede cuando múltiples hilos acceden y modifican el mismo recurso sin control, causando resultados impredecibles.
+
+🧠 Pregunta 36
+Explica cómo la transparencia de fallo mejora la experiencia del usuario.
+
+A. Permite que los errores sean visibles para poder corregirlos
+B. Oculta las fallas del sistema para que el usuario no las perciba
+C. Detiene todos los hilos cuando ocurre un error
+D. Muestra el log de errores en pantalla
+
+✅ Correcta: B
+🧾 Explicación: La transparencia de fallo permite que el sistema maneje errores internamente sin que el usuario los note, manteniendo una experiencia fluida.
+
+🧠 Pregunta 37
+Aplica el concepto de concurrencia al desarrollo de una hoja de cálculo moderna. ¿Qué beneficio clave proporciona?
+
+A. Reducir la memoria usada en cada celda
+B. Ejecutar todos los cálculos en el mismo hilo
+C. Permitir entrada, procesamiento y visualización simultánea
+D. Evitar que el sistema utilice la red
+
+✅ Correcta: C
+🧾 Explicación: Gracias a la concurrencia, una hoja de cálculo puede aceptar entrada, recalcular y actualizar celdas al mismo tiempo sin bloquear al usuario.
+
+🧠 Pregunta 38
+Compara la programación concurrente con la secuencial en cuanto a su representación del mundo real.
+
+A. La programación secuencial refleja mejor la realidad por su orden lineal
+B. La concurrente representa mejor situaciones reales con múltiples eventos simultáneos
+C. Ambas representan igual de bien los eventos paralelos del entorno
+D. La concurrente es más lenta que la secuencial
+
+✅ Correcta: B
+🧾 Explicación: En la vida real, múltiples eventos ocurren al mismo tiempo. La programación concurrente refleja mejor esta naturaleza paralela de las actividades.
+
+🧠 Pregunta 39
+Analiza por qué Google Chrome ejecuta cada pestaña como un proceso independiente.
+
+A. Para aumentar el consumo de memoria y CPU
+B. Para reducir el número de hilos por pestaña
+C. Para aislar fallos y mejorar estabilidad, seguridad y rendimiento
+D. Para evitar que el sistema operativo detecte errores
+
+✅ Correcta: C
+🧾 Explicación: Al usar un proceso por pestaña, se logra mayor estabilidad (si una pestaña falla, no afecta a las demás), mayor seguridad y uso más eficiente de núcleos.
+
+🧠 Pregunta 40
+Aplica el concepto de interbloqueo (deadlock) en un sistema de impresión compartida. ¿Cuál de los siguientes casos lo representa mejor?
+
+A. Un hilo imprime documentos mientras otro realiza copias
+B. Dos hilos esperan indefinidamente el control de una impresora que el otro ya posee
+C. Un usuario cancela una impresión y el sistema reinicia
+D. La impresora se queda sin papel
+
+✅ Correcta: B
+🧾 Explicación: Un interbloqueo ocurre cuando dos o más procesos se quedan esperando recursos entre sí, impidiendo que avancen. Las otras situaciones no representan bloqueo mutuo.

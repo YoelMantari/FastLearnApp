@@ -1,0 +1,110 @@
+🧠 Pregunta 21
+Explica por qué en un sistema distribuido el usuario no necesita conocer la ubicación de los recursos.
+
+A. Porque todos los recursos están centralizados en una misma máquina
+B. Porque el sistema distribuye automáticamente los datos a través de la red
+C. Porque el middleware oculta la ubicación física de los recursos
+D. Porque los recursos son eliminados tras su uso
+
+✅ Correcta: C
+🧾 Explicación: El middleware permite acceso transparente a los recursos, haciendo que parezcan locales. Las otras opciones malinterpretan el papel del middleware o los recursos.
+
+🧠 Pregunta 22
+Compara las características de un sistema abierto con uno cerrado en cuanto a extensibilidad.
+
+A. Ambos permiten ampliar funciones, pero el cerrado tiene interfaces públicas
+B. El cerrado se adapta mejor a cambios por tener control central
+C. El abierto permite agregar nuevos servicios gracias a sus interfaces públicas
+D. El abierto es más seguro, pero menos adaptable
+
+✅ Correcta: C
+🧾 Explicación: Los sistemas abiertos permiten la expansión gracias a interfaces públicas. Los sistemas cerrados son más restrictivos y difíciles de modificar.
+
+🧠 Pregunta 23
+Deduce cuál es el riesgo principal de la heterogeneidad en un sistema distribuido.
+
+A. La imposibilidad de usar múltiples lenguajes de programación
+B. La complejidad en la comunicación entre componentes diversos
+C. El aumento del número de hilos por nodo
+D. La necesidad de usar sistemas operativos idénticos
+
+✅ Correcta: B
+🧾 Explicación: La heterogeneidad implica que los componentes pueden ser muy distintos, dificultando su interoperabilidad sin middleware. Las otras opciones no representan riesgos reales o malinterpretan el concepto.
+
+🧠 Pregunta 24
+Analiza por qué el código móvil requiere el uso de máquinas virtuales.
+
+A. Porque las máquinas virtuales son más rápidas que el hardware real
+B. Porque las máquinas virtuales permiten ejecutar código nativo
+C. Porque aseguran portabilidad y comportamiento consistente en cualquier entorno
+D. Porque reducen el tamaño del código
+
+✅ Correcta: C
+🧾 Explicación: Las máquinas virtuales permiten que el mismo código se ejecute de forma consistente en diferentes plataformas. Las otras opciones no abordan la portabilidad.
+
+🧠 Pregunta 25
+Aplica el concepto de tolerancia a fallos en el siguiente caso: Un sistema detecta una falla en un servidor y redirige automáticamente la petición a otro. ¿Qué técnica se ha usado?
+
+A. Recuperación
+B. Enmascaramiento
+C. Detección de fallos
+D. Redundancia
+
+✅ Correcta: B
+🧾 Explicación: Enmascaramiento implica ocultar el error redirigiendo o repitiendo la operación. La redundancia apoya esta acción, pero no la ejecuta directamente.
+
+🧠 Pregunta 26
+Analiza cuál es la relación entre concurrencia y consistencia de datos.
+
+A. La concurrencia garantiza que los datos sean consistentes
+B. La concurrencia evita el uso de sincronización
+C. La concurrencia puede generar inconsistencias si no se gestiona adecuadamente
+D. La concurrencia solo afecta a programas secuenciales
+
+✅ Correcta: C
+🧾 Explicación: El acceso concurrente sin sincronización puede causar errores como condiciones de carrera. Por eso, se requiere programación cuidadosa.
+
+🧠 Pregunta 27
+¿Cuál es el objetivo principal de la transparencia en un sistema distribuido?
+
+A. Reducir el número de usuarios
+B. Ocultar los detalles técnicos para que el sistema parezca sencillo
+C. Aumentar la complejidad del sistema para mejor rendimiento
+D. Eliminar la necesidad de redes
+
+✅ Correcta: B
+🧾 Explicación: La transparencia busca hacer que el sistema distribuido funcione como uno solo, sin que el usuario perciba su complejidad interna.
+
+🧠 Pregunta 28
+Compara el paralelismo real con el lógico en cuanto a recursos utilizados.
+
+A. El paralelismo lógico usa varios núcleos, el real solo uno
+B. Ambos tipos usan exactamente los mismos recursos
+C. El real usa múltiples núcleos físicos, el lógico simula multitarea con uno solo
+D. El lógico necesita una red distribuida, el real no
+
+✅ Correcta: C
+🧾 Explicación: El paralelismo real requiere hardware con varios núcleos, mientras que el lógico simula multitarea alternando la ejecución.
+
+🧠 Pregunta 29
+Deduce cuál sería una ventaja de usar hilos en lugar de procesos en una aplicación concurrente.
+
+A. Los hilos tienen su propio espacio de memoria, lo que mejora la seguridad
+B. Los hilos pueden ejecutarse sin sincronización
+C. Los hilos comparten memoria, lo que facilita la comunicación entre ellos
+D. Los hilos evitan los interbloqueos
+
+✅ Correcta: C
+🧾 Explicación: Al compartir memoria dentro de un mismo proceso, los hilos pueden comunicarse fácilmente, lo cual mejora el rendimiento. Las otras opciones son incorrectas o peligrosas.
+
+🧠 Pregunta 30
+Explica por qué depurar programas concurrentes puede ser más complejo que depurar programas secuenciales.
+
+A. Porque el compilador elimina los errores automáticamente
+B. Porque los hilos suelen compartir archivos
+C. Porque es difícil predecir el orden exacto de ejecución de los hilos
+D. Porque solo se puede ejecutar un hilo a la vez
+
+✅ Correcta: C
+🧾 Explicación: La ejecución de hilos puede variar cada vez que se ejecuta el programa, lo que dificulta la reproducción y diagnóstico de errores.
+

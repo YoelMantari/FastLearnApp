@@ -1,0 +1,114 @@
+🧠 Pregunta 1  
+¿Cuál es el propósito principal del middleware en un sistema distribuido?
+
+A. Ejecutar programas en el sistema operativo base  
+B. Detectar y corregir errores de hardware  
+C. Coordinar la comunicación y ocultar diferencias entre nodos  
+D. Reemplazar el hardware del sistema  
+
+✅ Correcta: C  
+🧾 Explicación: El middleware actúa como una capa intermedia que permite que distintas máquinas trabajen juntas como si fueran una sola, coordinando la comunicación y ocultando su ubicación o diferencias internas.
+
+🧠 Pregunta 2  
+¿Qué desafío aborda principalmente la heterogeneidad en sistemas distribuidos?
+
+A. La presencia de múltiples hilos en un solo proceso  
+B. La variabilidad en los tipos de usuarios del sistema  
+C. Las diferencias entre hardware, software y redes entre nodos  
+D. La falta de comunicación entre el cliente y el servidor  
+
+✅ Correcta: C  
+🧾 Explicación: Heterogeneidad se refiere a las diferencias entre los componentes de un sistema distribuido, como distintos sistemas operativos, redes o lenguajes. El middleware ayuda a ocultar estas diferencias.
+
+🧠 Pregunta 3  
+¿Qué tipo de transparencia hace que el usuario no necesite saber si un recurso está cerca o lejos?
+
+A. Transparencia de acceso  
+B. Transparencia de ubicación  
+C. Transparencia de movilidad  
+D. Transparencia de concurrencia  
+
+✅ Correcta: B  
+🧾 Explicación: La transparencia de ubicación permite que los recursos parezcan estar localmente, aunque estén en otra máquina, ocultando su ubicación real.
+
+
+
+🧠 Pregunta 4  
+¿Qué técnica se utiliza cuando un sistema distribuido detecta un error, pero continúa funcionando usando una copia del recurso?
+
+A. Detección de fallos  
+B. Recuperación  
+C. Tolerancia  
+D. Enmascaramiento  
+
+✅ Correcta: D  
+🧾 Explicación: Enmascarar un fallo significa continuar la operación ocultando el error, por ejemplo, usando una copia del recurso o repitiendo la acción automáticamente.
+
+🧠 Pregunta 5  
+¿Qué característica distingue a un sistema escalable?
+
+A. Solo se ejecuta en un número fijo de nodos  
+B. Puede crecer sin afectar negativamente su rendimiento  
+C. Se basa exclusivamente en hardware especializado  
+D. Tiene restricciones para ejecutar procesos concurrentes  
+
+✅ Correcta: B  
+🧾 Explicación: Un sistema escalable mantiene su eficiencia y funcionalidad a medida que se agregan más usuarios o recursos al sistema.
+
+🧠 Pregunta 6  
+¿Cuál es una diferencia clave entre un programa concurrente y uno secuencial?
+
+A. El concurrente necesita más memoria que el secuencial  
+B. El secuencial puede ejecutar múltiples hilos simultáneamente  
+C. El concurrente puede ejecutar múltiples tareas al mismo tiempo  
+D. Ambos tipos de programas manejan hilos de igual forma  
+
+✅ Correcta: C  
+🧾 Explicación: En un programa concurrente se pueden ejecutar varias actividades simultáneamente, cada una en su propio hilo, a diferencia de un programa secuencial.
+
+🧠 Pregunta 7  
+¿Qué permite el paralelismo lógico en una computadora de un solo núcleo?
+
+A. Ejecutar una sola tarea por segundo  
+B. Ejecutar tareas con menor precisión  
+C. Alternar entre tareas tan rápido que parecen simultáneas  
+D. Dividir físicamente el procesador en subprocesadores  
+
+✅ Correcta: C  
+🧾 Explicación: El paralelismo lógico intercala tareas rápidamente, simulando que se ejecutan a la vez, aunque en realidad se ejecutan una por una.
+
+🧠 Pregunta 8  
+¿Qué pilar de la seguridad asegura que los datos no puedan ser vistos por personas no autorizadas?
+
+A. Integridad  
+B. Confidencialidad  
+C. Disponibilidad  
+D. Transparencia  
+
+✅ Correcta: B  
+🧾 Explicación: La confidencialidad garantiza que solo los usuarios autorizados puedan
+
+🧠 Pregunta 9  
+¿Qué ventaja ofrece la concurrencia en aplicaciones como videojuegos o navegadores web?
+
+A. Reducción del tamaño del código fuente  
+B. Ejecución de tareas en paralelo mejorando la experiencia del usuario  
+C. Eliminación de todos los errores de sincronización  
+D. Aislamiento total entre procesos  
+
+✅ Correcta: B  
+🧾 Explicación: La concurrencia permite que múltiples tareas se realicen al mismo tiempo (como sonido, gráficos, entrada del usuario), mejorando fluidez y rendimiento.
+
+🧠 Pregunta 10  
+¿Qué problema ocurre cuando dos hilos se bloquean mutuamente esperando recursos que el otro posee?
+
+A. Condición de carrera  
+B. Fragmentación de memoria  
+C. Interbloqueo (deadlock)  
+D. Fuga de memoria  
+
+✅ Correcta: C  
+🧾 Explicación: Un interbloqueo ocurre cuando dos o más hilos esperan indefinidamente por recursos ocupados entre ellos, impidiendo que continúen.
+
+
+

@@ -1,0 +1,109 @@
+🧠 Pregunta 11
+¿Qué significa que un sistema distribuido tenga tolerancia a fallos?
+
+A. Puede detenerse sin afectar a los usuarios.
+B. Tiene un rendimiento más bajo para evitar errores.
+C. Puede seguir funcionando incluso cuando ocurren errores.
+D. Requiere reiniciarse por completo ante cualquier fallo.
+
+✅ Correcta: C
+🧾 Explicación: Un sistema con tolerancia a fallos incorpora mecanismos para seguir operando, aunque alguna de sus partes falle, asegurando continuidad del servicio.
+
+🧠 Pregunta 12
+¿Cuál de las siguientes opciones es un ejemplo de middleware orientado a objetos?
+
+A. SOAP
+B. CORBA
+C. Ethernet
+D. Checksum
+
+✅ Correcta: B
+🧾 Explicación: CORBA es una arquitectura que permite que objetos distribuidos se comuniquen a través de diferentes lenguajes y plataformas.
+
+🧠 Pregunta 13
+En el contexto de sistemas distribuidos, ¿qué tipo de transparencia se encarga de ocultar si un recurso ha sido duplicado?
+
+A. Transparencia de ubicación
+B. Transparencia de concurrencia
+C. Transparencia de replicación
+D. Transparencia de movilidad
+
+✅ Correcta: C
+🧾 Explicación: La transparencia de replicación oculta al usuario si un recurso está replicado para mejorar rendimiento o disponibilidad.
+
+🧠 Pregunta 14
+¿Qué tipo de programación permite modelar un videojuego donde múltiples elementos (sonido, gráficos, entrada del usuario) operan al mismo tiempo?
+
+A. Secuencial
+B. Paralela
+C. Concurrente
+D. Modular
+
+✅ Correcta: C
+🧾 Explicación: La programación concurrente permite que varios componentes funcionen simultáneamente, cada uno con su propio hilo de ejecución.
+
+🧠 Pregunta 15
+¿Qué tipo de paralelismo se basa en la capacidad de un solo núcleo para simular multitarea?
+
+A. Paralelismo real
+B. Paralelismo compartido
+C. Paralelismo lógico
+D. Paralelismo estructural
+
+✅ Correcta: C
+🧾 Explicación: El paralelismo lógico permite alternar entre tareas de forma tan rápida que aparenta que se ejecutan simultáneamente, aunque en realidad solo hay un núcleo.
+
+🧠 Pregunta 16
+¿Qué componente es indispensable para ejecutar código móvil de forma portable y segura?
+
+A. Interfaz gráfica
+B. Memoria compartida
+C. Máquina virtual
+D. Servidor HTTP
+
+✅ Correcta: C
+🧾 Explicación: Las máquinas virtuales permiten que el código se ejecute igual en cualquier sistema, independientemente del hardware o SO, lo cual es clave para el código móvil.
+
+🧠 Pregunta 17
+¿Cuál de los siguientes NO es uno de los pilares de la seguridad en sistemas distribuidos?
+
+A. Confidencialidad
+B. Integridad
+C. Disponibilidad
+D. Transparencia
+
+✅ Correcta: D
+🧾 Explicación: La transparencia es una propiedad de diseño, no un componente de seguridad. Los pilares de seguridad son: confidencialidad, integridad y disponibilidad.
+
+🧠 Pregunta 18
+¿Qué característica diferencia a un sistema abierto de uno cerrado?
+
+A. Solo el sistema cerrado puede usar múltiples hilos.
+B. El sistema abierto permite que otros lo extiendan mediante interfaces públicas.
+C. Los sistemas abiertos son más lentos por su complejidad.
+D. Los sistemas cerrados funcionan mejor en redes públicas.
+
+✅ Correcta: B
+🧾 Explicación: Un sistema abierto ofrece interfaces públicas que permiten su extensión e integración con otros servicios, sin depender de un solo proveedor.
+
+🧠 Pregunta 19
+¿Cuál es la ventaja principal del uso de hilos dentro de un mismo proceso?
+
+A. Aumentar el tamaño del ejecutable
+B. Reducir la portabilidad del sistema
+C. Facilitar el intercambio de datos al compartir memoria
+D. Evitar la sincronización entre tareas
+
+✅ Correcta: C
+🧾 Explicación: Los hilos comparten la memoria del proceso padre, lo que hace más eficiente la comunicación entre ellos sin mecanismos como sockets o pipes.
+
+🧠 Pregunta 20
+¿Qué ventaja ofrece la programación concurrente en términos de diseño de software?
+
+A. Aumenta el número de líneas de código por hilo.
+B. Obliga a ejecutar todo en secuencia para evitar errores.
+C. Permite dividir tareas complejas en módulos especializados por hilo.
+D. Hace más difícil detectar errores de lógica.
+
+✅ Correcta: C
+🧾 Explicación: La concurrencia permite un diseño modular, donde cada hilo realiza una tarea específica, lo que mejora la organización y la claridad del código.

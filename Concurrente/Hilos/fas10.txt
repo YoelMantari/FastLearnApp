@@ -1,0 +1,114 @@
+🧠 Pregunta 1
+¿Cuál es la principal diferencia conceptual entre ejecutar múltiples procesos y utilizar múltiples hilos dentro de un proceso?
+
+A. Los procesos son más rápidos al comunicarse entre sí.
+B. Los hilos no pueden compartir recursos.
+C. Los procesos operan con memoria aislada; los hilos comparten recursos dentro de un mismo espacio.
+D. Los hilos requieren más memoria que los procesos.
+
+✅ Correcta: C
+🧾 Explicación: Mientras que los procesos tienen memoria separada y requieren mecanismos especiales (IPC) para comunicarse, los hilos comparten memoria dentro del mismo proceso, lo que los hace más eficientes.
+
+🧠 Pregunta 2
+¿Por qué no es adecuado invocar directamente el método run() al trabajar con hilos en Java?
+
+A. Porque el método run() solo es accesible en hilos daemon.
+B. Porque no inicia un hilo nuevo, ejecuta el código en el hilo actual.
+C. Porque run() crea un proceso en lugar de un hilo.
+D. Porque run() bloquea la memoria compartida entre hilos.
+
+✅ Correcta: B
+🧾 Explicación: Invocar run() directamente no lanza un nuevo hilo; el código se ejecuta de forma secuencial en el mismo hilo donde fue llamado.
+
+🧠 Pregunta 3
+¿Cuál de las siguientes opciones representa una condición de carrera?
+
+A. Un hilo daemon termina antes de un hilo usuario.
+B. Un hilo intenta leer un archivo que otro está cerrando.
+C. Dos hilos acceden y modifican simultáneamente una variable compartida sin control.
+D. Un proceso finaliza sin liberar su espacio de memoria.
+
+✅ Correcta: C
+🧾 Explicación: La condición de carrera ocurre cuando múltiples hilos acceden y modifican datos compartidos de forma concurrente sin sincronización, produciendo resultados inesperados.
+
+🧠 Pregunta 4
+¿Cuál es una ventaja clave de implementar la interfaz Runnable frente a extender la clase Thread?
+
+A. Permite establecer prioridades más altas.
+B. Evita el uso de start() para lanzar el hilo.
+C. Facilita la herencia múltiple y la reutilización del código.
+D. No necesita sobreescribir el método run().
+
+✅ Correcta: C
+🧾 Explicación: Como Java no permite herencia múltiple, implementar Runnable da flexibilidad para extender otras clases y seguir definiendo hilos.
+
+🧠 Pregunta 5
+¿Qué representa el siguiente fragmento de código en términos de concurrencia?
+
+java
+Copiar
+Editar
+Thread.sleep(4000);
+A. El hilo actual se bloquea de forma indefinida.
+B. El hilo se detiene de forma permanente.
+C. El hilo entra en estado bloqueado esperando un recurso.
+D. El hilo se suspende temporalmente, permitiendo que otros hilos usen la CPU.
+
+✅ Correcta: D
+🧾 Explicación: sleep() detiene el hilo actual por un tiempo definido, cediendo la CPU a otros hilos potencialmente listos para ejecutarse.
+
+🧠 Pregunta 6
+¿Qué implicación tiene que Thread.interrupted() borre la bandera de interrupción tras su uso?
+
+A. El hilo entra en un ciclo infinito.
+B. El hilo ya no puede detectar si fue interrumpido previamente.
+C. La interrupción se vuelve permanente.
+D. El hilo lanza una excepción automáticamente.
+
+✅ Correcta: B
+🧾 Explicación: Como Thread.interrupted() resetea la bandera de interrupción, se debe usar con cuidado si queremos mantener el historial de interrupciones.
+
+🧠 Pregunta 7
+¿Cuál es el rol principal de un daemon thread en un sistema Java?
+
+A. Ejecutar tareas críticas del usuario en segundo plano.
+B. Proteger al hilo principal de interrupciones externas.
+C. Proveer servicios auxiliares y finalizar automáticamente cuando no quedan hilos de usuario.
+D. Sincronizar procesos externos con la JVM.
+
+✅ Correcta: C
+🧾 Explicación: Los daemon threads ejecutan tareas de fondo (como el garbage collector) y se eliminan automáticamente cuando todos los hilos de usuario finalizan.
+
+🧠 Pregunta 8
+¿Qué relación tiene el concepto de "prioridad de hilos" con el sistema operativo?
+
+A. Es una regla estricta que se cumple siempre.
+B. El sistema operativo no puede ignorarla nunca.
+C. Es una sugerencia que el planificador puede tener en cuenta o no.
+D. Determina obligatoriamente el orden de ejecución.
+
+✅ Correcta: C
+🧾 Explicación: Aunque la prioridad ayuda al planificador a decidir, no garantiza el orden de ejecución ya que depende del sistema operativo.
+
+🧠 Pregunta 9
+¿Cuál es una diferencia crítica entre los estados Runnable y Running?
+
+A. Runnable significa que el hilo ha terminado su tarea.
+B. Running indica que el hilo está pausado.
+C. Runnable significa que el hilo está listo pero aún no ejecutándose.
+D. Ambos estados significan lo mismo.
+
+✅ Correcta: C
+🧾 Explicación: Un hilo en estado Runnable está listo para ejecutarse, pero debe esperar su turno según el planificador del sistema operativo.
+
+🧠 Pregunta 10
+En el contexto de concurrencia, ¿por qué es relevante el uso de la palabra "compartido" al hablar de hilos?
+
+A. Porque los hilos siempre se ejecutan en diferentes máquinas.
+B. Porque el código se comparte entre hilos para mayor seguridad.
+C. Porque los hilos comparten recursos como variables y memoria dentro del mismo proceso.
+D. Porque los hilos no pueden acceder al código principal.
+
+✅ Correcta: C
+🧾 Explicación: La memoria y los recursos de un proceso son compartidos entre sus hilos, lo cual permite eficiencia pero requiere mecanismos de sincronización.
+
