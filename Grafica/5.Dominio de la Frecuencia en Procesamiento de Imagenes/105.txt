@@ -1,0 +1,130 @@
+🧠 Pregunta 11
+
+Elegir un rechaza-banda gaussiano es aconsejable cuando:
+
+A. Se requiere eliminar un ruido periódico sin introducir artefactos visibles
+B. Hace falta realzar los contornos más finos
+C. Se desea añadir grano artístico a la imagen
+D. Se necesita convertir la foto a blanco y negro
+
+✅ Correcta: A
+
+🧾 Explicación: La transición suave del gaussiano minimiza halos y conserva la naturalidad fuera de la banda eliminada.
+
+🧠 Pregunta 12
+
+Al aumentar el radio de corte de un filtro pasa-bajas, el desenfoque producido:
+
+A. Disminuye
+B. Aumenta
+C. Permanece igual
+D. Se vuelve aleatorio
+
+✅ Correcta: A
+
+🧾 Explicación: Un radio mayor deja pasar más frecuencias, por lo que conserva más detalle y desenfoca menos.
+
+🧠 Pregunta 13
+
+Con un filtro pasa-altas, reducir el radio de corte genera:
+
+A. Realce solo de los bordes más finos
+B. Desenfoque global de la imagen
+C. Pérdida de contraste en zonas planas
+D. Desaturación de colores
+
+✅ Correcta: A
+
+🧾 Explicación: Al permitir solo frecuencias muy altas, se resaltan únicamente los contornos más estrechos.
+
+🧠 Pregunta 14
+
+¿Cuál de los siguientes no es un objetivo del filtrado en frecuencia?
+
+A. Eliminar ruido granular
+B. Acentuar detalles finos
+C. Ajustar la exposición de la cámara en tiempo real
+D. Suprimir interferencias periódicas
+
+✅ Correcta: C
+
+🧾 Explicación: El filtrado opera sobre la imagen ya capturada; no controla la exposición de la cámara.
+
+🧠 Pregunta 15
+
+Un filtro Butterworth de orden muy alto tiende a comportarse como:
+
+A. Un filtro gaussiano con transición súper suave
+B. Un filtro ideal con corte brusco y posibles anillos
+C. Un simple ajuste lineal de contraste
+D. Un relleno de color uniforme
+
+✅ Correcta: B
+
+🧾 Explicación: A órdenes elevados, la curva del Butterworth se vuelve prácticamente vertical, imitando el corte abrupto del ideal.
+
+🧠 Pregunta 16
+
+¿Qué característica diferencia principalmente al filtro gaussiano del Butterworth?
+
+A. El gaussiano trabaja solo con imágenes en color
+B. El gaussiano ofrece la transición más suave posible sin lóbulos secundarios
+C. El gaussiano genera más anillos que el ideal
+D. El gaussiano exige más memoria gráfica
+
+✅ Correcta: B
+
+🧾 Explicación: La campana gaussiana disminuye de forma gradual y continua, evitando picos indeseados.
+
+🧠 Pregunta 17
+
+Un filtro ideal (ya sea pasa-bajas o pasa-altas) es útil sobre todo para:
+
+A. Implementaciones en tiempo real
+B. Pruebas teóricas y demostraciones didácticas
+C. Aplicaciones de fotografía móvil
+D. Reducción de compresión JPEG
+
+✅ Correcta: B
+
+🧾 Explicación: Aunque genera artefactos, su respuesta binaria facilita el análisis conceptual del filtrado.
+
+🧠 Pregunta 18
+
+Para superponer un logo desplazándolo en la imagen sin alterar la magnitud del espectro, se aprovecha la propiedad de:
+
+A. Escalado
+B. Convolución
+C. Desplazamiento
+D. Derivación
+
+✅ Correcta: C
+
+🧾 Explicación: Mover contenido cambia la fase de las frecuencias, pero la magnitud (energía) se mantiene.
+
+🧠 Pregunta 19
+
+¿Qué sucede si se aplica un rechazo-banda mal posicionado (no coincide con la frecuencia del ruido)?
+
+A. El ruido desaparece totalmente
+B. Se introduce un desenfoque global innecesario
+C. El ruido sigue presente y se podría afectar detalle útil de la imagen
+D. La imagen cambia de formato de color
+
+✅ Correcta: C
+
+🧾 Explicación: Si la banda no coincide, no se elimina el ruido y se pueden quitar componentes importantes de la imagen.
+
+🧠 Pregunta 20
+
+La ganancia de un filtro en frecuencia se refiere a:
+
+A. El brillo máximo de la imagen
+B. Cuánto deja pasar cada frecuencia (valor entre pasar y bloquear)
+C. El número de píxeles modificados
+D. La cantidad de memoria usada por el filtro
+
+✅ Correcta: B
+
+🧾 Explicación: La ganancia indica qué fracción de cada componente de frecuencia se conserva o se atenúa.
+

@@ -1,0 +1,129 @@
+🧠 Pregunta 1
+
+¿Cuál es la primera etapa al convertir una señal continua en digital dentro de una cámara o tarjeta de sonido?
+
+A. Codificación
+B. Cuantización
+C. Muestreo
+D. Reconstrucción
+
+✅ Correcta: C
+
+🧾 Explicación: El proceso arranca tomando la señal continua a intervalos regulares, es decir, muestreándola.
+
+🧠 Pregunta 2
+
+¿Qué problema típico aparece cuando se muestrea con una frecuencia demasiado baja?
+
+A. Posterización
+B. Aliasing
+C. Ruido térmico
+D. Desenfoque gaussiano
+
+✅ Correcta: B
+
+🧾 Explicación: Muestrear por debajo de lo adecuado provoca aliasing, que introduce patrones falsos y pérdida de detalle.
+
+🧠 Pregunta 3
+
+En la etapa de cuantización, ¿qué se hace con cada muestra obtenida?
+
+A. Se representa como un impulso de voltaje continuo
+B. Se redondea al nivel discreto más cercano permitido
+C. Se comprime en el dominio de la frecuencia
+D. Se asigna una fase lineal
+
+✅ Correcta: B
+
+🧾 Explicación: Cuantizar significa aproximar cada valor a un conjunto finito de niveles posibles.
+
+🧠 Pregunta 4
+
+Un efecto visual clásico de usar muy pocos niveles de cuantización en una fotografía es:
+
+A. Efecto bokeh
+B. Ruido de disparo
+C. Bandas o posterización
+D. Aberración cromática
+
+✅ Correcta: C
+
+🧾 Explicación: Una cuantización grosera genera bandas sólidas en zonas de degradado suave.
+
+🧠 Pregunta 5
+
+La codificación en el flujo ADC consiste en:
+
+A. Asignar a cada nivel cuantizado un código binario específico
+B. Ajustar la frecuencia de muestreo automáticamente
+C. Filtrar los armónicos indeseados
+D. Aumentar la resolución de bits de la señal
+
+✅ Correcta: A
+
+🧾 Explicación: Tras cuantizar, es necesario traducir cada nivel a un patrón de ceros y unos para almacenarlo o enviarlo.
+
+🧠 Pregunta 6
+
+¿Cuál es la finalidad del filtro que sigue al Conversor Digital-Analógico?
+
+A. Añadir ruido rosa para ocultar artefactos
+B. Interpolar suavemente entre impulsos y eliminar componentes de alta frecuencia indeseada
+C. Codificar la señal en un formato comprimido
+D. Reducir la amplitud de la señal de salida
+
+✅ Correcta: B
+
+🧾 Explicación: El filtro de reconstrucción convierte la secuencia escalonada del DAC en una forma continua sin escalones abruptos.
+
+🧠 Pregunta 7
+
+Ordena correctamente las etapas de ida y vuelta de una señal:
+
+A. Codificación → Muestreo → Cuantización → DAC
+B. Señal continua → Muestreo → Cuantización → Codificación → DAC → Filtro de salida → Señal continua
+C. Muestreo → DAC → Cuantización → Codificación
+D. Señal continua → Codificación → Cuantización → Muestreo → Filtro
+
+✅ Correcta: B
+
+🧾 Explicación: Esa secuencia refleja el camino completo desde el mundo analógico al digital y de regreso.
+
+🧠 Pregunta 8
+
+El desplazamiento (shift) de una señal en el dominio del tiempo produce en su espectro:
+
+A. Ampliación de su magnitud
+B. Cambio solo de fase, la magnitud permanece igual
+C. Reducción del nivel de ruido blanco
+D. Duplicación de todas las frecuencias
+
+✅ Correcta: B
+
+🧾 Explicación: Al mover una señal no se altera la cantidad de energía en cada frecuencia; solo cambia su fase.
+
+🧠 Pregunta 9
+
+Comprimir una señal en el tiempo (hacerla más breve) provoca en frecuencia que:
+
+A. Se reduzca el rango de frecuencias presentes
+B. Desaparezcan los componentes agudos
+C. El espectro se haga más ancho, abarcando frecuencias más altas
+D. El desplazamiento de fase se anule
+
+✅ Correcta: C
+
+🧾 Explicación: Reducir la duración obliga a incluir componentes de frecuencia más alta, ensanchando el espectro.
+
+🧠 Pregunta 10
+
+En procesamiento de imágenes, aplicar convolución con un kernel suave sirve principalmente para:
+
+A. Multiplicar las frecuencias altas
+B. Incrementar la nitidez de bordes
+C. Desenfocar o reducir ruido
+D. Cambiar el espacio de color
+
+✅ Correcta: C
+
+🧾 Explicación: Un kernel suave distribuye la intensidad entre píxeles vecinos, promediando variaciones bruscas.

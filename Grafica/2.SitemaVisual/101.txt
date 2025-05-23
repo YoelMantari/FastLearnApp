@@ -1,0 +1,140 @@
+🧠 Pregunta 1
+
+¿Cuál es la función principal del ojo humano?
+
+A. Detectar sonidos del entorno
+B. Captar la luz, enfocarla y transformarla en señales eléctricas
+C. Producir lágrimas para mantener la humedad
+D. Regular la presión sanguínea ocular
+
+✅ Correcta: B
+
+🧾 Explicación:
+El ojo humano está especializado en captar la luz, enfocarla y convertirla en señales eléctricas que el cerebro interpreta como imágenes.
+
+🧠 Pregunta 2
+
+¿Qué membrana actúa como la “ventana” del ojo y realiza la primera refracción de la luz?
+
+A. Retina
+B. Esclerótica
+C. Coroides
+D. Córnea
+
+✅ Correcta: D
+
+🧾 Explicación:
+La córnea es la parte frontal y transparente del ojo, encargada de proteger y ayudar a enfocar la luz que entra al ojo.
+
+🧠 Pregunta 3
+
+¿Cuál es la capa que se encuentra entre la esclerótica y la retina y está formada por vasos sanguíneos?
+
+A. Retina
+B. Iris
+C. Coroides
+D. Cuerpo vítreo
+
+✅ Correcta: C
+
+🧾 Explicación:
+La coroides es una red de vasos sanguíneos entre la esclerótica y la retina, principal fuente de nutrición del ojo y ayuda a absorber la luz dispersa.
+
+🧠 Pregunta 4
+
+¿Qué estructura del ojo controla la cantidad de luz que entra al ojo?
+
+A. Esclerótica
+B. Iris
+C. Córnea
+D. Retina
+
+✅ Correcta: B
+
+🧾 Explicación:
+El iris es un músculo circular que regula la cantidad de luz que entra al ojo al modificar el diámetro de la pupila.
+
+🧠 Pregunta 5
+
+¿Cuál es la función principal de los conos en la retina?
+
+A. Visión nocturna y detección de movimiento
+B. Producir lágrimas
+C. Visión de colores y detalles finos
+D. Proteger el ojo contra infecciones
+
+✅ Correcta: C
+
+🧾 Explicación:
+Los conos permiten la visión en condiciones de luz intensa, la percepción de colores y los detalles finos.
+
+🧠 Pregunta 6
+
+¿Dónde se localizan principalmente los bastones en la retina y cuál es su función?
+
+A. En la fóvea; visión de color
+B. En la periferia; visión nocturna y detección de movimiento
+C. En la esclerótica; enfoque
+D. En la córnea; protección
+
+✅ Correcta: B
+
+🧾 Explicación:
+Los bastones se concentran en la periferia de la retina y son responsables de la visión en condiciones de poca luz y detección de movimiento.
+
+🧠 Pregunta 7
+
+¿Cómo se logra el enfoque de objetos a diferentes distancias en el ojo humano?
+
+A. Moviendo la retina
+B. Cambiando la forma del cristalino
+C. Modificando el tamaño de la esclerótica
+D. Contrayendo el cuerpo vítreo
+
+✅ Correcta: B
+
+🧾 Explicación:
+El cristalino cambia su curvatura (más o menos curvado) para enfocar objetos cercanos o lejanos, proceso llamado acomodación.
+
+🧠 Pregunta 8
+
+¿Qué rango del espectro electromagnético puede percibir el ojo humano?
+
+A. De 100 nm a 2000 nm
+B. De 400 nm a 700 nm
+C. De 0.1 nm a 10 nm
+D. De 10 µm a 100 µm
+
+✅ Correcta: B
+
+🧾 Explicación:
+El ojo humano sólo percibe el rango de luz visible, de aproximadamente 400 nm (violeta) a 700 nm (rojo).
+
+🧠 Pregunta 9
+
+¿Por qué los sensores de cámaras digitales suelen tener más píxeles verdes?
+
+A. Porque el verde es el color favorito de los diseñadores
+B. Para imitar la sensibilidad del ojo humano al verde
+C. Para aumentar la durabilidad del sensor
+D. Para reducir el consumo energético
+
+✅ Correcta: B
+
+🧾 Explicación:
+El ojo humano es más sensible al verde, por eso los sensores incluyen más píxeles verdes para mejorar la similitud con la visión humana (filtro Bayer).
+
+🧠 Pregunta 10
+
+¿Cuál es la importancia de comprender la fisiología y óptica del ojo para el procesamiento de imágenes digitales?
+
+A. Permite reducir el tamaño de los archivos
+B. Ayuda a diseñar sistemas que optimizan la percepción humana
+C. Facilita la impresión de imágenes
+D. Permite eliminar el uso de la retina en la visión artificial
+
+✅ Correcta: B
+
+🧾 Explicación:
+Conocer cómo percibe el ojo humano permite desarrollar sensores, algoritmos y técnicas de procesamiento de imágenes que sean más óptimos para la percepción humana.
+

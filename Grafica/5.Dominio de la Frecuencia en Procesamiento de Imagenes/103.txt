@@ -1,0 +1,129 @@
+🧠 Pregunta 21
+
+Derivar una señal en el tiempo destaca principalmente:
+
+A. Las frecuencias bajas
+B. Las frecuencias altas (cambios bruscos)
+C. El componente de corriente continua
+D. Las correlaciones de fase
+
+✅ Correcta: B
+
+🧾 Explicación: La derivada amplifica los cambios rápidos, por eso es útil para detección de bordes.
+
+🧠 Pregunta 22
+
+En imágenes, aplicar un kernel de desenfoque equivale en frecuencia a:
+
+A. Un filtro pasa-altas
+B. Un filtro pasa-bajas
+C. Una modulación en amplitud
+D. Una rotación del espectro
+
+✅ Correcta: B
+
+🧾 Explicación: Suavizar reduce o elimina las componentes de alta frecuencia.
+
+🧠 Pregunta 23
+
+La dualidad de la Transformada de Fourier sugiere que:
+
+A. Filtrar en espacio y en frecuencia es siempre idéntico
+B. Transformar dos veces devuelve la señal reflejada
+C. Las señales periódicas no tienen espectro definido
+D. Convolución y multiplicación son la misma operación
+
+✅ Correcta: B
+
+🧾 Explicación: Aplicar la transformada dos veces refleja la señal con respecto al origen.
+
+🧠 Pregunta 24
+
+Al observar una imagen con patrones muy uniformes y pocos bordes, su espectro mostrará:
+
+A. Muchos puntos brillantes en los extremos
+B. Energía concentrada cerca del centro
+C. Ausencia total de componente de baja frecuencia
+D. Un tren de impulsos perfectamente uniforme
+
+✅ Correcta: B
+
+🧾 Explicación: Zonas planas generan principalmente frecuencias bajas concentradas en el centro del espectro.
+
+🧠 Pregunta 25
+
+La operación de multiplicar dos señales en el tiempo produce en frecuencia:
+
+A. Convolución de sus espectros
+B. Desplazamiento vertical de la fase
+C. Anulación completa de la magnitud
+D. Transformación idéntica a la identidad
+
+✅ Correcta: A
+
+🧾 Explicación: Multiplicar temporalmente corresponde a convolucionar en el dominio de la frecuencia.
+
+🧠 Pregunta 26
+
+El impulso o delta ideal en el tiempo se caracteriza porque en frecuencia:
+
+A. Solo contiene bajas frecuencias
+B. Presenta amplitud constante en todas las frecuencias
+C. Genera un espectro vacío
+D. Produce bandas alternas oscurecidas
+
+✅ Correcta: B
+
+🧾 Explicación: El impulso tiene energía distribuida por igual en todo el espectro.
+
+🧠 Pregunta 27
+
+En la DFT-2D, perder la fase pero conservar la magnitud al reconstruir una imagen suele provocar:
+
+A. Imagen reconocible con colores alterados
+B. Imagen irreconocible, solo contornos difusos
+C. Imagen idéntica al original
+D. Imagen con bordes muy afilados y ruido bajo
+
+✅ Correcta: B
+
+🧾 Explicación: La fase contiene la posición exacta de las estructuras; sin ella se pierden las localizaciones reales.
+
+🧠 Pregunta 28
+
+¿Cuál de los siguientes casos es un ejemplo directo del teorema de muestreo de Nyquist?
+
+A. Usar un tren de impulsos equiespaciados para medir una señal
+B. Aplicar un kernel Laplaciano en una imagen
+C. Reducir la resolución de bits durante la cuantización
+D. Ajustar la fase de una portadora en modulación
+
+✅ Correcta: A
+
+🧾 Explicación: El tren de impulsos representa el proceso conceptual de muestreo descrito por Nyquist.
+
+🧠 Pregunta 29
+
+El término pasa-altas describe un filtro que:
+
+A. Deja pasar componentes de baja frecuencia y atenúa las altas
+B. Atenúa todas las frecuencias por igual
+C. Deja pasar componentes de alta frecuencia y reduce las bajas
+D. Elimina el componente de fase sin tocar la magnitud
+
+✅ Correcta: C
+
+🧾 Explicación: Un pasa-altas conserva bordes y detalles finos al eliminar la información más uniforme.
+
+🧠 Pregunta 30
+
+Conocer las propiedades de la Transformada de Fourier permite principalmente:
+
+A. Diseñar algoritmos de procesamiento eficientes y predecibles
+B. Evitar cualquier tipo de filtrado digital
+C. Trabajar únicamente con señales analógicas
+D. Reemplazar por completo la etapa de cuantización
+
+✅ Correcta: A
+
+🧾 Explicación: Usar estas propiedades agiliza cálculos, anticipa resultados y fundamenta técnicas de análisis y filtrado.

@@ -1,0 +1,148 @@
+🧠 Pregunta 21
+
+Elegir una **resolución muy baja** (pocos píxeles por unidad) produce:
+
+A. Mayor nitidez en detalles finos
+B. Menor tamaño de archivo y pérdida de detalle visible
+C. Aumento del rango dinámico
+D. Mejora del contraste cromático
+
+✅ Correcta: B
+
+🧾 Explicación: Hay menos información por área y la imagen se ve borrosa o con bloques grandes.
+
+---
+
+🧠 Pregunta 22
+
+¿Cuál de los siguientes conceptos **vincula directamente** distancia física real con tamaño de píxel?
+
+A. City-Block
+B. DPI
+C. Vecindario $N_D$
+D. Glitch filter
+
+✅ Correcta: B
+
+🧾 Explicación: DPI traduce píxeles a pulgadas, permitiendo convertir a unidades métricas si se conoce la conversión pulgada-centímetro.
+
+---
+
+🧠 Pregunta 23
+
+En procesado de imágenes satelitales, conocer el **tamaño de píxel** permite:
+
+A. Calcular áreas reales y distancias sobre el terreno
+B. Reducir el ruido térmico del sensor
+C. Cambiar la proyección geográfica automáticamente
+D. Eliminar efectos de iluminación atmosférica
+
+✅ Correcta: A
+
+🧾 Explicación: Relaciona cada píxel con metros en el mundo real para mediciones.
+
+---
+
+🧠 Pregunta 24
+
+¿Cuál de las siguientes **no** es una propiedad exclusiva de los **voxels**?
+
+A. Representan volumen en 3 D
+B. Su renderizado puede utilizarse para tomografía
+C. Se indexan solo con dos coordenadas $x,y$
+D. Forman parte de modelos volumétricos médicos
+
+✅ Correcta: C
+
+🧾 Explicación: Al ser 3 D requieren tres coordenadas $x,y,z$.
+
+---
+
+🧠 Pregunta 25
+
+Al hablar de impresoras, un valor de **1250 DPI** frente a **72 DPI** indica:
+
+A. Que ambas tendrán igual nitidez
+B. Que 1250 DPI producirá mucha mayor definición de detalles impresos
+C. Que 72 DPI tendrá mejor color por usar menos tinta
+D. Nada, DPI solo aplica a pantallas
+
+✅ Correcta: B
+
+🧾 Explicación: Más puntos por pulgada producen líneas y texto más finos.
+
+---
+
+🧠 Pregunta 26
+
+La distancia City-Block se relaciona con el vecindario:
+
+A. $N_4$
+B. $N_D$
+C. $N_8$
+D. Ninguno, usa todos los píxeles de la imagen
+
+✅ Correcta: A
+
+🧾 Explicación: Sólo considera movimientos ortogonales, mismos que define $N_4$.
+
+---
+
+🧠 Pregunta 27
+
+¿Cuál de las siguientes sentencias sobre **resolución** es correcta?
+
+A. Un archivo de 1920 × 1080 px tiene siempre alta resolución física
+B. La resolución solo depende del tamaño de archivo en MB
+C. Un aumento en resolución espacial mejora la capacidad de detectar bordes finos
+D. La resolución no afecta la segmentación de objetos pequeños
+
+✅ Correcta: C
+
+🧾 Explicación: A más píxeles por área, bordes y detalles se representan con mayor fidelidad.
+
+---
+
+🧠 Pregunta 28
+
+Elija la **diferencia principal** entre **píxel** y **pel** (picture element) en el contexto histórico:
+
+A. “Pel” es un sinónimo obsoleto de “píxel”
+B. “Pel” se usa solo para imágenes en escala de grises
+C. “Pel” indica tres valores RGB en un mismo punto
+D. No existe relación entre ambos términos
+
+✅ Correcta: A
+
+🧾 Explicación: “Pel” fue un término temprano; hoy se prefiere “píxel”.
+
+---
+
+🧠 Pregunta 29
+
+Un algoritmo que necesite suprimir “esquinas aisladas” en una imagen binaria debería considerar, para mayor eficacia, la vecindad:
+
+A. $N_D$
+B. $N_4$
+C. $N_8$
+D. Vecinos a distancia 2
+
+✅ Correcta: C
+
+🧾 Explicación: Al evaluar ortogonales y diagonales detecta esquinas solitarias mejor que $N_4$ solo.
+
+---
+
+🧠 Pregunta 30
+
+Comprender las **distancias y vecindades** es esencial porque:
+
+A. Permite modificar el modelo de color sin artefactos
+B. Define cómo se conectan los píxeles y se aplican filtros locales
+C. Reduce automáticamente el tamaño de la imagen
+D. Sustituye la necesidad de calibrar el sensor
+
+✅ Correcta: B
+
+🧾 Explicación: Muchos algoritmos (conectividad, suavizado, detección de bordes) dependen de la regla de proximidad adoptada.
+

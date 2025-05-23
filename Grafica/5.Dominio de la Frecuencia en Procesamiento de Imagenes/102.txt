@@ -1,0 +1,130 @@
+🧠 Pregunta 11
+
+¿Con qué operación en el dominio espacial es equivalente la multiplicación por un filtro en el dominio de la frecuencia?
+
+A. Desplazamiento
+B. Escalado
+C. Convolución
+D. Interpolación bilineal
+
+✅ Correcta: C
+
+🧾 Explicación: Convolución en espacio corresponde a multiplicación en frecuencia y viceversa.
+
+🧠 Pregunta 12
+
+Una señal que contiene un pulso rectangular de corta duración presenta en frecuencia:
+
+A. Un pico único en frecuencia cero
+B. Un espectro ancho con muchos lóbulos laterales
+C. Dos picos simétricos estrechos
+D. Ausencia de componentes de alta frecuencia
+
+✅ Correcta: B
+
+🧾 Explicación: Limitar la señal en el tiempo obliga a distribuir energía en numerosas frecuencias.
+
+🧠 Pregunta 13
+
+La señal ideal que contiene únicamente una frecuencia pura aparece en el dominio de la frecuencia como:
+
+A. Un conjunto de bandas anchas
+B. Un pico o delta muy estrecho
+C. Un perfil escalonado
+D. Un espectro completamente uniforme
+
+✅ Correcta: B
+
+🧾 Explicación: Una sola frecuencia se representa como un punto de energía concentrada en esa posición del eje de frecuencia.
+
+🧠 Pregunta 14
+
+Un tren de impulsos (muchos impulsos igualmente espaciados) origina en frecuencia:
+
+A. Un tren equivalente de impulsos igualmente espaciados
+B. Un espectro nulo
+C. Un único punto en frecuencia cero
+D. Una campana suave sin picos
+
+✅ Correcta: A
+
+🧾 Explicación: La periodicidad en el tiempo se traduce en periodicidad en frecuencia, clave para entender el muestreo.
+
+🧠 Pregunta 15
+
+Dentro de la Transformada Discreta de Fourier bidimensional, el componente ubicado en el centro del espectro indica:
+
+A. Las texturas de alta frecuencia
+B. El valor medio o brillo global de la imagen
+C. Las orientaciones diagonales
+D. La rotación de fase de la señal
+
+✅ Correcta: B
+
+🧾 Explicación: El centro corresponde a la frecuencia cero, que refleja la intensidad promedio de la imagen.
+
+🧠 Pregunta 16
+
+Al aplicar un desplazamiento de un logotipo sobre una foto, la magnitud del espectro de la foto:
+
+A. Se vuelve más estrecha
+B. Aumenta de valor en todas partes
+C. Permanece exactamente igual
+D. Se desplaza hacia frecuencias más altas
+
+✅ Correcta: C
+
+🧾 Explicación: El cambio afecta la fase, no la magnitud del espectro.
+
+🧠 Pregunta 17
+
+Reducir la escala de una imagen (hacerla más pequeña) provoca que su espectro de frecuencias:
+
+A. Se contraiga hacia el centro
+B. Se expanda hacia los bordes
+C. Pierda información de frecuencia cero
+D. Cambie solo la fase, no la magnitud
+
+✅ Correcta: B
+
+🧾 Explicación: Al comprimir en el plano espacial, se necesita un rango mayor de frecuencias para describir las variaciones.
+
+🧠 Pregunta 18
+
+¿Cuál de las siguientes propiedades de la Transformada de Fourier garantiza que la energía total de la señal es la misma en ambos dominios?
+
+A. Dualidad
+B. Parseval
+C. Convolución
+D. Desplazamiento
+
+✅ Correcta: B
+
+🧾 Explicación: El teorema de Parseval (o Plancherel) afirma la conservación de energía entre tiempo y frecuencia.
+
+🧠 Pregunta 19
+
+En filtrado digital, es habitual diseñar el proceso en frecuencia porque:
+
+A. Es imposible operar en el dominio espacial
+B. La convolución se convierte en multiplicación, lo que simplifica los cálculos
+C. Se evita toda modificación de fase
+D. Los valores se hacen automáticamente enteros
+
+✅ Correcta: B
+
+🧾 Explicación: Multiplicar en frecuencia para filtrar es más eficiente que realizar convoluciones grandes en espacio.
+
+🧠 Pregunta 20
+
+La propiedad de linealidad de la Transformada de Fourier implica que:
+
+A. Sumar señales equivale a multiplicar sus espectros
+B. El espectro de la suma es la suma de los espectros
+C. El desplazamiento temporal se vuelve rotación de fase
+D. La energía varía con la escala de tiempo
+
+✅ Correcta: B
+
+🧾 Explicación: Operaciones de suma y escalado en el dominio temporal se reflejan de la misma forma en el dominio de la frecuencia.
+

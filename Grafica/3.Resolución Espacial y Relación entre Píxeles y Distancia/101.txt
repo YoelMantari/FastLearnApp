@@ -1,0 +1,149 @@
+
+🧠 Pregunta 1
+
+¿Cuál es el significado de la palabra **Spel** en procesamiento de imágenes?
+
+A. Elemento volumétrico en 3 D
+B. Elemento espacial genérico, sin especificar dimensiones
+C. Unidad básica de una imagen 2 D
+D. Unidad de densidad de píxeles
+
+✅ Correcta: B
+
+🧾 Explicación: *Spel* (Spatial Element) se usa como término genérico para cualquier unidad espacial, sin fijar si es 2 D o 3 D.
+
+---
+
+🧠 Pregunta 2
+
+Un **píxel** se define como:
+
+A. El valor medio de intensidad de toda una imagen
+B. El cubo mínimo representado en un volumen 3 D
+C. La unidad básica de una imagen 2 D que almacena un valor de intensidad
+D. Un punto flotante que indica la posición del sensor
+
+✅ Correcta: C
+
+🧾 Explicación: Cada píxel (picture element) guarda la intensidad (gris o color) en imágenes bidimensionales.
+
+---
+
+🧠 Pregunta 3
+
+El término **voxel** hace referencia a:
+
+A. Un píxel ampliado para pantallas de alta densidad
+B. Una unidad volumétrica en 3 D equivalente al píxel en 2 D
+C. Un vecino diagonal de un píxel
+D. Una subdivisión de la resolución angular
+
+✅ Correcta: B
+
+🧾 Explicación: Voxel (volume element) representa un pequeño cubo de volumen en tomografías o modelos 3 D.
+
+---
+
+🧠 Pregunta 4
+
+¿Cuándo es más apropiado hablar de **voxels** en vez de **píxeles**?
+
+A. En la edición de fotos digitales
+B. En el análisis de imágenes médicas volumétricas (TAC, MRI)
+C. En impresiones de alta resolución 2 D
+D. En la definición de paletas de color
+
+✅ Correcta: B
+
+🧾 Explicación: Los datos volumétricos (medicina, geociencias) se organizan en voxels.
+
+---
+
+🧠 Pregunta 5
+
+La **resolución espacial** de una imagen describe:
+
+A. El número de bits por canal de color
+B. La proporción ancho/alto de la imagen
+C. La cantidad de píxeles por unidad de área física
+D. El rango dinámico de intensidades
+
+✅ Correcta: C
+
+🧾 Explicación: Más píxeles por área significa mayor detalle; menos, imagen borrosa o pixelada.
+
+---
+
+🧠 Pregunta 6
+
+Una imagen **de alta resolución** se caracteriza por:
+
+A. Tener un tamaño de archivo pequeño
+B. Presentar menos píxeles por unidad de área
+C. Contener muchos píxeles por unidad de área y más detalle
+D. Verse inevitablemente pixelada al 100 % de zoom
+
+✅ Correcta: C
+
+🧾 Explicación: A mayor densidad de píxeles, más información fina se puede representar.
+
+---
+
+🧠 Pregunta 7
+
+¿Qué significan las siglas **DPI**?
+
+A. Density Process Indicator
+B. Dots Per Inch
+C. Data Pixel Index
+D. Depth Per Image
+
+✅ Correcta: B
+
+🧾 Explicación: DPI expresa cuántos puntos (o píxeles) hay en una pulgada lineal, útil en impresión/escaneo.
+
+---
+
+🧠 Pregunta 8
+
+Si se reduce una imagen de 300 DPI a 72 DPI y luego se vuelve a ampliar al original, el resultado más probable es:
+
+A. Una mejora en nitidez
+B. Una reducción del tamaño del archivo sin pérdida visible
+C. Una imagen notablemente pixelada
+D. Un cambio únicamente en los canales de color
+
+✅ Correcta: C
+
+🧾 Explicación: Al descartar resolución y reescalar, la información perdida genera un aspecto borroso o pixelado.
+
+---
+
+🧠 Pregunta 9
+
+En el ejemplo satelital, una imagen de **2000 × 2000 px** cubre **4 km × 4 km**. ¿Cuál es el tamaño de cada píxel?
+
+A. 0,5 m
+B. 1 m
+C. 2 m
+D. 4 m
+
+✅ Correcta: C
+
+🧾 Explicación: $4000\text{ m} / 2000\text{ px} = 2\text{ m / px}$.
+
+---
+
+🧠 Pregunta 10
+
+Una subimagen de **300 × 300 px** extraída de la escena anterior representa un área de:
+
+A. 150 m × 150 m
+B. 300 m × 300 m
+C. 600 m × 600 m
+D. 1200 m × 1200 m
+
+✅ Correcta: C
+
+🧾 Explicación: $300\text{ px} × 2\text{ m / px} = 600\text{ m}$ por lado.
+

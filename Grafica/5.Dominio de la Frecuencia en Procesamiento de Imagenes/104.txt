@@ -1,0 +1,129 @@
+🧠 Pregunta 1
+
+¿Cuál es la principal ventaja de aplicar un filtro en el dominio de la frecuencia, comparado con hacerlo en el dominio espacial?
+
+A. Se evitan por completo los artefactos de borde
+B. La operación se reduce a una multiplicación simple, más barata que una convolución extensa
+C. Permite trabajar solo con la fase y olvidar la magnitud
+D. El resultado nunca altera el contraste de la imagen
+
+✅ Correcta: B
+
+🧾 Explicación: En frecuencia basta con multiplicar espectros, mientras que en espacio habría que recorrer toda la imagen con el kernel.
+
+🧠 Pregunta 2
+
+¿Qué efecto visual produce un filtro pasa-bajas sobre una fotografía?
+
+A. Acentúa contornos y líneas finas
+B. Suaviza la textura, difumina bordes y reduce ruido
+C. Introduce ruido impulsivo
+D. Genera patrones periódicos nuevos
+
+✅ Correcta: B
+
+🧾 Explicación: Al dejar pasar solo las frecuencias bajas se conservan las zonas uniformes y se atenúan los detalles agudos.
+
+🧠 Pregunta 3
+
+¿Cuál de los siguientes filtros suele provocar los anillos de Gibbs más notorios en la imagen resultante?
+
+A. Pasa-bajas gaussiano
+B. Pasa-bajas Butterworth de orden bajo
+C. Pasa-bajas ideal
+D. Filtro rechaza-banda gaussiano
+
+✅ Correcta: C
+
+🧾 Explicación: El corte abrupto del filtro ideal genera ondas de sobreimpulso alrededor de los bordes.
+
+🧠 Pregunta 4
+
+El parámetro “orden” en un filtro Butterworth sirve para:
+
+A. Elegir la dirección de la filtración
+B. Ajustar la suavidad de la transición entre zona de paso y zona de rechazo
+C. Cambiar la resolución espacial de la imagen
+D. Controlar la profundidad de color
+
+✅ Correcta: B
+
+🧾 Explicación: Un orden pequeño da transición muy gradual; un orden alto la hace más brusca.
+
+🧠 Pregunta 5
+
+Si se necesita el desenfoque más homogéneo y natural, ¿qué filtro pasa-bajas conviene elegir?
+
+A. Ideal
+B. Butterworth de orden elevado
+C. Gaussiano
+D. Rejilla pasa-banda
+
+✅ Correcta: C
+
+🧾 Explicación: La respuesta gaussiana no tiene cortes duros ni lóbulos, por lo que produce un suavizado “algodonoso”.
+
+🧠 Pregunta 6
+
+Un filtro pasa-altas se emplea principalmente para:
+
+A. Reducir el tamaño del archivo de imagen
+B. Resaltar bordes y detalles finos
+C. Uniformar zonas planas
+D. Convertir la imagen a escala de grises
+
+✅ Correcta: B
+
+🧾 Explicación: Al bloquear las frecuencias bajas y dejar pasar las altas, la imagen se realza en contornos y texturas finas.
+
+🧠 Pregunta 7
+
+¿Qué inconveniente habitual aparece al usar un filtro pasa-altas ideal?
+
+A. La imagen se vuelve extremadamente borrosa
+B. Se generan anillos brillantes alrededor de los bordes
+C. Se saturan los colores
+D. Desaparecen las zonas uniformes por completo
+
+✅ Correcta: B
+
+🧾 Explicación: El corte brusco produce artefactos de Gibbs visibles como halos o anillos.
+
+🧠 Pregunta 8
+
+Para reducir los artefactos de un filtro pasa-altas ideal sin perder demasiado realce de bordes, es recomendable:
+
+A. Bajar la resolución de la imagen antes de filtrar
+B. Pasar a modo de color indexado
+C. Sustituirlo por un filtro Butterworth de orden medio
+D. Reducir el brillo global de la imagen
+
+✅ Correcta: C
+
+🧾 Explicación: La transición suave del Butterworth atenúa los anillos, conservando un buen realce.
+
+🧠 Pregunta 9
+
+¿Cuándo resulta útil aplicar un filtro pasa-banda en una fotografía?
+
+A. Para aislar texturas de un tamaño concreto y estudiar patrones repetitivos
+B. Para eliminar completamente todo el ruido
+C. Para convertir la imagen a mapa de bits
+D. Para ajustar la saturación de color
+
+✅ Correcta: A
+
+🧾 Explicación: Un pasa-banda deja pasar solo un rango intermedio de frecuencias, que suele corresponder a texturas periódicas de ese tamaño.
+
+🧠 Pregunta 10
+
+El complemento de un filtro pasa-banda es:
+
+A. Pasa-altas
+B. Rechaza-banda
+C. Pasa-bajas
+D. Filtro ideal
+
+✅ Correcta: B
+
+🧾 Explicación: El rechaza-banda atenua justo la franja que el pasa-banda dejaría pasar y viceversa.

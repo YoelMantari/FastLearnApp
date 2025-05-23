@@ -1,0 +1,130 @@
+🧠 Pregunta 21
+
+Al filtrar una imagen con un pasa-altas gaussiano, el resultado típico es:
+
+A. Bordes reforzados sin halos molestos
+B. Aparición de líneas blancas gruesas
+C. Eliminación de la textura fina y ruido
+D. Conversión a escala logarítmica
+
+✅ Correcta: A
+
+🧾 Explicación: El gaussiano realza de forma suave, evitando los anillos propios de cortes bruscos.
+
+🧠 Pregunta 22
+
+Para detectar texturas periódicas que se repiten con un tamaño específico, el filtro más apropiado es:
+
+A. Pasa-bajas ideal
+B. Pasa-altas Butterworth
+C. Pasa-banda gaussiano centrado en esa frecuencia
+D. Rechaza-banda ideal
+
+✅ Correcta: C
+
+🧾 Explicación: El pasa-banda gaussiano deja pasar solo las frecuencias que corresponden a la periodicidad deseada.
+
+🧠 Pregunta 23
+
+Un filtro rechaza-banda resulta muy útil para:
+
+A. Aumentar el nivel general de contraste
+B. Eliminar las líneas de parpadeo provocadas por la red eléctrica
+C. Desenfocar retratos suavemente
+D. Convertir la imagen a negativo
+
+✅ Correcta: B
+
+🧾 Explicación: El parpadeo eléctrico suele concentrarse en una banda concreta que el notch suprime.
+
+🧠 Pregunta 24
+
+Al diseñar filtros circulares en 2-D, uno de los beneficios de trabajar en frecuencia es que:
+
+A. Es imposible definir radios en el plano espacial
+B. La forma circular se implementa fácilmente con máscaras sobre el espectro
+C. No se requiere transformar de vuelta al dominio espacial
+D. Se automatiza la corrección de color
+
+✅ Correcta: B
+
+🧾 Explicación: En el plano de frecuencias, distancias radiales se traducen directamente en círculos o anillos.
+
+🧠 Pregunta 25
+
+¿Cuál es la principal razón por la que el filtro ideal no suele usarse en aplicaciones prácticas, pese a su definición sencilla?
+
+A. Consume demasiado ancho de banda
+B. Su implementación requiere hardware especializado
+C. Introduce artefactos visibles que degradan la calidad
+D. No se puede representar en punto flotante
+
+✅ Correcta: C
+
+🧾 Explicación: El corte brusco genera anillos y sobreimpulsos que afean el resultado final.
+
+🧠 Pregunta 26
+
+Cuando se aumenta el ancho de banda de un filtro pasa-banda:
+
+A. Se aíslan texturas de tamaño más grande
+B. Se pasa de un filtro selectivo a uno casi todo-paso
+C. Disminuye la cantidad de contornos realzados
+D. Se añaden colores falsos
+
+✅ Correcta: B
+
+🧾 Explicación: Una franja más ancha deja pasar un rango mayor de frecuencias, aproximándose a dejar pasar casi todo.
+
+🧠 Pregunta 27
+
+¿Cuál de estas combinaciones es correcta para suavizar una imagen y después realzar sus bordes finos manteniendo bajo el ruido?
+
+A. Pasa-bajas ideal seguido de pasa-altas ideal
+B. Pasa-bajas gaussiano seguido de pasa-altas gaussiano
+C. Pasa-banda ideal seguido de rechaza-banda Butterworth
+D. Rechaza-banda gaussiano seguido de pasa-baja ideal
+
+✅ Correcta: B
+
+🧾 Explicación: El gaussiano minimiza artefactos tanto en el suavizado como en el realce posterior.
+
+🧠 Pregunta 28
+
+Si una imagen contiene ruido con un patrón de rejilla horizontal, lo más efectivo suele ser:
+
+A. Un filtro pasa-baja muy agresivo
+B. Un filtro rechaza-banda centrado en la frecuencia del patrón
+C. Convertir la imagen a blanco y negro
+D. Incrementar el brillo global
+
+✅ Correcta: B
+
+🧾 Explicación: El patrón periódico se concentra en una banda concreta de frecuencias que se puede suprimir selectivamente.
+
+🧠 Pregunta 29
+
+¿Qué efecto produce usar un pasa-altas con radio de corte demasiado alto?
+
+A. Los bordes se ven exagerados y aparece mucho ruido
+B. La imagen se vuelve extremadamente suave
+C. Sólo permanece la componente de corriente continua
+D. Se desplazan los colores hacia el azul
+
+✅ Correcta: A
+
+🧾 Explicación: Al dejar pasar frecuencias no solo muy altas sino también medias, se amplifica el ruido junto con los contornos.
+
+🧠 Pregunta 30
+
+El filtrado en frecuencia es clave porque permite:
+
+A. Controlar la apertura del obturador en la cámara
+B. Analizar y modificar la información de una imagen según su contenido espectral
+C. Sustituir la Transformada de Fourier por métodos geométricos
+D. Eliminar la necesidad de cuantización
+
+✅ Correcta: B
+
+🧾 Explicación: Manipulando componentes de frecuencia se logran tareas como suavizado, realce o eliminación de artefactos de manera eficiente y dirigida.
+

@@ -1,0 +1,130 @@
+🧠 Pregunta 31
+
+La relación bastones : conos en la retina es aproximadamente:
+
+A. 1 : 1
+B. 1 : 10
+C. 10 : 1
+D. 100 : 1
+
+✅ Correcta: C
+
+🧾 Explicación: Hay del orden de 75–150 M bastones y 6–7 M conos (≈ 10 : 1).
+
+🧠 Pregunta 32
+
+¿Qué capa ocular convierte directamente la energía luminosa en impulsos nerviosos?
+
+A. Córnea
+B. Cristalino
+C. Retina
+D. Esclerótica
+
+✅ Correcta: C
+
+🧾 Explicación: Los fotorreceptores de la retina inician la transducción de luz a señal eléctrica.
+
+🧠 Pregunta 33
+
+El rango dinámico del ojo (desde estrellas apenas visibles hasta luz solar directa) es posible gracias a:
+
+A. Solo el movimiento del cristalino
+B. Adaptación pupilar y cambio químico de fotopigmentos
+C. Refracción variable de la córnea
+D. La sombra proyectada por las pestañas
+
+✅ Correcta: B
+
+🧾 Explicación: Combina ajustes rápidos (pupila) y lentos (fotopigmentos).
+
+🧠 Pregunta 34
+
+¿Cuál de las siguientes similitudes existe entre el ojo y una cámara fotográfica estándar?
+
+A. Ambos enfocan moviendo el sensor
+B. Ambos poseen un diafragma que regula la luz
+C. Ambos tienen sensibilidad uniforme en todo el espectro EM
+D. Ambos utilizan líquidos para transmitir la luz
+
+✅ Correcta: B
+
+🧾 Explicación: Pupila ↔ diafragma controlan la entrada de luz; las otras opciones son diferencias.
+
+🧠 Pregunta 35
+
+En la comparación entre ojo y cámara, el “sensor” biológico equivalente sería:
+
+A. Córnea
+B. Cristalino
+C. Retina
+D. Iris
+
+✅ Correcta: C
+
+🧾 Explicación: La retina recibe la imagen enfocada y la convierte en señal eléctrica, igual que un sensor CMOS/CCD.
+
+🧠 Pregunta 36
+
+¿Qué término describe la pérdida de transparencia del cristalino con la edad?
+
+A. Presbicia
+B. Catarata
+C. Glaucoma
+D. Astigmatismo
+
+✅ Correcta: B
+
+🧾 Explicación: Las cataratas surgen cuando el cristalino se vuelve opaco por agregación de proteínas.
+
+🧠 Pregunta 37
+
+El ojo se adapta a niveles de iluminación en cuestión de milisegundos principalmente mediante:
+
+A. Regeneración de rodopsina
+B. Acomodación
+C. Variación pupilar
+D. Migración de pigmento en la coroides
+
+✅ Correcta: C
+
+🧾 Explicación: La pupila puede contraerse o dilatarse muy rápido.
+
+🧠 Pregunta 38
+
+Dentro del espectro visible, la longitud de onda de 550 nm corresponde perceptualmente al:
+
+A. Azul
+B. Verde
+C. Amarillo
+D. Rojo
+
+✅ Correcta: B
+
+🧾 Explicación: 550 nm cae en la región verde-amarilla, donde el ojo es más sensible.
+
+🧠 Pregunta 39
+
+La densidad extra de píxeles verdes en un sensor Bayer se debe a que:
+
+A. Los conos L y M combinados dominan la agudeza cromática
+B. Los bastones son sensibles al verde
+C. El cristalino filtra los colores cálidos
+D. La esclerótica refleja luces verdes
+
+✅ Correcta: A
+
+🧾 Explicación: El ojo es más sensible en la zona L/M (verde-rojo); duplicar el verde mejora la resolución percibida.
+
+🧠 Pregunta 40
+
+Uno de los aportes clave del conocimiento de la retina para algoritmos de mejora de contraste es:
+
+A. Usar una curva lineal de refuerzo de brillo
+B. Aplicar histogramas ponderados logarítmicamente, imitando la respuesta no lineal del ojo
+C. Eliminar el canal verde de la imagen
+D. Incrementar uniformemente la saturación en todos los píxeles
+
+✅ Correcta: B
+
+🧾 Explicación: Al aproximar la respuesta logarítmica del ojo se obtienen mejoras perceptualmente más naturales.
+

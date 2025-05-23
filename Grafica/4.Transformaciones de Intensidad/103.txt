@@ -1,0 +1,148 @@
+🧠 Pregunta 21
+
+¿Cuál transformación básica es la **base de la detección de bordes** mediante gradientes binarios simples?
+
+A. Identidad
+B. Negativo
+C. Umbralización
+D. Cuantización a color
+
+✅ Correcta: C
+
+🧾 Explicación: Muchos detectores de borde iniciales comparan intensidades contra un umbral.
+
+---
+
+🧠 Pregunta 22
+
+¿Qué sucede si eliges un umbral $T$ demasiado bajo?
+
+A. Todo se convierte en negro
+B. Todo se convierte en blanco
+C. Se pierde el objeto (aparece negro) y se ilumina el fondo (blanco)
+D. El ruido de la imagen disminuye
+
+✅ Correcta: B
+
+🧾 Explicación: Con $T$ bajo, casi todos $r \ge T$ se asignan a 255.
+
+---
+
+🧠 Pregunta 23
+
+Para una imagen con histogramas muy superpuestos (objeto y fondo), la umbralización:
+
+A. Es trivial y siempre funciona
+B. Puede requerir métodos adaptativos o continuar con errores significativos
+C. Genera bordes suaves automáticos
+D. Elimina automáticamente el ruido impulsivo
+
+✅ Correcta: B
+
+🧾 Explicación: Cuando las clases se mezclan, un solo $T$ global es insuficiente; se usan umbrales locales.
+
+---
+
+🧠 Pregunta 24
+
+En el gráfico del negativo, el punto $(r,s) = (0,255)$ indica que:
+
+A. El negro original se transforma en blanco
+B. El blanco original se transforma en negro
+C. El gris medio no cambia
+D. No hay transformación en $r=0$
+
+✅ Correcta: A
+
+🧾 Explicación: El origen oscuro se invierte al valor más claro.
+
+---
+
+🧠 Pregunta 25
+
+Los operadores **negativo** y **umbralización** se clasifican en procesamiento digital de imágenes como:
+
+A. Operaciones geométricas
+B. Transformaciones de intensidad punto a punto
+C. Filtros en frecuencia
+D. Algoritmos morfológicos
+
+✅ Correcta: B
+
+🧾 Explicación: Funcionan de manera independiente en cada píxel, según su valor de entrada.
+
+---
+
+🧠 Pregunta 26
+
+¿Qué ocurre si se aplica la transformación de negativo a una imagen binaria (solo 0 y 255)?
+
+A. Se convierte en escala de grises
+B. Los valores se mantienen iguales
+C. Se invierten: 0 pasa a 255 y 255 pasa a 0
+D. Se eliminan los bordes
+
+✅ Correcta: C
+
+🧾 Explicación: La fórmula $s = 255 - r$ invierte los niveles: blanco se convierte en negro y viceversa.
+
+---
+
+🧠 Pregunta 27
+
+El nivel 127 en una imagen de 8 bits se considera típicamente como:
+
+A. Negro
+B. Gris medio
+C. Blanco
+D. Valor inválido
+
+✅ Correcta: B
+
+🧾 Explicación: 127 es el punto medio entre 0 (negro) y 255 (blanco); se interpreta como gris neutro.
+
+---
+
+🧠 Pregunta 28
+
+¿Qué representa gráficamente una transformación de identidad en el plano $r$ vs $s$?
+
+A. Línea horizontal
+B. Línea con pendiente -1
+C. Línea con pendiente 0
+D. Línea con pendiente +1 (diagonal ascendente)
+
+✅ Correcta: D
+
+🧾 Explicación: $s = r$ produce una línea diagonal con pendiente +1, sin cambiar los valores.
+
+---
+
+🧠 Pregunta 29
+
+¿Cuál es una aplicación práctica de la umbralización en visión por computadora?
+
+A. Detectar movimiento a color
+B. Separar objetos del fondo en imágenes simples
+C. Ajustar la nitidez de una imagen
+D. Aplicar desenfoque gaussiano
+
+✅ Correcta: B
+
+🧾 Explicación: La umbralización permite segmentar regiones de interés como objetos sobre fondos uniformes.
+
+---
+
+🧠 Pregunta 30
+
+¿Cuál es el valor de salida al aplicar $s = 255 - r$ sobre un píxel con intensidad $r = 127$?
+
+A. 0
+B. 128
+C. 127
+D. 255
+
+✅ Correcta: B
+
+🧾 Explicación: $s = 255 - 127 = 128$; se invierte la intensidad respecto al centro.
+

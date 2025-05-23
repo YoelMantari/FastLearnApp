@@ -1,0 +1,149 @@
+
+🧠 Pregunta 11
+
+La **distancia euclidiana** entre dos píxeles $(x_1,y_1)$ y $(x_2,y_2)$ se calcula como:
+
+A. $|x_1 - x_2| + |y_1 - y_2|$
+B. $\sqrt{(x_1-x_2)^2 + (y_1-y_2)^2}$
+C. $\max(|x_1-x_2|,|y_1-y_2|)$
+D. $|x_1-x_2| \times |y_1-y_2|$
+
+✅ Correcta: B
+
+🧾 Explicación: Es la clásica “línea recta” en 2 D.
+
+---
+
+🧠 Pregunta 12
+
+Para dos píxeles **horizontales/verticales adyacentes**, la distancia euclidiana es:
+
+A. $0$
+B. $1$
+C. $\sqrt{2}$
+D. $2$
+
+✅ Correcta: B
+
+🧾 Explicación: La separación es un pixel de diferencia en una coordenada.
+
+---
+
+🧠 Pregunta 13
+
+Para dos píxeles **diagonales adyacentes**, la distancia euclidiana es:
+
+A. $1$
+B. $\sqrt{2}$
+C. $2$
+D. $0,5$
+
+✅ Correcta: B
+
+🧾 Explicación: Se diferencian en 1 en $x$ y 1 en $y$; $\sqrt{1^2+1^2} = \sqrt{2}$.
+
+---
+
+🧠 Pregunta 14
+
+La **distancia City-Block** (o Manhattan, $D_4$) entre $(x_1,y_1)$ y $(x_2,y_2)$ se define como:
+
+A. $\sqrt{(x_1-x_2)^2 + (y_1-y_2)^2}$
+B. $\max(|x_1-x_2|,|y_1-y_2|)$
+C. $|x_1-x_2| + |y_1-y_2|$
+D. $|x_1-x_2| \cdot |y_1-y_2|$
+
+✅ Correcta: C
+
+🧾 Explicación: Solo cuenta pasos horizontales y verticales.
+
+---
+
+🧠 Pregunta 15
+
+En la métrica City-Block, la ruta mínima entre dos puntos suele ser:
+
+A. Única
+B. Inexistente
+C. Múltiple: puede haber varios caminos de igual longitud
+D. Siempre diagonal
+
+✅ Correcta: C
+
+🧾 Explicación: Varios recorridos ortogonales diferentes pueden sumar la misma distancia total.
+
+---
+
+🧠 Pregunta 16
+
+El conjunto de **vecinos ortogonales** de un píxel $p$ se denomina:
+
+A. $N_D$
+B. $N_4$
+C. $N_8$
+D. $N_{16}$
+
+✅ Correcta: B
+
+🧾 Explicación: $N_4$ incluye arriba, abajo, izquierda y derecha.
+
+---
+
+🧠 Pregunta 17
+
+¿Cuántos píxeles forman el vecindario $N_8$ de un píxel central?
+
+A. 4
+B. 6
+C. 8
+D. 9
+
+✅ Correcta: C
+
+🧾 Explicación: $N_8 = N_4 \cup N_D$; son los ocho que rodean al píxel.
+
+---
+
+🧠 Pregunta 18
+
+El vecindario $N_D$ contiene:
+
+A. Solo vecinos horizontales
+B. Solo vecinos verticales
+C. Solo vecinos diagonales
+D. Vecinos ortogonales y diagonales
+
+✅ Correcta: C
+
+🧾 Explicación: $N_D$ refiere exclusivamente a los cuatro diagonales.
+
+---
+
+🧠 Pregunta 19
+
+Para **búsquedas de conectividad** en imágenes binarias, elegir $N_4$ sobre $N_8$ implica:
+
+A. Detectar diagonales como conectadas
+B. Resultar en menos componentes conectados posibles
+C. Incrementar el número de componentes falsos
+D. No tiene efecto alguno
+
+✅ Correcta: B
+
+🧾 Explicación: Con menos vecinos considerados, es más difícil que dos píxeles se unan en el mismo componente.
+
+---
+
+🧠 Pregunta 20
+
+Un filtro de suavizado que utilice **las ocho direcciones** se basa en el vecindario:
+
+A. $N_4$
+B. $N_8$
+C. $N_D$
+D. Ninguno, solo el píxel central
+
+✅ Correcta: B
+
+🧾 Explicación: Considera ortogonales + diagonales para distribuir el promedio de manera uniforme.
+

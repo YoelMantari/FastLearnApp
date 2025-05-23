@@ -1,0 +1,129 @@
+🧠 Pregunta 1
+
+¿Cuál es la función principal del ojo humano?
+
+A. Detectar sonidos del entorno
+B. Captar la luz, enfocarla y transformarla en señales eléctricas
+C. Producir lágrimas para mantener la humedad
+D. Regular la presión sanguínea ocular
+
+✅ Correcta: B
+
+🧾 Explicación: El ojo está especializado en captar luz, enfocarla y convertirla en señales eléctricas que el cerebro interpreta como imágenes.
+
+🧠 Pregunta 2
+
+¿Qué membrana actúa como “ventana” del ojo y realiza la primera refracción de la luz?
+
+A. Retina
+B. Esclerótica
+C. Coroides
+D. Córnea
+
+✅ Correcta: D
+
+🧾 Explicación: La córnea es la parte frontal y transparente que protege y ayuda a enfocar la luz.
+
+🧠 Pregunta 3
+
+¿Cuál es la capa vascular entre esclerótica y retina que nutre el ojo y absorbe luz dispersa?
+
+A. Retina
+B. Iris
+C. Coroides
+D. Cuerpo vítreo
+
+✅ Correcta: C
+
+🧾 Explicación: La coroides es rica en vasos sanguíneos y mejora la calidad de la imagen evitando reflejos internos.
+
+🧠 Pregunta 4
+
+¿Qué estructura controla la cantidad de luz que ingresa al ojo?
+
+A. Esclerótica
+B. Iris
+C. Córnea
+D. Retina
+
+✅ Correcta: B
+
+🧾 Explicación: El iris, músculo circular pigmentado, ajusta el diámetro pupilar.
+
+🧠 Pregunta 5
+
+¿Para qué sirven los conos de la retina?
+
+A. Visión nocturna y detección de movimiento
+B. Visión de colores y alta resolución en luz intensa
+C. Producción de humor vítreo
+D. Lubricación ocular
+
+✅ Correcta: B
+
+🧾 Explicación: Los conos responden en condiciones de alta luminancia y permiten ver colores y detalles finos.
+
+🧠 Pregunta 6
+
+¿Dónde predominan los bastones y cuál es su papel?
+
+A. Fóvea; visión de color
+B. Periferia; visión nocturna y detección de movimiento
+C. Cristalino; acomodación
+D. Esclerótica; protección
+
+✅ Correcta: B
+
+🧾 Explicación: Los bastones son más sensibles a baja luz y predominan periféricamente.
+
+🧠 Pregunta 7
+
+El enfoque de objetos a distintas distancias se logra en el ojo humano:
+
+A. Moviendo la retina
+B. Cambiando la curvatura del cristalino
+C. Modificando el grosor de la esclerótica
+D. Contrayendo el cuerpo vítreo
+
+✅ Correcta: B
+
+🧾 Explicación: La acomodación cambia la forma del cristalino.
+
+🧠 Pregunta 8
+
+¿Qué intervalo de longitudes de onda percibe el ojo humano?
+
+A. 100 nm – 2000 nm
+B. 400 nm – 700 nm
+C. 0,1 nm – 10 nm
+D. 10 µm – 100 µm
+
+✅ Correcta: B
+
+🧾 Explicación: Ese rango corresponde a la luz visible (violeta a rojo).
+
+🧠 Pregunta 9
+
+¿Por qué los sensores digitales incluyen más píxeles verdes?
+
+A. Por preferencia estética
+B. Para imitar la alta sensibilidad del ojo al verde
+C. Para alargar la vida útil del sensor
+D. Para reducir costos de fabricación
+
+✅ Correcta: B
+
+🧾 Explicación: El ojo es más sensible al verde; el filtro Bayer replica esa característica.
+
+🧠 Pregunta 10
+
+Comprender la fisiología del ojo es crucial en procesamiento digital de imágenes porque:
+
+A. Reduce el tamaño de archivos
+B. Permite diseñar sistemas optimizados para la percepción humana
+C. Evita calibrar sensores
+D. Elimina la necesidad de algoritmos de compresión
+
+✅ Correcta: B
+
+🧾 Explicación: Los algoritmos se diseñan para producir resultados acordes a la forma en que vemos.

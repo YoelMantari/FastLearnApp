@@ -1,0 +1,129 @@
+🧠 Pregunta 21
+
+En el ejemplo del árbol de 15 m visto a 100 m, la imagen sobre la retina es de ~2,55 mm porque:
+
+A. El ojo reduce la distancia focal
+B. La distancia ojo-objeto es irrelevante
+C. La proyección se escala por la relación similar de triángulos entre objeto y retina
+D. El iris amplifica la imagen
+
+✅ Correcta: C
+
+🧾 Explicación: Se aplica proporcionalidad lineal entre tamaños y distancias.
+
+🧠 Pregunta 22
+
+Durante la adaptación oscura, ¿qué mecanismo tarda más tiempo en ajustarse?
+
+A. Diámetro de la pupila
+B. Sensibilidad química de bastones y conos
+C. Parpadeo para hidratar la córnea
+D. Movimiento del cristalino
+
+✅ Correcta: B
+
+🧾 Explicación: Los fotopigmentos se regeneran en segundos o minutos, más lento que la respuesta pupilar.
+
+🧠 Pregunta 23
+
+La sensación de brillo percibida por el ojo:
+
+A. Es lineal con la intensidad luminosa
+B. Se mantiene constante en cualquier ambiente
+C. Presenta respuesta logarítmica y gran rango dinámico
+D. Depende sólo del número de conos activados
+
+✅ Correcta: C
+
+🧾 Explicación: El ojo adapta su sensibilidad y responde de forma logarítmica a la intensidad.
+
+🧠 Pregunta 24
+
+¿Qué tipo de cono es más sensible a longitudes de onda cercanas al azul (≈ 400–450 nm)?
+
+A. Cono L
+B. Cono M
+C. Cono S
+D. Bastón
+
+✅ Correcta: C
+
+🧾 Explicación: Los conos S (Short) responden al espectro azul-violeta.
+
+🧠 Pregunta 25
+
+Los sistemas de cámara enfocados por desplazamiento de lente, frente a la acomodación ocular, presentan la principal diferencia de que:
+
+A. El sensor se mueve y el lente es fijo
+B. El lente se mueve y la distancia sensor-lente es fija
+C. No requieren control de exposición
+D. Funcionan sin diafragma
+
+✅ Correcta: B
+
+🧾 Explicación: En cámaras típicas el lente se traslada; en el ojo el lente cambia forma.
+
+🧠 Pregunta 26
+
+Respecto al espectro electromagnético, las microondas se encuentran:
+
+A. Justo por debajo de la luz visible
+B. Entre radiofrecuencias y luz infrarroja
+C. Inmediatamente después de los rayos X
+D. Dentro del rango visible
+
+✅ Correcta: B
+
+🧾 Explicación: El orden (de menor a mayor frecuencia) incluye: radio → microondas → infrarrojo → visible → UV → X → gamma.
+
+🧠 Pregunta 27
+
+Selecciona la afirmación correcta sobre la visión escotópica:
+
+A. Depende principalmente de conos
+B. Opera en alta luminosidad
+C. Es mediada por bastones y carece de percepción de color
+D. Se localiza exclusivamente en la fóvea
+
+✅ Correcta: C
+
+🧾 Explicación: Los bastones trabajan en baja luz y no distinguen colores.
+
+🧠 Pregunta 28
+
+Las cataratas se producen por:
+
+A. Inflamación de la retina
+B. Opacificación de las proteínas del cristalino
+C. Aumento de la presión del humor vítreo
+D. Degeneración de los bastones
+
+✅ Correcta: B
+
+🧾 Explicación: La pérdida de transparencia en el cristalino dificulta el paso de luz.
+
+🧠 Pregunta 29
+
+¿Cuál de los siguientes no es un beneficio de conocer la fisiología del ojo para diseñar algoritmos de procesamiento digital?
+
+A. Ajustar brillo y contraste perceptuales
+B. Optimizar compresión de vídeo con menor pérdida visual
+C. Eliminar la necesidad de calibrar cámaras industriales
+D. Crear filtros de color basados en sensibilidad humana
+
+✅ Correcta: C
+
+🧾 Explicación: La calibración sigue siendo necesaria; los otros beneficios se basan en la psicovisualidad.
+
+🧠 Pregunta 30
+
+En comparación con el ojo, un sensor infrarrojo artificial aporta la ventaja de:
+
+A. Recrear la acomodación de forma idéntica
+B. Captar longitudes de onda fuera del visible
+C. Evitar la necesidad de diafragma
+D. Eliminar el ruido electrónico
+
+✅ Correcta: B
+
+🧾 Explicación: Los sistemas artificiales pueden diseñarse para IR, UV, etc., que el ojo no percibe.

@@ -1,0 +1,150 @@
+---
+
+🧠 Pregunta 11
+
+Un método automático popular para elegir $T$ a partir del histograma es:
+
+A. Filtro Sobel
+B. Ecualización de histograma
+C. Otsu
+D. FFT
+
+✅ Correcta: C
+
+🧾 Explicación: El algoritmo de Otsu maximiza la separabilidad entre clases (objeto/fondo).
+
+---
+
+🧠 Pregunta 12
+
+En el ejemplo de las monedas, ¿qué clase de regiones se vuelven blancas tras umbralizar correctamente?
+
+A. El fondo gris
+B. Las monedas (objetos)
+C. Los píxeles saturados de negro
+D. Las sombras proyectadas
+
+✅ Correcta: B
+
+🧾 Explicación: Las intensidades mayores al umbral asignado (monedas) pasan a 255.
+
+---
+
+🧠 Pregunta 13
+
+¿Cuál transformación listada **no** cambia los valores de los píxeles?
+
+A. Identidad
+B. Negativo
+C. Umbral
+D. Escalado logarítmico
+
+✅ Correcta: A
+
+🧾 Explicación: La identidad deja $s = r$, reproduciendo la misma imagen.
+
+---
+
+🧠 Pregunta 14
+
+La tabla de síntesis señala que la transformación **identidad** en la columna “Resultado típico” indica:
+
+A. Imagen invertida
+B. Imagen binaria
+C. Misma imagen
+D. Imagen con ruido reducido
+
+✅ Correcta: C
+
+🧾 Explicación: No se altera ningún píxel.
+
+---
+
+🧠 Pregunta 15
+
+Selecciona la afirmación correcta sobre la **escala de intensidad de 8 bits**:
+
+A. El nivel 128 corresponde a pureza cromática
+B. Los niveles se distribuyen de forma logarítmica
+C. Los niveles son equiespaciados linealmente entre 0 y 255
+D. Existen valores negativos en escenas de baja luz
+
+✅ Correcta: C
+
+🧾 Explicación: Cada incremento representa el mismo paso de intensidad lineal.
+
+---
+
+🧠 Pregunta 16
+
+¿Qué ventaja ofrece el negativo al analizar áreas muy brillantes?
+
+A. Reduce el tamaño del archivo
+B. Aclara aún más las regiones claras
+C. Convierte luces altas en tonos oscuros, revelando detalles
+D. Aplica un filtro de suavizado automático
+
+✅ Correcta: C
+
+🧾 Explicación: Al invertir, regiones saturadas se oscurecen y pueden mostrar textura antes oculta.
+
+---
+
+🧠 Pregunta 17
+
+En la fórmula $s = 255 - r$, si $r = 60$, el valor transformado $s$ será:
+
+A. 60
+B. 195
+C. 255
+D. 0
+
+✅ Correcta: B
+
+🧾 Explicación: $255 - 60 = 195$.
+
+---
+
+🧠 Pregunta 18
+
+La función de transferencia de la umbralización tiene forma de:
+
+A. Línea ascendente
+B. Línea descendente
+C. Escalón (función Heaviside)
+D. Senoide
+
+✅ Correcta: C
+
+🧾 Explicación: Pasa bruscamente de 0 a 255 en $r = T$.
+
+---
+
+🧠 Pregunta 19
+
+Una imagen binaria proveniente de umbralización contiene:
+
+A. 16 niveles de gris
+B. Tres canales de color
+C. Solo dos valores de intensidad
+D. Información de profundidad 3 D
+
+✅ Correcta: C
+
+🧾 Explicación: 0 (negro) y 255 (blanco) son los únicos intensidades permitidas.
+
+---
+
+🧠 Pregunta 20
+
+Si tras aplicar el negativo vuelves a aplicar umbralización, el resultado final será:
+
+A. Siempre idéntico al negativo
+B. Dependiente del umbral elegido
+C. La imagen original a color
+D. Uniformemente gris
+
+✅ Correcta: B
+
+🧾 Explicación: Umbralizar sobre el negativo depende de la nueva función de transferencia y $T$.
+

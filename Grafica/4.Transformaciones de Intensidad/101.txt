@@ -1,0 +1,149 @@
+
+🧠 Pregunta 1
+
+En una imagen de 8 bits, ¿qué valor de intensidad representa el negro absoluto?
+
+A. 1
+B. 127
+C. 255
+D. 0
+
+✅ Correcta: D
+
+🧾 Explicación: El rango va de 0 (negro) a 255 (blanco) en imágenes de 8 bits.
+
+---
+
+🧠 Pregunta 2
+
+¿Cuántos niveles de gris distintos existen en una imagen de 8 bits?
+
+A. 128
+B. 255
+C. 256
+D. 512
+
+✅ Correcta: C
+
+🧾 Explicación: El rango dinámico es $L = 2^{8} = 256$ niveles (0 – 255).
+
+---
+
+🧠 Pregunta 3
+
+El valor 255 en la escala de 8 bits corresponde a:
+
+A. Gris medio
+B. Negro
+C. Blanco
+D. Transparente
+
+✅ Correcta: C
+
+🧾 Explicación: 255 es el extremo más claro (blanco).
+
+---
+
+🧠 Pregunta 4
+
+¿Qué operación realiza el **negativo** de una imagen?
+
+A. Amplifica el contraste linealmente
+B. Intercambia las componentes R y B
+C. Invierte la escala de grises (oscuro ↔ claro)
+D. Reduce la resolución espacial
+
+✅ Correcta: C
+
+🧾 Explicación: El negativo transforma cada intensidad $r$ en $s = 255 - r$.
+
+---
+
+🧠 Pregunta 5
+
+La fórmula para obtener el negativo en escala de grises de 8 bits es:
+
+A. $s = r / 255$
+B. $s = 255 - r$
+C. $s = r^{2}$
+D. $s = 2r$
+
+✅ Correcta: B
+
+🧾 Explicación: Sustrae el valor original de 255, invirtiendo la escala.
+
+---
+
+🧠 Pregunta 6
+
+Aplicar dos veces la transformación $s = 255 - r$ sobre la misma imagen produce:
+
+A. Un contraste aumentado
+B. La imagen original
+C. Una imagen totalmente blanca
+D. Ruido aleatorio
+
+✅ Correcta: B
+
+🧾 Explicación: El negativo del negativo revierte los valores a los originales.
+
+---
+
+🧠 Pregunta 7
+
+En la gráfica de la función del negativo la pendiente es:
+
+A. $+1$
+B. $0$
+C. $-1$
+D. Infinita
+
+✅ Correcta: C
+
+🧾 Explicación: La línea recta desciende de $(0,255)$ a $(255,0)$ ⇒ pendiente $-1$.
+
+---
+
+🧠 Pregunta 8
+
+¿Qué objetivo principal tiene la **umbralización**?
+
+A. Convertir una imagen a color falso
+B. Pasar una imagen a binaria para separar objeto y fondo
+C. Incrementar la saturación de color
+D. Rotar la imagen 90°
+
+✅ Correcta: B
+
+🧾 Explicación: Umbralizar asigna 0 o 255 según si $r < T$ o $r \ge T$.
+
+---
+
+🧠 Pregunta 9
+
+En la formulación de la umbralización de un nivel, los valores de salida posibles son:
+
+A. 0 y 127
+B. 0 y 255
+C. 127 y 255
+D. Continuos entre 0 y 255
+
+✅ Correcta: B
+
+🧾 Explicación: La imagen resultante es binaria (negro o blanco).
+
+---
+
+🧠 Pregunta 10
+
+El punto de corte en la función de transferencia de la umbralización se ubica en:
+
+A. $r = 0$
+B. $r = 127$
+C. $r = T$
+D. $r = 255$
+
+✅ Correcta: C
+
+🧾 Explicación: $T$ es el umbral elegido donde la función salta de 0 a 255.
+
