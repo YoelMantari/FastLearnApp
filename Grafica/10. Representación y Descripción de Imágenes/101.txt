@@ -1,0 +1,130 @@
+🧠 Pregunta 1
+
+¿Cuál es la razón de “vectorizar” una imagen de MNIST (pasar de 28 × 28 a un arreglo de 784 valores)?
+
+A. Reducir la resolución de la imagen
+B. Facilitar que los algoritmos de aprendizaje trabajen con una lista de números en lugar de una matriz
+C. Convertir la imagen a color
+D. Mejorar el contraste del dígito
+
+✅ Correcta: B
+
+🧾 Explicación: Muchos métodos clásicos (p. ej. K-NN, SVM) aceptan vectores, no matrices, por lo que se “desenrolla” la cuadrícula fila a fila.
+
+🧠 Pregunta 2
+
+El espacio donde viven los vectores obtenidos de las imágenes MNIST tiene:
+
+A. 28 dimensiones
+B. 256 dimensiones
+C. 784 dimensiones
+D. 10 000 dimensiones
+
+✅ Correcta: C
+
+🧾 Explicación: Cada uno de los 784 píxeles ocupa una componente del vector en ese espacio.
+
+🧠 Pregunta 3
+
+¿Qué mide la distancia Manhattan cuando se aplica a dos imágenes vectorizadas?
+
+A. La dirección predominante de los trazos
+B. La cantidad total de diferencias absolutas entre píxel y píxel
+C. El área del dígito más grande
+D. El número de curvas cerradas en el contorno
+
+✅ Correcta: B
+
+🧾 Explicación: Suma cuánto difiere cada componente, lo que equivale a “cuánto habría que cambiar” todos los píxeles para pasar de una imagen a otra.
+
+🧠 Pregunta 4
+
+En K-Nearest Neighbors, escoger un valor de K demasiado pequeño suele provocar:
+
+A. Falta de sensibilidad a detalles
+B. Decisiones dominadas por ruido o excepciones puntuales
+C. Votaciones demasiado lentas
+D. Fusiones de clases distintas
+
+✅ Correcta: B
+
+🧾 Explicación: Con pocos vecinos, un ejemplo atípico puede alterar el resultado final de la votación.
+
+🧠 Pregunta 5
+
+¿Cuál es el paso final del algoritmo K-NN después de encontrar los K vecinos más cercanos?
+
+A. Eliminar el vecino más lejano
+B. Calcular la media de intensidades de los vecinos
+C. Asignar la clase que más se repite entre esos vecinos
+D. Normalizar los vectores de entrada
+
+✅ Correcta: C
+
+🧾 Explicación: El voto mayoritario decide la etiqueta para el nuevo ejemplo.
+
+🧠 Pregunta 6
+
+El código de Freeman (chain code) describe un contorno mediante:
+
+A. Un histograma de intensidades internas
+B. La secuencia de direcciones tomadas al recorrer la frontera paso a paso
+C. El número de agujeros presentes en la región
+D. La media y desviación estándar de los píxeles
+
+✅ Correcta: B
+
+🧾 Explicación: Cada paso del contorno se codifica con un número que representa la dirección en la vecindad de 8 posiciones posibles.
+
+🧠 Pregunta 7
+
+La firma de un borde se construye midiendo, para cada ángulo, la:
+
+A. Curvatura local del contorno
+B. Distancia desde un punto de referencia (centroide) hasta la frontera
+C. Intensidad media del objeto
+D. Altura del píxel con máxima curvatura
+
+✅ Correcta: B
+
+🧾 Explicación: Esa serie de distancias genera una curva 1-D que caracteriza la forma.
+
+🧠 Pregunta 8
+
+El diámetro de un objeto se define como:
+
+A. La longitud del contorno más largo
+B. La distancia máxima entre dos puntos cualesquiera del borde
+C. La suma de sus ejes principales
+D. El valor medio de curvatura
+
+✅ Correcta: B
+
+🧾 Explicación: Es el par de puntos del contorno que están más alejados entre sí, independiente de cómo se rote o traslade la figura.
+
+🧠 Pregunta 9
+
+¿Por qué el perímetro de un objeto es invariante a la traslación y rotación?
+
+A. Porque se normaliza al área antes de calcularlo
+B. Porque depende solo de la longitud del contorno, no de su posición u orientación
+C. Porque se mide sobre la imagen vectorizada
+D. Porque usa la distancia Manhattan
+
+✅ Correcta: B
+
+🧾 Explicación: Mover o girar la figura no cambia cuántos pasos (o su longitud aproximada) tiene la frontera.
+
+🧠 Pregunta 10
+
+La curvatura de un contorno indica:
+
+A. Cuánto varía la dirección al desplazarse a lo largo del borde
+B. La diferencia entre área y perímetro
+C. El número de componentes conectados
+D. El brillo medio del objeto
+
+✅ Correcta: A
+
+🧾 Explicación: Sectores rectos tienen curvatura baja; curvas pronunciadas muestran curvatura alta.
+

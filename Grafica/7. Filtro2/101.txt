@@ -1,0 +1,130 @@
+🧠 Pregunta 1
+
+¿En qué paso difiere la correlación respecto a la convolución cuando se aplica un kernel a una imagen?
+
+A. Se usan distintos tamaños de ventana
+B. La correlación no desplaza el kernel por la imagen
+C. La correlación desliza el kernel tal cual; la convolución primero lo gira 180 grados
+D. La convolución descarta los bordes y la correlación no
+
+✅ Correcta: C
+
+🧾 Explicación: Convolución = giro + desplazamiento; correlación = desplazamiento sin giro.
+
+🧠 Pregunta 2
+
+Para un kernel perfectamente simétrico, la correlación y la convolución producen:
+
+A. Resultados distintos solo en los bordes
+B. Resultados idénticos
+C. Inversión de colores
+D. Un aumento del contraste global
+
+✅ Correcta: B
+
+🧾 Explicación: Girar un patrón simétrico no altera su forma ni su efecto.
+
+🧠 Pregunta 3
+
+¿Qué característica NO pertenece a los detectores de borde Sobel y Prewitt?
+
+A. Señalan la dirección del borde
+B. Son filtros de primera derivada
+C. Resultan idénticos tras correlación o convolución con giro
+D. Son sensibles al ruido de alta frecuencia
+
+✅ Correcta: C
+
+🧾 Explicación: Como sus kernels son asimétricos, correlación y convolución cambian el signo de la respuesta.
+
+🧠 Pregunta 4
+
+¿Cuál es el papel de la Laplaciana de Gaussiana (LoG) en la detección de bordes?
+
+A. Suaviza la imagen y luego resalta áreas donde la intensidad cambia bruscamente
+B. Realza la saturación de color
+C. Convierte bordes diagonales en verticales
+D. Elimina completamente el ruido de sal-pimienta
+
+✅ Correcta: A
+
+🧾 Explicación: La Gaussiana atenúa el ruido; el Laplaciano destaca los cambios abruptos.
+
+🧠 Pregunta 5
+
+El filtro de mediana se diferencia de los filtros lineales porque:
+
+A. Usa un kernel con valores negativos y positivos
+B. Calcula la media de todos los vecinos
+C. Sustituye el píxel central por el valor intermedio de la vecindad ordenada
+D. Es muy sensible a los valores extremos
+
+✅ Correcta: C
+
+🧾 Explicación: La mediana descarta extremos, por eso suprime bien ruido impulsivo.
+
+🧠 Pregunta 6
+
+¿Qué tipo de ruido se elimina con mayor eficacia mediante un filtro de mediana?
+
+A. Ruido gaussiano de baja amplitud
+B. Ruido de sal-pimienta (píxeles negros/blancos aislados)
+C. Bandas periódicas
+D. Desenfoque de movimiento
+
+✅ Correcta: B
+
+🧾 Explicación: El valor atípico aislado se reemplaza al no ser la mediana de su vecindad.
+
+🧠 Pregunta 7
+
+En la tabla comparativa, el filtro Gaussiano se clasifica como:
+
+A. No lineal
+B. Derivada de segunda orden
+C. Lineal pasa-baja isotrópico
+D. Filtro de corrección de color
+
+✅ Correcta: C
+
+🧾 Explicación: Su respuesta es suave e igual en todas las direcciones (isotrópico).
+
+🧠 Pregunta 8
+
+¿Cuál es la principal desventaja del filtro de la media al suavizar imágenes?
+
+A. No reduce ningún tipo de ruido
+B. Introduce bordes falsos
+C. Borra detalles finos junto con el ruido
+D. Exige ordenar los píxeles de la ventana
+
+✅ Correcta: C
+
+🧾 Explicación: Al promediar, se pierden texturas y bordes delicados.
+
+🧠 Pregunta 9
+
+Para minimizar ruido pero conservar bordes antes de un detector Sobel, la secuencia recomendada es:
+
+A. Mediana → Laplaciano
+B. Gaussiano → Sobel
+C. Sobel → Gaussiano
+D. Media → Mediana
+
+✅ Correcta: B
+
+🧾 Explicación: La Gaussiana alisa sin introducir bordes nuevos; luego Sobel detecta contornos más limpios.
+
+🧠 Pregunta 10
+
+El operador Laplaciano (solo) resalta bordes pero también:
+
+A. Atenúa todo el ruido
+B. Ignora contornos diagonales
+C. Amplifica el ruido fino al realzar las altas frecuencias
+D. Aumenta el contraste solamente en sombras
+
+✅ Correcta: C
+
+🧾 Explicación: Al actuar sobre cambios rápidos, cualquier variación pequeña (ruido) también se ve reforzada.
+

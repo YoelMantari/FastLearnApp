@@ -1,0 +1,130 @@
+🧠 Pregunta 11
+
+Brainscore es un benchmark que evalúa:
+
+A. La velocidad de inferencia de una CNN en GPU
+B. El parecido entre las activaciones de una CNN y las respuestas neuronales de primates
+C. La cantidad de datos necesaria para entrenar una red
+D. El consumo energético de modelos grandes
+
+✅ Correcta: B
+
+🧾 Explicación: Compara correlaciones estadísticamente entre capas de red y registros neuronales.
+
+🧠 Pregunta 12
+
+Según Hardt & Recht, la razón pragmática principal por la que el deep learning domina hoy es:
+
+A. Explica perfectamente los mecanismos de la inteligencia humana
+B. Funciona mejor en muchos problemas prácticos y cuenta con abundante software libre y datos
+C. Requiere muy poco poder computacional
+D. No necesita ajustar hiperparámetros
+
+✅ Correcta: B
+
+🧾 Explicación: Rendimiento superior y herramientas abiertas impulsan su adopción industrial y académica.
+
+🧠 Pregunta 13
+
+En el ejemplo mínimo de Keras, la capa MaxPool2D aporta principalmente:
+
+A. Aprendizaje de bordes diagonales
+B. Reducción de resolución y cierta invariancia a traslaciones locales
+C. Propagación del gradiente sin saturación
+D. Aumento del número de parámetros
+
+✅ Correcta: B
+
+🧾 Explicación: Agrupa regiones vecinas, reduce dimensionalidad y hace que pequeñas traslaciones no cambien la activación.
+
+🧠 Pregunta 14
+
+El primer “invierno” de la IA se asocia a:
+
+A. Falta de datos disponibles en los años 80
+B. Expectativas no cumplidas tras la limitación del perceptrón evidenciada por Minsky y Papert
+C. La prohibición gubernamental de investigar aprendizaje automático
+D. La crisis financiera global de 2008
+
+✅ Correcta: B
+
+🧾 Explicación: El pesimismo tras el libro de 1969 redujo el financiamiento y el interés por redes neuronales.
+
+🧠 Pregunta 15
+
+¿Qué componente de una CNN imita la idea biológica de “detectores de características locales” descubierta por Hubel & Wiesel?
+
+A. Las conexiones totalmente densas
+B. Los filtros de convolución que comparten pesos a lo largo de la imagen
+C. El algoritmo de optimización Adam
+D. El uso de funciones de activación sigmoide
+
+✅ Correcta: B
+
+🧾 Explicación: Un filtro responde a un patrón local específico, similar a neuronas que detectan bordes en cierta orientación.
+
+🧠 Pregunta 16
+
+En el ejercicio de Keras, la función softmax en la capa final se encarga de:
+
+A. Calcular la pérdida de entrenamiento
+B. Convertir la salida en probabilidades normalizadas para cada clase de dígito
+C. Pre-procesar las imágenes de entrada
+D. Evitar el sobreajuste mediante regularización
+
+✅ Correcta: B
+
+🧾 Explicación: softmax transforma los logits en un vector cuya suma es uno, facilitando la clasificación.
+
+🧠 Pregunta 17
+
+La jerarquía de características aprendida por una CNN se describe comúnmente como:
+
+A. Texto → voz → imagen
+B. Detalles finos primero, después bordes, por último espacio de color
+C. Bordes simples en capas bajas, partes de objetos en intermedias y conceptos completos en altas
+D. Píxeles individuales en todas las capas
+
+✅ Correcta: C
+
+🧾 Explicación: Cada nivel combina elementos del anterior, formando representaciones más abstractas.
+
+🧠 Pregunta 18
+
+El término “campo receptivo creciente” significa que al avanzar en la red:
+
+A. Disminuye la complejidad de los filtros
+B. Aumenta el número de parámetros en cada neurona
+C. Cada neurona integra información de una región más grande de la imagen original
+D. Se reduce el tamaño del vector de salida
+
+✅ Correcta: C
+
+🧾 Explicación: Combinaciones sucesivas de convolución y pooling expanden la zona influyente sobre la activación de una neurona.
+
+🧠 Pregunta 19
+
+El éxito de AlexNet se debió en parte al uso de GPU porque:
+
+A. Permitieron entrenar redes profundas en tiempos manejables aprovechando paralelismo masivo
+B. Aumentaron la precisión aritmética de los cálculos
+C. Evitaron la necesidad de back-propagation
+D. Incrementaron automáticamente la cantidad de datos disponibles
+
+✅ Correcta: A
+
+🧾 Explicación: Las GPUs aceleraron las operaciones de convolución, haciendo viable el entrenamiento de millones de parámetros.
+
+🧠 Pregunta 20
+
+La trayectoria histórica resumida (McCulloch-Pitts → AlexNet → Brainscore) muestra que el avance clave ha sido:
+
+A. Sustituir todas las funciones de activación por lineales
+B. Integrar ideas biológicas, algoritmos de optimización y potencia computacional creciente
+C. Eliminar completamente la necesidad de datos etiquetados
+D. Volver a redes de una sola capa
+
+✅ Correcta: B
+
+🧾 Explicación: Cada etapa combinó inspiración neurobiológica, mejoras matemáticas (back-prop, ReLU) y hardware/datos masivos para superar la anterior.
+

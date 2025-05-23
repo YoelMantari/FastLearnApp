@@ -1,0 +1,129 @@
+🧠 Pregunta 1
+
+¿Qué hace, en términos generales, un filtro espacial sobre una imagen?
+
+A. Ajusta la exposición de la cámara durante la captura
+B. Combina cada píxel con sus vecinos según una regla definida en un kernel
+C. Convierte la imagen a otro espacio de color
+D. Mide la calidad de compresión JPEG
+
+✅ Correcta: B
+
+🧾 Explicación: El filtro espacial actúa directamente en el dominio de posición e intensidad, utilizando una máscara de valores (kernel).
+
+🧠 Pregunta 2
+
+¿Cuál de las siguientes NO es una aplicación típica de los filtros espaciales?
+
+A. Suavizar o realzar detalles
+B. Eliminar ruido impulsivo
+C. Recuperar imágenes desenfocadas sin pérdida
+D. Detectar bordes y contornos
+
+✅ Correcta: C
+
+🧾 Explicación: Los filtros espaciales pueden mejorar o atenuar, pero no recuperan detalles perdidos por desenfoque severo sin información adicional.
+
+🧠 Pregunta 3
+
+Un filtro pasa-bajas se caracteriza por:
+
+A. Mantener bordes nítidos y eliminar zonas planas
+B. Atenuar las frecuencias altas y conservar las bajas, produciendo desenfoque
+C. Incrementar la saturación de la imagen
+D. Reforzar exclusivamente los colores primarios
+
+✅ Correcta: B
+
+🧾 Explicación: Su objetivo es suavizar texturas y ruido, dejando visibles solo las variaciones amplias.
+
+🧠 Pregunta 4
+
+¿Qué efecto visual produce un filtro pasa-altas bien aplicado?
+
+A. Imagen más borrosa y homogénea
+B. Realce de bordes y detalles finos, con aspecto más “afilado”
+C. Desaturación completa de los colores
+D. Conversión automática a blanco y negro
+
+✅ Correcta: B
+
+🧾 Explicación: Al resaltar las altas frecuencias, los contornos se hacen más evidentes.
+
+🧠 Pregunta 5
+
+En la operación de convolución con un kernel, el paso inicial para procesar cada píxel es:
+
+A. Sumar directamente los valores vecinos sin alineamiento
+B. Centrar el kernel sobre el píxel en cuestión
+C. Transformar la imagen al dominio de la frecuencia
+D. Aplicar un relleno de color uniforme a toda la imagen
+
+✅ Correcta: B
+
+🧾 Explicación: La máscara debe quedar alineada con el píxel para combinar los valores de su vecindad correcta.
+
+🧠 Pregunta 6
+
+¿Cuál es la razón práctica de realizar un relleno (padding) de bordes antes de convolucionar?
+
+A. Reducir el tamaño del archivo de imagen
+B. Evitar que falten datos cuando el kernel se sale de la imagen en los extremos
+C. Aumentar la resolución espacial
+D. Cambiar el formato de almacenamiento
+
+✅ Correcta: B
+
+🧾 Explicación: Sin padding, no habría suficientes valores para multiplicar en las esquinas y bordes.
+
+🧠 Pregunta 7
+
+El kernel de la media 3×3 con todos los coeficientes iguales suaviza la imagen porque:
+
+A. Elimina completamente las frecuencias bajas
+B. Sustituye cada píxel por el promedio de su vecindad inmediata
+C. Refuerza los bordes diagonales
+D. Aplica un mapeo no lineal de tonos
+
+✅ Correcta: B
+
+🧾 Explicación: Al promediar nueve valores, se atenúan variaciones puntuales y se homogeniza el área.
+
+🧠 Pregunta 8
+
+¿Por qué conviene que la suma de los coeficientes del kernel de la media sea exactamente uno?
+
+A. Para que la imagen resultante no cambie globalmente de brillo
+B. Para incrementar el contraste automáticamente
+C. Para convertir la salida en números binarios
+D. Para acelerar el cálculo mediante enteros
+
+✅ Correcta: A
+
+🧾 Explicación: Si la suma es mayor o menor que uno, la imagen se aclararía o se oscurecería de forma global.
+
+🧠 Pregunta 9
+
+Aumentar el tamaño del kernel de 3×3 a 7×7 en un filtro de suavizado provoca:
+
+A. Menor difuminado y más detalle
+B. Desenfoque más fuerte al incluir más vecinos en el promedio
+C. Cambio exclusivo de la paleta de colores
+D. Realce selectivo de líneas finas
+
+✅ Correcta: B
+
+🧾 Explicación: Cuantos más píxeles participa en el cálculo, mayor es la pérdida de texturas finas.
+
+🧠 Pregunta 10
+
+En la práctica, girar 180° el kernel antes de la multiplicación (flipping) resulta irrelevante cuando:
+
+A. El kernel es simétrico
+B. El kernel contiene valores negativos
+C. La imagen es en alta resolución
+D. Se usa padding de reflejo
+
+✅ Correcta: A
+
+🧾 Explicación: Al ser simétrico, la rotación no altera la disposición de sus valores.

@@ -1,0 +1,130 @@
+🧠 Pregunta 1
+
+¿Quiénes son considerados los fundadores de la Morfología Matemática aplicada a imágenes?
+
+A. Alan Turing y Claude Shannon
+B. Georges Matheron y Jean Serra
+C. Dennis Gabor y Leonid Kantoróvich
+D. John Tukey y Ronald Fisher
+
+✅ Correcta: B
+
+🧾 Explicación: Matheron y Serra desarrollaron la teoría en los años sesenta en la École des Mines de París.
+
+🧠 Pregunta 2
+
+El elemento estructurante se describe mejor como:
+
+A. Un filtro de paso-bajas en frecuencia
+B. Una matriz de pesos adaptativa que cambia en cada píxel
+C. Un pequeño conjunto con forma y origen definidos que sirve de “sonda” sobre la imagen
+D. Una máscara binaria que siempre cubre toda la imagen
+
+✅ Correcta: C
+
+🧾 Explicación: Su forma (cruz, disco, cuadrado…) determina qué vecinos se consideran al aplicar las operaciones morfológicas.
+
+🧠 Pregunta 3
+
+¿Qué efecto visual produce la dilatación sobre un objeto binario?
+
+A. Lo adelgaza y separa partes unidas
+B. Lo engorda, une objetos cercanos y rellena huecos pequeños
+C. Convierte contornos en líneas discontinuas
+D. Sustituye todos los píxeles por su complemento
+
+✅ Correcta: B
+
+🧾 Explicación: Al expandirse con el elemento estructurante, los bordes exteriores avanzan y los huecos internos desaparecen si son menores que el EE.
+
+🧠 Pregunta 4
+
+La erosión es conceptualmente la operación opuesta a la dilatación porque:
+
+A. Reduce el tamaño del objeto, eliminando salientes y puentes finos
+B. Solo afecta al fondo y no al objeto
+C. Aumenta el contraste global de la imagen
+D. Duplica el número de píxeles en la imagen
+
+✅ Correcta: A
+
+🧾 Explicación: Al “comer” una capa según la forma del EE, la erosión adelgaza los objetos y rompe conexiones débiles.
+
+🧠 Pregunta 5
+
+¿Cuál es el propósito de la apertura (erosión seguida de dilatación)?
+
+A. Rellenar grietas y suavizar bordes externos
+B. Eliminar salpicaduras pequeñas sin deformar la figura principal
+C. Detectar bordes con máxima nitidez
+D. Cambiar el color de los píxeles erosionados
+
+✅ Correcta: B
+
+🧾 Explicación: La erosión quita protuberancias; la posterior dilatación recupera el tamaño pero no las partículas aisladas eliminadas.
+
+🧠 Pregunta 6
+
+El cierre (dilatación seguida de erosión) se emplea sobre todo para:
+
+A. Desconectar objetos pegados
+B. Afinar contornos dentados
+C. Cerrar rendijas delgadas y rellenar huecos interiores
+D. Detectar patrones exactos
+
+✅ Correcta: C
+
+🧾 Explicación: La dilatación tapa fisuras y la erosión posterior devuelve el contorno sin reabrirlas.
+
+🧠 Pregunta 7
+
+¿Qué operación morfológica básica se puede usar para obtener el contorno de un objeto?
+
+A. Dilatación del fondo
+B. Resta de la imagen original menos su erosión
+C. Suma de la imagen con su complemento
+D. Aplicar cierre dos veces
+
+✅ Correcta: B
+
+🧾 Explicación: Al restar la versión erosionada del objeto, solo queda la “cáscara” eliminada por la erosión.
+
+🧠 Pregunta 8
+
+La transformación hit-or-miss es útil cuando se necesita:
+
+A. Extraer bordes muy gruesos
+B. Encontrar una configuración exacta de píxeles 1, 0 y “no importa”
+C. Suavizar ruido gaussiano
+D. Dividir la imagen en regiones de igual tamaño
+
+✅ Correcta: B
+
+🧾 Explicación: Este operador localiza patrones concretos (esquinas, cruces, mini-plantillas) respetando fondo y objeto.
+
+🧠 Pregunta 9
+
+En Morfología Matemática, modelar una imagen binaria como un conjunto A implica que:
+
+A. Cada punto del plano pertenece a A
+B. Solo los píxeles con valor uno se consideran elementos de A
+C. El fondo se define como un segundo conjunto independiente
+D. Los píxeles con valor cero son duplicados en A
+
+✅ Correcta: B
+
+🧾 Explicación: El objeto binario se representa por el conjunto de posiciones activas; el fondo es su complemento.
+
+🧠 Pregunta 10
+
+¿Cuál de las siguientes afirmaciones sobre traslación es correcta?
+
+A. Cambia la forma del objeto pero no su posición
+B. Desplaza todos los píxeles del conjunto por el mismo vector sin alterar su relación relativa
+C. Aplica una rotación de 90° al objeto
+D. Elimina los píxeles de borde del objeto
+
+✅ Correcta: B
+
+🧾 Explicación: La traslación mantiene la geometría, solo mueve el conjunto en el plano.
+

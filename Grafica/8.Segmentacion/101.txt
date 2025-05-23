@@ -1,0 +1,129 @@
+🧠 Pregunta 1
+
+¿Cuál es la finalidad principal de la segmentación en procesamiento de imágenes?
+
+A. Ajustar la exposición
+B. Dividir la imagen en regiones significativas u objetos
+C. Convertir la imagen a escala de grises
+D. Comprimir la imagen sin pérdidas
+
+✅ Correcta: B
+
+🧾 Explicación: La segmentación separa la escena en partes con sentido (p. ej. órganos, parcelas, piezas) para analizarlas por separado.
+
+🧠 Pregunta 2
+
+En crecimiento de regiones, ¿qué representa la “semilla”?
+
+A. El tamaño final de la región
+B. Un píxel inicial que sabemos pertenece al objeto
+C. El umbral de homogeneidad
+D. El número total de regiones
+
+✅ Correcta: B
+
+🧾 Explicación: La semilla es el punto de partida desde el cual la región se expande añadiendo vecinos similares.
+
+🧠 Pregunta 3
+
+¿Cuál es el criterio habitual para añadir un píxel vecino durante el crecimiento de regiones?
+
+A. Que tenga la intensidad máxima de la imagen
+B. Que sea 8-conectado y parecido a la semilla según un umbral
+C. Que pertenezca al borde de la imagen
+D. Que posea el mismo color exacto que la semilla
+
+✅ Correcta: B
+
+🧾 Explicación: Se compara la similitud (intensidad, color, textura) y la conectividad de ocho direcciones.
+
+🧠 Pregunta 4
+
+Un inconveniente importante del crecimiento de regiones es:
+
+A. No puede detenerse una vez iniciado
+B. Depende fuertemente de la elección de las semillas
+C. Exige imágenes en alta resolución
+D. Solo funciona con imágenes binarias
+
+✅ Correcta: B
+
+🧾 Explicación: Semillas mal colocadas o insuficientes provocan regiones incorrectas o incompletas.
+
+🧠 Pregunta 5
+
+En el esquema split & merge, la división inicial de la imagen se realiza mediante:
+
+A. Píxeles aleatorios
+B. Celdas hexagonales
+C. Partición en cuatro cuadrantes recursivos (quadtree)
+D. Líneas detectadas con Sobel
+
+✅ Correcta: C
+
+🧾 Explicación: Cada bloque se subdivide en cuatro hasta que cumple la regla de homogeneidad.
+
+🧠 Pregunta 6
+
+¿Por qué se aplica una etapa de fusión (merge) tras el quadtree?
+
+A. Para recolorear las regiones según su tamaño
+B. Para unir bloques adyacentes que realmente pertenecen al mismo objeto
+C. Para reducir el contraste entre regiones
+D. Para eliminar píxeles de borde duplicados
+
+✅ Correcta: B
+
+🧾 Explicación: Fusionar evita el efecto “dentado” que deja la división cuadriculada.
+
+🧠 Pregunta 7
+
+El método de umbralización automática de Otsu busca principalmente:
+
+A. Maximizar la nitidez total de la imagen
+B. Minimizar la variabilidad dentro de cada clase (objeto y fondo)
+C. Dividir la imagen en cuatro regiones iguales
+D. Calcular la mediana global de intensidades
+
+✅ Correcta: B
+
+🧾 Explicación: Otsu coloca el umbral donde las dos clases son internamente lo más uniformes posible.
+
+🧠 Pregunta 8
+
+En la versión iterativa básica de umbralización, el umbral se actualiza:
+
+A. Solo una vez
+B. Con la media aritmética de las medias de objeto y fondo en cada iteración
+C. Restando la desviación estándar al valor máximo
+D. Copiando el valor de la línea central de la imagen
+
+✅ Correcta: B
+
+🧾 Explicación: El proceso repite promedio-actualización hasta que el valor converge.
+
+🧠 Pregunta 9
+
+El algoritmo K-means aplicado a píxeles requiere elegir de antemano:
+
+A. El tipo de conectividad (4 u 8)
+B. El número de clusters que se desean formar
+C. El filtro de suavizado Gaussiano
+D. La profundidad de color de la imagen
+
+✅ Correcta: B
+
+🧾 Explicación: El parámetro K determina cuántos grupos se encontrarán en el espacio de color o intensidad.
+
+🧠 Pregunta 10
+
+Durante K-means, cada iteración consta de asignar píxeles a centros y luego:
+
+A. Eliminar la clase más pequeña
+B. Mover cada centro al promedio de su grupo
+C. Invertir los colores del cluster mayor
+D. Reducir la resolución de la imagen
+
+✅ Correcta: B
+
+🧾 Explicación: Recalcular los centros permite que se desplacen hacia la zona densa de sus miembros.

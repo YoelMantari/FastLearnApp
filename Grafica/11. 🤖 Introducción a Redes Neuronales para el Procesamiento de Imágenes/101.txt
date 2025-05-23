@@ -1,0 +1,129 @@
+🧠 Pregunta 1
+
+Según la definición de Tom Mitchell, ¿qué significa que un sistema aprenda?
+
+A. Aumentar el número de capas en su arquitectura
+B. Mejorar su rendimiento en una tarea gracias a la experiencia (ejemplos)
+C. Memorizar todos los datos de entrenamiento sin error
+D. Ejecutar el algoritmo más rápido que otras máquinas
+
+✅ Correcta: B
+
+🧾 Explicación: Aprender implica optimizar parámetros para que la función de pérdida disminuya conforme recibe ejemplos.
+
+🧠 Pregunta 2
+
+La neurona de McCulloch-Pitts genera una salida binaria cuando:
+
+A. El número de entradas es par
+B. La suma ponderada de entradas sobrepasa un umbral fijo
+C. Las entradas cambian de signo en tiempo real
+D. Se conectan dos capas en paralelo
+
+✅ Correcta: B
+
+🧾 Explicación: Es el modelo más simple: suma + umbral → disparo 0/1.
+
+🧠 Pregunta 3
+
+¿Quién demostró en 1969 que el perceptrón no podía resolver problemas como XOR?
+
+A. Yann LeCun y Yoshua Bengio
+B. Marvin Minsky y Seymour Papert
+C. Geoffrey Hinton y David Rumelhart
+D. Alex Krizhevsky y Ilya Sutskever
+
+✅ Correcta: B
+
+🧾 Explicación: Su libro mostró la limitación de linealidad, provocando el primer “invierno” de la IA.
+
+🧠 Pregunta 4
+
+Los experimentos de Hubel & Wiesel inspiraron las CNN al descubrir que:
+
+A. El cerebro procesa píxeles como vectores de 784 dimensiones
+B. Existen neuronas jerárquicas que responden primero a bordes y luego a patrones complejos
+C. La corteza visual funciona exactamente como un perceptrón simple
+D. Los gatos no distinguen líneas horizontales
+
+✅ Correcta: B
+
+🧾 Explicación: Mostraron una arquitectura biológica de capas de complejidad creciente que motivó las convoluciones.
+
+🧠 Pregunta 5
+
+El Neocognitron de Fukushima introdujo por primera vez la combinación de:
+
+A. ReLU y normalización de lotes
+B. Convolución y pooling en cascada
+C. Dropout y entrenamiento en GPU
+D. Atención y transformadores
+
+✅ Correcta: B
+
+🧾 Explicación: Fue el precursor estructural de las CNN modernas, aunque sin back-prop completo.
+
+🧠 Pregunta 6
+
+¿Qué problema resolvió el algoritmo de back-propagation (1986)?
+
+A. Acelerar la convolución en hardware
+B. Ajustar pesos en redes con múltiples capas ocultas propagando el error hacia atrás
+C. Detectar bordes horizontales en tiempo real
+D. Convertir imágenes a escala de grises automáticamente
+
+✅ Correcta: B
+
+🧾 Explicación: Permitió entrenar redes profundas y superar la limitación XOR del perceptrón.
+
+🧠 Pregunta 7
+
+La red LeNet-5 demostró por primera vez que las CNN eran útiles para:
+
+A. Traducir idiomas en línea
+B. Leer dígitos manuscritos de cheques bancarios a escala industrial
+C. Generar imágenes sintéticas de alta resolución
+D. Jugar ajedrez a nivel maestro
+
+✅ Correcta: B
+
+🧾 Explicación: Su arquitectura Conv-Pool repetida más capas densas fue un hito práctico en los 90.
+
+🧠 Pregunta 8
+
+En una CNN, el término receptive field se refiere a:
+
+A. El tamaño total de la imagen de entrada
+B. La porción de la imagen que “ve” una neurona de una capa concreta
+C. El número máximo de parámetros entrenables
+D. El tipo de función de activación utilizada
+
+✅ Correcta: B
+
+🧾 Explicación: A medida que se apilan capas, ese campo crece y la red capta contexto más amplio.
+
+🧠 Pregunta 9
+
+¿Qué dos innovaciones fueron clave en AlexNet (2012) para reducir drásticamente el error en ImageNet?
+
+A. ReLU y Dropout más entrenamiento en GPU
+B. Función sigmoide y perceptrón multicapa
+C. Pooling promedio y normalización local
+D. Data augmentation y k-means de características
+
+✅ Correcta: A
+
+🧾 Explicación: ReLU aceleró el entrenamiento, Dropout mitigó sobreajuste y las GPUs hicieron viable la profundidad de la red.
+
+🧠 Pregunta 10
+
+El estudio Zeiler & Fergus (2014) mostró que en las CNN:
+
+A. Todas las capas aprenden exactamente los mismos filtros
+B. Las capas tempranas captan bordes, las intermedias partes de objetos y las altas prototipos completos
+C. El aprendizaje ocurre solo en la última capa densa
+D. El pooling borra toda la información espacial
+
+✅ Correcta: B
+
+🧾 Explicación: Mediante deconvolución visualizaron la jerarquía progresiva de características.

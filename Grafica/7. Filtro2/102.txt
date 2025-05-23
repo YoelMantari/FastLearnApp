@@ -1,0 +1,129 @@
+🧠 Pregunta 11
+
+En términos de propiedades algebraicas, la correlación:
+
+A. Conmuta (dar igual I⋆K o K⋆I)
+B. No conmuta
+C. Es lineal solo para imágenes binarias
+D. Conserva la energía de la imagen
+
+✅ Correcta: B
+
+🧾 Explicación: Cambiar el orden de correlación altera el resultado.
+
+🧠 Pregunta 12
+
+¿Cuál de estas combinaciones de tamaño de ventana y tipo de filtro produce el suavizado más fuerte?
+
+A. Media 3×3
+B. Gaussiano 5×5 sigma pequeño
+C. Media 7×7
+D. Mediana 3×3
+
+✅ Correcta: C
+
+🧾 Explicación: Una media amplia promedia más valores y difumina más la textura.
+
+🧠 Pregunta 13
+
+Aplicar correlación con un kernel Sobel vertical sobre una imagen es equivalente a aplicar convolución con ese kernel:
+
+A. Verdadero siempre
+B. Solo si la imagen es en escala de grises
+C. Solo si se gira primero el kernel
+D. Nunca, son operaciones opuestas
+
+✅ Correcta: C
+
+🧾 Explicación: Para obtener el mismo resultado se debe girar el kernel (pasar de correlación a convolución).
+
+🧠 Pregunta 14
+
+En la práctica de laboratorio, ¿por qué se recomienda usar ventanas impares (3×3, 5×5) para filtros?
+
+A. Son más rápidas de almacenar en memoria
+B. Permiten que exista un píxel central claro para reemplazo
+C. Solo las ventanas impares pueden contener valores negativos
+D. Evitan cualquier desplazamiento de la imagen
+
+✅ Correcta: B
+
+🧾 Explicación: El píxel central sirve como punto de referencia al aplicar el resultado.
+
+🧠 Pregunta 15
+
+El filtro Sobel devuelve información sobre la dirección del borde porque:
+
+A. Tiene dos kernels, uno para horizontal y otro para vertical
+B. Calcula la media de la imagen
+C. Es no lineal y selecciona la mediana
+D. Aplica la transformada de Fourier
+
+✅ Correcta: A
+
+🧾 Explicación: Con las respuestas horizontal y vertical se obtiene la magnitud y la dirección del gradiente.
+
+🧠 Pregunta 16
+
+¿Cuál es la ventaja principal de la LoG frente a aplicar primero Gauss y luego Laplaciano por separado?
+
+A. Evita cualquier suavizado
+B. Reduce el cálculo a una única convolución con un kernel pre-calculado
+C. Elimina la necesidad de padding
+D. Convierte la imagen a formato binario
+
+✅ Correcta: B
+
+🧾 Explicación: Se combina en un único kernel que ya incluye ambas acciones.
+
+🧠 Pregunta 17
+
+Si al comparar correlación y convolución no se ve diferencia en la salida, esto implica:
+
+A. El kernel es altamente asimétrico
+B. El kernel es simétrico en ambas direcciones
+C. Se aplicó padding incorrecto
+D. La imagen no tenía bordes
+
+✅ Correcta: B
+
+🧾 Explicación: Solo con un kernel simétrico el giro de 180 grados no altera los coeficientes.
+
+🧠 Pregunta 18
+
+¿Cuál filtro del resumen se clasifica como no lineal y, por tanto, no puede expresarse con una matriz de convolución?
+
+A. Media
+B. Gaussiano
+C. Mediana
+D. Sobel
+
+✅ Correcta: C
+
+🧾 Explicación: El filtro de mediana implica ordenar y elegir un valor intermedio, operación no lineal.
+
+🧠 Pregunta 19
+
+Al aumentar excesivamente el tamaño del kernel de mediana, el principal efecto negativo es:
+
+A. Incrementar el ruido impulsivo
+B. Introducir bandas de color
+C. Desenfocar bordes que antes se preservaban
+D. Cambiar la orientación de los bordes
+
+✅ Correcta: C
+
+🧾 Explicación: Ventanas muy grandes convierten la mediana en un suavizado extremo.
+
+🧠 Pregunta 20
+
+Diseñar un pipeline Gaussiano → Sobel resulta útil cuando:
+
+A. Se requiere colorizar bordes en gráficos vectoriales
+B. Se busca detectar contornos reduciendo al mínimo el granulado fino de la imagen
+C. Se quiere acentuar ruido de sal-pimienta
+D. Se necesita comprimir la imagen sin pérdidas
+
+✅ Correcta: B
+
+🧾 Explicación: El Gaussiano suaviza el ruido y el Sobel extrae contornos más limpios y continuos.

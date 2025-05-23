@@ -1,0 +1,129 @@
+🧠 Pregunta 11
+
+¿Cuál de los siguientes bordes de relleno suele evitar la aparición de artefactos visibles en los extremos?
+
+A. Relleno con ceros (negro)
+B. Repetir el valor del borde más cercano
+C. Rellenar con valores aleatorios
+D. Ampliar la imagen mediante duplicación de filas
+
+✅ Correcta: B
+
+🧾 Explicación: Repetir los valores reales minimiza saltos artificiales de intensidad en los bordes.
+
+🧠 Pregunta 12
+
+Relaciona correctamente filtro y efecto: pasa-bajas → desenfoque, pasa-altas → __________.
+
+A. Desenfoque adicional
+B. Realce de contornos
+C. Eliminación de color
+D. Reducción de nitidez
+
+✅ Correcta: B
+
+🧾 Explicación: El pasa-altas enfatiza transiciones abruptas en la intensidad, que corresponden a bordes.
+
+🧠 Pregunta 13
+
+El dominio espacial describe operaciones con base en:
+
+A. Valores de magnitud de frecuencia y fase
+B. Posición de los píxeles y sus intensidades directas
+C. Coordenadas polares en el espectro
+D. Tiempos de exposición de la cámara
+
+✅ Correcta: B
+
+🧾 Explicación: En el dominio espacial se trabaja directamente con filas, columnas e intensidades de la imagen.
+
+🧠 Pregunta 14
+
+¿Para qué se utiliza la detección de bordes mediante filtros espaciales?
+
+A. Convertir la imagen en negativo
+B. Extraer contornos para tareas de segmentación o reconocimiento
+C. Bajar la resolución del archivo final
+D. Ajustar automáticamente la saturación
+
+✅ Correcta: B
+
+🧾 Explicación: Identificar bordes es clave en muchas etapas de visión por computadora como segmentar o localizar objetos.
+
+🧠 Pregunta 15
+
+En template matching, aplicar un filtro espacial con la plantilla de búsqueda equivale a:
+
+A. Suavizar la imagen con un promedio
+B. Convolucionar la imagen con el patrón para destacar coincidencias
+C. Binarizar la imagen antes de compararla
+D. Eliminar ruido periódico
+
+✅ Correcta: B
+
+🧾 Explicación: La respuesta de la convolución es máxima donde la plantilla encaja mejor.
+
+🧠 Pregunta 16
+
+Un filtro de mediana (no tratado en detalle pero común en ruido) se diferencia del filtro de media porque:
+
+A. Sustituye cada píxel por el promedio de la vecindad
+B. Es lineal y conserva la nitidez en bordes
+C. Reemplaza el valor central por el valor medio (mediana) de la vecindad, preservando bordes
+D. Amplifica las frecuencias altas
+
+✅ Correcta: C
+
+🧾 Explicación: Al usar la mediana, tiende a eliminar picos de ruido aislado sin difuminar tanto los bordes.
+
+🧠 Pregunta 17
+
+¿Cuál de las siguientes afirmaciones describe mejor el concepto de kernel?
+
+A. Es la imagen original suavizada
+B. Es una pequeña matriz de coeficientes que define la regla de combinación vecinal
+C. Es la suma acumulativa de las intensidades en una fila
+D. Es el histograma de la imagen
+
+✅ Correcta: B
+
+🧾 Explicación: El kernel contiene los pesos que se aplican a cada vecino durante la convolución.
+
+🧠 Pregunta 18
+
+Para eliminar ruido impulsivo (salt-and-pepper) sin perder demasiados bordes, un diseñador elegiría típicamente:
+
+A. Filtro pasa-bajas ideal de gran tamaño
+B. Filtro de media 3×3
+C. Filtro de mediana 3×3 o 5×5
+D. Filtro pasa-altas de alto refuerzo
+
+✅ Correcta: C
+
+🧾 Explicación: La mediana descarta valores extremos aislados y conserva bordes mejor que un promedio simple.
+
+🧠 Pregunta 19
+
+Si queremos suavizar solo ligeramente una imagen (manteniendo bastante nitidez), ¿qué tamaño de kernel conviene más?
+
+A. 3×3
+B. 11×11
+C. 15×15
+D. 21×21
+
+✅ Correcta: A
+
+🧾 Explicación: Cuanto más pequeño el kernel, menor la cantidad de vecinos promediados y, por tanto, menor desenfoque.
+
+🧠 Pregunta 20
+
+El dominio de la frecuencia ofrece una vista alternativa al filtrado espacial porque:
+
+A. Permite interpretar la acción de un kernel como selección o descarte de ciertas frecuencias en la imagen
+B. Reemplaza la necesidad de conocer el tamaño del kernel
+C. Elimina completamente los artefactos de borde
+D. Impide modificar la fase de la imagen
+
+✅ Correcta: A
+
+🧾 Explicación: Toda operación lineal en espacio se corresponde con una modificación específica en el espectro de frecuencias.

@@ -1,0 +1,130 @@
+🧠 Pregunta 11
+
+Un problema típico de K-means es:
+
+A. Siempre converge al mismo resultado, sin importar la inicialización
+B. Puede quedar atrapado en soluciones locales según los centros iniciales
+C. Solo funciona con imágenes en escala de grises
+D. No segmenta regiones de color parecido
+
+✅ Correcta: B
+
+🧾 Explicación: Centros mal escogidos pueden llevar a una clasificación subóptima distinta de la deseada.
+
+🧠 Pregunta 12
+
+La técnica watershed se basa en una analogía con:
+
+A. Gotas de tinta que se expanden en papel satinado
+B. Inundar un relieve donde la intensidad representa la altura
+C. Semillas vegetales que crecen en terreno fértil
+D. Drones que escanean un terreno cuadriculado
+
+✅ Correcta: B
+
+🧾 Explicación: Se consideran cuencas (valles) que se llenan de agua; las crestas que las separan forman las fronteras.
+
+🧠 Pregunta 13
+
+El principal inconveniente del watershed sin marcadores es:
+
+A. Subsegmenta, creando demasiadas regiones pequeñas
+B. No detecta detalles finos
+C. Alisa los bordes de los objetos
+D. Requiere imágenes binarizadas
+
+✅ Correcta: A
+
+🧾 Explicación: Cada mínimo local inicia una cuenca, generando gran cantidad de regiones diminutas.
+
+🧠 Pregunta 14
+
+Para reducir la sobre-segmentación en un watershed, se recomienda:
+
+A. Eliminar todos los mínimos locales
+B. Trabajar con marcadores que definan objeto y fondo
+C. Aumentar el contraste global de la imagen
+D. Usar solo canales de color, nunca la intensidad
+
+✅ Correcta: B
+
+🧾 Explicación: Marcadores controlados guían el crecimiento de cuencas únicamente desde zonas de interés.
+
+🧠 Pregunta 15
+
+En escenarios con objetos solapados (oclusión), una estrategia habitual consiste en:
+
+A. Aplicar K-means sobre la imagen original sin preprocesado
+B. Binarizar y dejar que watershed resuelva directamente
+C. Usar la transformada de distancia y watershed sobre ese mapa
+D. Elegir semillas al azar hasta que las regiones se separen
+
+✅ Correcta: C
+
+🧾 Explicación: La distancia al fondo crea montículos que permiten separar objetos pegados como burbujas hinchándose.
+
+🧠 Pregunta 16
+
+En la comparación final, el método crecimiento de regiones destaca porque:
+
+A. No depende de ningún parámetro
+B. Ofrece control explícito sobre la homogeneidad usando un umbral y semillas
+C. Produce contornos en forma de cuadrícula
+D. Nunca se detiene si la imagen tiene ruido
+
+✅ Correcta: B
+
+🧾 Explicación: El usuario define dónde empezar y qué tan parecidos deben ser los vecinos para unirse.
+
+🧠 Pregunta 17
+
+El método split & merge puede dejar “bloques cuadriculados” en la salida porque:
+
+A. Usa kernels Sobel verticales
+B. La división se basa en celdas cuadradas que, si no se fusionan, permanecen visibles
+C. Obliga a binarizar la imagen antes de empezar
+D. Cambia la resolución de cada bloque
+
+✅ Correcta: B
+
+🧾 Explicación: Sin la fase de fusión o reglas de suavizado, los límites del quadtree se perciben como bordes rectilíneos.
+
+🧠 Pregunta 18
+
+Cuando la iluminación es desigual y el histograma no es claramente bimodal, la técnica de umbralización global:
+
+A. Funciona igual de bien
+B. Puede fallar, dejando fondo y objeto mezclados
+C. Se vuelve más precisa que K-means
+D. Detecta automáticamente las sombras como regiones válidas
+
+✅ Correcta: B
+
+🧾 Explicación: Sin una separación clara de intensidades, un solo umbral global no distingue correctamente las clases.
+
+🧠 Pregunta 19
+
+Escoger el espacio de color L a b* para K-means en vez de RGB se aconseja porque:
+
+A. Reduce el tamaño de la imagen
+B. Separa la luminosidad de la información cromática, mejorando la agrupación
+C. Convierte los objetos en escala de grises
+D. Evita la fase de inicialización aleatoria
+
+✅ Correcta: B
+
+🧾 Explicación: L a b* aproxima la percepción humana, lo que ayuda a agrupar tonos visualmente parecidos.
+
+🧠 Pregunta 20
+
+Al diseñar un flujo de segmentación práctico, es habitual combinar técnicas porque:
+
+A. Cada método resuelve todos los problemas por sí solo
+B. Los resultados de un método pueden servir como entrada o restricción para otro, mejorando la precisión
+C. El uso combinado reduce el tiempo de cómputo a la mitad
+D. Las técnicas se cancelan entre sí, evitando errores
+
+✅ Correcta: B
+
+🧾 Explicación: Por ejemplo, suavizar con Gauss, umbralizar para semillas y usar watershed controlado produce contornos limpios y precisos.
+

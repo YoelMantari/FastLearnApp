@@ -1,0 +1,129 @@
+🧠 Pregunta 11
+
+El complemento de un conjunto, en términos de imagen binaria, significa:
+
+A. Poner todos los píxeles a gris medio
+B. Intercambiar objeto y fondo
+C. Aplicar una dilatación unitaria
+D. Reflejar la imagen horizontalmente
+
+✅ Correcta: B
+
+🧾 Explicación: Los píxeles que eran objeto pasan a fondo y viceversa.
+
+🧠 Pregunta 12
+
+¿Por qué se habla de Minkowski al definir dilatación y erosión?
+
+A. Porque describen la distancia euclídea clásica
+B. Porque utilizan sumas e intersecciones basadas en traslaciones de conjuntos, concepto tratado por Minkowski
+C. Por la velocidad de ejecución de los algoritmos
+D. Es un acrónimo de “Morphology In Known Support Kernels”
+
+✅ Correcta: B
+
+🧾 Explicación: Las operaciones son variantes de la suma y sustracción de Minkowski en teoría de conjuntos.
+
+🧠 Pregunta 13
+
+Para afinamiento de contornos (adelgazar líneas a un píxel) se usa típicamente:
+
+A. Dilatación repetida
+B. Operadores derivados de hit-or-miss aplicados iterativamente
+C. Una única apertura amplia
+D. Complemento seguido de cierre
+
+✅ Correcta: B
+
+🧾 Explicación: Con plantillas que eliminan píxeles salvo los indispensables, se va refinando el trazo.
+
+🧠 Pregunta 14
+
+Elegir un elemento estructurante en forma de disco sobre uno cuadrado resulta más adecuado cuando se desea:
+
+A. Conservar esquinas rectas y ángulos agudos
+B. Mantener la isotropía y no favorecer direcciones específicas
+C. Acelerar el cálculo en hardware
+D. Detectar bordes horizontales exclusivamente
+
+✅ Correcta: B
+
+🧾 Explicación: Un disco trata todas las direcciones por igual, evitando sesgos en 0°, 90°, 45°…
+
+🧠 Pregunta 15
+
+¿Cuál es una aplicación directa de la operación convex hull obtenida con morfología?
+
+A. Medir la intensidad media de la imagen
+B. Clasificar texturas multiespectrales
+C. Calcular el área mínima que encierra completamente un objeto para estimar compacidad
+D. Suprimir ruido impulsivo
+
+✅ Correcta: C
+
+🧾 Explicación: La envolvente convexa permite comparar forma original vs. convexa y derivar métricas.
+
+🧠 Pregunta 16
+
+En escala de grises, las mismas operaciones se reinterpretan considerando:
+
+A. Intensidades como alturas, con máximo y mínimo en lugar de unión e intersección
+B. Solo valores binarios 0 y 255
+C. El número de canales de color
+D. Transformaciones logarítmicas
+
+✅ Correcta: A
+
+🧾 Explicación: Dilatación convierte máximos locales en vecindades; erosión toma mínimos, conservando la lógica de “expandir” y “erosionar”.
+
+🧠 Pregunta 17
+
+Para rellenar huecos pequeños dentro de los objetos sin alterar su contorno externo se suele aplicar:
+
+A. Cierre con un elemento estructurante adecuado
+B. Erosión repetida sin posterior dilatación
+C. Hit-or-miss invertido
+D. Traslación seguida de reflejo
+
+✅ Correcta: A
+
+🧾 Explicación: El cierre tapa cavidades menores que el elemento estructurante y luego ajusta el borde.
+
+🧠 Pregunta 18
+
+La reflexión del elemento estructurante es necesaria en erosión porque:
+
+A. Garantiza la misma dirección que la dilatación
+B. Define correctamente la superposición interior del EE en el objeto
+C. Aumenta la velocidad de cómputo
+D. Evita el padding de bordes
+
+✅ Correcta: B
+
+🧾 Explicación: Solo si el EE cabe completo, tras reflejarlo, se mantiene el píxel; por eso es fundamental invertirlo.
+
+🧠 Pregunta 19
+
+Respecto a la eliminación de ruido “sal-pimienta” (píxeles blancos y negros aislados), ¿qué combinación funciona mejor?
+
+A. Apertura seguida de cierre con EE muy grande
+B. Filtro de mediana con ventana pequeña
+C. Dilatación simple
+D. Reflejo del objeto
+
+✅ Correcta: B
+
+🧾 Explicación: La mediana descarta valores extremos sin deformar los bordes circundantes.
+
+🧠 Pregunta 20
+
+¿Por qué la Morfología Matemática es apreciada en entornos industriales y médicos?
+
+A. Porque solo requiere imágenes de alta resolución
+B. Porque ofrece operaciones rápidas, basadas en lógica de conjuntos, ideales para analizar formas, medir estructuras y limpiar defectos de forma controlada
+C. Porque reemplaza la necesidad de segmentar
+D. Porque elimina totalmente el ruido gaussiano
+
+✅ Correcta: B
+
+🧾 Explicación: Sus operadores son interpretables, se implementan eficientemente y extraen información geométrica crucial en inspección, diagnóstico y análisis de tejidos.

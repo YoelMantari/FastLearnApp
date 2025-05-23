@@ -1,0 +1,130 @@
+🧠 Pregunta 11
+
+El área de una región binaria se calcula contando:
+
+A. Los píxeles que forman la frontera
+B. Los píxeles que pertenecen al objeto
+C. Los huecos internos únicamente
+D. Las diagonales del contorno
+
+✅ Correcta: B
+
+🧾 Explicación: Cada píxel “activo” suma uno al área total. Con la resolución se puede convertir en unidades físicas.
+
+🧠 Pregunta 12
+
+La circularidad toma valor uno cuando la figura:
+
+A. Es perfectamente cuadrada
+B. Está formada por dos círculos concéntricos
+C. Es un círculo ideal
+D. Tiene perímetro nulo
+
+✅ Correcta: C
+
+🧾 Explicación: El cociente que la define adopta su mínimo (igual a uno) en el círculo perfecto; valores mayores indican formas más alargadas o dentadas.
+
+🧠 Pregunta 13
+
+El número de Euler de un dígito “8” vale −1 porque:
+
+A. Está compuesto por dos componentes y un hueco
+B. Tiene un componente y dos huecos interiores
+C. No posee huecos internos
+D. Está formado exclusivamente por diagonales
+
+✅ Correcta: B
+
+🧾 Explicación: Un “8” es un único componente conectado que encierra dos agujeros, y la resta “componentes menos huecos” resulta −1.
+
+🧠 Pregunta 14
+
+Las proyecciones horizontales y verticales de un objeto son útiles porque:
+
+A. Expresan la distribución de píxeles por filas y columnas en forma de histogramas
+B. Dan la curvatura media en cada dirección
+C. Permiten rotar la imagen sin distorsión
+D. Eliminan la necesidad de vectorizar la imagen
+
+✅ Correcta: A
+
+🧾 Explicación: Al sumar en cada fila o columna se obtiene un perfil sencillo que resume la forma global.
+
+🧠 Pregunta 15
+
+El centroide o centro de masa de una región describe:
+
+A. La variación máxima del contorno
+B. El punto de equilibrio de la masa de píxeles del objeto
+C. La curvatura mínima del contorno
+D. El valor medio de la distancia Manhattan
+
+✅ Correcta: B
+
+🧾 Explicación: Es la posición donde se concentraría toda el área si fuera un objeto plano con densidad uniforme.
+
+🧠 Pregunta 16
+
+¿Por qué es valioso que un descriptor de forma sea invariante a la rotación?
+
+A. Para que el resultado no dependa del tamaño de la imagen
+B. Para que reconozcamos el objeto sin importar cómo esté orientado
+C. Para reducir el tiempo de cómputo
+D. Porque todos los algoritmos exigen esa propiedad
+
+✅ Correcta: B
+
+🧾 Explicación: Objetos idénticos pero girados deben compartir la misma descripción en aplicaciones de reconocimiento.
+
+🧠 Pregunta 17
+
+La vectorización se asemeja a “desenrollar” la imagen porque:
+
+A. El proceso cambia la profundidad de color
+B. Se recorre la matriz fila a fila (o columna a columna) y se concatenan sus valores en una lista lineal
+C. Elimina los bordes exteriores del dígito
+D. Disminuye el ruido impulsivo
+
+✅ Correcta: B
+
+🧾 Explicación: Ese desenrollado forma un vector unidimensional que conserva la información en un orden fijo.
+
+🧠 Pregunta 18
+
+Elegir una buena medida de distancia entre imágenes es crucial porque:
+
+A. Afecta directamente la forma de los dígitos
+B. Determina cuán correctamente un clasificador “percibe” la similitud entre ejemplos
+C. Reduce el tamaño de almacenamiento
+D. Permite entrenar redes neuronales sin GPUs
+
+✅ Correcta: B
+
+🧾 Explicación: Si la distancia no captura bien la semejanza visual, los vecinos “más cercanos” no serán realmente parecidos.
+
+🧠 Pregunta 19
+
+Los momentos geométricos de orden bajo (por ejemplo el área y los momentos de primer orden) sirven, entre otras cosas, para:
+
+A. Extraer el contorno con máxima precisión
+B. Calcular el centro de masa y estimar la dispersión de la región
+C. Determinar el código de Freeman directamente
+D. Sustituir la clasificación K-NN
+
+✅ Correcta: B
+
+🧾 Explicación: Combinados, permiten saber dónde se distribuye la masa de la figura y cuantificar su extensión.
+
+🧠 Pregunta 20
+
+Combinar varios descriptores (perímetro, área, cadena de contorno, momentos, etc.) resulta útil porque:
+
+A. Todos aportan la misma información y se comprueban mutuamente
+B. Cada descriptor enfoca un aspecto distinto de la forma, mejorando la discriminación entre objetos parecidos
+C. Reduce la memoria necesaria para almacenar la imagen
+D. Elimina la necesidad de normalizar los datos
+
+✅ Correcta: B
+
+🧾 Explicación: Perímetro y área capturan tamaño; momentos describen distribución; cadenas codifican contorno. Juntos ofrecen una visión más completa.
+
