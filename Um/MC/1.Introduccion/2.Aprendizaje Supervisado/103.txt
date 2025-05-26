@@ -1,0 +1,120 @@
+🧠 Pregunta 21
+
+¿En qué contexto usarías regresión en vez de clasificación?
+
+A. Predecir el color de una flor
+B. Predecir el número de ventas de un producto
+C. Determinar si un mensaje es positivo o negativo
+D. Clasificar animales en categorías
+
+✅ Correcta: B
+🧾 Explicación: Predecir cantidades es típico de regresión.
+
+🧠 Pregunta 22
+
+¿Por qué es necesario el conjunto de datos de entrenamiento?
+
+A. Para que el modelo aprenda patrones y relaciones
+B. Para ejecutar pruebas solamente
+C. Para clasificar datos no etiquetados
+D. No es necesario
+
+✅ Correcta: A
+🧾 Explicación: El entrenamiento es fundamental para que el modelo aprenda a asociar entradas y salidas.
+
+🧠 Pregunta 23
+
+¿Qué resultado esperamos de un buen modelo de aprendizaje supervisado?
+
+A. Que solo funcione con datos antiguos
+B. Que prediga correctamente resultados de datos nuevos
+C. Que memorice los datos
+D. Que nunca falle
+
+✅ Correcta: B
+🧾 Explicación: El objetivo es que el modelo acierte en casos que nunca ha visto.
+
+🧠 Pregunta 24
+
+¿Qué representa la salida en un problema de clasificación?
+
+A. Un número fraccionario
+B. Una categoría o etiqueta
+C. Una función matemática
+D. Un dato sin importancia
+
+✅ Correcta: B
+🧾 Explicación: La salida es la categoría asignada a cada entrada.
+
+🧠 Pregunta 25
+
+¿Cuál de los siguientes NO es una aplicación de aprendizaje supervisado?
+
+A. Predecir el precio del alquiler
+B. Clasificar correos como spam
+C. Agrupar usuarios sin etiquetas
+D. Diagnóstico médico basado en síntomas etiquetados
+
+✅ Correcta: C
+🧾 Explicación: Agrupar sin etiquetas es propio del aprendizaje no supervisado.
+
+🧠 Pregunta 26
+
+¿Qué ocurre si los datos de entrenamiento no representan correctamente los datos reales?
+
+A. El modelo generaliza bien
+B. El modelo puede cometer errores en la práctica
+C. El modelo será infalible
+D. El modelo no necesita más ajustes
+
+✅ Correcta: B
+🧾 Explicación: Un conjunto de entrenamiento poco representativo da modelos con baja precisión en situaciones reales.
+
+🧠 Pregunta 27
+
+¿Cuál es el objetivo principal del aprendizaje supervisado?
+
+A. Memorizar datos
+B. Aprender patrones para predecir o clasificar datos nuevos
+C. Eliminar outliers
+D. Generar datos sintéticos
+
+✅ Correcta: B
+🧾 Explicación: El fin es predecir resultados o asignar categorías a nuevas entradas basándose en patrones aprendidos.
+
+🧠 Pregunta 28
+
+¿Qué salida tendría un modelo de regresión entrenado para predecir la temperatura?
+
+A. "Frío" o "caliente"
+B. Un valor numérico como 21.5°C
+C. Un grupo de datos
+D. Un nombre aleatorio
+
+✅ Correcta: B
+🧾 Explicación: La regresión predice valores numéricos continuos.
+
+🧠 Pregunta 29
+
+¿Para qué sirve la función de decisión en clasificación?
+
+A. Para ajustar los pesos del modelo
+B. Para separar los datos en categorías
+C. Para eliminar valores atípicos
+D. Para encontrar correlaciones numéricas
+
+✅ Correcta: B
+🧾 Explicación: La función de decisión asigna cada entrada a una categoría específica.
+
+🧠 Pregunta 30
+
+¿Cuál de las siguientes afirmaciones sobre aprendizaje supervisado es cierta?
+
+A. No requiere datos etiquetados
+B. Solo se usa para regresión
+C. Es útil para problemas donde se conoce la salida esperada
+D. No puede usarse en clasificación
+
+✅ Correcta: C
+🧾 Explicación: El aprendizaje supervisado es adecuado cuando contamos con datos donde se conoce la salida esperada para entrenar el modelo.
+

@@ -1,0 +1,130 @@
+
+
+🧠 Pregunta 21
+¿Qué representa el valor de \$h\_\theta(x)\$ en regresión logística?
+
+A. El valor real de salida
+B. Una categoría binaria
+C. La probabilidad de pertenecer a la clase positiva
+D. El número de características
+
+✅ Correcta: C
+🧾 Explicación: La salida de la función hipótesis \$h\_\theta(x)\$ representa la probabilidad de que el ejemplo pertenezca a la clase positiva (y = 1).
+
+---
+
+🧠 Pregunta 22
+¿Qué ocurre si \$h\_\theta(x) = 0.5\$?
+
+A. El ejemplo se descarta
+B. Se considera un caso indefinido
+C. El modelo está sobreajustado
+D. Se encuentra justo en el umbral de decisión
+
+✅ Correcta: D
+🧾 Explicación: Un valor de 0.5 indica que el ejemplo se encuentra justo en el límite de decisión entre ambas clases.
+
+---
+
+🧠 Pregunta 23
+¿Cuál es el efecto de ejemplos extremos en la función sigmoide?
+
+A. La función se vuelve exponencial
+B. No afectan significativamente la salida
+C. Cambian la función a una recta
+D. Anulan el aprendizaje
+
+✅ Correcta: B
+🧾 Explicación: La función sigmoide tiende a 0 o 1 para valores extremos, por lo que su forma limita su impacto en la predicción.
+
+---
+
+🧠 Pregunta 24
+¿Cuál es el comportamiento de la función sigmoide cuando \$z = 0\$?
+
+A. \$h\_\theta(x) = 1\$
+B. \$h\_\theta(x) = 0.5\$
+C. \$h\_\theta(x) = 0\$
+D. \$h\_\theta(x)\$ es indefinido
+
+✅ Correcta: B
+🧾 Explicación: Cuando \$z = 0\$, la función sigmoide devuelve 0.5, que es el punto medio y el umbral típico de decisión.
+
+---
+
+🧠 Pregunta 25
+¿Cuál es la principal razón para preferir la función logarítmica como función de coste en clasificación?
+
+A. Es más rápida de calcular
+B. Convierte la salida en valores categóricos
+C. Penaliza fuertemente las predicciones incorrectas
+D. Permite usar regresión lineal
+
+✅ Correcta: C
+🧾 Explicación: La función logarítmica castiga duramente cuando el modelo predice con alta confianza algo incorrecto.
+
+---
+
+🧠 Pregunta 26
+¿Cuál es el objetivo final del entrenamiento de un modelo de regresión logística?
+
+A. Obtener una función lineal
+B. Clasificar textos largos
+C. Ajustar los parámetros para minimizar el coste logarítmico
+D. Identificar características irrelevantes
+
+✅ Correcta: C
+🧾 Explicación: El modelo busca los valores óptimos de los parámetros para minimizar la función de coste y mejorar la clasificación.
+
+---
+
+🧠 Pregunta 27
+¿Qué representa \$z = \theta^T x\$ en la regresión logística?
+
+A. Una etiqueta
+B. El error de predicción
+C. La combinación lineal de las características
+D. El límite de decisión
+
+✅ Correcta: C
+🧾 Explicación: \$z\$ es la suma ponderada de las características de entrada más el bias, antes de aplicar la función sigmoide.
+
+---
+
+🧠 Pregunta 28
+¿Qué ventaja ofrece el uso de regresión logística frente a regresión lineal en clasificación?
+
+A. Menor complejidad computacional
+B. Mejores predicciones en datos multiclase
+C. Salidas interpretables como probabilidades
+D. Uso de menos características
+
+✅ Correcta: C
+🧾 Explicación: La regresión logística transforma las salidas en probabilidades, facilitando su interpretación en problemas de clasificación.
+
+---
+
+🧠 Pregunta 29
+¿Cómo se comporta la función sigmoide conforme \$z\$ se aleja de 0?
+
+A. La pendiente aumenta indefinidamente
+B. Se convierte en una función constante
+C. Tiende asintóticamente a 0 o 1
+D. Oscila entre valores negativos
+
+✅ Correcta: C
+🧾 Explicación: A medida que \$z \to \infty\$, \$h(z) \to 1\$; y cuando \$z \to -\infty\$, \$h(z) \to 0\$.
+
+---
+
+🧠 Pregunta 30
+¿Cuál es el efecto de elegir un umbral más bajo que 0.5?
+
+A. Se reduce el número de falsos negativos
+B. Se eliminan los outliers
+C. Se entrena más rápido el modelo
+D. Se vuelve una regresión lineal
+
+✅ Correcta: A
+🧾 Explicación: Bajar el umbral hace que más ejemplos se clasifiquen como clase 1, reduciendo falsos negativos pero aumentando falsos positivos.
+

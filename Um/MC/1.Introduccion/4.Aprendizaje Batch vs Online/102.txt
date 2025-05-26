@@ -1,0 +1,119 @@
+🧠 Pregunta 71
+
+¿Qué característica diferencial respecto al aprendizaje batch tiene el aprendizaje online en cuanto a recursos?
+
+A. Requiere más CPU en cada actualización
+B. Requiere menos recursos por actualización al usar mini-batches
+C. Consume siempre más memoria
+D. Nunca usa GPU
+
+✅ Correcta: B
+🧾 Explicación: Cada ajuste incremental consume menos recursos que reentrenar con todo el dataset.
+
+🧠 Pregunta 72
+
+¿Cuál es un posible problema al usar aprendizaje batch en sistemas de detección de fraudes?
+
+A. El modelo se adapta instantáneamente a nuevos fraudes
+B. El modelo puede quedar obsoleto hasta el siguiente reentrenamiento
+C. No requiere datos históricos
+D. Siempre detecta fraudes nuevos sin errores
+
+✅ Correcta: B
+🧾 Explicación: Los fraudes emergentes no se detectarán hasta que se reentrene el modelo batch.
+
+🧠 Pregunta 73
+
+¿Qué estrategia es recomendable para mitigar el ruido en aprendizaje online?
+
+A. Aumentar el tamaño del batch completo
+B. Implementar filtros o validaciones de datos antes de la actualización
+C. Eliminar todos los datos nuevos
+D. Reducir la tasa de aprendizaje a cero
+
+✅ Correcta: B
+🧾 Explicación: Filtrar datos garantiza que solo información de calidad ajuste el modelo.
+
+🧠 Pregunta 74
+
+En qué situación conviene más el aprendizaje online que el batch?
+
+A. Sistema de recomendación que se actualiza mensualmente
+B. Aplicación de escritorio estática
+C. Sensor IoT que envía datos minuto a minuto
+D. Informe anual de ventas
+
+✅ Correcta: C
+🧾 Explicación: Los datos frecuentes de IoT requieren adaptación continua, ideal para online.
+
+🧠 Pregunta 75
+
+¿Qué proceso debes repetir si quieres actualizar un modelo batch con nuevos datos?
+
+A. Ajuste incremental con un solo dato
+B. Reentrenamiento completo usando datos antiguos y nuevos
+C. Solo evaluar sin cambiar parámetros
+D. Entrenar con datos sin etiquetas
+
+✅ Correcta: B
+🧾 Explicación: Batch exige volver a entrenar con el conjunto completo para incorporar datos nuevos.
+
+🧠 Pregunta 76
+
+¿Qué métrica suele verse afectada si un modelo online recibe demasiados datos ruidosos?
+
+A. Tiempo de entrenamiento
+B. Precisión del modelo
+C. Tamaño del dataset
+D. Número de características
+
+✅ Correcta: B
+🧾 Explicación: Ruido constante degrada la precisión y puede provocar sobreajuste o inestabilidad.
+
+🧠 Pregunta 77
+
+¿Cuál de estos componentes NO es esencial en un sistema de aprendizaje online?
+
+A. Buffer para mini-batches
+B. Filtro de calidad de datos
+C. Conjunto de datos completo en memoria
+D. Mecanismo de actualización incremental
+
+✅ Correcta: C
+🧾 Explicación: Online no requiere cargar todo el dataset, solo los mini-batches.
+
+🧠 Pregunta 78
+
+¿Cómo ayuda el aprendizaje batch en términos de reproducibilidad?
+
+A. Dificulta la reproducción al cambiar con cada dato nuevo
+B. Mejora la reproducibilidad al entrenar siempre con el mismo dataset completo
+C. Nunca se puede reproducir
+D. Depende de recompensas
+
+✅ Correcta: B
+🧾 Explicación: El entrenamiento con el mismo conjunto completo produce modelos reproducibles.
+
+🧠 Pregunta 79
+
+¿Qué impacto tiene la frecuencia de actualización en el aprendizaje online?
+
+A. Mayor frecuencia mejora la adaptación pero puede aumentar la inestabilidad
+B. Siempre reduce el consumo de recursos
+C. No afecta al rendimiento
+D. Solo es relevante en batch
+
+✅ Correcta: A
+🧾 Explicación: Actualizaciones frecuentes agilizan la adaptación, pero el ruido puede causar oscilaciones.
+
+🧠 Pregunta 80
+
+¿Qué significa “adaptación limitada” en el contexto del aprendizaje batch?
+
+A. El modelo no puede aprender nada nuevo
+B. El modelo solo se adapta al reentrenar con todo el dataset
+C. El modelo se ajusta automáticamente con cada dato
+D. El modelo cambia sin necesidad de datos
+
+✅ Correcta: B
+🧾 Explicación: Batch exige un reentrenamiento completo para incorporar cambios en los datos.

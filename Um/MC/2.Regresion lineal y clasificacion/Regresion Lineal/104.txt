@@ -1,0 +1,109 @@
+🧠 Pregunta 31
+¿Cuál de las siguientes acciones realiza el gradiente descendente en cada iteración?
+
+A. Incrementa el tamaño del dataset
+B. Actualiza los parámetros del modelo
+C. Cambia la función de coste
+D. Elimina características irrelevantes
+
+✅ Correcta: B
+🧾 Explicación: El gradiente descendente modifica los parámetros θ₀, θ₁, etc., en cada iteración para reducir el error.
+
+🧠 Pregunta 32
+¿Qué sucede si el error cuadrático medio es igual a cero?
+
+A. El modelo está mal ajustado
+B. El modelo predice perfectamente los datos de entrenamiento
+C. Hay un problema en los datos
+D. Se debe aumentar la tasa de aprendizaje
+
+✅ Correcta: B
+🧾 Explicación: Un MSE de cero significa que todas las predicciones coinciden exactamente con los valores reales.
+
+🧠 Pregunta 33
+¿Qué tipo de problemas NO resuelve la regresión lineal?
+
+A. Predicción de precios
+B. Estimación de temperaturas
+C. Clasificación de imágenes en categorías
+D. Pronóstico de ventas
+
+✅ Correcta: C
+🧾 Explicación: La regresión lineal sirve para predecir valores continuos, no para problemas de clasificación.
+
+🧠 Pregunta 34
+¿De qué depende el número de parámetros en la función hipótesis multivariable?
+
+A. Del número de ejemplos en el dataset
+B. Del número de características de entrada
+C. Del tamaño de la función de coste
+D. De la tasa de aprendizaje
+
+✅ Correcta: B
+🧾 Explicación: Cada característica de entrada requiere su propio parámetro θ en la función hipótesis.
+
+🧠 Pregunta 35
+¿Qué se busca minimizar durante el entrenamiento de un modelo de regresión lineal?
+
+A. El número de características
+B. El valor de la función de coste
+C. El tamaño del dataset
+D. La cantidad de iteraciones
+
+✅ Correcta: B
+🧾 Explicación: El entrenamiento busca reducir la función de coste, que mide el error promedio entre las predicciones y los valores reales.
+
+🧠 Pregunta 36
+¿Qué indica una pendiente positiva (θ₁ > 0) en la función hipótesis de regresión lineal?
+
+A. La variable de salida disminuye al aumentar X
+B. No hay relación entre X e Y
+C. La variable de salida aumenta al aumentar X
+D. El modelo está sobreajustado
+
+✅ Correcta: C
+🧾 Explicación: Una pendiente positiva significa que, a mayor valor de X, la predicción de Y también aumenta.
+
+🧠 Pregunta 37
+¿Cuál es el objetivo de la fase de inicialización de parámetros en el entrenamiento?
+
+A. Encontrar el valor mínimo de la función de coste
+B. Comenzar el entrenamiento con valores aleatorios
+C. Evitar el uso del gradiente descendente
+D. Calcular el error cuadrático medio
+
+✅ Correcta: B
+🧾 Explicación: Se inician los parámetros con valores aleatorios antes de optimizarlos durante el entrenamiento.
+
+🧠 Pregunta 38
+¿Qué proceso sigue después de calcular la función de coste en cada iteración?
+
+A. Recolectar nuevos datos
+B. Optimizar los parámetros usando el gradiente descendente
+C. Reiniciar el entrenamiento
+D. Cambiar el tamaño del dataset
+
+✅ Correcta: B
+🧾 Explicación: Después de calcular el error, se actualizan los parámetros para mejorar el modelo.
+
+🧠 Pregunta 39
+¿Qué representa la predicción del modelo (ŷ) en regresión lineal?
+
+A. El valor real de salida
+B. El promedio del dataset
+C. El valor calculado por la función hipótesis
+D. El error cuadrático medio
+
+✅ Correcta: C
+🧾 Explicación: ŷ es la salida calculada por el modelo para una entrada X específica.
+
+🧠 Pregunta 40
+¿Qué función tiene la tasa de aprendizaje (α) durante el entrenamiento?
+
+A. Controlar cuántos datos se usan
+B. Ajustar el tamaño de los pasos en la actualización de parámetros
+C. Elegir la función de coste
+D. Determinar el número de iteraciones
+
+✅ Correcta: B
+🧾 Explicación: α controla qué tan rápido o lento se actualizan los parámetros en cada iteración.

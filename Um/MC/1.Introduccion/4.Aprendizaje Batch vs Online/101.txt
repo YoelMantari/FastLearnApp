@@ -1,0 +1,119 @@
+🧠 Pregunta 61
+
+¿Cuál es la característica distintiva del aprendizaje batch?
+
+A. Entrenamiento incremental con nuevos datos
+B. Entrenamiento único con todo el conjunto de datos disponible
+C. Uso de recompensas y castigos
+D. Procesamiento de datos sin etiquetas
+
+✅ Correcta: B
+🧾 Explicación: En aprendizaje batch, el modelo se entrena en un único paso usando todo el conjunto de datos.
+
+🧠 Pregunta 62
+
+¿Qué describe mejor el proceso de aprendizaje online?
+
+A. Reentrenar el modelo desde cero con todos los datos cada vez que cambian
+B. Ajustar el modelo de forma incremental con pequeños subconjuntos de datos
+C. Ignorar los datos nuevos
+D. Entrenar solo con datos etiquetados
+
+✅ Correcta: B
+🧾 Explicación: El aprendizaje online actualiza el modelo gradualmente a medida que llegan nuevos datos en mini-batches.
+
+🧠 Pregunta 63
+
+¿Cuál es una ventaja principal del aprendizaje batch?
+
+A. Adaptación continua en tiempo real
+B. Requiere pocos recursos iniciales
+C. Resultados estables si los datos no cambian frecuentemente
+D. Manejo sencillo de datos ruidosos
+
+✅ Correcta: C
+🧾 Explicación: El batch ofrece estabilidad en escenarios estáticos donde los datos no varían mucho.
+
+🧠 Pregunta 64
+
+¿Por qué el aprendizaje online es ideal para sistemas de monitoreo de red?
+
+A. Porque reentrena todo el modelo con cada nuevo paquete
+B. Porque ajusta continuamente el modelo sin detener el servicio
+C. Porque agrupa datos sin etiquetas
+D. Porque no necesita procesamiento incremental
+
+✅ Correcta: B
+🧾 Explicación: Permite adaptar el modelo en tiempo real sin reentrenamientos completos que interrumpan el servicio.
+
+🧠 Pregunta 65
+
+¿Qué desventaja principal tiene el aprendizaje batch en dispositivos con recursos limitados?
+
+A. Consume poca memoria
+B. Requiere reentrenamientos completos que demandan mucho procesamiento
+C. No requiere datos nuevos
+D. Adapta el modelo continuamente
+
+✅ Correcta: B
+🧾 Explicación: Un reentrenamiento batch con muchos datos puede ser inviable en dispositivos con poca capacidad.
+
+🧠 Pregunta 66
+
+¿Qué riesgo conlleva el aprendizaje online si llegan datos de mala calidad?
+
+A. El modelo se mantiene estable
+B. El modelo puede volverse inestable o sesgado
+C. El batch se frena automáticamente
+D. No hay impacto
+
+✅ Correcta: B
+🧾 Explicación: Datos ruidosos o erróneos pueden degradar progresivamente el rendimiento del modelo online.
+
+🧠 Pregunta 67
+
+¿Cuál de estos ejemplos corresponde a aprendizaje batch?
+
+A. Un sensor que ajusta sus parámetros con cada medición
+B. Un modelo de predicción que se entrena semanalmente con todo el histórico de datos
+C. Un sistema que ingiere datos en streaming
+D. Un robot que aprende con recompensas continuas
+
+✅ Correcta: B
+🧾 Explicación: Entrenar periódicamente con todo el histórico es característico de batch.
+
+🧠 Pregunta 68
+
+¿Qué significa “mini-batch” en aprendizaje online?
+
+A. Un lote muy grande de datos
+B. Un pequeño subconjunto de datos usados para actualizar el modelo
+C. Datos sin etiquetas
+D. Un método de evaluación
+
+✅ Correcta: B
+🧾 Explicación: Los mini-batches permiten procesar datos en porciones pequeñas para actualizaciones frecuentes.
+
+🧠 Pregunta 69
+
+¿Cuál es una recomendación para usar aprendizaje batch?
+
+A. Cuando los datos cambian cada segundo
+B. Cuando los datos permanecen mayoritariamente estáticos
+C. Cuando no hay suficientes datos
+D. Cuando se requiere adaptación continua
+
+✅ Correcta: B
+🧾 Explicación: Batch es adecuado si la distribución de datos no varía con frecuencia.
+
+🧠 Pregunta 70
+
+¿Por qué el aprendizaje online puede manejar conjuntos de datos muy grandes?
+
+A. Porque ignora gran parte de los datos
+B. Porque procesa datos en pequeños fragmentos en lugar de todo a la vez
+C. Porque requiere etiquetar todos los datos
+D. Porque no ajusta el modelo nunca
+
+✅ Correcta: B
+🧾 Explicación: Procesar en mini-batches permite trabajar con volúmenes mayores que la memoria

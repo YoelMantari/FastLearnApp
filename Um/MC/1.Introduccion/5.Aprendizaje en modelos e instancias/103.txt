@@ -1,0 +1,119 @@
+🧠 Pregunta 111
+
+¿Cómo afecta la alta dimensionalidad a los algoritmos basados en instancias?
+
+A. Mejora la precisión automáticamente
+B. Puede degradar la precisión por la “maldición de la dimensionalidad”
+C. No tiene impacto
+D. Reduce el tiempo de cómputo
+
+✅ Correcta: B
+🧾 Explicación: Con muchas dimensiones, las distancias se vuelven menos informativas y se pierde eficacia.
+
+🧠 Pregunta 112
+
+¿Cómo pueden los algoritmos basados en modelos mitigar problemas de dimensionalidad?
+
+A. Usando técnicas de regularización y selección de características
+B. Solo comparando instancias
+C. Aumentando el número de vecinos
+D. No pueden mitigarlo
+
+✅ Correcta: A
+🧾 Explicación: Incorporan penalizaciones sobre parámetros o reducen variables irrelevantes antes del entrenamiento.
+
+🧠 Pregunta 113
+
+¿Qué técnica es común usar antes de un algoritmo basado en instancias para mejorar su rendimiento?
+
+A. Agrupamiento jerárquico
+B. Reducción de dimensionalidad (por ejemplo PCA)
+C. Aumentar la tasa de aprendizaje
+D. Eliminar etiquetas
+
+✅ Correcta: B
+🧾 Explicación: PCA o técnicas similares reducen ruido y facilitan cálculos de distancia más fiables.
+
+🧠 Pregunta 114
+
+¿Qué métrica de similitud es habitual en KNN?
+
+A. Precisión
+B. Distancia euclidiana
+C. Entropía cruzada
+D. Regresión logística
+
+✅ Correcta: B
+🧾 Explicación: La distancia Euclidiana mide directamente la cercanía en el espacio de características.
+
+🧠 Pregunta 115
+
+¿Cuál es una variante de algoritmo basado en modelos para clasificación?
+
+A. KNN ponderado
+B. Regresión logística
+C. Clustering aglomerativo
+D. k-means
+
+✅ Correcta: B
+🧾 Explicación: La regresión logística ajusta parámetros para separar clases mediante una función logística.
+
+🧠 Pregunta 116
+
+¿Qué parámetro controla el número de vecinos en KNN?
+
+A. Alpha
+B. k
+C. Eta
+D. Lambda
+
+✅ Correcta: B
+🧾 Explicación: El valor de k determina cuántos vecinos influirán en la predicción final.
+
+🧠 Pregunta 117
+
+¿Qué es la “frontera de decisión” en modelos de clasificación?
+
+A. El número de vecinos
+B. La función matemática que separa las regiones de clase
+C. El tamaño del batch
+D. El umbral de similitud
+
+✅ Correcta: B
+🧾 Explicación: Define los límites del espacio donde el modelo asigna cada etiqueta.
+
+🧠 Pregunta 118
+
+Para actualizar un algoritmo basado en modelos con nuevos datos, ¿qué se debe hacer?
+
+A. Añadir los nuevos ejemplos a la memoria
+B. Reentrenar o ajustar el modelo con los datos nuevos
+C. Cambiar el valor de k
+D. No se puede actualizar
+
+✅ Correcta: B
+🧾 Explicación: Modelos paramétricos requieren volver a entrenar los parámetros con el dataset ampliado.
+
+🧠 Pregunta 119
+
+En un algoritmo basado en instancias, la predicción final suele basarse en:
+
+A. La media de distancias inversas
+B. La mayoría de votos de los vecinos más cercanos
+C. La minimización de una función de coste
+D. La agregación de clústeres
+
+✅ Correcta: B
+🧾 Explicación: Se asigna la etiqueta más frecuente entre los vecinos que están más cerca.
+
+🧠 Pregunta 120
+
+¿Qué implica mayor capacidad de generalización?
+
+A. Memorizar todos los ejemplos de entrenamiento
+B. Aprender patrones generales que funcionan bien con datos nuevos
+C. Usar solo un ejemplo como referencia
+D. Aumentar k continuamente
+
+✅ Correcta: B
+🧾 Explicación: Los modelos basados en patrones globales suelen predecir mejor en datos no vistos al capturar la tendencia subyacente.

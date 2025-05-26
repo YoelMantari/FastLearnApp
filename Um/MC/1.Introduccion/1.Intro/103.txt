@@ -1,0 +1,120 @@
+🧠 Pregunta 21
+
+¿Qué tipo de algoritmo es ideal cuando el entorno de datos cambia frecuentemente y se requiere adaptación inmediata?
+
+A. Aprendizaje batch
+B. Aprendizaje online
+C. Aprendizaje supervisado
+D. Aprendizaje semi supervisado
+
+✅ Correcta: B
+🧾 Explicación: El aprendizaje online permite que el modelo se ajuste constantemente a nuevos datos, siendo ideal para entornos dinámicos.
+
+🧠 Pregunta 22
+
+¿Cuál de los siguientes NO es un ejemplo típico de uso de machine learning?
+
+A. Agrupar clientes sin conocer su segmento
+B. Predecir ventas futuras con datos históricos
+C. Buscar archivos por nombre en una carpeta
+D. Clasificar correos como spam o no spam
+
+✅ Correcta: C
+🧾 Explicación: Buscar archivos por nombre es una tarea determinista y no requiere aprendizaje automático ni adaptación a patrones de datos.
+
+🧠 Pregunta 23
+
+¿Qué ocurre si se usan únicamente reglas fijas para el filtrado de spam?
+
+A. El sistema se adapta fácilmente a nuevas técnicas de spam
+B. El sistema requiere actualizaciones manuales constantes
+C. El sistema aprende automáticamente
+D. No se necesita experiencia previa
+
+✅ Correcta: B
+🧾 Explicación: Los sistemas basados en reglas fijas deben ser actualizados manualmente ante nuevas formas de spam, lo que es ineficiente a largo plazo.
+
+🧠 Pregunta 24
+
+¿Cuál es una ventaja de combinar datos etiquetados y no etiquetados en machine learning?
+
+A. El modelo aprende solo con datos no etiquetados
+B. Permite aprovechar grandes volúmenes de datos a menor costo
+C. Solo se usa en aprendizaje por refuerzo
+D. No requiere ajustar el modelo
+
+✅ Correcta: B
+🧾 Explicación: El aprendizaje semi supervisado permite utilizar muchos datos no etiquetados, lo que reduce el costo y tiempo de etiquetado.
+
+🧠 Pregunta 25
+
+¿Cuál es el objetivo principal de un algoritmo basado en modelo?
+
+A. Guardar todos los datos en memoria
+B. Crear una función general que prediga o clasifique nuevos datos
+C. Clasificar solo datos idénticos a los vistos
+D. Trabajar únicamente con recompensas y castigos
+
+✅ Correcta: B
+🧾 Explicación: Los algoritmos basados en modelo buscan generalizar el aprendizaje para aplicarlo a datos nuevos y no vistos.
+
+🧠 Pregunta 26
+
+¿Cuál de las siguientes afirmaciones es verdadera sobre el aprendizaje supervisado?
+
+A. No utiliza datos etiquetados
+B. Aprende mediante recompensas únicamente
+C. El modelo se entrena con ejemplos cuyo resultado ya se conoce
+D. Solo agrupa datos sin clasificación previa
+
+✅ Correcta: C
+🧾 Explicación: El aprendizaje supervisado se basa en datos donde se conoce el resultado, lo que permite entrenar el modelo para predecir nuevas entradas.
+
+🧠 Pregunta 27
+
+¿Qué característica tienen los algoritmos de machine learning aplicados a imágenes?
+
+A. Utilizan solo reglas fijas para clasificar
+B. Requieren análisis visual y reconocimiento de patrones complejos
+C. Solo funcionan con texto
+D. No se adaptan a cambios en los datos
+
+✅ Correcta: B
+🧾 Explicación: En problemas como la clasificación de imágenes, el machine learning permite detectar patrones visuales que serían muy difíciles de definir con reglas manuales.
+
+🧠 Pregunta 28
+
+¿Cuál es una de las aplicaciones principales del aprendizaje no supervisado?
+
+A. Clasificar datos con etiquetas conocidas
+B. Encontrar grupos o patrones ocultos en los datos
+C. Predecir resultados de eventos futuros
+D. Ajustar modelos en tiempo real
+
+✅ Correcta: B
+🧾 Explicación: El aprendizaje no supervisado busca descubrir estructuras o agrupaciones en datos que no están previamente etiquetados.
+
+🧠 Pregunta 29
+
+¿Para qué se utiliza el aprendizaje por refuerzo?
+
+A. Clasificar datos en lotes
+B. Aprender a través de prueba y error en interacción con el entorno
+C. Procesar datos estáticos
+D. Analizar texto sin etiquetas
+
+✅ Correcta: B
+🧾 Explicación: El aprendizaje por refuerzo mejora su desempeño aprendiendo de las consecuencias de sus acciones mediante recompensas y penalizaciones.
+
+🧠 Pregunta 30
+
+¿Qué facilita comprender las categorías y clasificaciones en machine learning?
+
+A. Usar siempre el mismo algoritmo para cualquier problema
+B. Elegir la técnica más apropiada según el problema y los datos
+C. Evitar la necesidad de entender los datos
+D. Limitarse solo a problemas sencillos
+
+✅ Correcta: B
+🧾 Explicación: Conocer las clasificaciones permite seleccionar el enfoque más eficiente y adecuado para cada situación, optimizando el proceso de machine learning.
+

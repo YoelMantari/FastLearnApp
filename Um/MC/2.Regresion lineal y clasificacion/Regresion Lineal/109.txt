@@ -1,0 +1,220 @@
+🧠 Pregunta 81
+¿Qué ocurre si se entrena un modelo de regresión lineal con pocos datos?
+
+A. Siempre obtiene mejores resultados
+B. No se puede calcular la función de coste
+C. El modelo puede no generalizar bien
+D. El gradiente descendente converge más rápido
+
+✅ Correcta: C
+🧾 Explicación: Con pocos datos, el modelo puede ajustarse bien al conjunto de entrenamiento pero fallar con nuevos datos.
+
+🧠 Pregunta 82
+¿Para qué se utiliza el término bias (θ₀) en la regresión lineal?
+
+A. Para dividir el conjunto de datos
+B. Para normalizar los datos
+C. Para ajustar la predicción sin depender de X
+D. Para reducir la tasa de aprendizaje
+
+✅ Correcta: C
+🧾 Explicación: El bias permite ajustar verticalmente la función hipótesis sin que dependa del valor de entrada X.
+
+🧠 Pregunta 83
+¿Qué tipo de salida produce la regresión lineal?
+
+A. Enteros
+B. Continuos
+C. Binarios
+D. Categóricos
+
+✅ Correcta: B
+🧾 Explicación: La regresión lineal produce valores numéricos continuos como predicciones.
+
+🧠 Pregunta 84
+¿Cuál es el efecto de una función de coste mal definida?
+
+A. Mejora la velocidad del entrenamiento
+B. Reduce la precisión
+C. Puede impedir que el modelo aprenda correctamente
+D. El modelo siempre converge
+
+✅ Correcta: C
+🧾 Explicación: Una función de coste incorrecta o mal planteada puede evitar que el modelo aprenda los patrones correctos.
+
+🧠 Pregunta 85
+¿Qué se entiende por predicción en un modelo de regresión lineal?
+
+A. La media de los valores reales
+B. El resultado de evaluar la función hipótesis con los parámetros actuales
+C. El valor mínimo de la función de coste
+D. El valor más bajo de la muestra
+
+✅ Correcta: B
+🧾 Explicación: La predicción es el valor que el modelo estima al evaluar la función hipótesis para una entrada específica.
+
+🧠 Pregunta 86
+¿Cuál es el primer paso del ciclo de entrenamiento?
+
+A. Validar el modelo
+B. Calcular el error
+C. Inicializar los parámetros
+D. Aplicar regularización
+
+✅ Correcta: C
+🧾 Explicación: El ciclo de entrenamiento comienza con la asignación inicial de valores a los parámetros (por lo general, aleatorios).
+
+🧠 Pregunta 87
+¿Para qué sirve el término de error cuadrático medio (MSE)?
+
+A. Para ajustar el número de muestras
+B. Para evaluar la clasificación de los datos
+C. Para medir qué tan bien se ajusta el modelo
+D. Para calcular el número de características necesarias
+
+✅ Correcta: C
+🧾 Explicación: El MSE mide el error promedio entre las predicciones del modelo y los valores reales del conjunto de entrenamiento.
+
+🧠 Pregunta 88
+¿Qué sucede si el modelo tiene baja varianza y bajo sesgo?
+
+A. Generaliza bien y tiene buena precisión
+B. Tiene errores aleatorios
+C. Está mal entrenado
+D. Necesita más parámetros
+
+✅ Correcta: A
+🧾 Explicación: Un modelo con bajo sesgo y baja varianza se ajusta bien a los datos y generaliza correctamente.
+
+🧠 Pregunta 89
+¿Qué representa una curva de función de coste plana en varios puntos?
+
+A. Hay múltiples soluciones óptimas
+B. No se puede entrenar el modelo
+C. El modelo tiene alta varianza
+D. El modelo es no lineal
+
+✅ Correcta: A
+🧾 Explicación: Una función de coste plana puede indicar que hay varios valores de los parámetros que generan el mismo error.
+
+🧠 Pregunta 90
+¿Qué técnica permite ajustar los parámetros de forma iterativa?
+
+A. Backpropagation
+B. Gradiente descendente
+C. Árbol de decisiones
+D. Normalización
+
+✅ Correcta: B
+🧾 Explicación: El gradiente descendente ajusta los parámetros paso a paso en cada iteración, buscando reducir la función de coste.
+
+🧠 Pregunta 91
+¿Qué representa el eje X en una gráfica de regresión lineal univariable?
+
+A. El valor predicho
+B. La función de coste
+C. La característica de entrada
+D. El error cuadrático
+
+✅ Correcta: C
+🧾 Explicación: En una regresión lineal con una sola variable, el eje X representa la característica de entrada.
+
+🧠 Pregunta 92
+¿Cuál de los siguientes elementos cambia en cada iteración del entrenamiento?
+
+A. El número de características
+B. La función de coste
+C. Los parámetros θ
+D. El tipo de modelo
+
+✅ Correcta: C
+🧾 Explicación: En cada paso del entrenamiento, se ajustan los parámetros para mejorar la predicción.
+
+🧠 Pregunta 93
+¿Qué tipo de problema busca resolver la regresión lineal?
+
+A. Clasificación
+B. Detección de anomalías
+C. Predicción de valores continuos
+D. Segmentación de datos
+
+✅ Correcta: C
+🧾 Explicación: La regresión lineal se aplica para estimar valores continuos como precios, costos o temperaturas.
+
+🧠 Pregunta 94
+¿Qué determina el ángulo de inclinación de la recta en regresión lineal?
+
+A. El número de datos
+B. El bias
+C. El parámetro θ₁
+D. El tamaño del dataset
+
+✅ Correcta: C
+🧾 Explicación: θ₁ es la pendiente, y su valor determina cuán inclinada está la línea de regresión.
+
+🧠 Pregunta 95
+¿Por qué se utilizan derivadas en el proceso de optimización?
+
+A. Para transformar los datos
+B. Para determinar la dirección y magnitud del ajuste
+C. Para identificar outliers
+D. Para eliminar características
+
+✅ Correcta: B
+🧾 Explicación: Las derivadas indican cómo cambiar un parámetro para reducir el error más eficientemente.
+
+🧠 Pregunta 96
+¿Qué puede causar que el modelo no converja?
+
+A. Dataset balanceado
+B. Learning rate muy alto
+C. Normalización correcta
+D. Uso de función convexa
+
+✅ Correcta: B
+🧾 Explicación: Si el learning rate es muy grande, el modelo puede saltarse el mínimo y no lograr converger.
+
+🧠 Pregunta 97
+¿Qué relación tiene el número de características con los parámetros de la función hipótesis?
+
+A. No hay relación
+B. A más características, menos parámetros
+C. Cada característica tiene un parámetro asociado
+D. Se necesita más tasa de aprendizaje
+
+✅ Correcta: C
+🧾 Explicación: En regresión multivariable, cada característica requiere su propio parámetro θ.
+
+🧠 Pregunta 98
+¿Qué indica un valor de función de coste que disminuye en cada iteración?
+
+A. El modelo no está aprendiendo
+B. El modelo se está sobreajustando
+C. El modelo está mejorando su precisión
+D. El learning rate es muy alto
+
+✅ Correcta: C
+🧾 Explicación: Una función de coste decreciente indica que las predicciones se acercan a los valores reales.
+
+🧠 Pregunta 99
+¿Qué se espera al final del proceso de entrenamiento?
+
+A. Que los parámetros sean aleatorios
+B. Que la función de coste sea máxima
+C. Que los parámetros θ sean óptimos
+D. Que la predicción sea cero
+
+✅ Correcta: C
+🧾 Explicación: Al concluir el entrenamiento, los valores de θ deben estar optimizados para hacer buenas predicciones.
+
+🧠 Pregunta 100
+¿Qué pasa si se eliminan características relevantes del conjunto de datos?
+
+A. El modelo mejora
+B. El modelo puede perder precisión
+C. El aprendizaje se acelera
+D. Se elimina la función de coste
+
+✅ Correcta: B
+🧾 Explicación: Si se omiten características importantes, el modelo puede volverse inexacto o subajustado (underfitting).
+

@@ -1,0 +1,110 @@
+🧠 Pregunta 11
+¿Qué significa que un algoritmo es de aprendizaje supervisado?
+
+A. Requiere solo datos de entrada
+B. Aprende con datos sin etiquetar
+C. Utiliza datos con entrada y salida conocida
+D. Ajusta los datos de forma aleatoria
+
+✅ Correcta: C
+🧾 Explicación: En aprendizaje supervisado, el modelo se entrena con ejemplos donde se conoce tanto la entrada como la salida esperada.
+
+🧠 Pregunta 12
+¿Cuál de los siguientes ejemplos sería adecuado para aplicar regresión lineal?
+
+A. Clasificar correos como spam o no spam
+B. Predecir el costo de una casa según su tamaño
+C. Identificar rostros en una imagen
+D. Traducir textos automáticamente
+
+✅ Correcta: B
+🧾 Explicación: La regresión lineal se utiliza para predecir valores continuos, como precios o costos.
+
+🧠 Pregunta 13
+¿Cómo se representa usualmente el conjunto de características de entrada en la notación de machine learning?
+
+A. Y
+B. θ
+C. X
+D. β
+
+✅ Correcta: C
+🧾 Explicación: Las características de entrada se denotan con X, mientras que Y representa la salida o variable objetivo.
+
+🧠 Pregunta 14
+En un problema de regresión lineal multivariable, ¿qué ocurre con la función hipótesis?
+
+A. Se vuelve una función exponencial
+B. Se convierte en una suma ponderada de varias características
+C. Solo depende de una variable
+D. No utiliza bias
+
+✅ Correcta: B
+🧾 Explicación: Con múltiples características, la función hipótesis es una suma ponderada de cada una, más el término de bias.
+
+🧠 Pregunta 15
+¿Qué papel juega el parámetro θ₀ en la función hipótesis?
+
+A. Multiplica las características
+B. Es el término bias o intercepto
+C. Representa el error
+D. Determina el learning rate
+
+✅ Correcta: B
+🧾 Explicación: θ₀ es el bias, es decir, el punto donde la recta cruza el eje Y.
+
+🧠 Pregunta 16
+¿Qué ventaja ofrece almacenar los datos en un DataFrame de pandas?
+
+A. Permite visualizar datos como imágenes
+B. Facilita manipulación y análisis de datos
+C. Hace que el modelo sea más preciso
+D. Calcula automáticamente la función de coste
+
+✅ Correcta: B
+🧾 Explicación: Un DataFrame de pandas permite manejar, explorar y analizar los datos de manera sencilla y eficiente en Python.
+
+🧠 Pregunta 17
+¿Cuál es la principal diferencia entre regresión lineal univariable y multivariable?
+
+A. El tipo de salida que predicen
+B. El número de parámetros de la función hipótesis
+C. La técnica de optimización empleada
+D. El uso de valores categóricos
+
+✅ Correcta: B
+🧾 Explicación: La diferencia está en la cantidad de características (variables de entrada) y por tanto el número de parámetros en la función hipótesis.
+
+🧠 Pregunta 18
+¿Qué sucede si el learning rate es demasiado alto durante el entrenamiento?
+
+A. El modelo converge más rápido y es más preciso
+B. El modelo puede saltarse el mínimo global y no converger
+C. El modelo se detiene automáticamente
+D. Se ignora el gradiente descendente
+
+✅ Correcta: B
+🧾 Explicación: Un learning rate muy alto puede hacer que el algoritmo no encuentre el mínimo, saltándose la mejor solución.
+
+🧠 Pregunta 19
+¿Cuál de los siguientes elementos NO es necesario para entrenar un modelo de regresión lineal?
+
+A. Datos de entrenamiento etiquetados
+B. Un algoritmo de optimización
+C. Una función de coste
+D. Una red neuronal profunda
+
+✅ Correcta: D
+🧾 Explicación: Para regresión lineal, solo se requieren datos etiquetados, función de coste y optimización, no redes neuronales complejas.
+
+🧠 Pregunta 20
+¿Para qué se utiliza el Error Cuadrático Medio (MSE) en la regresión lineal?
+
+A. Para clasificar datos
+B. Para calcular la media de los valores de entrada
+C. Para medir el error promedio entre predicciones y valores reales
+D. Para determinar la tasa de aprendizaje óptima
+
+✅ Correcta: C
+🧾 Explicación: El MSE mide el error promedio al elevar al cuadrado las diferencias entre predicción y valor real, siendo la función de coste más común.
+

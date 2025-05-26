@@ -1,0 +1,110 @@
+🧠 Pregunta 21
+¿Qué indica un valor bajo de la función de coste en el modelo?
+
+A. El modelo es ineficiente
+B. El modelo predice mejor
+C. El modelo usa demasiados datos
+D. El modelo no está entrenado
+
+✅ Correcta: B
+🧾 Explicación: Un valor bajo en la función de coste indica que las predicciones están cercanas a los valores reales, es decir, el modelo es preciso.
+
+🧠 Pregunta 22
+¿Por qué se elevan al cuadrado las diferencias en el MSE?
+
+A. Para evitar valores negativos y penalizar más los errores grandes
+B. Para hacer los cálculos más fáciles
+C. Para convertir la función en lineal
+D. Para aumentar la velocidad de convergencia
+
+✅ Correcta: A
+🧾 Explicación: Elevar al cuadrado elimina los signos negativos y penaliza los errores más grandes, lo que mejora la optimización.
+
+🧠 Pregunta 23
+¿Qué representa el parámetro θ₁ en la función hipótesis?
+
+A. El intercepto de la recta
+B. La pendiente de la recta
+C. El valor real
+D. La tasa de error
+
+✅ Correcta: B
+🧾 Explicación: θ₁ es la pendiente de la recta, determina cuánto aumenta la predicción por cada unidad que crece la variable de entrada.
+
+🧠 Pregunta 24
+¿Qué nombre recibe el término adicional en la función hipótesis que ajusta la predicción sin depender de las características?
+
+A. Tasa de aprendizaje
+B. Bias o intercepto
+C. Regularización
+D. Error cuadrático
+
+✅ Correcta: B
+🧾 Explicación: El bias (θ₀) permite que la función hipótesis se desplace verticalmente, independientemente de los valores de entrada.
+
+🧠 Pregunta 25
+¿Cuál es el propósito de iterar durante el entrenamiento del modelo?
+
+A. Hacer más lento el algoritmo
+B. Repetir el ajuste de parámetros hasta minimizar la función de coste
+C. Aumentar el tamaño del dataset
+D. Eliminar ejemplos de entrenamiento
+
+✅ Correcta: B
+🧾 Explicación: El entrenamiento es un proceso iterativo donde los parámetros se ajustan sucesivamente hasta encontrar los valores óptimos.
+
+🧠 Pregunta 26
+¿Qué indica si, al final del entrenamiento, el valor de la función de coste ya no disminuye significativamente?
+
+A. El modelo necesita más datos
+B. Se han encontrado los parámetros óptimos
+C. Hay un error en la función de optimización
+D. Se debe reiniciar el entrenamiento
+
+✅ Correcta: B
+🧾 Explicación: Si la función de coste no baja más, significa que se alcanzó el mínimo y los parámetros óptimos.
+
+🧠 Pregunta 27
+En la fórmula del gradiente descendente, ¿qué representa el símbolo ∂J/∂θ?
+
+A. El valor real de salida
+B. La tasa de aprendizaje
+C. La derivada parcial de la función de coste respecto a un parámetro
+D. El número de iteraciones
+
+✅ Correcta: C
+🧾 Explicación: ∂J/∂θ indica cómo cambia la función de coste al modificar ligeramente el parámetro θ, guiando la actualización del modelo.
+
+🧠 Pregunta 28
+¿Qué ocurre si la función de coste tiene varios mínimos locales?
+
+A. El modelo no se entrena
+B. El gradiente descendente podría no encontrar la mejor solución
+C. No afecta el entrenamiento
+D. Solo existe un mínimo global
+
+✅ Correcta: B
+🧾 Explicación: Si la función no es convexa, el gradiente descendente podría quedarse atascado en un mínimo local.
+
+🧠 Pregunta 29
+¿En qué consiste el proceso de optimización en regresión lineal?
+
+A. Buscar nuevos datos
+B. Ajustar los parámetros del modelo para minimizar el error
+C. Dividir el conjunto de datos en subconjuntos
+D. Cambiar el tipo de función de coste
+
+✅ Correcta: B
+🧾 Explicación: La optimización busca los valores de parámetros (θ₀, θ₁, ...) que hacen que la función hipótesis se ajuste lo mejor posible a los datos.
+
+🧠 Pregunta 30
+¿Qué indica el hecho de que una función sea convexa?
+
+A. Puede tener múltiples soluciones
+B. Tiene una única solución óptima (mínimo global)
+C. No puede ser optimizada
+D. Es siempre una función cuadrática
+
+✅ Correcta: B
+🧾 Explicación: La convexidad garantiza que cualquier descenso lleva al único mínimo global, ideal para optimización con gradiente descendente.
+

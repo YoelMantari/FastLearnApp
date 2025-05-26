@@ -1,0 +1,120 @@
+🧠 Pregunta 1
+
+¿Qué define principalmente la clasificación de los algoritmos de Machine Learning?
+
+A. El lenguaje de programación utilizado
+B. El tipo de hardware requerido
+C. La forma en que aprenden y se ajustan con los datos
+D. El número de datos que pueden procesar por segundo
+
+✅ Correcta: C
+🧾 Explicación: La clasificación más aceptada de los algoritmos de machine learning se basa en cómo aprenden y se ajustan a partir de los datos, lo que determina su tipo de aprendizaje (supervisado, no supervisado, etc.).
+
+🧠 Pregunta 2
+
+¿Cuál de los siguientes es un ejemplo de aprendizaje supervisado?
+
+A. Un robot que aprende mediante prueba y error
+B. Un modelo que agrupa clientes sin saber su categoría
+C. Un sistema que clasifica correos como spam o no spam con datos etiquetados
+D. Un algoritmo que se adapta a nuevos datos sin etiquetas
+
+✅ Correcta: C
+🧾 Explicación: El aprendizaje supervisado se basa en datos etiquetados, y un ejemplo claro es la detección de spam, donde el modelo aprende con correos previamente clasificados como spam o no.
+
+🧠 Pregunta 3
+
+¿Cuál es una ventaja del aprendizaje online frente al batch?
+
+A. Requiere más recursos de procesamiento
+B. Se entrena con datos etiquetados solamente
+C. Se ajusta continuamente con nuevos datos en tiempo real
+D. Solo sirve para datos agrupados en bloques grandes
+
+✅ Correcta: C
+🧾 Explicación: El aprendizaje online permite que el modelo se actualice constantemente con cada nuevo dato que recibe, ideal para sistemas dinámicos como los de tráfico o spam.
+
+🧠 Pregunta 4
+
+¿Qué caracteriza a los algoritmos basados en instancias?
+
+A. Crean un modelo general para hacer predicciones
+B. Utilizan redes neuronales para identificar patrones
+C. Se basan en ejemplos específicos como referencia para predecir
+D. Funcionan únicamente con datos sin etiquetas
+
+✅ Correcta: C
+🧾 Explicación: Los algoritmos basados en instancias no generan un modelo general, sino que hacen predicciones directamente a partir de ejemplos específicos, como en el método de vecinos más cercanos (KNN).
+
+🧠 Pregunta 5
+
+¿Por qué es útil machine learning en el filtrado de spam?
+
+A. Porque utiliza reglas fijas que no cambian
+B. Porque evita el uso de datos históricos
+C. Porque se adapta a nuevas formas de spam automáticamente
+D. Porque clasifica solo correos de remitentes conocidos
+
+✅ Correcta: C
+🧾 Explicación: A diferencia de los filtros basados en reglas fijas, machine learning permite que el sistema se adapte a nuevas estrategias de spam mediante el aprendizaje con datos históricos y nuevos.
+
+🧠 Pregunta 6
+
+¿Cuál es la principal diferencia entre aprendizaje supervisado y no supervisado?
+
+A. El supervisado usa datos sin etiquetas
+B. El no supervisado necesita resultados conocidos
+C. El supervisado utiliza datos con resultados conocidos, el no supervisado no
+D. Ambos requieren datos etiquetados
+
+✅ Correcta: C
+🧾 Explicación: El aprendizaje supervisado trabaja con datos etiquetados, mientras que el no supervisado busca patrones en datos sin etiquetas.
+
+🧠 Pregunta 7
+
+¿En qué situación es más recomendable aplicar aprendizaje semi supervisado?
+
+A. Cuando todos los datos están perfectamente etiquetados
+B. Cuando etiquetar todos los datos es costoso o difícil
+C. Cuando solo se dispone de datos sin etiquetas
+D. Cuando los datos nunca cambian
+
+✅ Correcta: B
+🧾 Explicación: El aprendizaje semi supervisado es ideal cuando se tiene una pequeña cantidad de datos etiquetados y muchos sin etiquetar, reduciendo el costo de etiquetado.
+
+🧠 Pregunta 8
+
+¿Qué caracteriza al aprendizaje por refuerzo?
+
+A. Se basa únicamente en ejemplos almacenados
+B. Aprende mediante recompensas y castigos por interacción con un entorno
+C. Solo funciona con grandes volúmenes de datos
+D. Utiliza reglas fijas establecidas por analistas
+
+✅ Correcta: B
+🧾 Explicación: El aprendizaje por refuerzo mejora el modelo a través de la experiencia, usando recompensas y penalizaciones obtenidas al interactuar con su entorno.
+
+🧠 Pregunta 9
+
+¿Cuál es una ventaja principal del machine learning sobre los sistemas basados en reglas fijas?
+
+A. Es más difícil de actualizar
+B. Permite adaptarse automáticamente a cambios en los datos
+C. No requiere datos para funcionar
+D. Solo sirve para problemas sencillos
+
+✅ Correcta: B
+🧾 Explicación: Machine learning se ajusta y mejora automáticamente con nuevos datos, mientras que las reglas fijas requieren actualización manual constante.
+
+🧠 Pregunta 10
+
+¿Para qué tipo de problemas es especialmente útil el machine learning?
+
+A. Problemas estáticos con pocas variables
+B. Problemas complejos con reglas extensas o variables
+C. Problemas que no requieren análisis visual
+D. Problemas donde los datos no cambian nunca
+
+✅ Correcta: B
+🧾 Explicación: Machine learning es ideal en situaciones con muchas reglas cambiantes o complejidad, donde programar reglas fijas sería ineficiente.
+

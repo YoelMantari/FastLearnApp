@@ -1,0 +1,120 @@
+🧠 Pregunta 41
+
+La salida más habitual de un algoritmo no supervisado es:
+
+A. Etiquetas predichas conocidas
+B. Probabilidades de clasificación
+C. Grupos o patrones emergentes
+D. Valores continuos exactos
+
+✅ Correcta: C
+🧾 Explicación: Se obtienen clústeres, reglas o componentes que describen el conjunto.
+
+🧠 Pregunta 42
+
+¿Cuál de las siguientes técnicas se alinea con el aprendizaje no supervisado?
+
+A. Regresión lineal
+B. Árboles de decisión
+C. Análisis de Componentes Principales (PCA)
+D. Perceptrón multicapa supervisado
+
+✅ Correcta: C
+🧾 Explicación: PCA reduce la dimensionalidad sin utilizar etiquetas.
+
+🧠 Pregunta 43
+
+En clustering, dos puntos se agrupan juntos principalmente porque:
+
+A. Tienen etiquetas idénticas
+B. Presentan características similares según una métrica de distancia
+C. Minimiza la función de pérdida supervisada
+D. Maximiza la distancia interna del clúster
+
+✅ Correcta: B
+🧾 Explicación: La similitud o cercanía en el espacio de características es la base del agrupamiento.
+
+🧠 Pregunta 44
+
+Una manera de validar los clústeres obtenidos es:
+
+A. Calcular precisión respecto a etiquetas reales
+B. Analizar las características comunes de los elementos de cada grupo
+C. Ajustar la tasa de aprendizaje supervisada
+D. Aumentar el tamaño del lote batch
+
+✅ Correcta: B
+🧾 Explicación: La interpretación cualitativa de cada clúster ayuda a verificar su coherencia.
+
+🧠 Pregunta 45
+
+Una desventaja del aprendizaje no supervisado puede ser:
+
+A. Necesita demasiadas etiquetas
+B. A veces resulta difícil interpretar los agrupamientos
+C. No funciona con datos de gran tamaño
+D. Solo se aplica a texto
+
+✅ Correcta: B
+🧾 Explicación: Los clústeres pueden carecer de significado claro sin contexto adicional.
+
+🧠 Pregunta 46
+
+¿Cuál de las siguientes tareas NO corresponde a un escenario no supervisado?
+
+A. Identificar segmentos de mercado
+B. Descubrir temas en documentos
+C. Predecir si un cliente abandonará (churn)
+D. Reducir variables redundantes
+
+✅ Correcta: C
+🧾 Explicación: Predecir churn implica una etiqueta conocida (abandona/no abandona).
+
+🧠 Pregunta 47
+
+Tras descubrir grupos con aprendizaje no supervisado, un paso común es:
+
+A. Etiquetar los grupos para entrenar un modelo supervisado
+B. Eliminar los clústeres pequeños sin análisis
+C. Entrenar un algoritmo de refuerzo sobre los mismos datos
+D. Ignorar la interpretación de los clústeres
+
+✅ Correcta: A
+🧾 Explicación: Los clústeres pueden servir como base para un modelo supervisado posterior.
+
+🧠 Pregunta 48
+
+¿Qué comparten aprendizaje supervisado y no supervisado?
+
+A. Ambos requieren datos etiquetados
+B. Pueden usar las mismas características de entrada
+C. Ambos predicen valores discretos
+D. Ninguna característica en común
+
+✅ Correcta: B
+🧾 Explicación: Aunque difieren en las salidas, ambos usan el mismo espacio de características.
+
+🧠 Pregunta 49
+
+El término estructura oculta hace referencia a:
+
+A. La función de pérdida en entrenamiento
+B. Patrones no evidentes a simple vista en los datos
+C. Etiquetas secretas añadidas manualmente
+D. El tipo de hardware usado
+
+✅ Correcta: B
+🧾 Explicación: Son relaciones internas que el algoritmo revela sin información previa.
+
+🧠 Pregunta 50
+
+En un algoritmo de clustering, la métrica de distancia se utiliza para:
+
+A. Definir cuántas etiquetas existen
+B. Medir similitud y decidir qué puntos se agrupan
+C. Ajustar la función de costo de regresión
+D. Controlar la tasa de aprendizaje
+
+✅ Correcta: B
+🧾 Explicación: La proximidad entre puntos determina pertenencia a un clúster.
+

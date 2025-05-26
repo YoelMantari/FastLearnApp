@@ -1,0 +1,129 @@
+
+🧠 Pregunta 11
+¿Qué problema soluciona aplicar la función sigmoide en la salida del modelo?
+
+A. Elimina valores atípicos
+B. Convierte datos numéricos a texto
+C. Limita la salida al rango \[0, 1]
+D. Reduce el número de parámetros
+
+✅ Correcta: C
+🧾 Explicación: La sigmoide transforma cualquier valor real a un valor entre 0 y 1, interpretado como probabilidad.
+
+---
+
+🧠 Pregunta 12
+¿Cuál es la forma correcta de interpretar una salida de 0.92 en regresión logística?
+
+A. El ejemplo pertenece a la clase 0 con alta certeza
+B. No se puede interpretar
+C. Hay un 92% de probabilidad de que el ejemplo sea clase 1
+D. Hay un 8% de probabilidad de que el ejemplo sea clase 1
+
+✅ Correcta: C
+🧾 Explicación: Una salida de 0.92 indica una alta probabilidad de que el ejemplo pertenezca a la clase positiva.
+
+---
+
+🧠 Pregunta 13
+¿Cómo se llama el límite que separa las clases en regresión logística?
+
+A. Límite de entrenamiento
+B. Frontera del algoritmo
+C. Límite de decisión
+D. Umbral de error
+
+✅ Correcta: C
+🧾 Explicación: El límite de decisión separa las clases según el valor que toma la función hipótesis.
+
+---
+
+🧠 Pregunta 14
+¿Qué ocurre si la entrada z a la sigmoide es muy grande?
+
+A. La salida tiende a 0
+B. La salida es negativa
+C. La salida tiende a 1
+D. La salida es indefinida
+
+✅ Correcta: C
+🧾 Explicación: Si z es muy grande, $e^{-z} \to 0$ y la función sigmoide tiende a 1.
+
+---
+
+🧠 Pregunta 15
+¿Qué nombre recibe la función de coste adecuada para regresión logística?
+
+A. Error cuadrático medio
+B. Log loss o función logarítmica
+C. Costo absoluto
+D. Función de activación
+
+✅ Correcta: B
+🧾 Explicación: La función logarítmica (log loss) penaliza más severamente las predicciones incorrectas en clasificación.
+
+---
+
+🧠 Pregunta 16
+¿Por qué no se puede usar la función de coste de la regresión lineal en regresión logística?
+
+A. Porque no tiene pendiente
+B. Porque no predice texto
+C. Porque puede tener múltiples óptimos locales
+D. Porque es más lenta
+
+✅ Correcta: C
+🧾 Explicación: Al aplicar la función de coste cuadrática, el descenso de gradiente puede quedarse en óptimos locales debido a no ser convexa en regresión logística.
+
+---
+
+🧠 Pregunta 17
+¿Qué ocurre con el coste cuando una predicción es incorrecta en regresión logística?
+
+A. El coste es bajo
+B. El coste no cambia
+C. El coste es alto
+D. El coste se vuelve negativo
+
+✅ Correcta: C
+🧾 Explicación: Una predicción incorrecta genera un coste elevado, lo que incentiva al modelo a corregir el error.
+
+---
+
+🧠 Pregunta 18
+¿Cuál es una ventaja clave de la función de coste logarítmica?
+
+A. No requiere optimización
+B. Es convexa, con un único mínimo global
+C. No necesita aprendizaje supervisado
+D. Siempre predice bien
+
+✅ Correcta: B
+🧾 Explicación: La convexidad garantiza que el gradiente descendente encontrará una solución óptima global sin quedar atrapado.
+
+---
+
+🧠 Pregunta 19
+¿Qué papel cumple el descenso de gradiente en la regresión logística?
+
+A. Aumentar la tasa de error
+B. Clasificar directamente los datos
+C. Ajustar los parámetros para minimizar la función de coste
+D. Normalizar los datos
+
+✅ Correcta: C
+🧾 Explicación: El descenso de gradiente actualiza los parámetros en cada iteración para reducir el error de clasificación.
+
+---
+
+🧠 Pregunta 20
+¿Qué puede causar que el descenso de gradiente no converja correctamente?
+
+A. Tener pocos datos
+B. Learning rate demasiado alto
+C. Uso de función sigmoide
+D. Clasificación binaria
+
+✅ Correcta: B
+🧾 Explicación: Un learning rate muy alto puede hacer que el algoritmo se desestabilice, saltando el mínimo de la función de coste.
+

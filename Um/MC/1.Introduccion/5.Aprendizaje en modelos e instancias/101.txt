@@ -1,0 +1,119 @@
+🧠 Pregunta 91
+
+¿Qué caracteriza a los algoritmos basados en instancias?
+
+A. Construir un modelo general
+B. Memorizar ejemplos y usar medidas de similitud
+C. Requieren reentrenamiento continuo
+D. Ignorar datos no vistos
+
+✅ Correcta: B
+🧾 Explicación: Estos algoritmos almacenan los ejemplos de entrenamiento y predicen en función de qué tan similares son los nuevos datos a los anteriores.
+
+🧠 Pregunta 92
+
+¿Cuál es el primer paso de un algoritmo basado en instancias al clasificar un nuevo ejemplo?
+
+A. Ajustar parámetros del modelo
+B. Comparar el nuevo dato con ejemplos almacenados
+C. Construir una función matemática general
+D. Agrupar datos en clústeres
+
+✅ Correcta: B
+🧾 Explicación: Se evalúa la similitud entre el nuevo dato y cada ejemplo conocido antes de decidir su etiqueta.
+
+🧠 Pregunta 93
+
+¿Qué métrica es fundamental en algoritmos basados en instancias?
+
+A. Función de pérdida
+B. Medida de similitud o distancia
+C. Número de capas ocultas
+D. Tasa de aprendizaje
+
+✅ Correcta: B
+🧾 Explicación: Sin una medida de distancia (como Euclidiana), no se puede determinar qué ejemplos son más cercanos al nuevo dato.
+
+🧠 Pregunta 94
+
+¿Cuál es una ventaja de los algoritmos basados en instancias?
+
+A. No requieren almacenar datos de entrenamiento
+B. Se adaptan automáticamente al incorporar nuevos ejemplos
+C. Tienen baja precisión
+D. Requieren reentrenamiento completo
+
+✅ Correcta: B
+🧾 Explicación: Al añadir cada nuevo ejemplo, el sistema amplía su base de casos sin volver a entrenar todo un modelo.
+
+🧠 Pregunta 95
+
+¿Cuál es una desventaja de los algoritmos basados en instancias?
+
+A. Requieren almacenar todo el conjunto de entrenamiento
+B. Solo funcionan con datos etiquetados
+C. No pueden clasificar datos nuevos
+D. No utilizan simetría
+
+✅ Correcta: A
+🧾 Explicación: Almacenar cada caso consumen mucha memoria, lo que puede ser inviable con grandes volúmenes de datos.
+
+🧠 Pregunta 96
+
+¿Qué define a los algoritmos basados en modelos?
+
+A. Memorizar ejemplos y compararlos
+B. Construir un modelo matemático general a partir de los datos
+C. Funcionan sin entrenamiento
+D. Ignoran la distribución de los datos
+
+✅ Correcta: B
+🧾 Explicación: Estos métodos aprenden parámetros que describen la tendencia global, sin comparar con cada ejemplo individual.
+
+🧠 Pregunta 97
+
+¿Cómo realizan predicciones los algoritmos basados en modelos?
+
+A. Comparando con ejemplos específicos
+B. Aplicando la función matemática o modelo aprendido
+C. Ajustando ejemplos manualmente
+D. Sin usar datos de entrenamiento
+
+✅ Correcta: B
+🧾 Explicación: Usan la función hipótesis entrenada para calcular directamente la salida de un nuevo dato.
+
+🧠 Pregunta 98
+
+¿Cuál es una ventaja de los algoritmos basados en modelos en cuanto a memoria?
+
+A. Necesitan almacenar menos datos, solo el modelo
+B. Requieren almacenar cada dato de entrenamiento
+C. No pueden procesar datos nuevos
+D. Usan memoria ilimitada
+
+✅ Correcta: A
+🧾 Explicación: Solo guardan los parámetros del modelo, lo que reduce enormemente el uso de memoria frente a instancias.
+
+🧠 Pregunta 99
+
+¿Qué ocurre cuando cambian los patrones de datos en un algoritmo basado en modelos?
+
+A. Se adapta automáticamente sin entrenamiento
+B. Requiere reentrenamiento del modelo
+C. Compara datos con ejemplos previos
+D. Descarta los datos nuevos
+
+✅ Correcta: B
+🧾 Explicación: Al basarse en un modelo fijo, necesita volver a entrenar con los nuevos datos para capturar cambios.
+
+🧠 Pregunta 100
+
+¿Cuál de los siguientes es un ejemplo de algoritmo basado en instancias?
+
+A. Regresión lineal
+B. K-Nearest Neighbors (KNN)
+C. Árbol de decisión
+D. Naive Bayes
+
+✅ Correcta: B
+🧾 Explicación: KNN almacena todos los ejemplos y predice según los k vecinos más cercanos del nuevo dato.

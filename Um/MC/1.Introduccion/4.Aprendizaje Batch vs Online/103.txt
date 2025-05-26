@@ -1,0 +1,119 @@
+🧠 Pregunta 81
+
+¿Cuál es un ejemplo de aplicación recomendada para aprendizaje batch?
+
+A. Análisis histórico de datos financieros de los últimos 10 años
+B. Monitor de tráfico en tiempo real
+C. Chatbot que aprende de cada conversación
+D. Vehículo autónomo que ajusta su comportamiento al instante
+
+✅ Correcta: A
+🧾 Explicación: El análisis histórico, donde los datos son estáticos, se beneficia del batch.
+
+🧠 Pregunta 82
+
+¿Cómo influye el tamaño del mini-batch en el aprendizaje online?
+
+A. Mini-batches grandes reducen el ruido en la actualización
+B. Mini-batches pequeños siempre mejoran la precisión
+C. El tamaño no importa
+D. Mini-batches grandes causan inestabilidad
+
+✅ Correcta: A
+🧾 Explicación: Lotes más grandes suavizan la estimación del gradiente, reduciendo el efecto del ruido.
+
+🧠 Pregunta 83
+
+¿Qué se considera un “problema potencial” del aprendizaje online?
+
+A. Falta de adaptación continua
+B. Necesidad de ganar licencias de software
+C. Inestabilidad por datos ruidosos
+D. Imposibilidad de procesar datos grandes
+
+✅ Correcta: C
+🧾 Explicación: El ruido de streaming puede provocar fluctuaciones indeseadas en el modelo.
+
+🧠 Pregunta 84
+
+En el filtrado de spam, ¿cómo funcionaría un sistema batch tras un cambio masivo de patrones de spam?
+
+A. Se ajusta instantáneamente sin reentrenamiento
+B. Solo detecta correos antiguos
+C. Requiere entrenarse de nuevo con todos los correos nuevos y pasados
+D. Ignora los nuevos patrones
+
+✅ Correcta: C
+🧾 Explicación: Para capturar nuevos patrones, el modelo batch debe incluir todos los datos actuales en el reentrenamiento.
+
+🧠 Pregunta 85
+
+¿Qué ventaja ofrece el aprendizaje online en términos de latencia de respuesta?
+
+A. Mayor latencia porque reentrena todo el modelo
+B. Baja latencia al ajustar solo con mini-batches
+C. Latencia constante sin cambios
+D. Latencia no relevante
+
+✅ Correcta: B
+🧾 Explicación: Las actualizaciones parciales son rápidas y permiten respuestas más inmediatas.
+
+🧠 Pregunta 86
+
+¿Qué se suele hacer con los datos antiguos en un sistema online de largo plazo?
+
+A. Se descartan inmediatamente tras la primera actualización
+B. Se almacenan en un buffer para reentrenamientos periódicos
+C. Nunca se usan
+D. Siempre se incluyen en cada actualización incremental
+
+✅ Correcta: B
+🧾 Explicación: Un buffer con datos recientes y antiguos equilibra adaptación y retención de conocimiento.
+
+🧠 Pregunta 87
+
+¿Cuál es la implicación de “recursos necesarios” en el batch frente al online?
+
+A. Batch requiere menos cómputo inicial, online más
+B. Batch consume picos de cómputo en reentrenamientos, online reparte la carga en el tiempo
+C. Online nunca usa memoria
+D. Ambos consumen exactamente igual
+
+✅ Correcta: B
+🧾 Explicación: El batch concentra el esfuerzo en un momento; el online lo distribuye gradualmente.
+
+🧠 Pregunta 88
+
+¿Qué debes considerar antes de elegir batch u online para un proyecto?
+
+A. Sólo la facilidad de implementación
+B. La frecuencia de llegada de datos y recursos disponibles
+C. La marca del hardware
+D. El color de la interfaz
+
+✅ Correcta: B
+🧾 Explicación: Hay que evaluar cómo cambian los datos y los recursos (memoria, CPU) disponibles.
+
+🧠 Pregunta 89
+
+¿Qué ventaja de reproducibilidad ofrece el batch sobre el online?
+
+A. Online es más reproducible al cambiar constantemente
+B. Batch entrena siempre con el mismo dataset, facilitando la reproducción de resultados
+C. Batch no es reproducible
+D. Ambos son igual de reproducibles
+
+✅ Correcta: B
+🧾 Explicación: El entrenamiento único con un dataset fijo genera modelos replicables.
+
+🧠 Pregunta 90
+
+Según la conclusión, ¿cuándo es más complejo implementar aprendizaje online?
+
+A. Cuando los datos son estáticos
+B. Cuando se necesita adaptación continua y control de calidad de datos
+C. Cuando no se cuenta con datos
+D. Cuando se usa regresión lineal
+
+✅ Correcta: B
+🧾 Explicación: Online requiere infraestructura para ingestión continua, filtrado y ajuste incremental, lo que añade complejidad.

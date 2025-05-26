@@ -1,0 +1,120 @@
+🧠 Pregunta 1
+
+¿Qué es el aprendizaje supervisado en Machine Learning?
+
+A. Un método que usa solo datos sin etiquetas
+B. Un método que aprende a asociar entradas con salidas usando datos etiquetados
+C. Un método basado en prueba y error
+D. Un método que solo agrupa datos sin etiquetas
+
+✅ Correcta: B
+🧾 Explicación: El aprendizaje supervisado utiliza conjuntos de datos donde cada entrada está asociada a una salida conocida para entrenar un modelo.
+
+🧠 Pregunta 2
+
+¿Qué tipo de datos requiere el aprendizaje supervisado para funcionar?
+
+A. Datos sin ninguna salida conocida
+B. Datos agrupados en clústeres
+C. Datos etiquetados con la salida correspondiente
+D. Datos generados aleatoriamente
+
+✅ Correcta: C
+🧾 Explicación: El aprendizaje supervisado requiere pares de entrada y salida etiquetados para entrenar su modelo.
+
+🧠 Pregunta 3
+
+¿Cuál es el objetivo principal de la regresión en aprendizaje supervisado?
+
+A. Predecir valores continuos
+B. Clasificar objetos en categorías
+C. Agrupar datos similares
+D. Encontrar patrones ocultos
+
+✅ Correcta: A
+🧾 Explicación: La regresión busca predecir valores numéricos continuos, como el precio de una casa.
+
+🧠 Pregunta 4
+
+¿Qué técnica supervisada es adecuada para clasificar correos como spam o no spam?
+
+A. Regresión
+B. Clasificación
+C. Clustering
+D. Reducción de dimensionalidad
+
+✅ Correcta: B
+🧾 Explicación: La clasificación se usa para asignar datos a categorías discretas como spam/no spam.
+
+🧠 Pregunta 5
+
+¿Qué es una función hipótesis en aprendizaje supervisado?
+
+A. Un dato de salida sin procesar
+B. El modelo matemático que asocia entradas con salidas
+C. Un algoritmo de agrupamiento
+D. Una etiqueta aleatoria
+
+✅ Correcta: B
+🧾 Explicación: La función hipótesis es el modelo que el algoritmo construye para predecir salidas a partir de entradas.
+
+🧠 Pregunta 6
+
+¿Cuál de los siguientes problemas puede resolverse con regresión?
+
+A. Clasificar correos como spam
+B. Predecir el precio de un coche
+C. Agrupar imágenes similares
+D. Detectar anomalías sin etiquetas
+
+✅ Correcta: B
+🧾 Explicación: La regresión se utiliza para predecir valores continuos, como precios.
+
+🧠 Pregunta 7
+
+¿Cuál es el primer paso para aplicar una técnica de aprendizaje supervisado?
+
+A. Buscar patrones sin etiquetas
+B. Recopilar un conjunto de datos etiquetado
+C. Ejecutar el modelo en datos nuevos
+D. Eliminar datos duplicados
+
+✅ Correcta: B
+🧾 Explicación: Es esencial contar con un conjunto de datos etiquetado antes de entrenar el modelo.
+
+🧠 Pregunta 8
+
+¿Qué caracteriza a un valor discreto en el contexto de la clasificación?
+
+A. Puede tomar cualquier valor dentro de un rango
+B. Son categorías específicas como "spam" o "no spam"
+C. Son valores fraccionarios
+D. Son siempre números enteros
+
+✅ Correcta: B
+🧾 Explicación: En clasificación, los valores de salida son categorías, es decir, valores discretos.
+
+🧠 Pregunta 9
+
+¿Qué permite hacer el modelo una vez que ha sido entrenado con aprendizaje supervisado?
+
+A. Agrupar datos sin etiquetas
+B. Predecir la salida de datos nuevos
+C. Eliminar datos irrelevantes
+D. Crear reglas fijas
+
+✅ Correcta: B
+🧾 Explicación: El modelo entrenado puede asociar nuevas entradas con sus posibles salidas.
+
+🧠 Pregunta 10
+
+¿En qué consiste el proceso de clasificación en aprendizaje supervisado?
+
+A. Predecir valores continuos
+B. Identificar grupos de datos
+C. Asignar entradas a categorías discretas
+D. Generar datos sintéticos
+
+✅ Correcta: C
+🧾 Explicación: La clasificación asigna cada entrada a una categoría específica.
+

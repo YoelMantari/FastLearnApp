@@ -1,0 +1,129 @@
+
+🧠 Pregunta 1
+¿Qué tipo de valores predice la regresión logística?
+
+A. Valores continuos
+B. Valores de tipo flotante
+C. Categorías (valores discretos)
+D. Valores sin etiqueta
+
+✅ Correcta: C
+🧾 Explicación: La regresión logística es un algoritmo de clasificación, por lo que predice valores discretos como 0 o 1, no valores continuos.
+
+---
+
+🧠 Pregunta 2
+¿Cuál es la principal diferencia entre regresión lineal y regresión logística?
+
+A. La regresión logística usa árboles de decisión
+B. La regresión logística predice valores continuos
+C. La regresión logística predice categorías usando una función sigmoide
+D. La regresión lineal usa probabilidades
+
+✅ Correcta: C
+🧾 Explicación: A diferencia de la regresión lineal, la regresión logística transforma la salida con una función sigmoide para clasificar datos.
+
+---
+
+🧠 Pregunta 3
+¿Qué representa la función sigmoide en regresión logística?
+
+A. Una recta con pendiente negativa
+B. Una función constante
+C. Una curva suave que convierte valores en probabilidades
+D. Una función de activación usada en redes convolucionales
+
+✅ Correcta: C
+🧾 Explicación: La función sigmoide transforma cualquier valor real en un número entre 0 y 1, ideal para interpretar como probabilidad.
+
+---
+
+🧠 Pregunta 4
+¿Qué tipo de problema soluciona la regresión logística básica?
+
+A. Clasificación multiclase
+B. Predicción de precios
+C. Clasificación binaria
+D. Análisis de sentimiento
+
+✅ Correcta: C
+🧾 Explicación: La regresión logística estándar se usa para clasificar datos en dos categorías: 0 o 1.
+
+---
+
+🧠 Pregunta 5
+¿Qué representa la salida de la función sigmoide en regresión logística?
+
+A. Un valor categórico
+B. Una variable de entrada
+C. Una probabilidad
+D. El número de características
+
+✅ Correcta: C
+🧾 Explicación: La salida de la función sigmoide se interpreta como la probabilidad de que un ejemplo pertenezca a la clase positiva.
+
+---
+
+🧠 Pregunta 6
+¿Cuál es el valor del umbral típico en regresión logística para tomar una decisión?
+
+A. 0.2
+B. 0.5
+C. 1
+D. 0.9
+
+✅ Correcta: B
+🧾 Explicación: Se utiliza comúnmente un umbral de 0.5 para decidir si un valor de probabilidad representa la clase 1 o la clase 0.
+
+---
+
+🧠 Pregunta 7
+¿Qué ocurre si una predicción de regresión logística es 0.8?
+
+A. Se clasifica como clase 0
+B. Se ignora la predicción
+C. Se clasifica como clase 1
+D. Se reentrena el modelo
+
+✅ Correcta: C
+🧾 Explicación: Como 0.8 > 0.5, el ejemplo se clasifica como clase positiva (1).
+
+---
+
+🧠 Pregunta 8
+¿Por qué no es adecuada la función hipótesis de regresión lineal para clasificación?
+
+A. No se puede graficar
+B. No ajusta funciones cuadráticas
+C. Puede generar predicciones fuera del rango \[0, 1]
+D. No tiene pendiente
+
+✅ Correcta: C
+🧾 Explicación: La función lineal puede devolver valores negativos o mayores a 1, lo cual no es válido como probabilidad.
+
+---
+
+🧠 Pregunta 9
+¿Qué tipo de datos se requiere para entrenar un modelo de regresión logística?
+
+A. Datos sin etiquetas
+B. Datos de texto únicamente
+C. Datos etiquetados con clases
+D. Imágenes sin procesar
+
+✅ Correcta: C
+🧾 Explicación: Como es un algoritmo supervisado, necesita datos de entrada y su respectiva categoría.
+
+---
+
+🧠 Pregunta 10
+¿Qué ecuación representa la función sigmoide?
+
+A. $\frac{1}{x^2 + 1}$
+B. $\frac{1}{1 + e^{-z}}$
+C. $e^x$
+D. $\log(1 + x)$
+
+✅ Correcta: B
+🧾 Explicación: La función sigmoide tiene la forma $\frac{1}{1 + e^{-z}}$, donde z es la entrada ponderada.
+

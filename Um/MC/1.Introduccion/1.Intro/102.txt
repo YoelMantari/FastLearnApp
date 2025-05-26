@@ -1,0 +1,120 @@
+🧠 Pregunta 11
+
+¿Qué tipo de aprendizaje permite analizar datos en tiempo real y adaptarse continuamente?
+
+A. Aprendizaje batch
+B. Aprendizaje supervisado
+C. Aprendizaje online
+D. Aprendizaje semi supervisado
+
+✅ Correcta: C
+🧾 Explicación: El aprendizaje online ajusta el modelo con cada dato nuevo, siendo útil en entornos dinámicos que requieren respuesta inmediata.
+
+🧠 Pregunta 12
+
+¿En qué consiste el aprendizaje batch?
+
+A. El modelo se actualiza con cada nuevo dato individual
+B. El modelo se entrena en bloques de datos grandes
+C. Solo funciona con datos sin etiquetas
+D. Requiere supervisión constante del usuario
+
+✅ Correcta: B
+🧾 Explicación: En el aprendizaje batch, el modelo se ajusta al procesar lotes de datos, lo que puede ser más eficiente cuando no se necesita respuesta inmediata.
+
+🧠 Pregunta 13
+
+¿Cuál es el propósito principal de un modelo en machine learning?
+
+A. Almacenar datos sin analizarlos
+B. Hacer predicciones o clasificaciones basadas en patrones aprendidos
+C. Eliminar datos duplicados
+D. Servir únicamente como base de datos
+
+✅ Correcta: B
+🧾 Explicación: El modelo se entrena para identificar patrones y así poder predecir o clasificar datos nuevos eficientemente.
+
+🧠 Pregunta 14
+
+¿Cuál es un ejemplo de algoritmo basado en instancias?
+
+A. Red neuronal
+B. Vecinos más cercanos (KNN)
+C. Árbol de decisión
+D. Regresión lineal
+
+✅ Correcta: B
+🧾 Explicación: Los algoritmos de vecinos más cercanos predicen resultados basados en ejemplos específicos, sin construir un modelo general.
+
+🧠 Pregunta 15
+
+¿En qué se diferencia un algoritmo basado en modelo de uno basado en instancias?
+
+A. El basado en modelo crea una representación general a partir de los datos
+B. El basado en modelo utiliza solo ejemplos específicos
+C. El basado en modelo no se puede entrenar con datos
+D. El basado en modelo es menos preciso
+
+✅ Correcta: A
+🧾 Explicación: Los algoritmos basados en modelo, como las redes neuronales, crean una estructura general para hacer predicciones, a diferencia de los de instancias.
+
+🧠 Pregunta 16
+
+¿Qué ventaja tiene el uso de machine learning en análisis de grandes volúmenes de datos?
+
+A. Solo funciona con pocos datos
+B. Permite encontrar patrones de manera eficiente y automatizada
+C. No requiere ningún ajuste
+D. Necesita reglas fijas para cada caso
+
+✅ Correcta: B
+🧾 Explicación: Machine learning es ideal para analizar grandes cantidades de datos y encontrar patrones sin intervención manual constante.
+
+🧠 Pregunta 17
+
+¿Qué tipo de aprendizaje sería mejor para clasificar imágenes donde no hay etiquetas disponibles?
+
+A. Aprendizaje supervisado
+B. Aprendizaje no supervisado
+C. Aprendizaje batch
+D. Aprendizaje online
+
+✅ Correcta: B
+🧾 Explicación: El aprendizaje no supervisado busca patrones y agrupaciones en datos sin etiquetas, ideal para imágenes sin clasificación previa.
+
+🧠 Pregunta 18
+
+¿Cuál es el principal beneficio de la clasificación de algoritmos en machine learning?
+
+A. Facilita la elección del algoritmo adecuado para cada problema y datos
+B. Dificulta el proceso de selección
+C. Elimina la necesidad de analizar los datos
+D. Permite ignorar la experiencia previa
+
+✅ Correcta: A
+🧾 Explicación: Comprender la clasificación ayuda a seleccionar la técnica más efectiva según el tipo de problema y datos disponibles.
+
+🧠 Pregunta 19
+
+¿Qué método es más apropiado si se quiere que un sistema aprenda de la interacción con su entorno, como en un robot?
+
+A. Aprendizaje supervisado
+B. Aprendizaje semi supervisado
+C. Aprendizaje por refuerzo
+D. Aprendizaje batch
+
+✅ Correcta: C
+🧾 Explicación: El aprendizaje por refuerzo es ideal para entornos donde el sistema recibe retroalimentación en forma de recompensas o castigos por sus acciones.
+
+🧠 Pregunta 20
+
+¿Qué elemento NO es una característica de los algoritmos de machine learning según la lectura?
+
+A. Mejorar con experiencia
+B. Adaptarse a nuevos datos
+C. Requerir reglas fijas para cada caso
+D. Construir modelos matemáticos
+
+✅ Correcta: C
+🧾 Explicación: Machine learning evita el uso de reglas fijas y se centra en el aprendizaje automático y la adaptación continua.
+

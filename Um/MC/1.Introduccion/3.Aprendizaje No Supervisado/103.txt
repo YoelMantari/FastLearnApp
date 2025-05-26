@@ -1,0 +1,119 @@
+🧠 Pregunta 51
+
+¿Cómo ayuda el aprendizaje no supervisado a un sistema de recomendación?
+
+A. Predice calificaciones exactas de los usuarios
+B. Agrupa usuarios con gustos similares sin necesitar etiquetas
+C. Etiqueta productos de forma determinista
+D. Reemplaza el filtrado colaborativo
+
+✅ Correcta: B
+🧾 Explicación: Al segmentar usuarios por conducta, se pueden personalizar recomendaciones.
+
+🧠 Pregunta 52
+
+¿Cuál de las siguientes técnicas de reducción de dimensionalidad es no supervisada?
+
+A. PCA (Análisis de Componentes Principales)
+B. SVM (Máquinas de Vectores de Soporte)
+C. Random Forest
+D. Naive Bayes
+
+✅ Correcta: A
+🧾 Explicación: PCA no usa etiquetas, solo la covarianza entre variables.
+
+🧠 Pregunta 53
+
+La salida de un algoritmo de reglas de asociación (Apriori) suele ser:
+
+A. Grupos de instancias homogéneas
+B. Reglas que relacionan ítems frecuentemente comprados juntos
+C. Predicciones numéricas continuas
+D. Etiquetas binarias
+
+✅ Correcta: B
+🧾 Explicación: Apriori descubre relaciones “si-entonces” entre ítems sin usar etiquetas.
+
+🧠 Pregunta 54
+
+En el ejemplo de correos, los clústeres encontrados podrían:
+
+A. Servir como etiquetas para entrenar un clasificador supervisado
+B. Ser descartados porque no se usan
+C. Convertirse automáticamente en reglas fijas
+D. Eliminar la necesidad de filtrado de spam
+
+✅ Correcta: A
+🧾 Explicación: Los grupos identificados pueden aportar etiquetas iniciales de forma semiautomática.
+
+🧠 Pregunta 55
+
+El requisito fundamental para aplicar aprendizaje no supervisado es:
+
+A. Conocer la variable objetivo
+B. Disponer de muchos datos etiquetados
+C. Contar con datos sin etiquetas
+D. Definir recompensas y penalizaciones
+
+✅ Correcta: C
+🧾 Explicación: La esencia del método es analizar datos sin salidas conocidas.
+
+🧠 Pregunta 56
+
+El aprendizaje no supervisado se centra principalmente en:
+
+A. Optimizar una función de error respecto a etiquetas
+B. Describir y explorar la estructura de los datos
+C. Maximizar la precisión predictiva
+D. Minimizar el sobreajuste supervisado
+
+✅ Correcta: B
+🧾 Explicación: Su meta es revelar la organización interna y patrones ocultos.
+
+🧠 Pregunta 57
+
+¿Por qué los algoritmos no supervisados suelen emplearse al inicio del análisis exploratorio?
+
+A. Porque requieren muchas etiquetas
+B. Porque revelan patrones sin sesgos previos
+C. Porque garantizan predicciones exactas
+D. Porque siempre son más rápidos que los supervisados
+
+✅ Correcta: B
+🧾 Explicación: Al no depender de etiquetas, permiten una exploración imparcial de los datos.
+
+🧠 Pregunta 58
+
+¿Qué efecto puede tener elegir un número de clústeres excesivo en k-means?
+
+A. Los clústeres se vuelven demasiado generales
+B. Se subdividen excesivamente los datos perdiendo significado
+C. No afecta al resultado final
+D. Produce un modelo predictivo más preciso
+
+✅ Correcta: B
+🧾 Explicación: Demasiados clústeres fragmentan la información y dificultan la interpretación.
+
+🧠 Pregunta 59
+
+Antes de aplicar k-means es recomendable:
+
+A. Escalar o normalizar las características numéricas
+B. Etiquetar los datos manualmente
+C. Definir una función de pérdida supervisada
+D. Dividir los datos en train y test con etiquetas
+
+✅ Correcta: A
+🧾 Explicación: La distancia euclídea es sensible a la escala; normalizar evita sesgos.
+
+🧠 Pregunta 60
+
+Descubrir relaciones entre productos que se compran juntos es un ejemplo de:
+
+A. Aprendizaje supervisado
+B. Aprendizaje no supervisado mediante reglas de asociación
+C. Aprendizaje por refuerzo
+D. Aprendizaje semi supervisado
+
+✅ Correcta: B
+🧾 Explicación: Las reglas de asociación se generan sin etiquetas y revelan vínculos de co-compra.

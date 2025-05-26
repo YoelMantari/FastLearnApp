@@ -1,0 +1,119 @@
+🧠 Pregunta 11
+
+¿Cuál de los siguientes NO es un ejemplo de valor continuo?
+
+A. Precio de una casa
+B. Temperatura de un día
+C. Cantidad de productos vendidos
+D. Si un correo es spam o no spam
+
+✅ Correcta: D
+🧾 Explicación: "Spam o no spam" es una categoría, no un valor continuo.
+
+🧠 Pregunta 12
+
+¿Qué importancia tiene el aprendizaje supervisado en Machine Learning?
+
+A. Es el método menos común
+B. Permite resolver una amplia variedad de problemas prácticos
+C. Solo sirve para problemas de agrupamiento
+D. No requiere datos etiquetados
+
+✅ Correcta: B
+🧾 Explicación: Es el método más popular y versátil para problemas de predicción y clasificación.
+
+🧠 Pregunta 13
+
+¿Qué ocurre si entrenamos un modelo con datos mal etiquetados?
+
+A. El modelo será más preciso
+B. El modelo aprenderá patrones incorrectos
+C. El modelo ignorará las etiquetas
+D. El modelo funcionará igual
+
+✅ Correcta: B
+🧾 Explicación: Etiquetas incorrectas llevan a modelos inexactos o poco fiables.
+
+🧠 Pregunta 14
+
+¿Cuál es un ejemplo clásico de clasificación?
+
+A. Predecir el precio del oro
+B. Predecir el clima en grados Celsius
+C. Clasificar imágenes de animales en "perro" o "gato"
+D. Medir la altura de una persona
+
+✅ Correcta: C
+🧾 Explicación: Clasificar imágenes en categorías es una tarea típica de clasificación.
+
+🧠 Pregunta 15
+
+¿Qué se entiende por conjunto de datos etiquetado?
+
+A. Datos donde se desconoce la salida
+B. Datos sin relación entre entrada y salida
+C. Datos donde cada entrada tiene una salida conocida
+D. Datos ordenados alfabéticamente
+
+✅ Correcta: C
+🧾 Explicación: Los datos etiquetados asocian cada entrada con su resultado esperado.
+
+🧠 Pregunta 16
+
+¿Qué permite hacer la regresión lineal?
+
+A. Predecir valores de salida continuos a partir de una línea ajustada
+B. Clasificar datos en dos categorías
+C. Agrupar datos sin etiquetas
+D. Eliminar datos duplicados
+
+✅ Correcta: A
+🧾 Explicación: La regresión lineal busca la mejor línea que prediga valores continuos.
+
+🧠 Pregunta 17
+
+¿Qué técnica se emplea para prever la probabilidad de que un correo sea spam?
+
+A. Regresión
+B. Clasificación
+C. Agrupamiento
+D. Reglas fijas
+
+✅ Correcta: B
+🧾 Explicación: Prever categorías (spam/no spam) es un problema de clasificación.
+
+🧠 Pregunta 18
+
+¿Cuándo se dice que un modelo "generaliza" bien?
+
+A. Cuando memoriza todos los datos de entrenamiento
+B. Cuando predice correctamente en datos nuevos
+C. Cuando sólo acierta en datos conocidos
+D. Cuando ignora los datos de entrada
+
+✅ Correcta: B
+🧾 Explicación: Un modelo generaliza bien si puede predecir correctamente salidas de datos que no ha visto antes.
+
+🧠 Pregunta 19
+
+¿Cuál de los siguientes pasos NO forma parte de la técnica de regresión?
+
+A. Recopilar datos etiquetados
+B. Construir una función matemática
+C. Agrupar datos en clústeres
+D. Usar la función para predecir valores futuros
+
+✅ Correcta: C
+🧾 Explicación: Agrupar datos es propio del aprendizaje no supervisado.
+
+🧠 Pregunta 20
+
+¿Qué diferencia principal existe entre regresión y clasificación?
+
+A. La regresión predice valores continuos, la clasificación valores discretos
+B. La regresión solo se usa con imágenes
+C. La clasificación no usa etiquetas
+D. No existe ninguna diferencia
+
+✅ Correcta: A
+🧾 Explicación: Regresión = valores continuos; Clasificación = valores/categorías discretos.

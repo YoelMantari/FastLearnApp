@@ -1,0 +1,110 @@
+🧠 Pregunta 71
+¿Qué representa el término "learning rate"?
+
+A. El número de pasos que toma el modelo
+B. La intensidad del entrenamiento
+C. El tamaño del paso en cada iteración
+D. El número de características
+
+✅ Correcta: C
+🧾 Explicación: El learning rate (𝛼) controla el tamaño del paso que da el algoritmo al ajustar los parámetros.
+
+🧠 Pregunta 72
+¿Qué ocurre si el modelo de regresión lineal tiene muchos parámetros?
+
+A. Siempre mejora el rendimiento
+B. Podría sobreajustarse a los datos
+C. Se convierte en una red neuronal
+D. La función de coste no se puede calcular
+
+✅ Correcta: B
+🧾 Explicación: Demasiados parámetros pueden hacer que el modelo se ajuste demasiado al entrenamiento, perdiendo capacidad de generalización.
+
+🧠 Pregunta 73
+¿Qué se obtiene como resultado del entrenamiento?
+
+A. Un conjunto nuevo de datos
+B. Un conjunto de funciones objetivo
+C. Valores óptimos para θ₀, θ₁, ...
+D. El valor más bajo posible de X
+
+✅ Correcta: C
+🧾 Explicación: El entrenamiento busca determinar los mejores valores para los parámetros que definen la función hipótesis.
+
+🧠 Pregunta 74
+¿Qué representa una línea con pendiente muy pronunciada?
+
+A. Poca relación entre X y Y
+B. Relación inversa
+C. Alta sensibilidad de Y ante cambios en X
+D. Modelo no supervisado
+
+✅ Correcta: C
+🧾 Explicación: Una pendiente pronunciada indica que un pequeño cambio en X genera un cambio grande en Y.
+
+🧠 Pregunta 75
+¿Qué condición debe cumplir la función de coste para asegurar que el gradiente descendente encuentre el mejor resultado?
+
+A. Ser constante
+B. Ser cóncava
+C. Ser convexa
+D. Tener múltiples picos
+
+✅ Correcta: C
+🧾 Explicación: Una función convexa tiene un único mínimo global, lo que garantiza que el gradiente descendente lo encontrará.
+
+🧠 Pregunta 76
+¿Qué representa la suma ponderada en la función hipótesis?
+
+A. La multiplicación de parámetros por una constante
+B. La predicción más alta posible
+C. Cada característica multiplicada por su peso (θ)
+D. El error cuadrático medio
+
+✅ Correcta: C
+🧾 Explicación: En la suma ponderada, cada característica se multiplica por su parámetro correspondiente y se suman todos los resultados.
+
+🧠 Pregunta 77
+¿Cuál es una ventaja del gradiente descendente?
+
+A. Elimina la necesidad de una función de coste
+B. Encuentra el valor mínimo de una función compleja
+C. Permite entrenar modelos sin datos
+D. Se usa solo en modelos no supervisados
+
+✅ Correcta: B
+🧾 Explicación: El gradiente descendente puede minimizar funciones de coste complejas y encontrar el mejor ajuste del modelo.
+
+🧠 Pregunta 78
+¿Qué significa que un modelo tenga alta varianza?
+
+A. Se ajusta muy poco a los datos
+B. Tiene pocos parámetros
+C. Se ajusta demasiado a los datos de entrenamiento
+D. Tiene múltiples funciones de coste
+
+✅ Correcta: C
+🧾 Explicación: Un modelo con alta varianza se ajusta demasiado al conjunto de entrenamiento y puede fallar con datos nuevos.
+
+🧠 Pregunta 79
+¿Qué se busca en el proceso de ajuste de parámetros?
+
+A. Eliminar variables
+B. Minimizar el tamaño del dataset
+C. Encontrar el valor mínimo de la función de coste
+D. Maximizar la tasa de aprendizaje
+
+✅ Correcta: C
+🧾 Explicación: Ajustar los parámetros significa modificar θ₀, θ₁, … hasta minimizar el error del modelo.
+
+🧠 Pregunta 80
+¿Con qué frecuencia se actualizan los parámetros en el gradiente descendente?
+
+A. Solo al final del entrenamiento
+B. En cada iteración
+C. Cada vez que cambia la función de coste
+D. Cuando el error es cero
+
+✅ Correcta: B
+🧾 Explicación: Los parámetros se actualizan iterativamente en cada paso del gradiente descendente para ir mejorando el modelo.
+

@@ -1,0 +1,182 @@
+🧠 Pregunta 61
+¿Cuál es la forma general de la función hipótesis univariable?
+
+A. 
+𝑦
+^
+=
+𝜃
+0
++
+𝜃
+1
+𝑥
+y
+^
+​
+ =θ 
+0
+​
+ +θ 
+1
+​
+ x
+B. 
+𝑦
+^
+=
+𝜃
+0
+𝑥
+2
++
+𝜃
+1
+𝑥
+y
+^
+​
+ =θ 
+0
+​
+ x 
+2
+ +θ 
+1
+​
+ x
+C. 
+𝑦
+^
+=
+𝑥
++
+𝑦
+y
+^
+​
+ =x+y
+D. 
+𝑦
+^
+=
+𝜃
+0
+𝑥
++
+𝜃
+1
+𝑥
+y
+^
+​
+ =θ 
+0
+​
+ x+θ 
+1
+​
+ x
+
+✅ Correcta: A
+🧾 Explicación: En regresión lineal con una sola variable, la función hipótesis es una línea recta con bias y pendiente.
+
+🧠 Pregunta 62
+¿Qué mide la derivada parcial de la función de coste respecto a un parámetro?
+
+A. La media de los errores
+B. La velocidad de aprendizaje
+C. El cambio del error con respecto a ese parámetro
+D. La cantidad de características
+
+✅ Correcta: C
+🧾 Explicación: La derivada parcial muestra cuánto cambia el error si se ajusta ligeramente un parámetro.
+
+🧠 Pregunta 63
+¿Qué determina la magnitud del ajuste de parámetros en gradiente descendente?
+
+A. La cantidad de características
+B. El número de ejemplos
+C. El valor de la derivada y la tasa de aprendizaje
+D. El tipo de función de coste
+
+✅ Correcta: C
+🧾 Explicación: El tamaño del ajuste depende de la derivada (pendiente) y del learning rate (𝛼).
+
+🧠 Pregunta 64
+¿Qué representa el valor ŷ (y sombrero) en el modelo?
+
+A. Valor real observado
+B. Salida predicha por el modelo
+C. Error cuadrático
+D. Intersección con el eje X
+
+✅ Correcta: B
+🧾 Explicación: ŷ es la predicción que hace el modelo para una entrada X dada.
+
+🧠 Pregunta 65
+¿Cuál de los siguientes pasos es parte del ciclo de entrenamiento?
+
+A. Construcción de un árbol de decisión
+B. Normalización de etiquetas
+C. Inicialización, cálculo del error, optimización
+D. Clasificación de datos
+
+✅ Correcta: C
+🧾 Explicación: El ciclo de entrenamiento en regresión lineal incluye iniciar con parámetros, calcular el error y optimizar iterativamente.
+
+🧠 Pregunta 66
+¿Por qué se usa el cuadrado del error en la función MSE?
+
+A. Para minimizar el tiempo de ejecución
+B. Para igualar valores positivos y negativos
+C. Para resaltar errores grandes y eliminar negativos
+D. Para clasificar los datos
+
+✅ Correcta: C
+🧾 Explicación: Elevar al cuadrado los errores evita que se cancelen entre sí y penaliza los errores grandes.
+
+🧠 Pregunta 67
+¿Qué papel cumple el término θ₀ en una función multivariable?
+
+A. Multiplica todas las características
+B. Se utiliza para eliminar el bias
+C. Es el término independiente (bias)
+D. Solo se usa en clasificación
+
+✅ Correcta: C
+🧾 Explicación: En la hipótesis multivariable, θ₀ es el término bias que se suma al resto de productos.
+
+🧠 Pregunta 68
+¿Qué ocurre si todos los errores individuales son cero?
+
+A. El modelo no sirve
+B. La función de coste es infinita
+C. La función de coste es cero
+D. El modelo necesita más entrenamiento
+
+✅ Correcta: C
+🧾 Explicación: Si las predicciones coinciden con los valores reales, el error cuadrático y la función de coste son cero.
+
+🧠 Pregunta 69
+¿Cuándo se detiene el algoritmo de gradiente descendente?
+
+A. Cuando se alcanza una derivada máxima
+B. Cuando la función de coste aumenta
+C. Cuando los ajustes son insignificantes
+D. Cuando se usan todos los datos
+
+✅ Correcta: C
+🧾 Explicación: El gradiente descendente se detiene cuando las actualizaciones son tan pequeñas que no vale la pena continuar.
+
+🧠 Pregunta 70
+¿Qué se necesita calcular antes de actualizar los parámetros?
+
+A. La precisión
+B. El tamaño del dataset
+C. El gradiente de la función de coste
+D. La matriz de confusión
+
+✅ Correcta: C
+🧾 Explicación: Para actualizar los parámetros, se requiere calcular el gradiente (la derivada) de la función de coste.
+

@@ -1,0 +1,110 @@
+🧠 Pregunta 51
+¿Qué representa el símbolo 𝑚 en la fórmula de la función de coste?
+
+A. El número de características
+B. El valor predicho
+C. El número de ejemplos de entrenamiento
+D. El learning rate
+
+✅ Correcta: C
+🧾 Explicación: 𝑚 representa la cantidad total de ejemplos que hay en el conjunto de datos de entrenamiento.
+
+🧠 Pregunta 52
+¿Por qué es necesario entrenar un modelo de regresión lineal?
+
+A. Para elegir la mejor función de activación
+B. Para encontrar los valores óptimos de los parámetros
+C. Para limpiar los datos
+D. Para clasificar ejemplos en grupos
+
+✅ Correcta: B
+🧾 Explicación: El entrenamiento ajusta los parámetros (θ) para que la función hipótesis se ajuste lo mejor posible a los datos.
+
+🧠 Pregunta 53
+¿Qué se entiende por función hipótesis multivariable?
+
+A. Función con una salida categórica
+B. Función que usa varias etiquetas
+C. Función con múltiples características de entrada
+D. Función con múltiples datasets
+
+✅ Correcta: C
+🧾 Explicación: La función hipótesis multivariable tiene más de una variable de entrada y, por lo tanto, múltiples parámetros.
+
+🧠 Pregunta 54
+¿Qué indica una pendiente (θ₁) igual a cero?
+
+A. Que hay un error en los datos
+B. Que la salida no varía con la entrada
+C. Que el modelo está sobreajustado
+D. Que el bias es negativo
+
+✅ Correcta: B
+🧾 Explicación: Una pendiente cero implica que el valor de salida no cambia al modificar la entrada; es una recta horizontal.
+
+🧠 Pregunta 55
+¿Cuál es el objetivo principal del algoritmo de gradiente descendente?
+
+A. Aumentar el error del modelo
+B. Encontrar el máximo de la función de coste
+C. Minimizar la función de coste ajustando parámetros
+D. Evitar el uso de funciones derivadas
+
+✅ Correcta: C
+🧾 Explicación: El gradiente descendente ajusta los parámetros del modelo para que el error (función de coste) sea el mínimo posible.
+
+🧠 Pregunta 56
+¿Qué se requiere para calcular la función de coste?
+
+A. Solo los valores de entrada
+B. Solo las predicciones
+C. Las predicciones y los valores reales
+D. La tasa de aprendizaje
+
+✅ Correcta: C
+🧾 Explicación: La función de coste compara las predicciones del modelo con los valores reales del conjunto de datos.
+
+🧠 Pregunta 57
+¿Qué hace la derivada en el algoritmo de gradiente descendente?
+
+A. Indica la posición exacta del mínimo
+B. Sirve para clasificar ejemplos
+C. Determina la dirección del ajuste de los parámetros
+D. Estima la regularización
+
+✅ Correcta: C
+🧾 Explicación: La derivada de la función de coste indica cómo ajustar los parámetros para reducir el error.
+
+🧠 Pregunta 58
+¿Qué significa que una función tenga una pendiente negativa?
+
+A. La salida disminuye al aumentar la entrada
+B. El error cuadrático es positivo
+C. La salida aumenta con la entrada
+D. El modelo es no supervisado
+
+✅ Correcta: A
+🧾 Explicación: Una pendiente negativa implica que al aumentar X, la predicción Y disminuye.
+
+🧠 Pregunta 59
+¿Qué representa el símbolo 𝛼 (alpha) en el gradiente descendente?
+
+A. Número de variables
+B. Tasa de aprendizaje
+C. Número de muestras
+D. Valor del bias
+
+✅ Correcta: B
+🧾 Explicación: 𝛼 es el learning rate, que controla qué tan grandes son los pasos que da el algoritmo al ajustar los parámetros.
+
+🧠 Pregunta 60
+¿Qué sucede si el learning rate es muy alto?
+
+A. El modelo converge más rápido y de forma precisa
+B. El modelo puede saltarse el mínimo global
+C. El modelo se entrena sin errores
+D. El modelo reduce automáticamente los parámetros
+
+✅ Correcta: B
+🧾 Explicación: Un valor muy alto puede hacer que el modelo no se estabilice y se salte el punto óptimo.
+

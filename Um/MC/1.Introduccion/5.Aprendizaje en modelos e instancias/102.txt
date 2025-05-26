@@ -1,0 +1,120 @@
+🧠 Pregunta 101
+
+¿Cuál de estos es un ejemplo de algoritmo basado en modelos?
+
+A. KNN
+B. Regresión logística
+C. Clustering jerárquico
+D. k-means
+
+✅ Correcta: B
+🧾 Explicación: La regresión logística entrena un modelo paramétrico que representa la probabilidad de cada clase.
+
+🧠 Pregunta 102
+
+En un filtro de spam basado en instancias, la predicción se basa en:
+
+A. Una función matemática fija
+B. Comparar el correo nuevo con correos etiquetados previos
+C. Reglas establecidas manualmente
+D. Modelos de redes neuronales
+
+✅ Correcta: B
+🧾 Explicación: Se busca qué ejemplos de spam existentes son más similares al correo entrante.
+
+🧠 Pregunta 103
+
+En un filtro de spam basado en modelos, la predicción se basa en:
+
+A. Comparar con correos específicos
+B. Aplicar la frontera de decisión del modelo entrenado
+C. Memorización de cada correo
+D. Sin entrenamiento previo
+
+✅ Correcta: B
+🧾 Explicación: El modelo define una función que separa la región de spam de la de no spam.
+
+🧠 Pregunta 104
+
+¿Cómo reaccionan los algoritmos basados en instancias ante datos muy distintos de los ejemplos previos?
+
+A. Ajustan automáticamente su modelo general
+B. Buscan ejemplos similares y pueden fallar si no hay cercanos
+C. Reentrenan todo el modelo
+D. Ignoran los datos nuevos
+
+✅ Correcta: B
+🧾 Explicación: Si no existe un vecino suficientemente similar, la predicción puede ser errónea o inestable.
+
+🧠 Pregunta 105
+
+¿Cómo reaccionan los algoritmos basados en modelos ante datos nuevos?
+
+A. Comparan con ejemplos previos
+B. Aplican la función aprendida para predecir la salida
+C. Memorizan el dato sin procesarlo
+D. Crean nuevos clústeres
+
+✅ Correcta: B
+🧾 Explicación: Usan la función general para calcular la etiqueta sin necesidad de ejemplos específicos.
+
+🧠 Pregunta 106
+
+¿Qué requisito de memoria tienen los algoritmos basados en instancias comparado con los basados en modelos?
+
+A. Requieren menos memoria al procesar menos datos
+B. Necesitan almacenar el conjunto de entrenamiento completo
+C. Solo almacenan parámetros del modelo
+D. No usan memoria
+
+✅ Correcta: B
+🧾 Explicación: Instancias deben guardar todos los ejemplos para compararlos en tiempo real.
+
+🧠 Pregunta 107
+
+¿Qué requisito de memoria tienen los algoritmos basados en modelos comparado con instancias?
+
+A. Guardar solo los parámetros del modelo
+B. Almacenar cada punto de datos
+C. Memoria ilimitada
+D. Dependen de la cantidad de vecinos
+
+✅ Correcta: A
+🧾 Explicación: Solo se guarda la función matemática entrenada, no cada caso individual.
+
+🧠 Pregunta 108
+
+¿Cuál de estas afirmaciones sobre adaptación es correcta?
+
+A. Los algoritmos basados en instancias se adaptan al añadir ejemplos nuevos sin reentrenar
+B. Los algoritmos basados en modelos se adaptan sin reentrenar
+C. Ambos requieren reentrenamiento completo
+D. Ninguno puede adaptarse
+
+✅ Correcta: A
+🧾 Explicación: Instancias amplían su base con cada nuevo ejemplo; modelos deben reentrenarse.
+
+🧠 Pregunta 109
+
+¿Qué tipo de algoritmo es más adecuado si los datos cambian frecuentemente y se necesitan predicciones inmediatas?
+
+A. Basados en modelos
+B. Basados en instancias
+C. Regresión lineal
+D. Redes neuronales profundas
+
+✅ Correcta: B
+🧾 Explicación: Instancias permiten incorporar nuevos ejemplos sin detener el sistema para reentrenamientos.
+
+🧠 Pregunta 110
+
+¿Qué tipo de algoritmo es más escalable cuando se dispone de enormes volúmenes de datos?
+
+A. Basados en instancias
+B. Basados en modelos
+C. Ambos igual
+D. Ninguno
+
+✅ Correcta: B
+🧾 Explicación: Modelos solo almacenan parámetros, mientras que instancias requieren memoria proporcional al dataset.
+

@@ -1,0 +1,109 @@
+🧠 Pregunta 41
+¿Qué podría ocurrir si el learning rate es demasiado bajo?
+
+A. El modelo converge muy rápido
+B. El entrenamiento se vuelve muy lento
+C. El modelo se sobreajusta
+D. El error cuadrático aumenta
+
+✅ Correcta: B
+🧾 Explicación: Un learning rate bajo hace que los pasos sean pequeños, lo que puede ralentizar la convergencia.
+
+🧠 Pregunta 42
+¿Cómo afecta el gradiente (pendiente) al ajuste de los parámetros?
+
+A. Un gradiente grande produce cambios pequeños
+B. Un gradiente pequeño produce cambios grandes
+C. Un gradiente grande genera ajustes grandes y rápidos
+D. No tiene efecto en la actualización
+
+✅ Correcta: C
+🧾 Explicación: A mayor pendiente, mayor es el ajuste del parámetro; a menor pendiente, los cambios son más pequeños.
+
+🧠 Pregunta 43
+¿Qué busca el modelo de regresión lineal al ajustar los parámetros θ₀ y θ₁?
+
+A. Maximizar el tamaño del conjunto de datos
+B. Minimizar la diferencia entre predicciones y valores reales
+C. Obtener más características
+D. Reducir la tasa de aprendizaje
+
+✅ Correcta: B
+🧾 Explicación: El objetivo es ajustar los parámetros para que las predicciones se acerquen lo más posible a los valores reales.
+
+🧠 Pregunta 44
+En la función hipótesis multivariable, ¿qué representa cada θᵢ?
+
+A. Un valor de salida
+B. Un parámetro asociado a cada característica
+C. Un término de error
+D. El valor mínimo de la función de coste
+
+✅ Correcta: B
+🧾 Explicación: Cada θᵢ multiplica una característica específica en la función hipótesis.
+
+🧠 Pregunta 45
+¿En qué consiste el ciclo de entrenamiento de la regresión lineal?
+
+A. Inicialización, cálculo del error, optimización, iteración
+B. Optimización, validación cruzada, clusterización
+C. Selección de variables, ajuste de hiperparámetros, regularización
+D. Entrenamiento, evaluación, preprocesamiento de datos
+
+✅ Correcta: A
+🧾 Explicación: El ciclo incluye inicialización, cálculo de función de coste, optimización y repetición hasta convergencia.
+
+🧠 Pregunta 46
+¿Por qué es importante la función de coste en el entrenamiento?
+
+A. Permite dividir los datos
+B. Sirve como guía para mejorar los parámetros
+C. Elimina variables irrelevantes
+D. Reduce la complejidad del modelo
+
+✅ Correcta: B
+🧾 Explicación: La función de coste indica qué tanto se deben ajustar los parámetros para mejorar el modelo.
+
+🧠 Pregunta 47
+¿Cuándo se detiene normalmente el entrenamiento de un modelo de regresión lineal?
+
+A. Cuando se acaba la memoria RAM
+B. Cuando la función de coste deja de disminuir significativamente
+C. Cuando todos los datos son iguales
+D. Cuando el modelo alcanza un valor negativo
+
+✅ Correcta: B
+🧾 Explicación: El entrenamiento se detiene cuando el error deja de bajar, señalando que se han encontrado los mejores parámetros posibles.
+
+🧠 Pregunta 48
+¿Para qué sirve el parámetro bias (θ₀) en una función hipótesis?
+
+A. Para aumentar la pendiente
+B. Para ajustar la recta verticalmente
+C. Para normalizar los datos
+D. Para dividir el conjunto de datos
+
+✅ Correcta: B
+🧾 Explicación: El bias permite desplazar la línea hacia arriba o abajo, independientemente del valor de entrada.
+
+🧠 Pregunta 49
+¿Cómo ayuda la función de coste a encontrar el mejor modelo?
+
+A. Premia los errores grandes
+B. Permite comparar diferentes configuraciones de parámetros
+C. Reduce el tamaño de los datos
+D. Aumenta la tasa de aprendizaje
+
+✅ Correcta: B
+🧾 Explicación: La función de coste evalúa la calidad de las predicciones, ayudando a identificar la mejor combinación de parámetros.
+
+🧠 Pregunta 50
+¿Qué ocurre si la función de coste es plana (derivada cero) en todos los puntos?
+
+A. El modelo no se puede entrenar
+B. Cualquier parámetro es una solución óptima
+C. El modelo necesita más datos
+D. El modelo siempre predice lo mismo
+
+✅ Correcta: B
+🧾 Explicación: Si la función de coste es plana, cualquier valor de los parámetros será óptimo, ya que el error no cambia.

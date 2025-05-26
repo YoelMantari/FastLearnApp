@@ -1,0 +1,119 @@
+🧠 Pregunta 31
+
+¿Qué define al aprendizaje no supervisado?
+
+A. Utiliza datos etiquetados con salidas conocidas
+B. Analiza datos sin etiquetas buscando patrones
+C. Se basa en recompensas y castigos
+D. Predice valores numéricos continuos
+
+✅ Correcta: B
+🧾 Explicación: El aprendizaje no supervisado trabaja con datos sin etiquetas para descubrir agrupaciones o estructuras internas.
+
+🧠 Pregunta 32
+
+¿Cuál es el objetivo principal del aprendizaje no supervisado?
+
+A. Predecir resultados futuros
+B. Buscar patrones y estructura en los datos
+C. Minimizar una función de error supervisada
+D. Clasificar datos en categorías predefinidas
+
+✅ Correcta: B
+🧾 Explicación: Se centra en describir cómo se organizan los datos y revelar relaciones ocultas.
+
+🧠 Pregunta 33
+
+En el ejemplo de correos electrónicos, ¿qué se hace antes de aplicar el algoritmo no supervisado?
+
+A. Etiquetar manualmente cada correo
+B. Recolectar características relevantes de cada correo
+C. Predecir directamente spam/no spam
+D. Eliminar correos duplicados
+
+✅ Correcta: B
+🧾 Explicación: Se extraen atributos (palabras, etiquetas HTML, etc.) para que el algoritmo pueda analizar similitudes.
+
+🧠 Pregunta 34
+
+Después de agrupar los correos, ¿qué resultado típico se obtiene?
+
+A. Predicciones exactas de spam
+B. Grupos que pueden interpretarse como categorías potenciales
+C. Eliminación automática de correos irrelevantes
+D. Réplicas idénticas de los datos originales
+
+✅ Correcta: B
+🧾 Explicación: Los clústeres revelan segmentos que el analista interpreta (por ejemplo, spam frente a legítimos).
+
+🧠 Pregunta 35
+
+¿Por qué el aprendizaje no supervisado es valioso en grandes conjuntos de datos sin clasificar?
+
+A. Requiere muy poca memoria
+B. Descubre tendencias y patrones sin etiquetar manualmente
+C. Ofrece siempre mayor precisión que supervisado
+D. Ignora por completo la estructura de los datos
+
+✅ Correcta: B
+🧾 Explicación: Permite explorar voluminosos datos y encontrar organización interna sin el coste de etiquetado.
+
+🧠 Pregunta 36
+
+¿Qué afirmación describe mejor los datos sin etiquetas?
+
+A. Conocemos la salida deseada de cada ejemplo
+B. Solo se usan en aprendizaje supervisado
+C. Desconocemos la salida final de cada dato
+D. Son inútiles para análisis estadístico
+
+✅ Correcta: C
+🧾 Explicación: No existe una respuesta conocida; solo se tienen las características de cada instancia.
+
+🧠 Pregunta 37
+
+Comparado con el supervisado, el aprendizaje no supervisado:
+
+A. Construye un modelo predictivo para nuevas instancias
+B. Requiere etiquetas de salida
+C. Describe la estructura interna de los datos
+D. Depende de recompensas externas
+
+✅ Correcta: C
+🧾 Explicación: Su meta es caracterizar la distribución y agrupación de los datos, no predecir salidas.
+
+🧠 Pregunta 38
+
+¿Cuál de los siguientes NO es un objetivo típico del aprendizaje no supervisado?
+
+A. Segmentar clientes
+B. Detectar agrupaciones naturales
+C. Predecir el precio de una acción
+D. Reducir dimensionalidad para visualización
+
+✅ Correcta: C
+🧾 Explicación: Predecir precios es una tarea de regresión supervisada.
+
+🧠 Pregunta 39
+
+Un algoritmo de clustering como k-means se clasifica dentro de:
+
+A. Aprendizaje supervisado
+B. Aprendizaje por refuerzo
+C. Aprendizaje no supervisado
+D. Aprendizaje semi supervisado
+
+✅ Correcta: C
+🧾 Explicación: k-means agrupa datos sin necesidad de etiquetas.
+
+🧠 Pregunta 40
+
+Entender la estructura de los datos mediante aprendizaje no supervisado permite:
+
+A. Asignar etiquetas perfectas automáticamente
+B. Explorar y tomar decisiones basadas en patrones descubiertos
+C. Reemplazar completamente al aprendizaje supervisado
+D. Eliminar pasos de preprocesamiento
+
+✅ Correcta: B
+🧾 Explicación: Los patrones revelados orientan decisiones de negocio o pasos posteriores de modelado.

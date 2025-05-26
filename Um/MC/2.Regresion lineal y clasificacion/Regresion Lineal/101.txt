@@ -1,0 +1,110 @@
+🧠 Pregunta 1
+¿Qué tipo de valores predice un modelo de regresión lineal?
+
+A. Valores categóricos
+B. Valores booleanos
+C. Valores continuos
+D. Identificadores únicos
+
+✅ Correcta: C
+🧾 Explicación: La regresión lineal predice valores continuos, es decir, resultados numéricos que pueden tomar un amplio rango de valores, como el costo de un incidente.
+
+🧠 Pregunta 2
+¿Qué representa la función hipótesis en la regresión lineal?
+
+A. Una tabla de datos ordenada
+B. Una función cuadrática ajustada a los datos
+C. Una línea recta que modela la tendencia de los datos
+D. Una red neuronal simple
+
+✅ Correcta: C
+🧾 Explicación: En regresión lineal, la función hipótesis es una línea recta que intenta ajustarse a la tendencia de los datos para hacer predicciones.
+
+🧠 Pregunta 3
+¿Cuál es el objetivo principal durante el entrenamiento del modelo de regresión lineal?
+
+A. Aumentar la complejidad de la función
+B. Minimizar la función de coste
+C. Generar variables aleatorias
+D. Dividir el conjunto de datos en clústeres
+
+✅ Correcta: B
+🧾 Explicación: Durante el entrenamiento, se ajustan los parámetros para minimizar la función de coste, reduciendo así el error entre las predicciones y los valores reales.
+
+🧠 Pregunta 4
+¿Qué simboliza la letra Y en el contexto de la regresión lineal?
+
+A. Una constante aleatoria
+B. El conjunto de características de entrada
+C. La predicción del modelo
+D. La variable de salida o valor a predecir
+
+✅ Correcta: D
+🧾 Explicación: En machine learning, Y representa el valor real que se desea predecir, también conocido como la variable dependiente.
+
+🧠 Pregunta 5
+¿Qué mide la función de coste en la regresión lineal?
+
+A. El número de características del modelo
+B. El tiempo de ejecución del algoritmo
+C. La diferencia entre predicciones y valores reales
+D. El tamaño del conjunto de datos
+
+✅ Correcta: C
+🧾 Explicación: La función de coste evalúa qué tan lejos están las predicciones del modelo respecto a los valores reales de los datos de entrenamiento.
+
+🧠 Pregunta 6
+¿Qué es el Gradiente Descendente?
+
+A. Un algoritmo de clasificación
+B. Un método para dividir los datos
+C. Un algoritmo de optimización para minimizar errores
+D. Un tipo de regresión no lineal
+
+✅ Correcta: C
+🧾 Explicación: El gradiente descendente es una técnica de optimización que ajusta los parámetros del modelo para minimizar la función de coste.
+
+🧠 Pregunta 7
+¿Qué controla el parámetro learning rate (α) en el gradiente descendente?
+
+A. La cantidad de datos a utilizar
+B. El número de características
+C. El tamaño de los pasos de actualización de los parámetros
+D. El número de funciones hipótesis
+
+✅ Correcta: C
+🧾 Explicación: El learning rate determina el tamaño de los pasos que se dan al ajustar los parámetros del modelo; valores grandes pueden hacer que el algoritmo se pase del mínimo, y valores pequeños lo hacen más lento.
+
+🧠 Pregunta 8
+¿Qué caracteriza a una función convexa en el contexto del gradiente descendente?
+
+A. Tiene múltiples mínimos locales
+B. Su forma es una línea recta
+C. Tiene un único mínimo global
+D. No puede ser optimizada
+
+✅ Correcta: C
+🧾 Explicación: Una función convexa tiene una forma de "U", lo que garantiza que el gradiente descendente encontrará el único mínimo global.
+
+🧠 Pregunta 9
+¿Qué sucede cuando la derivada de la función de coste es cero durante el entrenamiento?
+
+A. El error se incrementa rápidamente
+B. El algoritmo aún no ha comenzado
+C. Se ha alcanzado un mínimo de la función
+D. Se detiene la ejecución del modelo
+
+✅ Correcta: C
+🧾 Explicación: Cuando la derivada es cero, significa que la pendiente es plana, lo que indica que se ha alcanzado el punto mínimo de la función de coste.
+
+🧠 Pregunta 10
+¿Qué componente se ajusta en cada iteración del gradiente descendente?
+
+A. La función de coste
+B. La cantidad de datos
+C. Los parámetros del modelo (θ₀, θ₁, ...)
+D. La estructura del conjunto de datos
+
+✅ Correcta: C
+🧾 Explicación: En cada iteración, el gradiente descendente actualiza los parámetros del modelo, como θ₀ y θ₁, para mejorar la precisión de las predicciones.
+
