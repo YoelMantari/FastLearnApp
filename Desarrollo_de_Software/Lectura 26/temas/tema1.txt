@@ -1,0 +1,110 @@
+🧠 Pregunta 1
+¿Qué incluye el concepto de "infraestructura" en un entorno moderno de aplicaciones?
+
+A. Solo los servidores físicos
+B. Únicamente el almacenamiento de datos
+C. Todos los componentes físicos o virtuales que soportan una aplicación
+D. Solo redes privadas de una nube
+
+✅ Correcta: C
+🧾 Explicación: La infraestructura abarca cómputo, red, almacenamiento, seguridad y servicios adicionales, tanto físicos como virtuales.
+
+🧠 Pregunta 2
+¿Cuál es el rol de la red en la infraestructura de una aplicación?
+
+A. Ejecutar contenedores en la nube
+B. Controlar el tráfico y aislar servidores
+C. Almacenar copias de seguridad
+D. Crear bases de datos
+
+✅ Correcta: B
+🧾 Explicación: La red interconecta servidores, gestiona tráfico y garantiza aislamiento mediante componentes como VPC, subredes y balanceadores.
+
+🧠 Pregunta 3
+¿Qué representa un servidor EC2 ejecutando un contenedor Docker?
+
+A. Un servicio de red
+B. Un sistema de almacenamiento
+C. Un recurso de cómputo
+D. Un componente de seguridad
+
+✅ Correcta: C
+🧾 Explicación: EC2 es un servidor virtual que proporciona capacidad de cómputo, donde puede ejecutarse un contenedor con la aplicación.
+
+🧠 Pregunta 4
+¿Cuál es una función principal de un Load Balancer en la nube?
+
+A. Almacenar archivos temporales
+B. Ejecutar código directamente
+C. Distribuir el tráfico hacia instancias internas
+D. Gestionar políticas de IAM
+
+✅ Correcta: C
+🧾 Explicación: Un balanceador de carga como ALB dirige el tráfico HTTP/HTTPS entrante a las instancias en subredes privadas.
+
+🧠 Pregunta 5
+¿Qué servicio de AWS se utiliza para almacenamiento de objetos como imágenes o backups?
+
+A. EC2
+B. SQS
+C. S3
+D. IAM
+
+✅ Correcta: C
+🧾 Explicación: S3 es el servicio de almacenamiento de objetos de AWS, útil para archivos persistentes como imágenes o respaldos.
+
+🧠 Pregunta 6
+¿Cuál es la función de los grupos de seguridad (Security Groups) en AWS?
+
+A. Asignar IPs públicas
+B. Ejecutar tareas automatizadas
+C. Controlar el acceso a instancias como un firewall
+D. Crear volúmenes de almacenamiento
+
+✅ Correcta: C
+🧾 Explicación: Los grupos de seguridad actúan como firewalls, permitiendo o bloqueando tráfico según puertos y direcciones IP.
+
+🧠 Pregunta 7
+¿Qué tipo de política permite definir qué acciones puede realizar un usuario sobre recursos en AWS?
+
+A. Security Group
+B. IAM
+C. EC2
+D. SQS
+
+✅ Correcta: B
+🧾 Explicación: Las políticas de IAM determinan los permisos de usuarios o roles sobre recursos de AWS (lectura, escritura, borrado, etc.).
+
+🧠 Pregunta 8
+¿Qué ventaja ofrecen los servicios gestionados como RDS o DynamoDB?
+
+A. Permiten control directo del hardware
+B. Eliminan la necesidad de configurar discos y replicación
+C. Obligan al usuario a instalar manualmente bases de datos
+D. Requieren backups manuales
+
+✅ Correcta: B
+🧾 Explicación: Al usar servicios gestionados, el proveedor se encarga de detalles como replicación, backups y disponibilidad.
+
+🧠 Pregunta 9
+¿Qué servicio se usa para gestionar nombres de dominio en AWS?
+
+A. EC2
+B. CloudFront
+C. Route 53
+D. Lambda
+
+✅ Correcta: C
+🧾 Explicación: Route 53 es el servicio de DNS en AWS que permite asociar dominios con recursos como Load Balancers o instancias.
+
+🧠 Pregunta 10
+¿Por qué se considera problemático configurar infraestructura manualmente?
+
+A. Requiere demasiados permisos de red
+B. Impide usar servicios gestionados
+C. Es propenso a errores humanos y falta de trazabilidad
+D. Limita el uso de instancias EC2
+
+✅ Correcta: C
+🧾 Explicación: Configurar a mano puede generar errores, inconsistencias entre entornos, lentitud y falta de historial de cambios.
+

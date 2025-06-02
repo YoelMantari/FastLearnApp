@@ -1,0 +1,109 @@
+🧠 Pregunta 51
+¿Por qué es importante versionar los archivos .tf, .yml o .json en un repositorio?
+
+A. Para permitir que se editen directamente en producción
+B. Para aplicar los cambios manualmente cada vez
+C. Para garantizar trazabilidad y facilitar la reproducibilidad
+D. Para evitar que los cambios se sincronicen
+
+✅ Correcta: C
+🧾 Explicación: Versionar los archivos de configuración permite rastrear los cambios y asegurar que cualquier colaborador pueda reproducir el mismo entorno con exactitud.
+
+🧠 Pregunta 52
+En el principio de reproducibilidad, ¿qué asegura que dos colaboradores vean los mismos resultados al ejecutar Terraform?
+
+A. Compartir el archivo terraform.tfstate
+B. Ejecutar comandos desde la consola de AWS
+C. Usar scripts en Bash sin variables
+D. Clonar el mismo repositorio versionado y aplicar el mismo código
+
+✅ Correcta: D
+🧾 Explicación: La reproducibilidad depende de usar el mismo código versionado y ejecutar los mismos comandos, garantizando entornos idénticos.
+
+🧠 Pregunta 53
+¿Cuál es un ejemplo claro de idempotencia en Ansible?
+
+A. Ejecutar un script que crea múltiples veces el mismo archivo
+B. Usar comandos SSH que reinician servicios sin validación
+C. Aplicar un playbook que instala Nginx solo si no está instalado
+D. Editar manualmente el sistema operativo antes del playbook
+
+✅ Correcta: C
+🧾 Explicación: Si Nginx ya está instalado y en ejecución, Ansible marca las tareas como “ok” sin volver a ejecutarlas, lo que demuestra idempotencia.
+
+🧠 Pregunta 54
+¿Qué se busca evitar con la idempotencia en IaC?
+
+A. El uso de variables
+B. La reutilización de módulos
+C. Efectos secundarios por aplicar múltiples veces el mismo código
+D. El versionamiento en Git
+
+✅ Correcta: C
+🧾 Explicación: La idempotencia evita que se generen cambios innecesarios o colaterales al aplicar el código varias veces.
+
+🧠 Pregunta 55
+¿Cuál es la estructura recomendada para aplicar el principio de composabilidad en Terraform?
+
+A. Un único archivo main.tf con todos los recursos
+B. Scripts separados por cada proveedor
+C. Un directorio con módulos organizados por componentes
+D. Archivos planos sin uso de variables
+
+✅ Correcta: C
+🧾 Explicación: Composabilidad en Terraform implica separar la infraestructura en módulos reutilizables, como modules/network, modules/compute, etc.
+
+🧠 Pregunta 56
+¿Qué permite lograr la reutilización de módulos en diferentes entornos de Terraform?
+
+A. Definir nombres fijos dentro del módulo
+B. Eliminar todas las variables del módulo
+C. Pasar variables de entrada personalizadas al invocar los módulos
+D. Codificar la lógica directamente en Bash
+
+✅ Correcta: C
+🧾 Explicación: Los módulos en Terraform son reutilizables porque permiten recibir variables de entrada que adaptan su comportamiento según el entorno.
+
+🧠 Pregunta 57
+¿Por qué el uso de variables mejora la evolvibilidad en IaC?
+
+A. Permite instalar paquetes sin internet
+B. Facilita cambiar comportamientos sin modificar el código fuente
+C. Hace que los scripts sean más largos y complejos
+D. Requiere definir entornos fijos desde el inicio
+
+✅ Correcta: B
+🧾 Explicación: Las variables permiten modificar configuraciones (como nombre de red o tipo de servidor) sin tener que reescribir el código.
+
+🧠 Pregunta 58
+¿Cuál es una forma recomendada de mantener entornos diferentes (producción, staging, etc.) sin duplicar código?
+
+A. Crear archivos diferentes de main.tf para cada entorno
+B. Escribir un script que borre y cree todo desde cero
+C. Usar archivos .tfvars específicos para cada entorno
+D. Ejecutar manualmente los cambios desde consola
+
+✅ Correcta: C
+🧾 Explicación: .tfvars permite asignar diferentes valores de variables para cada entorno, usando el mismo código fuente base.
+
+🧠 Pregunta 59
+¿Qué se debe hacer al introducir un cambio incompatible en un módulo reutilizable de Terraform?
+
+A. Eliminar las variables afectadas
+B. Cambiar todo el repositorio
+C. Aumentar el número de versión mayor y documentar el cambio
+D. Ocultar el error con un parche
+
+✅ Correcta: C
+🧾 Explicación: Es buena práctica incrementar la versión mayor y documentar los cambios incompatibles en un archivo CHANGELOG.md o de migración.
+
+🧠 Pregunta 60
+¿Qué ventaja ofrece la combinación de los principios de IaC (reproducibilidad, idempotencia, composabilidad, evolvibilidad)?
+
+A. Reduce la necesidad de pruebas automatizadas
+B. Elimina la necesidad de usar herramientas como Terraform
+C. Permite una infraestructura flexible, modular y confiable
+D. Obliga a los desarrolladores a trabajar siempre en la consola
+
+✅ Correcta: C
+🧾 Explicación: Estos principios aseguran que la infraestructura sea reutilizable, fácil de mantener, extensible y consistente entre entornos.

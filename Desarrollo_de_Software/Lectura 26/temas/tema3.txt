@@ -1,0 +1,109 @@
+🧠 Pregunta 41
+¿Cuál es el objetivo principal del principio de reproducibilidad en IaC?
+
+A. Permitir ejecutar scripts bash en múltiples servidores
+B. Asegurar que diferentes entornos generen resultados distintos
+C. Garantizar que cualquier persona pueda recrear el mismo entorno desde el código
+D. Obligar a configurar manualmente los recursos
+
+✅ Correcta: C
+🧾 Explicación: La reproducibilidad asegura que, al clonar el repositorio y ejecutar los mismos comandos, el entorno creado sea idéntico en cualquier máquina.
+
+🧠 Pregunta 42
+¿Qué archivo no se versiona típicamente en proyectos con Terraform, pero es esencial para reproducir el estado?
+
+A. main.tf.json
+B. network.tf.json
+C. terraform.tfvars
+D. terraform.tfstate
+
+✅ Correcta: D
+🧾 Explicación: terraform.tfstate guarda el estado actual de la infraestructura, pero no se versiona; Terraform lo maneja internamente o se comparte por backends remotos.
+
+🧠 Pregunta 43
+¿Qué mensaje muestra Terraform si no hay cambios que aplicar en un entorno ya creado?
+
+A. Recreating infrastructure...
+B. No changes. Infrastructure is up-to-date.
+C. Changes detected. Confirm apply.
+D. Invalid plan.
+
+✅ Correcta: B
+🧾 Explicación: Cuando el estado real coincide con el deseado, Terraform no realiza acciones y muestra que no hay cambios por aplicar.
+
+🧠 Pregunta 44
+¿Cuál es el significado del principio de idempotencia en el contexto de IaC?
+
+A. Ejecutar tareas paralelas para mejorar rendimiento
+B. Aplicar un script una vez y evitar volver a usarlo
+C. Repetir el mismo código sin cambiar el resultado final
+D. Aplicar siempre cambios sin validación previa
+
+✅ Correcta: C
+🧾 Explicación: La idempotencia permite ejecutar múltiples veces un código sin alterar el estado si ya está como se desea.
+
+🧠 Pregunta 45
+¿Qué beneficio aporta la idempotencia frente a cambios manuales en la infraestructura?
+
+A. Permite añadir más recursos sin revisión
+B. Elimina la necesidad de configuración previa
+C. Detecta y corrige automáticamente desviaciones del estado deseado
+D. Evita tener que usar Terraform
+
+✅ Correcta: C
+🧾 Explicación: Si alguien modifica un recurso manualmente, IaC puede detectar esa desviación y corregirla según el estado declarado en el código.
+
+🧠 Pregunta 46
+¿Qué ventaja ofrece la composabilidad en Infrastructure as Code?
+
+A. Permite ejecutar los módulos en orden inverso
+B. Facilita dividir la infraestructura en módulos reutilizables
+C. Automatiza el borrado de recursos obsoletos
+D. Aumenta el tamaño de los archivos de configuración
+
+✅ Correcta: B
+🧾 Explicación: La composabilidad promueve dividir la infraestructura en bloques o módulos que pueden ser reutilizados y mantenidos de forma independiente.
+
+🧠 Pregunta 47
+¿Cuál es el propósito de un archivo terraform.tfvars en un entorno IaC?
+
+A. Guardar el estado actual de los recursos
+B. Contener credenciales de acceso a la nube
+C. Proporcionar valores personalizados a variables sin modificar el código fuente
+D. Ejecutar scripts Bash
+
+✅ Correcta: C
+🧾 Explicación: terraform.tfvars permite definir valores para las variables de configuración, facilitando la creación de múltiples entornos con un mismo código base.
+
+🧠 Pregunta 48
+¿Qué principio de IaC permite actualizar configuraciones sin modificar directamente los archivos fuente?
+
+A. Evolvibilidad
+B. Imperatividad
+C. Desacoplamiento
+D. Refactorización
+
+✅ Correcta: A
+🧾 Explicación: La evolvibilidad permite adaptar la infraestructura mediante variables y archivos .tfvars, evitando cambiar el código fuente directamente.
+
+🧠 Pregunta 49
+¿Cuál es una práctica recomendada cuando se introduce un cambio incompatible (“breaking change”) en un módulo de IaC?
+
+A. Eliminar el módulo afectado
+B. No documentarlo para evitar confusión
+C. Aumentar la versión mayor y registrar el cambio en un archivo CHANGELOG.md
+D. Reescribir todo el repositorio
+
+✅ Correcta: C
+🧾 Explicación: Cambios incompatibles deben ir acompañados de una nueva versión mayor y documentación clara para que los usuarios del módulo puedan adaptarse.
+
+🧠 Pregunta 50
+¿Cuál es el orden correcto en una orquestación modular con Terraform?
+
+A. Crear los servidores primero y luego la red
+B. Crear módulos por separado sin importar el orden
+C. Crear primero la red, luego pasar su salida como entrada al módulo de servidores
+D. No es necesario definir dependencias entre módulos
+
+✅ Correcta: C
+🧾 Explicación: En Terraform, las dependencias entre módulos se resuelven al pasar outputs de un módulo como variables de entrada a otro, asegurando el orden correcto de ejecución.

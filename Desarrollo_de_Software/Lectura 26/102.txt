@@ -1,0 +1,112 @@
+.
+
+🧠 Pregunta 11
+En Terraform, ¿qué muestra terraform plan antes de aplicar cambios?
+
+A. Un diagrama gráfico de la infraestructura
+B. Un reporte declarativo que indica qué recursos se crearán, modificarán o destruirán
+C. Un log de eventos de la nube en tiempo real
+D. Nada; solo terraform apply hace visible el resultado
+
+✅ Correcta: B
+🧾 Explicación: terraform plan genera un plan que muestra línea a línea los cambios propuestos (por ejemplo, “+ create”, “~ update”, “– destroy”). Este plan sirve como contrato para revisar y validar antes de ejecutar terraform apply.
+
+🧠 Pregunta 12
+¿Cuál es la función de un módulo en Terraform?
+
+A. Ejecutar scripts Bash posterior al deploy
+B. Encapsular configuraciones específicas (p. ej., red o servidor) que se pueden invocar con source y parámetros
+C. Generar el archivo terraform.tfstate automáticamente
+D. Crear contenedores Docker
+
+✅ Correcta: B
+🧾 Explicación: Un módulo agrupa recursos relacionados (como la creación de una VPC o servidor) y expone variables y outputs. Otros módulos o el main.tf lo invocan pasando parámetros, promoviendo la reutilización y claridad.
+
+🧠 Pregunta 13
+¿Qué herramienta se usaría típicamente para gestionar la configuración de software dentro de los servidores tras aprovisionarlos?
+
+A. Terraform
+B. Ansible
+C. Docker
+D. Packer
+
+✅ Correcta: B
+🧾 Explicación: Ansible (u otras herramientas como Chef, SaltStack) se emplea para Configuration Management: instalar paquetes, copiar archivos, habilitar servicios dentro de servidores ya aprovisionados, garantizando estado deseado y idempotencia.
+
+🧠 Pregunta 14
+¿Qué papel desempeña Docker en un flujo DevOps con IaC?
+
+A. Sustituir a Terraform como orquestador de recursos en la nube
+B. Proporcionar contenedores inmutables que aseguran portabilidad y versiones exactas de herramientas (Terraform, Python, etc.)
+C. Desplegar bases de datos relacionales sin scripts
+D. Crear archivos .tfvars dinámicos
+
+✅ Correcta: B
+🧾 Explicación: Docker permite empaquetar versiones concretas de Terraform, Python y scripts en una imagen. Con ella, cualquier colaborador ejecuta docker run y obtiene un entorno idéntico independientemente del SO local, asegurando portabilidad.
+
+🧠 Pregunta 15
+¿Cuál es el beneficio de usar Packer en lugar de parchear servidores en caliente?
+
+A. Packer instala Terraform y Ansible simultáneamente
+B. Packer genera imágenes VM (AMI) inmutables con todo preinstalado, facilitando desplegar instancias idénticas sin intervención manual
+C. Packer actualiza automáticamente el código de los repositorios Git
+D. Packer evita el uso de contenedores Docker
+
+✅ Correcta: B
+🧾 Explicación: Packer crea imágenes VM inmutables (por ejemplo, AMIs) con software y configuraciones preinstaladas. Así, para cambiar versiones, se genera una nueva imagen y se despliega, en lugar de parchear manualmente las máquinas en producción.
+
+🧠 Pregunta 16
+¿Qué implica el principio de “menor privilegio” en IaC?
+
+A. Otorgar permisos root a todos los usuarios
+B. Definir políticas IAM que otorguen solo los permisos estrictamente necesarios (por ejemplo, solo lectura a S3 si se requiere)
+C. Permitir acceso global a todos los puertos desde Internet
+D. Deshabilitar el uso de secretos en pipelines
+
+✅ Correcta: B
+🧾 Explicación: El principio de menor privilegio implica crear políticas IAM precisas (por ejemplo, un aws_iam_policy que permita únicamente s3:GetObject y s3:ListBucket), evitando permisos excesivos que aumenten riesgos de seguridad.
+
+🧠 Pregunta 17
+¿Cuál de las siguientes no es una ventaja directa de IaC?
+
+A. Despliegues rápidamente reproducibles
+B. Rollback instantáneo al revertir commits
+C. Eliminación completa de la necesidad de monitoreo
+D. Control colaborativo mediante revisión de pull requests
+
+✅ Correcta: C
+🧾 Explicación: Aunque IaC simplifica despliegues, trazabilidad y rollback, no elimina la necesidad de monitoreo (Prometheus, Grafana) para asegurar que la infraestructura funcione correctamente.
+
+🧠 Pregunta 18
+¿Por qué se recomienda no versionar el archivo terraform.tfstate?
+
+A. Porque no es compatible con Git
+B. Porque contiene el estado real de recursos, y versionarlo puede exponer información sensible y generar conflictos
+C. Porque Terraform no funciona sin este archivo versionado
+D. Porque impide la ejecución de terraform init
+
+✅ Correcta: B
+🧾 Explicación: terraform.tfstate guarda información dinámica y sensible de los recursos aprovisionados. Versionarlo en Git puede exponer datos privados (IDs, endpoints) y causar conflictos entre colaboradores.
+
+🧠 Pregunta 19
+¿Qué tarea realiza terraform fmt -recursive?
+
+A. Ejecuta un terraform apply en todos los directorios
+B. Da formato estándar a los archivos .tf en el repositorio, recursivamente, para mantener consistencia
+C. Elimina todos los recursos pendientes en el estado
+D. Verifica las credenciales de AWS
+
+✅ Correcta: B
+🧾 Explicación: terraform fmt -recursive formatea automáticamente todos los archivos .tf del proyecto siguiendo las convenciones de Terraform, asegurando código limpio y legible.
+
+🧠 Pregunta 20
+En un pipeline de CI/CD para IaC, ¿qué función cumple tfsec o tflint?
+
+A. Aplicar cambios en producción automáticamente
+B. Detectar malas prácticas de seguridad o estilo en los archivos Terraform antes de aplicar
+C. Crear contenedores Docker a partir de plantillas
+D. Validar la sintaxis de Ansible
+
+✅ Correcta: B
+🧾 Explicación: tflint analiza el código Terraform en busca de errores de estilo y mejores prácticas; tfsec evalúa políticas de seguridad (por ejemplo, detectar SG con 0.0.0.0/0). Ambos permiten bloquear pipelines si hallan riesgos.
+

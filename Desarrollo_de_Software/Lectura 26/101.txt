@@ -1,0 +1,110 @@
+🧠 Pregunta 1
+¿Qué engloba el término “infraestructura” en el contexto de IaC?
+
+A. Solo los servidores físicos donde corre la aplicación
+B. Componentes físicos o virtuales como cómputo, red, almacenamiento, seguridad y servicios complementarios
+C. Únicamente las máquinas virtuales en la nube
+D. Solo la configuración del sistema operativo
+
+✅ Correcta: B
+🧾 Explicación: “Infraestructura” incluye todos los componentes físicos o virtuales necesarios: cómputo (servidores), red (VPC, subredes, balanceadores), almacenamiento (volúmenes, buckets, bases de datos), seguridad (grupos de seguridad, políticas IAM) y servicios complementarios (colas, DNS, CDN, etc.).
+
+🧠 Pregunta 2
+¿Cuál es una desventaja principal de la configuración manual de infraestructura?
+
+A. Genera código declarativo de forma automática
+B. Asegura entornos idénticos en producción y pruebas
+C. Falta de trazabilidad y riesgo de errores humanos
+D. Garantiza la idempotencia
+
+✅ Correcta: C
+🧾 Explicación: La configuración manual (clics en consola o comandos SSH) carece de registro histórico, propicia errores humanos y provoca entornos inconsistentes, ya que cada operador puede omitir o modificar pasos sin control.
+
+🧠 Pregunta 3
+¿Qué caracteriza a la definición “Infrastructure as Code (IaC)”?
+
+A. Uso exclusivo de scripts imperativos en Bash
+B. Describir en archivos de texto declarativos qué recursos queremos, versionarlos y aplicarlos automáticamente
+C. Crear recursos manualmente en consola y luego exportarlos a imágenes
+D. Ejecutar comandos ad-hoc para instalar aplicaciones dentro de un servidor
+
+✅ Correcta: B
+🧾 Explicación: IaC implica escribir archivos de texto (por ejemplo, en HCL o YAML) que describen declarativamente la infraestructura deseada, versionarlos en Git y utilizar herramientas (Terraform, Ansible, CloudFormation) para aplicar esos cambios, logrando automatización, trazabilidad y reproducibilidad.
+
+🧠 Pregunta 4
+¿Cuál de los siguientes NO es considerado IaC en sentido estricto?
+
+A. Un playbook de Ansible que instale y configure Nginx declarativamente
+B. Un script Bash que ejecute “apt-get install nginx” y copie archivos de configuración
+C. Un template de CloudFormation en YAML que describa recursos AWS
+D. Definir recursos Terraform en archivos .tf y ejecutarlos con terraform apply
+
+✅ Correcta: B
+🧾 Explicación: Un script imperativo en Bash solo dice “cómo” hacer algo paso a paso y no es declarativo ni garantiza idempotencia. Por tanto, no cumple con los principios de IaC, que requieren descripción "qué" en lugar de "cómo".
+
+🧠 Pregunta 5
+¿Qué significa idempotencia en IaC?
+
+A. Que cada ejecución crea siempre recursos duplicados
+B. Que al aplicar la misma configuración varias veces, el estado final permanece igual si no hubo cambios en el código
+C. Que los recursos se destruyen automáticamente al cerrar sesión
+D. Que solo se puede aplicar durante la primera ejecución
+
+✅ Correcta: B
+🧾 Explicación: Idempotencia implica que repetir la ejecución de un plan IaC sin alterar los archivos fuente no producirá cambios adicionales. Si la infraestructura ya coincide con la definición, la herramienta indica “No changes. Infrastructure is up-to-date.”
+
+🧠 Pregunta 6
+¿Por qué es importante la reproducibilidad en IaC?
+
+A. Para que cada colaborador cree un entorno diferente
+B. Para garantizar que cualquiera pueda clonar el repositorio y recrear un entorno idéntico al original
+C. Para evitar el uso de variables en los scripts
+D. Para forzar a cada máquina local a ejecutar versiones distintas de Terraform
+
+✅ Correcta: B
+🧾 Explicación: La reproducibilidad asegura que, al versionar la definición de infraestructura, cualquier colaborador clone el repositorio, ejecute terraform init y terraform apply y obtenga exactamente el mismo entorno, evitando sorpresas al comparar entornos de pruebas y producción.
+
+🧠 Pregunta 7
+¿Qué representa el archivo terraform.tfstate en un proyecto Terraform?
+
+A. La definición declarativa de recursos en HCL
+B. El estado actual de los recursos creados por Terraform, que no debe versionarse en Git
+C. El plan de cambios pendiente antes de hacer apply
+D. Un template de variables para entorno staging
+
+✅ Correcta: B
+🧾 Explicación: terraform.tfstate guarda información sobre los recursos que Terraform ha creado o gestionado. Este archivo no se versiona porque contiene información dinámica del estado real. Terraform lo utiliza para comparar con la definición y determinar cambios.
+
+🧠 Pregunta 8
+¿Qué ventaja ofrece la composabilidad en Terraform?
+
+A. Permite ejecutar comandos imperativos más rápido
+B. Posibilita dividir la infraestructura en módulos reutilizables que se ensamblan según dependencias
+C. Elimina completamente la necesidad de versionar el código
+D. Evita el uso de variables en los archivos
+
+✅ Correcta: B
+🧾 Explicación: La composabilidad implica dividir la infraestructura en módulos (por ejemplo, “network” y “compute”) que encapsulan funcionalidades. Luego, en main.tf, se invocan módulos con parámetros, evitando duplicación y facilitando mantenimiento.
+
+🧠 Pregunta 9
+¿Cuál es el propósito de las variables (.tfvars) en IaC?
+
+A. Escribir comandos Bash que se ejecutan antes de Terraform
+B. Parametrizar nombres, redes y configuraciones para adaptar entornos sin cambiar el código fuente principal
+C. Almacenar credenciales sin cifrar en Git
+D. Sustituir los módulos por definiciones estáticas
+
+✅ Correcta: B
+🧾 Explicación: Variables y archivos .tfvars permiten separar valores configurables (como network o instance_count) del código fuente, facilitando crear entornos distintos (staging, prod) sin editar archivos .tf, solo cambiando el .tfvars.
+
+🧠 Pregunta 10
+¿Qué significa evolvibilidad en IaC?
+
+A. La capacidad de destruir automáticamente entorno tras su uso
+B. Adaptar y extender la configuración de infraestructura fácilmente mediante variables y versiones, sin fracturar el diseño
+C. Eliminar todos los módulos al cambiar un solo recurso
+D. Mantener los recursos inmutables sin permitir cambios
+
+✅ Correcta: B
+🧾 Explicación: Evolvibilidad se refiere a la habilidad de modificar requisitos (cambiar tipo de instancia, red, etc.) de manera sencilla usando variables, módulos versionados y archivos .tfvars, evitando tener que reescribir grandes bloques de código.
+

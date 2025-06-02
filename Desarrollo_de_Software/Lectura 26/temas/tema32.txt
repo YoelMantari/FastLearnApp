@@ -1,0 +1,109 @@
+🧠 Pregunta 61
+¿Qué indica el mensaje "No changes. Infrastructure is up-to-date." en Terraform?
+
+A. Que se debe borrar la infraestructura existente
+B. Que el estado actual coincide con el estado deseado
+C. Que hubo un error al leer los archivos de configuración
+D. Que es necesario aplicar manualmente los cambios
+
+✅ Correcta: B
+🧾 Explicación: Ese mensaje aparece cuando Terraform verifica que no hay diferencias entre lo que está definido en el código y lo que ya existe en el entorno.
+
+🧠 Pregunta 62
+¿Cuál es una señal de que un código IaC no es idempotente?
+
+A. Reutiliza módulos
+B. Aplica variables externas
+C. Al aplicarlo varias veces, genera recursos duplicados
+D. Usa archivos .tfvars para cada entorno
+
+✅ Correcta: C
+🧾 Explicación: Un código no idempotente genera efectos secundarios con cada ejecución, como la duplicación innecesaria de recursos.
+
+🧠 Pregunta 63
+¿Qué principio de IaC se ve afectado si diferentes desarrolladores crean manualmente entornos con diferencias?
+
+A. Evolvibilidad
+B. Trazabilidad
+C. Reproducibilidad
+D. Modularidad
+
+✅ Correcta: C
+🧾 Explicación: Si los entornos no son iguales, se pierde la capacidad de reproducir exactamente las condiciones para pruebas o producción.
+
+🧠 Pregunta 64
+¿Qué archivo sirve para pasar valores concretos a las variables en Terraform sin modificar el código fuente?
+
+A. terraform.tfstate
+B. variables.tf
+C. main.tf.json
+D. terraform.tfvars
+
+✅ Correcta: D
+🧾 Explicación: terraform.tfvars permite inyectar valores a las variables definidas en el código fuente, facilitando la adaptación del entorno.
+
+🧠 Pregunta 65
+¿Cuál es una ventaja clara del uso de módulos en Terraform?
+
+A. Permiten escribir scripts imperativos
+B. Mejoran la seguridad por defecto
+C. Reutilizan lógica y reducen duplicación de código
+D. Ejecutan tareas más rápidamente
+
+✅ Correcta: C
+🧾 Explicación: Los módulos encapsulan funcionalidades, lo que evita repetir código, mejora la claridad y facilita el mantenimiento.
+
+🧠 Pregunta 66
+¿Qué componente en Terraform representa el “estado real” de la infraestructura?
+
+A. main.tf
+B. null_resource
+C. terraform.tfstate
+D. README.md
+
+✅ Correcta: C
+🧾 Explicación: terraform.tfstate guarda el estado actual de todos los recursos gestionados por Terraform y se usa para calcular diferencias.
+
+🧠 Pregunta 67
+¿Cuándo se recomienda no versionar un archivo como terraform.tfvars?
+
+A. Cuando contiene nombres de recursos
+B. Cuando contiene datos sensibles como contraseñas
+C. Cuando contiene variables obligatorias
+D. Siempre debe versionarse
+
+✅ Correcta: B
+🧾 Explicación: Los archivos .tfvars que contienen datos sensibles (como claves o credenciales) no deben versionarse por motivos de seguridad.
+
+🧠 Pregunta 68
+¿Qué se logra al usar outputs en módulos de Terraform?
+
+A. Guardar los recursos como imágenes
+B. Ejecutar comandos en paralelo
+C. Compartir valores entre módulos
+D. Ocultar variables privadas
+
+✅ Correcta: C
+🧾 Explicación: Los outputs permiten que un módulo exponga valores (como el nombre de una red) para que otros módulos los puedan usar como input.
+
+🧠 Pregunta 69
+¿Para qué sirve el archivo variables.tf en un proyecto Terraform?
+
+A. Ejecutar comandos locales
+B. Guardar recursos existentes
+C. Definir las variables que se pueden personalizar desde fuera
+D. Aplicar los cambios directamente
+
+✅ Correcta: C
+🧾 Explicación: variables.tf define variables que permiten parametrizar la infraestructura y hacerla más flexible y reutilizable.
+
+🧠 Pregunta 70
+¿Qué práctica fomenta la evolvibilidad de la infraestructura en el tiempo?
+
+A. Escribir todos los valores directamente en el código
+B. Crear imágenes base para todos los entornos
+C. Usar variables y archivos .tfvars para adaptar el comportamiento
+D. Crear scripts shell con comandos fijos
+
+✅ Correcta: C
+🧾 Explicación: Evolvibilidad implica que la infraestructura se pueda adaptar fácilmente sin editar el código base, gracias a variables y configuraciones externas.

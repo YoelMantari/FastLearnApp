@@ -1,0 +1,110 @@
+🧠 Pregunta 31
+¿Qué principio permite que la infraestructura se cree de forma idéntica en diferentes entornos al usar IaC?
+
+A. Manualidad
+B. Automatización con scripts
+C. Reproducibilidad
+D. Virtualización
+
+✅ Correcta: C
+🧾 Explicación: La reproducibilidad asegura que el entorno generado sea siempre el mismo, ya que el código fuente define exactamente los recursos.
+
+🧠 Pregunta 32
+¿Qué significa que una herramienta de IaC sea “idempotente”?
+
+A. Solo se puede ejecutar una vez
+B. Puede generar diferentes resultados cada vez
+C. Al ejecutarla varias veces, el resultado final es siempre el mismo
+D. Requiere intervención manual entre ejecuciones
+
+✅ Correcta: C
+🧾 Explicación: La idempotencia garantiza que ejecutar el mismo código varias veces no cambie el estado final si ya fue aplicado.
+
+🧠 Pregunta 33
+¿Cuál es una ventaja del versionamiento de IaC con Git?
+
+A. Permite configurar servidores sin conexión
+B. Facilita escalar servidores automáticamente
+C. Proporciona historial de cambios y control mediante Pull Requests
+D. Ejecuta scripts directamente en producción
+
+✅ Correcta: C
+🧾 Explicación: Versionar el código de infraestructura permite rastrear cambios, revisarlos y revertir errores con herramientas como Git y PRs.
+
+🧠 Pregunta 34
+¿Cuál es una ventaja de integrar IaC en un pipeline de CI/CD?
+
+A. Permite reiniciar servidores manualmente
+B. Automatiza la creación y validación de infraestructura
+C. Requiere intervención humana para aplicar cambios
+D. Aumenta la dependencia del operador
+
+✅ Correcta: B
+🧾 Explicación: Al integrarse con CI/CD, el código de IaC puede validarse, formatearse y aplicarse automáticamente tras un cambio en el repositorio.
+
+🧠 Pregunta 35
+¿Qué comando en Terraform permite ver los cambios que se aplicarían sin realizarlos aún?
+
+A. terraform validate
+B. terraform apply
+C. terraform destroy
+D. terraform plan
+
+✅ Correcta: D
+🧾 Explicación: terraform plan muestra un resumen de las acciones que Terraform realizaría, lo que permite revisar y validar antes de ejecutar.
+
+🧠 Pregunta 36
+¿Por qué los scripts imperativos tradicionales no garantizan reproducibilidad?
+
+A. Se ejecutan demasiado rápido
+B. No son compatibles con la nube
+C. No describen el estado deseado, sino solo pasos secuenciales
+D. No permiten instalar servicios
+
+✅ Correcta: C
+🧾 Explicación: Los scripts imperativos indican cómo hacer algo paso a paso, lo cual no asegura que el entorno resultante sea exactamente el mismo cada vez.
+
+🧠 Pregunta 37
+¿Qué característica permite que IaC mejore la trazabilidad de los cambios?
+
+A. Uso de contenedores
+B. Integración con el sistema de archivos
+C. Almacenamiento del código en un repositorio de control de versiones
+D. Acceso a consola web de proveedores cloud
+
+✅ Correcta: C
+🧾 Explicación: Al usar Git u otros sistemas de control de versiones, cada cambio queda registrado con historial, autor y razón del cambio.
+
+🧠 Pregunta 38
+¿Cuál de los siguientes NO es un lenguaje declarativo típico usado en herramientas IaC?
+
+A. YAML
+B. HCL
+C. JSON
+D. Bash
+
+✅ Correcta: D
+🧾 Explicación: Bash es un lenguaje de scripts imperativo, que define instrucciones paso a paso, a diferencia de lenguajes declarativos como YAML o HCL.
+
+🧠 Pregunta 39
+¿Qué comando de Terraform se usa para aplicar los cambios definidos en el archivo de configuración?
+
+A. terraform destroy
+B. terraform apply
+C. terraform init
+D. terraform get
+
+✅ Correcta: B
+🧾 Explicación: terraform apply aplica los cambios definidos en el archivo de infraestructura, creando o modificando los recursos necesarios.
+
+🧠 Pregunta 40
+¿Por qué IaC mejora la colaboración en equipos de desarrollo?
+
+A. Permite trabajar directamente sobre servidores productivos
+B. Se ejecuta en secreto sin mostrar cambios
+C. Los cambios se documentan y pueden revisarse antes de aplicarse
+D. No requiere conocimientos técnicos
+
+✅ Correcta: C
+🧾 Explicación: Como la infraestructura está definida en archivos de código, se puede colaborar en equipo usando revisiones, control de versiones y validaciones automáticas.
+

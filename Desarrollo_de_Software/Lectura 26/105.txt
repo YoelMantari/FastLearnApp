@@ -1,0 +1,109 @@
+🧠 Pregunta 41
+¿Cuál de las siguientes sentencias es cierta sobre “drift detection” automática?
+
+A. Terraform detecta drift solo durante terraform destroy
+B. Ejecutar periódicamente terraform plan en un cron/CI permite detectar cambios manuales fuera de IaC
+C. Drift detection es imposible si se usa backend remoto
+D. Solo Ansible puede detectar drift
+
+✅ Correcta: B
+🧾 Explicación: Programar terraform plan (sin aplicar) en un job recurrente compara estado y realidad; si hay diferencias, se notifica, permitiendo corregir o aceptar los cambios.
+
+🧠 Pregunta 42
+¿Qué comando en Terraform marca un recurso para recreación forzada en la próxima aplicación?
+
+A. terraform destroy -target
+B. terraform taint <resource>
+C. terraform graph
+D. terraform workspace new
+
+✅ Correcta: B
+🧾 Explicación: terraform taint etiqueta el recurso como “dañado”; el siguiente terraform apply lo destruirá y recreará automáticamente.
+
+🧠 Pregunta 43
+¿Cuál es una práctica recomendada para manejar múltiples ambientes (dev, staging, prod) en Terraform?
+
+A. Mantener todo en un mismo archivo .tf con valores hardcodeados
+B. Usar workspaces o directorios separados con variables específicas y backends aislados
+C. Ejecutar terraform apply con flags --env=prod (flag inexistente)
+D. Duplicar todo el código y cambiar manualmente valores
+
+✅ Correcta: B
+🧾 Explicación: Puedes usar workspaces o carpetas por ambiente y un backend remoto propio, junto a archivos .tfvars diferentes. Así, los estados y variables se mantienen aislados, evitando interferencias.
+
+🧠 Pregunta 44
+¿Qué herramienta facilita la escritura de tests automatizados en Go para Terraform?
+
+A. Molecule
+B. Terratest
+C. Kitchen-Ansible
+D. Jest
+
+✅ Correcta: B
+🧾 Explicación: Terratest es una librería en Go que permite ejecutar terraform init/plan/apply, hacer assertions sobre recursos reales y destruir al finalizar, automatizando pruebas de infraestructura.
+
+🧠 Pregunta 45
+Respecto a la seguridad, ¿qué ventaja tiene almacenar el estado en Terraform Cloud o S3 con server-side encryption (SSE)?
+
+A. Permite ignorar la política de menor privilegio
+B. Cifra automáticamente los datos sensibles (passwords, tokens) almacenados en el estado
+C. Desactiva el bloqueo de estado
+D. Incrementa requisitos manuales de rotación de keys
+
+✅ Correcta: B
+🧾 Explicación: El backend remoto puede cifrar (SSE en S3 o HashiCorp Vault en Terraform Cloud), protegiendo campos sensibles del estado frente a accesos no autorizados.
+
+🧠 Pregunta 46
+¿Cuál es el propósito de terraform validate?
+
+A. Aplicar cambios en producción
+B. Verificar sintaxis y coherencia interna de los archivos .tf sin conectar al proveedor
+C. Eliminar módulos no usados
+D. Formatear archivos .tf
+
+✅ Correcta: B
+🧾 Explicación: terraform validate analiza la sintaxis HCL y comprueba referencias entre recursos/variables, asegurando que el código sea válido antes de ejecutar plan.
+
+🧠 Pregunta 47
+¿Qué hace la opción -auto-approve al ejecutar terraform apply?
+
+A. Solicita confirmación interactiva para cada recurso
+B. Aplica los cambios sin pedir confirmación, usado normalmente en CI
+C. Genera un plan y lo guarda en disco
+D. Anula el bloqueo de estado remoto
+
+✅ Correcta: B
+🧾 Explicación: Con -auto-approve, Terraform salta la pregunta interactiva “Do you want to perform these actions?” y aplica el plan inmediatamente. Ideal para pipelines automatizados.
+
+🧠 Pregunta 48
+¿Qué patrón de nombrado ayuda a identificar rápidamente el recurso miapp-prod-sg-web?
+
+A. <nombre>-<proyecto>
+B. <proyecto>-<entorno>-<tipo>-<nombre>
+C. <tipo>-<proyecto>
+D. <entorno>-<nombre>
+
+✅ Correcta: B
+🧾 Explicación: El patrón “proyecto-entorno-tipo-nombre” (ej. miapp-prod-sg-web) permite saber de un vistazo el proyecto (miapp), el entorno (prod), el tipo (sg = Security Group) y el propósito (web).
+
+🧠 Pregunta 49
+¿Cuál es el beneficio de ejecutar terraform graph | dot -Tpng > graph.png?
+
+A. Formatear archivos .tf
+B. Generar un diagrama visual de dependencias entre recursos para documentar la infraestructura
+C. Bloquear el estado remoto
+D. Importar recursos a Terraform
+
+✅ Correcta: B
+🧾 Explicación: terraform graph crea un gráfico DOT de dependencias; al convertirlo a PNG, se obtiene una representación visual útil para revisiones y documentación.
+
+🧠 Pregunta 50
+¿Qué opción permite a Terraform reintentar una operación en caso de “Resource busy: state is locked”?
+
+A. -parallelism=1
+B. -lock=false
+C. Esperar a que el otro proceso libere el lock o desbloquear manualmente en el backend (DynamoDB/Terraform Cloud)
+D. Usar terraform force
+
+✅ Correcta: C
+🧾 Explicación: El lock protege el estado durante operaciones. Si el estado está bloqueado, se debe esperar o liberar el lock de forma controlada. Forzar sin lock puede corromper el estado; la práctica correcta es desbloquear en backend o esperar.

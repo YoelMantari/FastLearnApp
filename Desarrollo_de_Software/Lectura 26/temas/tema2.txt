@@ -1,0 +1,109 @@
+🧠 Pregunta 21
+¿Cuál es una desventaja de la configuración manual de infraestructura?
+
+A. Permite automatizar todo desde el inicio
+B. Garantiza entornos idénticos
+C. Puede generar errores humanos y entornos inconsistentes
+D. Es compatible con Git por defecto
+
+✅ Correcta: C
+🧾 Explicación: La configuración manual depende de acciones humanas, lo que provoca variaciones, errores y diferencias entre entornos (ej. pruebas vs producción).
+
+🧠 Pregunta 22
+¿Qué ventaja clave ofrece el uso de archivos de texto en Infrastructure as Code (IaC)?
+
+A. Permiten controlar directamente la consola de AWS
+B. Aumentan el tiempo de configuración
+C. Facilitan el versionamiento y trazabilidad
+D. Requieren SSH para ejecutar comandos
+
+✅ Correcta: C
+🧾 Explicación: Al definir la infraestructura en código (ej. HCL o YAML), los cambios se pueden guardar en Git, revisar y reproducir fácilmente.
+
+🧠 Pregunta 23
+¿Cuál de los siguientes lenguajes se usa típicamente con Terraform?
+
+A. YAML
+B. HCL
+C. Bash
+D. Python
+
+✅ Correcta: B
+🧾 Explicación: Terraform utiliza HCL (HashiCorp Configuration Language), un lenguaje declarativo diseñado para describir infraestructura.
+
+🧠 Pregunta 24
+¿Cuál es un beneficio de ejecutar terraform plan antes de aplicar cambios?
+
+A. Reinicia todos los servidores automáticamente
+B. Despliega el entorno en producción
+C. Muestra qué cambios se realizarán sin aplicarlos aún
+D. Permite cambiar a YAML directamente
+
+✅ Correcta: C
+🧾 Explicación: terraform plan muestra una vista previa de las modificaciones, permitiendo revisar antes de ejecutarlas, lo que mejora la seguridad y control.
+
+🧠 Pregunta 25
+¿Qué característica diferencia al enfoque declarativo en IaC?
+
+A. Describe cómo instalar paso a paso
+B. Define comandos que se ejecutan secuencialmente
+C. Describe qué recursos deben existir, no cómo crearlos
+D. Obliga a usar scripts bash
+
+✅ Correcta: C
+🧾 Explicación: El enfoque declarativo se enfoca en el estado deseado de la infraestructura, no en los pasos necesarios para alcanzarlo.
+
+🧠 Pregunta 26
+¿Cuál de las siguientes acciones no se considera IaC en sentido estricto?
+
+A. Usar Terraform para definir recursos
+B. Crear recursos manualmente desde la consola web
+C. Ejecutar terraform apply desde un pipeline
+D. Versionar archivos YAML con Ansible
+
+✅ Correcta: B
+🧾 Explicación: Crear recursos a mano desde la consola no deja registro en código, lo que impide trazabilidad y reproducibilidad.
+
+🧠 Pregunta 27
+¿Por qué un script bash como setup.sh no califica como IaC?
+
+A. No se puede usar en Linux
+B. No instala correctamente las dependencias
+C. Es imperativo y no describe el estado deseado
+D. Requiere una base de datos
+
+✅ Correcta: C
+🧾 Explicación: Los scripts imperativos indican cómo hacer cosas paso a paso, pero no son declarativos ni idempotentes, requisitos clave de IaC.
+
+🧠 Pregunta 28
+¿Qué problema puede surgir si se usa solo un AMI clonado sin IaC?
+
+A. El entorno es completamente reproducible
+B. Se obtiene un historial detallado de cambios
+C. No hay documentación de los pasos de configuración
+D. Es compatible con Git
+
+✅ Correcta: C
+🧾 Explicación: Clonar una imagen no conserva el detalle de configuración paso a paso; cualquier cambio posterior requiere rehacer todo el proceso.
+
+🧠 Pregunta 29
+¿Qué ventaja tiene IaC respecto a la automatización tradicional con scripts?
+
+A. Reduce la necesidad de redes virtuales
+B. Garantiza el enfoque declarativo y reproducible
+C. Instala software automáticamente sin definición previa
+D. No requiere conocimiento de Git
+
+✅ Correcta: B
+🧾 Explicación: IaC permite definir qué infraestructura se necesita, lo que asegura que los entornos se puedan reproducir de forma idéntica.
+
+🧠 Pregunta 30
+¿Cuál es una característica común de las herramientas de IaC como Terraform o Ansible?
+
+A. Solo funcionan en Windows
+B. Ejecutan comandos bash por SSH
+C. Utilizan archivos de texto para definir infraestructura
+D. Necesitan conectarse al entorno gráfico de AWS
+
+✅ Correcta: C
+🧾 Explicación: Estas herramientas usan lenguajes como HCL o YAML para describir infraestructura como código y automatizar su provisión.

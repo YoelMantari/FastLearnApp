@@ -1,0 +1,109 @@
+🧠 Pregunta 31
+¿Cuál es la principal diferencia entre un archivo Terraform en HCL (.tf) y su equivalente en JSON (.tf.json)?
+
+A. HCL permite comentarios y sintaxis más legible para humanos, mientras que JSON es más verboso y orientado a máquinas
+B. JSON admite módulos y HCL no
+C. HCL no puede definir variables y JSON sí
+D. JSON se ejecuta sin necesidad de terraform init
+
+✅ Correcta: A
+🧾 Explicación: Ambos formatos son funcionalmente equivalentes, pero HCL está diseñado para ser legible y fácil de escribir por humanos; JSON, aunque válido, resulta más extenso y está pensado para generación automática por herramientas.
+
+🧠 Pregunta 32
+¿Qué rol cumple un backend remoto (por ejemplo, S3 + DynamoDB lock) en Terraform?
+
+A. Generar imágenes inmutables
+B. Almacenar y bloquear el archivo de estado (terraform.tfstate) de forma compartida y segura
+C. Reemplazar la necesidad de módulos
+D. Ejecutar playbooks de Ansible automáticamente
+
+✅ Correcta: B
+🧾 Explicación: Un backend remoto guarda el estado en un lugar centralizado y, con un mecanismo de locking (DynamoDB), evita que dos usuarios apliquen cambios simultáneamente, previniendo corrupción del estado.
+
+🧠 Pregunta 33
+¿Cuál es el orden correcto de comandos en un flujo Terraform típico?
+
+A. plan → init → apply → destroy
+B. init → plan → apply → (opcional) destroy
+C. apply → plan → init
+D. destroy → apply → plan
+
+✅ Correcta: B
+🧾 Explicación: Primero se inicializa el directorio (init), luego se genera un plan (plan), después se aplican los cambios (apply) y, en caso necesario, se destruyen recursos (destroy).
+
+🧠 Pregunta 34
+¿Qué característica de Terraform permite prevenir cambios destructivos accidentales en producción?
+
+A. Uso de variables locales
+B. Revisión del plan en Pull Request + aprobación manual antes del apply
+C. Ejecutar terraform apply -auto-approve sin plan previo
+D. Deshabilitar backends remotos
+
+✅ Correcta: B
+🧾 Explicación: Al generar el plan en CI y revisarlo en un PR, el equipo confirma los cambios; solo tras aprobación se ejecuta terraform apply, evitando borrados inesperados.
+
+🧠 Pregunta 35
+En IaC, ¿cuál es el beneficio de versionar los módulos con etiquetas semánticas (v1.2.3)?
+
+A. Permite que terraform import funcione offline
+B. Facilita referenciar versiones estables y controlar cambios “breaking” en dependencias
+C. Desactiva el bloqueo de estado
+D. Elimina la necesidad de usar variables
+
+✅ Correcta: B
+🧾 Explicación: Al etiquetar módulos, otros proyectos pueden fijar source = "...?ref=v1.2.3" y actualizarse solo cuando decidan, evitando adopción automática de cambios incompatibles.
+
+🧠 Pregunta 36
+¿Cuál de los siguientes es un ejemplo de “Policy as Code” aplicado a IaC?
+
+A. Ejecutar terraform fmt en pre-commit
+B. Usar tfsec o Open Policy Agent (OPA) para validar que ningún Security Group abra el puerto 22 a 0.0.0.0/0
+C. Crear módulos con salidas (outputs) documentadas
+D. Guardar secrets en texto plano para acceso rápido
+
+✅ Correcta: B
+🧾 Explicación: Policy as Code define reglas de seguridad/complianza en archivos de política (por ejemplo, OPA Rego); las herramientas validan el plan y bloquean despliegues que violen reglas como puertos abiertos mundialmente.
+
+🧠 Pregunta 37
+¿Qué comando de Terraform se utiliza para traer recursos existentes, creados manualmente, bajo control de estado IaC?
+
+A. terraform taint
+B. terraform refresh
+C. terraform import
+D. terraform validate
+
+✅ Correcta: C
+🧾 Explicación: terraform import vincula un recurso existente en la nube al estado de Terraform para que, a partir de ese momento, quede gestionado declarativamente.
+
+🧠 Pregunta 38
+¿Cuál es un riesgo de poner credenciales directamente en variables dentro de archivos .tf?
+
+A. Genera bucles infinitos al aplicar
+B. Produce planes más lentos
+C. Expone secretos en el repositorio y en los planes, comprometiendo la seguridad
+D. Bloquea la ejecución de terraform fmt
+
+✅ Correcta: C
+🧾 Explicación: Incluir credenciales en código implica que quedarán en Git y quizá en la salida de terraform plan/apply. Lo correcto es usar gestores de secretos (Vault, SSM) o variables de entorno seguras.
+
+🧠 Pregunta 39
+¿Cuál es la ventaja de un despliegue Blue/Green frente a un Rolling Update?
+
+A. Blue/Green actualiza nodos uno a uno para minimizar uso de recursos
+B. Blue/Green permite tener dos entornos idénticos (activo e inactivo) y cambiar tráfico instantáneamente, ofreciendo rollback casi inmediato
+C. Blue/Green requiere menos infraestructura duplicada
+D. Rolling Update no necesita balanceadores de carga
+
+✅ Correcta: B
+🧾 Explicación: Con Blue/Green se despliega una nueva versión (green) en paralelo a la vieja (blue); al comprobar salud, se cambia el balanceador. Si algo falla, se revierte el flujo de tráfico rápidamente.
+
+🧠 Pregunta 40
+¿Qué plugin de pre-commit es común para asegurar estilo y seguridad dentro de un repositorio IaC Terraform?
+
+A. black
+B. pre-commit-terraform (que ejecuta terraform fmt, tflint, tfsec)
+C. flake8
+D. eslint
+
+✅ Correcta: B
+🧾 Explicación: El framework pre-commit tiene hooks específicos (terraform fmt, tflint, tfsec) que validan y formatean los archivos .tf antes de que un commit sea aceptado.

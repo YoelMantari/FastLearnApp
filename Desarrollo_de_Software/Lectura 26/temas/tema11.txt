@@ -1,0 +1,110 @@
+🧠 Pregunta 11
+¿Qué representa el cómputo en una arquitectura de infraestructura?
+
+A. La base de datos que almacena usuarios
+B. Las redes que interconectan recursos
+C. Los servidores donde se ejecuta el código
+D. Las reglas de acceso a los buckets
+
+✅ Correcta: C
+🧾 Explicación: El cómputo se refiere a los servidores físicos o virtuales donde se ejecuta la aplicación, como instancias EC2.
+
+🧠 Pregunta 12
+¿Cuál es un ejemplo de almacenamiento basado en objetos en AWS?
+
+A. Volumen EBS
+B. Instancia EC2
+C. Bucket S3
+D. Subred privada
+
+✅ Correcta: C
+🧾 Explicación: Un bucket S3 almacena objetos como imágenes o archivos, y se usa comúnmente para copias de seguridad o contenido estático.
+
+🧠 Pregunta 13
+¿Qué tipo de componente es una base de datos gestionada como RDS?
+
+A. Servicio de cómputo
+B. Servicio de almacenamiento de bloques
+C. Servicio complementario
+D. Servicio de balanceo de carga
+
+✅ Correcta: C
+🧾 Explicación: RDS es un servicio complementario que ofrece bases de datos administradas por el proveedor cloud, sin necesidad de mantenimiento manual.
+
+🧠 Pregunta 14
+¿Qué caracteriza a una subred pública dentro de una VPC?
+
+A. Aloja servidores sin acceso a Internet
+B. No permite tráfico saliente
+C. Contiene recursos expuestos a Internet, como un Load Balancer
+D. Solo almacena backups
+
+✅ Correcta: C
+🧾 Explicación: La subred pública permite acceso desde Internet, por lo general alberga elementos como balanceadores de carga para recibir tráfico.
+
+🧠 Pregunta 15
+¿Para qué sirve una política de IAM en AWS?
+
+A. Ejecutar contenedores en EC2
+B. Determinar qué acciones puede realizar un usuario o rol
+C. Crear servidores físicos en la nube
+D. Establecer conexiones entre redes privadas
+
+✅ Correcta: B
+🧾 Explicación: IAM controla el acceso y los permisos de los usuarios y servicios sobre los recursos, como lectura, escritura o borrado.
+
+🧠 Pregunta 16
+¿Qué ventaja aporta una arquitectura con subredes privadas para las aplicaciones?
+
+A. Aumenta el rendimiento de almacenamiento
+B. Reduce el número de balanceadores necesarios
+C. Mejora la seguridad al ocultar instancias de Internet
+D. Permite acceso directo desde cualquier red
+
+✅ Correcta: C
+🧾 Explicación: Las subredes privadas protegen instancias sensibles, evitando que estén expuestas directamente a Internet.
+
+🧠 Pregunta 17
+¿En qué se diferencia un volumen EBS de un bucket S3?
+
+A. EBS guarda archivos como objetos; S3 como bloques
+B. EBS es temporal y no almacena datos
+C. EBS es almacenamiento de bloques conectado a una instancia; S3 es almacenamiento de objetos
+D. No hay diferencia; ambos son iguales
+
+✅ Correcta: C
+🧾 Explicación: EBS proporciona almacenamiento en bloques, como un disco duro virtual, mientras que S3 almacena objetos de manera independiente.
+
+🧠 Pregunta 18
+¿Cuál de los siguientes servicios permite gestionar colas de mensajes asincrónicos?
+
+A. EC2
+B. S3
+C. SQS
+D. VPC
+
+✅ Correcta: C
+🧾 Explicación: SQS (Simple Queue Service) es un servicio gestionado para colas de mensajes, útil en arquitecturas desacopladas.
+
+🧠 Pregunta 19
+¿Qué servicio es útil para mapear dominios web a recursos de AWS como un Load Balancer?
+
+A. IAM
+B. EC2
+C. Route 53
+D. DynamoDB
+
+✅ Correcta: C
+🧾 Explicación: Route 53 es el servicio DNS de AWS que asocia dominios como "www.misitio.com" con direcciones de recursos internos.
+
+🧠 Pregunta 20
+¿Qué problema resuelve la Infraestructura como Código (IaC) respecto a la configuración manual?
+
+A. Mejora el diseño de la base de datos
+B. Elimina la necesidad de balanceadores
+C. Evita errores humanos y garantiza entornos reproducibles
+D. Permite ejecutar aplicaciones sin cómputo
+
+✅ Correcta: C
+🧾 Explicación: IaC permite automatizar y versionar la infraestructura, reduciendo errores, aumentando la trazabilidad y asegurando consistencia entre entornos.
+

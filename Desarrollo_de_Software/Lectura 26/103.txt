@@ -1,0 +1,109 @@
+🧠 Pregunta 21
+¿Qué describe mejor el concepto de “drift” en IaC?
+
+A. La función de Terraform para crear módulos
+B. Cambios manuales en la infraestructura que no coinciden con el código declarativo, detectados en el siguiente terraform plan
+C. Un contenedor Docker mal configurado
+D. Un script Bash que nunca termina
+
+✅ Correcta: B
+🧾 Explicación: “Drift” ocurre cuando alguien modifica recursos directamente (por consola o SSH). La próxima ejecución de terraform plan muestra diferencias entre estado real y definiciones, indicando qué debe revertirse o actualizarse.
+
+🧠 Pregunta 22
+¿Por qué se recomienda usar contenedores para ejecutar Terraform en equipos locales?
+
+A. Porque oculta la definición de variables
+B. Porque asegura que todos usen la misma versión de Terraform y dependencias, independientemente del sistema operativo local
+C. Porque reemplaza la necesidad de un repositorio Git
+D. Porque incrementa la complejidad del flujo
+
+✅ Correcta: B
+🧾 Explicación: Con un Dockerfile que incluya Terraform y Python, se genera una imagen que garantiza versiones iguales para todos, evitando diferencias entre macOS, Linux o Windows y facilitando reproducibilidad.
+
+🧠 Pregunta 23
+¿Qué ocurre si ejecutas dos veces terraform apply sin cambiar el código?
+
+A. Terraform creará duplicados de todos los recursos
+B. Terraform detecta que no hay diferencias y muestra “No changes. Infrastructure is up-to-date.”
+C. Terraform borra todos los recursos y los vuelve a crear
+D. Terraform solicitará permisos de administrador adicional
+
+✅ Correcta: B
+🧾 Explicación: Gracias a la idempotencia, Terraform comprueba el estado actual y ve que coincide con la definición. Por tanto, no realiza ninguna acción y muestra que no hay cambios pendientes.
+
+🧠 Pregunta 24
+En un flujo DevOps con IaC, ¿cuál es el orden típico de etapas?
+
+A. Ansible → Docker → Terraform → Packer
+B. Construcción de imágenes (Packer/Docker) → Aprovisionamiento (Terraform) → Gestión de configuración (Ansible) → Integración en CI/CD
+C. Monitoreo → CI/CD → Aprovisionamiento → Configuración
+D. Terraform → Git → Docker → Ansible
+
+✅ Correcta: B
+🧾 Explicación: Primero se crean imágenes inmutables con Packer o Docker, luego se aprovisiona infraestructura con Terraform, después se aplica configuración interna con Ansible/Chef y todo esto se integra en un pipeline CI/CD para automatizar despliegues.
+
+🧠 Pregunta 25
+¿Cuál es el objetivo principal de separar responsabilidades en la estructura de un repositorio IaC?
+
+A. Reducir el número de commits en Git
+B. Dividir archivos según funcionalidad (variables de red, variables de cómputo, scripts generadores, módulos), facilitando mantenimiento y claridad
+C. Evitar el uso de Docker
+D. Eliminar por completo las variables
+
+✅ Correcta: B
+🧾 Explicación: Separar responsabilidades (por ejemplo, variables.network.tf.json, modules/network/main.tf, generators/main.py) permite que cada componente cumpla una función concreta y facilita mantenimiento, comprensión y reutilización.
+
+🧠 Pregunta 26
+¿Por qué es recomendable no “parchear en caliente” servidores en producción?
+
+A. Porque impide el uso de Terraform
+B. Porque rompe la reproducibilidad e idempotencia; en su lugar, se debe generar una nueva imagen inmutable y desplegarla
+C. Porque requiere cerrar sesión y abrirla de nuevo
+D. Porque incrementa la latencia de la red
+
+✅ Correcta: B
+🧾 Explicación: Parchear manualmente en producción hace que el entorno deje de coincidir con la definición IaC, rompiendo reproducibilidad. En cambio, al reconstruir imágenes (Docker/Packer) con cambios y desplegarlas, se mantiene la inmutabilidad y control del ciclo de vida.
+
+🧠 Pregunta 27
+¿Qué ventaja brinda el uso de pipelines CI/CD en IaC?
+
+A. Permite ejecutar terraform apply solo en la máquina local
+B. Automatiza formateo, validación, revisión de políticas y despliegue, reduciendo errores humanos y acelerando entregas
+C. Sustituye la necesidad de variables en YAML
+D. Garantiza que los contenedores se ejecuten en Kubernetes
+
+✅ Correcta: B
+🧾 Explicación: Un pipeline puede correr terraform fmt, tflint, terraform plan, validaciones de seguridad (tfsec), build de imágenes Docker y finalmente terraform apply si todo pasa, logrando despliegues consistentes y verificados.
+
+🧠 Pregunta 28
+¿Cuál es la función de un “provider” en Terraform?
+
+A. Definir variables de entorno para Ansible
+B. Conectar Terraform a la API de un proveedor de nube (AWS, GCP, Azure) o recursos locales relevantes
+C. Gestionar secretos desde Vault
+D. Crear playbooks de Chef
+
+✅ Correcta: B
+🧾 Explicación: Un provider (por ejemplo, provider "aws" { region = var.region }) configura la conexión de Terraform con la API de AWS para crear recursos como VPC, subredes e instancias.
+
+🧠 Pregunta 29
+¿Qué describe mejor el concepto de “inmutabilidad” en el contexto de imágenes Docker o AMI?
+
+A. La capacidad de las máquinas para cambiar de tamaño automáticamente
+B. Que una vez creada, la imagen no se modifica en tiempo de ejecución; se genera una nueva versión si se requieren cambios
+C. Que la imagen se actualiza directamente en producción sin recrearse
+D. Que la configuración solo se aplica durante la primera ejecución
+
+✅ Correcta: B
+🧾 Explicación: Inmutabilidad significa que la imagen (Docker o AMI) es un snapshot fijo. Si se necesita cambiar software o configuraciones, se construye una nueva imagen con nueva etiqueta, en vez de modificarla en caliente.
+
+🧠 Pregunta 30
+¿Cuál de las siguientes prácticas NO se considera buena práctica al escribir IaC en Terraform?
+
+A. Definir variables con descripciones claras y valores por defecto
+B. Versionar el archivo terraform.tfstate en Git para mantener histórico
+C. Utilizar convenciones de nombrado consistentes (por ejemplo, proyecto-entorno-tipo-nombre)
+D. Configurar linters (terraform fmt, tflint) en pre-commit hooks
+
+✅ Correcta: B
+🧾 Explicación: Versionar terraform.tfstate no es buena práctica, ya que contiene detalles dinámicos del estado de recursos y puede exponer información sensible y causar conflictos. En su lugar, se recomienda almacenarlo en un backend remoto (S3, Terraform Cloud).
