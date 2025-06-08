@@ -1,6 +1,6 @@
 🧠 Pregunta 31
 
-¿Qué ocurre si intentas realizar un rebase interactivo y existen commits que ya han sido compartidos con un repositorio remoto?
+¿Qué ocurre si intentas realizar un rebase interactivo y existen commits que ya han sido compartidos con un repositorio remotoo?
 
 A. Git automáticamente crea una nueva rama para el rebase.
 B. Git advierte sobre el peligro de reescribir la historia compartida, pero permite continuar.
