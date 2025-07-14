@@ -1,3 +1,4 @@
+
 🧠 Pregunta 1
 
 ¿Cuál es el objetivo principal del procesamiento de imágenes, según la definición proporcionada?
@@ -12,7 +13,7 @@ D. Fabricar dispositivos de almacenamiento de imágenes.
 
 ✅ Correcta: B
 
-🧾 Explicación: El procesamiento de imágenes es una rama de la informática y de la ingeniería que se ocupa de la **manipulación de imágenes digitales mediante algoritmos, con el fin de mejorar su calidad, extraer información o prepararlas para análisis posteriores**.
+🧾 Explicación: El procesamiento de imágenes es una rama de la informática y de la ingeniería que se ocupa de la manipulación de imágenes digitales mediante algoritmos, con el fin de mejorar su calidad, extraer información o prepararlas para análisis posteriores.
 
 🧠 Pregunta 2
 
@@ -28,7 +29,7 @@ D. Rotación y Escalado
 
 ✅ Correcta: C
 
-🧾 Explicación: Para digitalizar una imagen continua, que se representa como una función de intensidad f(s,t), se aplican los procesos de **muestreo y cuantización**. Ambos pasos son necesarios para obtener una imagen que pueda ser procesada por un computador. El muestreo crea una grilla de píxeles al tomar muestras de una imagen continua en intervalos regulares, y la cuantización convierte los valores continuos de intensidad en un número finito de niveles.
+🧾 Explicación: Para digitalizar una imagen continua, que se representa como una función de intensidad f(s,t), se aplican los procesos de muestreo y cuantización. Ambos pasos son necesarios para obtener una imagen que pueda ser procesada por un computador. El muestreo crea una grilla de píxeles al tomar muestras de una imagen continua en intervalos regulares, y la cuantización convierte los valores continuos de intensidad en un número finito de niveles.
 
 🧠 Pregunta 3
 
@@ -44,7 +45,7 @@ D. 33% para igualar la distribución de colores primarios.
 
 ✅ Correcta: B
 
-🧾 Explicación: El Filtro Bayer contiene **50% de filtros verdes**, 25% de rojos y 25% de azules. La razón principal de la mayor proporción de verde es para **simular la fisiología del ojo humano**, que es más sensible a esta longitud de onda. El filtro funciona dejando pasar solo una longitud de onda (o color) a cada elemento de la grilla del sensor y luego se interpola para los valores faltantes.
+🧾 Explicación: El Filtro Bayer contiene 50% de filtros verdes, 25% de rojos y 25% de azules. La razón principal de la mayor proporción de verde es para simular la fisiología del ojo humano, que es más sensible a esta longitud de onda. El filtro funciona dejando pasar solo una longitud de onda (o color) a cada elemento de la grilla del sensor y luego se interpola para los valores faltantes.
 
 🧠 Pregunta 4
 
@@ -60,7 +61,7 @@ D. La creación de gráficos por computadora en los años 70.
 
 ✅ Correcta: B
 
-🧾 Explicación: Una de las **primeras aplicaciones** del procesamiento de imágenes fue el **envío de fotos por cable** en la industria de periódicos, registrándose su uso inicial alrededor de **1920**. Originalmente se transmitían con 5 niveles de gris, aumentando a 15 niveles para 1929.
+🧾 Explicación: Una de las primeras aplicaciones del procesamiento de imágenes fue el envío de fotos por cable en la industria de periódicos, registrándose su uso inicial alrededor de 1920. Originalmente se transmitían con 5 niveles de gris, aumentando a 15 niveles para 1929.
 
 🧠 Pregunta 5
 
@@ -76,11 +77,11 @@ D. Sensor de punto único, por su uso en aplicaciones simples de escaneo.
 
 ✅ Correcta: C
 
-🧾 Explicación: El **sensor matricial (Array sensor)** es el tipo **más común en cámaras digitales** porque es una matriz bidimensional de sensores donde cada celda corresponde a un píxel de la imagen digital, lo que le permite **capturar toda la imagen de una sola vez**.
+🧾 Explicación: El sensor matricial (Array sensor) es el tipo más común en cámaras digitales porque es una matriz bidimensional de sensores donde cada celda corresponde a un píxel de la imagen digital, lo que le permite capturar toda la imagen de una sola vez.
 
 🧠 Pregunta 6
 
-¿Cuál de las siguientes es una tarea característica del procesamiento de imágenes de **Nivel Medio**?
+¿Cuál de las siguientes es una tarea característica del procesamiento de imágenes de Nivel Medio?
 
 A. Reducción de ruido en una imagen.
 
@@ -92,7 +93,7 @@ D. Interpretación y comprensión del contenido de la imagen.
 
 ✅ Correcta: B
 
-🧾 Explicación: Los **Niveles de procesamiento** de imágenes incluyen: **Bajo nivel** (tareas básicas como reducción de ruido, mejora de contraste), **Nivel medio** (segmentación, descripción de regiones u objetos) y **Alto nivel** (interpretación y comprensión del contenido de la imagen, como el reconocimiento facial).
+🧾 Explicación: Los Niveles de procesamiento de imágenes incluyen: Bajo nivel (tareas básicas como reducción de ruido, mejora de contraste), Nivel medio (segmentación, descripción de regiones u objetos) y Alto nivel (interpretación y comprensión del contenido de la imagen, como el reconocimiento facial).
 
 🧠 Pregunta 7
 
@@ -108,11 +109,11 @@ D. Tiempo y frecuencia.
 
 ✅ Correcta: C
 
-🧾 Explicación: Una imagen continua se define matemáticamente como `f(s,t)`, donde `s` y `t` son las **coordenadas espaciales** (horizontal y vertical) y `f(s,t)` es el nivel de intensidad en esa posición.
+🧾 Explicación: Una imagen continua se define matemáticamente como `f(s,t)`, donde `s` y `t` son las coordenadas espaciales (horizontal y vertical) y `f(s,t)` es el nivel de intensidad en esa posición.
 
 🧠 Pregunta 8
 
-¿Cuál es el propósito fundamental del proceso de **Muestreo** (`Sampling`) al digitalizar una imagen continua?
+¿Cuál es el propósito fundamental del proceso de Muestreo (`Sampling`) al digitalizar una imagen continua?
 
 A. Convertir los valores continuos de intensidad en un número finito de niveles.
 
@@ -124,11 +125,11 @@ D. Reducir el tamaño del archivo de la imagen.
 
 ✅ Correcta: C
 
-🧾 Explicación: El **Muestreo** (`Sampling`) es el proceso de **tomar muestras de una imagen continua en intervalos regulares, creando una grilla de píxeles**. Es uno de los dos procesos esenciales, junto con la cuantización, para convertir una imagen continua en digital.
+🧾 Explicación: El Muestreo (`Sampling`) es el proceso de tomar muestras de una imagen continua en intervalos regulares, creando una grilla de píxeles. Es uno de los dos procesos esenciales, junto con la cuantización, para convertir una imagen continua en digital.
 
 🧠 Pregunta 9
 
-Según la información proporcionada, ¿qué característica principal distingue a la **Visión Computacional** de otras áreas relacionadas como el Procesamiento de Imágenes o Machine Learning?
+Según la información proporcionada, ¿qué característica principal distingue a la Visión Computacional de otras áreas relacionadas como el Procesamiento de Imágenes o Machine Learning?
 
 A. Se enfoca en manipular imágenes digitales mediante algoritmos.
 
@@ -140,11 +141,11 @@ D. Extrae características y reconoce objetos.
 
 ✅ Correcta: C
 
-🧾 Explicación: La **Visión Computacional** (`Visión por computadora`) se diferencia porque **interpreta imágenes para que una máquina pueda "ver"**, mientras que el Procesamiento de Imágenes manipula las imágenes y el Análisis de Imágenes se centra en la extracción de características y el reconocimiento de objetos.
+🧾 Explicación: La Visión Computacional (`Visión por computadora`) se diferencia porque interpreta imágenes para que una máquina pueda "ver", mientras que el Procesamiento de Imágenes manipula las imágenes y el Análisis de Imágenes se centra en la extracción de características y el reconocimiento de objetos.
 
 🧠 Pregunta 10
 
-Si se utilizan 2 bits en el proceso de **Cuantización** de una imagen, ¿cuántos niveles de gris distintos se pueden representar?
+Si se utilizan 2 bits en el proceso de Cuantización de una imagen, ¿cuántos niveles de gris distintos se pueden representar?
 
 A. 2 niveles.
 
@@ -156,5 +157,4 @@ D. 16 niveles.
 
 ✅ Correcta: B
 
-🧾 Explicación: La **Cuantización** es la conversión de valores continuos de intensidad a un número finito de niveles. Con **2 bits** se pueden representar **2² = 4 niveles de gris**.
-
+🧾 Explicación: La Cuantización es la conversión de valores continuos de intensidad a un número finito de niveles. Con 2 bits se pueden representar 2² = 4 niveles de gris.
