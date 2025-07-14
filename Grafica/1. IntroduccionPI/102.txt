@@ -1,0 +1,255 @@
+🧠 Pregunta 10
+
+Si se utilizan 2 bits en el proceso de **Cuantización** de una imagen, ¿cuántos niveles de gris distintos se pueden representar?
+
+A. 2 niveles.
+
+B. 4 niveles.
+
+C. 8 niveles.
+
+D. 16 niveles.
+
+✅ Correcta: B
+
+🧾 Explicación: La **Cuantización** es la conversión de valores continuos de intensidad a un número finito de niveles. Con **2 bits** se pueden representar **2² = 4 niveles de gris**.
+
+🧠 Pregunta 11
+
+En el proceso de **Formación de una imagen digital**, ¿qué ocurre en la etapa del **Sistema de captura (cámara/lente)**?
+
+A. La escena es iluminada por una fuente de energía.
+
+B. La imagen continua se divide en una malla de píxeles.
+
+C. El sistema óptico proyecta la escena sobre un plano de imagen interno (sensor o superficie fotosensible).
+
+D. Cada píxel recibe un valor numérico de brillo o color.
+
+✅ Correcta: C
+
+🧾 Explicación: La **Formación de una imagen digital** implica varios pasos. En la etapa del **Sistema de captura (cámara/lente)**, el **sistema óptico proyecta la escena sobre un plano de imagen interno (sensor o superficie fotosensible)**, donde la imagen aún es continua.
+
+🧠 Pregunta 12
+
+Al representar una imagen digital, ¿qué aspecto se visualiza como una "superficie 3D de intensidades (a)" y qué ayuda a entender esta vista?
+
+A. La matriz visual de intensidades en 2D, mostrando tonos de gris.
+
+B. La tabla numérica interna de la imagen.
+
+C. La imagen como una función `f(x, y)` donde el eje vertical muestra la intensidad (brillo) y ayuda a entender las **variaciones de brillo como un "relieve"**.
+
+D. La forma en que cada píxel del sensor captura un solo color.
+
+✅ Correcta: C
+
+🧾 Explicación: Una imagen puede interpretarse como una **función `f(x, y)` (superficie 3D de intensidades)**, donde el eje vertical muestra la intensidad (brillo). Visualizarla así **ayuda a entender las variaciones de brillo como si fuera un "relieve"**.
+
+🧠 Pregunta 13
+
+Dentro de los **Componentes de un sistema de procesamiento de imágenes**, ¿cuál es la función principal del **Hardware especializado de procesamiento**?
+
+A. Capturar la escena y convertirla en datos digitales.
+
+B. Guardar imágenes originales y procesadas.
+
+C. **Acelerar operaciones intensivas** como el filtrado o las transformadas.
+
+D. Coordinar todas las tareas del sistema.
+
+✅ Correcta: C
+
+🧾 Explicación: El **Hardware especializado de procesamiento** (como tarjetas GPU/FPGA) en un sistema de procesamiento de imágenes tiene la función principal de **acelerar operaciones intensivas** (filtrado, transformadas, etc.).
+
+🧠 Pregunta 14
+
+En la historia temprana del procesamiento de imágenes, ¿cómo evolucionaron los niveles de gris para el envío de fotos por cable en la industria de periódicos entre 1920 y 1929?
+
+A. Disminuyeron de 15 a 5 niveles.
+
+B. Se mantuvieron constantes en 5 niveles.
+
+C. **Aumentaron de 5 niveles de gris a 15 niveles.**
+
+D. Se introdujeron 256 niveles de gris desde el principio.
+
+✅ Correcta: C
+
+🧾 Explicación: Una de las primeras aplicaciones del procesamiento de imágenes fue el envío de fotos por cable en la industria de periódicos en 1920, que utilizaba **5 niveles de gris originalmente**, y estos **aumentaron a 15 niveles en 1929**.
+
+🧠 Pregunta 15
+
+¿Quién fue el inventor del **Filtro Bayer** y en qué año se patentó, según las fuentes?
+
+A. Rafael C. González en 1920.
+
+B. **Bryce E. Bayer (de Eastman Kodak) en el año 1975.**
+
+C. Richard E. Woods en 1929.
+
+D. Un equipo de investigadores anónimos en 1950.
+
+✅ Correcta: B
+
+🧾 Explicación: El **Filtro Bayer** fue inventado por **Bryce E. Bayer (Eastman Kodak)** y su patente data del **año 1975**. Este filtro es esencial para capturar información de color con un solo sensor por píxel.
+
+🧠 Pregunta 16
+
+Según las relaciones entre áreas mencionadas, ¿cuál es el enfoque principal de **Machine Learning** en el contexto de las imágenes?
+
+A. Interpretar imágenes para que una máquina pueda "ver".
+
+B. Manipular imágenes digitales mediante algoritmos.
+
+C. **Aprender patrones en datos (imágenes) para tomar decisiones.**
+
+D. Extraer características y reconocer objetos.
+
+✅ Correcta: C
+
+🧾 Explicación: **Machine Learning** se define como el área que **aprende patrones en datos (imágenes) para tomar decisiones**.
+
+🧠 Pregunta 17
+
+¿Cuál es la tarea fundamental del **Análisis de Imágenes** según la definición proporcionada?
+
+A. Reducir el ruido o mejorar el contraste.
+
+B. Segmentar regiones u objetos.
+
+C. Interpretar el contenido de la imagen.
+
+D. **Extracción de características y reconocimiento de objetos.**
+
+✅ Correcta: D
+
+🧾 Explicación: El **Análisis de imágenes** se enfoca en la **extracción de características** y el **reconocimiento de objetos**.
+
+🧠 Pregunta 18
+
+¿A qué **Nivel de procesamiento** de imágenes pertenecen tareas básicas como la reducción de ruido y la mejora del contraste?
+
+A. Nivel Medio.
+
+B. Alto nivel.
+
+C. **Bajo nivel.**
+
+D. Nivel Avanzado.
+
+✅ Correcta: C
+
+🧾 Explicación: Las tareas básicas como la **reducción de ruido** y la **mejora de contraste** corresponden al **Bajo nivel** de procesamiento de imágenes.
+
+🧠 Pregunta 19
+
+En un **Sensor individual**, ¿cuál es la función específica del **Filtro**?
+
+A. Convertir la energía luminosa en una señal eléctrica.
+
+B. Generar una señal de voltaje proporcional a la intensidad.
+
+C. **Permitir el paso de una longitud de onda específica (un color).**
+
+D. Escanear múltiples líneas de imagen simultáneamente.
+
+✅ Correcta: C
+
+🧾 Explicación: Dentro de un sensor individual, el **Filtro** tiene la función de **permitir el paso de una longitud de onda específica** (por ejemplo, rojo).
+
+🧠 Pregunta 20
+
+¿Cuál es una de las ventajas principales del **Sensor lineal (Line sensor)**?
+
+A. Captura toda la imagen de una sola vez.
+
+B. Es el tipo más común en cámaras digitales.
+
+C. **Alta resolución en una dimensión.**
+
+D. Se usa en aplicaciones simples de lectura puntual de luz.
+
+✅ Correcta: C
+
+🧾 Explicación: Una ventaja del **sensor lineal** es su **alta resolución en una dimensión**, aunque requiere que el objeto o la cámara se muevan para escanear toda la imagen.
+
+🧠 Pregunta 21
+
+En el proceso de **Formación de una imagen digital**, ¿qué ocurre específicamente en la etapa de **"Objeto / escena"**?
+
+A. La escena se ilumina con una fuente de energía.
+
+B. La imagen continua se divide en una malla de píxeles.
+
+C. El sistema óptico proyecta la escena sobre el sensor.
+
+D. **El elemento de la escena refleja o emite luz con diferentes intensidades.**
+
+✅ Correcta: D
+
+🧾 Explicación: En la etapa de **"Objeto / escena"** en la formación de una imagen digital, el elemento de la escena **refleja o emite esa luz con diferentes intensidades**.
+
+🧠 Pregunta 22
+
+¿Cómo se representa internamente una imagen digital cuando se describe como un **"Arreglo numérico 2D"**?
+
+A. Como una superficie 3D de intensidades que simula un relieve.
+
+B. Como una matriz visual en 2D con niveles de gris.
+
+C. **Como una tabla de números donde cada valor corresponde a la intensidad de un píxel.**
+
+D. Como una serie de señales de voltaje continuas.
+
+✅ Correcta: C
+
+🧾 Explicación: Internamente, una imagen digital es solo una **tabla de números** (arreglo numérico 2D), donde cada valor corresponde a la intensidad (brillo) de un píxel.
+
+🧠 Pregunta 23
+
+Dentro de los **Componentes de un sistema de procesamiento de imágenes**, ¿cuál es la función del **Software de procesamiento de imágenes**?
+
+A. Acelerar operaciones intensivas como el filtrado.
+
+B. Convertir la escena en datos digitales.
+
+C. **Ejecutar los algoritmos sobre los datos capturados.**
+
+D. Guardar imágenes originales y procesadas.
+
+✅ Correcta: C
+
+🧾 Explicación: El **Software de procesamiento de imágenes** (como OpenCV o MATLAB) tiene la función de **ejecutar los algoritmos sobre los datos capturados**.
+
+🧠 Pregunta 24
+
+¿Cuál es la función principal del **Almacenamiento masivo** en un sistema de procesamiento de imágenes?
+
+A. Coordinar todas las tareas del sistema.
+
+B. Visualizar los resultados en tiempo real.
+
+C. Generar copias físicas de la imagen.
+
+D. **Guardar imágenes originales, procesadas y resultados.**
+
+✅ Correcta: D
+
+🧾 Explicación: El **Almacenamiento masivo** (discos duros, SSD) se utiliza para **guardar imágenes originales, procesadas y resultados**.
+
+🧠 Pregunta 25
+
+¿Cuál es el rol principal del componente **Red (Network)** en un sistema de procesamiento de imágenes?
+
+A. Capturar la escena del dominio del problema.
+
+B. Acelerar el procesamiento de algoritmos.
+
+C. **Conectar el sistema para compartir datos y procesar de forma distribuida.**
+
+D. Visualizar los resultados en monitores.
+
+✅ Correcta: C
+
+🧾 Explicación: La **Red (Network)** conecta el sistema a otras estaciones, bases de datos o la nube para **compartir datos y procesar de forma distribuida**.

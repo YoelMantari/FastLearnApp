@@ -1,0 +1,161 @@
+
+🧠 Pregunta 21
+
+En el proceso de **Formación de una imagen digital**, ¿qué ocurre específicamente en la etapa de **"Objeto / escena"**?
+
+A. La escena se ilumina con una fuente de energía.
+
+B. La imagen continua se divide en una malla de píxeles.
+
+C. El sistema óptico proyecta la escena sobre el sensor.
+
+D. **El elemento de la escena refleja o emite luz con diferentes intensidades.**
+
+✅ Correcta: D
+
+🧾 Explicación: En la etapa de **"Objeto / escena"** en la formación de una imagen digital, el elemento de la escena **refleja o emite esa luz con diferentes intensidades**.
+
+🧠 Pregunta 22
+
+¿Cómo se representa internamente una imagen digital cuando se describe como un **"Arreglo numérico 2D"**?
+
+A. Como una superficie 3D de intensidades que simula un relieve.
+
+B. Como una matriz visual en 2D con niveles de gris.
+
+C. **Como una tabla de números donde cada valor corresponde a la intensidad de un píxel.**
+
+D. Como una serie de señales de voltaje continuas.
+
+✅ Correcta: C
+
+🧾 Explicación: Internamente, una imagen digital es solo una **tabla de números** (arreglo numérico 2D), donde cada valor corresponde a la intensidad (brillo) de un píxel.
+
+🧠 Pregunta 23
+
+Dentro de los **Componentes de un sistema de procesamiento de imágenes**, ¿cuál es la función del **Software de procesamiento de imágenes**?
+
+A. Acelerar operaciones intensivas como el filtrado.
+
+B. Convertir la escena en datos digitales.
+
+C. **Ejecutar los algoritmos sobre los datos capturados.**
+
+D. Guardar imágenes originales y procesadas.
+
+✅ Correcta: C
+
+🧾 Explicación: El **Software de procesamiento de imágenes** (como OpenCV o MATLAB) tiene la función de **ejecutar los algoritmos sobre los datos capturados**.
+
+🧠 Pregunta 24
+
+¿Cuál es la función principal del **Almacenamiento masivo** en un sistema de procesamiento de imágenes?
+
+A. Coordinar todas las tareas del sistema.
+
+B. Visualizar los resultados en tiempo real.
+
+C. Generar copias físicas de la imagen.
+
+D. **Guardar imágenes originales, procesadas y resultados.**
+
+✅ Correcta: D
+
+🧾 Explicación: El **Almacenamiento masivo** (discos duros, SSD) se utiliza para **guardar imágenes originales, procesadas y resultados**.
+
+🧠 Pregunta 25
+
+¿Cuál es el rol principal del componente **Red (Network)** en un sistema de procesamiento de imágenes?
+
+A. Capturar la escena del dominio del problema.
+
+B. Acelerar el procesamiento de algoritmos.
+
+C. **Conectar el sistema para compartir datos y procesar de forma distribuida.**
+
+D. Visualizar los resultados en monitores.
+
+✅ Correcta: C
+
+🧾 Explicación: La **Red (Network)** conecta el sistema a otras estaciones, bases de datos o la nube para **compartir datos y procesar de forma distribuida**.
+
+
+🧠 Pregunta 26
+
+Dentro de los **Sensores individuales**, ¿cuál es la función del **Material sensible**?
+
+A. Permitir el paso de una longitud de onda específica (un color).
+
+B. Generar una señal de voltaje proporcional a la intensidad de la luz.
+
+C. Convertir la energía (como luz) en una señal eléctrica.
+
+D. Detectar la presencia de un objeto.
+
+✅ Correcta: C
+
+🧾 Explicación: Un sensor individual está compuesto por un **Material sensible** cuya función es **convertir la energía (como luz) en una señal eléctrica**.
+
+🧠 Pregunta 27
+
+Según la información sobre el **Filtro Bayer**, ¿qué porcentaje de píxeles está dedicado a capturar el color verde y por qué?
+
+A. 25% verde, porque el ojo humano es menos sensible al verde.
+
+B. **50% verde, para simular la fisiología del ojo humano**.
+
+C. 25% verde, para equilibrar los otros colores.
+
+D. 75% verde, para una mayor fidelidad de color.
+
+✅ Correcta: B
+
+🧾 Explicación: El Filtro Bayer tiene **50% verde** porque el **ojo humano es más sensible al verde**, lo que simula la fisiología de la visión.
+
+🧠 Pregunta 28
+
+Al representar una imagen digital como un **Arreglo numérico 2D (c)**, ¿qué se observa principalmente?
+
+A. La imagen como una función `f(x, y)` mostrando variaciones de brillo como un "relieve".
+
+B. La misma información que en una matriz visual, pero con más detalles.
+
+C. Cada cuadrícula como un píxel, con la intensidad percibida directamente como tonos.
+
+D. **Una tabla de números donde cada valor corresponde a la intensidad (brillo) de un píxel**.
+
+✅ Correcta: D
+
+🧾 Explicación: Internamente, una imagen digital es solo una **tabla de números** (arreglo numérico 2D), donde **cada valor corresponde a la intensidad (brillo) de un píxel**.
+
+🧠 Pregunta 29
+
+En los **Componentes de un sistema de procesamiento de imágenes**, ¿cuál es el rol principal del **Computador (host)**?
+
+A. Capturar la escena y convertirla en datos digitales.
+
+B. Acelerar operaciones intensivas como el filtrado.
+
+C. **Coordinar todas las tareas, gestionar datos y ejecutar el software**.
+
+D. Guardar imágenes originales, procesadas y resultados.
+
+✅ Correcta: C
+
+🧾 Explicación: El **Computador (host)** en un sistema de procesamiento de imágenes se encarga de **coordinar todas las tareas, gestionar datos, ejecutar el software y controlar los dispositivos externos**.
+
+🧠 Pregunta 30
+
+¿Cuál es el primer paso en el proceso de **Formación de una imagen digital** y por qué es fundamental?
+
+A. El objeto de la escena refleja o emite luz con diferentes intensidades.
+
+B. El sistema óptico proyecta la escena sobre un sensor.
+
+C. **La escena es iluminada por una fuente de energía (luz), ya que sin luz no hay información visual que capturar**.
+
+D. La imagen continua se divide en una malla de píxeles.
+
+✅ Correcta: C
+
+🧾 Explicación: El primer paso en la **Formación de una imagen digital** es la **Fuente de iluminación**, donde **la escena se ilumina con una fuente de energía (luz)**. Esto es fundamental porque **sin luz no hay información visual que capturar**.

@@ -1,0 +1,160 @@
+🧠 Pregunta 1
+
+¿Cuál es el objetivo principal del procesamiento de imágenes, según la definición proporcionada?
+
+A. Diseñar interfaces gráficas de usuario para aplicaciones.
+
+B. Manipular imágenes digitales mediante algoritmos para mejorar su calidad, extraer información o prepararlas para análisis posteriores.
+
+C. Desarrollar nuevos lenguajes de programación para gráficos.
+
+D. Fabricar dispositivos de almacenamiento de imágenes.
+
+✅ Correcta: B
+
+🧾 Explicación: El procesamiento de imágenes es una rama de la informática y de la ingeniería que se ocupa de la **manipulación de imágenes digitales mediante algoritmos, con el fin de mejorar su calidad, extraer información o prepararlas para análisis posteriores**.
+
+🧠 Pregunta 2
+
+¿Cuáles son los dos procesos fundamentales necesarios para convertir una imagen continua, representada como una función f(s,t), en una imagen digital?
+
+A. Compresión y Descompresión
+
+B. Filtrado y Segmentación
+
+C. Muestreo y Cuantización
+
+D. Rotación y Escalado
+
+✅ Correcta: C
+
+🧾 Explicación: Para digitalizar una imagen continua, que se representa como una función de intensidad f(s,t), se aplican los procesos de **muestreo y cuantización**. Ambos pasos son necesarios para obtener una imagen que pueda ser procesada por un computador. El muestreo crea una grilla de píxeles al tomar muestras de una imagen continua en intervalos regulares, y la cuantización convierte los valores continuos de intensidad en un número finito de niveles.
+
+🧠 Pregunta 3
+
+¿Qué porcentaje de filtros verdes contiene el Filtro Bayer y cuál es la razón principal de esta proporción?
+
+A. 25% para optimizar el contraste.
+
+B. 50% para simular la fisiología del ojo humano, que es más sensible al verde.
+
+C. 75% para mejorar la nitidez de la imagen.
+
+D. 33% para igualar la distribución de colores primarios.
+
+✅ Correcta: B
+
+🧾 Explicación: El Filtro Bayer contiene **50% de filtros verdes**, 25% de rojos y 25% de azules. La razón principal de la mayor proporción de verde es para **simular la fisiología del ojo humano**, que es más sensible a esta longitud de onda. El filtro funciona dejando pasar solo una longitud de onda (o color) a cada elemento de la grilla del sensor y luego se interpola para los valores faltantes.
+
+🧠 Pregunta 4
+
+¿Cuál fue una de las primeras aplicaciones del procesamiento de imágenes mencionada en las fuentes y en qué año se utilizó por primera vez en la industria de periódicos?
+
+A. La mejora de imágenes satelitales en los años 60.
+
+B. El envío de fotos por cable en la industria de periódicos en 1920.
+
+C. El desarrollo de la televisión en color en los años 40.
+
+D. La creación de gráficos por computadora en los años 70.
+
+✅ Correcta: B
+
+🧾 Explicación: Una de las **primeras aplicaciones** del procesamiento de imágenes fue el **envío de fotos por cable** en la industria de periódicos, registrándose su uso inicial alrededor de **1920**. Originalmente se transmitían con 5 niveles de gris, aumentando a 15 niveles para 1929.
+
+🧠 Pregunta 5
+
+¿Cuál tipo de sensor es el más común en las cámaras digitales y por qué?
+
+A. Sensor individual, por su simplicidad en la lectura puntual de luz.
+
+B. Sensor lineal, por su alta resolución en una dimensión para escaneo.
+
+C. Sensor matricial (Array sensor), porque captura toda la imagen de una sola vez.
+
+D. Sensor de punto único, por su uso en aplicaciones simples de escaneo.
+
+✅ Correcta: C
+
+🧾 Explicación: El **sensor matricial (Array sensor)** es el tipo **más común en cámaras digitales** porque es una matriz bidimensional de sensores donde cada celda corresponde a un píxel de la imagen digital, lo que le permite **capturar toda la imagen de una sola vez**.
+
+🧠 Pregunta 6
+
+¿Cuál de las siguientes es una tarea característica del procesamiento de imágenes de **Nivel Medio**?
+
+A. Reducción de ruido en una imagen.
+
+B. Segmentación de regiones u objetos.
+
+C. Mejora del contraste.
+
+D. Interpretación y comprensión del contenido de la imagen.
+
+✅ Correcta: B
+
+🧾 Explicación: Los **Niveles de procesamiento** de imágenes incluyen: **Bajo nivel** (tareas básicas como reducción de ruido, mejora de contraste), **Nivel medio** (segmentación, descripción de regiones u objetos) y **Alto nivel** (interpretación y comprensión del contenido de la imagen, como el reconocimiento facial).
+
+🧠 Pregunta 7
+
+En la representación matemática de una imagen continua como `f(s,t)`, ¿qué representan las variables `s` y `t`?
+
+A. Niveles de intensidad.
+
+B. Canales de color.
+
+C. Coordenadas espaciales (horizontal y vertical).
+
+D. Tiempo y frecuencia.
+
+✅ Correcta: C
+
+🧾 Explicación: Una imagen continua se define matemáticamente como `f(s,t)`, donde `s` y `t` son las **coordenadas espaciales** (horizontal y vertical) y `f(s,t)` es el nivel de intensidad en esa posición.
+
+🧠 Pregunta 8
+
+¿Cuál es el propósito fundamental del proceso de **Muestreo** (`Sampling`) al digitalizar una imagen continua?
+
+A. Convertir los valores continuos de intensidad en un número finito de niveles.
+
+B. Aplicar filtros para modificar la apariencia visual de la imagen.
+
+C. Tomar muestras de la imagen continua en intervalos regulares, creando una grilla de píxeles.
+
+D. Reducir el tamaño del archivo de la imagen.
+
+✅ Correcta: C
+
+🧾 Explicación: El **Muestreo** (`Sampling`) es el proceso de **tomar muestras de una imagen continua en intervalos regulares, creando una grilla de píxeles**. Es uno de los dos procesos esenciales, junto con la cuantización, para convertir una imagen continua en digital.
+
+🧠 Pregunta 9
+
+Según la información proporcionada, ¿qué característica principal distingue a la **Visión Computacional** de otras áreas relacionadas como el Procesamiento de Imágenes o Machine Learning?
+
+A. Se enfoca en manipular imágenes digitales mediante algoritmos.
+
+B. Aprende patrones en datos para tomar decisiones.
+
+C. Se ocupa de la interpretación de imágenes para que una máquina pueda "ver".
+
+D. Extrae características y reconoce objetos.
+
+✅ Correcta: C
+
+🧾 Explicación: La **Visión Computacional** (`Visión por computadora`) se diferencia porque **interpreta imágenes para que una máquina pueda "ver"**, mientras que el Procesamiento de Imágenes manipula las imágenes y el Análisis de Imágenes se centra en la extracción de características y el reconocimiento de objetos.
+
+🧠 Pregunta 10
+
+Si se utilizan 2 bits en el proceso de **Cuantización** de una imagen, ¿cuántos niveles de gris distintos se pueden representar?
+
+A. 2 niveles.
+
+B. 4 niveles.
+
+C. 8 niveles.
+
+D. 16 niveles.
+
+✅ Correcta: B
+
+🧾 Explicación: La **Cuantización** es la conversión de valores continuos de intensidad a un número finito de niveles. Con **2 bits** se pueden representar **2² = 4 niveles de gris**.
+
